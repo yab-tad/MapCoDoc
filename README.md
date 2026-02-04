@@ -26,8 +26,8 @@ First, ensure you have Python 3.9+ installed.
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/MapCoDoc_Pipeline.git
-cd MapCoDoc_Pipeline
+git clone https://github.com/yab-tad/MapCoDoc.git
+cd MapCoDoc
 
 # Create and activate a virtual environment (recommended)
 python -m venv venv
