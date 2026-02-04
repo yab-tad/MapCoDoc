@@ -1,0 +1,36 @@
+{
+    "exclude_patterns": [
+      "tests/",
+      "test/",
+      "examples/",
+      "docs/",
+      "experimental/",
+      "legacy/",
+      "third_party/",
+      "benchmarks/",
+      "playground/",
+      ".*/",
+      "benchmarks/",
+      "onnx/",
+      "functorch/",
+      "scripts/",
+      "mypy_plugins/",
+      "torchgen/",
+      "testing/",
+      "tools/",
+      "legacy_code/",
+      ".ipynb_checkpoints/",
+      "__pycache__/"
+    ],
+    "exclude_files": [
+      "setup.py",
+      "conftest.py",
+      "benchmark_*.py",
+      "*-checkpoint",
+      ".ipynb_checkpoints",
+      "__pycache__",
+      "build",
+      "dist",
+      ".*"
+    ]
+  }

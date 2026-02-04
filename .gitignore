@@ -1,0 +1,42 @@
+# Environment variables (contains secrets)
+.env
+
+# Test files
+doc_processor/testing_doc.py
+mapcodoc_db/test_db.py
+test_repo_1/
+
+# Output directory (keep folder, ignore contents)
+mapcodoc_output/*
+!mapcodoc_output/.gitkeep
+
+# Documentation artifacts (keep folders, ignore contents)
+doc_processor/doc_artifacts/crawled_URLs/*
+!doc_processor/doc_artifacts/crawled_URLs/.gitkeep
+
+doc_processor/doc_artifacts/local_doc/*
+!doc_processor/doc_artifacts/local_doc/.gitkeep
+
+doc_processor/doc_artifacts/postprocessed_doc/*
+!doc_processor/doc_artifacts/postprocessed_doc/.gitkeep
+
+doc_processor/doc_artifacts/preprocessed_doc/*
+!doc_processor/doc_artifacts/preprocessed_doc/.gitkeep
+
+doc_processor/doc_artifacts/scraped_doc/*
+!doc_processor/doc_artifacts/scraped_doc/.gitkeep
+
+doc_processor/doc_artifacts/structured_doc/*
+!doc_processor/doc_artifacts/structured_doc/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.coverage
