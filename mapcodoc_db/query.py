@@ -8,7 +8,8 @@ Supports comprehensive access to code analysis and documentation data.
 
 from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional, Tuple
-from sqlalchemy.orm import Session, joinedload
+from numpy import str_
+from sqlalchemy.orm import Session, joinedload, strategies
 from sqlalchemy import or_, and_, func, text
 
 from mapcodoc_db.db_models import DBModule, DBMember, DBSignature, DBExport, DBImport, DBInheritedMember
@@ -27,7 +28,7 @@ class MemberDetails:
     api_name: str
     api_names: List[str]
     api_name_sources: Dict[str, str]
-    signatures: List[str]
+    signatures: Dict[str, str]
     docstring: str
     type: str  # 'class', 'function', 'method', 'variable'
     source_code: str
@@ -118,7 +119,7 @@ class ExportDetails:
     target_type: str = None
     target_id: int = None # member ID for linking
     target_api_name: str = None
-    signatures: List[str] = field(default_factory=list) # for stop signals
+    signatures: Dict[str, str] = field(default_factory=dict) # for stop signals
     is_explicit: bool = False
     is_reexport: bool = False
     is_wildcard: bool = False
@@ -271,7 +272,7 @@ class QueryManager:
             api_names=api_names,
             api_name=member.primary_api_name,
             api_name_sources=member.api_name_sources or {},
-            signatures=[s.signature_text for s in member.signatures],
+            signatures={s.variant: s.signature_text for s in member.signatures},
             docstring=member.docstring or "",
             type=member.member_type,
             source_code=member.source_code or "",
@@ -1047,12 +1048,12 @@ class QueryManager:
         peers = []
         for exp in results:
             member = exp.target_member
-            signatures = []
+            signatures = {}
             target_id = None
             target_api_name = None
             
             if member:
-                signatures = [s.signature_text for s in member.signatures]
+                signatures = {s.variant: s.signature_text for s in member.signatures}
                 target_id = member.id
                 target_api_name = member.primary_api_name
             
@@ -1276,7 +1277,7 @@ class QueryManager:
             api_names=api_names,
             api_name=member.primary_api_name,
             api_name_sources=member.api_name_sources or {},
-            signatures=[s.signature_text for s in member.signatures],
+            signatures={s.variant: s.signature_text for s in member.signatures},
             docstring=member.docstring or "",
             type=member.member_type,
             source_code=member.source_code or "",

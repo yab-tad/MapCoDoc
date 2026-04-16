@@ -231,76 +231,6 @@ class GraphStore:
         if self.enable_caching and node_exists:
             self._invalidate_node_caches(node_id)
         self._graph_changed = True
-        
-    
-    # def add_edge(self, source: str, target: str, 
-    #              edge_type: str, # This is the semantic relationship type string (e.g., "CALLS")
-    #              key: Optional[str] = None, # This is the intended MultiDiGraph edge key
-    #              **attributes: Any # These are other data attributes  (e.g., {'metadata': {...}})
-    #              ) -> bool:
-    #     """
-    #     Add an edge between two nodes with a specific type, key, and optional attributes.
-    #     Updates the edge if one with the same source, target, and key already exists.
-
-    #     Args:
-    #         source: Source node ID.
-    #         target: Target node ID.
-    #         edge_type: Type of relationship (e.g., REL_TYPE_CALLS). This is stored as an attribute.
-    #         key: The unique key for this specific edge between source and target.
-    #              If None, edge_type is used as the key. This allows multiple edges of the
-    #              same type if their keys differ, or multiple edges of different types.
-    #         **attributes: Additional attributes to store with the edge. 
-    #                       Should not contain 'key' as it's handled by the named 'key' param.
-    #                       Should contain 'metadata' for detailed properties.
-
-    #     Returns:
-    #         True if the edge was added/updated successfully, False otherwise.
-    #     """
-        
-    #     # In batch mode, collect operations to apply later
-    #     if self._batch_mode:
-    #         self._pending_edges.append((source, target, edge_type, key, attributes))
-    #         return True # Assuming success for batch, actual add happens on commit
-            
-    #     if source not in self.graph: self.add_node(source)
-    #     if target not in self.graph: self.add_node(target)
-        
-    #     actual_networkx_key = key if key is not None else edge_type
-        
-    #     attrs_for_graph = {"edge_type": edge_type, **attributes} 
-        
-    #     logger.debug(
-    #         f"[GS_ADD_EDGE] Attempting to add/update edge: ({source})-[{edge_type}]->({target}) "
-    #         f"with actual_networkx_key='{actual_networkx_key}' and passed attributes: {attributes}"
-    #     )
-    #     logger.debug(f"[GS_ADD_EDGE]   Final attributes for graph edge: {attrs_for_graph}")
-    #     logger.debug(f"[GS_ADD_EDGE]   Actual NetworkX key to be used: {actual_networkx_key}")
-        
-    #     if self.graph.has_edge(source, target, key=actual_networkx_key):
-    #         logger.debug(f"[GS_ADD_EDGE]   Edge ({source})-[{edge_type} key={actual_networkx_key}]->({target}) already exists. Will be updated.")
-    #     else:
-    #         logger.debug(f"[GS_ADD_EDGE]   Edge ({source})-[{edge_type} key={actual_networkx_key}]->({target}) is new.")
-
-    #     try:
-    #         self.graph.add_edge(source, target, key=actual_networkx_key, **attrs_for_graph)
-            
-    #         if self.enable_indices:
-    #             # Use the semantic 'edge_type' for indexing, along with the specific key
-    #             self._update_edge_indices(source, target, edge_type, actual_networkx_key, attrs_for_graph)
-
-    #         if self.enable_caching:
-    #             self._invalidate_edge_caches(source, target, edge_type, actual_networkx_key)
-            
-    #         self._graph_changed = True
-    #         # logger.info(f"[GS_ADD_EDGE] Edge ({source})-[{edge_type}]->({target}) with key '{actual_networkx_key}' added/updated.")
-    #         return True
-    #     except TypeError as te:
-    #         logger.error(f"TypeError adding edge to NetworkX graph ({source})-[{edge_type} key={actual_networkx_key}]->({target}) "
-    #                      f"with attributes {attrs_for_graph}: {te}", exc_info=True)
-    #         raise 
-    #     except Exception as e: # Catch other potential NetworkX errors
-    #         logger.error(f"NetworkX error adding edge ({source})-[{edge_type} key={actual_networkx_key}]->({target}): {e}", exc_info=True)
-    #         return False
     
     
     def add_edge(self, source: str, target: str, 
@@ -512,44 +442,6 @@ class GraphStore:
             return None
         return self.graph.nodes[node_id].copy()
     
-    
-    # def get_nodes(self, **filters) -> List[Tuple[str, Dict[str, Any]]]:
-    #     """
-    #     Get nodes matching specified attribute filters.
-
-    #     Args:
-    #         **filters: Keyword arguments where key is attribute name and value is desired attribute value.
-
-    #     Returns:
-    #         List of (node_id, attribute_dict) tuples for matching nodes.
-    #     """
-        
-    #     if self.enable_indices and filters:
-    #         candidate_sets: List[Set[str]] = []
-    #         for attr_name, attr_value in filters.items():
-    #             if attr_name in self._node_attr_index and attr_value in self._node_attr_index[attr_name]:
-    #                 candidate_sets.append(self._node_attr_index[attr_name][attr_value].copy())
-    #             else:
-    #                 return []
-    #         if not candidate_sets: return []
-            
-    #         candidate_sets.sort(key=len)
-    #         final_node_ids = candidate_sets[0]
-    #         for i in range(1, len(candidate_sets)):
-    #             final_node_ids.intersection_update(candidate_sets[i])
-    #         return [(node_id, self.graph.nodes[node_id].copy()) for node_id in final_node_ids if self.graph.has_node(node_id)]
-        
-    #     result_nodes = []
-    #     for node_id, attributes in self.graph.nodes(data=True):
-    #         match = True
-    #         if filters:
-    #             for key, value in filters.items():
-    #                 if attributes.get(key) != value:
-    #                     match = False; break
-    #         if match: result_nodes.append((node_id, attributes.copy()))
-    #     return result_nodes
-    
-    
     def get_nodes(self, **filters) -> List[Tuple[str, Dict[str, Any]]]:
         """
         Get nodes matching given attribute filters.
@@ -578,25 +470,6 @@ class GraphStore:
                 results.append((node_id, attributes.copy()))
         return results
     
-    
-    # def get_edge(self, source: str, target: str, edge_type: str) -> Optional[Dict[str, Any]]:
-    #     """
-    #     Get the attributes of an edge between source and target.
-    #     Assumes only one edge (or the first found) if multiple exist without specifying type.
-    #     Prefer using get_edges if specific edge type matters or multiple edges can exist.
-        
-    #     Args:
-    #         source: Source node ID
-    #         target: Target node ID
-    #         edge_type: Key to filter by
-            
-    #     Returns:
-    #         Dictionary of edge attributes or None if not found
-    #     """
-    #     if self.graph.has_edge(source, target, key=edge_type):
-    #         return self.graph[source][target][edge_type].copy()
-    #     return None
-    
     def get_edge(self, source: str, target: str, edge_type: str) -> Optional[Dict[str, Any]]:
         # This method seems to imply a single edge for a given type.
         # If multiple edges of the same type can exist (e.g. via different keys),
@@ -618,166 +491,6 @@ class GraphStore:
         if not self.graph or not self.graph.has_edge(source, target, key=key):
             return None
         return self.graph.get_edge_data(source, target, key=key)
-    
-    
-    # def get_edges(self,
-    #               source: Optional[str] = None,
-    #               target: Optional[str] = None, 
-    #               edge_type: Optional[Union[str, List[str]]] = None, # This is the SEMANTIC edge type
-    #               properties: Optional[Dict[str, Any]] = None) -> List[Tuple[str, str, Dict[str, Any]]]:
-    #     """
-    #     Get edges from the graph, optionally filtered by source, target, edge type(s), and properties.
-        
-    #     Args:
-    #         source: Optional source node ID to filter by
-    #         target: Optional target node ID to filter by
-    #         edge_type: Optional edge type to filter by
-    #         properties: Optional dictionary of property name-value pairs to filter by
-            
-    #     Returns:
-    #         List of (source, target, edge_attributes) tuples
-    #     """
-        
-    #     # 1. Handle Cache Key Generation for list of edge_types
-    #     edge_type_for_cache_key: Any = edge_type
-    #     if isinstance(edge_type, list):
-    #         # Use a sorted tuple of types for a canonical cache key part
-    #         edge_type_for_cache_key = tuple(sorted(list(set(edge_type)))) # Deduplicate and sort
-
-    #     # Ensure properties are hashable for cache key
-    #     prop_key_part = None
-    #     if properties:
-    #         try:
-    #             prop_key_part = hash(frozenset(properties.items()))
-    #         except TypeError: # Handle unhashable items in properties, e.g. dicts within dicts
-    #             prop_key_part = hash(str(properties)) # Fallback to string representation
-        
-    #     cache_key = (f"get_edges_v3:{source}:{target}:{edge_type_for_cache_key}:{prop_key_part}")
-        
-    #     if self.enable_caching:
-    #         cached = self._get_from_cache(cache_key)
-    #         if cached is not None: return cached
-
-    #     start_time = time.perf_counter()
-    #     collected_edges: List[Tuple[str, str, Dict[str, Any]]] = []
-        
-    #     # 2. Normalize edge_type to a list for iteration
-    #     types_to_iterate: List[Optional[str]]
-    #     if edge_type is None: types_to_iterate = [None] # Iterate once with no type filter
-    #     elif isinstance(edge_type, str): types_to_iterate = [edge_type]
-    #     elif isinstance(edge_type, list):
-    #         types_to_iterate = list(set(edge_type)) # Deduplicate types to check
-    #         if not types_to_iterate: # Empty list of types means no types to match
-    #             if self.enable_caching: self._add_to_cache(cache_key, [])
-    #             return []
-    #     else:
-    #         logger.warning(f"Invalid edge_type format: {edge_type}. Returning empty list.")
-    #         if self.enable_caching: self._add_to_cache(cache_key, [])
-    #         return []
-        
-
-    #     for current_semantic_type_filter in types_to_iterate: 
-    #         temp_edges_for_this_type: List[Tuple[str, str, Dict[str, Any]]] = []
-    #         # Branch 1: Source node specified
-    #         if source is not None:
-    #             if not self.graph.has_node(source): continue
-    #             # For source-based, we iterate graph.out_edges as primary strategy,
-    #             # as _source_edge_index is {source: {sem_type: {target: {nx_key}}}}.
-    #             # If current_semantic_type_filter is None, we check all outgoing edges' 'edge_type' attribute.
-    #             # If current_semantic_type_filter is specified, we can be more direct if indexed,
-    #             # or filter during iteration if not.
-                
-    #             # Option A: Use refined index lookup for source, semantic_type, target
-    #             # This requires _source_edge_index[source][semantic_type][target] to yield keys.
-    #             # For now, let's stick to iterating graph edges and filtering for max clarity given index structure.
-
-    #             # logger.debug(f"[GS_GET_EDGES] Source-based: source='{source}', semantic_type_filter='{current_semantic_type_filter}'")
-    #             for s_node, t_node, nx_key, data_dict in self.graph.out_edges(source, data=True, keys=True):
-    #                 if target is not None and t_node != target:
-    #                     continue # Skip if target is specified and doesn't match
-
-    #                 actual_semantic_type_on_edge = data_dict.get("edge_type")
-    #                 if current_semantic_type_filter is not None and actual_semantic_type_on_edge != current_semantic_type_filter:
-    #                     continue # Skip if semantic type filter is given and doesn't match attribute
-
-    #                 if self._matches_properties(data_dict, properties):
-    #                     temp_edges_for_this_type.append((s_node, t_node, data_dict.copy()))
-            
-    #         # Branch 2: Target node specified (and source is None)
-    #         elif target is not None:
-    #             if not self.graph.has_node(target): continue
-    #             # logger.debug(f"[GS_GET_EDGES] Target-based: target='{target}', semantic_type_filter='{current_semantic_type_filter}'")
-    #             for s_node, t_node, nx_key, data_dict in self.graph.in_edges(target, data=True, keys=True):
-    #                 # source is None here, so no s_node check needed against a 'source' parameter
-    #                 actual_semantic_type_on_edge = data_dict.get("edge_type")
-    #                 if current_semantic_type_filter is not None and actual_semantic_type_on_edge != current_semantic_type_filter:
-    #                     continue
-                    
-    #                 if self._matches_properties(data_dict, properties):
-    #                     temp_edges_for_this_type.append((s_node, t_node, data_dict.copy()))
-
-    #         # Branch 3: Only semantic edge_type specified (source and target are None)
-    #         elif current_semantic_type_filter is not None:
-    #             # Here we can potentially use _edge_type_index[semantic_type] which stores (s, t, nx_key)
-    #             use_index = (self.enable_indices and current_semantic_type_filter in self._edge_type_index)
-    #             if use_index:
-    #                 # logger.debug(f"[GS_GET_EDGES] Using _edge_type_index for semantic_type='{current_semantic_type_filter}'.")
-    #                 # _edge_type_index stores (source, target, actual_networkx_key)
-    #                 for s_node, t_node, nx_key in self._edge_type_index[current_semantic_type_filter]:
-    #                     if self.graph.has_edge(s_node, t_node, key=nx_key): # Ensure edge still exists
-    #                         edge_data = self.graph[s_node][t_node][nx_key]
-    #                         # The index is already filtered by semantic type, so edge_data.get("edge_type") should match.
-    #                         if self._matches_properties(edge_data, properties):
-    #                             temp_edges_for_this_type.append((s_node, t_node, edge_data.copy()))
-    #                     else:
-    #                         logger.warning(f"[GS_GET_EDGES] Edge ({s_node})->({t_node}) key '{nx_key}' from index not found in graph. Stale index?")
-    #             else: # Fallback
-    #                 # logger.debug(f"[GS_GET_EDGES] Fallback iteration for semantic_type='{current_semantic_type_filter}'.")
-    #                 for s_node, t_node, _, data_dict in self.graph.edges(data=True, keys=True): # Iterate all edges
-    #                     if data_dict.get("edge_type") == current_semantic_type_filter:
-    #                         if self._matches_properties(data_dict, properties):
-    #                             temp_edges_for_this_type.append((s_node, t_node, data_dict.copy()))
-            
-    #         # Branch 4: No filters at all (source, target, edge_type are all None)
-    #         else: # current_type_filter is None (because original edge_type was None)
-    #             # logger.debug(f"[GS_GET_EDGES] No filters. Iterating all graph edges.")
-    #             for s_node, t_node, _, data_dict in self.graph.edges(data=True, keys=True):
-    #                 if self._matches_properties(data_dict, properties):
-    #                     temp_edges_for_this_type.append((s_node, t_node, data_dict.copy()))
-            
-    #         collected_edges.extend(temp_edges_for_this_type)
-
-    #     # Deduplicate (important if types_to_iterate had multiple entries that could lead to the same edge instance)
-    #     # However, if an edge (u,v,k,data) is added, it should only be added once to collected_edges
-    #     # unless the logic above has flaws. A simple set comprehension can ensure uniqueness if needed.
-    #     # final_edges = list(set(collected_edges)) # This would break if data dicts are not hashable
-        
-    #     # A more robust deduplication if order doesn't matter:
-    #     unique_edges_by_id = {}
-    #     for s, t, data in collected_edges:
-    #         # Create a unique identifier for the edge instance if possible (e.g. using its NetworkX key if available and relevant)
-    #         # For now, assume (s, t, frozenset(data.items())) for MultiDiGraph might be too complex if data contains unhashables
-    #         # The iteration logic should prevent duplicates if each edge is processed once per unique current_type_filter.
-    #         # The main risk of duplicates is if types_to_iterate had redundant entries (now handled by set())
-    #         # or if a single edge could match multiple `current_type_filter` values if `edge_type` was a list
-    #         # and filtering was not perfect.
-    #         # The current logic iterates types_to_iterate; if an edge matches a type, it's added.
-    #         # If an edge has multiple 'edge_type' attributes (not standard) or matches multiple filters, it could be duplicated.
-    #         # Given we store one semantic 'edge_type' per edge, this should be fine.
-    #         pass # No explicit deduplication here, assuming iteration logic handles it for now.
-    #     final_edges = collected_edges
-
-
-    #     if self.enable_caching: self._add_to_cache(cache_key, final_edges)
-
-    #     duration = (time.perf_counter() - start_time) * 1000
-    #     log_key_for_perf = ('get_edges', str(source), str(target), str(edge_type_for_cache_key)) # Make hashable
-    #     if log_key_for_perf not in self.query_times: 
-    #         self.query_times[log_key_for_perf] = []
-    #     self.query_times[log_key_for_perf].append(duration)
-        
-    #     # logger.debug(f"get_edges (source='{source}', target='{target}', type(s)='{edge_type_for_cache_key}') query took {duration:.2f} ms, found {len(final_edges)} edges.")
-    #     return final_edges
 
 
     def get_edges(self,
@@ -930,15 +643,6 @@ class GraphStore:
         logger.debug(f"[GS_GET_EDGES_FALLBACK] Finished fallback iteration. Yielded {edges_yielded_count} edges for query '{source=}, {target=}, {edge_type=}'.")
 
 
-    
-    # def _matches_properties(self, edge_data: Dict, properties: Optional[Dict[str, Any]]) -> bool:
-    #     if not properties:
-    #         return True
-    #     for key, value in properties.items():
-    #         if edge_data.get(key) != value:
-    #             return False
-    #     return True
-
     def _matches_properties(self, edge_data: Dict, properties: Optional[Dict[str, Any]]) -> bool:
         """
         Check if the edge_data matches all specified properties.
@@ -965,44 +669,6 @@ class GraphStore:
                 else: # Simple value comparison
                     return False
         return True
-    
-    # def get_successors(self, node_id: str, edge_type: Optional[str] = None) -> List[Tuple[str, Dict[str, Any]]]:
-    #     """
-    #     Get all nodes that are targets of edges from the given node.
-        
-    #     Args:
-    #         node_id: Source node ID
-    #         edge_type: Optional edge type filter
-            
-    #     Returns:
-    #         List of tuples (target_id, edge_attributes)
-    #     """
-    #     # Check cache first
-    #     if self.enable_caching:
-    #         cache_key = f"get_successors:{node_id}:{edge_type}"
-    #         cached = self._get_from_cache(cache_key)
-    #         if cached is not None:
-    #             return cached
-                
-    #     start_time = time.time()
-    #     result = []
-        
-    #     if node_id not in self.graph:
-    #         return []
-            
-    #     edges_data = self.get_edges(source=node_id, edge_type=edge_type)
-    #     result = [(target, data) for _, target, data in edges_data]
-                
-    #     # Track query time for performance analysis
-    #     query_time = time.time() - start_time
-    #     self.query_times["get_successors"].append(query_time)
-        
-    #     # Cache the result if appropriate
-    #     if self.enable_caching:
-    #         self._add_to_cache(cache_key, result)
-                
-    #     return result
-    
     
     def get_successors(self, node_id: str, edge_type: Optional[str] = None) -> List[Tuple[str, Dict[str, Any]]]:
         """
@@ -1044,44 +710,6 @@ class GraphStore:
         if self.enable_caching:
             self._add_to_cache(cache_key, result)
         return result
-    
-    
-    # def get_predecessors(self, node_id: str, edge_type: Optional[str] = None) -> List[Tuple[str, Dict[str, Any]]]:
-    #     """
-    #     Get all nodes that have edges pointing to the given node.
-        
-    #     Args:
-    #         node_id: Target node ID
-    #         edge_type: Optional edge type filter
-            
-    #     Returns:
-    #         List of tuples (source_id, edge_attributes)
-    #     """
-    #     # Check cache first
-    #     if self.enable_caching:
-    #         cache_key = f"get_predecessors:{node_id}:{edge_type}"
-    #         cached = self._get_from_cache(cache_key)
-    #         if cached is not None:
-    #             return cached
-                
-    #     start_time = time.time()
-    #     result = []
-        
-    #     if node_id not in self.graph:
-    #         return []
-            
-    #     edges_data = self.get_edges(target=node_id, edge_type=edge_type)
-    #     result = [(source, data) for source, _, data in edges_data]
-                
-    #     # Track query time for performance analysis
-    #     query_time = time.time() - start_time
-    #     self.query_times["get_predecessors"].append(query_time)
-        
-    #     # Cache the result if appropriate
-    #     if self.enable_caching:
-    #         self._add_to_cache(cache_key, result)
-                
-    #     return result
     
     
     def get_predecessors(self, node_id: str, edge_type: Optional[str] = None) -> List[Tuple[str, Dict[str, Any]]]:
@@ -1272,77 +900,6 @@ class GraphStore:
         return True
             
     
-    # def remove_edge(self, source: str, target: str, 
-    #                 edge_type: Optional[str] = None, # Semantic type to filter by
-    #                 key: Optional[str] = None # Specific MultiDiGraph key
-    #                 ) -> bool:
-    #     """
-    #     Remove an edge between two nodes.
-        
-    #     Args:
-    #         source: Source node ID
-    #         target: Target node ID
-    #         edge_type: Optional edge type to match
-    #         key: Optional specific edge key to match
-            
-    #     Returns:
-    #         bool: True if edge was removed, False if not found
-    #     """
-        
-    #     if self._batch_mode:
-    #         logger.warning("remove_edge called during batch mode. This operation is not batched. Removing directly.")
-        
-    #     if not self.graph.has_node(source) or not self.graph.has_node(target):
-    #         logger.debug(f"Source or target node not found for edge removal: {source} -> {target}")
-    #         return False
-
-    #     actual_key_to_remove = key if key is not None else edge_type
-    #     if actual_key_to_remove is None:
-    #         # This case means both 'key' and 'edge_type' were None.
-    #         # Removing an edge from MultiDiGraph without a key removes *all* edges between source and target.
-    #         # This is likely not intended by callers who usually mean to remove a specific type of edge.
-    #         logger.error("[GS_REMOVE_EDGE] Cannot remove edge: A specific 'key' or an 'edge_type' (to act as default key) must be provided to identify the edge in the MultiDiGraph.")
-    #         return False
-
-    #     logger.debug(f"[GS_REMOVE_EDGE] Attempting to remove edge: ({source})--[NXKey:'{actual_key_to_remove}']-->({target}) (Semantic type for indexing: '{edge_type}')")
-        
-    #     if self.graph.has_edge(source, target, key=actual_key_to_remove):
-    #         # Before removing, get the attributes to correctly update/remove from indices
-    #         # The 'edge_type' for indexing purposes is stored in the attributes.
-    #         edge_data_for_index = self.graph[source][target][actual_key_to_remove].copy()
-    #         # The semantic type for indexing is stored in the 'edge_type' attribute of the edge.
-    #         # Fallback to actual_key_to_remove if 'edge_type' attribute is somehow missing.
-    #         semantic_type_for_indexing = edge_data_for_index.get('edge_type', actual_key_to_remove)
-
-    #         try:
-    #             self.graph.remove_edge(source, target, key=actual_key_to_remove) # THE NetworkX REMOVAL
-                
-    #             # DIAGNOSTIC CHECK:
-    #             if self.graph.has_edge(source, target, key=actual_key_to_remove):
-    #                 logger.error(f"[GS_REMOVE_EDGE_DIAG] Edge ({source})--[NXKey:'{actual_key_to_remove}']-->({target}) STILL EXISTS in NetworkX graph immediately after remove_edge call!")
-    #             else:
-    #                 logger.info(f"[GS_REMOVE_EDGE_DIAG] Edge ({source})--[NXKey:'{actual_key_to_remove}']-->({target}) successfully removed from NetworkX graph.")
-
-    #         except Exception as e_nx_remove: # Should not happen if has_edge was true, but defensive
-    #             logger.error(f"[GS_REMOVE_EDGE] NetworkX error during remove_edge for ({source})--[NXKey:'{actual_key_to_remove}']-->({target}): {e_nx_remove}", exc_info=True)
-    #             return False # Removal failed at NetworkX level
-            
-    #         if self.enable_indices:
-    #             # Use the determined semantic_type_for_indexing and the actual_networkx_key for index removal
-    #             self._remove_from_edge_indices(source, target, semantic_type_for_indexing, actual_key_to_remove)
-            
-    #         if self.enable_caching:
-    #             # Invalidate caches based on the semantic type and the specific key
-    #             self._invalidate_edge_caches(source, target, semantic_type_for_indexing, actual_key_to_remove)
-            
-    #         self._graph_changed = True
-    #         logger.debug(f"[GS_REMOVE_EDGE] Edge ({source})--[SemType:'{semantic_type_for_indexing}', NXKey:'{actual_key_to_remove}']-->({target}) processed for removal from GraphStore.")
-    #         return True # Indicates an attempt was made and no error thrown by NX, and edge was initially present.
-    #     else:
-    #         logger.debug(f"[GS_REMOVE_EDGE] Edge ({source})->({target}) with NetworkX key '{actual_key_to_remove}' not found for removal.")
-    #         return False
-    
-    
     def remove_edge(self, source: str, target: str,
                     edge_type: Optional[str] = None,
                     key: Optional[str] = None) -> bool:
@@ -1487,31 +1044,6 @@ class GraphStore:
     def node_count(self) -> int:
         """Get the total number of nodes in the graph."""
         return self.graph.number_of_nodes()
-    
-    
-    # def edge_count(self, edge_type: Optional[str] = None) -> int:
-    #     """
-    #     Get the number of edges, optionally filtered by edge_type.
-        
-    #     Args:
-    #         edge_type: Optional type of edge to count
-            
-    #     Returns:
-    #         The number of matching edges
-    #     """
-    #     if edge_type: # Count edges of a specific semantic type
-    #         if self.enable_indices and self._edge_type_index and edge_type in self._edge_type_index:
-    #             return len(self._edge_type_index[edge_type])
-    #         else: 
-    #             count = 0
-    #             # Iterate all edges with their keys and data to check 'edge_type' attribute
-    #             # For MultiDiGraph, edges(data=True, keys=True) yields (u, v, key, data_dict)
-    #             for _, _, _, data_dict in self.graph.edges(data=True, keys=True): 
-    #                 if data_dict.get("edge_type") == edge_type:
-    #                     count += 1
-    #             return count
-    #     else: 
-    #         return self.graph.number_of_edges() # Total number of all edges (respects parallel edges)
     
     
     def edge_count(self, edge_type: Optional[str] = None) -> int:

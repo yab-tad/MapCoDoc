@@ -681,7 +681,7 @@ class GraphTraversal:
             for neighbor_node, _ in successors_or_predecessors:
                 if neighbor_node not in visited:
                     visited.add(neighbor_node)
-                    reachable_nodes.add(neighbor_node) # Add to results
+                    reachable_nodes.add(neighbor_node) 
                     queue.append((neighbor_node, depth + 1))
         
         return reachable_nodes

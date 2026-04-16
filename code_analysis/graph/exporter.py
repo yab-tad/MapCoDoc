@@ -166,35 +166,4 @@ class ExportTracker(RelationshipTracker):
         
         logger.info(f"Removed {removed_count} EXPORT relationships for module {module_fqn}.")
         return removed_count
-        
-        #------------------- Previous implementation -------------------
-        # logger.debug(f"Removing EXPORTS relationships associated with module: {module_fqn}")
-        # removed_count = 0
-        # rel_type = REL_TYPE_EXPORTS
-
-        # # Case 1: module_fqn is the source (exporting_module_fqn)
-        # edges_as_source = self.find_relationships(source=module_fqn, rel_type=rel_type)
-        # for edge in edges_as_source:
-        #     target_node = edge.get('target') # This is the target_component_fqn
-        #     actual_rel_type = edge.get('relationship_type', rel_type)
-        #     if target_node:
-        #         if self.remove_relationship(module_fqn, target_node, actual_rel_type):
-        #             removed_count += 1
-        #     else:
-        #         logger.warning(f"Found EXPORT edge from {module_fqn} with no target: {edge}")
-
-        # # Case 2: module_fqn is the target (target_component_fqn, if a module itself is exported)
-        # # This is less common for EXPORTS as target is usually a specific component, but if a module FQN can be a target_component_fqn, we should handle it.
-        # edges_as_target = self.find_relationships(target=module_fqn, rel_type=rel_type)
-        # for edge in edges_as_target:
-        #     source_node = edge.get('source') # This is the exporting_module_fqn
-        #     actual_rel_type = edge.get('relationship_type', rel_type)
-        #     if source_node:
-        #         if self.remove_relationship(source_node, module_fqn, actual_rel_type):
-        #             removed_count += 1
-        #     else:
-        #         logger.warning(f"Found EXPORT edge to {module_fqn} with no source: {edge}")
-                
-        # logger.info(f"Attempted removal of EXPORT relationships for module {module_fqn}. Removed {removed_count} relationships.")
-        # return removed_count
     

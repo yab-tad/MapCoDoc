@@ -34,12 +34,16 @@ The PDF extraction pipeline solves the problem of locating and extracting docume
 | Challenge | Solution |
 |-----------|----------|
 | Multi-column layouts | X-coordinate histogram analysis for reading order |
-| Code blocks vs prose | Font-based detection (monospace families) |
-| Multi-line API signatures | Heuristic-based signature joining |
+| Code blocks vs prose | Font-based detection (monospace families) + visual code-block rectangles |
+| Multi-line API signatures | Heuristic-based signature joining (SignatureJoiner) |
+| Merged-line signatures (PDF artifact) | Page-level post-processing splits return-type values and next-method signatures that share the same y-coordinate in the PDF |
 | Equation extraction | OCR (pix2tex) or character-grid reconstruction |
 | Finding relevant sections | Hybrid search (line-level matching + semantic) |
 | Similar API names (Conv1d vs Conv2d) | Lexical name verification with tiered FQN matching |
-| Knowing where to stop | Type-aware peer signature detection with code example filtering |
+| Knowing where to stop | Type-aware peer signature detection with sibling-class scoping and alphabetically ordered fallback |
+| False-positive anchor matches | Definition-position check (pos ≤ 25, doc-keyword prefix only), valid-suffix check (`:`, `(`, or end-of-line), min-length filter for short ambiguous anchors |
+| Members absent from PDF (private/internal) | Max-lexical-signal guard suppresses semantic and cross-section search when no lexical evidence exists in any section |
+| Methods documented in a different PDF section than their parent class | Strategy 5a cross-section fallback searches beyond the parent class's primary section |
 
 ---
 
@@ -80,8 +84,8 @@ The PDF extraction pipeline solves the problem of locating and extracting docume
 │  • For each API member:                                                 │
 │    1. Lexical search: section_match_score (line-level tiered matching)  │
 │    2. Semantic search: paragraph-level max pooling + length penalty     │
-│    3. Cross-section evaluation with lexical name verification           │
-│    4. Anchor finding (regex + semantic with FQN bonus)                  │
+│    3. Anchor finding via find_needle_in_lines (fence-aware, guarded)    │
+│    4. Cross-section fallback for inherited/split-section methods        │
 │    5. "Anchor and Expand" with type-aware stop signals                  │
 └─────────────────────────────────────────────────────────────────────────┘
                                     │
@@ -134,6 +138,22 @@ class PDFSectionizer:
         """Estimate where Table of Contents ends."""
 ```
 
+**Merged-line post-processing**
+
+Sphinx-generated PDFs sometimes place a method's return-type value and the next
+method's signature at the same y-coordinate, causing the extractor to output
+them on a single line (e.g. `_SparkXGBParams      transform(dataset, params=None)`).
+Three cascading fixes are applied during `_extract_page_text`:
+
+1. **Per-span** (Phase 4): when a gap ≥ 5 character-widths precedes a callable
+   signature in a single span, a newline is inserted instead of spaces.
+2. **Post-row** (Phase 4): after row text assembly, a regex splits multi-span
+   callables where the method name and `(params)` are in separate PDF spans.
+3. **Page-level** (cleanup): applied to the fully assembled page `raw` string.
+   Pattern: `r'^([^(\n]+?)\s{5,}([a-z_]\w*\((?!https?://))'`
+   — requires no space before `(` (excludes type annotations like `param (Type)`)
+   and excludes URL hyperlinks (excludes return values like `bool(https://...)`).
+
 ---
 
 ### pipeline_pdf.py
@@ -153,30 +173,50 @@ class StopSignalMatcher:
     Two-phase matching:
         Phase 1 (Primary): Type-specific patterns
             - CLASS: Stop at other classes/functions
-            - METHOD: Stop at sibling methods of same class
+            - METHOD: Stop at sibling methods of the SAME parent class only
             - FUNCTION: Stop at other functions/classes
-        
+
         Phase 2 (Fallback): Broader patterns if primary fails
-    
-    Features:
-        - Code example filtering (ignores >>>, assignments before parentheses)
-        - Flexible signature patterns (handles "class X", FQN, short names)
-        - Pre-scan to determine if fallback patterns needed
+            - CLASS fallback uses own methods/inherited members as boundaries,
+              sorted alphabetically so the first alphabetical method in the
+              document fires — matching the typical alphabetical listing in docs.
+
+    Key design decisions:
+        - All stop-signal patterns are anchored to the LINE START with ``^\s*``
+          to prevent false matches against Sphinx parameter-description list items
+          such as "- feature_names (Sequence[str] | None) - Set names for features."
+        - For Pattern 0b (short-name signatures WITH parameters), ``(?:^|\\s)`` is
+          used instead of ``^\s*`` so that stop signals fire even when the signature
+          appears mid-line after a previous method's return type (PDF merged-line
+          artifact). The full parameter list is a strong discriminator against
+          false positives in this case.
+        - Type-aware optional keyword prefix: class peers use ``(?:class\\s+)?``,
+          method/property peers use ``(?:property\\s+|classmethod\\s+|staticmethod\\s+)?``.
+        - Empty-paren properties (e.g. ``feature_names()``) also get a no-paren
+          variant pattern (``name\\b(?!\\s*[\\(=])``) so that stop signals fire on
+          PDF lines like ``property feature_names:`` which have no ``()`` suffix.
+        - ``_looks_like_code_example`` detects Sphinx bullet-list parameter items
+          (``^[-*•]\\s+\\w``) and treats them as low-priority (non-definitive).
+        - ``_classify_peer`` returns ``Optional[bool]``: ``True`` = PRIMARY,
+          ``False`` = FALLBACK, ``None`` = EXCLUDED (e.g. methods of a different
+          class when the target is a method, to prevent cross-class false stops).
+        - Pre-scan determines if fallback patterns are needed before scanning.
     """
-    
+
     def __init__(
-        self, 
-        peer_signatures: List[str], 
+        self,
+        peer_signatures: List[str],
         target_member_type: str = "function",  # "class", "method", "function"
         target_api_name: str = ""
     ):
         """Build type-aware stop patterns with fallback support."""
-    
+
     def checks_stop(self, line: str) -> Tuple[bool, bool]:
         """
         Returns (matched, is_high_priority) where:
             - matched: True if a stop pattern was matched
             - is_high_priority: True for real definitions, False for code examples
+                                or parameter-list items
         """
 ```
 
@@ -195,11 +235,16 @@ class PDFExtractor:
         stop_matcher: Optional[StopSignalMatcher] = None
     ) -> Tuple[str, List[int]]:
         """
-        Expand from anchor until stop signal or limit.
-        
+        Expand from start_char_idx until stop signal or limit.
+
+        start_char_idx is used directly (no snap-to-line-start via rfind).
+        This allows extraction to begin at an exact mid-line position when
+        find_anchor_in_raw returns an exact-tier match inside a merged PDF line
+        (e.g. the signature starts after a previous method's return type).
+
         Priority handling:
             - High-priority stop (real definition): Stop immediately
-            - Low-priority stop (code example): Record as fallback, continue
+            - Low-priority stop (code example or inside fence): Record as fallback, continue
             - If max_chars reached with only low-priority stops: truncate at fallback
         """
 ```
@@ -211,16 +256,27 @@ Main extraction orchestrator with multi-strategy search.
 class MemberExtractor:
     """
     Extraction Strategies (in order):
-        1. Direct anchor search in text_raw using tiered needles
+        1. Direct anchor search in text_raw using find_needle_in_lines
+           (prioritize_outside_code_blocks=False disables fence-state guessing
+            for scoped slices; at_definition_pos + valid_suffix guards filter
+            false positives instead)
         2. Fallback anchor search across all ranked sections
         3. Regex anchor fallback
-        4. Semantic window search with:
-            - Cross-section evaluation (top 2-3 sections)
-            - Paragraph-based max pooling (prevents content accumulation bias)
-            - Length penalty for window scoring
-            - **Window-level name presence bonus** (FQN or Parent.Name in window)
-            - Fine-grained lexical name verification with tiered FQN matching
-        5. Final fallback: top section start
+        4. Semantic window search — SKIPPED if max_raw_lex == 0 (member has no
+           lexical signal in any section, meaning it is absent from the PDF)
+        5a. Cross-section fallback (scoped members only): searches adjacent
+            sections when the member's documentation is in a different PDF
+            section from its parent class (e.g. inherited sklearn methods).
+            Also suppressed when max_raw_lex == 0.
+        5b. Section-start fallback (non-scoped only): classes and functions use
+            the top-ranked section start as a last resort.
+
+    Parent-class scoping:
+        - Methods are scoped to [parent_class_anchor, next_class_anchor].
+        - If parent class not in class_anchors → immediate not_found, to prevent
+          cross-class false matches.
+        - Partial class name matching is disabled when the parent class's immediate
+          containing module starts with '_' (private module guard).
     """
     
     def _semantic_window_search(
@@ -291,34 +347,82 @@ def extract_api_docs_from_pdf(
 ```python
 @dataclass
 class MemberInput:
-    api_name: str                    # "torch.nn.Conv1d"
-    signature_variants: List[str]    # ["Conv1d(in_channels, ...)"]
-    docstring: Optional[str] = None  # Source code docstring
-    member_type: str = "function"    # "class", "function", "method", "variable"
+    api_name: str                       # "torch.nn.Conv1d"
+    signature_variants: Dict[str, str]  # Named variants from parameter_analysis.py:
+                                        #   {'full':            'Conv1d(in_channels: int, ...)',
+                                        #    'no_types':        'Conv1d(in_channels, ...)',
+                                        #    'defaults_only':   'Conv1d(in_channels, out_channels, ...)',
+                                        #    'no_special':      ...,  # no / or *
+                                        #    'no_slash':        ...,
+                                        #    'no_asterisk':     ...,
+                                        #    'no_types_no_slash':    ...,
+                                        #    'no_types_no_asterisk': ...}
+                                        # Empty dict for variables or members with no stored sig.
+    docstring: Optional[str] = None     # Source code docstring (semantic query hint)
+    member_type: str = "function"       # "class", "function", "method", "variable"
 ```
+
+`signature_variants` is sourced from the `DBSignature` table (`variant` + `signature_text` columns) and populated via `{s.variant: s.signature_text for s in member.signatures}` in `query.py`.
 
 #### Functions
 
 | Function | Purpose |
 |----------|---------|
 | `build_signature_patterns(member)` | Compile regex patterns for anchor finding |
-| `build_lexical_needles(member)` | Build tiered dict: `{"exact": [...], "prefix": [...], "anchor": [...]}` |
+| `build_lexical_needles(member)` | Build tiered dict: `{"exact": [...], "anchor": [...]}` |
 | `build_semantic_query(member, model_name)` | Build natural language query for section ranking |
 | `build_signature_query(member, model_name)` | Build structural query for signature line finding |
 | `build_passage_text(text, model_name)` | Format passage for embedding (e5 prefix) |
+| `_first_variant(variants)` | Return highest-priority signature string from a named-variant dict |
 
-##### Tiered Needle Generation
+##### Two-Tier Needle Generation
+
+`build_lexical_needles` returns **two** tiers (the old "prefix" tier has been removed):
+
 ```python
 def build_lexical_needles(member: MemberInput) -> Dict[str, List[str]]:
     """
     Returns:
         {
-            "exact": ["torch.nn.Conv1d(in_channels, out_channels, ...)"],  # Full signature
-            "prefix": ["torch.nn.Conv1d(", "Conv1d("],                     # Name + paren
-            "anchor": ["torch.nn.Conv1d", "Conv1d"]                        # Just names
+            "exact":  [
+                # Processed in _VARIANT_PRIORITY order:
+                # ('full', 'no_types', 'defaults_only', 'no_special', ...)
+                # For each variant, multiple qualified forms are generated:
+
+                # --- classes ---
+                "class torch.nn.Conv1d(in_channels: int, out_channels: int, ...)",  # FQN + class kw (web)
+                "torch.nn.Conv1d(in_channels: int, out_channels: int, ...)",         # FQN (web)
+                "class Conv1d(in_channels: int, out_channels: int, ...)",            # short + class kw (PDF)
+                "Conv1d(in_channels: int, out_channels: int, ...)",                  # short (PDF)
+                # ... same pattern repeated for no_types, defaults_only, etc.
+
+                # --- methods (e.g. pandas.DataFrame.add) ---
+                "add(other, axis='columns', level=None, fill_value=None)",           # short (web)
+                "DataFrame.add(other, axis='columns', level=None, fill_value=None)", # class-qual (PDF)
+                "pandas.DataFrame.add(other, axis='columns', ...)",                  # FQN (URL match)
+                # ... repeated for no_types, defaults_only variants
+            ],
+            "anchor": [
+                "Conv1d",               # short name  (fallback, no-arg properties)
+                "torch.nn.Conv1d",      # FQN         (matches URL fragment in web docs)
+                # For methods:
+                "add",
+                "pandas.DataFrame.add",
+                "DataFrame.add"         # class-qualified anchor
+            ]
         }
     """
 ```
+
+**Design rationale for removing the "prefix" tier:**
+The old `prefix` tier (`Conv1d(`, `torch.nn.Conv1d(`) was the primary source of false-positive stop-signal matches. For example, `feature_names(` matched `- feature_names (Sequence[str])` in a Sphinx parameter-list item. With named variants covering `no_types` and `defaults_only`, the `exact` tier already handles the cases where the prefix tier was useful, with higher specificity and no false-positive risk.
+
+**Variant priority** (`_VARIANT_PRIORITY` constant):
+```
+['full', 'no_types', 'defaults_only', 'no_special',
+ 'no_slash', 'no_asterisk', 'no_types_no_slash', 'no_types_no_asterisk']
+```
+`full` (most specific, with type annotations) is tried first; `no_types` second (matches PDFs that strip annotations); `defaults_only` third (maximally compact form).
 
 ---
 
@@ -330,38 +434,77 @@ def build_lexical_needles(member: MemberInput) -> Dict[str, List[str]]:
 
 ```python
 def section_match_score(
-    text: str, 
-    needles: Dict[str, List[str]], 
-    section_title: str = ""
+    text: str,
+    needles: Dict[str, List[str]],
+    section_title: str = "",
+    member_type: str = "",          # NEW: passed through to find_needle_in_lines
 ) -> Tuple[float, int, int, str]:
     """
     Compute section-level match score using line-level matching.
-    
+
     Returns:
         (score, line_idx, char_offset, match_type)
-    
-    Match types: "exact", "prefix", "anchor", "none"
+
+    Match types: "exact", "anchor", "none"
     """
 
 def find_needle_in_lines(
-    text: str, 
+    text: str,
     needles: Dict[str, List[str]],
     early_stop: bool = True,
-    prioritize_outside_code_blocks: bool = True
+    prioritize_outside_code_blocks: bool = True,
+    initial_inside_fence: bool = False,   # initial fence state for scoped text slices
+    member_type: str = "",
 ) -> Tuple[int, int, float, str]:
     """
-    Find best needle match by scanning lines.
-    
-    Priority:
-        1. Matches OUTSIDE code blocks (real definitions)
-        2. Matches INSIDE code blocks (fallback for edge cases)
-    
-    Within each category:
-        1. "exact" needles: score 100
-        2. "prefix" needles: score 80
-        3. "anchor" needles: score 50
-    
-    Position bonus: +10 if match at line start (position < 20 chars)
+    Find best needle match by scanning lines with context-aware scoring.
+
+    Tier priority:
+        1. "exact" needles: base score 100
+        2. "anchor" needles: base score 50
+        ("prefix" tier removed — it caused false-positive stop signals)
+
+    Per-line score adjustments (applied via _line_context_score):
+        +20  Line starts with "class <name>"     (class definition)
+        +20  Line starts with "property <name>"  (standalone property definition)
+        +10  Line starts with "classmethod" or "staticmethod"
+        +15  Line ends with canonical URL "(https://...)"  (Sphinx web docs)
+        +10  Line contains return-type annotation "-> Type"  (PDF docs)
+        -25  Line contains a PDF page cross-reference "(#page=N)"
+        -30  Line starts with a bullet character "- " or "* "
+             (Sphinx parameter-list item — strong false-positive guard)
+
+    Anchor-tier guards (in addition to scoring):
+        - Min-length filter: anchors ≤ 2 chars with no dots are skipped.
+        - Definition-position: anchor must be at pos ≤ 25 with only a
+          doc-keyword prefix (property/class/classmethod/staticmethod).
+        - Valid-suffix: after the name, line must end, start with ':', or start
+          with '(' — prevents matching type annotations like "param (Type)".
+        - Standalone bonus: +15 if the normalised line IS the member name
+          (bare attribute "best_score" vs constructor parameter mention).
+        - Code-example detection (_looks_like_code_example) is ALWAYS called
+          regardless of prioritize_outside_code_blocks, so assignment patterns
+          like "config = xgb.get_config()" are never treated as definitions.
+
+    Code-example-only results: score is capped at 1.0 (signals to callers such
+    as find_anchor_in_raw that no definition-position match was found).
+
+    Position bonus: +10 if match starts within first 20 chars of the line.
+
+    Tie-breaking: later match wins when scores are equal (>= comparison).
+
+    Early-stop: fires only on an unpenalised exact match at position < 20
+    (context_adj >= 0 guard prevents stopping on a penalised list item).
+    """
+
+def _line_context_score(line_stripped: str) -> float:
+    """
+    Compute a score adjustment for a candidate line based on its documentation
+    context. Called once per line inside find_needle_in_lines.
+
+    Bonuses: +20 class keyword, +20 property keyword, +10 classmethod/
+    staticmethod, +15 canonical URL terminus, +10 return-type annotation.
+    Penalties: -25 PDF page cross-reference (#page=N), -30 bullet-list item.
     """
 
 def normalize_for_match(text: str) -> str:
@@ -421,6 +564,9 @@ Each extracted member returns:
         "match_type": "exact"  # or "prefix", "anchor", "semantic_window", "fallback"
     },
     "warning": null  # or "No direct anchor found; semantic window fallback used."
+                     # or "Found outside primary class scope; likely split-section method."
+                     # or "Member not found in PDF; may be inherited and documented only
+                     #     under its original parent class."
 }
 ```
 
@@ -455,15 +601,16 @@ MemberInput -> MemberExtractor.extract() -> Dict
 2. **Auto-Gate Decision**: Determine if semantic search needed based on lexical confidence
 3. **Semantic Scoring** (if enabled): Window embeddings with paragraph max-pooling
 4. **Section Ranking**: Combine lexical + semantic scores based on mode
-5. **Anchor Finding**: 
-    - Strategy 1: Direct tiered needle search in text_raw
-    - Strategy 2: Fallback search across all ranked sections
-    - Strategy 3: Regex patterns
-    - Strategy 4: Semantic window search with **dual-layer lexical verification**:
-        - Coarse: Window-level name presence bonus
-        - Fine: Line-level tiered FQN matching
-    - Strategy 5: Top section start (last resort)
-6. **Expansion**: Type-aware stop signal matching with code example filtering
+5. **Anchor Finding** via `find_anchor_in_raw` (uses `find_needle_in_lines` with
+   `prioritize_outside_code_blocks=False`; initial fence state computed from
+   text before `scoped_start` to correctly handle mid-fence scoped slices):
+    - Strategy 1: Direct tiered needle search in text_raw (scoped to class region)
+    - Strategy 2: Fallback search across all ranked sections (same scope)
+    - Strategy 3: Regex patterns (scoped)
+    - Strategy 4: Semantic window search — skipped if `max_raw_lex == 0`
+    - Strategy 5a: Cross-section fallback for scoped members — skipped if `max_raw_lex == 0`
+    - Strategy 5b: Section-start fallback for non-scoped members (classes/functions)
+6. **Expansion**: Type-aware stop signal matching with code example and fence filtering
 7. **Snippet Boost**: Optional final semantic boost for result validation
 
 ---
@@ -480,16 +627,25 @@ from doc_processor.file_doc.signature import MemberInput
 members = [
     MemberInput(
         api_name="torch.nn.Conv1d",
-        signature_variants=["torch.nn.Conv1d(in_channels, out_channels, kernel_size, ...)"],
+        # signature_variants is Dict[str, str]: variant_name -> signature_text.
+        # Keys match the variation names produced by parameter_analysis.Parameter.
+        signature_variants={
+            "full":          "Conv1d(in_channels: int, out_channels: int, kernel_size: _size_1_t, ...)",
+            "no_types":      "Conv1d(in_channels, out_channels, kernel_size, stride=1, ...)",
+            "defaults_only": "Conv1d(in_channels, out_channels, kernel_size)",
+        },
         member_type="class"
     )
 ]
 
-# With peer signatures for accurate stop detection
+# peer_signatures: values are flat lists of signature strings (exact needles only).
+# build_lexical_needles() + .get("exact") is the recommended way to produce these.
 peer_signatures = {
     "torch.nn.Conv1d": [
-        "torch.nn.Conv2d(in_channels, out_channels, kernel_size, ...)",
-        "torch.nn.Conv3d(in_channels, out_channels, kernel_size, ...)"
+        "class torch.nn.Conv2d(in_channels: int, out_channels: int, ...)",
+        "Conv2d(in_channels, out_channels, kernel_size)",
+        "class torch.nn.Conv3d(in_channels: int, out_channels: int, ...)",
+        "Conv3d(in_channels, out_channels, kernel_size)",
     ]
 }
 

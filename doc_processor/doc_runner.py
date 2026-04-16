@@ -99,6 +99,19 @@ class DocProcessingRunner:
     def __del__(self):
         if hasattr(self, 'session'):
             self.session.close()
+            
+    @staticmethod
+    def _first_sig(mi: MemberInput) -> str:
+        """Return the most informative signature string for a member, or api_name as fallback."""
+        
+        for key in ('full', 'defaults_only', 'no_types', 'no_special', 'no_slash', 'no_asterisk', 'no_types_no_slash', 'no_types_no_asterisk'):
+            if key in mi.signature_variants:
+                return mi.signature_variants[key]
+        if mi.signature_variants:
+            return next(iter(mi.signature_variants.values()))
+        
+        return mi.api_name
+    
 
     def run(self, doc_source: str, target_module: Optional[str] = None, skip_llm: bool = False):
         """
@@ -131,7 +144,7 @@ class DocProcessingRunner:
         pipeline_inputs = [
             MemberInput(
                 api_name=m.api_name or m.fqn,  # Prefer traced API name, fallback to FQN
-                signature_variants=m.signatures,
+                signature_variants=m.signatures or {},
                 member_type=m.type,
                 docstring='' # docstring is optionally used for semantic query context
             )
@@ -307,20 +320,20 @@ class DocProcessingRunner:
             MemberInput ready for pipeline processing
         """
         # Get signature variants from original member or inherited signature dict
-        signature_variants = []
+        signature_variants: Dict[str, str] = {}
         
         if original_member and original_member.signatures:
             signature_variants = original_member.signatures
         elif inherited.signature:
             # Extract signature strings from the signature dict
             if isinstance(inherited.signature, dict):
-                signature_variants = list(inherited.signature.values())
+                signature_variants = {str(k): str(v) for k, v in inherited.signature.items()}
             elif isinstance(inherited.signature, str):
-                signature_variants = [inherited.signature]
+                signature_variants = {'full': inherited.signature}
         
-        # Fallback: construct basic signature from method name
+        # Fallback: construct a minimal signature from the method name
         if not signature_variants:
-            signature_variants = [f"{inherited.member_name}("]
+            signature_variants = {'full': f"{inherited.member_name}("}
         
         return MemberInput(
             api_name=inherited.inherited_api_name,  # Use inherited path
@@ -418,15 +431,19 @@ class DocProcessingRunner:
         )
         
         logger.info(f"PDF extraction complete. Results in: {self.scraped_doc_dir}")
-
+    
+    
     def _build_peer_signatures(self, members: List[MemberInput]) -> Dict[str, List[str]]:
         """
         Build peer signature map for stop signal detection.
-        
-        For each member, builds a list of peer signatures that can act as stop signals:
-        - For classes: includes other classes/functions (primary) AND own methods/inherited (fallback)
-        - For methods: includes sibling methods (primary) AND classes/functions (fallback)
-        - For functions: includes other functions/classes (primary)
+
+        Optimised with three caches to avoid redundant DB queries and needle builds:
+        1. pipeline_needles:    {api_name -> List[str]}  exact needles for every
+                                pipeline member, built once and reused.
+        2. module_peers_cache:  {module_fqn -> List[str]} public export needles,
+                                queried and built once per unique top-level module.
+        3. class_members_cache: {class_api_name -> List[str]} method/inherited
+                                needles for class fallback stops, built once per class.
         
         The StopSignalMatcher automatically classifies these into primary/fallback based on
         naming conventions (uppercase = class, lowercase = method).
@@ -437,55 +454,77 @@ class DocProcessingRunner:
         Returns:
             Dict mapping api_name -> list of peer signature strings
         """
-        # Build module hierarchy for each member
-        member_to_module_hierarchy = {}
+
+        # ── Cache 1: pipeline member exact needles (build once, reuse N times) ──
+        pipeline_needles: Dict[str, List[str]] = {}
+        for mi in members:
+            needles = build_lexical_needles(mi)
+            pipeline_needles[mi.api_name] = needles.get("exact", [])
+
+        # ── Cache 2: module-level public peer signatures ─────────────────────────
+        module_peers_cache: Dict[str, List[str]] = {}
+        member_to_top_module: Dict[str, str] = {}
+
         for mi in members:
             exporting_modules = self.qm.get_exporting_modules_for_member(mi.api_name)
-            if exporting_modules:
-                member_to_module_hierarchy[mi.api_name] = exporting_modules
-        
-        peer_signatures = {}
-        
-        for mi in members:
-            peer_sigs = []
-            
-            # --- Get public peers from exporting module ---
-            modules = member_to_module_hierarchy.get(mi.api_name, [])
-            if modules:
-                top_module = modules[0]
-                peers = self.qm.get_public_peers(top_module)
-                
-                for p in peers:
+            if not exporting_modules:
+                continue
+            top_module = exporting_modules[0]
+            member_to_top_module[mi.api_name] = top_module
+
+            if top_module not in module_peers_cache:
+                module_sigs: List[str] = []
+                for p in self.qm.get_public_peers(top_module):
                     peer_api_name = p.target_api_name or f"{p.exporter_module}.{p.exported_name}"
                     peer_member = MemberInput(
                         api_name=peer_api_name,
                         signature_variants=p.signatures,
-                        member_type=p.target_type or "function"
+                        member_type=p.target_type or "function",
                     )
                     peer_needles = build_lexical_needles(peer_member)
-                    peer_sigs.extend(peer_needles.get("exact", []))
-                    peer_sigs.extend(peer_needles.get("prefix", []))
-            
-            # --- For CLASS members: add own methods AND inherited members ---
-            # These act as fallback stop signals when no other class/function is found
-            if mi.member_type == 'class':
-                peer_sigs.extend(
-                    self._get_class_member_signatures(mi.api_name)
-                )
-            
-            # --- Add other members in pipeline as potential peers ---
-            for peer_mi in members:
-                if peer_mi.api_name == mi.api_name:
+                    module_sigs.extend(peer_needles.get("exact", []))
+                module_peers_cache[top_module] = module_sigs
+
+        # ── Cache 3: class method/inherited signatures (built once per class) ────
+        class_members_cache: Dict[str, List[str]] = {}
+
+        # ── Assemble per-member peer lists ───────────────────────────────────────
+        peer_signatures: Dict[str, List[str]] = {}
+
+        for mi in members:
+            peer_sigs: List[str] = []
+
+            # --- Module-level public exports (from cache) ---
+            top_module = member_to_top_module.get(mi.api_name)
+            if top_module:
+                peer_sigs.extend(module_peers_cache[top_module])
+
+            # --- Class methods/inherited as fallback stops (classes only) ---
+            if mi.member_type == "class":
+                if mi.api_name not in class_members_cache:
+                    class_members_cache[mi.api_name] = self._get_class_member_signatures(
+                        mi.api_name
+                    )
+                peer_sigs.extend(class_members_cache[mi.api_name])
+
+            # --- Other pipeline members ---
+            # Use pre-built cache; exclude self by api_name (matching original logic)
+            for peer_api_name, peer_exact_needles in pipeline_needles.items():
+                if peer_api_name == mi.api_name:
                     continue
-                
-                peer_needles = build_lexical_needles(peer_mi)
-                peer_sigs.extend(peer_needles.get("exact", []))
-                peer_sigs.extend(peer_needles.get("prefix", []))
-            
-            # Remove own signatures from peer list
-            own_sigs = set(mi.signature_variants)
-            peer_signatures[mi.api_name] = [sig for sig in peer_sigs if sig not in own_sigs]
-        
+                peer_sigs.extend(peer_exact_needles)
+
+            # --- Filter own signatures and deduplicate ---
+            own_sigs = set(mi.signature_variants.values())
+            seen: set = set()
+            deduped: List[str] = []
+            for sig in peer_sigs:
+                if sig not in own_sigs and sig not in seen:
+                    seen.add(sig)
+                    deduped.append(sig)
+
+            peer_signatures[mi.api_name] = deduped
+
         return peer_signatures
 
 
@@ -515,32 +554,31 @@ class DocProcessingRunner:
         for method in class_methods:
             method_input = MemberInput(
                 api_name=method.api_name or method.fqn,
-                signature_variants=method.signatures or [],
+                signature_variants=method.signatures or {},
                 member_type='method'
             )
             needles = build_lexical_needles(method_input)
             signatures.extend(needles.get("exact", []))
-            signatures.extend(needles.get("prefix", []))
         
         # --- Add inherited member signatures ---
         inherited_members = self.qm.get_inherited_members_for_class(db_class.fqn)
         for inherited in inherited_members:
             # Get signatures from original member or inherited data
-            sig_variants = []
+            sig_variants = {}
             
             if inherited.original_member_id:
                 original = self.qm.get_original_member_for_inherited(inherited.inherited_api_name)
                 if original:
-                    sig_variants = original.signatures
+                    sig_variants = original.signatures or {}
             
             if not sig_variants and inherited.signature:
                 if isinstance(inherited.signature, dict):
-                    sig_variants = list(inherited.signature.values())
+                    sig_variants = {str(k): str(v) for k, v in inherited.signature.items()}
                 elif isinstance(inherited.signature, str):
-                    sig_variants = [inherited.signature]
+                    sig_variants = {'full': inherited.signature}
             
             if not sig_variants:
-                sig_variants = [f"{inherited.member_name}("]
+                sig_variants = {'full': f"{inherited.member_name}("}
             
             inherited_input = MemberInput(
                 api_name=inherited.inherited_api_name,
@@ -549,7 +587,11 @@ class DocProcessingRunner:
             )
             needles = build_lexical_needles(inherited_input)
             signatures.extend(needles.get("exact", []))
-            signatures.extend(needles.get("prefix", []))
+        
+        # Sort signatures alphabetically by their short name. API docs typically list methods in alphabetical order
+        def _short_name_key(sig: str) -> str:
+            return sig.split('(')[0].strip().split('.')[-1].lower()
+        signatures.sort(key=_short_name_key)
         
         return signatures
     
@@ -874,7 +916,6 @@ class DocProcessingRunner:
                 peer_info = peer_mp["info"]
                 peer_needles = build_lexical_needles(peer_info.member_input)
                 peer_sigs.extend(peer_needles.get("exact", []))
-                peer_sigs.extend(peer_needles.get("prefix", []))
             
             stop_matcher = StopSignalMatcher(
                 peer_signatures=peer_sigs,
@@ -1114,7 +1155,7 @@ class DocProcessingRunner:
                     all_api_names=all_names,
                     member_input=MemberInput(
                         api_name=method.api_name or method.fqn,
-                        signature_variants=method.signatures,
+                        signature_variants=method.signatures or {},
                         member_type='method'
                     ),
                     member_type='method'
@@ -1131,28 +1172,28 @@ class DocProcessingRunner:
                 if all_names & extracted_apis:
                     continue
                 
-                # Get signatures
-                signatures = []
+                # Get signature variants
+                sig_variants = {}
                 if inherited.original_member_id:
                     original = self.qm.get_original_member_for_inherited(inherited.inherited_api_name)
                     if original:
-                        signatures = original.signatures
+                        sig_variants = original.signatures or {}
                 
-                if not signatures and inherited.signature:
+                if not sig_variants and inherited.signature:
                     if isinstance(inherited.signature, dict):
-                        signatures = list(inherited.signature.values())
+                        sig_variants = {str(k): str(v) for k, v in inherited.signature.items()}
                     elif isinstance(inherited.signature, str):
-                        signatures = [inherited.signature]
+                        sig_variants = {'full': inherited.signature}
                 
-                if not signatures:
-                    signatures = [f"{inherited.member_name}("]
+                if not sig_variants:
+                    sig_variants = {'full': f"{inherited.member_name}("}
                 
                 missing_members.append(WebMemberInfo(
                     api_name=inherited.inherited_api_name,
                     all_api_names=all_names,
                     member_input=MemberInput(
                         api_name=inherited.inherited_api_name,
-                        signature_variants=signatures,
+                        signature_variants=sig_variants,
                         member_type=inherited.member_type or 'method'
                     ),
                     member_type=inherited.member_type or 'method'
@@ -1163,11 +1204,21 @@ class DocProcessingRunner:
                 continue
             
             # --- Read class doc ---
-            if not module_txt.exists():
-                logger.debug(f"Class doc not found: {module_txt}")
+            original_module_txt = self.per_module_dir / f"{container_name}.txt"
+            if original_module_txt.exists():
+                source_txt = original_module_txt
+            elif module_txt.exists():
+                source_txt = module_txt
+            else:
+                logger.debug(f"Class doc not found for fallback extraction: {module_txt}")
                 continue
+            class_doc_text = source_txt.read_text(encoding='utf-8')
             
-            class_doc_text = module_txt.read_text(encoding='utf-8')
+            # if not module_txt.exists():
+            #     logger.debug(f"Class doc not found: {module_txt}")
+            #     continue
+            
+            # class_doc_text = module_txt.read_text(encoding='utf-8')
             
             logger.info(f"Extracting {len(missing_members)} missing methods (direct + inherited) from class {db_class.fqn}")
             
@@ -1288,20 +1339,20 @@ class DocProcessingRunner:
                 inherited = self.qm.get_inherited_member_by_api_name(api_name)
                 if inherited:
                     # Get signature variants from original member or inherited data
-                    signatures = []
+                    sig_variants = {}
                     if inherited.original_member_id:
                         original = self.qm.get_original_member_for_inherited(api_name)
                         if original:
-                            signatures = original.signatures
+                            sig_variants = original.signatures
                     
-                    if not signatures and inherited.signature:
+                    if not sig_variants and inherited.signature:
                         if isinstance(inherited.signature, dict):
-                            signatures = list(inherited.signature.values())
+                            sig_variants = {str(k): str(v) for k, v in inherited.signature.items()}
                         elif isinstance(inherited.signature, str):
-                            signatures = [inherited.signature]
+                            sig_variants = {'full': inherited.signature}
                     
-                    if not signatures:
-                        signatures = [f"{inherited.member_name}("]
+                    if not sig_variants:
+                        sig_variants = {'full': f"{inherited.member_name}("}
                     
                     # Collect all API names for this inherited member
                     all_names = set(inherited.inherited_api_names or [])
@@ -1315,7 +1366,7 @@ class DocProcessingRunner:
                         all_api_names=all_names,
                         member_input=MemberInput(
                             api_name=api_name,
-                            signature_variants=signatures,
+                            signature_variants=sig_variants,
                             member_type=inherited.member_type or 'method'
                         ),
                         member_type=inherited.member_type or 'method'
@@ -1386,7 +1437,7 @@ class DocProcessingRunner:
                     all_api_names={api_name},
                     member_input=MemberInput(
                         api_name=api_name,
-                        signature_variants=[f"{short_name}("],
+                        signature_variants={'full': f"{short_name}("},
                         member_type=inferred_type
                     ),
                     member_type=inferred_type
@@ -1416,7 +1467,7 @@ class DocProcessingRunner:
                 all_api_names={container_name},
                 member_input=MemberInput(
                     api_name=container_name,
-                    signature_variants=[container_name],
+                    signature_variants={'full': container_name},
                     member_type="class" if is_class else "function"
                 ),
                 member_type="class" if is_class else "function"
@@ -1493,7 +1544,6 @@ class DocProcessingRunner:
                 peer_info = peer_mp["info"]
                 peer_needles = build_lexical_needles(peer_info.member_input)
                 peer_sigs.extend(peer_needles.get("exact", []))
-                peer_sigs.extend(peer_needles.get("prefix", []))
             
             stop_matcher = StopSignalMatcher(
                 peer_signatures=peer_sigs,
@@ -1517,7 +1567,14 @@ class DocProcessingRunner:
     
     def _extract_until_stop(self, text: str, stop_matcher: StopSignalMatcher, max_chars: int = 25000) -> str:
         """
-        Extract text until a HIGH PRIORITY stop signal is found or max_chars reached.
+        Extract text until a high-priority stop signal is found or max_chars is reached.
+        
+        Mirrors the fence-aware logic of pipeline_pdf.PDFExtractor._extract_lines_until_stop:
+            - Lines inside a code fence (``` ... ```) are never high-priority stops.
+            - Stop signals that fire inside a fence are recorded as a fallback
+              truncation point and applied only if no definitive stop is found.
+            - The first line (index 0) is skipped for stop-signal checking because
+              it is the anchor line for the current member.
         
         Fallback behavior:
             - For CLASS: If max_chars reached without finding another class/function,
@@ -1536,50 +1593,101 @@ class DocProcessingRunner:
         lines = text.split('\n')
         
         # --- Pre-scan to determine if fallback should be used upfront ---
-        # This mirrors what extract_by_line_expansion does in PDF pipeline
         stop_matcher.pre_scan_section(text, start_pos=0)
         
         result_lines = []
         char_count = 0
         found_stop = False
+        fallback_stop_line_idx = None   # index into result_lines for soft truncation
+        fence_count_total = 0   # total ``` markers seen so far
         
-        for line in lines:
-            matched, is_high_priority = stop_matcher.checks_stop(line)
-            if matched and is_high_priority:
-                found_stop = True
+        for i, line in enumerate(lines):
+            line_stripped = line.strip()
+            
+            # Determine fence state BEFORE processing this line
+            is_inside_fence = (fence_count_total % 2) == 1
+            fences_on_line  = line.count('```')
+            is_fence_line   = (
+                line_stripped == '```'
+                or (line_stripped.startswith('```') and len(line_stripped) < 20)
+            )
+            # Update fence counter for the NEXT iteration
+            fence_count_total += fences_on_line
+            
+            # --- Safety limit ---
+            if char_count >= max_chars:
+                if fallback_stop_line_idx is not None:
+                    result_lines = result_lines[:fallback_stop_line_idx]
+                    found_stop = True
                 break
+            
+            # --- Stop-signal check (skip first line — it is the anchor itself) ---
+            if i > 0 and stop_matcher:
+                matched, is_high_priority = stop_matcher.checks_stop(line)
+                
+                if matched:
+                    if is_inside_fence or is_fence_line:
+                        # Inside a code block → record as soft fallback only
+                        if fallback_stop_line_idx is None:
+                            fallback_stop_line_idx = len(result_lines)
+                    elif is_high_priority:
+                        # Definitive stop outside a fence
+                        found_stop = True
+                        break
+                    else:
+                        # Low-priority match outside fence → soft fallback
+                        if fallback_stop_line_idx is None:
+                            fallback_stop_line_idx = len(result_lines)
+            
             result_lines.append(line)
             char_count += len(line) + 1
-            if char_count >= max_chars:
-                break
-        
-        # FALLBACK RETRY: If max_chars reached without finding a stop, and haven't already switched to fallback, try with fallback patterns
+            
+        # --- Fallback retry ---
         if not found_stop and char_count >= max_chars:
-            # Applicable to both CLASS and METHOD extraction
             if not stop_matcher.use_fallback and stop_matcher.fallback_patterns:
                 target_type = stop_matcher.target_type
                 target_name = stop_matcher.target_name
-                
                 if target_type == "class":
                     logger.debug(f"CLASS {target_name}: hit max_chars without stop, retrying with method/inherited member fallback patterns")
                 elif target_type == "method":
                     logger.debug(f"METHOD {target_name}: hit max_chars without sibling method stop, retrying with class/function fallback patterns")
                 else:
                     logger.debug(f"{target_type.upper()} {target_name}: hit max_chars, retrying with fallback patterns")
-                
-                # Force fallback mode and re-scan
+                    
                 stop_matcher.use_fallback = True
                 result_lines = []
                 char_count = 0
+                fence_count_total = 0
+                fallback_stop_line_idx = None
                 
-                for line in lines:
-                    matched, is_high_priority = stop_matcher.checks_stop(line)
-                    if matched and is_high_priority:
+                for i, line in enumerate(lines):
+                    line_stripped = line.strip()
+                    is_inside_fence = (fence_count_total % 2) == 1
+                    fences_on_line  = line.count('```')
+                    is_fence_line   = (
+                        line_stripped == '```'
+                        or (line_stripped.startswith('```') and len(line_stripped) < 20)
+                    )
+                    fence_count_total += fences_on_line
+                    
+                    if char_count >= max_chars:
+                        if fallback_stop_line_idx is not None:
+                            result_lines = result_lines[:fallback_stop_line_idx]
                         break
+                    if i > 0 and stop_matcher:
+                        matched, is_high_priority = stop_matcher.checks_stop(line)
+                        if matched:
+                            if is_inside_fence or is_fence_line:
+                                if fallback_stop_line_idx is None:
+                                    fallback_stop_line_idx = len(result_lines)
+                            elif is_high_priority:
+                                break
+                            else:
+                                if fallback_stop_line_idx is None:
+                                    fallback_stop_line_idx = len(result_lines)
+                    
                     result_lines.append(line)
                     char_count += len(line) + 1
-                    if char_count >= max_chars:
-                        break
         
         return '\n'.join(result_lines)
     
@@ -1638,15 +1746,13 @@ class DocProcessingRunner:
                 # Build proper lexical needles from actual signatures
                 member_input = MemberInput(
                     api_name= nested_member.api_name or nested_member.fqn,
-                    signature_variants=nested_member.signatures or [],
+                    signature_variants=nested_member.signatures or {},
                     member_type=nested_member.type or "function"
                 )
                 needles = build_lexical_needles(member_input)
                 
-                # Add all needle tiers as stop signals
+                # Add exact needle tier as stop signals
                 stop_sigs.extend(needles.get("exact", []))
-                stop_sigs.extend(needles.get("prefix", []))
-                stop_sigs.extend(needles.get("anchor", []))
             else:
                 # Fallback: basic patterns if not in database
                 short_name = api_name.split('.')[-1]
@@ -1666,20 +1772,20 @@ class DocProcessingRunner:
                     continue
                 
                 # Get signatures
-                sig_variants = []
+                sig_variants = {}
                 if inherited.original_member_id:
                     original = self.qm.get_original_member_for_inherited(inherited.inherited_api_name)
                     if original:
-                        sig_variants = original.signatures
+                        sig_variants = original.signatures or {}
                 
                 if not sig_variants and inherited.signature:
                     if isinstance(inherited.signature, dict):
-                        sig_variants = list(inherited.signature.values())
+                        sig_variants = {str(k): str(v) for k, v in inherited.signature.items()}
                     elif isinstance(inherited.signature, str):
-                        sig_variants = [inherited.signature]
+                        sig_variants = {'full': inherited.signature}
                 
                 if not sig_variants:
-                    sig_variants = [f"{inherited.member_name}("]
+                    sig_variants = {'full': f"{inherited.member_name}("}
                 
                 inherited_input = MemberInput(
                     api_name=inherited.inherited_api_name,
@@ -1688,7 +1794,6 @@ class DocProcessingRunner:
                 )
                 needles = build_lexical_needles(inherited_input)
                 stop_sigs.extend(needles.get("exact", []))
-                stop_sigs.extend(needles.get("prefix", []))
             
             logger.debug(f"Added {len(inherited_members)} inherited member signatures as stop signals for class {output_api_name}")
         
@@ -1834,7 +1939,7 @@ class DocProcessingRunner:
                 continue
             
             # Build prompts using DocumentationExtractor
-            signature = mi.signature_variants[0] if mi.signature_variants else api_name
+            signature = self._first_sig(mi) #mi.signature_variants[0] if mi.signature_variants else api_name
             
             temp_extractor = DocumentationExtractor(
                 MM_type=mi.member_type,
@@ -1922,7 +2027,7 @@ class DocProcessingRunner:
             
             try:
                 # Determine signature to use
-                signature = mi.signature_variants[0] if mi.signature_variants else api_name
+                signature = self._first_sig(mi) #mi.signature_variants[0] if mi.signature_variants else api_name
                 
                 extractor = DocumentationExtractor(
                     MM_type=mi.member_type,

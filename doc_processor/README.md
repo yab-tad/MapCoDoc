@@ -159,7 +159,10 @@ Step 3: Extract Per-Member Documentation
     
 Step 3d: Fallback - Missing Methods from Class Docs
     ↓ Search parent class doc for method documentation
-    ↓ Includes BOTH direct methods AND inherited methods ← ENHANCED
+    ↓ Includes BOTH direct methods AND inherited methods
+    ↓ Source preference: per_module/{container}.txt (original scraped, never overwritten)
+    ↓   Fallback to per_member/{container}.txt if per_module file absent
+    ↓   (per_member file may be the truncated extracted container doc from Step 3b)
     ↓ Output: scraped_doc/{lib}/{version}/per_member/{method_api_name}.txt
 
 Step 3e: Filter Container Docs
@@ -207,6 +210,9 @@ Step 0: Build Pipeline Inputs
     ↓ Query inherited members for all classes
     ↓ Convert to MemberInput objects (direct + inherited)
     ↓ Build peer_signatures map (includes inherited member signatures)
+    ↓   • Module-level peers cached per unique top-level module
+    ↓   • Class method/inherited signatures sorted alphabetically for
+    ↓     predictable CLASS extraction cutoff
 
 Step 1: Store PDF Locally
     ↓ Copy or download PDF
@@ -214,13 +220,26 @@ Step 1: Store PDF Locally
     
 Step 2: Extract Documentation
     ↓ extract_api_docs_from_pdf(pdf_path, members, peer_signatures, ...)
-    ↓ Uses MemberExtractor with lexical + semantic search
-    ↓ peer_signatures includes inherited members for stop signal detection
+    ↓ Phase 1: Extract classes + functions (no parent context needed)
+    ↓ Phase 2: Extract methods with parent-class scoping
+    ↓   • Scoped to [parent_class_anchor, next_class_anchor]
+    ↓   • If parent class not in class_anchors → not_found immediately
+    ↓   • Partial class name match disabled for private-module parents
+    ↓   • Strategy 5a: cross-section fallback for split-section methods
+    ↓   • Strategy 4/5a suppressed when max_raw_lex == 0 (member absent)
     ↓ Output: scraped_doc/{lib}/{version}/per_member/{api_name}.txt
     ↓ Output: scraped_doc/{lib}/{version}/extracted_docs.json
     
 Steps 4-7: Same as Web Pipeline
 ```
+
+#### `_extract_until_stop` (web pipeline)
+
+Extracts text from an anchor position until a stop signal fires or `max_chars` is reached. Now mirrors the PDF pipeline's `PDFExtractor._extract_lines_until_stop` with full **code-fence tracking**:
+
+- Lines inside ` ``` ` fences are never treated as high-priority stops.
+- Stop signals inside fences are recorded as soft fallback truncation points.
+- The first line (the anchor itself) is always included regardless of stop-signal matching.
 
 #### `_filter_container_doc`
 
@@ -258,6 +277,19 @@ This mode is useful for:
 ---
 
 ## Module Reference
+
+### `mapcodoc_db/query.py` — Signature representation
+
+`MemberDetails.signatures` and `ExportDetails.signatures` are now `Dict[str, str]` (variant_name → signature_text), populated via:
+
+```python
+signatures = {s.variant: s.signature_text for s in member.signatures}
+# e.g. {'full': 'add(other, axis: Axis | None = "columns", ...)', 'no_types': 'add(other, axis="columns", ...)'}
+```
+
+This preserves the named variation structure from `parameter_analysis.py` all the way to `build_lexical_needles`, enabling variant-priority ordering in needle generation.
+
+---
 
 ### `doc_runner.py`
 
@@ -311,7 +343,7 @@ inherited_members = runner._get_inherited_members_for_pipeline(class_members)
 
 Converts an `InheritedMemberDetails` to a `MemberInput` for pipeline processing:
 - Uses the **inherited API name** (e.g., `xgboost.XGBRFClassifier.evals_result`)
-- Gets signature variants from the original definition
+- Gets `signature_variants: Dict[str, str]` from the original member's DB signatures when available; falls back to the inherited signature dict; falls back to `{'full': member_name + '('}` as last resort
 - Sets member_type from inherited metadata
 
 ### `filter_doc.py`
@@ -323,17 +355,30 @@ Type-aware boundary detection for extracting individual member docs from combine
 ```python
 from doc_processor.filter_doc import StopSignalMatcher
 
+# peer_signatures should be exact-tier needles only (build_lexical_needles + .get("exact")).
+# Using only full signature strings (not bare "name(" prefixes) avoids false stops
+# against Sphinx parameter-list items such as "- feature_names (Sequence[str])".
 matcher = StopSignalMatcher(
-    peer_signatures=["Conv2d(", "class torch.nn.Conv2d("],
+    peer_signatures=[
+        "class torch.nn.Conv2d(in_channels: int, out_channels: int, ...)",
+        "Conv2d(in_channels, out_channels, kernel_size)",
+    ],
     target_member_type="class",
     target_api_name="torch.nn.Conv1d"
 )
 
-# Check if a line marks the start of a peer member (stop signal)
-if matcher.is_stop_signal(line):
+# Check if a line marks the start of a peer member (stop signal).
+matched, is_high_priority = matcher.checks_stop(line)
+if matched and is_high_priority:
     # End extraction here
     pass
 ```
+
+**Key behaviours:**
+- All stop-signal patterns are anchored to the **line start** (`^\s*`), not mid-line whitespace. This prevents false stops on parameter descriptions like `- feature_names (Sequence[str] | None)`.
+- Type-aware keyword prefix: class peers accept an optional `class` prefix; method/property peers accept optional `property`, `classmethod`, or `staticmethod`.
+- `_looks_like_code_example` now also detects **Sphinx bullet-list parameter items** (`^[-*•]\s+\w`) and treats them as low-priority (non-definitive stops).
+- Code fences (```` ``` ````) are tracked in both PDF (`PDFExtractor._extract_lines_until_stop`) and web (`DocProcessingRunner._extract_until_stop`) pipelines; stop signals inside fences are recorded as soft fallbacks only.
 
 #### WebMemberExtractor
 
@@ -471,25 +516,50 @@ Signature pattern and needle generation.
 ```python
 from doc_processor.file_doc.signature import MemberInput, build_lexical_needles
 
+# signature_variants is Dict[str, str]: variant_name -> signature_text.
+# Keys are produced by parameter_analysis.Parameter._extract_variations():
+#   'full', 'no_types', 'defaults_only', 'no_special',
+#   'no_slash', 'no_asterisk', 'no_types_no_slash', 'no_types_no_asterisk'
 member = MemberInput(
     api_name="torch.nn.Conv1d",
-    signature_variants=["Conv1d(in_channels, out_channels, kernel_size, ...)"],
+    signature_variants={
+        "full":          "Conv1d(in_channels: int, out_channels: int, kernel_size: _size_1_t, ...)",
+        "no_types":      "Conv1d(in_channels, out_channels, kernel_size, stride=1, ...)",
+        "defaults_only": "Conv1d(in_channels, out_channels, kernel_size)",
+    },
     member_type="class"
 )
 
-# Build tiered search needles
+# Build two-tier search needles
 needles = build_lexical_needles(member)
 # Returns: {
-#     "exact": ["torch.nn.Conv1d(in_channels, ...", "class torch.nn.Conv1d(..."],
-#     "prefix": ["Conv1d(", "torch.nn.Conv1d("],
-#     "anchor": ["Conv1d", "torch.nn.Conv1d"]
+#   "exact": [
+#       # full variant — FQN qualified forms first (most specific):
+#       "class torch.nn.Conv1d(in_channels: int, out_channels: int, kernel_size: _size_1_t, ...)",
+#       "torch.nn.Conv1d(in_channels: int, out_channels: int, kernel_size: _size_1_t, ...)",
+#       "class Conv1d(in_channels: int, out_channels: int, kernel_size: _size_1_t, ...)",
+#       "Conv1d(in_channels: int, out_channels: int, kernel_size: _size_1_t, ...)",
+#       # no_types variant — same qualified forms:
+#       "class torch.nn.Conv1d(in_channels, out_channels, kernel_size, stride=1, ...)",
+#       ...
+#       # defaults_only variant:
+#       "class torch.nn.Conv1d(in_channels, out_channels, kernel_size)",
+#       ...
+#   ],
+#   "anchor": ["Conv1d", "torch.nn.Conv1d"]
 # }
 ```
 
-**Needle Generation:**
-- Automatically combines API names with parameter parts from signatures
-- Generates class-prefixed variants for classes
-- Creates truncated signatures (first 3 params) for robust matching
+**Needle Generation design:**
+- **Two tiers only** — `"exact"` (full signatures) and `"anchor"` (plain names).  
+  The old `"prefix"` tier (`Conv1d(`, `torch.nn.Conv1d(`) has been **removed** because it caused false-positive stop signals against Sphinx parameter-list items like `- feature_names (Sequence[str] | None)`.
+- **Variant priority**: variants are processed in `_VARIANT_PRIORITY` order (`full` → `no_types` → `defaults_only` → …), so the most specific form appears first in `"exact"`.
+- **Multiple qualified forms per variant**:  
+  - *Classes*: `class {fqn}(...)`, `{fqn}(...)`, `class {short}(...)`, `{short}(...)`  
+  - *Methods*: `{short}(...)` (web), `{ClassName}.{short}(...)` (PDF), `{fqn}(...)` (URL match)  
+  - *Functions*: `{short}(...)`, `{fqn}(...)`
+- **Anchor tier** covers: short name, FQN, and `ClassName.method` (for methods). Used as fallback for no-arg properties and variables, and as the FQN URL-fragment discriminator in web docs.
+- `_first_variant(variants)` returns the most informative signature string for use in LLM prompts and semantic queries.
 
 ---
 

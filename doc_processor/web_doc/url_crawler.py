@@ -176,77 +176,6 @@ class URLScraper:
             return False
 
         return True
-    
-    # def is_relevant_url(self, url: str) -> bool:
-    #     """
-    #     Check if URL is within documentation scope.
-    #     Accept only:
-    #         - directory mode: base_url/sub_path/<name>.html (optionally with #anchor)
-    #         - single-page mode: base_url/sub_path (where sub_path endswith .html, optionally with #anchor)
-    #         - directory-served mode: base_url/sub_path/ (directory serving index.html, with #anchor)
-    #     """
-    #     if not self.base_url:
-    #         return True
-
-    #     if not url.startswith(self.base_url):
-    #         return False
-
-    #     # Allow the base page to seed the crawl
-    #     if url == self.base_url:
-    #         return True
-
-    #     if not self.sub_path:
-    #         # Fallback: only accept pages directly under the seed directory, *.html
-    #         url_no_frag = url.split('#', 1)[0]
-    #         if not self.seed_dir:
-    #             return False
-    #         if not url_no_frag.startswith(self.seed_dir):
-    #             return False
-    #         tail = url_no_frag[len(self.seed_dir):].strip('/')
-    #         segs = [s for s in tail.split('/') if s]
-    #         if len(segs) != 1 or not segs[0].lower().endswith('.html'):
-    #             return False
-    #         if segs[0].startswith(('genindex', 'modindex', 'search')):
-    #             return False
-    #         return True
-
-    #     # Ignore fragment for path checks
-    #     url_no_frag = url.split('#', 1)[0]
-    #     rel = url_no_frag[len(self.base_url):].lstrip('/')
-    #     segments = [seg for seg in rel.split('/') if seg]
-
-    #     # Single-page mode: sub_path is a file like "python_api.html"
-    #     if self.sub_path.lower().endswith('.html'):
-    #         # Must be exactly that file under base_url (no extra segments)
-    #         return len(segments) == 1 and segments[0].lower() == self.sub_path.lower()
-
-    #     # --- Directory-served single-page mode ---
-    #     # URL IS the sub_path directory (e.g., /api/ serving index.html)
-    #     # Accepts: base_url/sub_path/ or base_url/sub_path (with or without trailing slash)
-    #     url_path = url_no_frag.rstrip('/')
-    #     expected_dir_path = (self.base_url.rstrip('/') + '/' + self.sub_path).rstrip('/')
-    #     if url_path == expected_dir_path:
-    #         return True  # This is the API directory page itself, anchors are valid
-    #     # ---
-        
-    #     # Directory mode: sub_path is a directory like "generated"
-    #     if self.sub_path not in segments or segments.count(self.sub_path) != 1:
-    #         return False
-
-    #     sub_idx = segments.index(self.sub_path)
-    #     after = segments[sub_idx + 1:]
-
-    #     # Require exactly one segment after sub_path and it must be an .html file
-    #     if len(after) != 1 or not after[0].lower().endswith('.html'):
-    #         return False
-
-    #     # Skip common non-content dirs/files
-    #     if any(seg in self.common_skip_dirs for seg in segments):
-    #         return False
-    #     if after[0].startswith(('genindex', 'modindex', 'search')):
-    #         return False
-
-    #     return True
 
     def should_skip_url(self, url: str) -> bool:
         """Check if URL should be skipped based on extension or pattern."""
@@ -367,82 +296,6 @@ class URLScraper:
         for part in module_path.split('.'):
             split_parts.extend([p for p in part.split('_') if p])
         return split_parts, unsplit_parts
-
-
-    # def is_valid_reference_for_page(self, url: str, reference: str) -> bool:
-    #     """
-    #     Validate anchor reference based on documentation type.
-        
-    #     Args:
-    #         url (str): URL to validate against
-    #         reference (str): Anchor reference to check
-            
-    #     Returns:
-    #         bool: True if reference is valid for the given URL
-    #     """
-        
-    #     try:
-    #         # Basic structure validation
-    #         if not reference or '.' not in reference:
-    #             return False
-                
-    #         if self.is_possible_api_documentation(url):
-    #             return len(reference.split('.')) >= 2
-                
-    #         # Get module paths
-    #         split_parts, unsplit_parts = self.get_module_parts(url)
-    #         reference_parts = reference.lower().split('.')
-            
-    #         # Create dot-separated strings for comparison
-    #         split_url_str = '.'.join(split_parts)
-    #         unsplit_url_str = '.'.join(unsplit_parts)
-    #         ref_str = '.'.join(reference_parts)
-            
-    #         unsplit_flag = False
-    #         for i in unsplit_parts:
-    #             if '_' in i and i in ref_str:
-    #                 unsplit_flag = True
-    #                 break
-            
-    #         # Check both split and unsplit versions for matches
-    #         # This preserves hierarchy while handling both formats
-    #         if (ref_str == split_url_str) or (ref_str == unsplit_url_str):
-    #             return True
-            
-    #         if unsplit_url_str in ref_str and unsplit_flag:
-    #             remaining_ref = (ref_str[len(unsplit_url_str):]).split('.')
-    #             if unsplit_parts[0] == reference_parts[0] and len(remaining_ref) > 1:
-    #                 return False
-    #             # Check if module path is present in the first or second index of reference path
-    #             unsplit_parts_ref = reference_parts.index(unsplit_parts[0])
-    #             for i, j in enumerate(unsplit_parts):
-    #                 if j not in reference_parts[i+unsplit_parts_ref:-1]:
-    #                     return False
-    #                 # Guarantees module member path in base_url is the module for the remaining fragment in the anchor
-    #                 if (i==len(unsplit_parts)-1) and (len(reference_parts[i+unsplit_parts_ref+1:])>1):
-    #                     if reference.split('.')[i+unsplit_parts_ref+1][0].islower():
-    #                         return False
-    #             return True
-                
-    #         if split_url_str in ref_str and not unsplit_flag:
-    #             remaining_ref = (ref_str[len(split_url_str):]).split('.')
-    #             if split_parts[0] == reference_parts[0] and len(remaining_ref) > 1:
-    #                 return False
-    #             # Check if module path is present in the first or second index of reference path
-    #             underscore_split_part = '_'+split_parts[0] if '_' == ref_str[ref_str.index(split_parts[0]) - 1] else split_parts[0]
-    #             split_parts_ref = reference_parts.index(underscore_split_part)
-    #             for i, j in enumerate(split_parts):
-    #                 if j not in reference_parts[i+split_parts_ref:-1]:
-    #                     return False
-    #                 # Guarantees module member path in base_url is the module for the remaining fragment in the anchor
-    #                 if (i==len(split_parts)-1) and (len(reference_parts[i+split_parts_ref+1:])>1):
-    #                     if reference.split('.')[i+split_parts_ref+1][0].islower():
-    #                         return False
-    #             return True
-                
-    #     except Exception as e:
-    #         print(f"Error validating reference: {str(e)}")
-    #         return False
 
     
     def is_valid_reference_for_page(self, url: str, reference: str) -> bool:
@@ -641,9 +494,9 @@ class URLScraper:
                         # Multi-segment sub-path (e.g., "modules/generated")
                         sub_path = '/'.join(sub_path_segs)
                     else:
-                        # The .html file itself is the sub-path (e.g., "python_api")
+                        # The .html file itself is the sub-path (e.g., "python_api.html")
                         html_name = segs[html_file_idx]
-                        sub_path = html_name[:-5] if html_name.lower().endswith('.html') else html_name
+                        sub_path = html_name
                 else:
                     sub_path = segs[i] if i < len(segs) else ""
                 
@@ -652,52 +505,6 @@ class URLScraper:
         # Last resort: site root
         ok, _ = await self.test_url(site_root, fetcher)
         return (site_root, "") if ok else (site_root, "")
-    
-    # async def truncate_url_segments(self, url: str, fetcher: URLFetcher) -> tuple[str, str]:
-    #     """
-    #     Determine (base_url, sub_path) by probing upwards using the shared fetcher.
-    #     Tries directory, directory/, and directory/index.html at each level with a sanitized Referer.
-    #     Uses the original start URL as Referer for all probes.
-    #     """
-    #     parsed = urlparse(url)
-    #     site_root = f"{parsed.scheme}://{parsed.netloc}/"
-    #     segs = [s for s in (parsed.path or '/').split('/') if s]
-
-    #     async def probe_prefix(prefix_segs: list[str]) -> Optional[str]:
-    #         base = site_root
-    #         prefix = '/'.join(prefix_segs)
-    #         candidates = []
-    #         if prefix:
-    #             # try trailing slash first (most reliable for Sphinx), then index.html, then bare
-    #             candidates.append(f"{base}{prefix}/")
-    #             candidates.append(f"{base}{prefix}/index.html")
-    #             candidates.append(f"{base}{prefix}")
-    #         else:
-    #             candidates.append(base)
-
-    #         for cand in candidates:
-    #             ok, _ = await self.test_url(cand, fetcher) # referer=url)
-    #             if ok:
-    #                 # normalize to a directory-terminated base if possible
-    #                 if cand.endswith('/index.html'):
-    #                     return cand[:-11]  # drop 'index.html'
-    #                 if cand.endswith('/'):
-    #                     return cand
-    #                 if prefix and cand.endswith(prefix):
-    #                     return f"{base}{prefix}/"
-    #                 return cand
-    #         return None
-
-    #     # Walk upward from deepest to shallowest
-    #     for i in range(len(segs) - 1, -1, -1):
-    #         container = await probe_prefix(segs[:i])
-    #         if container:
-    #             sub_path = segs[i] if i < len(segs) else ""
-    #             return container, sub_path
-
-    #     # Last resort: site root if it’s HTML
-    #     ok, _ = await self.test_url(site_root, fetcher) # referer=url)
-    #     return (site_root, "") if ok else (site_root, "")
     
     
     async def process_url(self, current_url: str, fetcher: URLFetcher) -> set:

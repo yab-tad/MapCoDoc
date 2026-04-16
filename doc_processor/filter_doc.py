@@ -93,13 +93,21 @@ class StopSignalMatcher:
             peer_looks_like_class = self.CLASS_NAME_PATTERN.match(short_name) is not None
             peer_looks_like_method = self.METHOD_NAME_PATTERN.match(short_name) is not None
             
-            # Classify as primary or fallback based on target type
-            is_primary = self._classify_peer(short_name, peer_looks_like_class, peer_looks_like_method, name_part)
+            # Classify as primary, fallback, or excluded
+            classification = self._classify_peer(short_name, peer_looks_like_class, peer_looks_like_method, name_part)
+            
+            if classification is None:
+                # Excluded: method of a different class — never use as stop signal
+                continue
             
             # Build patterns for this peer
-            patterns = self._build_patterns_for_peer(short_name, name_part, sig)
+            patterns = self._build_patterns_for_peer(
+                short_name, name_part, sig,
+                peer_looks_like_class=peer_looks_like_class,
+                peer_looks_like_method=peer_looks_like_method
+            )
             
-            if is_primary:
+            if classification:
                 self.primary_patterns.extend(patterns)
                 self.primary_short_names.add(short_name.lower())
             else:
@@ -108,99 +116,321 @@ class StopSignalMatcher:
         
         # State: which pattern set to use (can be switched after pre-scan)
         self.use_fallback = False
-        
+    
+    
     def _classify_peer(
-        self, 
-        short_name: str, 
+        self,
+        short_name: str,
         peer_looks_like_class: bool,
         peer_looks_like_method: bool,
         full_name: str
-    ) -> bool:
+    ) -> Optional[bool]:
         """
-        Classify a peer as primary or fallback stop signal.
-        
+        Classify a peer as primary, fallback, or excluded.
+
         Returns:
-            True if this peer is a PRIMARY stop signal, False for FALLBACK
+            True  → PRIMARY: use as an immediate stop signal
+            False → FALLBACK: use only if no primary match found in the section
+            None  → EXCLUDED: never use as a stop signal
+
+        Classification per target type:
+
+          CLASS:    Primary  = other classes and qualified functions
+                    Fallback = methods (used as end-of-class-body markers)
+
+          METHOD:   Primary  = sibling methods / inherited members of the SAME
+                               parent class  (identified by FQN penultimate component)
+                    Fallback = other class definitions + module-level functions
+                    Excluded = methods that belong to a DIFFERENT class
+                               (they would cause premature stops when the same
+                               method name exists in multiple classes)
+
+          FUNCTION: Primary  = all peers
         """
         # --- CLASS EXTRACTION ---
         if self.target_type == "class":
-            # Primary: other classes and functions (not methods)
             if peer_looks_like_class:
-                return True  # Primary: other class
+                return True   # PRIMARY: another class or top-level entity
             if '.' in full_name and peer_looks_like_method:
-                return True  # Primary: qualified function
-            # Fallback: methods (to find end of class's method list)
-            return False
-        
+                return True   # PRIMARY: qualified standalone function
+            return False      # FALLBACK: methods act as end-of-class markers
+
         # --- METHOD EXTRACTION ---
         elif self.target_type == "method":
-            # Primary: sibling methods (same parent class)
+            if peer_looks_like_class:
+                return False  # FALLBACK: another class definition
+
             if peer_looks_like_method:
-                # If we know parent class, check if this could be a sibling
-                if self.parent_class:
-                    # Methods of same class are primary
+                if not self.parent_class:
+                    # No parent class information — fall back to old behaviour
                     return True
-                return True  # Assume sibling method
-            # Fallback: classes and functions
-            return False
-        
+
+                name_parts = full_name.split('.')
+                if len(name_parts) < 2:
+                    # Bare short name (e.g. "eval") where class membership cannot be determined from FQN alone
+                    return True  # PRIMARY: treat as potential sibling
+
+                penultimate = name_parts[-2]
+
+                if penultimate == self.parent_class:
+                    return True   # PRIMARY: sibling of the same class
+
+                if penultimate[0].isupper():
+                    return None   # EXCLUDED: method of a different class
+
+                # Penultimate component is a module name (lowercase) -> this is a module-level function, not a class method
+                return False      # FALLBACK: standalone function
+
+            return False  # Default for unrecognised lowercase peers
+
         # --- FUNCTION EXTRACTION ---
         elif self.target_type == "function":
-            # Primary: other functions and classes
-            return True
+            return True  # PRIMARY: all peers act as boundaries
+
+        return True  # Default
+    
+    
+    # def _build_patterns_for_peer(self, short_name: str, full_name: str, full_signature: str = "") -> List[re.Pattern]:
+    #     """
+    #     Build regex patterns for a peer signature.
         
-        return True  # Default: primary
+    #     Args:
+    #         short_name: Just the name (e.g., "apply_over_axes")
+    #         full_name: FQN without params (e.g., "numpy.apply_over_axes")
+    #         full_signature: Complete signature (e.g., "numpy.apply_over_axes(func, a, axes)")
+        
+    #     Returns:
+    #         List of compiled regex patterns.
+    #     """
+    #     patterns = []
+    #     short_escaped = re.escape(short_name)
+        
+    #     # =========================================================================
+    #     # Pattern 0a (Highest Priority): Exact signature with flexible whitespace
+    #     # Must be at line start or preceded by whitespace (not part of longer FQN)
+    #     # =========================================================================
+    #     if full_signature and short_name != full_name:
+    #         sig_escaped = re.escape(full_signature)
+    #         sig_pattern = sig_escaped
+    #         sig_pattern = sig_pattern.replace(r'\ ', r'\s*')
+    #         sig_pattern = sig_pattern.replace(r'\.', r'\s*\.\s*')
+            
+    #         # Only add paren flexibility if signature HAS parens
+    #         if '(' in full_signature:
+    #             sig_pattern = sig_pattern.replace(r'\(', r'\s*\(\s*')
+    #             sig_pattern = sig_pattern.replace(r'\)', r'\s*\)')
+    #             sig_pattern = sig_pattern.replace(r'\,', r'\s*,\s*')
+    #             sig_pattern = sig_pattern.replace(r'\=', r'\s*=\s*')
+            
+    #         # Boundary check - must be at line start or preceded by whitespace
+    #         pat0_exact = re.compile(
+    #             rf'(?:^|\s){sig_pattern}',  # <-- Added (?:^|\s) prefix
+    #             re.IGNORECASE | re.MULTILINE
+    #         )
+    #         patterns.append(pat0_exact)
+    #         return patterns
+        
+        
+    #     # =========================================================================
+    #     # Pattern 0b: Full signature with optional class/FQN prefix
+    #     # For short-name signatures (e.g., "Conv2d(...)"), allow doc to have:
+    #     #   - "class Conv2d(...)"
+    #     #   - "torch.nn.Conv2d(...)"
+    #     #   - "class torch.nn.Conv2d(...)"
+    #     # Matches FULL signature to avoid false positives like "apply_over_axes(#page=1284)"
+    #     # =========================================================================
+    #     if full_signature and '(' in full_signature and short_name == full_name:
+    #         sig_escaped = re.escape(full_signature)
+    #         sig_pattern = sig_escaped
+    #         sig_pattern = sig_pattern.replace(r'\ ', r'\s*')
+    #         sig_pattern = sig_pattern.replace(r'\.', r'\s*\.\s*')
+    #         sig_pattern = sig_pattern.replace(r'\(', r'\s*\(\s*')
+    #         sig_pattern = sig_pattern.replace(r'\)', r'\s*\)')
+    #         sig_pattern = sig_pattern.replace(r'\,', r'\s*,\s*')
+    #         sig_pattern = sig_pattern.replace(r'\=', r'\s*=\s*')
+            
+    #         # Allow optional "class " prefix and optional FQN prefix (e.g., "torch.nn.")
+    #         pat0b_full_flexible = re.compile(
+    #             rf'(?:^|\s)(?:class\s+)?(?:[\w\.]+\s*\.\s*)?{sig_pattern}',
+    #             re.IGNORECASE | re.MULTILINE
+    #         )
+    #         patterns.append(pat0b_full_flexible)
+    #         return patterns
+        
+    #     # =========================================================================
+    #     # Pattern 1: Short name with optional "class" prefix
+    #     # Matches: "Conv2d(" or "class Conv2d("
+    #     # ONLY create this if full_name has NO dots (not an FQN)
+    #     # Otherwise we'd match "apply_over_axes(" when looking for "numpy.apply_over_axes("
+    #     # =========================================================================
+    #     if '.' not in full_name:
+    #         pat1 = re.compile(
+    #             rf'^\s*(?:class\s+)?{short_escaped}\s*\(',
+    #             re.IGNORECASE
+    #         )
+    #         patterns.append(pat1)
+        
+    #     # =========================================================================
+    #     # Pattern 2a: Optional "class" + optional FQN + short name
+    #     # Matches: "class torch.nn.Conv2d(" or "class Conv2d("
+    #     # This handles the case where FQN appears optionally between "class" and short name
+    #     # =========================================================================
+    #     pat2_class_fqn = re.compile(
+    #         rf'^\s*(?:class\s+)?[\w\.]*{short_escaped}\s*\(',
+    #         re.IGNORECASE | re.MULTILINE
+    #     )
+    #     patterns.append(pat2_class_fqn)
+        
+    #     # =========================================================================
+    #     # Pattern 2b: FQN.short_name anywhere in line
+    #     # Matches "torch.nn.Conv2d(" even when short_name = "Conv2d" has no dots
+    #     # Must be preceded by whitespace or line start to avoid partial matches
+    #     # =========================================================================
+    #     pat2b_fqn_short = re.compile(
+    #         rf'(?:^|\s)[\w\.]+\.{short_escaped}\s*\(',  # Note: [\w\.]+ requires at least one char before the dot
+    #         re.IGNORECASE | re.MULTILINE
+    #     )
+    #     patterns.append(pat2b_fqn_short)
+        
+    #     # =========================================================================
+    #     # Pattern 3: Full FQN format (if full_name has dots)
+    #     # Matches: "torch.nn.Conv2d(" or "class torch.nn.Conv2d("
+    #     # =========================================================================
+    #     if '.' in full_name:
+    #         fqn_escaped = re.escape(full_name).replace(r'\.', r'\s*\.\s*')
+    #         pat3_fqn = re.compile(
+    #             rf'^\s*(?:class\s+)?{fqn_escaped}\s*\(',
+    #             re.IGNORECASE
+    #         )
+    #         patterns.append(pat3_fqn)
+        
+    #     # =========================================================================
+    #     # Pattern 4: ClassName.method_name format (for methods)
+    #     # Matches: "DataFrame.to_csv("
+    #     # =========================================================================
+    #     if self.parent_class and self.METHOD_NAME_PATTERN.match(short_name):
+    #         pat4_method = re.compile(
+    #             rf'^\s*{re.escape(self.parent_class)}\s*\.\s*{short_escaped}\s*\(',
+    #             re.IGNORECASE
+    #         )
+    #         patterns.append(pat4_method)
+        
+    #     # =========================================================================
+    #     # Pattern 5: FQN anywhere in line (requires preceding whitespace or line start)
+    #     # Matches: "Sound.get_num_channels()" or "     Sound.get_num_channels()"
+    #     # Does NOT match: "pandas.DataFrame.at" when looking for "DataFrame.at"
+    #     # =========================================================================
+    #     if '.' in full_name:
+    #         fqn_escaped = re.escape(full_name).replace(r'\.', r'\s*\.\s*')
+    #         # (?:^|\s) = either start of string/line OR preceded by whitespace
+    #         pat5_fqn_anywhere = re.compile(
+    #             rf'(?:^|\s){fqn_escaped}\s*\(',
+    #             re.IGNORECASE | re.MULTILINE
+    #         )
+    #         patterns.append(pat5_fqn_anywhere)
+            
+    #         # =========================================================================
+    #         # Pattern 6: FQN for properties/attributes (no parentheses required)
+    #         # Same rule: must be at line start or preceded by whitespace
+    #         # =========================================================================
+    #         pat6_fqn_no_paren = re.compile(
+    #             rf'(?:^|\s){fqn_escaped}(?!\s*\()',
+    #             re.IGNORECASE | re.MULTILINE
+    #         )
+    #         patterns.append(pat6_fqn_no_paren)
+        
+    #     return patterns
     
     
-    def _build_patterns_for_peer(self, short_name: str, full_name: str, full_signature: str = "") -> List[re.Pattern]:
+    def _build_patterns_for_peer(
+        self,
+        short_name: str,
+        full_name: str,
+        full_signature: str = "",
+        peer_looks_like_class: bool = False,
+        peer_looks_like_method: bool = True,
+    ) -> List[re.Pattern]:
         """
         Build regex patterns for a peer signature.
-        
+
+        All patterns are anchored to the start of the (stripped) line with ``^\s*``
+        to prevent false matches against parameter-description list items such as "- feature_names (Sequence...)".
+
+        An optional documentation-keyword prefix (``class``, ``property``, etc.) is chosen based on the peer's inferred type.
+
         Args:
-            short_name: Just the name (e.g., "apply_over_axes")
-            full_name: FQN without params (e.g., "numpy.apply_over_axes")
-            full_signature: Complete signature (e.g., "numpy.apply_over_axes(func, a, axes)")
-        
+            short_name: Just the name (e.g., "apply_over_axes").
+            full_name: FQN without params (e.g., "numpy.apply_over_axes").
+            full_signature: Complete signature (e.g., "numpy.apply_over_axes(func, a, axes)").
+            peer_looks_like_class: True if the peer's name matches CLASS_NAME_PATTERN.
+            peer_looks_like_method: True if the peer's name matches METHOD_NAME_PATTERN.
+
         Returns:
             List of compiled regex patterns.
         """
         patterns = []
         short_escaped = re.escape(short_name)
-        
-        # =========================================================================
-        # Pattern 0a (Highest Priority): Exact signature with flexible whitespace
-        # Must be at line start or preceded by whitespace (not part of longer FQN)
-        # =========================================================================
+
+        # Choose the optional documentation-keyword prefix based on the peer's type.
+        # This further guards against matching in parameter lists: e.g.
+        #   "property feature_names: ..." is a definition line,
+        #   "- feature_names (Sequence...)" is a parameter list item.
+        if peer_looks_like_class:
+            keyword_prefix = r'(?:class\s+)?'
+        elif peer_looks_like_method:
+            keyword_prefix = r'(?:property\s+|classmethod\s+|staticmethod\s+)?'
+        else:
+            keyword_prefix = r'(?:class\s+|property\s+)?'
+
+        # =====================================================================
+        # Pattern 0a (Highest Priority): Exact FQN signature with flexible
+        # whitespace.  Used when short_name != full_name (i.e. full_name has dots).
+        # Anchored to line start (will NOT match after "- " bullet characters.)
+        # =====================================================================
         if full_signature and short_name != full_name:
             sig_escaped = re.escape(full_signature)
             sig_pattern = sig_escaped
             sig_pattern = sig_pattern.replace(r'\ ', r'\s*')
             sig_pattern = sig_pattern.replace(r'\.', r'\s*\.\s*')
             
-            # Only add paren flexibility if signature HAS parens
             if '(' in full_signature:
                 sig_pattern = sig_pattern.replace(r'\(', r'\s*\(\s*')
                 sig_pattern = sig_pattern.replace(r'\)', r'\s*\)')
                 sig_pattern = sig_pattern.replace(r'\,', r'\s*,\s*')
                 sig_pattern = sig_pattern.replace(r'\=', r'\s*=\s*')
             
-            # Boundary check - must be at line start or preceded by whitespace
             pat0_exact = re.compile(
-                rf'(?:^|\s){sig_pattern}',  # ← Added (?:^|\s) prefix
+                rf'^\s*{sig_pattern}',
                 re.IGNORECASE | re.MULTILINE
             )
             patterns.append(pat0_exact)
+            
+            # For empty-paren properties (e.g. "DMatrix.feature_names()"):
+            # PDFs render them as "     feature_names" or "     property feature_names:" with no "()" on the definition line.  
+            # The no-paren variant fires the stop signal correctly in those cases.
+            # (?!\s*[\(=]) prevents matching "name(" (callable) or "name=val" (param).
+            if '(' in full_signature:
+                open_p = full_signature.find('(')
+                close_p = full_signature.rfind(')')
+                params_content = (
+                    full_signature[open_p + 1 : close_p].strip()
+                    if close_p > open_p else ""
+                )
+                if not params_content:   # empty parens → no-arg property
+                    fqn_esc = re.escape(full_name).replace(r'\.', r'\s*\.\s*')
+                    pat0a_no_paren = re.compile(
+                        rf'^\s*{fqn_esc}\b(?!\s*[\(=])',
+                        re.IGNORECASE | re.MULTILINE
+                    )
+                    patterns.append(pat0a_no_paren)
+            
             return patterns
-        
-        
-        # =========================================================================
-        # Pattern 0b: Full signature with optional class/FQN prefix
-        # For short-name signatures (e.g., "Conv2d(...)"), allow doc to have:
-        #   - "class Conv2d(...)"
-        #   - "torch.nn.Conv2d(...)"
-        #   - "class torch.nn.Conv2d(...)"
-        # Matches FULL signature to avoid false positives like "apply_over_axes(#page=1284)"
-        # =========================================================================
+
+        # =====================================================================
+        # Pattern 0b: Short-name signature with optional keyword + FQN prefix.
+        # Used when short_name == full_name (no dots in the peer's name as passed).
+        # Anchored to line start with type-aware keyword prefix.
+        # =====================================================================
         if full_signature and '(' in full_signature and short_name == full_name:
             sig_escaped = re.escape(full_signature)
             sig_pattern = sig_escaped
@@ -211,97 +441,89 @@ class StopSignalMatcher:
             sig_pattern = sig_pattern.replace(r'\,', r'\s*,\s*')
             sig_pattern = sig_pattern.replace(r'\=', r'\s*=\s*')
             
-            # Allow optional "class " prefix and optional FQN prefix (e.g., "torch.nn.")
-            pat0b_full_flexible = re.compile(
-                rf'(?:^|\s)(?:class\s+)?(?:[\w\.]+\s*\.\s*)?{sig_pattern}',
+            pat0b = re.compile(
+                rf'^\s*{keyword_prefix}(?:[\w\.]+\s*\.\s*)?{sig_pattern}',
                 re.IGNORECASE | re.MULTILINE
             )
-            patterns.append(pat0b_full_flexible)
+            patterns.append(pat0b)
+            
+            # No-paren variant for empty-paren properties.
+            open_p = full_signature.find('(')
+            close_p = full_signature.rfind(')')
+            params_content = (
+                full_signature[open_p + 1 : close_p].strip()
+                if close_p > open_p else ""
+            )
+            if not params_content:   # empty parens -> no-arg property
+                pat0b_no_paren = re.compile(
+                    rf'^\s*{keyword_prefix}(?:[\w\.]+\s*\.\s*)?{short_escaped}\b(?!\s*[\(=])',
+                    re.IGNORECASE | re.MULTILINE
+                )
+                patterns.append(pat0b_no_paren)
+            
             return patterns
-        
-        # =========================================================================
-        # Pattern 1: Short name with optional "class" prefix
-        # Matches: "Conv2d(" or "class Conv2d("
-        # ONLY create this if full_name has NO dots (not an FQN)
-        # Otherwise we'd match "apply_over_axes(" when looking for "numpy.apply_over_axes("
-        # =========================================================================
+
+        # =====================================================================
+        # Fallback patterns (reached only when no full_signature is provided)
+        # =====================================================================
+
+        # Pattern 1: Short name with optional keyword prefix (no dots in full_name)
         if '.' not in full_name:
             pat1 = re.compile(
-                rf'^\s*(?:class\s+)?{short_escaped}\s*\(',
+                rf'^\s*{keyword_prefix}{short_escaped}\s*\(',
                 re.IGNORECASE
             )
             patterns.append(pat1)
-        
-        # =========================================================================
-        # Pattern 2a: Optional "class" + optional FQN + short name
-        # Matches: "class torch.nn.Conv2d(" or "class Conv2d("
-        # This handles the case where FQN appears optionally between "class" and short name
-        # =========================================================================
+
+        # Pattern 2a: Optional keyword + optional FQN prefix + short name
         pat2_class_fqn = re.compile(
-            rf'^\s*(?:class\s+)?[\w\.]*{short_escaped}\s*\(',
+            rf'^\s*{keyword_prefix}[\w\.]*{short_escaped}\s*\(',
             re.IGNORECASE | re.MULTILINE
         )
         patterns.append(pat2_class_fqn)
-        
-        # =========================================================================
-        # Pattern 2b: FQN.short_name anywhere in line
-        # Matches "torch.nn.Conv2d(" even when short_name = "Conv2d" has no dots
-        # Must be preceded by whitespace or line start to avoid partial matches
-        # =========================================================================
+
+        # Pattern 2b: FQN.short_name (requires line start)
         pat2b_fqn_short = re.compile(
-            rf'(?:^|\s)[\w\.]+\.{short_escaped}\s*\(',  # Note: [\w\.]+ requires at least one char before the dot
+            rf'^\s*[\w\.]+\.{short_escaped}\s*\(',
             re.IGNORECASE | re.MULTILINE
         )
         patterns.append(pat2b_fqn_short)
-        
-        # =========================================================================
-        # Pattern 3: Full FQN format (if full_name has dots)
-        # Matches: "torch.nn.Conv2d(" or "class torch.nn.Conv2d("
-        # =========================================================================
+
+        # Pattern 3: Full FQN format (when full_name has dots)
         if '.' in full_name:
             fqn_escaped = re.escape(full_name).replace(r'\.', r'\s*\.\s*')
             pat3_fqn = re.compile(
-                rf'^\s*(?:class\s+)?{fqn_escaped}\s*\(',
+                rf'^\s*{keyword_prefix}{fqn_escaped}\s*\(',
                 re.IGNORECASE
             )
             patterns.append(pat3_fqn)
-        
-        # =========================================================================
+
         # Pattern 4: ClassName.method_name format (for methods)
-        # Matches: "DataFrame.to_csv("
-        # =========================================================================
         if self.parent_class and self.METHOD_NAME_PATTERN.match(short_name):
             pat4_method = re.compile(
                 rf'^\s*{re.escape(self.parent_class)}\s*\.\s*{short_escaped}\s*\(',
                 re.IGNORECASE
             )
             patterns.append(pat4_method)
-        
-        # =========================================================================
-        # Pattern 5: FQN anywhere in line (requires preceding whitespace or line start)
-        # Matches: "Sound.get_num_channels()" or "     Sound.get_num_channels()"
-        # Does NOT match: "pandas.DataFrame.at" when looking for "DataFrame.at"
-        # =========================================================================
+
+        # Pattern 5: FQN with opening paren (requires line start)
         if '.' in full_name:
             fqn_escaped = re.escape(full_name).replace(r'\.', r'\s*\.\s*')
-            # (?:^|\s) = either start of string/line OR preceded by whitespace
-            pat5_fqn_anywhere = re.compile(
-                rf'(?:^|\s){fqn_escaped}\s*\(',
+            pat5_fqn = re.compile(
+                rf'^\s*{fqn_escaped}\s*\(',
                 re.IGNORECASE | re.MULTILINE
             )
-            patterns.append(pat5_fqn_anywhere)
-            
-            # =========================================================================
-            # Pattern 6: FQN for properties/attributes (no parentheses required)
-            # Same rule: must be at line start or preceded by whitespace
-            # =========================================================================
+            patterns.append(pat5_fqn)
+
+            # Pattern 6: FQN for properties/attributes (no parenthesis) which requires line start
             pat6_fqn_no_paren = re.compile(
-                rf'(?:^|\s){fqn_escaped}(?!\s*\()',
+                rf'^\s*{fqn_escaped}(?!\s*\()',
                 re.IGNORECASE | re.MULTILINE
             )
             patterns.append(pat6_fqn_no_paren)
-        
+
         return patterns
+    
     
     def pre_scan_section(self, section_text: str, start_pos: int = 0) -> None:
         """
@@ -377,15 +599,7 @@ class StopSignalMatcher:
             return (False, False)
         
         # Full pattern check
-        for pat in patterns:
-            # if pat.match(line_stripped):
-            #     # Match found - determine priority based on line content
-            #     # Code examples (>>>, assignments) = low priority (fallback only)
-            #     # Real definitions (class X, def x) = high priority (stop immediately)
-            #     is_code_example = self._looks_like_code_example(line_stripped)
-            #     is_high_priority = not is_code_example
-            #     return (True, is_high_priority)
-            
+        for pat in patterns:            
             # Also try search for patterns that use \b instead of ^
             # This catches "short_name   FQN.method()" format
             if pat.search(line_stripped):
@@ -397,16 +611,12 @@ class StopSignalMatcher:
     
     def _looks_like_code_example(self, line: str) -> bool:
         """
-        Check if a line looks like it's from a code example rather than a definition.
+        Check if a line looks like a code example or parameter list rather than a standalone API definition.
         
-        Code examples typically have:
-            - REPL prompts: >>>, ...
-            - Assignment patterns BEFORE the signature: m = Conv2d(...), model = Module(...)
-        
-        Real definitions look like:
-            - class ClassName(...)  at line start
-            - function_name(...) at line start
-            - ClassName(params) at line start with no assignment
+        Detects:
+            - REPL prompts: ``>>>``, ``...``
+            - Assignment patterns before a call: ``m = Conv2d(...)``
+            - Parameter/attribute list items: ``- name (Type)`` or ``* name (Type)``
         
         Args:
             line: The line to check (already stripped).
@@ -414,10 +624,17 @@ class StopSignalMatcher:
         Returns:
             True if this looks like a code example, False if it looks like a definition.
         """
-        # REPL prompts are definitely code examples
+        # REPL prompts
         if line.startswith('>>>') or line.startswith('...'):
             return True
         
+        # Sphinx/Markdown bullet-list parameter descriptions:
+        # "- feature_names (Sequence[str] | None) - Set names for features."
+        # "* weight (float) - per-sample weight"
+        if re.match(r'^[-*•►▪]\s+\w', line):
+            return True
+        
+        # Assignment pattern before the opening paren: "m = Conv2d(...)"
         eq_pos = line.find('=')
         paren_pos = line.find('(')
         
@@ -545,18 +762,24 @@ class WebMemberExtractor:
         
         # --- Lexical Search (for "never", "auto", "always") ---
         needles = build_lexical_needles(mi)
-        lex_score, line_idx, char_offset, match_type = section_match_score(text, needles, section_title="")
+        lex_score, line_idx, char_offset, match_type = section_match_score(text, needles, section_title="", member_type=mi.member_type)
         
         # Apply length penalty (consistent with PDF pipeline)
         length_penalty = self._compute_length_penalty(len(text))
         lex_score_penalized = lex_score - length_penalty
         
-        # Convert line index to character position
+        # Convert line index to character position.
+        # For exact matches: add char_offset so extraction begins at the signature.
+        # For anchor matches: do not add char_offset because the anchor identifies the
+        # correct line but may match anywhere within it (often inside a canonical
+        # URL such as "...#xgboost.DMatrix.feature_names)"), which would cause
+        # extraction to start mid-URL instead of at the line beginning.
         lex_pos = -1
         if line_idx >= 0:
             lines = text.splitlines(keepends=True)
             lex_pos = sum(len(lines[i]) for i in range(min(line_idx, len(lines))))
-            lex_pos += char_offset
+            if match_type != "anchor":
+                lex_pos += char_offset
         
         # --- Regex Fallback if lexical fails ---
         if lex_pos < 0:
@@ -841,9 +1064,7 @@ class WebMemberExtractor:
             mi = member.member_input
             needles = build_lexical_needles(mi)
             
-            lex_score, line_idx, char_offset, match_type = section_match_score(
-                text, needles, section_title=""
-            )
+            lex_score, line_idx, char_offset, match_type = section_match_score(text, needles, section_title="", member_type=mi.member_type)
             lex_score_penalized = lex_score - length_penalty
             
             # Convert to char position
@@ -851,7 +1072,8 @@ class WebMemberExtractor:
             if line_idx >= 0:
                 lines = text.splitlines(keepends=True)
                 lex_pos = sum(len(lines[i]) for i in range(min(line_idx, len(lines))))
-                lex_pos += char_offset
+                if match_type != "anchor":
+                    lex_pos += char_offset
             
             # Regex fallback
             if lex_pos < 0:

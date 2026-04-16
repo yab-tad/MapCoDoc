@@ -1818,7 +1818,18 @@ class PDFSectionizer:
                         if gap > char_width * 1.5:
                             num_spaces = int(round(gap / char_width))
                             num_spaces = max(1, num_spaces)
-                            text_parts.append(' ' * num_spaces)
+                            # Detect merged lines: two logically separate elements at the same y-coordinate in the PDF
+                            _callable_start = re.match(r'^[A-Za-z_]\w*\((?!https?://)', t.strip())
+                            if (not row_is_code
+                                    and not row_is_table
+                                    and num_spaces >= 5
+                                    and _callable_start):
+                                # Split: the right-side callable belongs on its own line.
+                                # Re-use the leading indent already computed for this row.
+                                indent_str = ' ' * leading_indent_chars
+                                text_parts.append('\n' + indent_str)
+                            else:
+                                text_parts.append(' ' * num_spaces)
                         elif gap > char_width * 0.3:
                             text_parts.append(' ')
                     
@@ -1834,6 +1845,20 @@ class PDFSectionizer:
                     prev_span_end_x = sp_x1
                 
                 text_str = "".join(text_parts)
+                
+                # This handles multi-span callables in separate PDF spans) that the per-span check cannot catch
+                if not row_is_code and not row_is_table:
+                    _MERGED_SIG_PAT = re.compile(
+                        r'^([^(\n]+?)\s{5,}([a-z_]\w*\((?!https?://))',
+                        re.MULTILINE
+                    )
+                    def _split_merged_sig(m: re.Match) -> str:
+                        return (
+                            f"{m.group(1).rstrip()}"
+                            f"\n{' ' * leading_indent_chars}{m.group(2)}"
+                        )
+                    text_str = _MERGED_SIG_PAT.sub(_split_merged_sig, text_str)
+                
                 stripped = text_str.strip().rstrip('\n')
                 
                 if not stripped:
@@ -1917,6 +1942,17 @@ class PDFSectionizer:
         
         raw = "".join(parts)
         raw = re.sub(r'\n{4,}', '\n\n\n', raw)
+        
+        # ── Page-level post-process: split merged API signature lines ──────────
+        _MERGED_SIG_RE = re.compile(
+            r'^([^(\n]+?)\s{5,}([a-z_]\w*\((?!https?://))',
+            re.MULTILINE,
+        )
+        raw = _MERGED_SIG_RE.sub(
+            lambda m: f"{m.group(1).rstrip()}\n     {m.group(2)}",
+            raw,
+        )
+        # ─────────────────────────────────
         
         # =====================================================================
         # JOIN MULTI-LINE API SIGNATURES

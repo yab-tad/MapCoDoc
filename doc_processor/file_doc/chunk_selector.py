@@ -171,7 +171,7 @@ class APIReferenceLocator:
                 all_matches.append((curr, quality))
             q.extend(curr.children)
             
-        # # Fallback to all sections for downstream scoring
+        # Fallback to all sections for downstream scoring
         if not all_matches:
             return sections
         

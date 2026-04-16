@@ -5,6 +5,8 @@
 doc_processor/testing_doc.py
 mapcodoc_db/test_db.py
 test_repo_1/
+tests/*.txt
+tests/*.json
 
 # Output directory (keep folder, ignore contents)
 mapcodoc_output/*

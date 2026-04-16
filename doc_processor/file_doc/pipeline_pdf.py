@@ -20,7 +20,7 @@ from doc_processor.filter_doc import StopSignalMatcher
 from doc_processor.file_doc.pdf_localizer import PDFSectionizer, Section
 from doc_processor.file_doc.embeddings import EmbeddingModel
 from doc_processor.file_doc.chunk_selector import APIReferenceLocator
-from doc_processor.file_doc.hybrid_search import section_match_score, cosine_similarity
+from doc_processor.file_doc.hybrid_search import section_match_score, cosine_similarity, find_needle_in_lines
 from doc_processor.file_doc.signature import (
     MemberInput, 
     build_signature_patterns, 
@@ -811,7 +811,7 @@ class MemberExtractor:
                 
                 for sec in sections:
                     score, line_idx, char_offset, match_type = section_match_score(
-                        sec.text_norm, needles, section_title=sec.title
+                        sec.text_norm, needles, section_title=sec.title, member_type=mi.member_type
                     )
                     member_scores.append(score)
                     member_matches.append((line_idx, char_offset, match_type))
@@ -838,6 +838,15 @@ class MemberExtractor:
                     lex_scores, self.cfg.lexical_sigma_k, self.cfg.lexical_margin_min
                 )
                 use_semantic_member.append(needs_semantic)
+                
+        # For members where no section has any lexical signal, suppress semantic search
+        for j in range(len(members)):
+            if use_semantic_member[j] and self.cfg.semantic_mode == "auto":
+                # Use the raw pre-penalty scores: a member in a large section could have a negative penalised score even when genuinely found, so we check the unpenalised array.
+                max_raw_lex = float(np.max(scores_per[j])) if len(scores_per[j]) > 0 else 0.0
+                if max_raw_lex <= 0.0:
+                    use_semantic_member[j] = False
+                    logger.debug(f"Suppressing semantic search for {members[j].api_name}: no lexical signal in any section (member likely not in PDF).")
         
         # Precompute embeddings if needed
         W: Optional[np.ndarray] = None
@@ -882,20 +891,49 @@ class MemberExtractor:
                 parts = mi.api_name.rsplit('.', 1)
                 if len(parts) >= 2:
                     parent_class_name = parts[0]
+                    parent_found = False
                     
                     # Look up parent class anchor
                     if parent_class_name in class_anchors:
                         scoped_section_idx, scoped_start, scoped_end = class_anchors[parent_class_name]
+                        parent_found = True
                         logger.debug(f"Method {mi.api_name} scoped to class {parent_class_name}: "
                                    f"section {scoped_section_idx}, chars {scoped_start}-{scoped_end}")
                     else:
-                        # Try partial match (handle re-exports)
-                        parent_short = parent_class_name.split('.')[-1]
-                        for class_fqn, anchor_info in class_anchors.items():
-                            if class_fqn.endswith(f'.{parent_short}') or class_fqn == parent_short:
-                                scoped_section_idx, scoped_start, scoped_end = anchor_info
-                                logger.debug(f"Method {mi.api_name} scoped to class {class_fqn} (partial match)")
-                                break
+                        parent_module_is_private = (parent_class_name.split('.')[-2]).startswith('_')
+                        if not parent_module_is_private:
+                            # Try partial match (handle re-exports)
+                            parent_short = parent_class_name.split('.')[-1]
+                            for class_fqn, anchor_info in class_anchors.items():
+                                if class_fqn.endswith(f'.{parent_short}') or class_fqn == parent_short:
+                                    scoped_section_idx, scoped_start, scoped_end = anchor_info
+                                    parent_found = True
+                                    logger.debug(f"Method {mi.api_name} scoped to class {class_fqn} (partial match)")
+                                    break
+                            
+                    if not parent_found:
+                        # Parent class was not found in the PDF (not documented, or a private/internal class). Don't fall back to searching all
+                        # sections which causes methods of undocumented classes to incorrectly match content from other classes with similar method names or property signatures
+                        logger.debug(
+                            f"Method {mi.api_name}: parent class '{parent_class_name}' "
+                            "not found in PDF class_anchors; returning not_found."
+                        )
+                        return j, {
+                            "api_name": mi.api_name,
+                            "snippet": "",
+                            "pages": [],
+                            "section_path": [],
+                            "idx": -1,
+                            "anchor_pos": -1,
+                            "base_scores": {
+                                "lexical": 0.0, "semantic": 0.0, "final": 0.0,
+                                "match_type": "not_found"
+                            },
+                            "warning": (
+                                f"Parent class '{parent_class_name}' not found in PDF; "
+                                "method extraction skipped to prevent cross-class false matches."
+                            )
+                        }
             
             # --- Compute section scores (possibly scoped) ---
             section_scores = scores_per[j].tolist()
@@ -949,47 +987,87 @@ class MemberExtractor:
             
             # Helper: Find anchor in raw text (possibly scoped)
             def find_anchor_in_raw(sec_obj: Section) -> int:
-                """Find needle position, optionally scoped to class region."""
+                """
+                Find the start position of the member's definition within the section's
+                raw text, optionally confined to the parent class's scope region.
+                
+                Args:
+                    sec_obj: Section object containing the raw text.
+                    
+                Returns:
+                    Absolute character position in sec_obj.text_raw, or -1 if not found.
+                """
+                
                 raw_text = sec_obj.text_raw
                 
-                # If scoped, only search within class region
+                # Determine search region: scoped to class body, or full section.
                 if scoped_start is not None and scoped_end is not None:
-                    search_text = raw_text[scoped_start:scoped_end]
-                    search_lower = search_text.lower()
+                    search_raw = raw_text[scoped_start:scoped_end]
                     offset = scoped_start
                 else:
-                    search_text = raw_text
-                    search_lower = raw_text.lower()
+                    search_raw = raw_text
                     offset = 0
+                if not search_raw.strip():
+                    return -1
                 
-                # Priority 1: Exact signatures
-                for needle in needles.get("exact", []):
-                    needle_norm = ' '.join(needle.lower().split())
-                    pos = search_lower.find(needle_norm)
-                    if pos >= 0:
-                        return offset + pos
+                # Determine the initial code-fence state for this search region
+                initial_fence = False
+                if scoped_start is not None and scoped_start > 0:
+                    prefix_before_scope = raw_text[:scoped_start]
+                    initial_fence = (prefix_before_scope.count('```') % 2) == 1
                 
-                # Priority 2: Prefix patterns
-                for needle in needles.get("prefix", []):
-                    pos = search_lower.find(needle.lower())
-                    if pos >= 0:
-                        return offset + pos
+                # Normalize both text lines and needles (lowercase and collapse whitespace) before 
+                # comparing, so any whitespace variation in the PDF signature is handled correctly.
+                line_idx, char_offset, score, match_type = find_needle_in_lines(
+                    search_raw,
+                    needles,
+                    early_stop=True,
+                    member_type=mi.member_type,
+                    prioritize_outside_code_blocks=False,
+                )
                 
-                # Priority 3: Anchor patterns with word boundary + paren
-                for needle in needles.get("anchor", []):
-                    pattern = r'\b' + re.escape(needle) + r'\s*\('
-                    match = re.search(pattern, search_text, re.IGNORECASE)
-                    if match:
-                        return offset + match.start()
+                if line_idx < 0 or match_type == "none" or score <= 1.0:
+                    return -1
                 
-                # Priority 4: Just anchor name
-                for needle in needles.get("anchor", []):
-                    pattern = r'\b' + re.escape(needle) + r'\b'
-                    match = re.search(pattern, search_text, re.IGNORECASE)
-                    if match:
-                        return offset + match.start()
+                # Convert line_idx to a character position within search_raw.
+                # find_needle_in_lines splits with text.split('\n'); replicate that here so the position arithmetic is consistent.
+                lines = search_raw.split('\n')
+                if line_idx >= len(lines):
+                    return -1
                 
-                return -1
+                # Sum up lengths of all preceding lines, adding 1 per \n separator.
+                line_start = sum(len(lines[k]) + 1 for k in range(line_idx))
+                line_start = min(line_start, len(search_raw))  # safety cap
+                
+                # Always return the LINE START, not offset + char_offset.
+                # extract_by_line_expansion snaps to line start via rfind('\n', 0, start_char_idx) + 1 anyway, so char_offset within the line is irrelevant.
+                return offset + line_start
+                
+            def find_anchor_unscoped(sec_obj: Section) -> int:
+                """
+                Search the FULL section (no scope constraint) for the member's anchor.
+                Used in Strategy 5a (cross-section fallback) to find inherited methods or properties 
+                that are documented in a different PDF section than their parent class's definition section.
+                
+                Returns:
+                    Absolute character position in sec_obj.text_raw (line start), or -1 if not found.
+                """
+                raw_text = sec_obj.text_raw
+                if not raw_text.strip():
+                    return -1
+                line_idx, _, score, match_type = find_needle_in_lines(
+                    raw_text,
+                    needles,
+                    early_stop=True,
+                    member_type=mi.member_type,
+                )
+                if line_idx < 0 or match_type == "none" or score <= 0:
+                    return -1
+                lines = raw_text.split('\n')
+                if line_idx >= len(lines):
+                    return -1
+                line_start = sum(len(lines[k]) + 1 for k in range(line_idx))
+                return min(line_start, len(raw_text))
             
             # --- Extraction Strategies ---
             best = None
@@ -1149,49 +1227,110 @@ class MemberExtractor:
             
             # Strategy 5: Final fallback
             if not best:
-                top_idx = int(ranked_indices[0]) if len(ranked_indices) > 0 else 0
-                final_score = float(finals[top_idx]) if len(finals) > top_idx else 0.0
-                
-                if final_score >= min_fallback and top_idx < len(sections):
-                    sec_obj = sections[top_idx]
+                if scoped_section_idx is not None:
+                    # ── Strategy 5a: cross-section search for scoped members ───────
+                    # The member was not found within its parent class's PDF section. Inherited / split-section methods can appear in a physically separate section of the PDF
+                    # Try all other API-reference sections ranked by score but only if there is at least some lexical evidence that the member exists in the PDF
+                    max_raw_lex = float(np.max(scores_per[j])) if len(scores_per[j]) > 0 else 0.0
+                    has_any_lexical = max_raw_lex > 0.0
                     
-                    # Determine extraction start (scoped or section start)
-                    extract_start = scoped_start if scoped_start is not None else 0
-                    
-                    snippet, pages = self.extractor.extract_by_line_expansion(sec_obj, extract_start, stop_matcher=None)
-                    if snippet.strip():
+                    # NOTE: we don't fall back to `extract_start = scoped_start` (class definition position) because that always produces wrong content (class preamble) rather than the method's own doc
+                    all_ranked = finals.argsort()[::-1]
+                    for idx in all_ranked:
+                        if not has_any_lexical:
+                            break  # No lexical evidence: skip cross-section search
+                        if int(idx) == scoped_section_idx:
+                            continue  # Already exhausted by Strategies 1–4
+                        if finals[idx] < min_fallback:
+                            break    # Remaining sections are all below threshold
+                        sec_obj = sections[idx]
+                        raw_pos = find_anchor_unscoped(sec_obj)
+                        if raw_pos >= 0:
+                            snippet, pages = self.extractor.extract_by_line_expansion(
+                                sec_obj, raw_pos, stop_matcher
+                            )
+                            if snippet.strip():
+                                best = {
+                                    "api_name": mi.api_name,
+                                    "snippet": snippet,
+                                    "pages": pages,
+                                    "section_path": sec_obj.path or [sec_obj.title],
+                                    "idx": int(idx),
+                                    "anchor_pos": raw_pos,
+                                    "base_scores": {
+                                        "lexical": float(section_scores[idx]),
+                                        "semantic": float(sem_scores[idx]),
+                                        "final": float(finals[idx]),
+                                        "match_type": "cross_section_fallback"
+                                    },
+                                    "warning": (
+                                        "Found outside primary class scope; "
+                                        "likely an inherited or split-section method."
+                                    )
+                                }
+                                break
+                    # If still not found, record rather than polluting with class-preamble content.
+                    if not best:
                         best = {
                             "api_name": mi.api_name,
-                            "snippet": snippet,
-                            "pages": pages,
-                            "section_path": sec_obj.path or [sec_obj.title],
-                            "idx": top_idx,
-                            "anchor_pos": extract_start,
+                            "snippet": "",
+                            "pages": [],
+                            "section_path": [],
+                            "idx": -1,
+                            "anchor_pos": -1,
                             "base_scores": {
-                                "lexical": float(section_scores[top_idx]) if section_scores else 0.0,
-                                "semantic": float(sem_scores[top_idx]) if len(sem_scores) > top_idx else 0.0,
-                                "final": final_score,
-                                "match_type": "fallback"
+                                "lexical": 0.0,
+                                "semantic": 0.0,
+                                "final": 0.0,
+                                "match_type": "not_found"
                             },
-                            "warning": "Low-confidence match; using top-ranked section start."
+                            "warning": (
+                                "Member not found in PDF; may be inherited and "
+                                "documented only under its original parent class."
+                            )
                         }
-                
-                if not best:
-                    best = {
-                        "api_name": mi.api_name,
-                        "snippet": "",
-                        "pages": [],
-                        "section_path": [],
-                        "idx": -1,
-                        "anchor_pos": -1,
-                        "base_scores": {
-                            "lexical": 0.0,
-                            "semantic": 0.0,
-                            "final": final_score if 'final_score' in dir() else 0.0,
-                            "match_type": "not_found"
-                        },
-                        "warning": f"Member documentation not found in PDF."
-                    }
+                else:
+                    # ── Strategy 5b: section-start fallback for non-scoped members ─
+                    # Classes and functions: if no precise anchor found, start from the top-ranked section's beginning
+                    top_idx = int(ranked_indices[0]) if len(ranked_indices) > 0 else 0
+                    final_score = float(finals[top_idx]) if len(finals) > top_idx else 0.0
+                    if final_score >= min_fallback and top_idx < len(sections):
+                        sec_obj = sections[top_idx]
+                        snippet, pages = self.extractor.extract_by_line_expansion(
+                            sec_obj, 0, stop_matcher=None
+                        )
+                        if snippet.strip():
+                            best = {
+                                "api_name": mi.api_name,
+                                "snippet": snippet,
+                                "pages": pages,
+                                "section_path": sec_obj.path or [sec_obj.title],
+                                "idx": top_idx,
+                                "anchor_pos": 0,
+                                "base_scores": {
+                                    "lexical": (float(section_scores[top_idx]) if section_scores else 0.0),
+                                    "semantic": (float(sem_scores[top_idx]) if len(sem_scores) > top_idx else 0.0),
+                                    "final": final_score,
+                                    "match_type": "fallback"
+                                },
+                                "warning": "Low-confidence match; using top-ranked section start."
+                            }
+                    if not best:
+                        best = {
+                            "api_name": mi.api_name,
+                            "snippet": "",
+                            "pages": [],
+                            "section_path": [],
+                            "idx": -1,
+                            "anchor_pos": -1,
+                            "base_scores": {
+                                "lexical": 0.0,
+                                "semantic": 0.0,
+                                "final": final_score if "final_score" in dir() else 0.0,
+                                "match_type": "not_found"
+                            },
+                            "warning": "Member documentation not found in PDF."
+                        }
             
             return j, best
         
@@ -1246,512 +1385,6 @@ class MemberExtractor:
                 output_results[j]["warning"] = r["warning"]
         
         return output_results
-    
-    
-    # def extract(
-    #     self, 
-    #     sections: List[Section], 
-    #     members: List[MemberInput], 
-    #     embedder: EmbeddingModel, 
-    #     peer_signatures: Optional[Dict[str, List[str]]] = None,
-    #     model_name: str = ""
-    #     ) -> Dict[str, Any]:
-    #     """
-    #     Extract documentation snippets for multiple members from the given sections.
-
-    #     For each member:
-    #         - Compute lexical-only scores and decide semantic usage (based on config).
-    #         - Optionally compute semantic similarity and hybrid scores.
-    #         - Refine by regex anchoring; fall back to semantic window search if needed.
-    #         - Optionally add a snippet-level semantic boost (batched across members).
-
-    #     Args:
-    #         sections: Candidate sections (typically from Stage 1).
-    #         members: List of module members (API FQNs, signature variants, optional docstrings).
-    #         embedder: Embedding model for semantic scoring and snippet-level boosts.
-    #         peer_signatures: Optional dictionary mapping API FQNs to their peer signatures.
-    #         model_name: Name of the embedding model to use for semantic scoring.
-
-    #     Returns:
-    #         A dict mapping API FQNs to:
-    #             {
-    #                 "text": verbatim snippet,
-    #                 "pages": list of page indices (coarse),
-    #                 "section_path": hierarchical titles or a single section title,
-    #                 "scores": {"exact": float, "fuzzy": float, "semantic": float, "final": float},
-    #                 "warning": optional string if fallbacks were used
-    #             }
-    #     """
-        
-    #     output: Dict[str, Any] = {}
-
-    #     # Precompute common lexical signals per section
-    #     lengths = np.array([max(1.0, len(s.text_norm) / 5000.0) for s in sections], dtype=float)
-
-    #     # Prepare per-member metadata
-    #     patterns_per = [build_signature_patterns(mi) for mi in members]
-    #     needles_per = [build_lexical_needles(mi) for mi in members]
-    #     semantic_queries = [build_semantic_query(mi, model_name) for mi in members]
-        
-    #     # --- Pre-compute full lexical scores for all members × sections ---
-    #     # This serves two purposes:
-    #     # 1. Auto-gate decision (whether to compute semantics per member)
-    #     # 2. Reuse in refine_one() to avoid double computation
-        
-    #     scores_per: List[np.ndarray] = [] # scores_per[j] = array of scores for member j across all sections
-    #     matches_per: List[List[Tuple[int, int, str]]] = [] # matches_per[j] = list of (line_idx, char_offset, match_type) tuples
-        
-    #     if self.cfg.semantic_mode != "only":
-    #         for j, mi in enumerate(members):
-    #             needles = needles_per[j]
-    #             member_scores = []
-    #             member_matches = []
-                
-    #             for sec in sections:
-    #                 score, line_idx, char_offset, match_type = section_match_score(
-    #                     sec.text_norm,
-    #                     needles,
-    #                     section_title=sec.title
-    #                 )
-    #                 member_scores.append(score)
-    #                 member_matches.append((line_idx, char_offset, match_type))
-                
-    #             scores_per.append(np.array(member_scores, dtype=float))
-    #             matches_per.append(member_matches)
-    #     else:
-    #         # Placeholder empty arrays for 'only' mode
-    #         for j in range(len(members)):
-    #             scores_per.append(np.zeros(len(sections), dtype=float))
-    #             matches_per.append([(-1, -1, "none")] * len(sections))
-        
-    #     #--- Decide which members need semantic (auto gate per member) ---
-    #     use_semantic_member = []
-    #     for j in range(len(members)):
-    #         if self.cfg.semantic_mode == "always":
-    #             use_semantic_member.append(True)
-    #         elif self.cfg.semantic_mode == "only":
-    #             use_semantic_member.append(True)
-    #         elif self.cfg.semantic_mode == "never":
-    #             use_semantic_member.append(False)
-    #         else: # auto mode
-    #             # Apply length penalty to scores for the decision
-    #             lex_scores = scores_per[j] - 0.05 * lengths
-    #             # Use the statistical method to decide
-    #             needs_semantic = _should_use_semantic_member(
-    #                 lex_scores, 
-    #                 self.cfg.lexical_sigma_k, 
-    #                 self.cfg.lexical_margin_min
-    #             )
-    #             use_semantic_member.append(needs_semantic)
-
-    #     # Precompute window-level embeddings and query embeddings if any member needs semantics
-    #     W: Optional[np.ndarray] = None
-    #     Q: Optional[np.ndarray] = None
-    #     section_to_win_indices: List[List[int]] = [[] for _ in range(len(sections))]
-
-    #     if any(use_semantic_member) and sections:
-    #         window_texts: List[str] = []
-    #         # Use embedding-aligned window parameters globally for all sections.
-    #         win_chars, win_stride = self._effective_window_params(embedder)
-            
-    #         for s_idx, sec in enumerate(sections):
-    #             # Build contextual prefix for this section (hierarchical path + title)
-    #             context_prefix = "\n".join(sec.path or [])  # Hierarchical path
-    #             if context_prefix:
-    #                 context_prefix += "\n"
-    #             context_prefix += sec.title or ""
-    #             if context_prefix:
-    #                 context_prefix += "\n\n"  # Separate from body
-                
-    #             spans = _windows(sec.text_norm, win_chars, win_stride)
-    #             for a, b in spans:
-    #                 section_to_win_indices[s_idx].append(len(window_texts))
-    #                 window_content = context_prefix + sec.text_norm[a:b]
-    #                 window_texts.append(build_passage_text(window_content, model_name))
-
-    #         if window_texts:
-    #             W = embedder.encode(window_texts)
-    #         Q = embedder.encode(semantic_queries) # Encode semantic queries (already have query prefix if e5)
-        
-        
-    #     def refine_one(j: int):
-    #         """
-    #         Refine extraction for a single member using hybrid matching.
-            
-    #         Strategy:
-    #             1. Use pre-computed section scores (from text_norm) for ranking
-    #             2. Optionally add semantic scores if enabled
-    #             3. For the best-ranked sections, find anchor directly in text_raw
-    #             4. Extract using line expansion with stop signals
-                
-    #         Note: text_norm is used for SECTION SELECTION (consistent matching), but text_raw is used for ANCHOR FINDING (exact position for extraction). Both contain joined signatures from SignatureJoiner.
-    #         """
-    #         mi = members[j]
-    #         needles = needles_per[j]  # Dict with "exact", "prefix", "anchor" tiers
-            
-    #         # --- Use pre-computed lexical scores and match positions ---
-    #         section_scores = scores_per[j].tolist()  # Already computed from text_norm
-    #         section_matches = matches_per[j]          # (line_idx, char_offset, match_type) per section
-            
-    #         # Apply length penalty (consistent with auto-gate decision)
-    #         for s_idx in range(len(sections)):
-    #             length_factor = len(sections[s_idx].text_norm) / 5000.0
-    #             section_scores[s_idx] -= 0.05 * length_factor
-            
-    #         # --- Add semantic scores if enabled ---
-    #         sem_scores = np.zeros(len(sections), dtype=float)
-    #         if (
-    #             self.cfg.semantic_mode != "never"
-    #             and use_semantic_member[j]
-    #             and W is not None
-    #             and Q is not None
-    #         ):
-    #             q_vec = Q[j]  # (D,)
-    #             sims = W @ q_vec  # (W,)
-    #             for s_idx, win_indices in enumerate(section_to_win_indices):
-    #                 if win_indices:
-    #                     sem_scores[s_idx] = float(np.max(sims[win_indices]))
-            
-    #         # --- Combine scores based on mode ---
-    #         scores_arr = np.array(section_scores, dtype=float)
-    #         mode = self.cfg.semantic_mode
-            
-    #         if mode == "only":
-    #             # Semantic-only ranking
-    #             if np.any(sem_scores != 0.0):
-    #                 finals = sem_scores
-    #             else:
-    #                 finals = scores_arr  # Fallback to lexical if no semantics
-    #         elif mode == "never":
-    #             # Pure lexical
-    #             finals = scores_arr
-    #         else:
-    #             # "auto" or "always": hybrid
-    #             # Lexical provides localization, semantic provides relevance
-    #             finals = scores_arr + sem_scores
-            
-    #         # --- Shortlist top-K sections ---
-    #         K = min(self.cfg.topK_sections, len(sections))
-    #         ranked_indices = finals.argsort()[::-1][:K]
-            
-    #         # Dynamic threshold to filter weak candidates
-    #         thr = _dynamic_threshold(finals[ranked_indices]) if len(ranked_indices) > 0 else -1e9
-    #         ranked_indices = np.array([i for i in ranked_indices if finals[i] >= thr])
-            
-    #         # --- Initialize Stop Matcher for this member (type-aware) ---
-    #         stop_matcher = None
-    #         if peer_signatures and mi.api_name in peer_signatures:
-    #             stop_matcher = StopSignalMatcher(
-    #                 peer_signatures=peer_signatures[mi.api_name],
-    #                 target_member_type=mi.member_type,
-    #                 target_api_name=mi.api_name
-    #             )
-            
-    #         # --- Helper: Find anchor position directly in text_raw ---
-    #         def find_anchor_in_raw(sec_obj: Section) -> int:
-    #             """
-    #             Search for needle directly in text_raw for accurate anchor position.
-                
-    #             Searches in priority order (most specific first):
-    #                 1. Exact signatures
-    #                 2. Prefix patterns (name + open paren)
-    #                 3. Anchor patterns with word boundaries
-                
-    #             Returns:
-    #                 Character position in text_raw, or -1 if not found.
-    #             """
-    #             raw_text = sec_obj.text_raw
-    #             raw_lower = raw_text.lower()
-                
-    #             # Priority 1: Exact signature matches
-    #             for needle in needles.get("exact", []):
-    #                 needle_lower = needle.lower()
-    #                 # Normalize whitespace in needle for matching
-    #                 needle_norm = ' '.join(needle_lower.split())
-    #                 pos = raw_lower.find(needle_norm)
-    #                 if pos >= 0:
-    #                     return pos
-                
-    #             # Priority 2: Prefix patterns (name + opening paren)
-    #             for needle in needles.get("prefix", []):
-    #                 needle_lower = needle.lower()
-    #                 pos = raw_lower.find(needle_lower)
-    #                 if pos >= 0:
-    #                     return pos
-                
-    #             # Priority 3: Anchor patterns with word boundary + opening paren
-    #             # This helps find "ModuleList(" even if preceded by "class "
-    #             for needle in needles.get("anchor", []):
-    #                 # Pattern: word boundary + name + optional whitespace + (
-    #                 pattern = r'\b' + re.escape(needle) + r'\s*\('
-    #                 match = re.search(pattern, raw_text, re.IGNORECASE)
-    #                 if match:
-    #                     return match.start()
-                
-    #             # Priority 4: Just the anchor name with word boundary (last resort)
-    #             for needle in needles.get("anchor", []):
-    #                 pattern = r'\b' + re.escape(needle) + r'\b'
-    #                 match = re.search(pattern, raw_text, re.IGNORECASE)
-    #                 if match:
-    #                     return match.start()
-                
-    #             return -1
-            
-    #         # --- Anchoring & Extraction ---
-    #         best = None
-    #         best_final_score = -1e9
-            
-    #         # Get thresholds from config
-    #         min_lexical = self.cfg.min_lexical_score
-    #         min_semantic = self.cfg.min_semantic_score
-    #         min_fallback = self.cfg.min_fallback_score
-            
-    #         skip_lexical = (self.cfg.semantic_mode == "only")
-    #         if not skip_lexical:
-    #             # Strategy 1: Direct anchor search in text_raw for top-ranked sections
-    #             # We use text_norm scoring to SELECT sections, but search in text_raw for POSITION
-    #             for idx in ranked_indices:
-    #                 sec_obj = sections[idx]
-    #                 line_idx, char_offset, match_type = section_matches[idx]
-                    
-    #                 # Only proceed if text_norm scoring found a match (section is relevant)
-    #                 if line_idx >= 0 and match_type != "none" and section_scores[idx] >= min_lexical:
-    #                     # Find anchor directly in text_raw (not via ratio mapping)
-    #                     raw_pos = find_anchor_in_raw(sec_obj)
-    #                     if raw_pos >= 0:
-    #                         # Extract with line expansion
-    #                         snippet, pages = self.extractor.extract_by_line_expansion(sec_obj, raw_pos, stop_matcher)
-    #                         if snippet.strip():
-    #                             score = finals[idx]
-    #                             if score > best_final_score:
-    #                                 best_final_score = score
-    #                                 best = {
-    #                                     "api_name": mi.api_name,
-    #                                     "snippet": snippet,
-    #                                     "pages": pages,
-    #                                     "section_path": sec_obj.path or [sec_obj.title],
-    #                                     "idx": idx,
-    #                                     "base_scores": {
-    #                                         "lexical": float(section_scores[idx]),
-    #                                         "semantic": float(sem_scores[idx]),
-    #                                         "final": float(score),
-    #                                         "match_type": match_type
-    #                                     }
-    #                                 }
-                
-    #             # Strategy 2: Try all ranked sections even if text_norm didn't find match
-    #             # (Catches cases where normalization differences caused missed matches)
-    #             if not best:
-    #                 for idx in ranked_indices:
-    #                     # Skip if score is too low
-    #                     if section_scores[idx] < min_lexical:
-    #                         continue
-                        
-    #                     sec_obj = sections[idx]
-    #                     raw_pos = find_anchor_in_raw(sec_obj)
-                        
-    #                     if raw_pos >= 0:
-    #                         snippet, pages = self.extractor.extract_by_line_expansion(sec_obj, raw_pos, stop_matcher)
-    #                         if snippet.strip():
-    #                             score = finals[idx]
-    #                             best = {
-    #                                 "api_name": mi.api_name,
-    #                                 "snippet": snippet,
-    #                                 "pages": pages,
-    #                                 "section_path": sec_obj.path or [sec_obj.title],
-    #                                 "idx": idx,
-    #                                 "base_scores": {
-    #                                     "lexical": float(section_scores[idx]),
-    #                                     "semantic": float(sem_scores[idx]),
-    #                                     "final": float(score),
-    #                                     "match_type": "raw_search"
-    #                                 }
-    #                             }
-    #                             break
-                
-    #             # Strategy 3: Regex anchor fallback (uses existing patterns)
-    #             if not best:
-    #                 for idx in ranked_indices:
-    #                     # Skip if score is too low
-    #                     if section_scores[idx] < min_lexical:
-    #                         continue
-                        
-    #                     sec_obj = sections[idx]
-    #                     match_pos = self._regex_refine(sec_obj, patterns_per[j])
-    #                     if match_pos >= 0:
-    #                         snippet, pages = self.extractor.extract_by_line_expansion(sec_obj, match_pos, stop_matcher)
-    #                         if snippet.strip():
-    #                             score = finals[idx]
-    #                             best = {
-    #                                 "api_name": mi.api_name,
-    #                                 "snippet": snippet,
-    #                                 "pages": pages,
-    #                                 "section_path": sec_obj.path or [sec_obj.title],
-    #                                 "idx": idx,
-    #                                 "base_scores": {
-    #                                     "lexical": float(section_scores[idx]),
-    #                                     "semantic": float(sem_scores[idx]),
-    #                                     "final": float(score),
-    #                                     "match_type": "regex"
-    #                                 }
-    #                             }
-    #                             break
-            
-    #         # Strategy 4: Semantic window search fallback - CROSS-SECTION evaluation
-    #         if not best and use_semantic_member[j] and Q is not None:
-    #             q_vec = Q[j]
-    #             # Build signature-focused query for fine-grained anchoring
-    #             sig_query = build_signature_query(mi, model_name)
-    #             sig_q_vec = embedder.encode([sig_query])[0] if embedder else None
-                
-    #             # Evaluate top 3 SECTIONS, not just the first one
-    #             num_sections_to_try = min(3, len(ranked_indices))
-    #             section_candidates = []  # List of (anchor_pos, fine_score, section_idx, snippet, pages)
-                
-    #             for rank, idx in enumerate(ranked_indices[:num_sections_to_try]):
-    #                 sec_obj = sections[idx]
-                    
-    #                 # Get best anchor position AND score from this section
-    #                 sw_result = self._semantic_window_search(embedder, sec_obj, q_vec, sig_query_vec=sig_q_vec, api_name=mi.api_name)
-                    
-    #                 if sw_result is not None:
-    #                     anchor_pos, fine_score = sw_result
-    #                     if anchor_pos >= 0 and fine_score >= (min_semantic / 100.0):
-    #                         # Extract snippet for this candidate
-    #                         snippet, pages = self.extractor.extract_by_line_expansion(sec_obj, anchor_pos, stop_matcher)
-    #                         if snippet.strip():
-    #                             section_candidates.append({
-    #                                 "anchor_pos": anchor_pos,
-    #                                 "fine_score": fine_score,
-    #                                 "section_idx": idx,
-    #                                 "section_obj": sec_obj,
-    #                                 "snippet": snippet,
-    #                                 "pages": pages,
-    #                                 "rank": rank
-    #                             })
-                
-    #             # Select best candidate across all sections
-    #             if section_candidates:
-    #                 # Primary: best fine-grained semantic score
-    #                 # Tie-breaker: prefer earlier-ranked sections (higher lexical/semantic relevance)
-    #                 best_candidate = max(
-    #                     section_candidates, 
-    #                     key=lambda c: (c["fine_score"], -c["rank"])
-    #                 )
-                    
-    #                 sec_idx = best_candidate["section_idx"]
-    #                 best = {
-    #                     "api_name": mi.api_name,
-    #                     "snippet": best_candidate["snippet"],
-    #                     "pages": best_candidate["pages"],
-    #                     "section_path": best_candidate["section_obj"].path or [best_candidate["section_obj"].title],
-    #                     "idx": sec_idx,
-    #                     "base_scores": {
-    #                         "lexical": float(section_scores[sec_idx]),
-    #                         "semantic": float(sem_scores[sec_idx]),
-    #                         "final": float(finals[sec_idx]),
-    #                         "match_type": "semantic_window"
-    #                     },
-    #                     "warning": None if skip_lexical else "No direct anchor found; semantic window fallback used."
-    #                 }
-            
-    #         # Strategy 5: Final fallback - CONDITIONAL on reasonable score
-    #         if not best:
-    #             top_idx = int(ranked_indices[0]) if len(ranked_indices) > 0 else 0
-    #             final_score = float(finals[top_idx]) if len(finals) > top_idx else 0.0
-                
-    #             # Only use fallback if score indicates the member might be in this section
-    #             if final_score >= min_fallback and top_idx < len(sections):
-    #                 sec_obj = sections[top_idx]
-    #                 snippet, pages = self.extractor.extract_by_line_expansion(sec_obj, 0, stop_matcher=None)
-    #                 best = {
-    #                     "api_name": mi.api_name,
-    #                     "snippet": snippet,
-    #                     "pages": pages,
-    #                     "section_path": sec_obj.path or [sec_obj.title],
-    #                     "idx": top_idx,
-    #                     "base_scores": {
-    #                         "lexical": float(section_scores[top_idx]) if section_scores else 0.0,
-    #                         "semantic": float(sem_scores[top_idx]) if len(sem_scores) > top_idx else 0.0,
-    #                         "final": final_score,
-    #                         "match_type": "fallback"
-    #                     },
-    #                     "warning": "Low-confidence match; using top-ranked section start."
-    #                 }
-                
-    #             # If still no result, return empty with clear indication
-    #             if not best:
-    #                 best = {
-    #                     "api_name": mi.api_name,
-    #                     "snippet": "",  # Empty - member not found
-    #                     "pages": [],
-    #                     "section_path": [],
-    #                     "idx": -1,
-    #                     "base_scores": {
-    #                         "lexical": 0.0, 
-    #                         "semantic": 0.0, 
-    #                         "final": final_score if 'final_score' in dir() else 0.0,
-    #                         "match_type": "not_found"
-    #                     },
-    #                     "warning": f"Member documentation not found in PDF."
-    #                 }
-            
-    #         return j, best
-
-    #     # Parallel Execution/Refinement (regex/text-only path; model calls are outside)
-    #     results = [None] * len(members)
-    #     with ThreadPoolExecutor(max_workers=self.cfg.max_workers) as ex:
-    #         futures = [ex.submit(refine_one, j) for j in range(len(members))]
-    #         for fut in as_completed(futures):
-    #             j, best = fut.result()
-    #             results[j] = best
-
-    #     # Snippet Boost & Output Construction
-    #     for j, r in enumerate(results):
-    #         if not r: continue # Should not happen
-            
-    #         # Add snippet boost if semantic used
-    #         boost = 0.0
-    #         if use_semantic_member[j] and Q is not None:
-                
-    #             # Build contextual snippet (similar to windows)
-    #             sec_idx = r.get("idx", -1)
-    #             if sec_idx >= 0 and sec_idx < len(sections):
-    #                 sec = sections[sec_idx]
-    #                 context_prefix = "\n".join(sec.path or [])
-    #                 if context_prefix:
-    #                     context_prefix += "\n"
-    #                 context_prefix += sec.title or ""
-    #                 if context_prefix:
-    #                     context_prefix += "\n\n"
-    #                 contextual_snippet = context_prefix + r["snippet"]
-    #             else:
-    #                 contextual_snippet = r["snippet"]
-                
-    #             # Encode just the snippet to see if it matches query
-    #             # snip_vec = embedder.encode([build_passage_text(r["snippet"], model_name)])[0]
-    #             snip_vec = embedder.encode([build_passage_text(contextual_snippet, model_name)])[0]
-    #             boost = float(cosine_similarity(Q[j], snip_vec.reshape(1, -1))[0])
-            
-    #         base = r.get("base_scores", {})
-    #         final_score = base.get("final", 0.0) + self.cfg.snippet_boost_weight * boost
-            
-    #         payload = {
-    #             "text": r["snippet"],
-    #             "pages": r["pages"],
-    #             "section_path": r["section_path"],
-    #             "scores": {
-    #                 "lexical": base.get("lexical", 0.0),
-    #                 "semantic": base.get("semantic", 0.0),
-    #                 "final": final_score,
-    #                 "match_type": base.get("match_type", "unknown")
-    #             }
-    #         }
-    #         if "warning" in r:
-    #             payload["warning"] = r["warning"]
-    #         output[members[j].api_name] = payload
-
-    #     return output
 
 
 def extract_api_docs_from_pdf(

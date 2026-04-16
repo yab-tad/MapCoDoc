@@ -652,55 +652,6 @@ class RelationshipTracker:
         else:
             # Total relationships
             return self.store.edge_count() # Call without edge_type for total
-
-
-    # def remove_relationship(self, source: str, target: str, relationship_type: str) -> bool:
-    #     """
-    #     Remove a specific relationship between two nodes and its inverse if applicable.
-    #     The 'relationship_type' is used as the key for the MultiDiGraph edge.
-        
-    #     Args:
-    #         source: The source node identifier.
-    #         target: The target node identifier.
-    #         relationship_type: The type of the relationship to remove (used as the primary key).
-            
-    #     Returns:
-    #         True if the primary relationship was successfully removed, False otherwise.
-    #     """
-    #     if not source or not target or not relationship_type:
-    #         logger.warning(f"Attempted to remove relationship with missing parameters: src='{source}', tgt='{target}', type='{relationship_type}'")
-    #         return False
-
-    #     logger.debug(f"Attempting to remove primary relationship: {source} --[{relationship_type}]--> {target} (key='{relationship_type}')")
-        
-    #     # The key for store.remove_edge is the relationship_type itself.
-    #     # The edge_type parameter for store.remove_edge is also relationship_type for semantic consistency during index/cache ops.
-    #     removed_primary = self._store.remove_edge(source, target, edge_type=relationship_type, key=relationship_type)
-        
-    #     if removed_primary:
-    #         logger.debug(f"Successfully removed primary: {source} -[{relationship_type}]-> {target}")
-    #         self._clear_caches(source, target) # Clear caches potentially affected by this edge removal
-
-    #     # Attempt to remove the inverse relationship
-    #     inverse_type = RELATIONSHIP_PAIRS.get(relationship_type)
-    #     removed_inverse = False
-    #     if inverse_type:
-    #         # For self-loops, only remove inverse if its type/key is different from primary.
-    #         # If primary and inverse are identical (e.g. a non-directional SELF_REFERENCES type), removing the primary already handled it.
-    #         # For directed distinct pairs like CALLS/CALLED_BY, this check is important.
-    #         if source == target and inverse_type == relationship_type:
-    #             logger.debug(f"Self-loop and inverse type is same as primary ('{relationship_type}'); inverse already handled by primary removal.")
-    #         else:
-    #             logger.debug(f"Attempting to remove corresponding inverse: {target} --[{inverse_type}]--> {source} (key='{inverse_type}')")
-    #             # The key for the inverse is the inverse_type itself.
-    #             if self._store.remove_edge(target, source, edge_type=inverse_type, key=inverse_type):
-    #                 logger.debug(f"Successfully removed inverse: {target} -[{inverse_type}]-> {source}")
-    #                 removed_inverse = True
-    #                 self._clear_caches(target, source) # Clear caches for the inverse edge
-        
-    #     # The method's success is often defined by whether the primary intended relationship was removed.
-    #     # Callers like remove_calls_by_module count based on this.
-    #     return removed_primary
     
     
     def remove_relationship(self, source: str, target: str, 
@@ -1153,68 +1104,6 @@ class RelationshipTracker:
                     })
                     
         return results 
-
-    # def add_import_relationship(
-    #     self,
-    #     importer: str,
-    #     imported: str,
-    #     import_name: Optional[str] = None,
-    #     is_aliased: bool = False,
-    #     alias: Optional[str] = None,
-    #     properties: Optional[Dict[str, Any]] = None
-    # ) -> None:
-    #     """Add an IMPORTS relationship.
-        
-    #     Args:
-    #         importer: The importing module/file.
-    #         imported: The imported module/file.
-    #         import_name: The specific name being imported, if any.
-    #         is_aliased: Whether the import uses an alias.
-    #         alias: The alias name, if used.
-    #         properties: Additional properties for the relationship.
-    #     """
-    #     props = properties or {}
-    #     if import_name:
-    #         props["import_name"] = import_name
-    #     if is_aliased:
-    #         props["is_aliased"] = True
-    #         if alias:
-    #             props["alias"] = alias
-        
-    #     self.add_relationship(importer, imported, REL_TYPE_IMPORTS, props)
-        
-    # def find_imports(
-    #     self,
-    #     importer: Optional[str] = None,
-    #     imported: Optional[str] = None,
-    #     import_name: Optional[str] = None,
-    #     is_aliased: Optional[bool] = None,
-    #     property_filters: Optional[Dict[str, Any]] = None
-    # ) -> List[Dict[str, Any]]:
-    #     """Find import relationships.
-        
-    #     Args:
-    #         importer: The importing module/file.
-    #         imported: The imported module/file.
-    #         import_name: The specific name being imported.
-    #         is_aliased: Filter for aliased imports.
-    #         property_filters: Additional filters for relationship properties.
-            
-    #     Returns:
-    #         A list of import relationships.
-    #     """
-    #     props = property_filters or {}
-    #     if import_name:
-    #         props["import_name"] = import_name
-    #     if is_aliased is not None:
-    #         props["is_aliased"] = is_aliased
-            
-    #     return self.find_relationships(
-    #         relationship_type=REL_TYPE_IMPORTS,
-    #         source=importer,
-    #         target=imported,
-    #         properties=props
-    #     )
     
     
     # ----------------------------------------------------
