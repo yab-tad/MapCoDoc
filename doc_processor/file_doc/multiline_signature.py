@@ -1,6 +1,6 @@
 import re
 from dataclasses import dataclass
-
+from typing import List, Tuple
 
 @dataclass
 class SignatureLineInfo:
@@ -46,7 +46,9 @@ class SignatureJoiner:
     """
     
     # Characters that indicate a line continues to the next
-    CONTINUATION_ENDINGS = {',', ':', '(', '[', '{', '=', '\\'}
+    # - Standard:   "," ":" "(" "[" "{" "=" "\\"
+    # - Type-union: "|"   (PEP-604 unions: "str | None ↵ = None")
+    CONTINUATION_ENDINGS = {',', ':', '(', '[', '{', '=', '\\', '|'}
     
     # Characters that can appear alone as positional/keyword markers
     PARAM_MARKERS = {'*', '/'}
@@ -60,12 +62,17 @@ class SignatureJoiner:
     }
     
     # Pattern for API signature start
-    # Matches: name(, Name(, module.name(, class Name(, module.path.Name(
+    # Accepts an OPTIONAL Sphinx/PDF doc-keyword prefix:
+    #   class, function, method, classmethod, staticmethod, attribute, property
+    # This must be a prefix of the line and not a parameter name
+    _DOC_KEYWORDS = r'(?:class|function|method|classmethod|staticmethod|attribute|property)'
+    _PAGE_ANCHOR  = r'(?:\(#page=\d+\))?'  # 0 or 1 page-anchor token
     SIGNATURE_PATTERN = re.compile(
-        r'^(class\s+)?'                    # Optional 'class ' prefix
-        r'([\w]+(?:\.[\w]+)*)'             # Qualified name: word or word.word.word
-        r'\s*\('                           # Opening parenthesis
+        rf'^(?:{_DOC_KEYWORDS}\s+)?'  # optional doc-keyword prefix
+         rf'([\w]+(?:\.{_PAGE_ANCHOR}[\w]+)*{_PAGE_ANCHOR})'   # qualified name (group 1) with optional page-anchors
+        r'\s*\('  # opening parenthesis
     )
+
     
     def __init__(self, spans_info: list):
         """
@@ -154,8 +161,11 @@ class SignatureJoiner:
         ends_with = stripped[-1] if stripped else ''
         
         # Calculate balances
-        paren_balance = stripped.count('(') - stripped.count(')')
-        bracket_balance = stripped.count('[') - stripped.count(']')
+        # Strip known PDF-noise tokens before counting parens / brackets so that annotations whose own parens are balanced (e.g. pandas's PEP-3102 hint) don't perturb the joiner's nesting tracking.
+        stripped_no_noise = re.sub(r'\(#page=\d+\)', '', stripped)
+        stripped_no_noise = re.sub(r'\s*\(Keyword-only parameters separator\s*\(PEP 3102\)\)', '', stripped_no_noise)
+        paren_balance = stripped_no_noise.count('(') - stripped_no_noise.count(')')
+        bracket_balance = stripped_no_noise.count('[') - stripped_no_noise.count(']')
         
         return SignatureLineInfo(
             text=line,
@@ -302,7 +312,8 @@ class SignatureJoiner:
     def _is_valid_continuation(self, 
                                info: SignatureLineInfo,
                                first_info: SignatureLineInfo,
-                               accumulated_paren_balance: int
+                               accumulated_paren_balance: int,
+                               accumulated_bracket_balance: int = 0
                                ) -> bool:
         """
         Check if a line is a valid continuation of a multi-line signature.
@@ -333,6 +344,28 @@ class SignatureJoiner:
         if info.stripped.startswith('→') or info.stripped.startswith('->'):
             return True
         
+        # Line BALANCES OUT an open paren or bracket  
+        # closing fragment of a multi-line signature whose previous line ended with a continuation char
+        # Example:
+        #   "reflection_options: Dict[_KT, _VT] | immutabledict[_KT, _VT] ="
+        #   "{}) → None"
+        # The closing line ends with "None" (a letter), so the standard CONTINUATION_ENDINGS / closing-bracket rules below do not fire.
+        if accumulated_paren_balance > 0 and info.paren_balance < 0:
+            return True
+        if accumulated_bracket_balance > 0 and info.bracket_balance < 0:
+            return True
+        
+        # Hyphenated word break (PDF line wrap): "Se-" continues with "quence".
+        # Gated to fire ONLY when context strongly suggests we're inside a signature:
+        #   - We're inside open parens or brackets (accumulated_*_balance > 0), OR
+        #   - The signature's first line ends with the return arrow (return type continues).
+        # Without this gate, an indented prose line that happens to end with a hyphenated word (rare, but possible in well-typeset PDFs) would be mistakenly absorbed into the previous signature.
+        if (info.ends_with == '-' and len(info.stripped) >= 2 and info.stripped[-2].isalpha()):
+            inside_open_nesting = (accumulated_paren_balance > 0 or accumulated_bracket_balance > 0)
+            first_ends_with_arrow = (first_info.stripped.endswith('→') or first_info.stripped.endswith('->'))
+            if inside_open_nesting or first_ends_with_arrow:
+                return True
+        
         # Check ending character
         ends_with = info.ends_with
         
@@ -349,8 +382,10 @@ class SignatureJoiner:
         if re.match(r'^[*/]\s*,', info.stripped):
             return True
         
-        # Closes the signature with ')'
-        if ends_with == ')':
+        # Closes the signature with ')', ']', or '}' 
+        # important when the return type or a parameter type is a deeply nested generic ending in brackets
+        # e.g. "List[ReflectedForeignKeyConstraint]]]" or "Dict[str, Any]]"
+        if ends_with in (')', ']', '}'):
             return True
         
         # Ends with a letter/digit - check if it's part of a qualified name
@@ -366,6 +401,144 @@ class SignatureJoiner:
                 return True
         
         return False
+    
+    def _looks_like_return_type_continuation(self, line: str) -> bool:
+        """
+        Quick check: does this line look like the continuation of a return-type
+        expression (rather than the start of a description)?
+
+        A return type is a Python type expression, which is a closed grammar that uses
+        only identifiers, dots, brackets, commas, pipes, quotes, and whitespace.
+        This method errs on the side of FALSE: when in doubt, do NOT pull the
+        line as a return-type continuation. False negatives only mean a return
+        type that wraps unusually doesn't get joined; false positives would
+        silently absorb description text into a signature.
+
+        Used by `_pull_return_type` to safely walk multi-line return types in
+        SQLAlchemy-style PDFs without disturbing well-formed signatures from
+        xgboost / pandas / torch / etc.
+        """
+        if not line:
+            return False
+        s = re.sub(r'\(#page=\d+\)', '', line.strip())
+        if not s:
+            return False
+        if s.startswith('→') or s.startswith('->'):
+            return True
+
+        # Strong "open" signals — the type expression is incomplete.
+        if s.endswith((',', '|', '[', '(')):
+            return True
+        if s.endswith('-') and len(s) >= 2 and s[-2].isalpha():
+            return True
+        if s.count('[') != s.count(']'):
+            return True
+        if s.count('(') != s.count(')'):
+            return True
+
+        # Closed type-token line: only identifiers, dots, brackets, |, ,, '
+        # (no spaces between regular words — those would indicate prose).
+        # Allow a single internal space if it is between type tokens connected by '|' (PEP-604 unions).
+        if re.fullmatch(r'[\w\.\[\]\|,\'\"]+(?:\s*\|\s*[\w\.\[\]\|,\'\"]+)*', s):
+            return True
+
+        return False
+    
+    
+    def _pull_return_type(
+        self,
+        lines: List[str],
+        start_idx: int,
+        max_blanks: int = 4
+    ) -> Tuple[str, int]:
+        """
+        Starting at lines[start_idx], pull a (possibly multi-line) return-type
+        expression that follows a trailing return arrow.
+
+        Behaviour:
+        * Skips up to `max_blanks` blank lines before the first non-blank.
+        * Each pulled line must pass `_looks_like_return_type_continuation`,
+            so prose lines (Sphinx descriptions) are never absorbed.
+        * Lines may end with a hyphenated word break followed by a page
+            anchor (the hyphen-merge in the join step will reconnect them).
+        * Stops at code fences, list items, REPL lines, blank streaks, or
+            any line that fails the type-continuation grammar check.
+
+        Returns (joined_return_type_string, new_idx). If nothing was pulled,
+        returns ("", start_idx).
+        """
+        rt_parts: List[str] = []
+        j = start_idx
+        blank_streak = 0
+        accumulated_brackets = 0
+
+        while j < len(lines):
+            nxt = lines[j]
+
+            if self._is_blank(nxt):
+                blank_streak += 1
+                if blank_streak > max_blanks:
+                    break
+                j += 1
+                continue
+            blank_streak = 0
+
+            if (self._is_code_fence(nxt)
+                    or self._is_list_item(nxt)
+                    or self._is_repl_line(nxt)):
+                break
+
+            if not self._looks_like_return_type_continuation(nxt):
+                break
+
+            rt_parts.append(nxt.strip())
+
+            # Track bracket nesting so we know when the type expression is closed.
+            nxt_no_anchors = re.sub(r'\(#page=\d+\)', '', nxt)
+            accumulated_brackets += (
+                nxt_no_anchors.count('[') - nxt_no_anchors.count(']')
+            )
+            j += 1
+
+            # Stop once brackets are balanced AND the last fragment doesn't
+            # signal continuation (no trailing comma/pipe/hyphen).
+            if accumulated_brackets <= 0:
+                last_no_anchors = re.sub(
+                    r'\(#page=\d+\)', '', rt_parts[-1].rstrip()
+                )
+                if not (
+                    last_no_anchors.endswith((',', '|', '['))
+                    or (last_no_anchors.endswith('-')
+                        and len(last_no_anchors) >= 2
+                        and last_no_anchors[-2].isalpha())
+                ):
+                    break
+
+        if not rt_parts:
+            return "", start_idx
+
+        # Hyphen-merge with page-anchor awareness:
+        #   "ColumnEle-(#page=1101)" + "ment(#page=1101)[bool]"
+        #   becomes
+        #   "ColumnElement(#page=1101)[bool]"
+        joined_rt = ""
+        for p in rt_parts:
+            joined_no_anchors = re.sub(r'\(#page=\d+\)', '', joined_rt).rstrip()
+            if (joined_no_anchors.endswith('-')
+                    and len(joined_no_anchors) >= 2
+                    and joined_no_anchors[-2].isalpha()
+                    and p[:1].isalpha()):
+                # Drop the trailing "<letter>-(optional page anchor)" from joined_rt.
+                joined_rt = re.sub(r'-(?:\(#page=\d+\))?\s*$', '', joined_rt)
+                joined_rt = joined_rt + p
+            elif joined_rt:
+                joined_rt = joined_rt + ' ' + p
+            else:
+                joined_rt = p
+
+        joined_rt = re.sub(r'\s+', ' ', joined_rt)
+        return joined_rt, j
+    
     
     def _is_prose_like(self, info: SignatureLineInfo) -> bool:
         """
@@ -489,7 +662,7 @@ class SignatureJoiner:
         
         return False, in_code_block
     
-    def _is_stop_condition(self, line: str, in_code_block: bool, first_info: SignatureLineInfo) -> bool:
+    def _is_stop_condition(self, line: str, in_code_block: bool, first_info: SignatureLineInfo, accumulated_paren_balance: int = 0) -> bool:
         """
         Check if we should stop collecting continuation lines.
         
@@ -497,6 +670,10 @@ class SignatureJoiner:
             line: The potential continuation line.
             in_code_block: Whether we're in a code block.
             first_info: SignatureLineInfo for the signature's first line.
+            accumulated_paren_balance: Running total of unclosed parens at the
+                point we are evaluating this line. When > 0 the signature is still
+                "open", so a single blank line can be tolerated as a PDF-layout
+                artifact.
             
         Returns:
             True if we should stop.
@@ -507,7 +684,10 @@ class SignatureJoiner:
         
         # Blank line
         if self._is_blank(line):
-            return True
+            # While the signature is still open (parens unbalanced) a single blank line is treated as a layout artifact rather than a stop
+            # The caller is responsible for capping the run of blank lines.
+            return accumulated_paren_balance <= 0
+            # return True
         
         # List item
         if self._is_list_item(line):
@@ -560,20 +740,53 @@ class SignatureJoiner:
             if self._is_signature_start(line_info):
                 # Check if already complete on one line
                 if line_info.paren_balance == 0 and line_info.bracket_balance == 0:
-                    # Check for return arrow on next line
-                    if i + 1 < len(lines):
-                        next_stripped = lines[i + 1].strip()
+                    # Case 1: current line ends with the return arrow.
+                    # Pull the return type from the next non-blank, non-stop line.
+                    # Example:
+                    #   classmethod sqlalchemy.ext.mutable.MutableDict.coerce(...) →
+                    #                                       MutableDict[_KT, _VT] | None
+                    if line_info.stripped.endswith('→') or line_info.stripped.endswith('->'):
+                        rt_joined, new_idx = self._pull_return_type(lines, i + 1)
+                        if rt_joined:
+                            joined = line_info.stripped + ' ' + rt_joined
+                            joined = re.sub(r'\s+', ' ', joined)
+                            result.append(joined)
+                            i = new_idx
+                            continue
+                        # No suitable continuation found: fall through and emit as-is.
+                    # Case 2: next non-blank line starts with the return arrow.
+                    # Example:
+                    #   function sqlalchemy.ext.automap.automap_base(...) 
+                    #                              → Any
+                    k = i + 1
+                    while k < len(lines) and self._is_blank(lines[k]):
+                        k += 1
+                    if k < len(lines):
+                        next_stripped = lines[k].strip()
                         if next_stripped.startswith('→') or next_stripped.startswith('->'):
-                            # Include return type
                             joined = line_info.stripped + ' ' + next_stripped
                             result.append(joined)
-                            i += 2
+                            i = k + 1
                             continue
-                    
-                    # Complete signature
+                    # Complete signature, no arrow continuation
                     result.append(line)
                     i += 1
                     continue
+                    
+                    # # Check for return arrow on next line
+                    # if i + 1 < len(lines):
+                    #     next_stripped = lines[i + 1].strip()
+                    #     if next_stripped.startswith('→') or next_stripped.startswith('->'):
+                    #         # Include return type
+                    #         joined = line_info.stripped + ' ' + next_stripped
+                    #         result.append(joined)
+                    #         i += 2
+                    #         continue
+                    
+                    # # Complete signature
+                    # result.append(line)
+                    # i += 1
+                    # continue
                 
                 # Collect continuation lines
                 para_lines = [line]
@@ -581,18 +794,30 @@ class SignatureJoiner:
                 accumulated_bracket = line_info.bracket_balance
                 signature_fonts = line_info.fonts.copy()
                 j = i + 1
+                blank_streak = 0
+                MAX_INTERIOR_BLANKS = 4   # Tolerate at most one blank line per gap inside an open signature
                 
                 while j < len(lines):
                     next_line = lines[j]
                     
                     # Check stop conditions
-                    if self._is_stop_condition(next_line, in_code_block, line_info):
+                    if self._is_stop_condition(next_line, in_code_block, line_info, accumulated_paren):
                         break
+                    
+                    if self._is_blank(next_line):
+                        blank_streak += 1
+                        if blank_streak > MAX_INTERIOR_BLANKS:
+                            break
+                        # Skip the blank line itself: do not append, do not update balances
+                        # This preserves the joined signature as a single clean line
+                        j += 1
+                        continue
+                    blank_streak = 0
                     
                     next_info = self._extract_line_info(next_line)
                     
                     # Check if valid continuation
-                    if self._is_valid_continuation(next_info, line_info, accumulated_paren):
+                    if self._is_valid_continuation(next_info, line_info, accumulated_paren, accumulated_bracket):
                         # Check font consistency
                         if self._check_font_consistency(next_info, line_info, signature_fonts):
                             para_lines.append(next_line)
@@ -603,12 +828,26 @@ class SignatureJoiner:
                             
                             # Check if signature is complete
                             if accumulated_paren == 0 and accumulated_bracket == 0:
-                                # Look for return arrow on next line
-                                if j < len(lines):
-                                    peek = lines[j].strip()
+                                # Case A: the LAST collected line ends with a trailing return arrow.
+                                # The return type starts on a subsequent line (possibly multi-line,
+                                # possibly with hyphenated word breaks). Use the dedicated puller
+                                # so the grammar guard prevents description absorption.
+                                last_collected = para_lines[-1].rstrip()
+                                if last_collected.endswith('→') or last_collected.endswith('->'):
+                                    rt_joined, new_j = self._pull_return_type(lines, j)
+                                    if rt_joined:
+                                        para_lines.append(rt_joined)
+                                        j = new_j
+                                    break
+                                # Case B: next non-blank line STARTS with a return arrow.
+                                k = j
+                                while k < len(lines) and self._is_blank(lines[k]):
+                                    k += 1
+                                if k < len(lines):
+                                    peek = lines[k].strip()
                                     if peek.startswith('→') or peek.startswith('->'):
-                                        para_lines.append(lines[j])
-                                        j += 1
+                                        para_lines.append(lines[k])
+                                        j = k + 1
                                 break
                             continue
                     
@@ -617,7 +856,17 @@ class SignatureJoiner:
                 
                 # Join if multiple lines collected
                 if len(para_lines) > 1:
-                    joined = ' '.join(l.strip() for l in para_lines)
+                    parts = [l.strip() for l in para_lines if l.strip()]
+                    joined = ''
+                    for p in parts:
+                        if (joined.endswith('-') and len(joined) >= 2 and joined[-2].isalpha() and p[:1].isalpha()):
+                            # Hyphenated line break: drop the hyphen and concatenate directly
+                            # so "Se-" + "quence[..." becomes "Sequence[..."
+                            joined = joined[:-1] + p
+                        elif joined:
+                            joined = joined + ' ' + p
+                        else:
+                            joined = p
                     # Normalize internal whitespace
                     joined = re.sub(r'\s+', ' ', joined)
                     result.append(joined)

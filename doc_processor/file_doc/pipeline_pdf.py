@@ -1395,7 +1395,8 @@ def extract_api_docs_from_pdf(
     model_name: str = "intfloat/e5-base-v2",
     cache_dir: str = None,
     member_cfg: MemberExtractorConfig = MemberExtractorConfig(semantic_mode="auto"),
-    peer_signatures: Optional[Dict[str, List[str]]] = None
+    peer_signatures: Optional[Dict[str, List[str]]] = None,
+    api_section_titles: Optional[List[str]] = None
 ) -> Dict[str, Any]:
     """
     Orchestrate Stage 1 (chunk selection) and Stage 2 (member extraction) for a single PDF.
@@ -1416,6 +1417,13 @@ def extract_api_docs_from_pdf(
         cache_dir: Optional path for on-disk embedding cache.
         member_cfg: Stage-2 configuration (semantic mode, shortlist/window sizes, parallelism).
         peer_signatures: Optional dictionary mapping API FQNs to their peer signatures.
+        api_section_titles: Optional list of section titles in the PDF that
+            mark the start of API-reference content. When provided, the chunk
+            selector treats only sections whose title matches this list (case-
+            insensitive, whitespace-collapsed) as candidate roots, replacing
+            the default keyword-based heuristic. Useful for PDFs whose API
+            reference chapters use product-specific titles such as
+            ``["SQLAlchemy Core", "SQLAlchemy ORM", "SQLAlchemy Events"]``.
 
     Returns:
         The in-memory JSON mapping written to `out_json_path`.
@@ -1428,13 +1436,21 @@ def extract_api_docs_from_pdf(
     # Detect TOC region to avoid false matches
     page_raw, page_norm, _ = sec._collect_pages()
     toc_start, toc_end = sec._detect_toc_page_range(page_norm)
+    
+    # Print every level-1/2 section that lives after the TOC
+    print(f"toc_end_page = {toc_end}, total sections = {len(sections)}")
+    for s in sections:
+        if s.level == 1 and s.page_end > toc_end:
+            print(f"L{s.level:>1} | p{s.page_start:>4}-{s.page_end:>4} | {s.title!r}")
+            if s.level <= 2 and s.page_end > toc_end:
+                print(f"L{s.level} | p{s.page_start:>4}-{s.page_end:>4} | {s.title!r}")
 
     # 2. Prepare embedder; pass to chunk selector if needed
     if member_cfg.semantic_mode == "never": embedder = None
     else: embedder = EmbeddingModel(model_name=model_name, cache_dir=cache_dir)
 
     # 3. Stage-1: chunk selection (API region)
-    api_sections = APIReferenceLocator.collect_candidates(sections, max_depth=2, toc_end_page=toc_end)
+    api_sections = APIReferenceLocator.collect_candidates(sections, max_depth=2, toc_end_page=toc_end, api_titles_override=api_section_titles)
 
     # 4. Stage-2: member extraction from selected sections
     output = MemberExtractor(member_cfg).extract(api_sections, members, embedder, peer_signatures, model_name)

@@ -157,23 +157,79 @@ class PDFSectionizer:
         right_span = column_height_span(right_third)
         page_height = page.rect.height
         
-        # Require BOTH columns to span at least 30% of page height
-        # AND have at least 3 blocks each
+        # Compute the Y-overlap between left and right candidates. A real two-column
+        # layout has BOTH columns containing content within the same vertical band;
+        # a single-column page that happens to have decorative right-aligned text
+        # (chapter banner, page number, running header) does NOT.
+        def _y_extent(block_list):
+            if not block_list:
+                return float('inf'), -float('inf')
+            return (
+                min(b["bbox"][1] for b in block_list),
+                max(b["bbox"][3] for b in block_list),
+            )
+
+        left_y_min, left_y_max   = _y_extent(left_third)
+        right_y_min, right_y_max = _y_extent(right_third)
+
+        overlap_top    = max(left_y_min, right_y_min)
+        overlap_bottom = min(left_y_max, right_y_max)
+        overlap_height = max(0.0, overlap_bottom - overlap_top)
+
+        # Count how many blocks FROM EACH SIDE actually fall inside the overlap band.
+        # This is the discriminating signal: in real two-column pages, BOTH sides
+        # have multiple blocks inside the shared vertical band; in pages with
+        # right-side decorations only, the right side has zero blocks in the band.
+        def _blocks_in_band(block_list, top, bottom):
+            if bottom <= top:
+                return 0
+            return sum(
+                1
+                for b in block_list
+                if top <= (b["bbox"][1] + b["bbox"][3]) / 2 <= bottom
+            )
+
+        left_in_overlap  = _blocks_in_band(left_third,  overlap_top, overlap_bottom)
+        right_in_overlap = _blocks_in_band(right_third, overlap_top, overlap_bottom)
+
         is_two_column = (
-            len(left_third) >= 3 and 
-            len(right_third) >= 3 and
-            left_span > page_height * 0.3 and
-            right_span > page_height * 0.3
+            len(left_third) >= 3
+            and len(right_third) >= 3
+            and left_span  > page_height * 0.3
+            and right_span > page_height * 0.3
+            and overlap_height > page_height * 0.3
+            and left_in_overlap  >= 3
+            and right_in_overlap >= 3
         )
         
         if is_two_column:
-            # True two-column: read left column top-to-bottom, then right column
-            left_col = [b for b in blocks if b["bbox"][2] < page_width * 0.52]  # right edge in left half
-            right_col = [b for b in blocks if b["bbox"][0] > page_width * 0.48]  # left edge in right half
-            
-            left_sorted = sorted(left_col, key=lambda b: (b["bbox"][1], b["bbox"][0]))
-            right_sorted = sorted(right_col, key=lambda b: (b["bbox"][1], b["bbox"][0]))
-            return left_sorted + right_sorted
+            # True two-column: read left column top-to-bottom, then right column.
+            # Blocks that span both columns (full-width section titles, summary paragraphs, etc.) are kept in document order rather than discarded.
+            left_col   = [b for b in blocks if b["bbox"][2] <  page_width * 0.52]
+            right_col  = [b for b in blocks if b["bbox"][0] >  page_width * 0.48]
+            full_width = [
+                b for b in blocks
+                if b["bbox"][2] >= page_width * 0.52
+                and b["bbox"][0] <= page_width * 0.48
+            ]
+            left_sorted  = sorted(left_col,   key=lambda b: (b["bbox"][1], b["bbox"][0]))
+            right_sorted = sorted(right_col,  key=lambda b: (b["bbox"][1], b["bbox"][0]))
+            full_sorted  = sorted(full_width, key=lambda b: (b["bbox"][1], b["bbox"][0]))
+            # Reading-order assembly: full-width blocks are inserted at the y-position where they appear, with each column's flow split around them.
+            # Approach: for each full-width block, emit any left-column blocks whose y_center is above it, then any right-column blocks above it, then the full-width block itself, and continue.
+            result = []
+            li, ri = 0, 0
+            for fw in full_sorted:
+                fw_y_top = fw["bbox"][1]
+                while li < len(left_sorted) and left_sorted[li]["bbox"][1] < fw_y_top:
+                    result.append(left_sorted[li]); li += 1
+                while ri < len(right_sorted) and right_sorted[ri]["bbox"][1] < fw_y_top:
+                    result.append(right_sorted[ri]); ri += 1
+                result.append(fw)
+            # Append remaining column content
+            result.extend(left_sorted[li:])
+            result.extend(right_sorted[ri:])
+            return result
         
         # Single column (or mixed layout): simple top-to-bottom, left-to-right
         return sorted(blocks, key=lambda b: (round(b["bbox"][1], 1), round(b["bbox"][0], 1)))
@@ -1148,7 +1204,7 @@ class PDFSectionizer:
                 - spans_info: List of (font_size, text) tuples for heading detection.
         """
         
-        blocks = self._reading_order_blocks(pidx)
+        blocks = self._reading_order_blocks(pidx)        
         page = self.doc.load_page(pidx)
         page_height = page.rect.height
         page_width = page.rect.width
@@ -1946,13 +2002,64 @@ class PDFSectionizer:
         # ── Page-level post-process: split merged API signature lines ──────────
         _MERGED_SIG_RE = re.compile(
             r'^([^(\n]+?)\s{5,}([a-z_]\w*\((?!https?://))',
-            re.MULTILINE,
+            re.MULTILINE
         )
         raw = _MERGED_SIG_RE.sub(
             lambda m: f"{m.group(1).rstrip()}\n     {m.group(2)}",
-            raw,
+            raw
         )
         # ─────────────────────────────────
+        
+        # ── Page-level post-process: split section-heading merged with signature ──
+        # Pandas (Sphinx-built) PDFs sometimes place the API-member section heading on the same physical row as the signature line, e.g.:
+        #   "pandas.DataFrame.to_pickle DataFrame.to_pickle(path, *, compression='infer', …)"
+        #
+        # The first qualified name is a heading (no parens following it); the second qualified name is the actual signature start
+        # Split between them so SignatureJoiner can correctly identify the signature start and multi-line concatenation works
+        #
+        # Pattern:
+        #   <FQN with at least one dot>            -- the heading (no parens follow)
+        #   <whitespace>
+        #   <qualified name>(                      -- the signature start
+        _HEADING_SIG_MERGED_RE = re.compile(
+            r'^([\w]+(?:\.[\w]+)+)'                # group 1: heading FQN (≥ 1 dot)
+            r'\s+'                                 # whitespace
+            r'((?:class|function|method|classmethod|staticmethod|attribute|property\s+)?'  # optional doc keyword
+            r'[\w]+(?:\.[\w]+)*\s*\()',            # group 2: signature start (qualified name + paren)
+            re.MULTILINE
+        )
+        raw = _HEADING_SIG_MERGED_RE.sub(
+            lambda m: f"{m.group(1).rstrip()}\n{m.group(2)}",
+            raw
+        )
+        # ───────────────────────────────────────────────────────────────────────────
+        
+        # ── Page-level post-process: split signature merged with description ────
+        # Sphinx-built PDFs (notably SQLAlchemy 2.x) sometimes place the API
+        # signature and the first sentence of its description on the same physical
+        # line, e.g. "function … (…) → str Return the attribute name…".
+        #
+        # Grammar-based split: a Python return-type expression cannot legally end with "<TypeName>  Capital-letter-word  lower-case-word"
+        # inside a type, a CamelCase token is always followed by '[', '|', ',', or ']'. Therefore that combination is an unambiguous marker for sentence-start prose.
+        #
+        # False-negative-safe additions: a small allow-list of lowercase phrases
+        # that SQLAlchemy uses ("inherited from <X>", "Provide a <Y>") which
+        # reliably begin a description but do not start with a capitalised verb.
+        _RT_DESC_SPLIT_RE = re.compile(
+            r'((?:→|->)[^\n]+?)'                 # group 1: arrow + return-type expression (lazy)
+            r'(?<=[\w\)\]])'                     # type expression must end on a word, ')', or ']'
+            r'\s+'                               # whitespace gap
+            r'(?='                               # lookahead at description start:
+                r'[A-Z][a-z]+\s+[a-z]'           #   "Return the …", "Set whether …"
+                r'|inherited\s+from\b'           #   SQLAlchemy: "inherited from <Class>.<method>()"
+                r'|Provide\s+a\b'                #   SQLAlchemy: "Provide a modifying decorator …"
+            r')',
+        )
+        raw = _RT_DESC_SPLIT_RE.sub(
+            lambda m: f"{m.group(1).rstrip()}\n      ",
+            raw
+        )
+        # ─────────────────────────────────────────────────────────────────────────
         
         # =====================================================================
         # JOIN MULTI-LINE API SIGNATURES

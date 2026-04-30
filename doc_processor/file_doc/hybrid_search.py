@@ -29,6 +29,25 @@ from typing import List, Dict, Tuple, Optional
 from rapidfuzz import fuzz
 
 
+# Tokens that PDF documentation engines insert into otherwise-clean signature
+# lines. They must be stripped per-line BEFORE matching so that needles built
+# from canonical signatures still substring-match the annotated text.
+#
+#   (#page=N) - Sphinx page-anchor cross-references (SQLAlchemy)
+#   (Keyword-only parameters separator (PEP 3102)) - pandas annotation on the bare ``*`` separator
+#
+# The original line text is preserved for context-scoring heuristics that may
+# legitimately want to see those tokens (e.g. the "page-reference at end of line" penalty in _line_context_score).
+_NOISE_TOKEN_RES = (
+    re.compile(r'\(#page=\d+\)'),
+    re.compile(r'\s*\(Keyword-only parameters separator\s*\(PEP 3102\)\)'),
+)
+def _strip_noise_tokens(text: str) -> str:
+    """Strip all known PDF-noise tokens from a line for matching purposes."""
+    for pat in _NOISE_TOKEN_RES:
+        text = pat.sub('', text)
+    return text
+
 # =============================================================================
 # Text Normalization
 # =============================================================================
@@ -120,6 +139,7 @@ def _line_context_score(line_stripped: str) -> float:
     Bonuses / penalties applied:
         +20  Line starts with ``class <name>``     (class definition line)
         +20  Line starts with ``property <name>``  (standalone property definition)
+        +15  Line starts with ``method`` ``function`` ``attribute`` (SQLAlchemy / Sphinx-PDF doc-keyword prefixes)
         +10  Line starts with ``classmethod`` or ``staticmethod``
         +15  Line ends with a canonical URL in parentheses  (Sphinx web docs)
         +10  Line contains a return-type annotation ``-> Type``
@@ -138,6 +158,8 @@ def _line_context_score(line_stripped: str) -> float:
         score += 20.0
     elif re.match(r'^property\s+\w', line_stripped, re.IGNORECASE):
         score += 20.0
+    elif re.match(r'^(?:method|function|attribute)\s+\w', line_stripped, re.IGNORECASE):
+        score += 15.0   # SQLAlchemy / Sphinx-PDF doc-keyword prefixes
     elif re.match(r'^(?:classmethod|staticmethod)\s+\w', line_stripped, re.IGNORECASE):
         score += 10.0
 
@@ -150,8 +172,12 @@ def _line_context_score(line_stripped: str) -> float:
     if re.search(r'\)\s*->\s*\w', line_stripped):
         score += 10.0
         
-    # --- Penalty: PDF page cross-reference (e.g. "method()(#page=176)") ---
-    if re.search(r'\(#page=\d+\)', line_stripped):
+    # --- Penalty: PDF page cross-reference at end of line ---
+    # A page reference at the END of the line is almost certainly a cross-reference
+    # (e.g. "Like update()(#page=176)"). When the page reference appears in the
+    # middle of a qualifier (SQLAlchemy: "URL.(#page=1686)render_as_string(...)")
+    # it is part of a real definition line, and the −25 penalty should not fire.
+    if re.search(r'\(#page=\d+\)\s*$', line_stripped):
         score -= 25.0
 
     return score
@@ -204,19 +230,37 @@ def find_needle_in_lines(
     best_code_example = (-1, -1, 0.0, "none")
     inside_fence = initial_inside_fence 
 
-    for line_idx, line in enumerate(lines):
-        line_stripped = line.strip()
-        line_norm = normalize_for_match(line)
+    # for line_idx, line in enumerate(lines):
+    #     line_stripped = line.strip()
+    #     line_norm = normalize_for_match(line)
 
+    #     if len(line_norm) < 3:
+    #         continue
+    #     if line_stripped.startswith('```'):
+    #         inside_fence = not inside_fence            
+    #         continue
+
+    #     # Compute context bonus/penalty once per line (shared across all needle tiers)
+    #     context_adj = _line_context_score(line_stripped)
+    
+    for line_idx, line in enumerate(lines):
+        line_stripped_orig = line.strip()
+        if line_stripped_orig.startswith('```'):
+            inside_fence = not inside_fence
+            continue
+        
+        # SQLAlchemy and similar Sphinx-built PDFs interpolate "(#page=N)" between qualified-name parts, e.g. "method sqlalchemy.X.Y.(#page=1686)Z(...)".
+        # Strip these tokens for matching only (the original line is retained for context-scoring heuristics that may want to see the page reference)
+        line_stripped = _strip_noise_tokens(line_stripped_orig)
+        line_norm = normalize_for_match(line_stripped)
+        
         if len(line_norm) < 3:
             continue
-        if line_stripped.startswith('```'):
-            inside_fence = not inside_fence            
-            continue
-
-        # Compute context bonus/penalty once per line (shared across all needle tiers)
-        context_adj = _line_context_score(line_stripped)
         
+        # Compute context bonus/penalty once per line (shared across all needle tiers)
+        # Use the ORIGINAL line so cross-reference penalties still fire on standalone "see also" pages such as "Like update()(#page=176)" whose entire content is a cross-reference.
+        context_adj = _line_context_score(line_stripped_orig)     
+           
         force_code = inside_fence and prioritize_outside_code_blocks
 
         # ------------------------------------------------------------------
@@ -234,7 +278,7 @@ def find_needle_in_lines(
                 # Definition-start check: the prefix before the matched needle must be empty
                 prefix_text = line_norm[:pos].strip()
                 _valid_prefix = (
-                    re.match(r'^(?:property|class|classmethod|staticmethod)\s*$', prefix_text)
+                    re.match(r'^(?:property|class|classmethod|staticmethod|method|function|attribute)\s*$', prefix_text)
                     if prefix_text else True
                 )
 
@@ -289,12 +333,12 @@ def find_needle_in_lines(
                 prefix_text = line_norm[:pos].strip()
                 _doc_kw_only = (
                     re.match(
-                        r'^(?:property|class|classmethod|staticmethod)\s*$',
+                        r'^(?:property|class|classmethod|staticmethod|method|function|attribute)\s*$',
                         prefix_text,
                     )
-                    if prefix_text else True   # empty prefix -> always OK
+                    if prefix_text else True   # empty prefix (always OK)
                 )
-                at_definition_pos = pos <= 25 and bool(_doc_kw_only)
+                at_definition_pos = pos <= 60 and bool(_doc_kw_only)
                 
                 # ── Valid-suffix check ───────────────────────────────────────
                 # After the matched name, the line must end, show a colon (typed attribute/property) or an opening paren (callable)

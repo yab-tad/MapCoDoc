@@ -95,6 +95,16 @@ class APIReferenceLocator:
     """
 
     API_TITLES = [
+        # "SQLAlchemy ORM",
+        # "SQLAlchemy Core",
+        # "Dialects",
+        # "Events",
+        # "ORM Extensions",
+        # "Schema Definition Language",
+        # "SQL Statements and Expressions API",
+        # "Engine Configuration",
+        # "Connection Pooling",
+        # "Core API Basics"
         "api reference",
         "reference api",
         "reference",
@@ -126,90 +136,257 @@ class APIReferenceLocator:
 
     
     @classmethod
-    def collect_candidates(cls, sections: List[Section], max_depth: int = 2, toc_end_page: int = 0) -> List[Section]:
+    def collect_candidates(
+        cls,
+        sections: List[Section],
+        max_depth: int = 2,
+        toc_end_page: int = 0,
+        api_titles_override: Optional[List[str]] = None) -> List[Section]:
         """
-        Stage 1: Finds API sections via title keywords, starting search after the TOC region (if one exists).
+        Stage 1: locate API-reference sections in the PDF.
         
-        Strategy:
-            1. Traverse the entire tree to find all nodes with matching titles.
-            2. Rank matches by title quality (exact phrase match beats partial match).
-            3. Among the best-quality matches, select those at the highest structural level.
-            4. returns their subtrees up to a maximum depth. This prevents over-collection in very detailed TOCs.
+        Two matching modes:
+        
+        1. Default (api_titles_override=None): fuzzy keyword matching against
+        cls.API_TITLES (e.g. "api reference", "reference guide"). Used when the
+        PDF follows common Sphinx/MkDocs conventions.
+        
+        2. User override (api_titles_override=[...]): exact title matching
+        against the user-supplied list (case-insensitive, whitespace-collapsed).
+        Use this when the PDF's API documentation is split across multiple
+        product-name chapters whose titles do not contain any keyword
+        (e.g. SQLAlchemy's "SQLAlchemy Core", "SQLAlchemy ORM",
+        "SQLAlchemy Events"). Provide one entry per chapter root.
         
         Args:
-            sections: All sections from the document.
-            max_depth: Maximum depth to traverse below each matched root (default: 3 levels).
-            toc_end_page: Page index where TOC ends; search starts after this page.
+            sections: All sections from the document (flat list, document order).
+            max_depth: Maximum depth to traverse below each matched root.
+            toc_end_page: Page index where the TOC ends; matches inside the TOC region are ignored.
+            api_titles_override: Optional list of section titles to treat as
+                authoritative roots. When provided, these REPLACE the keyword-based search.
+                
+        Returns:
+            List of candidate sections (matched roots + descendants up to max_depth).
         """
         if not sections:
             return []
-
+        
         section_tree = build_section_tree(sections)
         
-        # Find all matching nodes with quality scoring, but only consider sections starting after TOC
+        # Pre-compute the user-supplied title set, normalised for matching
+        target_titles_norm: Optional[set] = None
+        if api_titles_override:
+            target_titles_norm = {
+                ' '.join((t or '').lower().split())
+                for t in api_titles_override
+                if (t or '').strip()
+            }
+            
+        def _normalised(title: Optional[str]) -> str:
+            return ' '.join((title or '').lower().split())
+        
+        # def _matches_override(title: Optional[str]) -> bool:
+        #     if not target_titles_norm:
+        #         return False
+        #     norm = _normalised(title)
+        #     return any(t in norm for t in target_titles_norm)
+        
+        def _matches_override(title: Optional[str]) -> bool:
+            return target_titles_norm is not None and _normalised(title) in target_titles_norm
+        
+        # Find matching nodes (skipping anything entirely inside the TOC region)
         all_matches: List[Tuple[Section, int]] = []
         q: List[Section] = list(section_tree)
         
         while q:
             curr = q.pop(0)
-            # Skip sections whose content is entirely within the TOC region
             if curr.page_end <= toc_end_page:
-                logger.debug(f"DEBUG: Skipping {curr.id} ('{curr.title}', page {curr.page_start}) - before TOC end {toc_end_page}")
+                logger.debug(
+                    f"DEBUG: Skipping {curr.id} ('{curr.title}', page {curr.page_start}) - before TOC end {toc_end_page}")
                 q.extend(curr.children)
                 continue
-            if cls._title_matches(curr.title):
-                title_lower = curr.title.lower()
-                quality = 0
-                for term in cls.API_TITLES:
-                    if term in title_lower:
-                        if term == title_lower.strip():
-                            quality += 10
-                        elif title_lower.strip().startswith(term) or title_lower.strip().endswith(term):
-                            quality += 5
-                        else:
-                            quality += 1
-                all_matches.append((curr, quality))
+            
+            if target_titles_norm is not None:
+                # User-override mode: every exact match has the same quality (10)
+                if _matches_override(curr.title):
+                    all_matches.append((curr, 10))
+            else:
+                # Default mode: keyword-based quality scoring
+                if cls._title_matches(curr.title):
+                    title_lower = curr.title.lower()
+                    quality = 0
+                    for term in cls.API_TITLES:
+                        if term in title_lower:
+                            if term == title_lower.strip():
+                                quality += 10
+                            elif title_lower.strip().startswith(term) or title_lower.strip().endswith(term):
+                                quality += 5
+                            else:
+                                quality += 1
+                    all_matches.append((curr, quality))
+                    
             q.extend(curr.children)
             
-        # Fallback to all sections for downstream scoring
+        # Fallback: if user requested specific titles and none were found, log a
+        # warning and fall back to keyword matching so the run does not produce an empty candidate set.
+        if not all_matches and target_titles_norm is not None:
+            logger.warning(
+                f"None of the user-supplied API titles matched any section in the PDF: {sorted(target_titles_norm)}. Falling back to default keyword matching.")
+            return cls.collect_candidates(
+                sections, max_depth=max_depth, toc_end_page=toc_end_page,
+                api_titles_override=None,
+            )
         if not all_matches:
             return sections
         
-        # Title-based path: select best-quality, highest-level matches
-        max_quality = max(quality for _, quality in all_matches)
-        best_matches = [sec for sec, quality in all_matches if quality == max_quality]
-        min_level = min(sec.level for sec in best_matches)
-        api_root_nodes = [sec for sec in best_matches if sec.level == min_level]
-        
+        if target_titles_norm is not None:
+            # User-override mode: include EVERY match as a root, regardless of level.
+            # The user has explicitly told us which chapters are API references.
+            api_root_nodes = [sec for sec, _ in all_matches]
+        else:
+            # Default mode: select best-quality matches at the highest structural level
+            max_quality = max(quality for _, quality in all_matches)
+            best_matches = [sec for sec, quality in all_matches if quality == max_quality]
+            min_level = min(sec.level for sec in best_matches)
+            api_root_nodes = [sec for sec in best_matches if sec.level == min_level]
+            
         # Collect roots and descendants up to max_depth
         candidates: List[Section] = []
         visited = set()
         for root in api_root_nodes:
-            q: List[Tuple[Section, int]] = [(root, 0)]  # (section, depth)
-            while q:
-                curr, depth = q.pop(0)
-                if curr.id in visited: continue
+            bfs: List[Tuple[Section, int]] = [(root, 0)]
+            while bfs:
+                curr, depth = bfs.pop(0)
+                if curr.id in visited:
+                    continue
                 visited.add(curr.id)
                 candidates.append(curr)
-                # Only traverse children if we haven't hit the depth limit
                 if depth < max_depth:
-                    q.extend((child, depth + 1) for child in curr.children)
+                    bfs.extend((child, depth + 1) for child in curr.children)
                     
-        # If the matched root(s) are at level 1 and there are other level-1 sections after them,
-        # include those siblings too (common in flat or semi-flat structures like Pygame)
-        if api_root_nodes and all(root.level == 1 for root in api_root_nodes):
-            # Get all level-1 sections that appear after the first matched root
-            first_root_page = min(root.page_start for root in api_root_nodes)
-            level_1_siblings = [s for s in sections 
-                               if s.level == 1 
-                               and s.page_start >= first_root_page
-                               and s not in candidates]
+        # # Default-mode-only: include level-1 siblings after the matched root (helps flat-structure PDFs like Pygame)
+        # # Skipped under override mode because the user has explicitly enumerated the chapters
+        # if (target_titles_norm is None
+        #         and api_root_nodes
+        #         and all(root.level == 1 for root in api_root_nodes)):
+        #     first_root_page = min(root.page_start for root in api_root_nodes)
+        #     level_1_siblings = [
+        #         s for s in sections
+        #         if s.level == 1
+        #         and s.page_start >= first_root_page
+        #         and s not in candidates
+        #     ]
+        #     candidates.extend(level_1_siblings)
+        
+        # Default-mode-only: include level-1 siblings after the matched root.
+        # Originally added for flat-structure PDFs (e.g. Pygame) where exactly one umbrella chapter matches and its API surface bleeds into peer chapters.
+        # Restrict this expansion to that scenario, otherwise it pulls in tutorials, FAQ, errors, migration notes, and the alphabetical index, ballooning the candidate set and diluting downstream ranking.
+        #
+        # Skipped under override mode because the user has explicitly enumerated the chapters;
+        # skipped when more than one root matched, because rich PDFs (SQLAlchemy, Pandas, etc.) already have full coverage from the matches.
+        if (target_titles_norm is None
+                and len(api_root_nodes) == 1
+                and api_root_nodes[0].level == 1):
+            first_root_page = api_root_nodes[0].page_start
+            level_1_siblings = [
+                s for s in sections
+                if s.level == 1
+                and s.page_start >= first_root_page
+                and s not in candidates
+            ]
             candidates.extend(level_1_siblings)
             
         # # Prune redundancies (after collecting)
         # candidates = prune_redundant_sections(candidates)
         
         return candidates
+    
+    
+    # @classmethod
+    # def collect_candidates(cls, sections: List[Section], max_depth: int = 2, toc_end_page: int = 0) -> List[Section]:
+    #     """
+    #     Stage 1: Finds API sections via title keywords, starting search after the TOC region (if one exists).
+        
+    #     Strategy:
+    #         1. Traverse the entire tree to find all nodes with matching titles.
+    #         2. Rank matches by title quality (exact phrase match beats partial match).
+    #         3. Among the best-quality matches, select those at the highest structural level.
+    #         4. returns their subtrees up to a maximum depth. This prevents over-collection in very detailed TOCs.
+        
+    #     Args:
+    #         sections: All sections from the document.
+    #         max_depth: Maximum depth to traverse below each matched root (default: 3 levels).
+    #         toc_end_page: Page index where TOC ends; search starts after this page.
+    #     """
+    #     if not sections:
+    #         return []
+
+    #     section_tree = build_section_tree(sections)
+        
+    #     # Find all matching nodes with quality scoring, but only consider sections starting after TOC
+    #     all_matches: List[Tuple[Section, int]] = []
+    #     q: List[Section] = list(section_tree)
+        
+    #     while q:
+    #         curr = q.pop(0)
+    #         # Skip sections whose content is entirely within the TOC region
+    #         if curr.page_end <= toc_end_page:
+    #             logger.debug(f"DEBUG: Skipping {curr.id} ('{curr.title}', page {curr.page_start}) - before TOC end {toc_end_page}")
+    #             q.extend(curr.children)
+    #             continue
+    #         if cls._title_matches(curr.title):
+    #             title_lower = curr.title.lower()
+    #             quality = 0
+    #             for term in cls.API_TITLES:
+    #                 if term in title_lower:
+    #                     if term == title_lower.strip():
+    #                         quality += 10
+    #                     elif title_lower.strip().startswith(term) or title_lower.strip().endswith(term):
+    #                         quality += 5
+    #                     else:
+    #                         quality += 1
+    #             all_matches.append((curr, quality))
+    #         q.extend(curr.children)
+            
+    #     # Fallback to all sections for downstream scoring
+    #     if not all_matches:
+    #         return sections
+        
+    #     # Title-based path: select best-quality, highest-level matches
+    #     max_quality = max(quality for _, quality in all_matches)
+    #     best_matches = [sec for sec, quality in all_matches if quality == max_quality]
+    #     min_level = min(sec.level for sec in best_matches)
+    #     api_root_nodes = [sec for sec in best_matches if sec.level == min_level]
+        
+    #     # Collect roots and descendants up to max_depth
+    #     candidates: List[Section] = []
+    #     visited = set()
+    #     for root in api_root_nodes:
+    #         q: List[Tuple[Section, int]] = [(root, 0)]  # (section, depth)
+    #         while q:
+    #             curr, depth = q.pop(0)
+    #             if curr.id in visited: continue
+    #             visited.add(curr.id)
+    #             candidates.append(curr)
+    #             # Only traverse children if we haven't hit the depth limit
+    #             if depth < max_depth:
+    #                 q.extend((child, depth + 1) for child in curr.children)
+                    
+    #     # If the matched root(s) are at level 1 and there are other level-1 sections after them,
+    #     # include those siblings too (common in flat or semi-flat structures like Pygame)
+    #     if api_root_nodes and all(root.level == 1 for root in api_root_nodes):
+    #         # Get all level-1 sections that appear after the first matched root
+    #         first_root_page = min(root.page_start for root in api_root_nodes)
+    #         level_1_siblings = [s for s in sections 
+    #                            if s.level == 1 
+    #                            and s.page_start >= first_root_page
+    #                            and s not in candidates]
+    #         candidates.extend(level_1_siblings)
+            
+    #     # # Prune redundancies (after collecting)
+    #     # candidates = prune_redundant_sections(candidates)
+        
+    #     return candidates
     
  
 

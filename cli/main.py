@@ -314,6 +314,12 @@ def create_parser() -> argparse.ArgumentParser:
     doc_group.add_argument("--doc-source", metavar="PATH_OR_URL", help="Path to PDF or URL for documentation extraction after analysis.")
     doc_group.add_argument("--target-module", metavar="MODULE", help="Module to extract docs for (default: inferred from repo). Use with --doc-source.")
     doc_group.add_argument("--skip-llm", action="store_true", help="Skip LLM-based structured extraction in doc processing.")
+    doc_group.add_argument("--api-section-titles", nargs="*", default=None,
+                            help=(
+                                "Optional list of PDF section titles to treat as API-reference chapter "
+                                "roots when --doc-source is a PDF (case-insensitive, whitespace-tolerant). "
+                                "Replaces the default keyword-based section detection."
+    ))
     
     analyze_parser.set_defaults(func=handle_analyze_command) # Link to handler
 
@@ -334,6 +340,14 @@ def create_parser() -> argparse.ArgumentParser:
     docs_parser.add_argument("--target-module", required=False, help="Optional: Module prefix filter (default: auto-detect from library name)")
     docs_parser.add_argument("--doc-source", required=True, help="Path to PDF or URL of documentation")
     docs_parser.add_argument("--skip-llm", action="store_true", help="Skip LLM-based structured extraction (useful if no OPENAI_API_KEY)")
+    docs_parser.add_argument("--api-section-titles", nargs="*", default=None,
+                             help=(
+                                 "Optional list of PDF section titles that mark API-reference chapters "
+                                 "(case-insensitive, whitespace-tolerant). When provided, replaces the "
+                                 "default keyword-based section detection in the PDF chunk selector. "
+                                 'Example: --api-section-titles "SQLAlchemy ORM" "SQLAlchemy Core" '
+                                 '"SQLAlchemy Events"'
+    ))
     docs_parser.set_defaults(func=handle_extract_docs_command)
     
     # --- List Features Command (Top Level or as subcommand) ---
@@ -530,7 +544,12 @@ def handle_analyze_command(args: argparse.Namespace, config: AnalysisConfig):
                                 library_name=lib_name,
                                 version=lib_version
                             )
-                            doc_runner.run(args.doc_source, target_module=target_module, skip_llm=skip_llm)
+                            doc_runner.run(
+                                args.doc_source,
+                                target_module=target_module,
+                                skip_llm=skip_llm,
+                                api_section_titles=getattr(args, 'api_section_titles', None)
+                            )
                             console.print(f"[green]Documentation extraction complete for {lib_name}[/green]")
                         except Exception as e:
                             console.print(f"[yellow]Documentation extraction failed: {e}[/yellow]")
@@ -595,7 +614,12 @@ def handle_extract_docs_command(args: argparse.Namespace, config: Optional[Analy
             library_name=args.library_name,
             version=args.version
         )
-        runner.run(args.doc_source, target_module=getattr(args, 'target_module', None), skip_llm=skip_llm)
+        runner.run(
+            args.doc_source,
+            target_module=getattr(args, 'target_module', None),
+            skip_llm=skip_llm,
+            api_section_titles=getattr(args, 'api_section_titles', None)
+        )
         console.print(f"[green]Documentation extraction complete[/green]")
         return 0
     except Exception as e:

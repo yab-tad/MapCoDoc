@@ -378,9 +378,9 @@ class StopSignalMatcher:
         if peer_looks_like_class:
             keyword_prefix = r'(?:class\s+)?'
         elif peer_looks_like_method:
-            keyword_prefix = r'(?:property\s+|classmethod\s+|staticmethod\s+)?'
+            keyword_prefix = r'(?:property\s+|classmethod\s+|staticmethod\s+|method\s+|function\s+|attribute\s+)?'
         else:
-            keyword_prefix = r'(?:class\s+|property\s+)?'
+            keyword_prefix = r'(?:class\s+|property\s+|method\s+|function\s+|attribute\s+)?'
 
         # =====================================================================
         # Pattern 0a (Highest Priority): Exact FQN signature with flexible
@@ -584,6 +584,9 @@ class StopSignalMatcher:
             return (False, False)
         
         line_stripped = line.strip()
+        # Strip known PDF noise tokens (page anchors, pandas's PEP-3102 annotation, …) so peer-signature regex patterns built from canonical signatures still match.
+        line_stripped = re.sub(r'\(#page=\d+\)', '', line_stripped)
+        line_stripped = re.sub(r'\s*\(Keyword-only parameters separator\s*\(PEP 3102\)\)', '', line_stripped)
         
         # Select which pattern set to use based on pre-scan result
         if self.use_fallback:

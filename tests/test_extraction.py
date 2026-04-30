@@ -111,10 +111,12 @@ class ExtractionTestRunner(DocProcessingRunner):
         version: str,
         semantic_mode: str = "auto",
         overwrite: bool = False,
+        api_section_titles: Optional[List[str]] = None
     ):
         super().__init__(db_path, library_name, version)
         self.semantic_mode = semantic_mode
         self.overwrite = overwrite 
+        self.api_section_titles = api_section_titles
         self._match_metadata: dict = {} # Populated during extraction; maps api_name -> {match_type, score}
 
     # ── Override: web pipeline that skips crawling ────────────────────────────
@@ -183,6 +185,7 @@ class ExtractionTestRunner(DocProcessingRunner):
             member_cfg=member_cfg,
             cache_dir=str(self.ARTIFACTS_BASE / ".cache"),
             peer_signatures=peer_signatures,
+            api_section_titles=self.api_section_titles
         )
         
         logger.info(f"PDF extraction complete. Results in: {self.scraped_doc_dir}")
@@ -590,23 +593,32 @@ def _parse_args():
     p = argparse.ArgumentParser(
         description="Test extraction pipeline (Steps 1–3 only, no LLM or DB writes)."
     )
-    p.add_argument("--db-path",       required=True,  help="Path to MapCoDoc SQLite database")
-    p.add_argument("--library-name",  required=True,  help="Library name (e.g. xgboost)")
-    p.add_argument("--version",       required=True,  help="Library version (e.g. 3.2.0-dev)")
+    p.add_argument("--db-path", required=True, help="Path to MapCoDoc SQLite database")
+    p.add_argument("--library-name", required=True, help="Library name (e.g. xgboost)")
+    p.add_argument("--version", required=True, help="Library version (e.g. 3.2.0-dev)")
 
     # Source: exactly one of these
     src = p.add_mutually_exclusive_group(required=True)
-    src.add_argument("--url-file",  help="Path to existing scraped_urls.txt (web mode)")
-    src.add_argument("--pdf-path",  help="Path to local PDF documentation file (PDF mode)")
+    src.add_argument("--url-file", help="Path to existing scraped_urls.txt (web mode)")
+    src.add_argument("--pdf-path", help="Path to local PDF documentation file (PDF mode)")
 
-    p.add_argument("--target-module",  default=None,   help="Filter members by API name prefix")
-    p.add_argument("--semantic-mode",  default="auto",
+    p.add_argument("--target-module", default=None, help="Filter members by API name prefix")
+    p.add_argument("--semantic-mode", default="auto",
                    choices=["auto", "never", "always", "only"],
                    help="Semantic search strategy (default: auto)")
-    p.add_argument("--overwrite",      action="store_true",
+    p.add_argument("--overwrite", action="store_true",
                    help="Clear and re-extract per_member/ files even if they already exist")
-    p.add_argument("--report-file",    default=None,
+    p.add_argument("--report-file", default=None,
                    help="Optional path to save JSON report (e.g. results.json)")
+    p.add_argument("--api-section-titles",
+                   nargs="*",
+                   default=None,
+                   help=(
+                    "Optional list of PDF section titles that mark API-reference chapters "
+                    "(case-insensitive, whitespace-tolerant). When provided, replaces the "
+                    "default keyword-based section detection. Example: "
+                    '--api-section-titles "SQLAlchemy ORM" "SQLAlchemy Core" "SQLAlchemy Events"'),
+    )
     return p.parse_args()
 
 
