@@ -20,7 +20,7 @@ from doc_processor.filter_doc import StopSignalMatcher
 from doc_processor.file_doc.pdf_localizer import PDFSectionizer, Section
 from doc_processor.file_doc.embeddings import EmbeddingModel
 from doc_processor.file_doc.chunk_selector import APIReferenceLocator
-from doc_processor.file_doc.hybrid_search import section_match_score, cosine_similarity, find_needle_in_lines
+from doc_processor.file_doc.hybrid_search import section_match_score, cosine_similarity, find_needle_in_lines, _strip_noise_tokens
 from doc_processor.file_doc.signature import (
     MemberInput, 
     build_signature_patterns, 
@@ -369,7 +369,7 @@ class MemberExtractor:
         window_scores = []
         for (a, b) in spans:
             window_text = sec_obj.text_norm[a:b]
-            window_lower = window_text.lower()
+            window_lower = _strip_noise_tokens(window_text).lower()  # only used for lexical name verification
             
             # Split into paragraphs (blank lines or double newlines)
             raw_paragraphs = re.split(r'\n\s*\n', window_text)
@@ -377,7 +377,7 @@ class MemberExtractor:
             # Process paragraphs: filter small, sub-chunk large
             chunks = []
             for para in raw_paragraphs:
-                para = para.strip()
+                para = _strip_noise_tokens(para).strip()
                 if len(para) < MIN_CHUNK_LEN:
                     continue  # Skip tiny paragraphs
                 
@@ -525,7 +525,7 @@ class MemberExtractor:
                     looks_like_signature = True
                 
                 # Lexical Name Matching with Priority
-                line_lower = stripped.lower()
+                line_lower = _strip_noise_tokens(stripped).lower()
                 
                 # Check in order of specificity (most specific first)
                 name_match_score = 0.0
@@ -547,7 +547,7 @@ class MemberExtractor:
             return (0, 0.0)
         
         # Embed all candidate lines
-        line_texts = [ld[2] for ld in line_data]
+        line_texts = [_strip_noise_tokens(ld[2]) for ld in line_data]
         L = embedder.encode(line_texts)  # (N, D)
         
         # Compute base semantic similarities
@@ -868,7 +868,7 @@ class MemberExtractor:
                 spans = _windows(sec.text_norm, win_chars, win_stride)
                 for a, b in spans:
                     section_to_win_indices[s_idx].append(len(window_texts))
-                    window_content = context_prefix + sec.text_norm[a:b]
+                    window_content = context_prefix + _strip_noise_tokens(sec.text_norm[a:b])
                     window_texts.append(build_passage_text(window_content, model_name))
             
             if window_texts:
@@ -1387,6 +1387,7 @@ class MemberExtractor:
         return output_results
 
 
+
 def extract_api_docs_from_pdf(
     pdf_path: str,
     members: List[MemberInput],
@@ -1429,6 +1430,9 @@ def extract_api_docs_from_pdf(
         The in-memory JSON mapping written to `out_json_path`.
     """
     
+    logger.info("api_section_titles=%r", api_section_titles)
+    
+    
     # 1. Sectionize PDF
     sec = PDFSectionizer(pdf_path)
     sections, _ = sec.sectionize()
@@ -1436,14 +1440,6 @@ def extract_api_docs_from_pdf(
     # Detect TOC region to avoid false matches
     page_raw, page_norm, _ = sec._collect_pages()
     toc_start, toc_end = sec._detect_toc_page_range(page_norm)
-    
-    # Print every level-1/2 section that lives after the TOC
-    print(f"toc_end_page = {toc_end}, total sections = {len(sections)}")
-    for s in sections:
-        if s.level == 1 and s.page_end > toc_end:
-            print(f"L{s.level:>1} | p{s.page_start:>4}-{s.page_end:>4} | {s.title!r}")
-            if s.level <= 2 and s.page_end > toc_end:
-                print(f"L{s.level} | p{s.page_start:>4}-{s.page_end:>4} | {s.title!r}")
 
     # 2. Prepare embedder; pass to chunk selector if needed
     if member_cfg.semantic_mode == "never": embedder = None
@@ -1451,7 +1447,7 @@ def extract_api_docs_from_pdf(
 
     # 3. Stage-1: chunk selection (API region)
     api_sections = APIReferenceLocator.collect_candidates(sections, max_depth=2, toc_end_page=toc_end, api_titles_override=api_section_titles)
-
+    
     # 4. Stage-2: member extraction from selected sections
     output = MemberExtractor(member_cfg).extract(api_sections, members, embedder, peer_signatures, model_name)
 

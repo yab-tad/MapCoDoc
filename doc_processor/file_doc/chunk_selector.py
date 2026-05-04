@@ -95,16 +95,6 @@ class APIReferenceLocator:
     """
 
     API_TITLES = [
-        # "SQLAlchemy ORM",
-        # "SQLAlchemy Core",
-        # "Dialects",
-        # "Events",
-        # "ORM Extensions",
-        # "Schema Definition Language",
-        # "SQL Statements and Expressions API",
-        # "Engine Configuration",
-        # "Connection Pooling",
-        # "Core API Basics"
         "api reference",
         "reference api",
         "reference",
@@ -185,12 +175,6 @@ class APIReferenceLocator:
         def _normalised(title: Optional[str]) -> str:
             return ' '.join((title or '').lower().split())
         
-        # def _matches_override(title: Optional[str]) -> bool:
-        #     if not target_titles_norm:
-        #         return False
-        #     norm = _normalised(title)
-        #     return any(t in norm for t in target_titles_norm)
-        
         def _matches_override(title: Optional[str]) -> bool:
             return target_titles_norm is not None and _normalised(title) in target_titles_norm
         
@@ -227,15 +211,11 @@ class APIReferenceLocator:
                     
             q.extend(curr.children)
             
-        # Fallback: if user requested specific titles and none were found, log a
-        # warning and fall back to keyword matching so the run does not produce an empty candidate set.
+        # Fallback: if user requested specific titles and none were found, log a warning and fall back to keyword matching so the run does not produce an empty candidate set.
         if not all_matches and target_titles_norm is not None:
             logger.warning(
                 f"None of the user-supplied API titles matched any section in the PDF: {sorted(target_titles_norm)}. Falling back to default keyword matching.")
-            return cls.collect_candidates(
-                sections, max_depth=max_depth, toc_end_page=toc_end_page,
-                api_titles_override=None,
-            )
+            return cls.collect_candidates(sections, max_depth=max_depth, toc_end_page=toc_end_page, api_titles_override=None)
         if not all_matches:
             return sections
         
@@ -263,20 +243,6 @@ class APIReferenceLocator:
                 candidates.append(curr)
                 if depth < max_depth:
                     bfs.extend((child, depth + 1) for child in curr.children)
-                    
-        # # Default-mode-only: include level-1 siblings after the matched root (helps flat-structure PDFs like Pygame)
-        # # Skipped under override mode because the user has explicitly enumerated the chapters
-        # if (target_titles_norm is None
-        #         and api_root_nodes
-        #         and all(root.level == 1 for root in api_root_nodes)):
-        #     first_root_page = min(root.page_start for root in api_root_nodes)
-        #     level_1_siblings = [
-        #         s for s in sections
-        #         if s.level == 1
-        #         and s.page_start >= first_root_page
-        #         and s not in candidates
-        #     ]
-        #     candidates.extend(level_1_siblings)
         
         # Default-mode-only: include level-1 siblings after the matched root.
         # Originally added for flat-structure PDFs (e.g. Pygame) where exactly one umbrella chapter matches and its API surface bleeds into peer chapters.

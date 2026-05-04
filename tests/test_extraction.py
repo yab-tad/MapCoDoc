@@ -611,7 +611,7 @@ def _parse_args():
     p.add_argument("--report-file", default=None,
                    help="Optional path to save JSON report (e.g. results.json)")
     p.add_argument("--api-section-titles",
-                   nargs="*",
+                   nargs="+",
                    default=None,
                    help=(
                     "Optional list of PDF section titles that mark API-reference chapters "
@@ -631,6 +631,7 @@ if __name__ == "__main__":
         version=args.version,
         semantic_mode=args.semantic_mode,
         overwrite=args.overwrite,
+        api_section_titles=args.api_section_titles
     )
 
     runner.run_extraction_test(

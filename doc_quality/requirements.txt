@@ -1,0 +1,23 @@
+# Runtime dependencies for the doc_quality package.
+#
+# These are *additions* to MapCoDoc's existing dependencies (sqlalchemy,
+# openai, etc.). All three are pure-Python with small footprints and are
+# treated as optional at runtime: if any are missing the affected metrics
+# are silently skipped (see evaluator/readability_text.py and
+# evaluator/readability_code.py for examples).
+
+# JSONPath expression parser used by the maintainer's patch applicator.
+jsonpath-ng>=1.6,<2.0
+
+# Flesch-Kincaid, Gunning Fog, Coleman-Liau and friends.
+textstat>=0.7,<1.0
+
+# Halstead Volume and McCabe Cyclomatic Complexity for example code.
+radon>=6.0,<7.0
+
+# Optional: faster Levenshtein for signature drift; we fall back to the
+# stdlib's difflib when this is missing.
+# python-Levenshtein>=0.20
+
+# Test dependencies (only needed to run doc_quality/tests/).
+# pytest>=7.0

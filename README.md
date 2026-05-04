@@ -184,6 +184,7 @@ python -m cli.main save-features --output my_flags.json
 | `--auto-install-dependencies` | Install project dependencies for dynamic analysis |
 | `--log-level` | Logging level (DEBUG, INFO, WARNING, ERROR) |
 | `--log-file` | Path to log output to a file |
+| `--api-section-titles` | Section titles for API reference (default: None) |
 
 ## Output
 

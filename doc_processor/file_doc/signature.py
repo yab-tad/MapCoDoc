@@ -327,6 +327,13 @@ def build_lexical_needles(member: MemberInput) -> Dict[str, List[str]]:
         if s and s not in seen_exact:
             seen_exact.add(s)
             needles["exact"].append(s)
+            
+    # -------------------------------------------------------------------------
+    # Class heading without constructor on the same line (common in PDF/Sphinx)
+    # -------------------------------------------------------------------------
+    if member.member_type == "class":
+        _add_exact(f"class {api_name}")
+        _add_exact(f"class {short_name}")
 
     # -------------------------------------------------------------------------
     # Exact tier: iterate variants in priority order

@@ -495,6 +495,7 @@ def detect_reference_pattern(text: str, api_name: str) -> bool:
     def_patterns = [
         rf'^(?:class\s+)?{re.escape(short_name)}\s*\(',      # "Conv1d(" at line start
         rf'^\s*{re.escape(short_name)}\s*\(',                # "  Conv1d(" with indent
+        rf'^class\s+{re.escape(api_name)}\b'       # Sphinx / SQLAlchemy PDF: "class pkg.module.ClassName" with no "(" on that line
     ]
     
     text_lower = text.lower()

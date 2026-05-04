@@ -314,7 +314,7 @@ def create_parser() -> argparse.ArgumentParser:
     doc_group.add_argument("--doc-source", metavar="PATH_OR_URL", help="Path to PDF or URL for documentation extraction after analysis.")
     doc_group.add_argument("--target-module", metavar="MODULE", help="Module to extract docs for (default: inferred from repo). Use with --doc-source.")
     doc_group.add_argument("--skip-llm", action="store_true", help="Skip LLM-based structured extraction in doc processing.")
-    doc_group.add_argument("--api-section-titles", nargs="*", default=None,
+    doc_group.add_argument("--api-section-titles", nargs="+", default=None,
                             help=(
                                 "Optional list of PDF section titles to treat as API-reference chapter "
                                 "roots when --doc-source is a PDF (case-insensitive, whitespace-tolerant). "
@@ -340,7 +340,7 @@ def create_parser() -> argparse.ArgumentParser:
     docs_parser.add_argument("--target-module", required=False, help="Optional: Module prefix filter (default: auto-detect from library name)")
     docs_parser.add_argument("--doc-source", required=True, help="Path to PDF or URL of documentation")
     docs_parser.add_argument("--skip-llm", action="store_true", help="Skip LLM-based structured extraction (useful if no OPENAI_API_KEY)")
-    docs_parser.add_argument("--api-section-titles", nargs="*", default=None,
+    docs_parser.add_argument("--api-section-titles", nargs="+", default=None,
                              help=(
                                  "Optional list of PDF section titles that mark API-reference chapters "
                                  "(case-insensitive, whitespace-tolerant). When provided, replaces the "
