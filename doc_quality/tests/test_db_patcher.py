@@ -7,7 +7,7 @@ from doc_quality.models import (
     Dimension,
     Issue,
     MaintainerStrategy,
-    Severity,
+    Severity
 )
 
 
@@ -16,7 +16,7 @@ def _issue(
     code_value="int",
     doc_value="N/A",
     target="x",
-    metadata=None,
+    metadata=None
 ):
     """Build a minimal Issue object for tests."""
     spec = issue_type.value
@@ -31,7 +31,7 @@ def _issue(
         code_value=code_value,
         doc_value=doc_value,
         maintainer_strategy=spec.default_strategy,
-        metadata=metadata or {},
+        metadata=metadata or {}
     )
 
 
@@ -48,7 +48,7 @@ def test_param_name_missing_patch_inserts_param():
     issue = _issue(
         issue_type=IssueType.COMP_PARAM_NAME_MISSING,
         code_value={"name": "y", "type": "int", "default": "0"},
-        target="y",
+        target="y"
     )
     patches = patcher.build_patches([issue])
     assert len(patches) == 1
@@ -71,7 +71,7 @@ def test_builtin_link_patch_wraps_with_url():
         issue_type=IssueType.MAINT_BUILTIN_NOT_LINKED,
         doc_value="bool",
         target="x",
-        metadata={"builtin": "bool"},
+        metadata={"builtin": "bool"}
     )
     patches = patcher.build_patches([issue])
     assert len(patches) == 1

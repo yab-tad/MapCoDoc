@@ -48,7 +48,7 @@ def test_save_evaluation_serializes_report(tmp_path):
         section="purpose",
         target=None,
         json_path="$.module_member_description.purpose",
-        detail="missing",
+        detail="missing"
     )
     report = EvaluationReport(
         member_id=1,
@@ -62,9 +62,9 @@ def test_save_evaluation_serializes_report(tmp_path):
             Dimension.COMPLETENESS: DimensionScore(score=0.5, issues=[issue]),
             Dimension.ACCURACY: DimensionScore(score=1.0, issues=[]),
             Dimension.READABILITY: DimensionScore(score=1.0, issues=[]),
-            Dimension.MAINTAINABILITY: DimensionScore(score=1.0, issues=[]),
+            Dimension.MAINTAINABILITY: DimensionScore(score=1.0, issues=[])
         },
-        evaluation_timestamp=datetime.now(timezone.utc),
+        evaluation_timestamp=datetime.now(timezone.utc)
     )
     path = store.save_evaluation(report)
     assert path.exists()

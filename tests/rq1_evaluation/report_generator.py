@@ -20,11 +20,7 @@ class ReportGenerator:
         self.output_dir = Path(output_dir) / package_prefix
         self.output_dir.mkdir(parents=True, exist_ok=True)
     
-    def generate_all(
-        self, 
-        result: RQ1EvaluationResult,
-        prefix: str = ""
-    ) -> Dict[str, Path]:
+    def generate_all(self, result: RQ1EvaluationResult, prefix: str = "") -> Dict[str, Path]:
         """Generate all report formats."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         name = f"{prefix}_{result.library_name}_{timestamp}" if prefix else f"{result.library_name}_{timestamp}"

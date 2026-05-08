@@ -17,14 +17,14 @@ def _patch(json_path, new_value, old_value=None):
         section="parameters",
         target=None,
         json_path=json_path,
-        detail="t",
+        detail="t"
     )
     return MaintenancePatch(
         issue=issue,
         json_path=json_path,
         old_value=old_value,
         new_value=new_value,
-        strategy=MaintainerStrategy.DB_QUERY,
+        strategy=MaintainerStrategy.DB_QUERY
     )
 
 
@@ -40,7 +40,7 @@ def test_simple_field_patch():
 def test_param_field_patch():
     doc = {
         "parameters": [
-            {"name": "x", "type": "N/A", "description": "?", "additional_information": "N/A"},
+            {"name": "x", "type": "N/A", "description": "?", "additional_information": "N/A"}
         ]
     }
     patches = [_patch("$.parameters[?name=='x'].type", "int")]

@@ -20,14 +20,9 @@ logger = logging.getLogger(__name__)
 class ExtractionConfig:
     """Configuration for API name extraction."""
     # Prefixes to skip in URL paths (e.g., 'generated/', 'reference/')
-    skip_prefixes: List[str] = field(default_factory=lambda: [
-        'generated', 'reference', 'api', '_autosummary', 'autoapi',
-        'apidoc', 'modules', 'source'
-    ])
+    skip_prefixes: List[str] = field(default_factory=lambda: ['generated', 'reference', 'api', '_autosummary', 'autoapi', 'apidoc', 'modules', 'source'])
     # File extensions to strip
-    strip_extensions: List[str] = field(default_factory=lambda: [
-        '.html', '.htm', '.rst', '.md'
-    ])
+    strip_extensions: List[str] = field(default_factory=lambda: ['.html', '.htm', '.rst', '.md'])
     # Patterns indicating non-API pages
     non_api_patterns: List[str] = field(default_factory=lambda: [
         'index', 'genindex', 'modindex', 'search', 'py-modindex',

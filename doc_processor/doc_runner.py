@@ -1673,7 +1673,7 @@ class DocProcessingRunner:
                 logger.debug(f"Skipping {info.api_name}: not found in document (match_type={match_type})")
                 continue
             
-            if score < MemberExtractorConfig.min_lexical_score:
+            if score < extractor.cfg.min_lexical_score:
                 logger.debug(f"Skipping {info.api_name}: score {score:.1f} below threshold")
                 continue
             # ---

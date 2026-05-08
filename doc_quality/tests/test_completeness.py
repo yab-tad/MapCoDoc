@@ -7,9 +7,7 @@ from doc_quality.issue_types import IssueType
 
 
 def test_well_formed_callable_has_high_score(callable_view, callable_code_truth, config):
-    score = completeness.evaluate(
-        callable_view, callable_code_truth, None, config,
-    )
+    score = completeness.evaluate(callable_view, callable_code_truth, None, config)
     assert score.score > 0.9
     assert all(i.issue_type != IssueType.COMP_PURPOSE_MISSING for i in score.issues)
 

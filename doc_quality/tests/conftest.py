@@ -32,27 +32,27 @@ def sample_class_doc() -> Dict:
         "module_member_description": {
             "purpose": "Creates a criterion that measures the mean absolute error.",
             "additional_information": [
-                "The unreduced loss is computed element-wise.",
-            ],
+                "The unreduced loss is computed element-wise."
+            ]
         },
         "parameters": [
             {
                 "name": "size_average",
                 "type": "bool(https://docs.python.org/3/library/functions.html#bool), optional",
                 "description": "Deprecated; see reduction.",
-                "additional_information": "N/A",
+                "additional_information": "N/A"
             },
             {
                 "name": "reduce",
                 "type": "bool, optional",
                 "description": "Deprecated; see reduction.",
-                "additional_information": "N/A",
+                "additional_information": "N/A"
             },
             {
                 "name": "reduction",
                 "type": "str, optional",
                 "description": "Specifies the reduction. Default: 'mean'",
-                "additional_information": "N/A",
+                "additional_information": "N/A"
             },
         ],
         "attributes": [],
@@ -60,12 +60,12 @@ def sample_class_doc() -> Dict:
         "examples": [
             {
                 "example": "```\n>>> loss = nn.L1Loss()\n```",
-                "additional_information": "N/A",
+                "additional_information": "N/A"
             },
         ],
         "additional_notes": {
             "supplementary_information": [],
-            "edge_cases": [],
+            "edge_cases": []
         },
     }
 
@@ -80,29 +80,29 @@ def sample_callable_doc() -> Dict:
             {
                 "name": "x", "type": "int",
                 "description": "The first integer.",
-                "additional_information": "N/A",
+                "additional_information": "N/A"
             },
             {
                 "name": "y", "type": "int",
                 "description": "The second integer.",
-                "additional_information": "N/A",
+                "additional_information": "N/A"
             },
         ],
         "returns": {
             "type": "int",
             "description": "The sum of x and y.",
-            "additional_information": "N/A",
+            "additional_information": "N/A"
         },
         "examples": [
             {
                 "example": "```python\n# Add two ints.\nadd(1, 2)\n```",
-                "additional_information": "N/A",
+                "additional_information": "N/A"
             },
         ],
         "additional_notes": {
             "supplementary_information": [],
-            "edge_cases": [],
-        },
+            "edge_cases": []
+        }
     }
 
 
@@ -131,7 +131,7 @@ def _ct_param(name: str, type_: str = None, default: Any = None) -> Dict:
         "is_positional_only": False,
         "is_keyword_only": False,
         "is_vararg": False,
-        "is_kwarg": False,
+        "is_kwarg": False
     }
 
 
@@ -146,12 +146,12 @@ def class_code_truth() -> CodeTruth:
             _ct_param("self"),
             _ct_param("size_average", "Optional[bool]", "None"),
             _ct_param("reduce", "Optional[bool]", "None"),
-            _ct_param("reduction", "str", "'mean'"),
+            _ct_param("reduction", "str", "'mean'")
         ],
         returns=None,
         signatures={
             "full": "L1Loss(self, size_average: Optional[bool]=None, reduce: Optional[bool]=None, reduction: str='mean')",
-            "no_types": "L1Loss(self, size_average=None, reduce=None, reduction='mean')",
+            "no_types": "L1Loss(self, size_average=None, reduce=None, reduction='mean')"
         },
         decorators=[],
         is_async=False,
@@ -160,7 +160,7 @@ def class_code_truth() -> CodeTruth:
         is_property=False,
         is_inherited=False,
         source_code="class L1Loss:\n    def __init__(self, size_average=None, reduce=None, reduction='mean'):\n        self.reduction = reduction\n",
-        docstring="L1Loss criterion.",
+        docstring="L1Loss criterion."
     )
 
 
@@ -173,7 +173,7 @@ def callable_code_truth() -> CodeTruth:
         member_type="function",
         parameters=[
             _ct_param("x", "int"),
-            _ct_param("y", "int"),
+            _ct_param("y", "int")
         ],
         returns={"type": "int", "description": ""},
         signatures={
@@ -187,7 +187,7 @@ def callable_code_truth() -> CodeTruth:
         is_property=False,
         is_inherited=False,
         source_code="def add(x: int, y: int) -> int:\n    return x + y",
-        docstring="Add two integers.",
+        docstring="Add two integers."
     )
 
 
