@@ -229,19 +229,6 @@ def find_needle_in_lines(
     best_definition   = (-1, -1, 0.0, "none")
     best_code_example = (-1, -1, 0.0, "none")
     inside_fence = initial_inside_fence 
-
-    # for line_idx, line in enumerate(lines):
-    #     line_stripped = line.strip()
-    #     line_norm = normalize_for_match(line)
-
-    #     if len(line_norm) < 3:
-    #         continue
-    #     if line_stripped.startswith('```'):
-    #         inside_fence = not inside_fence            
-    #         continue
-
-    #     # Compute context bonus/penalty once per line (shared across all needle tiers)
-    #     context_adj = _line_context_score(line_stripped)
     
     for line_idx, line in enumerate(lines):
         line_stripped_orig = line.strip()

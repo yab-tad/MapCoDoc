@@ -752,10 +752,7 @@ class MemberExtractor:
             
             class_anchors[api_name] = (sec_idx, anchor_pos, scope_end)
             
-            logger.debug(
-                f"Anchor [{member_type}]: {api_name} -> section {sec_idx}, "
-                f"pos {anchor_pos}-{scope_end}"
-            )
+            logger.debug(f"Anchor [{member_type}]: {api_name} -> section {sec_idx}, pos {anchor_pos}-{scope_end}")
         
         return class_anchors
     

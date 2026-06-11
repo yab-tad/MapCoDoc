@@ -590,101 +590,6 @@ class DocProcessingRunner:
             peer_signatures[mi.api_name] = deduped
 
         return peer_signatures
-    
-    
-    # def _build_peer_signatures(self, members: List[MemberInput]) -> Dict[str, List[str]]:
-    #     """
-    #     Build peer signature map for stop signal detection.
-
-    #     Optimised with three caches to avoid redundant DB queries and needle builds:
-    #     1. pipeline_needles:    {api_name -> List[str]}  exact needles for every
-    #                             pipeline member, built once and reused.
-    #     2. module_peers_cache:  {module_fqn -> List[str]} public export needles,
-    #                             queried and built once per unique top-level module.
-    #     3. class_members_cache: {class_api_name -> List[str]} method/inherited
-    #                             needles for class fallback stops, built once per class.
-        
-    #     The StopSignalMatcher automatically classifies these into primary/fallback based on
-    #     naming conventions (uppercase = class, lowercase = method).
-        
-    #     Args:
-    #         members: List of MemberInput objects (all members being processed)
-            
-    #     Returns:
-    #         Dict mapping api_name -> list of peer signature strings
-    #     """
-
-    #     # ── Cache 1: pipeline member exact needles (build once, reuse N times) ──
-    #     pipeline_needles: Dict[str, List[str]] = {}
-    #     for mi in members:
-    #         needles = build_lexical_needles(mi)
-    #         pipeline_needles[mi.api_name] = needles.get("exact", [])
-
-    #     # ── Cache 2: module-level public peer signatures ─────────────────────────
-    #     module_peers_cache: Dict[str, List[str]] = {}
-    #     member_to_top_module: Dict[str, str] = {}
-
-    #     for mi in members:
-    #         exporting_modules = self.qm.get_exporting_modules_for_member(mi.api_name)
-    #         if not exporting_modules:
-    #             continue
-    #         top_module = exporting_modules[0]
-    #         member_to_top_module[mi.api_name] = top_module
-
-    #         if top_module not in module_peers_cache:
-    #             module_sigs: List[str] = []
-    #             for p in self.qm.get_public_peers(top_module):
-    #                 peer_api_name = p.target_api_name or f"{p.exporter_module}.{p.exported_name}"
-    #                 peer_member = MemberInput(
-    #                     api_name=peer_api_name,
-    #                     signature_variants=p.signatures,
-    #                     member_type=p.target_type or "function",
-    #                 )
-    #                 peer_needles = build_lexical_needles(peer_member)
-    #                 module_sigs.extend(peer_needles.get("exact", []))
-    #             module_peers_cache[top_module] = module_sigs
-
-    #     # ── Cache 3: class method/inherited signatures (built once per class) ────
-    #     class_members_cache: Dict[str, List[str]] = {}
-
-    #     # ── Assemble per-member peer lists ───────────────────────────────────────
-    #     peer_signatures: Dict[str, List[str]] = {}
-
-    #     for mi in members:
-    #         peer_sigs: List[str] = []
-
-    #         # --- Module-level public exports (from cache) ---
-    #         top_module = member_to_top_module.get(mi.api_name)
-    #         if top_module:
-    #             peer_sigs.extend(module_peers_cache[top_module])
-
-    #         # --- Class methods/inherited as fallback stops (classes only) ---
-    #         if mi.member_type == "class":
-    #             if mi.api_name not in class_members_cache:
-    #                 class_members_cache[mi.api_name] = self._get_class_member_signatures(
-    #                     mi.api_name
-    #                 )
-    #             peer_sigs.extend(class_members_cache[mi.api_name])
-
-    #         # --- Other pipeline members ---
-    #         # Use pre-built cache; exclude self by api_name (matching original logic)
-    #         for peer_api_name, peer_exact_needles in pipeline_needles.items():
-    #             if peer_api_name == mi.api_name:
-    #                 continue
-    #             peer_sigs.extend(peer_exact_needles)
-
-    #         # --- Filter own signatures and deduplicate ---
-    #         own_sigs = set(mi.signature_variants.values())
-    #         seen: set = set()
-    #         deduped: List[str] = []
-    #         for sig in peer_sigs:
-    #             if sig not in own_sigs and sig not in seen:
-    #                 seen.add(sig)
-    #                 deduped.append(sig)
-
-    #         peer_signatures[mi.api_name] = deduped
-
-    #     return peer_signatures
 
 
     def _get_class_member_signatures(self, class_api_name: str) -> List[str]:
@@ -1420,6 +1325,7 @@ class DocProcessingRunner:
         
         return member_map, primary_to_info
 
+    
     def _build_extraction_list(
         self, 
         api_names: List[str], 

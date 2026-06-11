@@ -32,7 +32,7 @@ import logging
 import sys
 import shutil
 from pathlib import Path
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List, Tuple, Set
 
 # ── make project root importable ──────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -46,6 +46,7 @@ from doc_processor.file_doc.signature import MemberInput
 from doc_processor.file_doc.embeddings import EmbeddingModel
 from doc_processor.filter_doc import WebMemberExtractor, WebMemberInfo
 from doc_processor.file_doc.pipeline_pdf import extract_api_docs_from_pdf
+from mapcodoc_db.query import MemberDetails, InheritedMemberDetails
 
 
 logging.basicConfig(
@@ -332,17 +333,14 @@ class ExtractionTestRunner(DocProcessingRunner):
                 api_name=m.api_name or m.fqn,
                 signature_variants=m.signatures or {},
                 member_type=m.type,
-                docstring="",
+                docstring=""
             )
             for m in members_db
         ]
         for inherited, original_member in inherited_members:
             pipeline_inputs.append(self._inherited_to_member_input(inherited, original_member))
 
-        logger.info(
-            f"Members: {len(members_db)} direct + {len(inherited_members)} inherited "
-            f"= {len(pipeline_inputs)} total"
-        )
+        logger.info(f"Members: {len(members_db)} direct + {len(inherited_members)} inherited = {len(pipeline_inputs)} total")
 
         # ── Run extraction ────────────────────────────────────────────────
         if url_file:
@@ -638,5 +636,5 @@ if __name__ == "__main__":
         url_file=args.url_file,
         pdf_path=args.pdf_path,
         target_module=args.target_module,
-        report_file=args.report_file,
+        report_file=args.report_file
     )

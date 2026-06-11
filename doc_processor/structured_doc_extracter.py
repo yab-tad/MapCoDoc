@@ -10,6 +10,8 @@ from openai import AsyncOpenAI
 logger = logging.getLogger(__name__)
 
 
+MODEL_NAME = "gpt-4.1-2025-04-14"
+
 class DocumentationExtractor:
     def __init__(self, MM_type : str, MM_signature : str, MM_code_body : str, MM_methods_and_attributes_signature : str, scraped_doc_path : str, api_key : str, input_choice : str = 'module_member_signature'):
         """
@@ -702,14 +704,14 @@ You are tasked with accurately and **comprehensively** extracting the reference 
         """
         try:
             response = openai.chat.completions.create(
-                model='gpt-4o',
+                model=MODEL_NAME,
                 messages=[
                     {"role": "system", "content": self.system_prompt},
                     {"role": "user", "content": self.user_prompt}
                 ],
                 response_format=self.json_schema,
                 temperature=0.0,
-                max_tokens=16383,
+                max_tokens=32768,
                 top_p=1,
                 frequency_penalty=0,
                 presence_penalty=0,
@@ -760,14 +762,14 @@ class ConcurrentDocExtractor:
         async with self.semaphore:  # Limit concurrency
             try:
                 response = await self.client.chat.completions.create(
-                    model='gpt-4o',
+                    model=MODEL_NAME, 
                     messages=[
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt}
                     ],
                     response_format=json_schema,
                     temperature=0.0,
-                    max_tokens=16383
+                    max_tokens=32768
                 )
                 return {
                     "api_name": api_name,
@@ -782,11 +784,7 @@ class ConcurrentDocExtractor:
                     "error": str(e)
                 }
     
-    async def extract_all(
-        self,
-        members: List[Dict],
-        progress_callback: Optional[callable] = None
-    ) -> Dict[str, str]:
+    async def extract_all(self, members: List[Dict], progress_callback: Optional[callable] = None) -> Dict[str, str]:
         """
         Extract documentation for all members concurrently.
         
