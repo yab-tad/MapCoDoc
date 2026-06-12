@@ -831,12 +831,16 @@ class DocProcessingRunner:
             model_name=model_name
         )
         
-        # Step 3e: NOW filter container docs (after all extractions complete)
+        # Step 3e: Filter container docs (after all extractions complete)
+        filtered_outputs: Set[Path] = set()
         for module_txt, container_name, nested_api_names in containers_to_filter:
-            self._filter_container_doc(module_txt, container_name, nested_api_names)
+            out_path = self._filter_container_doc(module_txt, container_name, nested_api_names)
+            if out_path:
+                filtered_outputs.add(out_path)
         
-        # Step 3f: Move combined docs out of per_member/ to combined/
-        self._relocate_combined_docs(combined_doc_files, extracted_apis)
+        # Step 3f: Move combined docs out of per_member/ but never the filtered
+        # class docs that Step 3e just produced (they ARE per-member docs now)
+        self._relocate_combined_docs(combined_doc_files - filtered_outputs, extracted_apis)
         
         logger.info(f"Web extraction complete. Per-member docs in: {self.per_member_dir}")
     
@@ -1757,16 +1761,15 @@ class DocProcessingRunner:
         return '\n'.join(result_lines)
     
     
-    def _filter_container_doc(self, module_txt: Path, container_name: str, nested_api_names: List[str]) -> bool:
+    def _filter_container_doc(self, module_txt: Path, container_name: str, nested_api_names: List[str]) -> Optional[Path]:
         """
         Filter container doc to remove nested member content.
         
         Returns:
-            True if filtering was performed (container is an API member),
-            False if skipped (container is a module, not an API member).
+            Path of the filtered per-member doc if filtering was performed (container is an API member), None if skipped (container is a module).
         """
         if not module_txt.exists():
-            return False
+            return None #False
         
         # --- Determine if container is an API member and get canonical name ---
         output_api_name = None # The name to use for the output file
@@ -1792,7 +1795,7 @@ class DocProcessingRunner:
         if db_member is None:
             # Container is NOT an API member (it's a module name)
             logger.debug(f"Container '{container_name}' is not an API member, skipping filter")
-            return False
+            return None #False
         
         # Container IS an API member - proceed with filtering
         logger.debug(f"Filtering container '{container_name}' -> output: {output_api_name}")
@@ -1873,10 +1876,22 @@ class DocProcessingRunner:
             filtered_text = self._extract_until_stop(combined_text, stop_matcher, max_chars=50000)
         
         container_output = self.per_member_dir / f"{output_api_name}.txt"
-        container_output.write_text(filtered_text, encoding='utf-8')
         
+        # The filtered class doc may overwrite the tracked combined page itself
+        # Preserve the original full page in combined/ BEFORE overwriting, so the relocation step doesn't need to (and must not) move the filtered doc
+        if container_output == module_txt:
+            combined_dir = self.scraped_doc_dir / "combined"
+            combined_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(module_txt, combined_dir / module_txt.name)
+        
+        container_output.write_text(filtered_text, encoding='utf-8')
         logger.debug(f"Saved filtered container doc: {container_output.name}")
-        return True
+        return container_output
+        
+        # container_output.write_text(filtered_text, encoding='utf-8')
+        
+        # logger.debug(f"Saved filtered container doc: {container_output.name}")
+        # return True
     
     
     def _relocate_combined_docs(

@@ -286,9 +286,13 @@ class ExtractionTestRunner(DocProcessingRunner):
         self._extract_missing_methods_from_class_docs(containers_to_filter, extracted_apis, extractor, model_name)
 
         # ── Steps 3e–3f: filter + relocate ───────────────────────────────
+        filtered_outputs: Set[Path] = set()
         for module_txt, container_name, nested_api_names in containers_to_filter:
-            self._filter_container_doc(module_txt, container_name, nested_api_names)
-        self._relocate_combined_docs(combined_doc_files, extracted_apis)
+            out_path = self._filter_container_doc(module_txt, container_name, nested_api_names)
+            if out_path:
+                filtered_outputs.add(out_path)
+        
+        self._relocate_combined_docs(combined_doc_files - filtered_outputs, extracted_apis)
 
     # ── Public test entry point ───────────────────────────────────────────────
 

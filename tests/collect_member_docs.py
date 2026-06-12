@@ -270,11 +270,23 @@ def _print_summary(report: dict) -> None:
         for key, names in report["alias_groups"].items():
             print(f"    {key}: {names}")
 
-    nodoc = [r["sample_api_name"] for r in report["members"]
-             if not r["web_doc_count"] and not r["pdf_doc_count"]]
-    if nodoc:
-        print("\n  MEMBERS WITH NO DOCS FOUND:")
-        for n in nodoc:
+    # nodoc = [r["sample_api_name"] for r in report["members"]
+    #          if not r["web_doc_count"] and not r["pdf_doc_count"]]
+    
+    nodoc_web = []
+    nodoc_pdf = []
+    for r in report["members"]:
+        if not r["web_doc_count"]:
+            nodoc_web.append(r["sample_api_name"])
+        if not r["pdf_doc_count"]:
+            nodoc_pdf.append(r["sample_api_name"])
+    
+    if nodoc_web or nodoc_pdf:
+        print("\n  MEMBERS WITH NO WEB DOCS FOUND:")
+        for n in nodoc_web:
+            print(f"    - {n}")
+        print("\n  MEMBERS WITH NO PDF DOCS FOUND:")
+        for n in nodoc_pdf:
             print(f"    - {n}")
     print()
 
