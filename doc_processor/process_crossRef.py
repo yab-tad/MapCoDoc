@@ -287,6 +287,10 @@ class URLPlaceholderReplacer:
             Processed content with URL placeholders replaced with actual URLs
         """
         
+        # Track processed placeholders PER content string, not across the whole document. The same placeholder can legitimately appear in multiple
+        # schema fields (e.g. a return type in both `module_member_signature` and `returns.type`); a document-global set would skip every occurrence after the first, leaving those placeholders unrestored.
+        self.processed_placeholders = set()
+        
         sorted_placeholders = sorted(self.url_mapping.keys(), reverse=True)
         
         for placeholder in sorted_placeholders:
@@ -297,8 +301,9 @@ class URLPlaceholderReplacer:
             
             if not success:
                 logger.warning(f"Failed to process placeholder: {placeholder}")
-
+        
         return content
+
 
     def process_documentation(self) -> Dict:
         """

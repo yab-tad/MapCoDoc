@@ -477,7 +477,7 @@ You are tasked with accurately and **comprehensively** extracting the reference 
 - **Include URLs Appropriately**: Ensure that each URL is included exactly where it appear in the scraped text and within the appropriate sections of its surrounding content.
 
 - **Correct Use of Fields**:
-  - **Signature**: Only include the function/method signature if it is explicitly provided in the scraped text as a signature. It is important to note that the signature for a method could consist of the member's name without parameters within parentheses. If this is present instead of the parenthesized signature, it should be included in the `signature` field. If neither are not explicitly provided, set the `signature` field to "N/A".
+  - **Signature**: Only include the function/method signature if it is explicitly provided in the scraped text as a signature. It is important to note that the signature for a method could consist of the member's name without parameters within parentheses, or a property member to start with `property` and then the method's name. If this is present instead of the parenthesized signature, it should be included in the `signature` field. If neither are not explicitly provided, set the `signature` field to "N/A".
   
   - **Module Member Description**:
      - **Purpose**: Extract the main description of the function or method, outlining its purpose and functionality, and include it in the `purpose` field. Populate this field with the main description or overview of the function or method.
