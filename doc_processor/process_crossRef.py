@@ -316,20 +316,28 @@ class URLPlaceholderReplacer:
             Processed content with URL placeholders replaced with actual URLs
         """
         
-        # Track processed placeholders PER content string, not across the whole document. The same placeholder can legitimately appear in multiple
-        # schema fields (e.g. a return type in both `module_member_signature` and `returns.type`); a document-global set would skip every occurrence after the first, leaving those placeholders unrestored.
-        self.processed_placeholders = set()
+        # # Track processed placeholders PER content string, not across the whole document. The same placeholder can legitimately appear in multiple
+        # # schema fields (e.g. a return type in both `module_member_signature` and `returns.type`); a document-global set would skip every occurrence after the first, leaving those placeholders unrestored.
+        # self.processed_placeholders = set()
         
-        sorted_placeholders = sorted(self.url_mapping.keys(), reverse=True)
+        sorted_placeholders = sorted(self.url_mapping.keys(), key=len, reverse=True)
         
         for placeholder in sorted_placeholders:
-            if placeholder in self.processed_placeholders:
-                continue
-                
-            content, success = self._replace_placeholder(content, placeholder)
+            # if placeholder in self.processed_placeholders:
+            #     continue
             
-            if not success:
-                logger.warning(f"Failed to process placeholder: {placeholder}")
+            url = self.url_mapping[placeholder].get('url')
+            if not url:
+                continue
+            
+            if placeholder in content:
+                content = content.replace(placeholder, url)
+            else:
+                logger.debug(f"Placeholder not present in this field: {placeholder}")
+            
+            # content, success = self._replace_placeholder(content, placeholder)
+            # if not success:
+            #     logger.warning(f"Failed to process placeholder: {placeholder}")
         
         return _strip_control_chars(content)
 
