@@ -258,6 +258,7 @@ class StructuringTestRunner(DocProcessingRunner):
                 "preprocessed": pre.exists(),
                 "url_placeholders": n_placeholders,
                 "structured": struct_ok,
+                "structured_raw_only": (self.structured_doc_dir / f"{api_name}.raw.json").exists(),
                 "postprocessed": post_ok,
                 "postprocessed_file": str(post) if post_ok else None,
                 "residual_placeholders": residual,
@@ -272,6 +273,7 @@ class StructuringTestRunner(DocProcessingRunner):
                 "preprocessed": sum(m["preprocessed"] for m in members),
                 "structured": sum(m["structured"] for m in members),
                 "postprocessed": sum(m["postprocessed"] for m in members),
+                "structured_raw_only": sum(m["structured_raw_only"] for m in members),
                 "fully_ok": sum(m["status"] == "ok" for m in members),
                 "with_residual_placeholders": sum(1 for m in members if m["residual_placeholders"])
             },

@@ -6,6 +6,7 @@ It serves as the bridge between the Database (targets) and the Extractors (PDF/W
 """
 
 import os
+import re
 import json
 import logging
 import asyncio
@@ -32,6 +33,28 @@ from doc_processor.file_doc.pipeline_pdf import extract_api_docs_from_pdf
 
 
 logger = logging.getLogger(__name__)
+
+
+# A backslash NOT followed by a valid JSON escape char (" \ / b f n r t, or uXXXX).
+# LLM output occasionally reproduces source text verbatim containing stray backslashes (e.g. "\users", "\d") that are invalid inside a JSON string
+_BAD_JSON_ESCAPE = re.compile(r'\\(?!["\\/bfnrt]|u[0-9a-fA-F]{4})')
+
+
+def _loads_llm_json(doc_json: str):
+    """
+    Parse an LLM JSON payload, tolerating stray (invalid) backslash escapes.
+
+    Returns the parsed object, or None if it cannot be recovered.
+    """
+    try:
+        return json.loads(doc_json)
+    except json.JSONDecodeError:
+        try:
+            # Escape any backslash that isn't a valid JSON escape, then retry.
+            return json.loads(_BAD_JSON_ESCAPE.sub(r'\\\\', doc_json))
+        except json.JSONDecodeError:
+            return None
+
 
 
 class DocProcessingRunner:
@@ -2058,17 +2081,28 @@ class DocProcessingRunner:
         
         # Save results
         success_count = 0
+        parse_failures = []
         for api_name, doc_json in results.items():
-            if doc_json:
-                output_path = self.structured_doc_dir / f"{api_name}.json"
-                with open(output_path, 'w', encoding='utf-8') as f:
-                    json.dump(json.loads(doc_json), f, indent=4, ensure_ascii=False)
-                success_count += 1
+            if not doc_json:
+                continue
+            output_path = self.structured_doc_dir / f"{api_name}.json"
+            parsed = _loads_llm_json(doc_json)
+            if parsed is None:
+                # Preserve the raw payload for inspection; don't abort the batch.
+                output_path.with_suffix(".raw.json").write_text(doc_json, encoding='utf-8')
+                parse_failures.append(api_name)
+                logger.warning(f"Unparseable LLM JSON for {api_name}; saved raw to {output_path.with_suffix('.raw.json').name}")
+                continue
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(parsed, f, indent=4, ensure_ascii=False)
+            success_count += 1
         
         total_done = already_done + success_count
         failed = len(results) - success_count
         
         logger.info(f"Structured doc extraction complete: {total_done} done, {failed} failed")
+        if parse_failures:
+            logger.warning(f"{len(parse_failures)} payload(s) needed manual review (unparseable JSON): {parse_failures}")
         logger.info(f"Output in: {self.structured_doc_dir}")
     
     
@@ -2124,10 +2158,15 @@ class DocProcessingRunner:
                 extractor._call_openai_api()
                 
                 if extractor.extracted_doc:
-                    with open(structured_doc_path, 'w', encoding='utf-8') as f:
-                        json.dump(json.loads(extractor.extracted_doc), f, indent=4, ensure_ascii=False)
-                    count += 1
-                    logger.debug(f"Structured: {api_name}")
+                    parsed = _loads_llm_json(extractor.extracted_doc)
+                    if parsed is None:
+                        structured_doc_path.with_suffix(".raw.json").write_text(extractor.extracted_doc, encoding='utf-8')
+                        logger.warning(f"Unparseable LLM JSON for {api_name}; saved raw.")
+                    else:
+                        with open(structured_doc_path, 'w', encoding='utf-8') as f:
+                            json.dump(parsed, f, indent=4, ensure_ascii=False)
+                        count += 1
+                        logger.debug(f"Structured: {api_name}")
                     
             except Exception as e:
                 logger.warning(f"Structured extraction failed for {api_name}: {e}")
