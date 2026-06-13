@@ -478,6 +478,14 @@ You are tasked with accurately and **comprehensively** extracting the reference 
 
 - **Correct Use of Fields**:
   - **Signature**: Only include the function/method signature if it is explicitly provided in the scraped text as a signature. It is important to note that the signature for a method could consist of the member's name without parameters within parentheses. If this is present instead of the parenthesized signature, it should be included in the `signature` field. If neither are not explicitly provided, set the `signature` field to "N/A".
+  
+  - **Module Member Description**:
+     - **Purpose**: Extract the main description of the function or method, outlining its purpose and functionality, and include it in the `purpose` field. Populate this field with the main description or overview of the function or method.
+     - **Additional Information**: Include any additional information **directly related** to the function or method description that doesn't belong to other specific fields in this array, such as additional content on its functionality or operation, general notes, or other pertinent details.
+       - **Do not include general supplementary information or sections unrelated to the class description here.**
+       - **Keep Related Information Together**: If the content is part of a continuous explanation or discusses the same topic, include it as a single entry in the array, preserving the original formatting.
+       - **Split Content Only When Necessary**: Separate content into different array elements only if there is a clear distinction in topics or if the content addresses completely different aspects of the function or method.
+  
   - **Name**: The `module_member_name` field (if applicable) should include the function/method name only if it is explicitly provided as such in the scraped text.
   - **Additional Information**: Use the `additional_information` fields only for supplementary content that is explicitly separate from the main description within that specific parameter, return value, or example.
 
@@ -574,8 +582,24 @@ You are tasked with accurately and **comprehensively** extracting the reference 
                         "description": "Function or method signature if available, otherwise 'N/A'."
                     },
                     "module_member_description": {
-                        "type": "string",
-                        "description": "Function or method description or overview, otherwise 'N/A'."
+                        "type": "object",
+                        "description": "Contains the main description and additional information about the function or method.",
+                        "properties": {
+                          "purpose": {
+                            "type": "string",
+                            "description": "Function or method description or overview, outlining its purpose and functionality."
+                          },
+                          "additional_information": {
+                            "type": "array",
+                            "description": "Array of additional information related to the function or method.",
+                            "items": {
+                              "type": "string",
+                              "description": "A piece of additional information about the function or method."
+                            }
+                          }
+                        },
+                        "required": ["purpose", "additional_information"],
+                        "additionalProperties": False
                     },
                     "parameters": {
                         "type": "array",
