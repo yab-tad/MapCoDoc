@@ -111,7 +111,7 @@ You will be provided with two inputs:
     - **additional_information**: Use this field for any supplementary information that is separate from the main example content.
 
 - **Correct Use of Fields**:
-  - **Signature**: Only include a signature if it is explicitly provided in the scraped text as a signature, and associated URL placeholders. It is important to note that the signature for a class or attribute could consist of the member's API name without parameters within parentheses. If this is present instead of the parenthesized signature, it should be included in the `signature` field. If neither are no explicitly provided, set the `signature` field to "N/A".
+  - **Signature**: Only include a signature if it is explicitly provided in the scraped text as a signature, and associated URL placeholders. It is important to note that the signature for a class or attribute could consist of the member's API name without parameters within parentheses. If this is present instead of the parenthesized signature, it should be included in the `signature` field. If neither are not explicitly provided, set the `signature` field to "N/A".
   - **Name**: The `name` field should include the module member's name only if it is explicitly provided in the scraped text.
   - **Additional Information**: Use this field only for supplementary content that is explicitly separate from the main description within a specific method, or parameter. This could also be additional content provided that's separate from the main functional description of the parameter or method.
     - **Do not include general supplementary information or sections unrelated to the method or parameter here.**
@@ -477,7 +477,7 @@ You are tasked with accurately and **comprehensively** extracting the reference 
 - **Include URLs Appropriately**: Ensure that each URL is included exactly where it appear in the scraped text and within the appropriate sections of its surrounding content.
 
 - **Correct Use of Fields**:
-  - **Signature**: Only include the function/method signature if it is explicitly provided in the scraped text as a signature. If not, set the `module_member_signature` field to "N/A".
+  - **Signature**: Only include the function/method signature if it is explicitly provided in the scraped text as a signature. It is important to note that the signature for a method could consist of the member's name without parameters within parentheses. If this is present instead of the parenthesized signature, it should be included in the `signature` field. If neither are not explicitly provided, set the `signature` field to "N/A".
   - **Name**: The `module_member_name` field (if applicable) should include the function/method name only if it is explicitly provided as such in the scraped text.
   - **Additional Information**: Use the `additional_information` fields only for supplementary content that is explicitly separate from the main description within that specific parameter, return value, or example.
 
