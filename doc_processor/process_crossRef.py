@@ -22,6 +22,10 @@ _ANCHOR_MARKERS = (
 # These show up as \u0000, \u0006, etc. in LLM output and corrupt the docs.
 _CONTROL_CHARS_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]')
 
+# Matches a parenthesized http(s) URL, e.g. "(https://docs.example.com/page#frag)".
+# Used to replace the URL inside the parentheses with a placeholder, leaving the surrounding reference text untouched
+_URL_PAREN_RE = re.compile(r'\((https?://[^)]+)\)')
+
 
 def _sanitize_anchor_noise(text: str) -> str:
     """
@@ -68,85 +72,108 @@ class URLReplacer:
         self.new_doc_lines = list()
         
         for line in scraped_doc_lines:
-            self.line_change = _sanitize_anchor_noise(line)
-            
-            if '(http' in self.line_change:
-                url_line = self.line_change.split(' ')
-                
-                for i in url_line:
-                    if '(http' in i:
-                                                    
-                        self._urlDict_newDoc(i)
-
-            self.new_doc_lines.append(self.line_change)
+            line = _sanitize_anchor_noise(line)
+            self.new_doc_lines.append(self._replace_line_urls(line))
         
         return self.new_doc_lines, self.url_dict
-
-
-    def _urlDict_newDoc(self, line_segment: str) -> None:
-        """
-        Extract URL and URL reference (context surrounding the URL)
         
-        Args:
-            line_segment (str): Space-separated segment of the line currently being processed.
-        """
+    #     for line in scraped_doc_lines:
+    #         self.line_change = _sanitize_anchor_noise(line)
+            
+    #         if '(http' in self.line_change:
+    #             url_line = self.line_change.split(' ')
+                
+    #             for i in url_line:
+    #                 if '(http' in i:
+                                                    
+    #                     self._urlDict_newDoc(i)
+
+    #         self.new_doc_lines.append(self.line_change)
         
-        # Check how many URLs are present in each space-separated-word
-        parts_with_url = line_segment[line_segment.index('(http'):].split('(http')
+    #     return self.new_doc_lines, self.url_dict
+
+
+    # def _urlDict_newDoc(self, line_segment: str) -> None:
+    #     """
+    #     Extract URL and URL reference (context surrounding the URL)
+        
+    #     Args:
+    #         line_segment (str): Space-separated segment of the line currently being processed.
+    #     """
+        
+    #     # Check how many URLs are present in each space-separated-word
+    #     parts_with_url = line_segment[line_segment.index('(http'):].split('(http')
                         
-        for ref_to, url_part in enumerate(parts_with_url):
-            if url_part:
-                reference_to = None
-                url_part = '(http' + url_part
+    #     for ref_to, url_part in enumerate(parts_with_url):
+    #         if url_part:
+    #             reference_to = None
+    #             url_part = '(http' + url_part
 
-                url_start = line_segment.index(url_part)
-                url = url_part[1: url_part.index(')')]
+    #             url_start = line_segment.index(url_part)
+    #             url = url_part[1: url_part.index(')')]
 
-                if line_segment[:url_start][-1] == ']':
-                    url_ref = line_segment[:url_start].split('[')
-                    if len(url_ref) > 1:
-                        if (url_ref[-1]).lower().endswith('source]'):
-                            url_ref[-1] = '[' + url_ref[-1]
-                            url_ref[-2] = url_ref[-2].split(' ')[-1]
-                            url_ref = url_ref[-2:]
-                        elif url_ref[-2] == '':
-                            url_ref = ['[' + url_ref[-1]]
-                    else:
-                        url_ref_idx = self.line_change.index((url_ref[-1]+ '(' + url))
-                        url_ref = ['[' + self.line_change[:url_ref_idx].split('[')[-1] + url_ref[-1]]
+    #             if line_segment[:url_start][-1] == ']':
+    #                 url_ref = line_segment[:url_start].split('[')
+    #                 if len(url_ref) > 1:
+    #                     if (url_ref[-1]).lower().endswith('source]'):
+    #                         url_ref[-1] = '[' + url_ref[-1]
+    #                         url_ref[-2] = url_ref[-2].split(' ')[-1]
+    #                         url_ref = url_ref[-2:]
+    #                     elif url_ref[-2] == '':
+    #                         url_ref = ['[' + url_ref[-1]]
+    #                 else:
+    #                     url_ref_idx = self.line_change.index((url_ref[-1]+ '(' + url))
+    #                     url_ref = ['[' + self.line_change[:url_ref_idx].split('[')[-1] + url_ref[-1]]
 
-                elif (line_segment[:url_start][-1]).isalnum():
-                    url_ref = [line_segment[:url_start].split(' ')[-1]]
-                else:
-                    if len(line_segment[:url_start]) > 1:
-                        url_ref = line_segment[:url_start].split(' ')
+    #             elif (line_segment[:url_start][-1]).isalnum():
+    #                 url_ref = [line_segment[:url_start].split(' ')[-1]]
+    #             else:
+    #                 if len(line_segment[:url_start]) > 1:
+    #                     url_ref = line_segment[:url_start].split(' ')
                         
-                        if len(url_ref) > 1:
-                            if url_ref[-1] == '':
-                                url_ref[-1] = ' '
-                            url_ref = url_ref[-2:]
-                    else:
-                        url_ref = ['']
+    #                     if len(url_ref) > 1:
+    #                         if url_ref[-1] == '':
+    #                             url_ref[-1] = ' '
+    #                         url_ref = url_ref[-2:]
+    #                 else:
+    #                     url_ref = ['']
                         
-                if len(parts_with_url) > 2 and len(parts_with_url) > ref_to + 1:
-                    reference_to = f'url_placeholder_{self.url_count+1}'
+    #             if len(parts_with_url) > 2 and len(parts_with_url) > ref_to + 1:
+    #                 reference_to = f'url_placeholder_{self.url_count+1}'
                 
-                # Update URL dictionary with currently processed URL and its reference(s)
-                self.url_dict.update({f"url_placeholder_{self.url_count}": {'url_reference': url_ref, 'url': url, 'reference_to': reference_to}}) 
+    #             # Update URL dictionary with currently processed URL and its reference(s)
+    #             self.url_dict.update({f"url_placeholder_{self.url_count}": {'url_reference': url_ref, 'url': url, 'reference_to': reference_to}}) 
                 
-                # Construct possible URL reference
-                url_reference = ''
-                for ref_part in url_ref:
-                    url_reference += ref_part
+    #             # Construct possible URL reference
+    #             url_reference = ''
+    #             for ref_part in url_ref:
+    #                 url_reference += ref_part
                 
-                # Replace URLs with placeholders
-                replace_str_with = f"{url_reference}(url_placeholder_{self.url_count})"
-                replace_str = f"{url_reference}({url})"
+    #             # Replace URLs with placeholders
+    #             replace_str_with = f"{url_reference}(url_placeholder_{self.url_count})"
+    #             replace_str = f"{url_reference}({url})"
                 
-                self.url_count += 1
+    #             self.url_count += 1
 
-                self.line_change = self.line_change.replace(replace_str, replace_str_with)
-                line_segment = line_segment.replace(replace_str, replace_str_with)
+    #             self.line_change = self.line_change.replace(replace_str, replace_str_with)
+    #             line_segment = line_segment.replace(replace_str, replace_str_with)
+
+
+    def _replace_line_urls(self, line: str) -> str:
+        """
+        Replace every parenthesized http(s) URL in a line with a unique placeholder token, recording {placeholder: {'url': url}}.
+        This is robust to multiple/duplicate URLs in one token, multi-line link text, and URLs at the start of a token. 
+        The surrounding reference text is left untouched; only the URL inside the parentheses becomes a
+        placeholder (e.g. "KeyFuncDict(https://...)" -> "KeyFuncDict(url_placeholder_4)").
+        """
+        def _sub(match) -> str:
+            url = match.group(1)
+            placeholder = f"url_placeholder_{self.url_count}"
+            self.url_dict[placeholder] = {'url': url}
+            self.url_count += 1
+            return f"({placeholder})"
+        
+        return _URL_PAREN_RE.sub(_sub, line)
 
 
 def preprocess_crossRef(scraped_doc_path: str, doc_file_path: str, url_file_path: str):
