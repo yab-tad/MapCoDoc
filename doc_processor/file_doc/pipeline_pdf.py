@@ -1456,6 +1456,8 @@ def extract_api_docs_from_pdf(
     # 5b. write per-API .txt mirror (post-aggregation)
     if per_api_txt_dir:
         for api_fqn, payload in output.items():
+            if not (payload.get("text") or "").strip():
+                continue   # not_found / empty extraction -> no phantom file
             fname = _sanitize_filename(api_fqn) + ".txt"
             with open(os.path.join(per_api_txt_dir, fname), "w", encoding="utf-8") as ftxt:
                 ftxt.write(payload["text"])

@@ -1,38 +1,45 @@
 """
 Structuring Test Script
 =======================
-Tests the post-extraction documentation pipeline (Steps 4-6 only):
+Runs the post-extraction documentation pipeline (Steps 4-6 only):
 
     Step 4  URL preprocessing       (preprocess_crossRef)
     Step 5  Structured extraction   (LLM / ConcurrentDocExtractor)  -- needs OPENAI_API_KEY
     Step 6  URL postprocessing      (postprocess_crossRef)
 
-It is the complement of tests/test_extraction.py (which covers Steps 1-3).
-Instead of crawling/scraping, the already-retrieved per-member text is provided
-as input. No DB writes occur (Step 7 is skipped).
+Input is the output of tests/collect_member_docs.py:
 
-Inputs:
-  --db-path / --library-name / --version : same as test_extraction.py
-  --input-file : JSON mapping  {api_name: extracted_text}
-                 or a list of  [{"api_name": ..., "text": ...}, ...]
-        OR
-  --input-dir  : directory of {api_name}.txt files (one per member)
+    <collected-dir>/
+        <sample_api_name>/
+            web_doc/<file>.txt      (file may be named with an alias API path)
+            pdf_doc/<file>.txt
+
+Each member folder's NAME is the authoritative API name (it came from the
+sample list and was verified against the DB by the collector). Web and PDF
+docs are processed as separate batches with separate artifact trees:
+
+    preprocessed_doc/{lib}/v_{version}_web/...   structured_doc/{lib}/v_{version}_web/...
+    preprocessed_doc/{lib}/v_{version}_pdf/...   structured_doc/{lib}/v_{version}_pdf/...
+
+No DB writes occur (Step 7 is skipped).
 
 Usage:
     python tests/test_structuring.py \\
-        --db-path mapcodoc_output/xgboost.db \\
-        --library-name xgboost --version 3.2.0-dev \\
-        --input-file retrieved_texts.json \\
-        --report-file structuring_results.json
+        --db-path mapcodoc_output/doc_test/sklearn_1.8.0.db \\
+        --library-name sklearn --version 1.8.0 \\
+        --collected-dir "C:/.../samples/docs/sklearn" \\
+        --sources web pdf \\
+        --report-file tests/sklearn_structuring.json
 """
 
 import argparse
 import json
 import logging
+import os
 import sys
+from collections import defaultdict
 from pathlib import Path
-from typing import Dict, List, Optional
-
+from typing import Dict, List, Optional, Tuple
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
@@ -53,42 +60,103 @@ logger = logging.getLogger("test_structuring")
 # DocumentationExtractor only accepts these member types.
 _LLM_TYPES = {"class", "function", "method"}
 
+# Collector subfolder names per doc source.
+_SOURCE_DIRS = {"web": "web_doc", "pdf": "pdf_doc"}
+
 
 def _normalize_member_type(member_type: Optional[str]) -> str:
     """Coerce DB/inherited member types into the 3 the LLM extractor accepts."""
     mt = (member_type or "").lower()
     if mt in _LLM_TYPES:
         return mt
-    if mt == "function":
-        return "function"
-    if mt == "class":
-        return "class"
     # property / attribute / variable / inherited_* -> treat as method
     return "method"
 
 
+# ==============================================================================
+# Input loading (collector output layout)
+# ==============================================================================
+
+def load_collected_texts(collected_dir: str, source: str) -> Tuple[Dict[str, str], Dict]:
+    """
+    Walk <collected-dir>/<member>/<web_doc|pdf_doc>/ and return
+    {sample_api_name: doc_text} for the given source.
+
+    The member FOLDER name is the authoritative API name; inner files may be
+    named with alias paths and are read for content only. If a member has
+    multiple files for one source (alias copies), the largest is used and the
+    case is recorded for the report.
+    """
+    sub = _SOURCE_DIRS[source]
+    root = Path(collected_dir)
+    if not root.exists():
+        raise FileNotFoundError(f"Collected docs directory not found: {root}")
+
+    texts: Dict[str, str] = {}
+    notes = {"multi_file": {}, "empty": []}
+
+    for member_dir in sorted(p for p in root.iterdir() if p.is_dir()):
+        src_dir = member_dir / sub
+        if not src_dir.exists():
+            continue
+        files = sorted(src_dir.glob("*.txt"))
+        if not files:
+            continue
+
+        chosen = max(files, key=lambda f: f.stat().st_size)
+        text = chosen.read_text(encoding="utf-8")
+        if not text.strip():
+            notes["empty"].append(member_dir.name)
+            continue
+
+        texts[member_dir.name] = text
+        if len(files) > 1:
+            notes["multi_file"][member_dir.name] = {
+                "used": chosen.name,
+                "all": [f.name for f in files],
+            }
+
+    # Windows-filesystem guard: two sample names differing only by case would merge when seeded into per_member/. Keep the first, skip the rest.
+    by_lower = defaultdict(list)
+    for name in texts:
+        by_lower[name.lower()].append(name)
+    collisions = {k: sorted(v) for k, v in by_lower.items() if len(v) > 1}
+    if collisions:
+        notes["case_collisions_skipped"] = {}
+        for group in collisions.values():
+            for skipped in group[1:]:
+                texts.pop(skipped, None)
+                notes["case_collisions_skipped"][skipped] = f"collides with {group[0]}"
+        logger.warning(f"Case-insensitive name collisions; skipped: {list(notes['case_collisions_skipped'])}")
+
+    return texts, notes
+
+
+# ==============================================================================
+# Runner
+# ==============================================================================
+
 class StructuringTestRunner(DocProcessingRunner):
     """
     Subclass of DocProcessingRunner that:
-      - Skips Steps 1-3 by seeding per_member/ with provided extracted text.
-      - Runs Steps 4-6 (preprocess -> LLM structure -> postprocess).
-      - Skips Step 7 (no DB writes); generates a structured report instead.
+      - Skips Steps 1-3 by seeding per_member/ with collected doc text.
+      - Uses a source-suffixed version label so web and pdf batches get
+        separate artifact trees (per_member, preprocessed, structured, post).
+      - Runs Steps 4-6; skips Step 7 (no DB writes).
     """
 
-    def __init__(self, db_path, library_name, version, overwrite=False):
-        super().__init__(db_path, library_name, version)
+    def __init__(self, db_path, library_name, version, source: str, overwrite=False):
+        # Suffix the version so all artifact dirs are per-source.
+        super().__init__(db_path, library_name, f"{version}_{source}")
+        self.source = source
         self.overwrite = overwrite
 
-    # ── Seed per_member/ from provided texts ─────────────────────────────────
+    # ── Seed per_member/ ──────────────────────────────────────────────────────
     def _seed_per_member(self, texts: Dict[str, str]) -> List[str]:
-        """Write each provided extracted text to per_member/{api_name}.txt."""
-        
         self._ensure_dirs(self.per_member_dir)
 
         if self.overwrite:
-            for sub in (self.per_member_dir, self.preprocessed_doc_dir,
-                        self.url_context_dir, self.structured_doc_dir,
-                        self.postprocessed_doc_dir):
+            for sub in (self.per_member_dir, self.preprocessed_doc_dir, self.url_context_dir, self.structured_doc_dir, self.postprocessed_doc_dir):
                 if sub.exists():
                     for f in sub.glob("*"):
                         if f.is_file():
@@ -97,13 +165,12 @@ class StructuringTestRunner(DocProcessingRunner):
 
         seeded = []
         for api_name, text in texts.items():
-            out = self.per_member_dir / f"{api_name}.txt"
-            out.write_text(text, encoding="utf-8")
+            (self.per_member_dir / f"{api_name}.txt").write_text(text, encoding="utf-8")
             seeded.append(api_name)
-        logger.info(f"Seeded {len(seeded)} per-member files into {self.per_member_dir}")
+        logger.info(f"[{self.source}] Seeded {len(seeded)} per-member files into {self.per_member_dir}")
         return seeded
 
-    # ── Build MemberInput list (type + signature from DB) ────────────────────
+    # ── MemberInput construction (type + signatures from DB) ─────────────────
     def _build_inputs_for(self, api_names: List[str]) -> List[MemberInput]:
         inputs = []
         for api_name in api_names:
@@ -112,7 +179,7 @@ class StructuringTestRunner(DocProcessingRunner):
                 api_name=api_name,
                 signature_variants=sig_variants or {},
                 member_type=_normalize_member_type(member_type),
-                docstring="",
+                docstring=""
             ))
         return inputs
 
@@ -124,47 +191,47 @@ class StructuringTestRunner(DocProcessingRunner):
 
         inh = self.qm.get_inherited_member_by_api_name(api_name)
         if inh:
-            member_type = getattr(inh, "member_type", "method")
-            sigs = getattr(inh, "signatures", None) or {}
-            # last resort: bare name needle for prompt context
-            if not sigs:
-                short = api_name.split(".")[-1]
-                sigs = {"full": f"{short}("}
-            return member_type, sigs
+            # Prefer the original member's signature variants when linked.
+            if inh.original_member_id:
+                original = self.qm.get_original_member_for_inherited(api_name)
+                if original and original.signatures:
+                    return inh.member_type or "method", original.signatures
+
+            # InheritedMemberDetails carries `signature` (a dict), not `signatures`.
+            sig = inh.signature
+            if isinstance(sig, dict) and sig:
+                return inh.member_type or "method", {str(k): str(v) for k, v in sig.items()}
+            if isinstance(sig, str) and sig:
+                return inh.member_type or "method", {"full": sig}
+
+            short = api_name.split(".")[-1]
+            return inh.member_type or "method", {"full": f"{short}("}
 
         logger.warning(f"No DB member found for '{api_name}'; defaulting type=function")
         return "function", {}
 
-    # ── Public entry point ───────────────────────────────────────────────────
-    def run_structuring_test(self, texts: Dict[str, str], report_file: Optional[str] = None) -> Dict:
+    # ── Steps 4-6 ─────────────────────────────────────────────────────────────
+    def run_structuring(self, texts: Dict[str, str]) -> Dict:
         if not texts:
-            raise ValueError("No input texts provided.")
+            logger.warning(f"[{self.source}] No input texts; skipping batch.")
+            return {"summary": {}, "members": []}
 
         api_names = self._seed_per_member(texts)
         pipeline_inputs = self._build_inputs_for(api_names)
 
-        # Step 4: URL preprocessing
-        logger.info("=== Step 4: URL preprocessing ===")
+        logger.info(f"=== [{self.source}] Step 4: URL preprocessing ===")
         self._preprocess_all_members()
 
-        # Step 5: LLM structured extraction
-        logger.info("=== Step 5: Structured extraction (LLM) ===")
+        logger.info(f"=== [{self.source}] Step 5: Structured extraction (LLM) ===")
         self._extract_structured_docs(pipeline_inputs)
 
-        # Step 6: URL postprocessing
-        logger.info("=== Step 6: URL postprocessing ===")
+        logger.info(f"=== [{self.source}] Step 6: URL postprocessing ===")
         self._postprocess_all_members()
 
-        report = self._build_report(api_names, pipeline_inputs)
-        _print_report(report)
-        if report_file:
-            Path(report_file).write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
-            logger.info(f"Report saved to: {report_file}")
-        return report
+        return self._build_report(api_names, pipeline_inputs)
 
     # ── Report ────────────────────────────────────────────────────────────────
     def _build_report(self, api_names, pipeline_inputs) -> Dict:
-        
         type_by_name = {mi.api_name: mi.member_type for mi in pipeline_inputs}
         members = []
         for api_name in api_names:
@@ -186,11 +253,13 @@ class StructuringTestRunner(DocProcessingRunner):
 
             members.append({
                 "api_name": api_name,
+                "source": self.source,
                 "type": type_by_name.get(api_name),
                 "preprocessed": pre.exists(),
                 "url_placeholders": n_placeholders,
                 "structured": struct_ok,
                 "postprocessed": post_ok,
+                "postprocessed_file": str(post) if post_ok else None,
                 "residual_placeholders": residual,
                 "status": "ok" if (pre.exists() and struct_ok and post_ok and not residual) else "incomplete"
             })
@@ -198,6 +267,7 @@ class StructuringTestRunner(DocProcessingRunner):
         total = len(members)
         return {
             "summary": {
+                "source": self.source,
                 "total_members": total,
                 "preprocessed": sum(m["preprocessed"] for m in members),
                 "structured": sum(m["structured"] for m in members),
@@ -205,11 +275,14 @@ class StructuringTestRunner(DocProcessingRunner):
                 "fully_ok": sum(m["status"] == "ok" for m in members),
                 "with_residual_placeholders": sum(1 for m in members if m["residual_placeholders"])
             },
-            "members": members
+            "members": members,
         }
 
 
-# ── helpers ───────────────────────────────────────────────────────────────────
+# ==============================================================================
+# Helpers
+# ==============================================================================
+
 def _is_valid_json(path: Path) -> bool:
     try:
         json.loads(path.read_text(encoding="utf-8"))
@@ -225,66 +298,64 @@ def _count_residual_placeholders(path: Path) -> int:
         return 0
 
 
-def _load_texts(input_file: Optional[str], input_dir: Optional[str]) -> Dict[str, str]:
-    if input_file:
-        data = json.loads(Path(input_file).read_text(encoding="utf-8"))
-        if isinstance(data, dict):
-            return {str(k): str(v) for k, v in data.items()}
-        if isinstance(data, list):
-            return {d["api_name"]: d.get("text", d.get("extracted_text", "")) for d in data}
-        
-        raise ValueError("input-file must be a JSON object or list")
-    
-    texts = {}
-    for txt in Path(input_dir).glob("*.txt"):
-        texts[txt.stem] = txt.read_text(encoding="utf-8")
-    return texts
-
-
 def _print_report(report: Dict) -> None:
-    s = report["summary"]
-    print("\n" + "=" * 70)
-    print("  STRUCTURING TEST REPORT (Steps 4-6)")
-    print("=" * 70)
-    print(f"  Total members        : {s['total_members']}")
-    print(f"  Step 4 preprocessed  : {s['preprocessed']}")
-    print(f"  Step 5 structured    : {s['structured']}")
-    print(f"  Step 6 postprocessed : {s['postprocessed']}")
-    print(f"  Fully OK             : {s['fully_ok']}")
-    print(f"  Residual placeholders: {s['with_residual_placeholders']}")
-    print("=" * 70)
-    for m in report["members"]:
-        flags = (f"pre={int(m['preprocessed'])} "
-                 f"struct={int(m['structured'])} post={int(m['postprocessed'])} "
-                 f"urls={m['url_placeholders']} residual={m['residual_placeholders']}")
-        print(f"  [{m['status']:10s}] {m['api_name']}  ({m['type']})  {flags}")
+    for src_report in report["sources"].values():
+        s = src_report.get("summary") or {}
+        if not s:
+            continue
+        print("\n" + "=" * 70)
+        print(f"  STRUCTURING REPORT — {s['source'].upper()} DOCS (Steps 4-6)")
+        print("=" * 70)
+        print(f"  Total members        : {s['total_members']}")
+        print(f"  Step 4 preprocessed  : {s['preprocessed']}")
+        print(f"  Step 5 structured    : {s['structured']}")
+        print(f"  Step 6 postprocessed : {s['postprocessed']}")
+        print(f"  Fully OK             : {s['fully_ok']}")
+        print(f"  Residual placeholders: {s['with_residual_placeholders']}")
+        print("=" * 70)
+        for m in src_report["members"]:
+            if m["status"] != "ok":
+                flags = (f"pre={int(m['preprocessed'])} struct={int(m['structured'])} "
+                         f"post={int(m['postprocessed'])} urls={m['url_placeholders']} "
+                         f"residual={m['residual_placeholders']}")
+                print(f"  [incomplete] {m['api_name']}  ({m['type']})  {flags}")
     print()
 
 
 def _parse_args():
-    p = argparse.ArgumentParser(description="Test structuring pipeline (Steps 4-6: preprocess, LLM, postprocess).")
+    p = argparse.ArgumentParser(description="Run Steps 4-6 (preprocess, LLM structure, postprocess) on docs collected by collect_member_docs.py.")
     p.add_argument("--db-path", required=True)
     p.add_argument("--library-name", required=True)
     p.add_argument("--version", required=True)
-    src = p.add_mutually_exclusive_group(required=True)
-    src.add_argument("--input-file", help="JSON {api_name: text} or list of objects")
-    src.add_argument("--input-dir", help="Directory of {api_name}.txt files")
+    p.add_argument("--collected-dir", required=True, help="Output dir of collect_member_docs.py (<dir>/<api_name>/web_doc|pdf_doc/)")
+    p.add_argument("--sources", nargs="+", choices=["web", "pdf"], default=["web", "pdf"], help="Which doc sources to process (default: both)")
     p.add_argument("--overwrite", action="store_true", help="Clear Step 4-6 artifact dirs before running")
     p.add_argument("--report-file", default=None)
     return p.parse_args()
 
 
 if __name__ == "__main__":
-    import os
     args = _parse_args()
     if not os.environ.get("OPENAI_API_KEY"):
         logger.warning("OPENAI_API_KEY not set -- Step 5 (LLM) will be skipped, so structured/postprocessed outputs will be empty.")
 
-    texts = _load_texts(args.input_file, args.input_dir)
-    runner = StructuringTestRunner(
-        db_path=args.db_path,
-        library_name=args.library_name,
-        version=args.version,
-        overwrite=args.overwrite
-    )
-    runner.run_structuring_test(texts=texts, report_file=args.report_file)
+    full_report = {"collected_dir": args.collected_dir, "sources": {}, "input_notes": {}}
+
+    for source in args.sources:
+        texts, notes = load_collected_texts(args.collected_dir, source)
+        logger.info(f"[{source}] Loaded {len(texts)} member docs from {args.collected_dir}")
+        full_report["input_notes"][source] = notes
+
+        runner = StructuringTestRunner(
+            db_path=args.db_path,
+            library_name=args.library_name,
+            version=args.version,
+            source=source,
+            overwrite=args.overwrite
+        )
+        full_report["sources"][source] = runner.run_structuring(texts)
+
+    _print_report(full_report)
+    if args.report_file:
+        Path(args.report_file).write_text(json.dumps(full_report, indent=2, ensure_ascii=False), encoding="utf-8")
+        logger.info(f"Report saved to: {args.report_file}")
