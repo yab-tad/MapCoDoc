@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import logging
 from pathlib import Path
@@ -8,6 +9,34 @@ logger = logging.getLogger(__name__)
 
 
 __all__ = ['preprocess_crossRef', 'postprocess_crossRef']
+
+
+
+# Sphinx "permalink to this definition / headline" markers that leak into scraped text. The pilcrow (¶) is the default; some themes use other glyphs.
+_ANCHOR_MARKERS = (
+    '\u00b6',  # ¶ PILCROW SIGN (Sphinx headerlink)
+    '\uf0c1',  # FontAwesome link glyph (Private Use Area; some themes)
+)
+
+# ASCII/Unicode control characters EXCEPT tab (\x09), newline (\x0a), CR (\x0d).
+# These show up as \u0000, \u0006, etc. in LLM output and corrupt the docs.
+_CONTROL_CHARS_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]')
+
+
+def _sanitize_anchor_noise(text: str) -> str:
+    """
+    Remove Sphinx section-anchor markers and stray control characters from scraped text BEFORE URL placeholders are applied, so they never reach the
+    LLM, which otherwise echoes them back as corrupt control-char escapes (e.g. '\\u0006(url_placeholder_1)', '\\u0000a').
+    """
+    for mark in _ANCHOR_MARKERS:
+        text = text.replace(mark, '')
+    return _CONTROL_CHARS_RE.sub('', text)
+
+
+def _strip_control_chars(text: str) -> str:
+    """Defensive cleanup of control characters in LLM output during postprocessing."""
+    return _CONTROL_CHARS_RE.sub('', text)
+
 
 
 class URLReplacer:
@@ -39,7 +68,7 @@ class URLReplacer:
         self.new_doc_lines = list()
         
         for line in scraped_doc_lines:
-            self.line_change = line
+            self.line_change = _sanitize_anchor_noise(line)
             
             if '(http' in self.line_change:
                 url_line = self.line_change.split(' ')
@@ -302,7 +331,7 @@ class URLPlaceholderReplacer:
             if not success:
                 logger.warning(f"Failed to process placeholder: {placeholder}")
         
-        return content
+        return _strip_control_chars(content)
 
 
     def process_documentation(self) -> Dict:
