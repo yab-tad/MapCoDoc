@@ -34,6 +34,42 @@ _PAGE_PAREN_RE = re.compile(r'\(#page=(\d+)\)')
 _BIG_SPACE_RE = re.compile(r' {6,}')
 
 
+# A PDF endnote/footnote superscript number wedged between a token's own hyperlink and its (duplicate) endnote hyperlink: "int(https://…#int)5839(https://…#int)".
+# torch's PDF builder numbers every cross-reference and links the number too, so it emits "(URL_A)<digits>(URL_B)". Collapse to the single leading link, dropping both
+# the stray number and the redundant endnote URL. The no-whitespace gluing makes this specific to the artifact (web docs never produce adjacent parenthesized links).
+_FOOTNOTE_BETWEEN_LINKS_RE = re.compile(r'(\((?:https?://|#page=)[^)]*\))\d+\((?:https?://|#page=)[^)]*\)')
+
+# A PDF endnote/bibliography entry printed at the page bottom: "6455 https://…".
+# Not parenthesized, so the URL replacer never touches it; drop the whole line.
+_ENDNOTE_LINE_RE = re.compile(r'^\s*\d{1,6}\s+https?://\S+\s*$')
+
+# Strong (non-ASCII) math/Greek/bracket glyphs that survive NFKC and appear in 2-D PDF equation layouts (inside OR outside ``` fences). Supersedes the curated symbol sets
+# in pdf_localizer.py and, crucially, also covers the glyphs that actually broke torch:
+# arrows (←), combining marks (γ̃), sub/superscripts, and the big/lenticular brackets (︂) where none of which are in that file's MATH_SYMBOLS/GREEK_LETTERS sets.
+_MATH_CHARS_RE = re.compile(
+    '['
+    '\u0300-\u036F'   # combining diacritical marks (over/under bars on symbols)
+    '\u0370-\u03FF'   # Greek and Coptic (π, μ, γ, θ, λ, ε)
+    '\u1F00-\u1FFF'   # Greek Extended
+    '\u2070-\u209F'   # super/subscripts
+    '\u2100-\u214F'   # letterlike symbols (ℝ, ℓ)
+    '\u2190-\u21FF'   # arrows (←, →)
+    '\u2200-\u22FF'   # mathematical operators (∑, ∇, ∈, ≤, √)
+    '\u2300-\u23FF'   # misc technical (⌊ ⌋ ⎛)
+    '\u25A0-\u25FF'   # geometric shapes
+    '\u27C0-\u27EF'   # misc math symbols-A
+    '\u2980-\u29FF'   # misc math symbols-B
+    '\u2A00-\u2AFF'   # supplemental math operators
+    '\u3000-\u303F'   # CJK symbols/punct (NFKC-folded lenticular brackets)
+    '\uFE30-\uFE4F'   # CJK presentation-form brackets (︂)
+    ']'
+)
+
+# ASCII operators that corroborate an equation ONLY when a strong glyph is already present (mirrors pdf_localizer's has_greek_equation = has_greek and has_operators).
+# Never a standalone signal — '=', '<', '>' are ubiquitous in signatures/prose. '-' is deliberately excluded (hyphenation / dashes).
+_ASCII_MATH_OPS = frozenset({'=', '+', '<', '>', '/', '^', '|'})
+
+
 # Typographic Unicode punctuation that some LLMs mangle into malformed \uXXXX escapes (then degenerate into repetition loops, e.g. a '•' becoming "\u0002022\u0000b\u0000b..."). 
 # Map to ASCII equivalents. Deliberately limited to punctuation/whitespace (never math symbols or letters) so meaningful content (e.g. '<=', Greek, '×') is preserved
 _TYPOGRAPHIC_MAP = {
@@ -72,6 +108,29 @@ def _sanitize_anchor_noise(text: str) -> str:
 def _strip_control_chars(text: str) -> str:
     """Defensive cleanup of control characters in LLM output during postprocessing."""
     return _CONTROL_CHARS_RE.sub('', text)
+
+
+def _is_equation_line(line: str) -> bool:
+    """
+    True if a line is (part of) a PDF-extracted formula rather than prose, judged by the density of strong math/Greek/bracket glyphs (fence-agnostic). A strong glyph
+    is required, so ASCII-only signature/prose lines (full of '=', '-') never match; ASCII operators only corroborate once a strong glyph is present. Such lines carry
+    no prose value and trigger LLM repetition loops, so callers collapse a run of them to a single "[equation]" marker.
+    """
+    stripped = line.strip()
+    if not stripped or stripped in ('```', '[equation]'):
+        return False
+    non_space = [c for c in stripped if not c.isspace()]
+    if not non_space:
+        return False
+
+    math_count = len(_MATH_CHARS_RE.findall(stripped))
+    if math_count == 0:
+        return False  # gate: no strong glyph -> not an equation
+
+    ascii_ops = sum(1 for c in stripped if c in _ASCII_MATH_OPS)
+    score = math_count + ascii_ops
+    # >=2 strong glyphs catches dense fragments; the ratio catches short formula lines.
+    return math_count >= 2 or (score / len(non_space)) >= 0.12
 
 
 
@@ -161,16 +220,34 @@ class URLReplacer:
         self.new_doc_lines = list()
         
         blank_run = 0
+        prev_equation = False
         for line in scraped_doc_lines:
             line = _sanitize_anchor_noise(line)
+            
+            # Drop PDF endnote/bibliography lines ("6455 https://…").
+            if _ENDNOTE_LINE_RE.match(line):
+                continue
+            
+            # # Collapse a run of equation lines to a single "[equation]" marker.
+            # if _is_equation_line(line):
+            #     if not prev_equation:
+            #         self.new_doc_lines.append('[equation]\n')
+            #         prev_equation = True
+            #     continue
+            # prev_equation = False
+            
             if line.strip() == '':
                 blank_run += 1
                 if blank_run > 2:          # keep at most 2 consecutive blank lines
                     continue
             else:
                 blank_run = 0
+                
+            # Drop superscript endnote numbers wedged between duplicate links (must run on raw parens, before placeholder substitution).
+            line = _FOOTNOTE_BETWEEN_LINKS_RE.sub(r'\1', line)
+            
             self.new_doc_lines.append(self._replace_line_urls(line))
-        
+            
         return self.new_doc_lines, self.url_dict
         
 
