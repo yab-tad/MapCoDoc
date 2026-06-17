@@ -27,13 +27,33 @@ _CONTROL_CHARS_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]')
 _URL_PAREN_RE = re.compile(r'\((https?://[^)]+)\)')
 
 
+# Typographic Unicode punctuation that some LLMs mangle into malformed \uXXXX escapes (then degenerate into repetition loops, e.g. a '•' becoming "\u0002022\u0000b\u0000b..."). 
+# Map to ASCII equivalents. Deliberately limited to punctuation/whitespace (never math symbols or letters) so meaningful content (e.g. '<=', Greek, '×') is preserved
+_TYPOGRAPHIC_MAP = {
+    '\u2022': '-', '\u2023': '-', '\u25e6': '-', '\u2043': '-',   # bullets
+    '\u2219': '-', '\u00b7': '-',                                 # bullet/middle dot
+    '\u2013': '-', '\u2014': '-',                                 # en/em dash
+    '\u2018': "'", '\u2019': "'", '\u201c': '"', '\u201d': '"',   # smart quotes
+    '\u2026': '...',                                              # ellipsis
+    '\u00a0': ' ', '\u202f': ' ', '\u2009': ' ',                  # nbsp/thin spaces
+}
+_TYPO_TABLE = str.maketrans(_TYPOGRAPHIC_MAP)
+
+
+def _normalize_typography(text: str) -> str:
+    """Map LLM-hostile typographic punctuation to ASCII before structuring."""
+    return text.translate(_TYPO_TABLE)
+
+
 def _sanitize_anchor_noise(text: str) -> str:
     """
-    Remove Sphinx section-anchor markers and stray control characters from scraped text BEFORE URL placeholders are applied, so they never reach the
-    LLM, which otherwise echoes them back as corrupt control-char escapes (e.g. '\\u0006(url_placeholder_1)', '\\u0000a').
+    Remove Sphinx section-anchor markers, normalize LLM-hostile typographic punctuation, and strip stray control characters from scraped text BEFORE URL
+    placeholders are applied so that none of it reaches the LLM, which otherwise echoes it back as corrupt control-char escapes 
+    (e.g. '\\u0006(url_placeholder_1)', '\\u0000a', or a '•' degenerating into '\\u0002022\\u0000b\\u0000b...').
     """
     for mark in _ANCHOR_MARKERS:
         text = text.replace(mark, '')
+    text = _normalize_typography(text)
     return _CONTROL_CHARS_RE.sub('', text)
 
 
@@ -77,86 +97,6 @@ class URLReplacer:
         
         return self.new_doc_lines, self.url_dict
         
-    #     for line in scraped_doc_lines:
-    #         self.line_change = _sanitize_anchor_noise(line)
-            
-    #         if '(http' in self.line_change:
-    #             url_line = self.line_change.split(' ')
-                
-    #             for i in url_line:
-    #                 if '(http' in i:
-                                                    
-    #                     self._urlDict_newDoc(i)
-
-    #         self.new_doc_lines.append(self.line_change)
-        
-    #     return self.new_doc_lines, self.url_dict
-
-
-    # def _urlDict_newDoc(self, line_segment: str) -> None:
-    #     """
-    #     Extract URL and URL reference (context surrounding the URL)
-        
-    #     Args:
-    #         line_segment (str): Space-separated segment of the line currently being processed.
-    #     """
-        
-    #     # Check how many URLs are present in each space-separated-word
-    #     parts_with_url = line_segment[line_segment.index('(http'):].split('(http')
-                        
-    #     for ref_to, url_part in enumerate(parts_with_url):
-    #         if url_part:
-    #             reference_to = None
-    #             url_part = '(http' + url_part
-
-    #             url_start = line_segment.index(url_part)
-    #             url = url_part[1: url_part.index(')')]
-
-    #             if line_segment[:url_start][-1] == ']':
-    #                 url_ref = line_segment[:url_start].split('[')
-    #                 if len(url_ref) > 1:
-    #                     if (url_ref[-1]).lower().endswith('source]'):
-    #                         url_ref[-1] = '[' + url_ref[-1]
-    #                         url_ref[-2] = url_ref[-2].split(' ')[-1]
-    #                         url_ref = url_ref[-2:]
-    #                     elif url_ref[-2] == '':
-    #                         url_ref = ['[' + url_ref[-1]]
-    #                 else:
-    #                     url_ref_idx = self.line_change.index((url_ref[-1]+ '(' + url))
-    #                     url_ref = ['[' + self.line_change[:url_ref_idx].split('[')[-1] + url_ref[-1]]
-
-    #             elif (line_segment[:url_start][-1]).isalnum():
-    #                 url_ref = [line_segment[:url_start].split(' ')[-1]]
-    #             else:
-    #                 if len(line_segment[:url_start]) > 1:
-    #                     url_ref = line_segment[:url_start].split(' ')
-                        
-    #                     if len(url_ref) > 1:
-    #                         if url_ref[-1] == '':
-    #                             url_ref[-1] = ' '
-    #                         url_ref = url_ref[-2:]
-    #                 else:
-    #                     url_ref = ['']
-                        
-    #             if len(parts_with_url) > 2 and len(parts_with_url) > ref_to + 1:
-    #                 reference_to = f'url_placeholder_{self.url_count+1}'
-                
-    #             # Update URL dictionary with currently processed URL and its reference(s)
-    #             self.url_dict.update({f"url_placeholder_{self.url_count}": {'url_reference': url_ref, 'url': url, 'reference_to': reference_to}}) 
-                
-    #             # Construct possible URL reference
-    #             url_reference = ''
-    #             for ref_part in url_ref:
-    #                 url_reference += ref_part
-                
-    #             # Replace URLs with placeholders
-    #             replace_str_with = f"{url_reference}(url_placeholder_{self.url_count})"
-    #             replace_str = f"{url_reference}({url})"
-                
-    #             self.url_count += 1
-
-    #             self.line_change = self.line_change.replace(replace_str, replace_str_with)
-    #             line_segment = line_segment.replace(replace_str, replace_str_with)
 
 
     def _replace_line_urls(self, line: str) -> str:
