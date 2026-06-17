@@ -16,7 +16,7 @@ __all__ = ['preprocess_crossRef', 'postprocess_crossRef']
 # Sphinx "permalink to this definition / headline" markers that leak into scraped text. The pilcrow (¶) is the default; some themes use other glyphs.
 _ANCHOR_MARKERS = (
     '\u00b6',  # ¶ PILCROW SIGN (Sphinx headerlink)
-    '\uf0c1',  # FontAwesome link glyph (Private Use Area; some themes)
+    '\uf0c1'   # FontAwesome link glyph (Private Use Area; some themes)
 )
 
 # ASCII/Unicode control characters EXCEPT tab (\x09), newline (\x0a), CR (\x0d).
@@ -26,6 +26,9 @@ _CONTROL_CHARS_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]')
 # Matches a parenthesized http(s) URL, e.g. "(https://docs.example.com/page#frag)".
 # Used to replace the URL inside the parentheses with a placeholder, leaving the surrounding reference text untouched
 _URL_PAREN_RE = re.compile(r'\((https?://[^)]+)\)')
+
+# PDF internal cross-refs emitted by pipeline_pdf, e.g. "Pipeline(#page=2000)".
+_PAGE_PAREN_RE = re.compile(r'\(#page=(\d+)\)')
 
 # PDF column-alignment padding (large space runs): collapse so it stops looking like repeatable low-information content that pushes the LLM into a loop.
 _BIG_SPACE_RE = re.compile(r' {6,}')
@@ -39,7 +42,7 @@ _TYPOGRAPHIC_MAP = {
     '\u2013': '-', '\u2014': '-', '\u2212': '-',                  # en/em dash and MINUS SIGN (math)
     '\u2018': "'", '\u2019': "'", '\u201c': '"', '\u201d': '"',   # smart quotes
     '\u2026': '...',                                              # ellipsis
-    '\u00a0': ' ', '\u202f': ' ', '\u2009': ' ',                  # nbsp/thin spaces
+    '\u00a0': ' ', '\u202f': ' ', '\u2009': ' '                   # nbsp/thin spaces
 }
 _TYPO_TABLE = str.maketrans(_TYPOGRAPHIC_MAP)
 
@@ -83,7 +86,7 @@ _HYPHEN_WRAP_RE = re.compile(r'(\w+)-\n[ \t]*(\w)')
 # Short compound prefixes where the hyphen is semantic, so it's kept when a real compound wraps at the hyphen (e.g. "non-\nnegative" -> "non-negative")
 _KEEP_HYPHEN_PREFIXES = frozenset({
     'non', 'self', 'multi', 'inter', 'intra', 'anti', 'pre', 'post', 'sub',
-    're', 'co', 'un', 'well', 'high', 'low', 'cross', 'meta', 'semi', 'pseudo',
+    're', 'co', 'un', 'well', 'high', 'low', 'cross', 'meta', 'semi', 'pseudo'
 })
 
 # Keys whose string content is code/verbatim and must not be de-hyphenated.
@@ -173,12 +176,14 @@ class URLReplacer:
 
 
     def _replace_line_urls(self, line: str) -> str:
-        """
-        Replace every parenthesized http(s) URL in a line with a unique placeholder token, recording {placeholder: {'url': url}}.
-        This is robust to multiple/duplicate URLs in one token, multi-line link text, and URLs at the start of a token. 
-        The surrounding reference text is left untouched; only the URL inside the parentheses becomes a
-        placeholder (e.g. "KeyFuncDict(https://...)" -> "KeyFuncDict(url_placeholder_4)").
-        """
+        """Replace parenthesized http(s) URLs and PDF (#page=N) refs with unique url_placeholder tokens, recording each mapping in self.url_dict."""
+        line = self._replace_http_urls(line)
+        line = self._replace_page_refs(line)
+        return line
+    
+    
+    def _replace_http_urls(self, line: str) -> str:
+        """Replace every parenthesized http(s) URL in a line with a unique placeholder token, recording {placeholder: {'url': url}}."""
         def _sub(match) -> str:
             url = match.group(1)
             placeholder = f"url_placeholder_{self.url_count}"
@@ -187,6 +192,18 @@ class URLReplacer:
             return f"({placeholder})"
         
         return _URL_PAREN_RE.sub(_sub, line)
+    
+    
+    def _replace_page_refs(self, line: str) -> str:
+        """Replace every PDF internal cross-reference in a line with a unique placeholder token, recording {placeholder: {'url': page_ref}}."""
+        def _sub(match) -> str:
+            page_ref = f"#page={match.group(1)}"
+            placeholder = f"url_placeholder_{self.url_count}"
+            self.url_dict[placeholder] = {'url': page_ref}
+            self.url_count += 1
+            return f"({placeholder})"
+        
+        return _PAGE_PAREN_RE.sub(_sub, line)
 
 
 def preprocess_crossRef(scraped_doc_path: str, doc_file_path: str, url_file_path: str):
