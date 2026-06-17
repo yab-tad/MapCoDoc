@@ -54,6 +54,16 @@ def _loads_llm_json(doc_json: str):
             return json.loads(_BAD_JSON_ESCAPE.sub(r'\\\\', doc_json))
         except json.JSONDecodeError:
             return None
+        
+
+# A short chunk (1-4 chars) repeated 200+ times, such as the signature of an LLM that fell into a repetition loop (e.g. "\u0000b\u0000b...").
+_REPEAT_RUN_RE = re.compile(r'(.{1,4}?)\1{200,}')
+
+
+def _looks_degenerate(s: str) -> bool:
+    """True if an LLM payload is corrupt: excessive control chars or a long repeated run. Used to reject responses before they're stored."""
+    ctrl = sum(1 for c in s if ord(c) < 0x20 and c not in '\t\n\r')
+    return ctrl > 50 or bool(_REPEAT_RUN_RE.search(s))
 
 
 
@@ -2086,9 +2096,17 @@ class DocProcessingRunner:
             if not doc_json:
                 continue
             output_path = self.structured_doc_dir / f"{api_name}.json"
+            
+            # Reject corrupt/degenerate output (repetition loops, control-char floods) so it never becomes the stored doc
+            if _looks_degenerate(doc_json):
+                output_path.with_suffix(".raw.json").write_text(doc_json, encoding='utf-8')
+                parse_failures.append(api_name)
+                logger.warning(f"Degenerate LLM output for {api_name}; saved raw, skipping.")
+                continue
+            
             parsed = _loads_llm_json(doc_json)
             if parsed is None:
-                # Preserve the raw payload for inspection; don't abort the batch.
+                # Preserve the raw payload for inspection; don't abort the batch
                 output_path.with_suffix(".raw.json").write_text(doc_json, encoding='utf-8')
                 parse_failures.append(api_name)
                 logger.warning(f"Unparseable LLM JSON for {api_name}; saved raw to {output_path.with_suffix('.raw.json').name}")
@@ -2157,7 +2175,11 @@ class DocProcessingRunner:
                 extractor._generate_prompts()
                 extractor._call_openai_api()
                 
-                if extractor.extracted_doc:
+                if extractor.extracted_doc and _looks_degenerate(extractor.extracted_doc):
+                    structured_doc_path.with_suffix(".raw.json").write_text(extractor.extracted_doc, encoding='utf-8')
+                    logger.warning(f"Degenerate LLM output for {api_name}; saved raw, skipping.")
+                
+                elif extractor.extracted_doc:
                     parsed = _loads_llm_json(extractor.extracted_doc)
                     if parsed is None:
                         structured_doc_path.with_suffix(".raw.json").write_text(extractor.extracted_doc, encoding='utf-8')

@@ -2,6 +2,7 @@ import os
 import re
 import json
 import logging
+import unicodedata
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -26,13 +27,16 @@ _CONTROL_CHARS_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]')
 # Used to replace the URL inside the parentheses with a placeholder, leaving the surrounding reference text untouched
 _URL_PAREN_RE = re.compile(r'\((https?://[^)]+)\)')
 
+# PDF column-alignment padding (large space runs): collapse so it stops looking like repeatable low-information content that pushes the LLM into a loop.
+_BIG_SPACE_RE = re.compile(r' {6,}')
+
 
 # Typographic Unicode punctuation that some LLMs mangle into malformed \uXXXX escapes (then degenerate into repetition loops, e.g. a '•' becoming "\u0002022\u0000b\u0000b..."). 
 # Map to ASCII equivalents. Deliberately limited to punctuation/whitespace (never math symbols or letters) so meaningful content (e.g. '<=', Greek, '×') is preserved
 _TYPOGRAPHIC_MAP = {
     '\u2022': '-', '\u2023': '-', '\u25e6': '-', '\u2043': '-',   # bullets
     '\u2219': '-', '\u00b7': '-',                                 # bullet/middle dot
-    '\u2013': '-', '\u2014': '-',                                 # en/em dash
+    '\u2013': '-', '\u2014': '-', '\u2212': '-',                  # en/em dash and MINUS SIGN (math)
     '\u2018': "'", '\u2019': "'", '\u201c': '"', '\u201d': '"',   # smart quotes
     '\u2026': '...',                                              # ellipsis
     '\u00a0': ' ', '\u202f': ' ', '\u2009': ' ',                  # nbsp/thin spaces
@@ -53,13 +57,75 @@ def _sanitize_anchor_noise(text: str) -> str:
     """
     for mark in _ANCHOR_MARKERS:
         text = text.replace(mark, '')
+    
+    # NFKC folds Mathematical Alphanumeric Symbols (𝐿->L, 𝑊->W), superscripts (²->2), fullwidth forms and ligatures to ASCII-compatible forms, which neutralizes garbled PDF math blocks (a frequent repetition-loop trigger).
+    text = unicodedata.normalize('NFKC', text)
+    
     text = _normalize_typography(text)
+    text = _BIG_SPACE_RE.sub('  ', text)
     return _CONTROL_CHARS_RE.sub('', text)
 
 
 def _strip_control_chars(text: str) -> str:
     """Defensive cleanup of control characters in LLM output during postprocessing."""
     return _CONTROL_CHARS_RE.sub('', text)
+
+
+
+# Collapse any whitespace run (including newlines), for signatures, which PDFs wrap across lines with alignment padding.
+_SIG_WS_RE = re.compile(r'\s+')
+
+# A word split across a line break by a soft (wrap) hyphen:
+#   "approxi-\n      mates" and "approxi-\nmates"  ->  "approximates"
+# group(1) = token before the hyphen, group(2) = first char of the continuation.
+_HYPHEN_WRAP_RE = re.compile(r'(\w+)-\n[ \t]*(\w)')
+
+# Short compound prefixes where the hyphen is semantic, so it's kept when a real compound wraps at the hyphen (e.g. "non-\nnegative" -> "non-negative")
+_KEEP_HYPHEN_PREFIXES = frozenset({
+    'non', 'self', 'multi', 'inter', 'intra', 'anti', 'pre', 'post', 'sub',
+    're', 'co', 'un', 'well', 'high', 'low', 'cross', 'meta', 'semi', 'pseudo',
+})
+
+# Keys whose string content is code/verbatim and must not be de-hyphenated.
+_VERBATIM_KEYS = frozenset({'example', 'name', 'type', 'identifier'})
+
+
+def _normalize_signature(sig: str) -> str:
+    """Collapse newlines and padding runs in a member signature to single spaces."""
+    return _SIG_WS_RE.sub(' ', sig).strip()
+
+
+def _dehyphenate(text: str) -> str:
+    """Re-join words broken across line breaks by a wrap hyphen, preserving genuine compound hyphens for known prefixes."""
+    def _join(m: 're.Match') -> str:
+        before, nxt = m.group(1), m.group(2)
+        if before.lower() in _KEEP_HYPHEN_PREFIXES:
+            return f"{before}-{nxt}"   # keep hyphen, drop the newline and  padding
+        return f"{before}{nxt}"        # soft wrap hyphen -> remove entirely
+    return _HYPHEN_WRAP_RE.sub(_join, text)
+
+
+def _normalize_structured_fields(value, key=None):
+    """
+    Recursively normalize a structured-doc value:
+      - 'module_member_signature'  -> collapse whitespace
+      - 'example' (code)           -> left untouched
+      - every other string         -> de-hyphenate wrap hyphens
+    Covers module_member_description (str or {purpose, additional_information}), parameters[].description/additional_information, returns.*, 
+    additional_notes.*, attributes[].*, methods[].* uniformly, by key, at any depth.
+    """
+    if isinstance(value, dict):
+        return {k: _normalize_structured_fields(v, k) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_normalize_structured_fields(item, key) for item in value]
+    if isinstance(value, str):
+        if key in ['module_member_signature', 'signature']:
+            return _normalize_signature(value)
+        if key in _VERBATIM_KEYS:
+            return value
+        return _dehyphenate(value)
+    return value
+
 
 
 
@@ -91,8 +157,15 @@ class URLReplacer:
         self.url_dict = dict()
         self.new_doc_lines = list()
         
+        blank_run = 0
         for line in scraped_doc_lines:
             line = _sanitize_anchor_noise(line)
+            if line.strip() == '':
+                blank_run += 1
+                if blank_run > 2:          # keep at most 2 consecutive blank lines
+                    continue
+            else:
+                blank_run = 0
             self.new_doc_lines.append(self._replace_line_urls(line))
         
         return self.new_doc_lines, self.url_dict
@@ -360,6 +433,7 @@ def postprocess_crossRef(url_mapping_path: str, structured_doc_path: str, proces
         
         replacer = URLPlaceholderReplacer(url_mapping, structured_doc)
         processed_documentation = replacer.process_documentation()
+        processed_documentation = _normalize_structured_fields(processed_documentation)
         
         # Create directories if they don't exist
         os.makedirs(os.path.dirname(processed_doc_path), exist_ok=True)
