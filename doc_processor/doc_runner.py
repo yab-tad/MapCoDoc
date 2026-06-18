@@ -89,10 +89,11 @@ class DocProcessingRunner:
     # Base artifacts directory
     ARTIFACTS_BASE = Path("doc_processor/doc_artifacts")
     
-    def __init__(self, db_path: str, library_name: str, version: str):
+    def __init__(self, db_path: str, library_name: str, version: str, use_stop_signals: bool = False):
         
         self.library_name = library_name
         self.version = version
+        self.use_stop_signals = use_stop_signals
         
         self.db_path = db_path
         self.db = MapCoDocDB(db_path)
@@ -455,7 +456,7 @@ class DocProcessingRunner:
         peer_signatures = self._build_peer_signatures(members)
         
         # Step 2: Run PDF extraction pipeline
-        member_cfg = MemberExtractorConfig(semantic_mode="auto")
+        member_cfg = MemberExtractorConfig(semantic_mode="auto", use_stop_signals=self.use_stop_signals)
         
         # Output JSON and per-member txt files go to scraped_doc
         out_json_path = self.scraped_doc_dir / "extracted_docs.json"
@@ -1011,18 +1012,20 @@ class DocProcessingRunner:
             info = mp["info"]
             start_pos = mp["position"]
             
-            # Build stop signals from subsequent members in position order
             peer_sigs = []
-            for peer_mp in member_positions[i+1:]:
-                peer_info = peer_mp["info"]
-                peer_needles = build_lexical_needles(peer_info.member_input)
-                peer_sigs.extend(peer_needles.get("exact", []))
+            stop_matcher = None
+            if self.use_stop_signals:
+                # Build stop signals from subsequent members in position order
+                for peer_mp in member_positions[i+1:]:
+                    peer_info = peer_mp["info"]
+                    peer_needles = build_lexical_needles(peer_info.member_input)
+                    peer_sigs.extend(peer_needles.get("exact", []))
             
-            stop_matcher = StopSignalMatcher(
-                peer_signatures=peer_sigs,
-                target_member_type=info.member_type,
-                target_api_name=info.api_name
-            )
+                stop_matcher = StopSignalMatcher(
+                    peer_signatures=peer_sigs,
+                    target_member_type=info.member_type,
+                    target_api_name=info.api_name
+                )
             
             # Extract text from anchor position
             extracted = self._extract_until_stop(
@@ -1642,16 +1645,18 @@ class DocProcessingRunner:
             
             # Build stop signals from subsequent members
             peer_sigs = []
-            for peer_mp in member_positions[i+1:]:
-                peer_info = peer_mp["info"]
-                peer_needles = build_lexical_needles(peer_info.member_input)
-                peer_sigs.extend(peer_needles.get("exact", []))
-            
-            stop_matcher = StopSignalMatcher(
-                peer_signatures=peer_sigs,
-                target_member_type=info.member_type,
-                target_api_name=info.api_name
-            )
+            stop_matcher = None
+            if self.use_stop_signals:
+                for peer_mp in member_positions[i+1:]:
+                    peer_info = peer_mp["info"]
+                    peer_needles = build_lexical_needles(peer_info.member_input)
+                    peer_sigs.extend(peer_needles.get("exact", []))
+                
+                stop_matcher = StopSignalMatcher(
+                    peer_signatures=peer_sigs,
+                    target_member_type=info.member_type,
+                    target_api_name=info.api_name
+                )
             
             # Extract text
             extracted = self._extract_until_stop(
@@ -1667,7 +1672,7 @@ class DocProcessingRunner:
             logger.debug(f"Saved: {info.api_name}")
 
     
-    def _extract_until_stop(self, text: str, stop_matcher: StopSignalMatcher, max_chars: int = 25000) -> str:
+    def _extract_until_stop(self, text: str, stop_matcher: Optional[StopSignalMatcher], max_chars: int = 25000) -> str:
         """
         Extract text until a high-priority stop signal is found or max_chars is reached.
         
@@ -1695,7 +1700,8 @@ class DocProcessingRunner:
         lines = text.split('\n')
         
         # --- Pre-scan to determine if fallback should be used upfront ---
-        stop_matcher.pre_scan_section(text, start_pos=0)
+        if stop_matcher:
+            stop_matcher.pre_scan_section(text, start_pos=0)
         
         result_lines = []
         char_count = 0
@@ -1723,13 +1729,13 @@ class DocProcessingRunner:
                     found_stop = True
                 break
             
-            # --- Stop-signal check (skip first line — it is the anchor itself) ---
+            # --- Stop-signal check (skip first line since it is the anchor itself) ---
             if i > 0 and stop_matcher:
                 matched, is_high_priority = stop_matcher.checks_stop(line)
                 
                 if matched:
                     if is_inside_fence or is_fence_line:
-                        # Inside a code block → record as soft fallback only
+                        # Inside a code block -> record as soft fallback only
                         if fallback_stop_line_idx is None:
                             fallback_stop_line_idx = len(result_lines)
                     elif is_high_priority:
@@ -1746,7 +1752,7 @@ class DocProcessingRunner:
             
         # --- Fallback retry ---
         if not found_stop and char_count >= max_chars:
-            if not stop_matcher.use_fallback and stop_matcher.fallback_patterns:
+            if stop_matcher and not stop_matcher.use_fallback and stop_matcher.fallback_patterns:
                 target_type = stop_matcher.target_type
                 target_name = stop_matcher.target_name
                 if target_type == "class":
@@ -1835,78 +1841,82 @@ class DocProcessingRunner:
         
         combined_text = module_txt.read_text(encoding='utf-8')
         
-        # --- Build stop signals from ACTUAL database signatures ---
-        stop_sigs = []
-        for api_name in nested_api_names:
-            if api_name == container_name or api_name == output_api_name:
-                continue
-            
-            # Query database for this nested member's signatures
-            nested_member = self.qm.get_member_by_any_api_name(api_name)
-            if nested_member:
-                # Build proper lexical needles from actual signatures
-                member_input = MemberInput(
-                    api_name= nested_member.api_name or nested_member.fqn,
-                    signature_variants=nested_member.signatures or {},
-                    member_type=nested_member.type or "function"
-                )
-                needles = build_lexical_needles(member_input)
-                
-                # Add exact needle tier as stop signals
-                stop_sigs.extend(needles.get("exact", []))
-            else:
-                # Fallback: basic patterns if not in database
-                short_name = api_name.split('.')[-1]
-                stop_sigs.append(api_name)
-                stop_sigs.append(short_name)
-                stop_sigs.append(f"{short_name}(")
-        
-        # ------------------------------------------------------------------------
-        # For class containers, add inherited member signatures as fallback
-        # These ensure proper trimming even when no nested methods were extracted
-        # ------------------------------------------------------------------------
-        if db_member.type == 'class':
-            inherited_members = self.qm.get_inherited_members_for_class(db_member.fqn)
-            for inherited in inherited_members:
-                # Skip if already covered by nested_api_names
-                if inherited.inherited_api_name in nested_api_names:
-                    continue
-                
-                # Get signatures
-                sig_variants = {}
-                if inherited.original_member_id:
-                    original = self.qm.get_original_member_for_inherited(inherited.inherited_api_name)
-                    if original:
-                        sig_variants = original.signatures or {}
-                
-                if not sig_variants and inherited.signature:
-                    if isinstance(inherited.signature, dict):
-                        sig_variants = {str(k): str(v) for k, v in inherited.signature.items()}
-                    elif isinstance(inherited.signature, str):
-                        sig_variants = {'full': inherited.signature}
-                
-                if not sig_variants:
-                    sig_variants = {'full': f"{inherited.member_name}("}
-                
-                inherited_input = MemberInput(
-                    api_name=inherited.inherited_api_name,
-                    signature_variants=sig_variants,
-                    member_type=inherited.member_type or 'method'
-                )
-                needles = build_lexical_needles(inherited_input)
-                stop_sigs.extend(needles.get("exact", []))
-            
-            logger.debug(f"Added {len(inherited_members)} inherited member signatures as stop signals for class {output_api_name}")
-        
-        if not stop_sigs:
+        if not self.use_stop_signals:
+            # Stop signals disabled: keep the full container page, skip all the per-nested-member / inherited-member DB lookups used only for trimming.
             filtered_text = combined_text
         else:
-            stop_matcher = StopSignalMatcher(
-                peer_signatures=stop_sigs,
-                target_member_type=db_member.type or "class",
-                target_api_name=output_api_name
-            )
-            filtered_text = self._extract_until_stop(combined_text, stop_matcher, max_chars=50000)
+            # --- Build stop signals from ACTUAL database signatures ---
+            stop_sigs = []
+            for api_name in nested_api_names:
+                if api_name == container_name or api_name == output_api_name:
+                    continue
+                
+                # Query database for this nested member's signatures
+                nested_member = self.qm.get_member_by_any_api_name(api_name)
+                if nested_member:
+                    # Build proper lexical needles from actual signatures
+                    member_input = MemberInput(
+                        api_name= nested_member.api_name or nested_member.fqn,
+                        signature_variants=nested_member.signatures or {},
+                        member_type=nested_member.type or "function"
+                    )
+                    needles = build_lexical_needles(member_input)
+                    
+                    # Add exact needle tier as stop signals
+                    stop_sigs.extend(needles.get("exact", []))
+                else:
+                    # Fallback: basic patterns if not in database
+                    short_name = api_name.split('.')[-1]
+                    stop_sigs.append(api_name)
+                    stop_sigs.append(short_name)
+                    stop_sigs.append(f"{short_name}(")
+            
+            # ------------------------------------------------------------------------
+            # For class containers, add inherited member signatures as fallback
+            # These ensure proper trimming even when no nested methods were extracted
+            # ------------------------------------------------------------------------
+            if db_member.type == 'class':
+                inherited_members = self.qm.get_inherited_members_for_class(db_member.fqn)
+                for inherited in inherited_members:
+                    # Skip if already covered by nested_api_names
+                    if inherited.inherited_api_name in nested_api_names:
+                        continue
+                    
+                    # Get signatures
+                    sig_variants = {}
+                    if inherited.original_member_id:
+                        original = self.qm.get_original_member_for_inherited(inherited.inherited_api_name)
+                        if original:
+                            sig_variants = original.signatures or {}
+                    
+                    if not sig_variants and inherited.signature:
+                        if isinstance(inherited.signature, dict):
+                            sig_variants = {str(k): str(v) for k, v in inherited.signature.items()}
+                        elif isinstance(inherited.signature, str):
+                            sig_variants = {'full': inherited.signature}
+                    
+                    if not sig_variants:
+                        sig_variants = {'full': f"{inherited.member_name}("}
+                    
+                    inherited_input = MemberInput(
+                        api_name=inherited.inherited_api_name,
+                        signature_variants=sig_variants,
+                        member_type=inherited.member_type or 'method'
+                    )
+                    needles = build_lexical_needles(inherited_input)
+                    stop_sigs.extend(needles.get("exact", []))
+                
+                logger.debug(f"Added {len(inherited_members)} inherited member signatures as stop signals for class {output_api_name}")
+            
+            if not stop_sigs:
+                filtered_text = combined_text
+            else:
+                stop_matcher = StopSignalMatcher(
+                    peer_signatures=stop_sigs,
+                    target_member_type=db_member.type or "class",
+                    target_api_name=output_api_name
+                )
+                filtered_text = self._extract_until_stop(combined_text, stop_matcher, max_chars=50000)
         
         container_output = self.per_member_dir / f"{output_api_name}.txt"
         

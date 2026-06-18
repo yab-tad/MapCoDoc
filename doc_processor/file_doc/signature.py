@@ -275,6 +275,22 @@ def _has_no_user_params(member: MemberInput) -> bool:
     return False  # At least one variant has real user-facing params
 
 
+def _signature_has_params(sig: str) -> bool:
+    """
+    True if a signature declares at least one parameter.
+
+    Robust to: bare name (no parens), empty '()', and nested parens in defaults
+    such as 'Foo(a=(1, 2))'. Uses the first '(' and last ')' so a nested group never produces a false negative.
+    """
+    open_i = sig.find('(')
+    if open_i == -1:
+        return False                       # no call parens -> no params
+    close_i = sig.rfind(')')
+    if close_i <= open_i:
+        return False                       # unbalanced/truncated -> treat as none
+    return bool(sig[open_i + 1:close_i].strip())
+
+
 def build_lexical_needles(member: MemberInput) -> Dict[str, List[str]]:
     """
     Build tiered lexical needles for line-level substring matching.
@@ -331,10 +347,14 @@ def build_lexical_needles(member: MemberInput) -> Dict[str, List[str]]:
     # -------------------------------------------------------------------------
     # Class heading without constructor on the same line (common in PDF/Sphinx)
     # -------------------------------------------------------------------------
-    if member.member_type == "class":
+    sig = (member.signature_variants.get('full') or '').strip()
+    if not sig:
+        sig = next((v.strip() for v in member.signature_variants.values() if v and v.strip()), "")
+
+    if member.member_type == "class" and not _signature_has_params(sig):
         _add_exact(f"class {api_name}")
         _add_exact(f"class {short_name}")
-
+    
     # -------------------------------------------------------------------------
     # Exact tier: iterate variants in priority order
     # -------------------------------------------------------------------------

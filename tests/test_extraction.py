@@ -16,7 +16,8 @@ Usage (PDF):
         --db-path mapcodoc_output/numpy.db \\
         --library-name numpy \\
         --version 2 \\
-        --pdf-path doc_processor/doc_artifacts/local_doc/numpy/v_2/numpy-ref.pdf
+        --pdf-path doc_processor/doc_artifacts/local_doc/numpy/v_2/numpy-ref.pdf \\
+        --names-file /api_names/numpy.txt
 
 Optional flags:
     --target-module xgboost          Filter members by API name prefix
@@ -45,7 +46,7 @@ from doc_processor.file_doc.extraction_utils import MemberExtractorConfig
 from doc_processor.file_doc.signature import MemberInput
 from doc_processor.file_doc.embeddings import EmbeddingModel
 from doc_processor.filter_doc import WebMemberExtractor, WebMemberInfo
-from doc_processor.file_doc.pipeline_pdf import extract_api_docs_from_pdf
+from doc_processor.file_doc.pipeline_pdf import extract_api_docs_from_pdf, _sanitize_filename
 from mapcodoc_db.query import MemberDetails, InheritedMemberDetails
 
 
@@ -112,12 +113,14 @@ class ExtractionTestRunner(DocProcessingRunner):
         version: str,
         semantic_mode: str = "auto",
         overwrite: bool = False,
-        api_section_titles: Optional[List[str]] = None
+        api_section_titles: Optional[List[str]] = None,
+        sample_names: Optional[List[str]] = None
     ):
         super().__init__(db_path, library_name, version)
         self.semantic_mode = semantic_mode
         self.overwrite = overwrite 
         self.api_section_titles = api_section_titles
+        self.sample_names = sample_names   # None => all members; else restrict to these
         self._match_metadata: dict = {} # Populated during extraction; maps api_name -> {match_type, score}
 
     # ── Override: web pipeline that skips crawling ────────────────────────────
@@ -296,6 +299,108 @@ class ExtractionTestRunner(DocProcessingRunner):
 
     # ── Public test entry point ───────────────────────────────────────────────
 
+    def _resolve_sample_members(self, sample_names: List[str]):
+        """
+        Resolve each sample API name to EITHER a standalone (direct) member or an inherited member, by exact identity, so a method listed both under its
+        defining class (standalone) and under an inheriting class (inherited) resolves to two distinct entries, each extracted separately.
+        
+        Resolution order (avoids all_api_names aliases swallowing inherited paths):
+            1. exact DBMember.primary_api_name        -> standalone (direct)
+            2. exact DBInheritedMember.inherited_api_name -> inherited
+            3. alias fallback (all_api_names)         -> direct
+            
+        Returns (direct_members, inherited_pairs, unresolved).
+        """
+        direct, inherited_pairs, unresolved = [], [], []
+        seen_direct, seen_inherited = set(), set()
+        
+        for name in sample_names:
+            # 1. Standalone member, matched on its canonical (primary) API name.
+            member = self.qm.get_member_by_api_name(name)
+            
+            if member is None:
+                # 2. Inherited member, matched on its derived path under the inheriting class (distinct name from the standalone original).
+                inh = self.qm.get_inherited_member_by_api_name(name)
+                if inh is not None:
+                    if inh.inherited_api_name not in seen_inherited:
+                        seen_inherited.add(inh.inherited_api_name)
+                        original = self.qm.get_original_member_for_inherited(name)
+                        inherited_pairs.append((inh, original))
+                    continue
+                # 3. Last resort: a secondary alias of a direct member.
+                member = self.qm.get_member_by_any_api_name(name)
+                
+            if member is not None:
+                key = member.fqn or name
+                if key not in seen_direct:
+                    seen_direct.add(key)
+                    direct.append(member)
+                continue
+            
+            unresolved.append(name)
+            
+        return direct, inherited_pairs, unresolved
+    
+    
+    def _inject_class_anchors(self, pipeline_inputs: List[MemberInput]) -> Set[str]:
+        """
+        Ensure every method's parent class is present in `pipeline_inputs` as a 'class' member, so the PDF pipeline can anchor (scope) the method to it.
+
+        The PDF extractor scopes each method to its parent class's text region and returns 'not_found' when the parent class isn't anchored. In sample mode the
+        inheriting class is often absent, so its methods/inherited members silently drop. These added classes serve ONLY as extraction anchors: they are appended
+        to pipeline_inputs in place but are NOT added to the report's member sets.
+
+        Returns the set of api_names added purely as anchors (for later pruning).
+        """
+        present_classes = {mi.api_name for mi in pipeline_inputs if mi.member_type == "class"}
+        parents_needed = {
+            mi.api_name.rsplit(".", 1)[0]
+            for mi in pipeline_inputs
+            if mi.member_type == "method" and "." in (mi.api_name or "")
+        }
+
+        anchor_names: Set[str] = set()
+        for parent in sorted(parents_needed - present_classes):
+            cls = self.qm.get_member_by_api_name(parent) or self.qm.get_member_by_any_api_name(parent)
+            # If the parent resolves to a non-class (e.g. a module), it can't anchor.
+            if cls is not None and cls.type != "class":
+                continue
+            pipeline_inputs.append(MemberInput(
+                api_name=parent,                                  # must equal method.rsplit('.',1)[0]
+                signature_variants=(cls.signatures if cls else {}) or {},
+                member_type="class",
+                docstring="",
+            ))
+            anchor_names.add(parent)
+
+        if anchor_names:
+            logger.info(f"Added {len(anchor_names)} class anchor(s) for method scoping: , ".join(sorted(anchor_names)))
+        return anchor_names
+
+    def _prune_anchor_artifacts(self, anchor_names: Set[str]) -> None:
+        """
+        Remove per-member .txt files and extracted_docs.json entries for classes added solely as method-scoping anchors, so they don't appear in the result.
+        """
+        if not anchor_names:
+            return
+
+        for name in anchor_names:
+            f = self.per_member_dir / f"{_sanitize_filename(name)}.txt"
+            if f.exists():
+                f.unlink()
+
+        json_path = self.scraped_doc_dir / "extracted_docs.json"
+        if json_path.exists():
+            try:
+                data = json.loads(json_path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                return
+            if any(name in data for name in anchor_names):
+                for name in anchor_names:
+                    data.pop(name, None)
+                json_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
     def run_extraction_test(
         self,
         url_file: Optional[str] = None,
@@ -324,14 +429,26 @@ class ExtractionTestRunner(DocProcessingRunner):
 
         # ── Load members from DB ──────────────────────────────────────────
         logger.info("Loading members from database...")
-        members_db = self._get_target_members(target_module)
-        if not members_db:
-            logger.warning("No members found in the database. Aborting.")
-            return {}
-
-        class_members = [m for m in members_db if m.type == "class"]
-        inherited_members = self._get_inherited_members_for_pipeline(class_members)
-
+        
+        if self.sample_names:
+            members_db, inherited_members, unresolved = self._resolve_sample_members(self.sample_names)
+            logger.info(
+                f"Sample: resolved {len(members_db)} direct + {len(inherited_members)} inherited "
+                f"from {len(self.sample_names)} names ({len(unresolved)} unresolved)"
+            )
+            if unresolved:
+                logger.warning("Unresolved sample names: " + ", ".join(unresolved))
+            if not members_db and not inherited_members:
+                logger.warning("No sample members resolved in the database. Aborting.")
+                return {}
+        else:
+            members_db = self._get_target_members(target_module)
+            if not members_db:
+                logger.warning("No members found in the database. Aborting.")
+                return {}
+            class_members = [m for m in members_db if m.type == "class"]
+            inherited_members = self._get_inherited_members_for_pipeline(class_members)
+        
         pipeline_inputs = [
             MemberInput(
                 api_name=m.api_name or m.fqn,
@@ -343,7 +460,7 @@ class ExtractionTestRunner(DocProcessingRunner):
         ]
         for inherited, original_member in inherited_members:
             pipeline_inputs.append(self._inherited_to_member_input(inherited, original_member))
-
+            
         logger.info(f"Members: {len(members_db)} direct + {len(inherited_members)} inherited = {len(pipeline_inputs)} total")
 
         # ── Run extraction ────────────────────────────────────────────────
@@ -351,7 +468,10 @@ class ExtractionTestRunner(DocProcessingRunner):
             stat_info = _load_stat_info(Path(url_file))
             self._run_web_pipeline_from_file(url_file, stat_info, pipeline_inputs)
         else:
+            # Add inheriting/parent classes as anchors only (PDF pipeline scopes methods to their parent class; an unanchored parent => not_found).
+            anchor_names = self._inject_class_anchors(pipeline_inputs)
             self._run_pdf_pipeline_test(pdf_path, pipeline_inputs)
+            self._prune_anchor_artifacts(anchor_names)
             # Read match metadata from PDF pipeline saved extracted_docs.json
             _collect_pdf_match_metadata(self.scraped_doc_dir, self._match_metadata)
 
@@ -400,6 +520,18 @@ def _load_stat_info(url_file: Path) -> Dict:
                 base_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path.rsplit('/', 1)[0]}/"
                 return {"base_url": base_url, "sub_path": ""}
     raise RuntimeError(f"Could not determine base_url from {url_file}")
+
+
+def _load_sample_names(path: str) -> List[str]:
+    """Read sample API names (one per line), preserving order, dropping blanks/dupes."""
+    seen, names = set(), []
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            n = line.strip()
+            if n and n not in seen:
+                seen.add(n)
+                names.append(n)
+    return names
 
 
 def _collect_pdf_match_metadata(scraped_doc_dir: Path, metadata_log: dict) -> None:
@@ -592,9 +724,7 @@ def _print_report(report: Dict) -> None:
 # ==============================================================================
 
 def _parse_args():
-    p = argparse.ArgumentParser(
-        description="Test extraction pipeline (Steps 1–3 only, no LLM or DB writes)."
-    )
+    p = argparse.ArgumentParser(description="Test extraction pipeline (Steps 1–3 only, no LLM or DB writes).")
     p.add_argument("--db-path", required=True, help="Path to MapCoDoc SQLite database")
     p.add_argument("--library-name", required=True, help="Library name (e.g. xgboost)")
     p.add_argument("--version", required=True, help="Library version (e.g. 3.2.0-dev)")
@@ -605,13 +735,10 @@ def _parse_args():
     src.add_argument("--pdf-path", help="Path to local PDF documentation file (PDF mode)")
 
     p.add_argument("--target-module", default=None, help="Filter members by API name prefix")
-    p.add_argument("--semantic-mode", default="auto",
-                   choices=["auto", "never", "always", "only"],
-                   help="Semantic search strategy (default: auto)")
-    p.add_argument("--overwrite", action="store_true",
-                   help="Clear and re-extract per_member/ files even if they already exist")
-    p.add_argument("--report-file", default=None,
-                   help="Optional path to save JSON report (e.g. results.json)")
+    p.add_argument("--names-file", default=None, help="File of sample API names (one per line). When given, only these members are extracted.")
+    p.add_argument("--semantic-mode", default="auto", choices=["auto", "never", "always", "only"], help="Semantic search strategy (default: auto)")
+    p.add_argument("--overwrite", action="store_true", help="Clear and re-extract per_member/ files even if they already exist")
+    p.add_argument("--report-file", default=None, help="Optional path to save JSON report (e.g. results.json)")
     p.add_argument("--api-section-titles",
                    nargs="+",
                    default=None,
@@ -619,7 +746,7 @@ def _parse_args():
                     "Optional list of PDF section titles that mark API-reference chapters "
                     "(case-insensitive, whitespace-tolerant). When provided, replaces the "
                     "default keyword-based section detection. Example: "
-                    '--api-section-titles "SQLAlchemy ORM" "SQLAlchemy Core" "SQLAlchemy Events"'),
+                    '--api-section-titles "SQLAlchemy ORM" "SQLAlchemy Core" "SQLAlchemy Events"')
     )
     return p.parse_args()
 
@@ -633,7 +760,8 @@ if __name__ == "__main__":
         version=args.version,
         semantic_mode=args.semantic_mode,
         overwrite=args.overwrite,
-        api_section_titles=args.api_section_titles
+        api_section_titles=args.api_section_titles,
+        sample_names=_load_sample_names(args.names_file) if args.names_file else None
     )
 
     runner.run_extraction_test(

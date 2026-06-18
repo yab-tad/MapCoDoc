@@ -405,10 +405,8 @@ class StopSignalMatcher:
         # If no primary match found, enable fallback
         if not primary_match_found and self.fallback_patterns:
             self.use_fallback = True
-            # For CLASS extraction: if using fallback (methods), we want to find
-            # the LAST method to ensure all are included. This is handled by
-            # letting extraction continue until we hit a method AFTER all our
-            # class's methods have been documented.
+            # For CLASS extraction: if using fallback (methods), we want to find the LAST method to ensure all are included. This is handled by
+            # letting extraction continue until we hit a method AFTER all our class's methods have been documented.
     
     def checks_stop(self, line: str) -> Tuple[bool, bool]:
         """

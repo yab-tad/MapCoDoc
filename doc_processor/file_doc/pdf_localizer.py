@@ -36,6 +36,56 @@ def _get_latex_ocr_model():
     return _latex_ocr_model if _latex_ocr_model else None
 
 
+# ---------------------------------------------------------------------------
+# Math glyph -> LaTeX conversion (deterministic, dependency-free).
+# Turns PDF-extracted math symbols/greek into LLM-readable LaTeX tokens.
+# ---------------------------------------------------------------------------
+_UNICODE_TO_LATEX = {
+    '∑': r'\sum', '∏': r'\prod', '∫': r'\int', '√': r'\sqrt', '∞': r'\infty',
+    '∂': r'\partial', '∇': r'\nabla', '±': r'\pm', '∓': r'\mp',
+    '×': r'\times', '÷': r'\div', '·': r'\cdot', '∘': r'\circ',
+    '≤': r'\le', '≥': r'\ge', '≠': r'\ne', '≈': r'\approx', '≡': r'\equiv',
+    '∝': r'\propto', '∼': r'\sim', '≪': r'\ll', '≫': r'\gg',
+    '∈': r'\in', '∉': r'\notin', '∋': r'\ni', '⊂': r'\subset', '⊃': r'\supset',
+    '⊆': r'\subseteq', '⊇': r'\supseteq', '∪': r'\cup', '∩': r'\cap',
+    '∀': r'\forall', '∃': r'\exists', '∄': r'\nexists', '∅': r'\emptyset',
+    '⌊': r'\lfloor', '⌋': r'\rfloor', '⌈': r'\lceil', '⌉': r'\rceil',
+    '→': r'\to', '←': r'\leftarrow', '⇒': r'\Rightarrow', '⇐': r'\Leftarrow',
+    '↔': r'\leftrightarrow', '⇔': r'\Leftrightarrow', '↦': r'\mapsto',
+    'ℝ': r'\mathbb{R}', 'ℕ': r'\mathbb{N}', 'ℤ': r'\mathbb{Z}',
+    'ℚ': r'\mathbb{Q}', 'ℂ': r'\mathbb{C}', 'ℓ': r'\ell',
+    'α': r'\alpha', 'β': r'\beta', 'γ': r'\gamma', 'δ': r'\delta',
+    'ε': r'\epsilon', 'ζ': r'\zeta', 'η': r'\eta', 'θ': r'\theta',
+    'ι': r'\iota', 'κ': r'\kappa', 'λ': r'\lambda', 'μ': r'\mu', 'ν': r'\nu',
+    'ξ': r'\xi', 'π': r'\pi', 'ρ': r'\rho', 'σ': r'\sigma', 'τ': r'\tau',
+    'υ': r'\upsilon', 'φ': r'\phi', 'χ': r'\chi', 'ψ': r'\psi', 'ω': r'\omega',
+    'Γ': r'\Gamma', 'Δ': r'\Delta', 'Θ': r'\Theta', 'Λ': r'\Lambda',
+    'Ξ': r'\Xi', 'Π': r'\Pi', 'Σ': r'\Sigma', 'Φ': r'\Phi', 'Ψ': r'\Psi', 'Ω': r'\Omega',
+    '⁰': '^0', '¹': '^1', '²': '^2', '³': '^3', '⁴': '^4', '⁵': '^5',
+    '⁶': '^6', '⁷': '^7', '⁸': '^8', '⁹': '^9',
+    '₀': '_0', '₁': '_1', '₂': '_2', '₃': '_3', '₄': '_4', '₅': '_5',
+    '₆': '_6', '₇': '_7', '₈': '_8', '₉': '_9'
+}
+
+_MATH_GLYPH_RE = re.compile('[' + ''.join(re.escape(k) for k in _UNICODE_TO_LATEX) + ']')
+
+
+def _glyph_to_latex(c: str) -> str:
+    return _UNICODE_TO_LATEX.get(c, c)
+
+
+def _transliterate_math(text: str) -> str:
+    """
+    Map inline unicode math glyphs to LaTeX tokens (ASCII output, no $-wrapping).
+    PROSE-ONLY: callers must not pass code/table rows, since length changes would shift column alignment.
+    """
+    if not _MATH_GLYPH_RE.search(text):
+        return text
+    out = _MATH_GLYPH_RE.sub(lambda m: _glyph_to_latex(m.group(0)), text)
+    # Avoid gluing "\alpha" to a following alnum: "\alphax" -> "\alpha x".
+    return re.sub(r'(\\[A-Za-z]+)(?=[A-Za-z0-9])', r'\1 ', out)
+
+
 @dataclass
 class Section:
     id: str
@@ -86,7 +136,7 @@ class PDFSectionizer:
         s = s.replace('\u201c', '"').replace('\u201d', '"')
         # Collapse whitespace OUTSIDE code blocks only
         # Split by code fences, normalize non-code parts, rejoin
-        parts = re.split(r'(```[\s\S]*?```)', s)
+        parts = re.split(r'(```[\s\S]*?```|\$\$[\s\S]*?\$\$)', s)
         normalized_parts = []
         for i, part in enumerate(parts):
             if (part.startswith('```') and part.endswith('```')) or (part.startswith('$$') and part.endswith('$$')):
@@ -975,6 +1025,69 @@ class PDFSectionizer:
         return True, end_idx
 
 
+    def _linearize_equation_chars(self, all_chars: List[Dict[str, Any]]) -> str:
+        """
+        Render harvested equation glyphs as compact LaTeX instead of a 2-D ASCII grid. 
+        Reconstructs super/subscripts from glyph size and baseline, and maps unicode math symbols to LaTeX tokens. Returns a $$...$$ block.
+        """
+        if not all_chars:
+            return ""
+
+        sizes = sorted(c["size"] for c in all_chars if c.get("size", 0) > 0)
+        body_size = sizes[len(sizes) // 2] if sizes else 10.0
+
+        # Cluster into baseline bands so stacked display math becomes lines.
+        chars = sorted(all_chars, key=lambda c: c["y"])
+        bands: List[List[Dict[str, Any]]] = []
+        band_tol = max(body_size * 0.6, 3.0)
+        for c in chars:
+            if bands and abs(c["y"] - bands[-1][-1]["y"]) <= band_tol:
+                bands[-1].append(c)
+            else:
+                bands.append([c])
+
+        lines: List[str] = []
+        for band in bands:
+            band.sort(key=lambda c: c["x"])
+            big = [c for c in band if c["size"] >= 0.9 * body_size] or band
+            base_y = sorted(c["y"] for c in big)[len(big) // 2]
+            base_sz = sorted(c["size"] for c in big)[len(big) // 2]
+
+            out: List[str] = []
+            mode = "base"  # base | super | sub
+            for c in band:
+                glyph = _glyph_to_latex(c["c"])
+                small = c["size"] <= 0.85 * base_sz
+                raise_ = base_y - c["y"]  # > 0 => higher on page (superscript)
+                if small and raise_ > 0.15 * base_sz:
+                    want = "super"
+                elif small and raise_ < -0.15 * base_sz:
+                    want = "sub"
+                else:
+                    want = "base"
+
+                if want != mode:
+                    if mode in ("super", "sub"):
+                        out.append("}")
+                    if want == "super":
+                        out.append("^{")
+                    elif want == "sub":
+                        out.append("_{")
+                    mode = want
+                out.append(glyph)
+            if mode in ("super", "sub"):
+                out.append("}")
+
+            line = re.sub(r'\s+', ' ', "".join(out)).strip()
+            if line:
+                lines.append(line)
+
+        if not lines:
+            return ""
+        body = r" \\ ".join(lines) if len(lines) > 1 else lines[0]
+        return f"$$\n{body}\n$$"
+    
+    
     def _extract_equation_from_rect(self, page: fitz.Page, rect: fitz.Rect, link_map: List) -> str:
         """
         Extract equation from a page rectangle using character-level positioning.
@@ -1045,83 +1158,7 @@ class PDFSectionizer:
         if not all_chars:
             return ""
         
-        # Calculate grid parameters
-        min_x = min(c["x"] for c in all_chars)
-        max_x = max(c["x"] + c["width"] for c in all_chars)
-        min_y = min(c["y"] for c in all_chars)
-        max_y = max(c["y"] for c in all_chars)
-        
-        # Cell width: use median character width
-        widths = sorted([c["width"] for c in all_chars if c["width"] > 1])
-        cell_width = widths[len(widths) // 2] if widths else 5.0
-        cell_width = max(cell_width, 2.5)
-        
-        # Cell height: based on smallest font (for subscripts)
-        sizes = [c["size"] for c in all_chars if c["size"] > 0]
-        cell_height = (min(sizes) if sizes else 8.0) * 1.1
-        cell_height = max(cell_height, 5.0)
-        
-        # Grid dimensions
-        cols = int((max_x - min_x) / cell_width) + 2
-        rows = int((max_y - min_y) / cell_height) + 2
-        
-        # Safety limits
-        cols = min(max(cols, 1), 400)
-        rows = min(max(rows, 1), 100)
-        
-        # Initialize grid
-        grid = [[' ' for _ in range(cols)] for _ in range(rows)]
-        occupied = [[False for _ in range(cols)] for _ in range(rows)]
-        
-        # Sort by position for consistent placement
-        all_chars.sort(key=lambda c: (round(c["y"] / cell_height), c["x"]))
-        
-        # Place characters
-        for char in all_chars:
-            col = int((char["x"] - min_x) / cell_width)
-            row = int((char["y"] - min_y) / cell_height)
-            
-            if not (0 <= row < rows and 0 <= col < cols):
-                continue
-            
-            c = char["c"]
-            
-            # Try to place in empty cell
-            placed = False
-            for offset in [0, 1, -1, 2, -2]:
-                test_col = col + offset
-                if 0 <= test_col < cols and not occupied[row][test_col]:
-                    grid[row][test_col] = c
-                    occupied[row][test_col] = True
-                    placed = True
-                    break
-            
-            if not placed:
-                # Overwrite if necessary
-                grid[row][col] = c
-        
-        # Build output lines
-        lines = [''.join(row).rstrip() for row in grid]
-        
-        # Trim empty lines
-        while lines and not lines[0].strip():
-            lines.pop(0)
-        while lines and not lines[-1].strip():
-            lines.pop()
-        
-        # Remove common leading indent
-        if lines:
-            min_indent = min(
-                (len(line) - len(line.lstrip()) for line in lines if line.strip()),
-                default=0
-            )
-            if min_indent > 0:
-                lines = [line[min_indent:] if len(line) >= min_indent else line for line in lines]
-        
-        if not lines:
-            return ""
-        
-        return f"```\n{chr(10).join(lines)}\n```"
+        return self._linearize_equation_chars(all_chars)
     
     
     def _batch_ocr_equations(self, page: fitz.Page, equation_rects: List[fitz.Rect]) -> Dict[int, str]:
@@ -1859,6 +1896,12 @@ class PDFSectionizer:
                 if leading_indent_chars > 0:
                     text_parts.append(' ' * leading_indent_chars)
                 
+                # Body font metrics for endnote-superscript detection
+                _row_sizes = [sp.get("size", 0) for sp in all_spans if sp.get("size", 0) > 0]
+                _body_size = max(_row_sizes) if _row_sizes else 0.0
+                _bottoms = [sp["bbox"][3] for sp in all_spans if sp.get("size", 0) >= 0.9 * _body_size]
+                _body_bottom = sorted(_bottoms)[len(_bottoms) // 2] if _bottoms else 0.0
+                
                 for sp in all_spans:
                     t = sp.get("text", "")
                     if not t:
@@ -1866,32 +1909,30 @@ class PDFSectionizer:
                     
                     sp_x0 = sp["bbox"][0]
                     sp_x1 = sp["bbox"][2]
+                    span_bbox = sp.get("bbox")
+                    link_uri = self._get_link_for_span(span_bbox, link_map) if span_bbox else None
                     
-                    # Calculate gap from previous span (not from margin for subsequent spans)
+                    # Drop linked superscript endnote numbers (torch PDF cross-ref artifact): raised + smaller + digit-only + carries a link.
+                    if (link_uri and t.strip().isdigit() and _body_size
+                            and sp.get("size", _body_size) <= 0.85 * _body_size
+                            and (_body_bottom - sp["bbox"][3]) > 0.1 * _body_size):
+                        prev_span_end_x = sp_x1
+                        continue
+                    
+                    # Calculate gap from previous span
                     if prev_span_end_x is not None:
                         gap = sp_x0 - prev_span_end_x
-                        
                         if gap > char_width * 1.5:
-                            num_spaces = int(round(gap / char_width))
-                            num_spaces = max(1, num_spaces)
-                            # Detect merged lines: two logically separate elements at the same y-coordinate in the PDF
+                            num_spaces = max(1, int(round(gap / char_width)))
                             _callable_start = re.match(r'^[A-Za-z_]\w*\((?!https?://)', t.strip())
-                            if (not row_is_code
-                                    and not row_is_table
-                                    and num_spaces >= 5
-                                    and _callable_start):
-                                # Split: the right-side callable belongs on its own line.
-                                # Re-use the leading indent already computed for this row.
+                            if (not row_is_code and not row_is_table
+                                    and num_spaces >= 5 and _callable_start):
                                 indent_str = ' ' * leading_indent_chars
                                 text_parts.append('\n' + indent_str)
                             else:
                                 text_parts.append(' ' * num_spaces)
                         elif gap > char_width * 0.3:
                             text_parts.append(' ')
-                    
-                    # Check for hyperlink
-                    span_bbox = sp.get("bbox")
-                    link_uri = self._get_link_for_span(span_bbox, link_map) if span_bbox else None
                     
                     if link_uri:
                         text_parts.append(f"{t}({link_uri})")
@@ -1901,6 +1942,7 @@ class PDFSectionizer:
                     prev_span_end_x = sp_x1
                 
                 text_str = "".join(text_parts)
+                text_str = _transliterate_math(text_str)   # prose-only path
                 
                 # This handles multi-span callables in separate PDF spans) that the per-span check cannot catch
                 if not row_is_code and not row_is_table:
@@ -2035,16 +2077,12 @@ class PDFSectionizer:
         # ───────────────────────────────────────────────────────────────────────────
         
         # ── Page-level post-process: split signature merged with description ────
-        # Sphinx-built PDFs (notably SQLAlchemy 2.x) sometimes place the API
-        # signature and the first sentence of its description on the same physical
-        # line, e.g. "function … (…) → str Return the attribute name…".
+        # Sphinx-built PDFs (notably SQLAlchemy 2.x) sometimes place the API signature and the first sentence of its description on the same physical line, e.g. "function … (…) → str Return the attribute name…".
         #
         # Grammar-based split: a Python return-type expression cannot legally end with "<TypeName>  Capital-letter-word  lower-case-word"
         # inside a type, a CamelCase token is always followed by '[', '|', ',', or ']'. Therefore that combination is an unambiguous marker for sentence-start prose.
         #
-        # False-negative-safe additions: a small allow-list of lowercase phrases
-        # that SQLAlchemy uses ("inherited from <X>", "Provide a <Y>") which
-        # reliably begin a description but do not start with a capitalised verb.
+        # False-negative-safe additions: a small allow-list of lowercase phrases that SQLAlchemy uses ("inherited from <X>", "Provide a <Y>") which reliably begin a description but do not start with a capitalised verb.
         _RT_DESC_SPLIT_RE = re.compile(
             r'((?:→|->)[^\n]+?)'                 # group 1: arrow + return-type expression (lazy)
             r'(?<=[\w\)\]])'                     # type expression must end on a word, ')', or ']'

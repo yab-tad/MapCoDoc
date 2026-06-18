@@ -37,7 +37,8 @@ class MemberExtractorConfig:
         snippet_boost_weight: float = 0.5,
         min_lexical_score: float = 25.0,
         min_semantic_score: float = 30.0,
-        min_fallback_score: float = 15.0
+        min_fallback_score: float = 15.0,
+        use_stop_signals: bool = False 
     ):
         self.semantic_mode = semantic_mode
         self.lexical_sigma_k = lexical_sigma_k
@@ -50,6 +51,7 @@ class MemberExtractorConfig:
         self.min_lexical_score = min_lexical_score
         self.min_semantic_score = min_semantic_score
         self.min_fallback_score = min_fallback_score
+        self.use_stop_signals = use_stop_signals
 
 
 def _dynamic_threshold(scores: np.ndarray) -> float:

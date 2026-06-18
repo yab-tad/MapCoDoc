@@ -116,9 +116,7 @@ class PDFExtractor:
         lines = full_text[start_line_idx:].splitlines(keepends=True)
         
         # --- First pass: Try with current patterns (primary or fallback from pre-scan) ---
-        extracted_lines, found_stop, hit_max_chars = self._extract_lines_until_stop(
-            lines, stop_matcher
-        )
+        extracted_lines, found_stop, hit_max_chars = self._extract_lines_until_stop(lines, stop_matcher)
         
         # --- Fallback retry for CLASS extraction ---
         # If we hit max_chars without finding a stop, and this is CLASS extraction,
@@ -134,9 +132,7 @@ class PDFExtractor:
             
             # Force fallback mode and re-extract
             stop_matcher.use_fallback = True
-            extracted_lines, found_stop, _ = self._extract_lines_until_stop(
-                lines, stop_matcher
-            )
+            extracted_lines, found_stop, _ = self._extract_lines_until_stop(lines, stop_matcher)
         
         return "".join(extracted_lines), list(range(section.page_start, section.page_end))
 
@@ -975,7 +971,7 @@ class MemberExtractor:
             
             # Initialize stop matcher
             stop_matcher = None
-            if peer_signatures and mi.api_name in peer_signatures:
+            if self.cfg.use_stop_signals and peer_signatures and mi.api_name in peer_signatures:
                 stop_matcher = StopSignalMatcher(
                     peer_signatures=peer_signatures[mi.api_name],
                     target_member_type=mi.member_type,
