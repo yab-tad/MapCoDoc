@@ -15,12 +15,19 @@ from typing import List, Dict, Any, Tuple, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import numpy as np
 
-from doc_processor.file_doc.extraction_utils import MemberExtractorConfig, _windows, _dynamic_threshold, _should_use_semantic_member
 from doc_processor.filter_doc import StopSignalMatcher
 from doc_processor.file_doc.pdf_localizer import PDFSectionizer, Section
 from doc_processor.file_doc.embeddings import EmbeddingModel
 from doc_processor.file_doc.chunk_selector import APIReferenceLocator
 from doc_processor.file_doc.hybrid_search import section_match_score, cosine_similarity, find_needle_in_lines, _strip_noise_tokens
+from doc_processor.file_doc.extraction_utils import (
+    MemberExtractorConfig, 
+    _windows, 
+    _dynamic_threshold, 
+    _should_use_semantic_member, 
+    build_shared_name_set, 
+    to_artifact_stem
+)
 from doc_processor.file_doc.signature import (
     MemberInput, 
     build_signature_patterns, 
@@ -1451,10 +1458,12 @@ def extract_api_docs_from_pdf(
 
     # 5b. write per-API .txt mirror (post-aggregation)
     if per_api_txt_dir:
+        shared = build_shared_name_set(m.api_name for m in members)
+        type_by_api = {m.api_name: m.member_type for m in members}
         for api_fqn, payload in output.items():
             if not (payload.get("text") or "").strip():
-                continue   # not_found / empty extraction -> no phantom file
-            fname = _sanitize_filename(api_fqn) + ".txt"
+                continue
+            fname = to_artifact_stem(api_fqn, type_by_api.get(api_fqn), shared) + ".txt"
             with open(os.path.join(per_api_txt_dir, fname), "w", encoding="utf-8") as ftxt:
                 ftxt.write(payload["text"])
 

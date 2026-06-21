@@ -44,6 +44,7 @@ if str(ROOT) not in sys.path:
 from mapcodoc_db.db_manager import MapCoDocDB
 from mapcodoc_db.query import QueryManager
 from mapcodoc_db.db_models import DBMember
+from doc_processor.file_doc.extraction_utils import build_shared_name_set, to_artifact_stem, parse_artifact_stem
 
 
 # ---------------------------------------------------------------------------
@@ -96,13 +97,32 @@ def resolve_member_key(session, qm: QueryManager, api_name: str, cache: dict):
     return key
 
 
+def _sample_member_type(session, qm: QueryManager, api_name: str) -> str:
+    """
+    Member type ('class'/'function'/'method'/...) for an API name, used only to
+    suffix case-shared artifact folder names. Falls back to 'function'/'method'
+    when the exact row carries no type, and 'function' when unresolved.
+    """
+    member = find_db_member(session, api_name)
+    if member is not None:
+        return member.member_type or "function"
+
+    inh = qm.get_inherited_member_by_api_name(api_name)
+    if inh is not None:
+        return inh.member_type or "method"
+
+    return "function"
+
+
+
 # ---------------------------------------------------------------------------
 # Doc folder indexing
 # ---------------------------------------------------------------------------
 
 def _doc_api_name(path: Path) -> str:
     """File stem as an API name (strip a trailing '.txt'; keep dotted name intact)."""
-    return path.name[:-4] if path.name.endswith(".txt") else path.stem
+    stem = path.name[:-4] if path.name.endswith(".txt") else path.stem
+    return parse_artifact_stem(stem)[0]   # strip '-<type>' before DB resolution
 
 
 def build_doc_index(folder: Path, session, qm, cache: dict, recursive: bool):
@@ -187,6 +207,7 @@ def collect(db_path, web_dir, pdf_dir, names_file, output_dir,
         pdf_by_name = {_doc_api_name(f): f for f in (pdf_dir.rglob("*.txt") if (pdf_dir and pdf_dir.exists() and recursive) else (pdf_dir.glob("*.txt") if pdf_dir and pdf_dir.exists() else []))}
 
         api_names = load_api_names(names_file)
+        shared = build_shared_name_set(api_names)
         results = []
         key_to_samples = {}  # detect multiple sample names hitting the same member
 
@@ -203,7 +224,8 @@ def collect(db_path, web_dir, pdf_dir, names_file, output_dir,
                 pdf_matches = [pdf_by_name[sample]] if sample in pdf_by_name else []
                 match_mode = "filename_fallback"
 
-            member_dir = out_root / sanitize_dirname(sample)
+            member_type = _sample_member_type(session, qm, sample)   # DBMember.member_type / inherited.member_type
+            member_dir = out_root / sanitize_dirname(to_artifact_stem(sample, member_type, shared))
             web_copied = copy_into(web_matches, member_dir / "web_doc") if web_matches else []
             pdf_copied = copy_into(pdf_matches, member_dir / "pdf_doc") if pdf_matches else []
 

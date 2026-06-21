@@ -1,6 +1,44 @@
 import os
-from typing import Optional, List, Tuple
+from collections import defaultdict
+from typing import Optional, List, Tuple, Iterable
 import numpy as np
+
+
+
+# Reserved sentinels. '-' is not a legal Python identifier char, so a real FQN can never end in one of these -> stripping is unambiguous.
+_MEMBER_TYPE_SUFFIXES = ("class", "function", "method", "property", "variable", "attribute", "module")
+
+
+def build_shared_name_set(api_names: Iterable[str]) -> set:
+    """API names that collide only by letter case (unsafe on case-insensitive FS)."""
+    groups = defaultdict(set)
+    for name in api_names:
+        if name:
+            groups[name.casefold()].add(name)
+    shared = set()
+    for variants in groups.values():
+        if len(variants) > 1:
+            shared.update(variants)
+    return shared
+
+
+def _fs_safe(stem: str) -> str:
+    return stem.replace(" ", "_").replace("/", "_").replace("\\", "_").replace(":", "_")
+
+
+def to_artifact_stem(api_name: str, member_type: Optional[str], shared_names: set) -> str:
+    """Filename stem for a member. Case-shared names get a '-<member_type>' suffix so class vs function (Stream vs stream) don't clobber each other on NTFS."""
+    stem = f"{api_name}-{member_type}" if (api_name in shared_names and member_type) else api_name
+    return _fs_safe(stem)
+
+
+def parse_artifact_stem(stem: str) -> Tuple[str, Optional[str]]:
+    """Inverse of to_artifact_stem -> (true_api_name, member_type | None)."""
+    for t in _MEMBER_TYPE_SUFFIXES:
+        suffix = f"-{t}"
+        if stem.endswith(suffix):
+            return stem[: -len(suffix)], t
+    return stem, None
 
 
 

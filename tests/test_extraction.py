@@ -42,7 +42,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from doc_processor.doc_runner import DocProcessingRunner
 from doc_processor.web_doc.doc_scraper import scrape_doc
-from doc_processor.file_doc.extraction_utils import MemberExtractorConfig
+from doc_processor.file_doc.extraction_utils import MemberExtractorConfig, build_shared_name_set, to_artifact_stem, parse_artifact_stem
 from doc_processor.file_doc.signature import MemberInput
 from doc_processor.file_doc.embeddings import EmbeddingModel
 from doc_processor.filter_doc import WebMemberExtractor, WebMemberInfo
@@ -114,9 +114,10 @@ class ExtractionTestRunner(DocProcessingRunner):
         semantic_mode: str = "auto",
         overwrite: bool = False,
         api_section_titles: Optional[List[str]] = None,
-        sample_names: Optional[List[str]] = None
+        sample_names: Optional[List[str]] = None,
+        respect_robots: bool = True
     ):
-        super().__init__(db_path, library_name, version)
+        super().__init__(db_path, library_name, version, respect_robots=respect_robots)
         self.semantic_mode = semantic_mode
         self.overwrite = overwrite 
         self.api_section_titles = api_section_titles
@@ -149,7 +150,9 @@ class ExtractionTestRunner(DocProcessingRunner):
                 f.unlink()
             logger.info(f"Overwrite mode: cleared {self.per_member_dir}")
 
-        asyncio.run(scrape_doc(self.library_name, self.version, url_file, stat_info))
+        _types = {mi.api_name: mi.member_type for mi in members}
+        _name_fn = lambda s: to_artifact_stem(s, _types.get(s), self._shared_names)
+        asyncio.run(scrape_doc(self.library_name, self.version, url_file, stat_info, respect_robots=self.respect_robots, name_fn=_name_fn))
 
         logger.info("=== Step 3: Extracting per-member documentation ===")
         self._run_step3(members)
@@ -220,7 +223,7 @@ class ExtractionTestRunner(DocProcessingRunner):
         # Track files already extracted from a previous run
         if self.per_member_dir.exists():
             for txt in self.per_member_dir.glob("*.txt"):
-                extracted_apis.add(txt.stem)
+                extracted_apis.add(parse_artifact_stem(txt.stem)[0])
 
         containers_to_filter = []
 
@@ -385,7 +388,7 @@ class ExtractionTestRunner(DocProcessingRunner):
             return
 
         for name in anchor_names:
-            f = self.per_member_dir / f"{_sanitize_filename(name)}.txt"
+            f = self.per_member_dir / f"{to_artifact_stem(name, 'class', self._shared_names)}.txt"
             if f.exists():
                 f.unlink()
 
@@ -462,6 +465,8 @@ class ExtractionTestRunner(DocProcessingRunner):
             pipeline_inputs.append(self._inherited_to_member_input(inherited, original_member))
             
         logger.info(f"Members: {len(members_db)} direct + {len(inherited_members)} inherited = {len(pipeline_inputs)} total")
+        
+        self._shared_names = build_shared_name_set(mi.api_name for mi in pipeline_inputs)
 
         # ── Run extraction ────────────────────────────────────────────────
         if url_file:
@@ -470,6 +475,7 @@ class ExtractionTestRunner(DocProcessingRunner):
         else:
             # Add inheriting/parent classes as anchors only (PDF pipeline scopes methods to their parent class; an unanchored parent => not_found).
             anchor_names = self._inject_class_anchors(pipeline_inputs)
+            self._shared_names = build_shared_name_set(mi.api_name for mi in pipeline_inputs)
             self._run_pdf_pipeline_test(pdf_path, pipeline_inputs)
             self._prune_anchor_artifacts(anchor_names)
             # Read match metadata from PDF pipeline saved extracted_docs.json
@@ -585,7 +591,8 @@ def _build_report(members_db, inherited_members, per_member_dir: Path, match_met
     if per_member_dir.exists():
         for txt in per_member_dir.glob("*.txt"):
             lines = txt.read_text(encoding="utf-8").splitlines()
-            extracted[txt.stem] = {
+            true_api, _ = parse_artifact_stem(txt.stem)
+            extracted[true_api] = {
                 "line_count": len(lines),
                 "first_line": lines[0].strip() if lines else "",
                 "file": str(txt),
@@ -738,6 +745,7 @@ def _parse_args():
     p.add_argument("--names-file", default=None, help="File of sample API names (one per line). When given, only these members are extracted.")
     p.add_argument("--semantic-mode", default="auto", choices=["auto", "never", "always", "only"], help="Semantic search strategy (default: auto)")
     p.add_argument("--overwrite", action="store_true", help="Clear and re-extract per_member/ files even if they already exist")
+    p.add_argument("--ignore-robots", action="store_true", help="Bypass robots.txt allow/deny rules (still honors crawl-delay and rate limiting). Use for controlled research scraping of public documentation.")
     p.add_argument("--report-file", default=None, help="Optional path to save JSON report (e.g. results.json)")
     p.add_argument("--api-section-titles",
                    nargs="+",
@@ -761,7 +769,8 @@ if __name__ == "__main__":
         semantic_mode=args.semantic_mode,
         overwrite=args.overwrite,
         api_section_titles=args.api_section_titles,
-        sample_names=_load_sample_names(args.names_file) if args.names_file else None
+        sample_names=_load_sample_names(args.names_file) if args.names_file else None,
+        respect_robots=not args.ignore_robots
     )
 
     runner.run_extraction_test(

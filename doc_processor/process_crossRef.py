@@ -110,30 +110,6 @@ def _strip_control_chars(text: str) -> str:
     return _CONTROL_CHARS_RE.sub('', text)
 
 
-def _is_equation_line(line: str) -> bool:
-    """
-    True if a line is (part of) a PDF-extracted formula rather than prose, judged by the density of strong math/Greek/bracket glyphs (fence-agnostic). A strong glyph
-    is required, so ASCII-only signature/prose lines (full of '=', '-') never match; ASCII operators only corroborate once a strong glyph is present. Such lines carry
-    no prose value and trigger LLM repetition loops, so callers collapse a run of them to a single "[equation]" marker.
-    """
-    stripped = line.strip()
-    if not stripped or stripped in ('```', '[equation]'):
-        return False
-    non_space = [c for c in stripped if not c.isspace()]
-    if not non_space:
-        return False
-
-    math_count = len(_MATH_CHARS_RE.findall(stripped))
-    if math_count == 0:
-        return False  # gate: no strong glyph -> not an equation
-
-    ascii_ops = sum(1 for c in stripped if c in _ASCII_MATH_OPS)
-    score = math_count + ascii_ops
-    # >=2 strong glyphs catches dense fragments; the ratio catches short formula lines.
-    return math_count >= 2 or (score / len(non_space)) >= 0.12
-
-
-
 # Collapse any whitespace run (including newlines), for signatures, which PDFs wrap across lines with alignment padding.
 _SIG_WS_RE = re.compile(r'\s+')
 
@@ -227,14 +203,6 @@ class URLReplacer:
             # Drop PDF endnote/bibliography lines ("6455 https://…").
             if _ENDNOTE_LINE_RE.match(line):
                 continue
-            
-            # # Collapse a run of equation lines to a single "[equation]" marker.
-            # if _is_equation_line(line):
-            #     if not prev_equation:
-            #         self.new_doc_lines.append('[equation]\n')
-            #         prev_equation = True
-            #     continue
-            # prev_equation = False
             
             if line.strip() == '':
                 blank_run += 1

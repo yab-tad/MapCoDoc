@@ -47,6 +47,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from doc_processor.doc_runner import DocProcessingRunner
 from doc_processor.file_doc.signature import MemberInput
+from doc_processor.file_doc.extraction_utils import parse_artifact_stem
 
 
 logging.basicConfig(
@@ -116,19 +117,6 @@ def load_collected_texts(collected_dir: str, source: str) -> Tuple[Dict[str, str
                 "all": [f.name for f in files],
             }
 
-    # Windows-filesystem guard: two sample names differing only by case would merge when seeded into per_member/. Keep the first, skip the rest.
-    by_lower = defaultdict(list)
-    for name in texts:
-        by_lower[name.lower()].append(name)
-    collisions = {k: sorted(v) for k, v in by_lower.items() if len(v) > 1}
-    if collisions:
-        notes["case_collisions_skipped"] = {}
-        for group in collisions.values():
-            for skipped in group[1:]:
-                texts.pop(skipped, None)
-                notes["case_collisions_skipped"][skipped] = f"collides with {group[0]}"
-        logger.warning(f"Case-insensitive name collisions; skipped: {list(notes['case_collisions_skipped'])}")
-
     return texts, notes
 
 
@@ -170,13 +158,14 @@ class StructuringTestRunner(DocProcessingRunner):
         logger.info(f"[{self.source}] Seeded {len(seeded)} per-member files into {self.per_member_dir}")
         return seeded
 
-    # ── MemberInput construction (type + signatures from DB) ─────────────────
-    def _build_inputs_for(self, api_names: List[str]) -> List[MemberInput]:
+    # ── MemberInput construction (type and signatures from DB) ─────────────────
+    def _build_inputs_for(self, stems: List[str]) -> List[MemberInput]:
         inputs = []
-        for api_name in api_names:
-            member_type, sig_variants = self._lookup_type_and_signatures(api_name)
+        for stem in stems:
+            true_api, _ = parse_artifact_stem(stem)
+            member_type, sig_variants = self._lookup_type_and_signatures(true_api)
             inputs.append(MemberInput(
-                api_name=api_name,
+                api_name=true_api,
                 signature_variants=sig_variants or {},
                 member_type=_normalize_member_type(member_type),
                 docstring=""
@@ -254,7 +243,7 @@ class StructuringTestRunner(DocProcessingRunner):
             members.append({
                 "api_name": api_name,
                 "source": self.source,
-                "type": type_by_name.get(api_name),
+                "type": type_by_name.get(parse_artifact_stem(api_name)[0]),
                 "preprocessed": pre.exists(),
                 "url_placeholders": n_placeholders,
                 "structured": struct_ok,

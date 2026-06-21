@@ -27,7 +27,7 @@ from doc_processor.structured_doc_extracter import DocumentationExtractor, Concu
 from doc_processor.web_doc.doc_scraper import scrape_doc
 from doc_processor.web_doc.url_crawler import save_urls_to_file
 from doc_processor.file_doc.embeddings import EmbeddingModel
-from doc_processor.file_doc.extraction_utils import MemberExtractorConfig
+from doc_processor.file_doc.extraction_utils import MemberExtractorConfig, build_shared_name_set, to_artifact_stem, parse_artifact_stem
 from doc_processor.file_doc.signature import MemberInput, build_lexical_needles
 from doc_processor.file_doc.pipeline_pdf import extract_api_docs_from_pdf
 
@@ -89,11 +89,12 @@ class DocProcessingRunner:
     # Base artifacts directory
     ARTIFACTS_BASE = Path("doc_processor/doc_artifacts")
     
-    def __init__(self, db_path: str, library_name: str, version: str, use_stop_signals: bool = False):
+    def __init__(self, db_path: str, library_name: str, version: str, use_stop_signals: bool = False, respect_robots: bool = True):
         
         self.library_name = library_name
         self.version = version
         self.use_stop_signals = use_stop_signals
+        self.respect_robots = respect_robots
         
         self.db_path = db_path
         self.db = MapCoDocDB(db_path)
@@ -102,6 +103,8 @@ class DocProcessingRunner:
         
         # Initialize all path directories
         self._init_paths()
+        
+        self._shared_names: Set[str] = set()   # api names that collide only by case
         
     def _init_paths(self):
         """Initialize all artifact paths for this library/version."""
@@ -195,6 +198,9 @@ class DocProcessingRunner:
             pipeline_inputs.append(inherited_input)
         
         logger.info(f"Total pipeline inputs: {len(pipeline_inputs)} ({len(members_db)} direct + {len(inherited_members)} inherited)")
+        
+        # Case-only name collisions need a '-<type>' suffix on disk (NTFS folds case).
+        self._shared_names = build_shared_name_set(mi.api_name for mi in pipeline_inputs)
 
         # 2. Dispatch to Extractor (Steps 1-3)
         if self._is_pdf(doc_source):
@@ -218,7 +224,7 @@ class DocProcessingRunner:
         # =================================================================
         extracted_doc_names = set()
         if self.per_member_dir.exists():
-            extracted_doc_names = {f.stem for f in self.per_member_dir.glob("*.txt")}
+            extracted_doc_names = {parse_artifact_stem(f.stem)[0] for f in self.per_member_dir.glob("*.txt")}
 
         if extracted_doc_names:
             # Filter to only members with matching extracted docs
@@ -729,7 +735,9 @@ class DocProcessingRunner:
         # =================================================================
         self._ensure_dirs(self.scraped_doc_dir, self.per_member_dir)
         
-        asyncio.run(scrape_doc(self.library_name, self.version, url_file, stat_info))
+        _types = {mi.api_name: mi.member_type for mi in members}
+        _name_fn = lambda s: to_artifact_stem(s, _types.get(s), self._shared_names)
+        asyncio.run(scrape_doc(self.library_name, self.version, url_file, stat_info, respect_robots=self.respect_robots, name_fn=_name_fn))
         
         # =================================================================
         # Step 3: Extract individual member docs from combined pages
@@ -752,7 +760,7 @@ class DocProcessingRunner:
         # Step 3a. Track existing per_member files
         if self.per_member_dir.exists():
             for txt_file in self.per_member_dir.glob("*.txt"):
-                extracted_apis.add(txt_file.stem)
+                extracted_apis.add(parse_artifact_stem(txt_file.stem)[0])
         
         # Step 3b. Handle per_module (module OR class pages)
         members_json_path = self.per_module_dir / "members.json"
@@ -1039,9 +1047,10 @@ class DocProcessingRunner:
                 # Ensure output directory exists (defensive check)
                 output_dir.mkdir(parents=True, exist_ok=True)
                 
-                output_file = output_dir / f"{info.api_name}.txt"
+                stem = to_artifact_stem(info.api_name, info.member_type, self._shared_names)
+                output_file = output_dir / f"{stem}.txt"
                 output_file.write_text(extracted, encoding='utf-8')
-                extracted_apis.add(info.api_name)
+                extracted_apis.add(info.api_name)   # track true name
                 logger.debug(f"Saved: {info.api_name}")
         
         logger.info(f"Extracted {len([m for m in member_positions if m['info'].api_name in extracted_apis])} members from per_page doc")
@@ -1361,7 +1370,8 @@ class DocProcessingRunner:
             primary_to_info[m.api_name] = info
             
             for name in all_names:
-                member_map[name.lower()] = info
+                member_map[name] = info                         # exact-case wins
+                member_map.setdefault(name.lower(), info)     # fuzzy fallback only
         
         return member_map, primary_to_info
 
@@ -1480,7 +1490,7 @@ class DocProcessingRunner:
             
             # --- Strategy 3: Try local member_map (case-insensitive) ---
             if info is None:
-                info = member_map.get(api_name.lower())
+                info = member_map.get(api_name) or member_map.get(api_name.lower())
                 if info:
                     logger.debug(f"Matched '{api_name}' via local member_map")
             
@@ -1562,7 +1572,7 @@ class DocProcessingRunner:
         if container_name in extracted_apis:
             return None
         
-        container_info = member_map.get(container_name.lower())
+        container_info = member_map.get(container_name) or member_map.get(container_name.lower())
         if container_info is None:
             short_name = container_name.split('.')[-1]
             is_class = short_name[0].isupper() if short_name else False
@@ -1666,7 +1676,8 @@ class DocProcessingRunner:
             )
             
             # Save to file using API name
-            output_file = output_dir / f"{info.api_name}.txt"
+            stem = to_artifact_stem(info.api_name, info.member_type, self._shared_names)
+            output_file = output_dir / f"{stem}.txt"
             output_file.write_text(extracted, encoding='utf-8')
             extracted_apis.add(info.api_name)
             logger.debug(f"Saved: {info.api_name}")
@@ -1918,7 +1929,8 @@ class DocProcessingRunner:
                 )
                 filtered_text = self._extract_until_stop(combined_text, stop_matcher, max_chars=50000)
         
-        container_output = self.per_member_dir / f"{output_api_name}.txt"
+        container_stem = to_artifact_stem(output_api_name, (db_member.type if db_member else "class"), self._shared_names)
+        container_output = self.per_member_dir / f"{container_stem}.txt"
         
         # The filtered class doc may overwrite the tracked combined page itself
         # Preserve the original full page in combined/ BEFORE overwriting, so the relocation step doesn't need to (and must not) move the filtered doc
@@ -2049,10 +2061,11 @@ class DocProcessingRunner:
         already_done = 0
         
         for preprocessed_file in self.preprocessed_doc_dir.glob("*.txt"):
-            api_name = preprocessed_file.stem
-            mi = member_info.get(api_name)
+            api_name = preprocessed_file.stem            # keep suffix for output names
+            true_api, _ = parse_artifact_stem(api_name)
+            mi = member_info.get(true_api)
             if not mi:
-                logger.debug(f"No member info for {api_name}, skipping")
+                logger.debug(f"No member info for {true_api}, skipping")
                 continue
             
             # Skip if already processed
@@ -2152,11 +2165,10 @@ class DocProcessingRunner:
         count = 0
         for preprocessed_file in self.preprocessed_doc_dir.glob("*.txt"):
             api_name = preprocessed_file.stem
-            
-            # Get member details
-            mi = member_info.get(api_name)
+            true_api, _ = parse_artifact_stem(api_name)
+            mi = member_info.get(true_api)
             if not mi:
-                logger.debug(f"No member info for {api_name}, skipping structured extraction")
+                logger.debug(f"No member info for {true_api}, skipping structured extraction")
                 continue
             
             # Output path
@@ -2262,7 +2274,7 @@ class DocProcessingRunner:
         inherited_count = 0
         
         for doc_file in self.postprocessed_doc_dir.glob("*.json"):
-            api_name = doc_file.stem
+            api_name, _ = parse_artifact_stem(doc_file.stem)
             
             try:
                 with open(doc_file, 'r', encoding='utf-8') as f:
@@ -2377,7 +2389,7 @@ class DocProcessingRunner:
         inherited_count = 0
         
         for doc_file in self.per_member_dir.glob("*.txt"):
-            api_name = doc_file.stem
+            api_name, _ = parse_artifact_stem(doc_file.stem)
             
             try:
                 raw_text = doc_file.read_text(encoding='utf-8')

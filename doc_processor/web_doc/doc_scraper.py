@@ -541,7 +541,7 @@ def _merge_members_json(path: Path, new_data: dict) -> None:
         json.dump(existing, f, indent=4, ensure_ascii=False)
             
 
-async def scrape_doc(lib_name: str, version: str, doc_url_path: str, metadata: dict):
+async def scrape_doc(lib_name: str, version: str, doc_url_path: str, metadata: dict, respect_robots: bool = True, name_fn=None):
     """
     Scrape documentation and save it along with its associated module member metadata.
     
@@ -555,6 +555,8 @@ async def scrape_doc(lib_name: str, version: str, doc_url_path: str, metadata: d
         version: Version string
         doc_url_path: Path to scraped_urls.txt containing URLs to scrape
         metadata: Dict with 'base_url' and 'sub_path' from crawler
+        respect_robots: Whether to respect robots.txt allow/deny rules
+        name_fn: name used for per-member files
     """
     base_url = metadata['base_url']
     sub_path = metadata['sub_path']
@@ -673,7 +675,7 @@ async def scrape_doc(lib_name: str, version: str, doc_url_path: str, metadata: d
     max_concurrency = 6
     sem = asyncio.Semaphore(max_concurrency)
     
-    async with URLFetcher() as net:
+    async with URLFetcher(respect_robots=respect_robots) as net:
         async def fetch_and_write(url: str, out_path: str):
             """Fetch URL and write normalized text to file."""
             async with sem:
@@ -705,8 +707,10 @@ async def scrape_doc(lib_name: str, version: str, doc_url_path: str, metadata: d
         # per_member: Each page becomes {member_name}.txt
         for url in url_grouped['per_member']:
             if per_member_path:
-                filename = url.split('/')[-1].split('.html')[0] + ".txt"
-                out_path = str(per_member_path / filename)
+                stem = url.split('/')[-1].split('.html')[0]
+                if name_fn:
+                    stem = name_fn(stem)        # disambiguate case-shared names (e.g. torch.xpu.stream)
+                out_path = str(per_member_path / f"{stem}.txt")
                 tasks.append(fetch_and_write(url, out_path))
         
         if tasks:

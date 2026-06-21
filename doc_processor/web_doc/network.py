@@ -291,7 +291,7 @@ class URLFetcher:
       - clean shutdown
     """
 
-    def __init__(self, proxies: Optional[list[str]] = None):
+    def __init__(self, proxies: Optional[list[str]] = None, respect_robots: bool = True):
         self.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
         self.default_headers = {
             'User-Agent': self.user_agent,
@@ -309,6 +309,7 @@ class URLFetcher:
 
         self.host_limiter = HostLimiter(base_delay=0.05, max_delay=6.0)
         self.robots = RobotsCache(self.user_agent)
+        self.respect_robots = respect_robots
 
         # Direct/default session (without proxy)
         self._direct_connector = aiohttp.TCPConnector(
@@ -361,11 +362,11 @@ class URLFetcher:
         # Ensure robots loaded; honor can_fetch and crawl-delay
         direct_sess = await self._ensure_direct_session()
         url = _sanitize_header_value(url)
-        await self.robots.ensure(direct_sess, url)
-        if not self.robots.can_fetch(url):
+        await self.robots.ensure(direct_sess, url)  # always: captures crawl-delay
+        if self.respect_robots and not self.robots.can_fetch(url):
             logger.debug(f"robots.txt disallows: {url}")
             return None
-        delay = self.robots.crawl_delay(url)
+        delay = self.robots.crawl_delay(url)  # always: seeds the per-host limiter
         host = urlparse(url).netloc
         if delay:
             st = self.host_limiter.state.setdefault(host, {"delay": self.host_limiter.base_delay, "last_ts": 0.0})
