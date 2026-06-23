@@ -41,9 +41,11 @@ from rapidfuzz import fuzz
 _NOISE_TOKEN_RES = (
     re.compile(r'\(#page=\d+\)'),
     re.compile(r'\s*\(Keyword-only parameters separator\s*\(PEP 3102\)\)'),
+    re.compile(r'\((?:https?://)[^)]*\)', re.IGNORECASE),
+    re.compile(r'¶')
 )
 def _strip_noise_tokens(text: str) -> str:
-    """Strip all known PDF-noise tokens from a line for matching purposes."""
+    """Strip all known doc-noise tokens from a line for matching purposes."""
     for pat in _NOISE_TOKEN_RES:
         text = pat.sub('', text)
     return text
@@ -262,10 +264,15 @@ def find_needle_in_lines(
                 start_bonus = 10 if pos < 20 else 0
                 score = 100 + start_bonus + context_adj
                 
-                # Definition-start check: the prefix before the matched needle must be empty
+                # Definition-start check: the prefix before the matched needle must be empty, a bare doc keyword, or a doc keyword followed by a qualified path
+                # e.g. "method sqlalchemy.orm.sessionevents." (Sphinx web docs).
                 prefix_text = line_norm[:pos].strip()
                 _valid_prefix = (
-                    re.match(r'^(?:property|class|classmethod|staticmethod|method|function|attribute)\s*$', prefix_text)
+                    re.match(
+                        r'^(?:property|class|classmethod|staticmethod|method|function|attribute)'
+                        r'(?:\s+[\w.]+\.)?\s*$',
+                        prefix_text
+                    )
                     if prefix_text else True
                 )
 
@@ -320,12 +327,15 @@ def find_needle_in_lines(
                 prefix_text = line_norm[:pos].strip()
                 _doc_kw_only = (
                     re.match(
-                        r'^(?:property|class|classmethod|staticmethod|method|function|attribute)\s*$',
-                        prefix_text,
+                        r'^(?:property|class|classmethod|staticmethod|method|function|attribute)'
+                        r'(?:\s+[\w.]+\.)?\s*$',
+                        prefix_text
                     )
                     if prefix_text else True   # empty prefix (always OK)
                 )
-                at_definition_pos = pos <= 60 and bool(_doc_kw_only)
+                # Allow a slightly larger window: "method <module.qualified.path>." legitimately
+                # pushes the member name past 60 chars on web docs.
+                at_definition_pos = pos <= 80 and bool(_doc_kw_only)
                 
                 # ── Valid-suffix check ───────────────────────────────────────
                 # After the matched name, the line must end, show a colon (typed attribute/property) or an opening paren (callable)

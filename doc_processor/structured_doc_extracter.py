@@ -780,11 +780,22 @@ class ConcurrentDocExtractor:
         scraped_doc: str,
         system_prompt: str,
         user_prompt: str,
-        json_schema: dict
+        json_schema: dict,
+        generation_options: Optional[dict] = None
     ) -> Dict:
         """Extract documentation for a single member."""
         async with self.semaphore:  # Limit concurrency
             try:
+                options = {
+                    "temperature": 0.0,
+                    "max_tokens": 32768,
+                    "top_p": 1,
+                    "frequency_penalty": 0.2,
+                    "presence_penalty": 0
+                }
+                if generation_options:
+                    options.update(generation_options)
+                    
                 response = await self.client.chat.completions.create(
                     model=MODEL_NAME, 
                     messages=[
@@ -792,13 +803,16 @@ class ConcurrentDocExtractor:
                         {"role": "user", "content": user_prompt}
                     ],
                     response_format=json_schema,
-                    temperature=0.0,
-                    max_tokens=32768
+                    **options,  
                 )
+                
+                choice = response.choices[0]
                 return {
                     "api_name": api_name,
                     "success": True,
-                    "result": response.choices[0].message.content
+                    "result": choice.message.content,
+                    "finish_reason": choice.finish_reason,
+                    "generation_options": options
                 }
             except Exception as e:
                 logger.warning(f"Failed to extract {api_name}: {e}")
@@ -829,7 +843,8 @@ class ConcurrentDocExtractor:
                 scraped_doc=m.get('scraped_doc', ''),
                 system_prompt=m['system_prompt'],
                 user_prompt=m['user_prompt'],
-                json_schema=m['json_schema']
+                json_schema=m['json_schema'],
+                generation_options=m.get('generation_options')
             )
             tasks.append(task)
         
@@ -843,7 +858,7 @@ class ConcurrentDocExtractor:
             completed += 1
             
             if result['success']:
-                results[result['api_name']] = result['result']
+                results[result['api_name']] = result
             else:
                 results[result['api_name']] = None
             

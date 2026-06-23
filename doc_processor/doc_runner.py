@@ -66,6 +66,23 @@ def _looks_degenerate(s: str) -> bool:
     return ctrl > 50 or bool(_REPEAT_RUN_RE.search(s))
 
 
+def _llm_retry_reason(doc_json: str, finish_reason: Optional[str] = None) -> Optional[str]:
+    """Return the reason an LLM payload should be retried, or None if it is usable."""
+    if not doc_json:
+        return "empty"
+
+    if finish_reason == "length":
+        return "length"
+
+    if _looks_degenerate(doc_json):
+        return "degenerate"
+
+    if _loads_llm_json(doc_json) is None:
+        return "unparseable"
+
+    return None
+
+
 
 class DocProcessingRunner:
     """
@@ -2110,12 +2127,83 @@ class DocProcessingRunner:
             if completed % 10 == 0 or completed == total:
                 logger.info(f"Progress: {completed}/{total}")
         
+        
+        generation_attempts = [
+            {
+                "temperature": 0.0,
+                "frequency_penalty": 0.2,
+                "max_tokens": 32768,
+            },
+            {
+                "temperature": 0.15,
+                "frequency_penalty": 0.5,
+                "max_tokens": 20000,
+            },
+            {
+                "temperature": 0.25,
+                "frequency_penalty": 0.8,
+                "max_tokens": 16000,
+            },
+        ]
+        
+        for req in extraction_requests:
+            req["generation_options"] = generation_attempts[0]
+        
+        request_by_name = {req["api_name"]: req for req in extraction_requests}
+        
         results = asyncio.run(extractor.extract_all(extraction_requests, progress_callback))
+        
+        retry_names = []
+        for api_name, payload in results.items():
+            doc_json = payload.get("result") if payload else ""
+            finish_reason = payload.get("finish_reason") if payload else None
+            reason = _llm_retry_reason(doc_json, finish_reason)
+            if reason:
+                retry_names.append(api_name)
+                logger.warning(f"Retry needed for {api_name}: {reason} finish_reason={finish_reason})")
+                
+        for attempt_idx, options in enumerate(generation_attempts[1:], start=2):
+            if not retry_names:
+                break
+            
+            retry_requests = []
+            for api_name in retry_names:
+                retry_req = dict(request_by_name[api_name])
+                retry_req["generation_options"] = options
+                retry_requests.append(retry_req)
+                
+            logger.info(f"Retrying {len(retry_requests)} structured extraction payload(s), attempt {attempt_idx}/{len(generation_attempts)}")
+            
+            retry_results = asyncio.run(extractor.extract_all(retry_requests, progress_callback))
+            
+            next_retry_names = []
+            for api_name, payload in retry_results.items():
+                results[api_name] = payload
+                
+                doc_json = payload.get("result") if payload else ""
+                finish_reason = payload.get("finish_reason") if payload else None
+                reason = _llm_retry_reason(doc_json, finish_reason)
+                
+                if reason:
+                    next_retry_names.append(api_name)
+                    logger.warning(
+                        f"Retry attempt {attempt_idx} still failed for {api_name}: "
+                        f"{reason} (finish_reason={finish_reason})"
+                    )
+                else:
+                    logger.info(f"Retry attempt {attempt_idx} recovered {api_name}")
+            
+            retry_names = next_retry_names
         
         # Save results
         success_count = 0
         parse_failures = []
-        for api_name, doc_json in results.items():
+        for api_name, payload in results.items():
+            if not payload:
+                continue
+            
+            doc_json = payload.get("result") or ""
+            finish_reason = payload.get("finish_reason")
             if not doc_json:
                 continue
             output_path = self.structured_doc_dir / f"{api_name}.json"
@@ -2124,7 +2212,7 @@ class DocProcessingRunner:
             if _looks_degenerate(doc_json):
                 output_path.with_suffix(".raw.json").write_text(doc_json, encoding='utf-8')
                 parse_failures.append(api_name)
-                logger.warning(f"Degenerate LLM output for {api_name}; saved raw, skipping.")
+                logger.warning(f"Degenerate LLM output for {api_name}; finish_reason={finish_reason}; saved raw, skipping.")
                 continue
             
             parsed = _loads_llm_json(doc_json)
@@ -2132,7 +2220,7 @@ class DocProcessingRunner:
                 # Preserve the raw payload for inspection; don't abort the batch
                 output_path.with_suffix(".raw.json").write_text(doc_json, encoding='utf-8')
                 parse_failures.append(api_name)
-                logger.warning(f"Unparseable LLM JSON for {api_name}; saved raw to {output_path.with_suffix('.raw.json').name}")
+                logger.warning(f"Unparseable LLM JSON for {api_name}; finish_reason={finish_reason}; saved raw to {output_path.with_suffix('.raw.json').name}")
                 continue
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(parsed, f, indent=4, ensure_ascii=False)
