@@ -56,30 +56,50 @@ def _loads_llm_json(doc_json: str):
             return None
         
 
-# A short chunk (1-4 chars) repeated 200+ times, such as the signature of an LLM that fell into a repetition loop (e.g. "\u0000b\u0000b...").
-_REPEAT_RUN_RE = re.compile(r'(.{1,4}?)\1{200,}')
+def _is_corruption_char(c: str) -> bool:
+    """Characters that signal corruption: C0 controls (except tab/newline/CR) and DEL. These are the signature of PDF glyph garbage / LLM repetition collapse."""
+    o = ord(c)
+    return (o < 0x20 and c not in '\t\n\r') or o == 0x7f
+        
+
+# A short chunk repeated 100+ times. Only treated as degenerate when the repeated unit itself contains a corruption char, so legitimate runs (e.g. aligned whitespace in pandas example tables) are not flagged.
+_REPEAT_RUN_RE = re.compile(r'(.{1,4}?)\1{100,}')
 
 
 def _looks_degenerate(s: str) -> bool:
-    """True if an LLM payload is corrupt: excessive control chars or a long repeated run. Used to reject responses before they're stored."""
-    ctrl = sum(1 for c in s if ord(c) < 0x20 and c not in '\t\n\r')
-    return ctrl > 50 or bool(_REPEAT_RUN_RE.search(s))
+    """True only for genuinely corrupt payloads: a flood of control/DEL chars, or a long repeated run made of such chars. Benign repeated whitespace/text is allowed."""
+    if sum(1 for c in s if _is_corruption_char(c)) > 50:
+        return True
+    for m in _REPEAT_RUN_RE.finditer(s):
+        if any(_is_corruption_char(c) for c in m.group(1)):
+            return True
+    return False
+
+
+def _sanitize_llm_text(s: str) -> str:
+    """Strip stray control/DEL corruption chars and collapse runaway whitespace runs, while preserving normal formatting (tabs/newlines)."""
+    cleaned = ''.join(c for c in s if not _is_corruption_char(c))
+    cleaned = re.sub(r' {80,}', ' ', cleaned)      # kill table-alignment space floods
+    cleaned = re.sub(r'\t{20,}', '\t', cleaned)
+    return cleaned
 
 
 def _llm_retry_reason(doc_json: str, finish_reason: Optional[str] = None) -> Optional[str]:
     """Return the reason an LLM payload should be retried, or None if it is usable."""
     if not doc_json:
         return "empty"
-
+    
     if finish_reason == "length":
         return "length"
-
-    if _looks_degenerate(doc_json):
+    
+    cleaned = _sanitize_llm_text(doc_json)
+    
+    if _looks_degenerate(cleaned):
         return "degenerate"
-
-    if _loads_llm_json(doc_json) is None:
+    
+    if _loads_llm_json(cleaned) is None:
         return "unparseable"
-
+    
     return None
 
 
@@ -2129,21 +2149,9 @@ class DocProcessingRunner:
         
         
         generation_attempts = [
-            {
-                "temperature": 0.0,
-                "frequency_penalty": 0.2,
-                "max_tokens": 32768,
-            },
-            {
-                "temperature": 0.15,
-                "frequency_penalty": 0.5,
-                "max_tokens": 20000,
-            },
-            {
-                "temperature": 0.25,
-                "frequency_penalty": 0.8,
-                "max_tokens": 16000,
-            },
+            {"temperature": 0.0,  "frequency_penalty": 0.0, "max_tokens": 32768},
+            {"temperature": 0.15, "frequency_penalty": 0.3, "max_tokens": 32768},
+            {"temperature": 0.3,  "frequency_penalty": 0.5, "max_tokens": 32768}
         ]
         
         for req in extraction_requests:
@@ -2178,19 +2186,18 @@ class DocProcessingRunner:
             
             next_retry_names = []
             for api_name, payload in retry_results.items():
-                results[api_name] = payload
-                
                 doc_json = payload.get("result") if payload else ""
                 finish_reason = payload.get("finish_reason") if payload else None
                 reason = _llm_retry_reason(doc_json, finish_reason)
                 
                 if reason:
                     next_retry_names.append(api_name)
-                    logger.warning(
-                        f"Retry attempt {attempt_idx} still failed for {api_name}: "
-                        f"{reason} (finish_reason={finish_reason})"
-                    )
+                    logger.warning(f"Retry attempt {attempt_idx} still failed for {api_name}: {reason} (finish_reason={finish_reason})")
+                    # keep prior payload unless this one is at least non-empty
+                    if not results.get(api_name):
+                        results[api_name] = payload
                 else:
+                    results[api_name] = payload   # recovered (take the good one)
                     logger.info(f"Retry attempt {attempt_idx} recovered {api_name}")
             
             retry_names = next_retry_names
@@ -2208,20 +2215,21 @@ class DocProcessingRunner:
                 continue
             output_path = self.structured_doc_dir / f"{api_name}.json"
             
-            # Reject corrupt/degenerate output (repetition loops, control-char floods) so it never becomes the stored doc
-            if _looks_degenerate(doc_json):
+            # Repair localized artifacts before judging; only reject if STILL corrupt.
+            cleaned = _sanitize_llm_text(doc_json)
+            if _looks_degenerate(cleaned):
                 output_path.with_suffix(".raw.json").write_text(doc_json, encoding='utf-8')
                 parse_failures.append(api_name)
                 logger.warning(f"Degenerate LLM output for {api_name}; finish_reason={finish_reason}; saved raw, skipping.")
                 continue
             
-            parsed = _loads_llm_json(doc_json)
+            parsed = _loads_llm_json(cleaned)
             if parsed is None:
-                # Preserve the raw payload for inspection; don't abort the batch
                 output_path.with_suffix(".raw.json").write_text(doc_json, encoding='utf-8')
                 parse_failures.append(api_name)
                 logger.warning(f"Unparseable LLM JSON for {api_name}; finish_reason={finish_reason}; saved raw to {output_path.with_suffix('.raw.json').name}")
                 continue
+            
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(parsed, f, indent=4, ensure_ascii=False)
             success_count += 1
