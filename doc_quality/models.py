@@ -57,6 +57,7 @@ class Dimension(str, Enum):
     ACCURACY = "accuracy"
     READABILITY = "readability"
     MAINTAINABILITY = "maintainability"
+    FIDELITY = "fidelity"   # source-grounding; not part of overall quality weights
 
 
 class Severity(str, Enum):

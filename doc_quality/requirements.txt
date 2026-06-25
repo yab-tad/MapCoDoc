@@ -21,3 +21,5 @@ radon>=6.0,<7.0
 
 # Test dependencies (only needed to run doc_quality/tests/).
 # pytest>=7.0
+
+rapidfuzz>=3.0,<4.0

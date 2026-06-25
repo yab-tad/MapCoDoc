@@ -444,6 +444,39 @@ class IssueType(Enum):
         json_path_template="$.{section}",
         description="Hyperlink density above readable threshold; reader may be distracted."
     )
+    
+    
+    # -----------------------------------------------------------------------------------------------
+    # Fidelity - check if the structured documentation accurately reflect the source documentation
+    # -----------------------------------------------------------------------------------------------
+    
+    FID_UNSUPPORTED_CONTENT = IssueTypeSpec(
+        code="FID_UNSUPPORTED_CONTENT",
+        dimension=Dimension.FIDELITY,
+        default_severity=Severity.HIGH,
+        default_strategy=MaintainerStrategy.MANUAL,
+        json_path_template="{section}",
+        description="Structured content has no grounding in the preprocessed source."
+    )
+    
+    FID_PARTIAL_SUPPORT = IssueTypeSpec(
+        code="FID_PARTIAL_SUPPORT",
+        dimension=Dimension.FIDELITY,
+        default_severity=Severity.MEDIUM,
+        default_strategy=MaintainerStrategy.MANUAL,
+        json_path_template="{section}",
+        description="Structured content only partially matches the source (formatting drift or paraphrase)."
+    )
+    
+    FID_SOURCE_OMITTED = IssueTypeSpec(
+        code="FID_SOURCE_OMITTED",
+        dimension=Dimension.FIDELITY,
+        default_severity=Severity.MEDIUM,
+        default_strategy=MaintainerStrategy.MANUAL,
+        json_path_template="",   # no doc-side path: the content is absent from the doc
+        description="Source content is not represented in the structured doc."
+    )
+
 
     # ------------------------------------------------------------------
     # Convenience: lookup by string code (for deserialization)

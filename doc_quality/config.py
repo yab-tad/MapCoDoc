@@ -1,15 +1,11 @@
 """
 Configuration for the doc_quality evaluator and maintainer.
 
-All thresholds, weights, and feature flags live here so that calibration
-adjustments can be made by editing a YAML file rather than the code.
-A default-configured ``EvaluatorConfig()`` gives sensible behaviour for the
-v1 metric set; advanced uses load a YAML file via ``EvaluatorConfig.from_yaml``.
+All thresholds, weights, and feature flags live here so that calibration adjustments can be made by editing a YAML file rather than the code.
+A default-configured ``EvaluatorConfig()`` gives sensible behaviour for the v1 metric set; advanced uses load a YAML file via ``EvaluatorConfig.from_yaml``.
 
-The configuration is split into per-dimension blocks plus a top-level
-section that controls the maintainer and orchestrator. Where weights are
-expressed as dicts they sum to 1.0 (or are normalized at usage time so they
-do).
+The configuration is split into per-dimension blocks plus a top-level section that controls the maintainer and orchestrator. Where weights are
+expressed as dicts they sum to 1.0 (or are normalized at usage time so they do).
 """
 
 from __future__ import annotations
@@ -40,7 +36,7 @@ _DEFAULT_COMPLETENESS_WEIGHTS: Dict[str, float] = {
     "PTC": 0.15,       # parameter type completeness
     "PDC": 0.15,       # parameter description completeness
     "RC": 0.10,        # return coverage (callables only; redistributed for classes)
-    "ExC": 0.10,       # example coverage
+    "ExC": 0.10        # example coverage
 }
 
 _DEFAULT_ACCURACY_WEIGHTS: Dict[str, float] = {
@@ -51,12 +47,12 @@ _DEFAULT_ACCURACY_WEIGHTS: Dict[str, float] = {
     "RTC": 0.10,
     "SigDrift": 0.20,
     "AsyncMarker": 0.05,
-    "DeprecatedMarker": 0.05,
+    "DeprecatedMarker": 0.05
 }
 
 _DEFAULT_READABILITY_WEIGHTS: Dict[str, float] = {
     "text": 0.6,
-    "code": 0.4,
+    "code": 0.4
 }
 
 _DEFAULT_MAINTAINABILITY_WEIGHTS: Dict[str, float] = {
@@ -64,14 +60,14 @@ _DEFAULT_MAINTAINABILITY_WEIGHTS: Dict[str, float] = {
     "TXRefC": 0.30,     # type cross-ref coverage
     "BTRefC": 0.20,     # builtin type ref coverage
     "IXRefC": 0.20,     # internal cross-ref coverage
-    "ITR": 0.10,        # inline type restatement (penalty)
+    "ITR": 0.10         # inline type restatement (penalty)
 }
 
 _DEFAULT_OVERALL_WEIGHTS: Dict[Dimension, float] = {
     Dimension.COMPLETENESS: 0.35,
     Dimension.ACCURACY: 0.35,
     Dimension.READABILITY: 0.15,
-    Dimension.MAINTAINABILITY: 0.15,
+    Dimension.MAINTAINABILITY: 0.15
 }
 
 
@@ -138,21 +134,11 @@ class EvaluatorConfig:
     hyperlink_density_max: float = 1.0
 
     # -- Aggregation weights ---------------------------------------------
-    weights_completeness: Dict[str, float] = field(
-        default_factory=lambda: dict(_DEFAULT_COMPLETENESS_WEIGHTS),
-    )
-    weights_accuracy: Dict[str, float] = field(
-        default_factory=lambda: dict(_DEFAULT_ACCURACY_WEIGHTS),
-    )
-    weights_readability: Dict[str, float] = field(
-        default_factory=lambda: dict(_DEFAULT_READABILITY_WEIGHTS),
-    )
-    weights_maintainability: Dict[str, float] = field(
-        default_factory=lambda: dict(_DEFAULT_MAINTAINABILITY_WEIGHTS),
-    )
-    weights_overall: Dict[Dimension, float] = field(
-        default_factory=lambda: dict(_DEFAULT_OVERALL_WEIGHTS),
-    )
+    weights_completeness: Dict[str, float] = field(default_factory=lambda: dict(_DEFAULT_COMPLETENESS_WEIGHTS))
+    weights_accuracy: Dict[str, float] = field(default_factory=lambda: dict(_DEFAULT_ACCURACY_WEIGHTS))
+    weights_readability: Dict[str, float] = field(default_factory=lambda: dict(_DEFAULT_READABILITY_WEIGHTS))
+    weights_maintainability: Dict[str, float] = field(default_factory=lambda: dict(_DEFAULT_MAINTAINABILITY_WEIGHTS))
+    weights_overall: Dict[Dimension, float] = field(default_factory=lambda: dict(_DEFAULT_OVERALL_WEIGHTS))
 
     # -- Maintainer settings ---------------------------------------------
     # Strategies the maintainer is allowed to execute. Default excludes
@@ -160,7 +146,7 @@ class EvaluatorConfig:
     enabled_strategies: List[MaintainerStrategy] = field(
         default_factory=lambda: [
             MaintainerStrategy.DB_QUERY,
-            MaintainerStrategy.AST_DERIVED,
+            MaintainerStrategy.AST_DERIVED
         ],
     )
 
@@ -170,11 +156,29 @@ class EvaluatorConfig:
     min_severity_for_maintenance: Severity = Severity.MEDIUM
 
     # -- Misc ------------------------------------------------------------
-    # When True, the orchestrator skips members where ``code_truth`` is
-    # None (external inherited). When False, those members still get a
-    # report with ``skipped=True`` for record-keeping.
+    # When True, the orchestrator skips members where ``code_truth`` is None (external inherited)
+    # When False, those members still get a report with ``skipped=True`` for record-keeping.
     skip_when_no_code_truth: bool = False
-
+    
+    
+    # -- Fidelity thresholds ---------------------------------------------
+    fidelity_exact_min: float = 0.995    # >= this ratio counts as faithful (normalization-only)
+    fidelity_partial_min: float = 0.75   # [partial_min, exact_min) -> FID_PARTIAL_SUPPORT; below -> FID_UNSUPPORTED_CONTENT
+    fidelity_min_unit_chars: int = 12     # skip very short fragments (too noisy to match)
+    fidelity_signature_search_lines: int = 5  # Member signature must appear within the first N source lines; if not found there, omission detection is skipped for that member (not guessed)
+    
+    # -- Fidelity: omission direction ------------------------------------
+    fidelity_check_omissions: bool = True
+    # Omission uses its OWN thresholds: lexical matching scores paraphrase low, so the bars are looser than the addition bars to avoid flagging present-but-reworded content as omitted.
+    fidelity_omission_exact_min: float = 0.90      # >= -> covered
+    fidelity_omission_partial_min: float = 0.55    # [partial,exact) -> partially_omitted
+    # Only run omission detection inside source sections that map to a documented field. Everything else (see also / references / footers) is intentionally dropped by the extractor and would be false positives.
+    fidelity_omission_sections: List[str] = field(default_factory=lambda: [
+        "(top)", "parameters", "arguments", "returns", "return type", "yields",
+        "raises", "examples", "example", "notes", "note",
+        "attributes", "methods", "see also", "warnings", "warning"
+    ])
+    
     # ------------------------------------------------------------------
     # Loaders
     # ------------------------------------------------------------------
@@ -188,53 +192,34 @@ class EvaluatorConfig:
         forward-compatible: a config written for v0.1 still loads under
         v0.2 even if new tunables have been added.
         """
-        # Imported lazily so that ``import doc_quality`` doesn't pull
-        # PyYAML at import time. PyYAML is a transitive dependency in
-        # this project but a runtime ImportError here is more useful
-        # than an import-time one.
+        # Imported lazily so that ``import doc_quality`` doesn't pull PyYAML at import time. PyYAML is a transitive dependency in
+        # this project but a runtime ImportError here is more useful than an import-time one.
         import yaml
 
         with open(path, "r", encoding="utf-8") as fh:
             raw = yaml.safe_load(fh) or {}
         if not isinstance(raw, dict):
-            raise ValueError(
-                f"Config file {path} must contain a top-level mapping; "
-                f"got {type(raw).__name__}",
-            )
+            raise ValueError(f"Config file {path} must contain a top-level mapping; got {type(raw).__name__}")
 
-        # Discover the field names of this dataclass so we can ignore
-        # unknown keys with a meaningful warning.
+        # Discover the field names of this dataclass so we can ignore unknown keys with a meaningful warning
         from dataclasses import fields
         valid = {f.name for f in fields(cls)}
 
         accepted: Dict[str, object] = {}
         for key, val in raw.items():
             if key not in valid:
-                logger.warning(
-                    "Ignoring unknown config key %r in %s", key, path,
-                )
+                logger.warning("Ignoring unknown config key %r in %s", key, path)
                 continue
             accepted[key] = val
 
-        # Special handling for fields whose YAML representation differs
-        # from the dataclass form: enums and Severity values.
-        if "min_severity_for_maintenance" in accepted and isinstance(
-            accepted["min_severity_for_maintenance"], str,
-        ):
-            accepted["min_severity_for_maintenance"] = Severity(
-                accepted["min_severity_for_maintenance"].lower(),
-            )
-        if "enabled_strategies" in accepted and isinstance(
-            accepted["enabled_strategies"], list,
-        ):
-            accepted["enabled_strategies"] = [
-                MaintainerStrategy(s) for s in accepted["enabled_strategies"]
-            ]
+        # Special handling for fields whose YAML representation differs from the dataclass form: enums and Severity values
+        if "min_severity_for_maintenance" in accepted and isinstance(accepted["min_severity_for_maintenance"], str):
+            accepted["min_severity_for_maintenance"] = Severity(accepted["min_severity_for_maintenance"].lower())
+        if "enabled_strategies" in accepted and isinstance(accepted["enabled_strategies"], list):
+            accepted["enabled_strategies"] = [MaintainerStrategy(s) for s in accepted["enabled_strategies"]]
         if "weights_overall" in accepted:
-            # Convert string-keyed dimension names to Dimension enum.
-            accepted["weights_overall"] = {
-                Dimension(k): v for k, v in accepted["weights_overall"].items()
-            }
+            # Convert string-keyed dimension names to Dimension enum
+            accepted["weights_overall"] = {Dimension(k): v for k, v in accepted["weights_overall"].items()}
 
         return cls(**accepted)
 

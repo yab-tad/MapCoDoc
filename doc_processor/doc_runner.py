@@ -187,6 +187,20 @@ class DocProcessingRunner:
         
         return mi.api_name
     
+    @classmethod
+    def _prompt_signature(cls, mi: MemberInput) -> str:
+        """
+        Signature string shown to the LLM during structuring.
+        For methods, prefix the class short name (e.g. 'BaseAdapter.send(...)')
+        so the model can disambiguate members that share a signature on the same
+        page. Functions and the api_name fallback are left untouched.
+        """
+        sig = cls._first_sig(mi)
+        parts = mi.api_name.split('.')
+        if (mi.member_type == 'method' and len(parts) >= 2 and '(' in sig and not sig.startswith(f"{parts[-2]}.")):
+            return f"{parts[-2]}.{sig}"
+        return sig
+    
 
     def run(self, doc_source: str, target_module: Optional[str] = None, skip_llm: bool = False, api_section_titles: Optional[List[str]] = None):
         """
@@ -2112,7 +2126,7 @@ class DocProcessingRunner:
                 continue
             
             # Build prompts using DocumentationExtractor
-            signature = self._first_sig(mi) #mi.signature_variants[0] if mi.signature_variants else api_name
+            signature = self._prompt_signature(mi) #self._first_sig(mi)
             
             temp_extractor = DocumentationExtractor(
                 MM_type=mi.member_type,
@@ -2277,7 +2291,7 @@ class DocProcessingRunner:
             
             try:
                 # Determine signature to use
-                signature = self._first_sig(mi) #mi.signature_variants[0] if mi.signature_variants else api_name
+                signature = self._prompt_signature(mi) #self._first_sig(mi)
                 
                 extractor = DocumentationExtractor(
                     MM_type=mi.member_type,
