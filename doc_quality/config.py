@@ -166,6 +166,7 @@ class EvaluatorConfig:
     fidelity_partial_min: float = 0.75   # [partial_min, exact_min) -> FID_PARTIAL_SUPPORT; below -> FID_UNSUPPORTED_CONTENT
     fidelity_min_unit_chars: int = 12     # skip very short fragments (too noisy to match)
     fidelity_signature_search_lines: int = 5  # Member signature must appear within the first N source lines; if not found there, omission detection is skipped for that member (not guessed)
+    fidelity_check_empty_extraction: bool = True  # flag docs whose content fields are all missing / "N/A"
     
     # -- Fidelity: omission direction ------------------------------------
     fidelity_check_omissions: bool = True

@@ -58,7 +58,11 @@ _SRC_HEADINGS = frozenset({
 _RST_UNDERLINE = re.compile(r"^[=\-~^\"'#*+.`]{3,}$")
 _BOILERPLATE_SUBSTR = (
     "created using sphinx", "copyright", "toggle", "on this page",
-    "edit on github", "back to top", "previous", "next"
+    "edit on github", "back to top", "previous", "next",
+    # web chrome (e.g. PyTorch docs nav / footer)
+    "pytorch libraries", "show source", "pytorch on xla devices",
+    "access comprehensive developer documentation", "view tutorials",
+    "get in-depth tutorials", "find development resources",
 )
 
 
@@ -77,7 +81,7 @@ def _segments_present(segments: List[str], source_norm: str) -> Tuple[float, str
 
 
 def _grounding_checks(view: DocView):
-    """(label, json_path, segments, is_code). Only parameters, module_member_description, and returns are united; all else is individual."""
+    """(label, json_path, segments, is_code). module_member_description and returns are united; each parameter unites name+type, but its description and additional_information are checked individually; all else is individual."""
     checks = []
     checks.append(("module_member_signature", "$.module_member_signature",
                    [view.get_signature()], True))
@@ -86,12 +90,17 @@ def _grounding_checks(view: DocView):
     checks.append(("module_member_description", "$.module_member_description",
                    [view.get_purpose(), *view.get_purpose_additional_info()], False))
 
-    # UNITED: each parameter's name + type + description + additional_information
+    # parameters: unite name and type/annotation; check description and additional_information independently
     for p in view.get_parameters():
         nm = p.get("name", "?")
-        checks.append((f"parameters[{nm}]", f"$.parameters[?name=='{nm}']",
-                       [p.get("name"), p.get("type"), p.get("description"),
-                        p.get("additional_information")], False))
+        base = f"$.parameters[?name=='{nm}']"
+        checks.append((f"parameters[{nm}].name_type", base,
+                       [p.get("name"), p.get("type")], False))
+        checks.append((f"parameters[{nm}].description", f"{base}.description",
+                       [p.get("description")], False))
+        checks.append((f"parameters[{nm}].additional_information",
+                       f"{base}.additional_information",
+                       [p.get("additional_information")], False))
 
     # UNITED: return value's type + description + additional_information
     ret = view.get_returns() or {}
@@ -141,7 +150,8 @@ def _is_boilerplate(raw: str) -> bool:
     low = raw.strip().lower()
     if not low:
         return True
-    if low in _SRC_HEADINGS or _RST_UNDERLINE.match(low):
+    key = low.rstrip(":").strip()        # "return type:" -> "return type"
+    if key in _SRC_HEADINGS or _RST_UNDERLINE.match(low):
         return True
     return any(s in low for s in _BOILERPLATE_SUBSTR)
 
@@ -327,10 +337,33 @@ def _best_ratio(unit: str, source_norm: str) -> Tuple[float, str]:
     return difflib.SequenceMatcher(None, unit, span, autojunk=False).ratio(), span
 
 
+def _is_empty_extraction(view: DocView) -> bool:
+    """True only if EVERY field (including the signature) is missing or 'N/A'."""
+    return not any(is_present(s) for s in _iter_all_strings(view.raw))
+
 def evaluate(view: DocView, source_text: str, config: EvaluatorConfig, *, source_path: Optional[str] = None) -> DimensionScore:
     """Evaluate the fidelity of the structured doc against the source text."""
     if not source_text or not source_text.strip():
         return DimensionScore(score=0.0, issues=[], metric_breakdown={"source_missing": 1.0})
+    
+    if config.fidelity_check_empty_extraction and _is_empty_extraction(view):
+        return DimensionScore(
+            score=0.0,
+            issues=[Issue(
+                issue_type=IssueType.FID_EMPTY_EXTRACTION,
+                dimension=Dimension.FIDELITY,
+                severity=IssueType.FID_EMPTY_EXTRACTION.value.default_severity,
+                section="document",
+                target=None,
+                json_path="$",
+                detail="Structured extraction is empty: every field (including the signature) is missing or 'N/A' (failed extraction).",
+                doc_value=None,
+                code_value=None,
+                metadata={"category": "empty_extraction"},
+                maintainer_strategy=MaintainerStrategy.MANUAL
+            )],
+            metric_breakdown={"empty_extraction": 1.0}
+        )
     
     source_prose = _canonicalize(source_text)
     source_code = _canonicalize(source_text, code=True)

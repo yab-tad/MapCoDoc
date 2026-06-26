@@ -476,6 +476,15 @@ class IssueType(Enum):
         json_path_template="",   # no doc-side path: the content is absent from the doc
         description="Source content is not represented in the structured doc."
     )
+    
+    FID_EMPTY_EXTRACTION = IssueTypeSpec(
+        code="FID_EMPTY_EXTRACTION",
+        dimension=Dimension.FIDELITY,
+        default_severity=Severity.HIGH,
+        default_strategy=MaintainerStrategy.MANUAL,
+        json_path_template="$",   # whole-document issue, not tied to one field
+        description="Structured extraction is empty: every content field is missing or 'N/A' (likely a failed extraction)."
+    )
 
 
     # ------------------------------------------------------------------

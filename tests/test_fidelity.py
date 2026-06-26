@@ -44,7 +44,7 @@ from doc_processor.file_doc.extraction_utils import parse_artifact_stem
 
 ARTIFACTS_BASE = PROJECT_ROOT / "doc_processor" / "doc_artifacts"
 _OMISSION_CODE = "FID_SOURCE_OMITTED"
-
+_EMPTY_CODE = "FID_EMPTY_EXTRACTION"
 _LLM_TYPES = {"class", "function", "method"}
 
 
@@ -98,12 +98,18 @@ def _issue_to_dict(i: Issue) -> Dict:
 
 
 def _split_issues(ds: DimensionScore):
-    additive, omissions = [], []
+    additive, omissions, empty = [], [], []
     for i in ds.issues:
-        (omissions if i.issue_type.value.code == _OMISSION_CODE else additive).append(i)
+        code = i.issue_type.value.code
+        if code == _EMPTY_CODE:
+            empty.append(i)
+        elif code == _OMISSION_CODE:
+            omissions.append(i)
+        else:
+            additive.append(i)
     # Worst (lowest similarity) first for easy triage.
     key = lambda x: (x.metadata or {}).get("similarity", 0.0)
-    return sorted(additive, key=key), sorted(omissions, key=key)
+    return sorted(additive, key=key), sorted(omissions, key=key), empty
 
 
 def _section_group(section: str) -> str:
@@ -155,7 +161,8 @@ def evaluate_source(library: str, version: str, source: str, config: EvaluatorCo
             skipped.append({"api_name": api, "reason": "empty preprocessed source"})
             continue
 
-        additive, omissions = _split_issues(ds)
+        additive, omissions, empty = _split_issues(ds)
+        is_empty = bool(empty) or bool(ds.metric_breakdown.get("empty_extraction"))
         members.append({
             "api_name": api,
             "type": mtype,
@@ -165,9 +172,11 @@ def evaluate_source(library: str, version: str, source: str, config: EvaluatorCo
             "source_units_checked": int(ds.metric_breakdown.get("source_units_checked", 0)),
             "additive_issue_count": len(additive),
             "omission_count": len(omissions),
+            "empty_extraction": is_empty,
             "additive_issues": [_issue_to_dict(i) for i in additive],
             "omissions": [_issue_to_dict(i) for i in omissions],
-            "omission_scope": "skipped" if ds.metric_breakdown.get("omission_skipped") else "block"
+            "empty_issues": [_issue_to_dict(i) for i in empty],
+            "omission_scope": "n/a" if is_empty else ("skipped" if ds.metric_breakdown.get("omission_skipped") else "block")
         })
         
     sec_breakdown = {"additive": Counter(), "omission": Counter()}
@@ -190,7 +199,12 @@ def evaluate_source(library: str, version: str, source: str, config: EvaluatorCo
         "omission_skipped_api_names": [m["api_name"] for m in members if m["omission_scope"] == "skipped"],
         "total_additive_issues": sum(m["additive_issue_count"] for m in members),
         "total_omissions": sum(m["omission_count"] for m in members),
-        "members_fully_faithful": sum(1 for m in members if m["additive_issue_count"] == 0 and m["omission_count"] == 0),
+        "empty_extractions": sum(1 for m in members if m["empty_extraction"]),
+        "empty_extraction_api_names": [m["api_name"] for m in members if m["empty_extraction"]],
+        "members_fully_faithful": sum(
+            1 for m in members
+            if not m["empty_extraction"] and m["additive_issue_count"] == 0 and m["omission_count"] == 0
+        ),
         "section_breakdown": {k: dict(v) for k, v in sec_breakdown.items()}
     }
     return {"summary": summary, "members": members, "skipped": skipped}
@@ -211,6 +225,7 @@ def _print_summary(report: Dict) -> None:
         print(f"  Omission-scope skipped: {s.get('omission_skipped_members', 0)}")
         print(f"  Additive issues      : {s['total_additive_issues']}")
         print(f"  Omissions            : {s['total_omissions']}")
+        print(f"  Empty extractions    : {s.get('empty_extractions', 0)}")
         print(f"  Fully faithful       : {s['members_fully_faithful']}/{s['evaluated']}")
         print("=" * 70)
         
@@ -229,6 +244,13 @@ def _print_summary(report: Dict) -> None:
                   f"{ '5' } source lines:")
             for name in omit_skipped:
                 print(f"      {name}")
+        
+        empty_names = s.get("empty_extraction_api_names") or []
+        if empty_names:
+            print(f"  empty extractions ({len(empty_names)}) — all content fields 'N/A' / missing:")
+            for name in empty_names:
+                print(f"      {name}")
+        
         fully_skipped = r.get("skipped") or []
         if fully_skipped:
             print(f"  fully skipped ({len(fully_skipped)}):")
@@ -262,7 +284,8 @@ def _flat(s) -> str:
 
 def _rows_for_member(member: Dict, source: str):
     for kind, issues in (("additive", member["additive_issues"]),
-                         ("omission", member["omissions"])):
+                         ("omission", member["omissions"]),
+                         ("empty", member.get("empty_issues", []))):
         for it in issues:
             loc = it.get("source_location") or {}
             yield {

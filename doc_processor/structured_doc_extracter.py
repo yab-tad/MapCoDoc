@@ -117,8 +117,7 @@ You will be provided with two inputs:
     - The target member is the one matching the signature in Input 1. Its signature may appear more than once in the scraped text, in two different ways:
         1. **Genuine documentation blocks** — a definition matching the signature that is followed by its own content (full signature, and if available description, parameters and so on). The same signature may be genuinely documented for more than one member on the same page (e.g. a `send(...)` method defined on multiple classes).
         2. **Incidental mentions** — the signature appears only inside another member's description, example, or notes, with no documentation of its own.
-    - Extract ONLY from a genuine documentation block; never treat an incidental mention as the source.
-    - If several genuine blocks share the signature, the retrieval system places the target member's own documentation FIRST — *choose the FIRST available genuine documentation block (as the most relevant documentation for the class is present at the top/first position in the scraped text) and ignore later duplicates*. Do not merge content from the later duplicates.
+    - If several genuine blocks share the signature, the retrieval system places the target member's own documentation FIRST — **it is IMPORTANT that you REMEMBER to choose the available genuine documentation block (as the most relevant documentation for the class is present at the top/first position in the scraped text) and ignore later duplicates*. Do not merge content from the later duplicates.
   
   - **Name**: The `name` field should include the module member's name only if it is explicitly provided in the scraped text.
   - **Additional Information**: Use this field only for supplementary content that is explicitly separate from the main description within a specific method, or parameter. This could also be additional content provided that's separate from the main functional description of the parameter or method.
@@ -126,8 +125,8 @@ You will be provided with two inputs:
 
   - For each entry in *parameters*, split the parameter's documentation block — NOT the member signature — into exactly four fields:
     - **name**: The parameter name only (e.g. `size_average`).
-    - **type**: The datatype/annotation as written in the parameter's own description block (the inline annotation, typically in parentheses), including any URL placeholders and qualifiers such as "optional" (even when written right next to the datatype/annotation of the parameter). Take this ONLY from the parameter description block. Do NOT derive or copy the type from the member signature. If no inline type is given in the description block, set to "N/A".
-    - **description**: The parameter's explanatory prose, verbatim, excluding the name, the inline type, and any trailing supplementary content (see additional_information).
+    - **type**: The datatype/annotation as written in the parameter's own description block (the inline annotation, typically in parentheses), including any URL placeholders and qualifiers such as "(optional)" (even when written right next to the datatype/annotation of the parameter). Take this ONLY from the parameter description block. Do NOT derive or copy the type from the member signature. If no inline type is given in the description block, set to "N/A".
+    - **description**: The parameter's explanatory prose, verbatim, excluding the name, the inline type, and any trailing supplementary content (see additional_information). It is IMPORTANT that this field should not start with datatype/annotation of the parameter that should be placed under the **type** field.
     - **additional_information**: Supplementary content attached to this parameter that is separate from its main description — e.g. a default value ("Default: True"), or an inline Note / Warning / usage example under the parameter. If none, set to "N/A".
     - Do not move text between these four fields, infer values, or pull the type from the signature. Each piece of text must land in exactly one field.
 
@@ -498,8 +497,7 @@ You are tasked with accurately and **comprehensively** extracting the reference 
     - The target member is the one matching the signature in Input 1. Its signature may appear more than once in the scraped text, in two different ways:
         1. **Genuine documentation blocks** — a definition matching the signature that is followed by its own content (full signature, and if available description, parameters and so on). The same signature may be genuinely documented for more than one member on the same page (e.g. a `send(...)` method defined on multiple classes).
         2. **Incidental mentions** — the signature appears only inside another member's description, example, or notes, with no documentation of its own.
-    - Extract ONLY from a genuine documentation block; never treat an incidental mention as the source.
-    - If several genuine blocks share the signature, the appropriate documentation block is usually the FIRST — *choose the FIRST available genuine documentation block (as the most relevant documentation is often present first in the scraped text) and ignore later duplicates*. Do not merge content from the later duplicates.
+    - If several genuine blocks share the signature, the appropriate documentation block is usually the FIRST — *it is IMPORTANT that you REMEMBER to choose the FIRST available genuine documentation block (as the most relevant documentation is often present first in the scraped text) and ignore later duplicates*. Do not merge content from the later duplicates.
     
   - **Module Member Description**:
      - **Purpose**: Extract the main description of the function or method, outlining its purpose and functionality, and include it in the `purpose` field. Populate this field with the main description or overview of the function or method.
@@ -514,8 +512,8 @@ You are tasked with accurately and **comprehensively** extracting the reference 
   - *Parameter* & *Return* Segmentation (read carefully)
     - For each entry in *parameters*, split the parameter's documentation block — NOT the member signature — into exactly four fields:
         - **name**: The parameter name only (e.g. `size_average`).
-        - **type**: The datatype/annotation as written in the parameter's own description block (the inline annotation, typically in parentheses), including any URL placeholders and qualifiers such as "optional" (even when written right next to the datatype/annotation of the parameter). Take this ONLY from the parameter description block. Do NOT derive or copy the type from the member signature. If no inline type is given in the description block, set to "N/A".
-        - **description**: The parameter's explanatory prose, verbatim, excluding the name, the inline type, and any trailing supplementary content (see additional_information).
+        - **type**: The datatype/annotation as written in the parameter's own description block (the inline annotation, typically in parentheses), including any URL placeholders and qualifiers such as "(optional)" (even when written right next to the datatype/annotation of the parameter). Take this ONLY from the parameter description block. Do NOT derive or copy the type from the member signature. If no inline type is given in the description block, set to "N/A".
+        - **description**: The parameter's explanatory prose, verbatim, excluding the name, the inline type, and any trailing supplementary content (see additional_information). It is IMPORTANT that this field should not start with datatype/annotation of the parameter that should be placed under the **type** field.
         - **additional_information**: Supplementary content attached to this parameter that is separate from its main description — e.g. a default value ("Default: True"), or an inline Note / Warning / usage example under the parameter. If none, set to "N/A".
     
     - Apply the SAME logic to *returns*:
