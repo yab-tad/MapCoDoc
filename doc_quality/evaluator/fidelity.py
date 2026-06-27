@@ -81,14 +81,19 @@ def _segments_present(segments: List[str], source_norm: str) -> Tuple[float, str
 
 
 def _grounding_checks(view: DocView):
-    """(label, json_path, segments, is_code). module_member_description and returns are united; each parameter unites name+type, but its description and additional_information are checked individually; all else is individual."""
+    """(label, json_path, segments, is_code). Only each parameter's name+type is united; purpose, additional_information items, returns subfields, and everything else are checked individually."""
     checks = []
     checks.append(("module_member_signature", "$.module_member_signature",
                    [view.get_signature()], True))
 
-    # UNITED: purpose + additional_information
-    checks.append(("module_member_description", "$.module_member_description",
-                   [view.get_purpose(), *view.get_purpose_additional_info()], False))
+    # purpose and each additional_information item checked independently
+    checks.append(("module_member_description.purpose",
+                   "$.module_member_description.purpose",
+                   [view.get_purpose()], False))
+    for i, info in enumerate(view.get_purpose_additional_info()):
+        checks.append((f"module_member_description.additional_information[{i}]",
+                       f"$.module_member_description.additional_information[{i}]",
+                       [info], False))
 
     # parameters: unite name and type/annotation; check description and additional_information independently
     for p in view.get_parameters():
@@ -102,12 +107,16 @@ def _grounding_checks(view: DocView):
                        f"{base}.additional_information",
                        [p.get("additional_information")], False))
 
-    # UNITED: return value's type + description + additional_information
+    # returns: type, description, and additional_information checked independently
     ret = view.get_returns() or {}
     if ret:
-        checks.append(("returns", "$.returns",
-                       [ret.get("type"), ret.get("description"),
-                        ret.get("additional_information")], False))
+        checks.append(("returns.type", "$.returns.type",
+                       [ret.get("type")], False))
+        checks.append(("returns.description", "$.returns.description",
+                       [ret.get("description")], False))
+        checks.append(("returns.additional_information",
+                       "$.returns.additional_information",
+                       [ret.get("additional_information")], False))
 
     # INDIVIDUAL: attributes
     for a in view.get_attributes():

@@ -112,8 +112,7 @@ class DocScraper:
             Optional[Tag]: The main content tag, or None if not found.
         """
         # Try to find main content based on known classes
-        content_classes = ['main-content', 'content', 'docs-content', 'api-content',
-                           'reference-content', 'markdown-content']
+        content_classes = ['main-content', 'content', 'docs-content', 'api-content', 'reference-content', 'markdown-content']
         for class_name in content_classes:
             content = self.soup.find(class_=re.compile(class_name, re.IGNORECASE))
             if content and self._has_documentation_structure(content):

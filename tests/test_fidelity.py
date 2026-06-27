@@ -241,7 +241,7 @@ def _print_summary(report: Dict) -> None:
         omit_skipped = s.get("omission_skipped_api_names") or []
         if omit_skipped:
             print(f"  omission-scope skipped ({len(omit_skipped)}) — signature not in first "
-                  f"{ '5' } source lines:")
+                  f"{ '20' } source lines:")
             for name in omit_skipped:
                 print(f"      {name}")
         
