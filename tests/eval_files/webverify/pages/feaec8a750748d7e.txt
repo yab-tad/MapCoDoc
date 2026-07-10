@@ -1,8 +1,0 @@
-# numpy.poly1d.coeffs
-
-property
-
-property poly1d.coeffs#(https://numpy.org/doc/stable/reference/generated/numpy.poly1d.coeffs.html#numpy.poly1d.coeffs)
-    The polynomial coefficients
-
-On this page

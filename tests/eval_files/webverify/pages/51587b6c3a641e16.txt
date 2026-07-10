@@ -1,7 +1,0 @@
-# numpy.polynomial.laguerre.Laguerre.domain
-
-attribute
-
-polynomial.laguerre.Laguerre.domain = array([0., 1.])#(https://numpy.org/doc/stable/reference/generated/numpy.polynomial.laguerre.Laguerre.domain.html#numpy.polynomial.laguerre.Laguerre.domain)
-
-On this page

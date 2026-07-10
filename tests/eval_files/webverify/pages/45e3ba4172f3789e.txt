@@ -1,7 +1,0 @@
-# numpy.polynomial.chebyshev.Chebyshev.domain
-
-attribute
-
-polynomial.chebyshev.Chebyshev.domain = array([-1.,  1.])#(https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.Chebyshev.domain.html#numpy.polynomial.chebyshev.Chebyshev.domain)
-
-On this page

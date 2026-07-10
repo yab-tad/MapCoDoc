@@ -1,7 +1,0 @@
-# pandas.IntervalIndex.length
-
-property IntervalIndex.length[source](https://github.com/pandas-dev/pandas/blob/main/pandas/core/indexes/interval.py#L843-L845)#(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.IntervalIndex.length.html#pandas.IntervalIndex.length)
-
-On this page
-
-[Show Source](https://pandas.pydata.org/pandas-docs/version/2.3.3/_sources/reference/api/pandas.IntervalIndex.length.rst.txt)
