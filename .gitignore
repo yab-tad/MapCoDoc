@@ -9,7 +9,7 @@ tests/*.txt
 tests/*.json
 
 # Tests and replication package components
-eval_files/*
+tests/eval_files/*
 tools/*
 DATA_LICENSES.md
 REPRODUCE.md
