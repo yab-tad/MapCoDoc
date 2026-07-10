@@ -1,0 +1,78 @@
+# pandas.core.window.rolling.Rolling.var
+
+Rolling.var(ddof=1, numeric_only=False, engine=None, engine_kwargs=None)[source](https://github.com/pandas-dev/pandas/blob/main/pandas/core/window/rolling.py#L2366-L2423)#(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Rolling.var.html#pandas.core.window.rolling.Rolling.var)
+    Calculate the rolling variance.
+
+Parameters:
+    ddof : int, default 1
+    Delta Degrees of Freedom.  The divisor used in calculations
+is N - ddof, where N represents the number of elements.
+
+numeric_only : bool, default False
+    Include only float, int, boolean columns.
+
+Added in version 1.5.0.
+
+engine : str, default None
+    - 'cython' : Runs the operation through C-extensions from cython.
+- 'numba' : Runs the operation through JIT compiled code from numba.
+- None : Defaults to 'cython' or globally setting compute.use_numba
+
+Added in version 1.4.0.
+
+engine_kwargs : dict, default None
+    - For 'cython' engine, there are no accepted engine_kwargs
+- For 'numba' engine, the engine can accept nopython, nogil
+and parallel dictionary keys. The values must either be True or
+False. The default engine_kwargs for the 'numba' engine is
+{'nopython': True, 'nogil': False, 'parallel': False}
+
+Added in version 1.4.0.
+
+Returns:
+    Series or DataFrame
+    Return type is the same as the original object with np.float64 dtype.
+
+See also
+
+numpy.var(https://numpy.org/doc/stable/reference/generated/numpy.var.html#numpy.var)
+    Equivalent method for NumPy array.
+
+pandas.Series.rolling(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.rolling.html#pandas.Series.rolling)
+    Calling rolling with Series data.
+
+pandas.DataFrame.rolling(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.rolling.html#pandas.DataFrame.rolling)
+    Calling rolling with DataFrames.
+
+pandas.Series.var(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.var.html#pandas.Series.var)
+    Aggregating var for Series.
+
+pandas.DataFrame.var(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.var.html#pandas.DataFrame.var)
+    Aggregating var for DataFrame.
+
+Notes
+
+The default ddof of 1 used in Series.var() is different
+than the default ddof of 0 in numpy.var()(https://numpy.org/doc/stable/reference/generated/numpy.var.html#numpy.var).
+
+A minimum of one period is required for the rolling calculation.
+
+Examples
+
+```
+>>> s = pd.Series([5, 5, 6, 7, 5, 5, 5])
+>>> s.rolling(3).var()
+0         NaN
+1         NaN
+2    0.333333
+3    1.000000
+4    1.000000
+5    1.333333
+6    0.000000
+dtype: float64
+
+```
+
+On this page
+
+[Show Source](https://pandas.pydata.org/pandas-docs/version/2.3.3/_sources/reference/api/pandas.core.window.rolling.Rolling.var.rst.txt)

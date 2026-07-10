@@ -1,0 +1,88 @@
+api_name,member_type,fidelity_group,gt_kind,preprocessed_accurate,structured_vs_preprocessed,structured_vs_original,correct_doc,scope,root_cause_layer,flag,gt_doc_head,struct_purpose_head
+requests.get,function,clean,direct,yes,yes,yes,yes,full,none,,"Sends a GET request.    URL for the new Request object.   (optional) Dictionary,",Sends a GET request.
+requests.PreparedRequest.prepare,method,clean,direct,yes,yes,yes,yes,full,none,,Prepares the entire request with the given parameters.,Prepares the entire request with the given parameters.
+requests.PreparedRequest.prepare_url,method,clean,direct,yes,yes,yes,yes,full,none,,Prepares the given HTTP URL.,Prepares the given HTTP URL.
+requests.TooManyRedirects,class,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,Too many redirects.,
+requests.Session.rebuild_auth,method,empty,inherited->original,no,empty,no,no,n/a,retrieval,REVIEW,When being redirected we may want to strip authentication from the request to av,N/A
+requests.patch,function,clean,direct,yes,yes,yes,yes,full,none,,Sends a PATCH request.    URL for the new Request object.   (optional) Dictionar,Sends a PATCH request.
+requests.cookies.RequestsCookieJar.itervalues,method,clean,direct,yes,yes,yes,yes,full,none,,Dict-like itervalues() that returns an iterator of values of cookies from the ja,Dict-like itervalues() that returns an iterator of values of cookies from the ja
+requests.adapters.HTTPAdapter.init_poolmanager,method,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,Initializes a urllib3 PoolManager.  This method should not be called from user c,
+requests.cookies.RequestsCookieJar.items,method,clean,direct,yes,yes,yes,yes,full,none,,Dict-like items() that returns a list of name-value tuples from the jar. Allows ,Dict-like items() that returns a list of name-value tuples from the jar.   Allow
+requests.Response.text,method,clean,direct,yes,yes,yes,yes,full,none,,"Content of the response, in unicode.  If Response.encoding is None, encoding wil","Content of the response, in unicode. If Response.encoding is None, encoding will"
+requests.PreparedRequest.prepare_auth,method,clean,direct,yes,yes,yes,yes,missing_params,none,,Prepares the given HTTP auth data.,Prepares the given HTTP auth data.
+requests.Response.ok,method,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,"Returns True if status_code is less than 400, False if not.  This attribute chec",
+requests.PreparedRequest.prepare_cookies,method,clean,direct,yes,yes,yes,yes,full,none,,Prepares the given HTTP cookie data.  This function eventually generates a Cooki,Prepares the given HTTP cookie data. This function eventually generates a Cookie
+requests.cookies.RequestsCookieJar.iterkeys,method,clean,direct,yes,yes,yes,yes,full,none,,Dict-like iterkeys() that returns an iterator of names of cookies from the jar. ,Dict-like iterkeys() that returns an iterator of names of cookies from the jar.
+requests.Session.delete,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Sends a DELETE request. Returns Response object.    URL for the new Request obje,N/A
+requests.adapters.BaseAdapter.send,method,clean,direct,yes,yes,yes,yes,full,none,,Sends PreparedRequest object. Returns Response object.    The PreparedRequest be,Sends PreparedRequest object. Returns Response object.
+requests.PreparedRequest.prepare_hooks,method,clean,direct,yes,yes,yes,yes,full,none,,Prepares the given hooks.,Prepares the given hooks.
+requests.PreparedRequest.prepare_body,method,clean,direct,yes,yes,yes,yes,full,none,,Prepares the given HTTP body data.,Prepares the given HTTP body data.
+requests.Response.is_permanent_redirect,method,clean,direct,yes,yes,yes,yes,full,none,,True if this Response one of the permanent versions of redirect.,True if this Response one of the permanent versions of redirect.
+requests.Session.mount,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Registers a connection adapter to a prefix.  Adapters are sorted in descending o,N/A
+requests.adapters.HTTPAdapter.proxy_headers,method,clean,direct,yes,yes,yes,yes,full,none,,Returns a dictionary of the headers to add to any request sent through a proxy. ,Returns a dictionary of the headers to add to any request sent through a proxy. 
+requests.cookies.RequestsCookieJar.set_cookie,method,clean,direct,yes,yes,no_groundtruth,review,full,review,REVIEW,,"Set a cookie, without checking whether or not it should be set."
+requests.Session.options,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Sends a OPTIONS request. Returns Response object.    URL for the new Request obj,N/A
+requests.Session.merge_environment_settings,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Check the environment and merge it with some settings.    dict,N/A
+requests.cookies.RequestsCookieJar.list_domains,method,clean,direct,yes,yes,yes,yes,full,none,,Utility method to list all the domains in the jar.,Utility method to list all the domains in the jar.
+requests.cookies.RequestsCookieJar.update,method,clean,direct,yes,yes,yes,yes,full,none,,Updates this jar with cookies from another CookieJar or dict-like,Updates this jar with cookies from another CookieJar or dict-like
+requests.adapters.HTTPAdapter.get_connection_with_tls_context,method,clean,direct,yes,yes,yes,yes,full,none,,Returns a urllib3 connection for the given request and TLS settings. This should,Returns a urllib3 connection for the given request and TLS settings. This should
+requests.utils.get_encodings_from_content,function,clean,direct,yes,yes,yes,yes,full,none,,Returns encodings from given content string.    bytestring to extract encodings ,Returns encodings from given content string.
+requests.cookies.cookiejar_from_dict,function,clean,direct,yes,yes,yes,yes,full,none,,Returns a CookieJar from a key/value dictionary.    Dict of key/values to insert,Returns a CookieJar from a key/value dictionary.
+requests.Response.json,method,clean,direct,yes,yes,yes,yes,full,none,,Decodes the JSON response body (if any) as a Python object.  This may return a d,Decodes the JSON response body (if any) as a Python object. This may return a di
+requests.Response.iter_content,method,clean,direct,yes,yes,yes,yes,full,none,,"Iterates over the response data.  When stream=True is set on the request, this a","Iterates over the response data. When stream=True is set on the request, this av"
+requests.cookies.RequestsCookieJar.copy,method,clean,direct,yes,yes,yes,yes,full,none,,Return a copy of this RequestsCookieJar.,Return a copy of this RequestsCookieJar.
+requests.Session.head,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Sends a HEAD request. Returns Response object.    URL for the new Request object,N/A
+requests.auth.AuthBase,class,clean,direct,yes,yes,yes,yes,full,none,,Base class that all auth implementations derive from,Base class that all auth implementations derive from
+requests.utils.get_encoding_from_headers,function,clean,direct,yes,yes,yes,yes,full,none,,Returns encodings from given HTTP Header Dict.    dictionary to extract encoding,Returns encodings from given HTTP Header Dict.
+requests.utils.dict_from_cookiejar,function,clean,direct,yes,yes,yes,yes,full,none,,Returns a key/value dictionary from a CookieJar.    CookieJar object to extract ,Returns a key/value dictionary from a CookieJar.
+requests.PreparedRequest,class,issues,direct,yes,yes,yes,yes,full,none,,"The fully mutable PreparedRequest object, containing the exact bytes that will b","The fully mutable PreparedRequest(url_placeholder_0) object, containing the exac"
+requests.Response.iter_lines,method,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,"Iterates over the response data, one line at a time.  When stream=True is set on",
+requests.Response.content,method,clean,direct,yes,yes,yes,yes,full,none,,"Content of the response, in bytes.","Content of the response, in bytes."
+requests.utils.add_dict_to_cookiejar,function,clean,direct,yes,yes,yes,yes,full,none,,Returns a CookieJar from a key/value dictionary.    CookieJar to insert cookies ,Returns a CookieJar from a key/value dictionary.
+requests.Request.prepare,method,clean,direct,yes,yes,yes,yes,full,none,,Constructs a PreparedRequest for transmission and returns it.,Constructs a PreparedRequest(url_placeholder_0) for transmission and returns it.
+requests.adapters.HTTPAdapter.get_connection,method,clean,direct,yes,yes,yes,yes,full,none,,DEPRECATED: Users should move to get_connection_with_tls_context for all subclas,DEPRECATED: Users should move to get_connection_with_tls_context for all subclas
+requests.head,function,clean,direct,yes,yes,yes,yes,full,none,,Sends a HEAD request.    URL for the new Request object.   Optional arguments th,Sends a HEAD request.
+requests.cookies.RequestsCookieJar.set,method,clean,direct,yes,yes,yes,yes,full,none,,Dict-like set() that also supports optional domain and path args in order to res,Dict-like set() that also supports optional domain and path args in order to res
+requests.Request.deregister_hook,method,clean,inherited->original,yes,yes,yes,yes,missing_params,none,,"Deregister a previously registered hook. Returns True if the hook existed, False","Deregister a previously registered hook. Returns True if the hook existed, False"
+requests.Session.request,method,issues,direct,no,yes,no,no,missing_params,retrieval,REVIEW,"Constructs a Request, prepares it and sends it. Returns Response object.    meth",N/A
+requests.adapters.HTTPAdapter,class,clean,direct,yes,yes,yes,yes,full,none,,The built-in HTTP Adapter for urllib3.  Provides a general-case interface for Re,The built-in HTTP Adapter for urllib3. Provides a general-case interface for Req
+requests.PreparedRequest.path_url,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Build the path URL to use.,Build the path URL to use.
+requests.put,function,clean,direct,yes,yes,yes,yes,full,none,,"Sends a PUT request.    URL for the new Request object.   (optional) Dictionary,",Sends a PUT request.
+requests.adapters.HTTPAdapter.proxy_manager_for,method,clean,direct,yes,yes,yes,yes,full,none,,Return urllib3 ProxyManager for the given proxy.  This method should not be call,Return urllib3 ProxyManager for the given proxy. This method should not be calle
+requests.adapters.HTTPAdapter.build_connection_pool_key_attributes,method,clean,direct,yes,yes,yes,yes,full,none,,Build the PoolKey attributes used by urllib3 to return a connection.  This looks,Build the PoolKey attributes used by urllib3 to return a connection. This looks 
+requests.Session.post,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Sends a POST request. Returns Response object.    URL for the new Request object,N/A
+requests.cookies.RequestsCookieJar.get,method,clean,direct,yes,yes,yes,yes,full,none,,Dict-like get() that also supports optional domain and path args in order to res,Dict-like get() that also supports optional domain and path args in order to res
+requests.Request,class,clean,direct,yes,yes,yes,yes,full,none,,"A user-created Request object.  Used to prepare a PreparedRequest, which is sent",A user-created Request(url_placeholder_0) object. Used to prepare a PreparedRequ
+requests.Response.close,method,clean,direct,yes,yes,yes,yes,full,none,,Releases the connection back to the pool. Once this method has been called the u,Releases the connection back to the pool. Once this method has been called the u
+requests.adapters.BaseAdapter,class,clean,direct,yes,yes,yes,yes,full,none,,The Base Transport Adapter,The Base Transport Adapter
+requests.Session.prepare_request,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Constructs a PreparedRequest for transmission and returns it. The PreparedReques,N/A
+requests.cookies.RequestsCookieJar.keys,method,clean,direct,yes,yes,yes,yes,full,none,,Dict-like keys() that returns a list of names of cookies from the jar.   ,Dict-like keys() that returns a list of names of cookies from the jar.
+requests.cookies.RequestsCookieJar.get_dict,method,issues,direct,yes,yes,yes,yes,full,none,,Takes as an argument an optional domain and path and returns a plain old Python ,Takes as an argument an optional domain and path and returns a plain old Python 
+requests.Session.get_redirect_target,method,empty,inherited->original,no,empty,no,no,n/a,retrieval,REVIEW,Receives a Response. Returns a redirect URI or None,N/A
+requests.cookies.RequestsCookieJar.multiple_domains,method,clean,direct,yes,yes,yes,yes,full,none,,Returns True if there are multiple domains in the jar. Returns False otherwise. ,Returns True if there are multiple domains in the jar. Returns False otherwise.
+requests.Session.patch,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Sends a PATCH request. Returns Response object.    URL for the new Request objec,N/A
+requests.post,function,clean,direct,yes,yes,yes,yes,full,none,,Sends a POST request.    URL for the new Request object.   (optional) Dictionary,Sends a POST request.
+requests.Request.register_hook,method,clean,inherited->original,yes,yes,yes,yes,missing_params,none,,Properly register a hook.,Properly register a hook.
+requests.Response.raise_for_status,method,clean,direct,yes,yes,yes,yes,full,none,,"Raises HTTPError, if one occurred.","Raises HTTPError(url_placeholder_0), if one occurred."
+requests.adapters.HTTPAdapter.request_url,method,clean,direct,yes,yes,yes,yes,full,none,,Obtain the url to use when making the final request.  If the message is being se,Obtain the url to use when making the final request. If the message is being sen
+requests.Session.should_strip_auth,method,empty,inherited->original,no,empty,no,no,n/a,retrieval,REVIEW,Decide whether Authorization header should be removed when redirecting,N/A
+requests.Session.rebuild_method,method,clean,inherited->original,yes,yes,yes,yes,full,none,,When being redirected we may want to change the method of the request based on c,When being redirected we may want to change the method of the request based on c
+requests.PreparedRequest.prepare_content_length,method,clean,direct,yes,yes,yes,yes,full,none,,Prepare Content-Length header based on request method and body,Prepare Content-Length header based on request method and body
+requests.Session,class,clean,direct,yes,yes,yes,yes,full,none,,"A Requests session.  Provides cookie persistence, connection-pooling, and config","A Requests session. Provides cookie persistence, connection-pooling, and configu"
+requests.PreparedRequest.prepare_headers,method,clean,direct,yes,yes,yes,yes,full,none,,Prepares the given HTTP headers.,Prepares the given HTTP headers.
+requests.Response.apparent_encoding,method,clean,direct,yes,yes,yes,yes,full,none,,"The apparent encoding, provided by the charset_normalizer or chardet libraries.","The apparent encoding, provided by the charset_normalizer or chardet libraries."
+requests.adapters.BaseAdapter.close,method,clean,direct,yes,yes,yes,yes,full,none,,Cleans up adapter specific items.,Cleans up adapter specific items.
+requests.Session.close,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Closes all adapters and as such the session,N/A
+requests.auth.HTTPBasicAuth,class,clean,direct,yes,yes,yes,yes,full,none,,Attaches HTTP Basic Authentication to the given Request object.,Attaches HTTP Basic Authentication to the given Request object.
+requests.delete,function,clean,direct,yes,yes,yes,yes,partial(0.50),none,,Sends a DELETE request.    URL for the new Request object.   Optional arguments ,Sends a DELETE request.
+requests.PreparedRequest.prepare_method,method,clean,direct,yes,yes,yes,yes,full,none,,Prepares the given HTTP method.,Prepares the given HTTP method.
+requests.Session.rebuild_proxies,method,empty,inherited->original,no,empty,no,no,n/a,retrieval,REVIEW,This method re-evaluates the proxy configuration by considering the environment ,N/A
+requests.cookies.RequestsCookieJar.list_paths,method,clean,direct,yes,yes,yes,yes,full,none,,Utility method to list all the paths in the jar.,Utility method to list all the paths in the jar.
+requests.Session.send,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Send a given PreparedRequest.    requests.Response,N/A
+requests.utils.get_unicode_from_response,function,clean,direct,yes,yes,yes,yes,full,none,,Returns the requested content back in unicode.    Response object to get unicode,Returns the requested content back in unicode.
+requests.Session.get_adapter,method,empty,direct,no,empty,no,no,n/a,retrieval,REVIEW,Returns the appropriate connection adapter for the given URL.    requests.adapte,N/A
+requests.adapters.HTTPAdapter.build_response,method,clean,direct,yes,yes,yes,yes,full,none,,Builds a Response object from a urllib3 response. This should not be called from,Builds a Response(url_placeholder_0) object from a urllib3 response. This should
+requests.PreparedRequest.deregister_hook,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Deregister a previously registered hook. Returns True if the hook existed, False","Deregister a previously registered hook. Returns True if the hook existed, False"
+requests.ReadTimeout,class,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,The server did not send any data in the allotted amount of time.,
+requests.Timeout,class,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,The request timed out.  Catching this error will catch both ConnectTimeout and R,
+requests.ConnectionError,class,clean,direct,yes,yes,yes,yes,full,none,,A Connection error occurred.,A Connection error occurred.

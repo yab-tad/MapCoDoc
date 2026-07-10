@@ -1,0 +1,68 @@
+\begin{table}[t]
+\centering
+\caption{Trace-unit fidelity of the structured documentation, conditioned on correctly recovered trace links. Values are mean construct score with the percentage of members scoring perfectly ($=1.0$) in parentheses.}
+\label{tab:fidelity-headline}
+\begin{tabular}{lccc}
+\toprule
+Source & Faithfulness & Categorization & Completeness \\
+\midrule
+WEB ($n{=}1416$) & 0.983 (93.0\%) & 0.977 (92.0\%) & 0.957 (87.5\%) \\
+PDF ($n{=}1136$) & 0.955 (82.8\%) & 0.973 (90.8\%) & 0.926 (77.6\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Distribution of structured trace units by similarity to their source span. The Cosmetic band captures normalization/glyph drift (a measurement artifact); only the Paraphrase and lower bands are genuine fidelity defects.}
+\label{tab:fidelity-bands}
+\begin{tabular}{lrr}
+\toprule
+Similarity band & WEB (\%) & PDF (\%) \\
+\midrule
+Faithful ($\geq$.995) & 98.6 & 96.9 \\
+Cosmetic [.90,.995) & 1.0 & 2.8 \\
+Paraphrase [.75,.90) & 0.2 & 0.1 \\
+Weak [.55,.75) & 0.2 & 0.1 \\
+Unsupported ($<$.55) & 0.0 & 0.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Completeness: percentage of source-documented trace units represented in the structured doc. Examples are reported as a diagnostic only (PDF pages concatenate inherited members, inflating apparent omission).}
+\label{tab:fidelity-completeness}
+\begin{tabular}{lrr}
+\toprule
+Trace unit & WEB (\%) & PDF (\%) \\
+\midrule
+Signature & 99.5 & 99.3 \\
+Parameters & 93.4 & 93.4 \\
+Purpose & 99.4 & 98.6 \\
+Returns & 92.2 & 79.0 \\
+\midrule
+Examples (diag.) & 73.4 & 57.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Per-library mean sub-construct scores (Faithfulness / Categorization / Completeness) on correctly recovered trace links.}
+\label{tab:fidelity-perlib}
+\begin{tabular}{lccc|ccc}
+\toprule
+& \multicolumn{3}{c|}{WEB} & \multicolumn{3}{c}{PDF} \\
+Library & F1 & F2 & F3 & F1 & F2 & F3 \\
+\midrule
+numpy & 0.99 & 1.00 & 0.98 & 0.97 & 0.99 & 0.95 \\
+pandas & 0.97 & 1.00 & 0.97 & 0.92 & 0.99 & 0.93 \\
+requests & 0.99 & 0.92 & 0.95 & 0.99 & 0.96 & 0.83 \\
+sklearn & 0.99 & 1.00 & 0.99 & 0.99 & 1.00 & 0.97 \\
+sqlalchemy & 0.93 & 0.89 & 0.94 & 0.86 & 0.89 & 0.89 \\
+torch & 1.00 & 0.98 & 0.90 & 0.98 & 0.97 & 0.90 \\
+xgboost & 0.99 & 0.97 & 0.95 & 1.00 & 0.98 & 0.96 \\
+\bottomrule
+\end{tabular}
+\end{table}

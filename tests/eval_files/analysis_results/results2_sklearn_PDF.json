@@ -1,0 +1,3148 @@
+{
+  "summary": {
+    "total_members": 246,
+    "extracted": 223,
+    "missing": 23,
+    "coverage_pct": 90.7,
+    "match_breakdown": {
+      "lexical": 192,
+      "semantic": 25,
+      "hybrid": 0,
+      "fallback": 6,
+      "unknown": 0
+    }
+  },
+  "members": [
+    {
+      "api_name": "sklearn.decomposition.TruncatedSVD",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 253,
+        "first_line": "class sklearn.decomposition.TruncatedSVD(n_components=2, *, algorithm='randomized', n_iter=5, n_oversamples=10, power_iteration_normalizer='auto', random_state=None, tol=0.0) Dimensionality reduction using truncated SVD (aka LSA).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.TruncatedSVD.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.2,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.load_breast_cancer",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 657,
+        "first_line": "load_breast_cancer sklearn.datasets.load_breast_cancer(*, return_X_y=False, as_frame=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.load_breast_cancer.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.37,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.neighbors.NeighborhoodComponentsAnalysis",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 242,
+        "first_line": "class sklearn.neighbors.NeighborhoodComponentsAnalysis(n_components=None, *, init='auto', warm_start=False, max_iter=50, tol=1e-05, callback=None, verbose=0, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.NeighborhoodComponentsAnalysis.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.21,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_20newsgroups_vectorized",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 637,
+        "first_line": "fetch_20newsgroups_vectorized sklearn.datasets.fetch_20newsgroups_vectorized(*, subset='train', remove=(), data_home=None,",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.fetch_20newsgroups_vectorized.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.37,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.fit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 220,
+        "first_line": "fit(X, y=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.IncrementalPCA.fit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.jaccard_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 587,
+        "first_line": "sklearn.metrics.jaccard_score(y_true, y_pred, *, labels=None, pos_label=1, average='binary', sample_weight=None, zero_division='warn')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.jaccard_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.02,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_rcv1",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 638,
+        "first_line": "sklearn.datasets.fetch_rcv1(*, data_home=None, subset='all', download_if_missing=True, random_state=None, shuffle=False, return_X_y=False, n_retries=3, delay=1.0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.fetch_rcv1.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.34,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier.predict_proba",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 55,
+        "first_line": "predict_proba(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.KNeighborsClassifier.predict_proba.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_column_scale",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 738,
+        "first_line": "sklearn.utils.sparsefuncs.inplace_column_scale(X, scale)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.sparsefuncs.inplace_column_scale.txt"
+      },
+      "match_type": "exact",
+      "match_score": 108.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.chi2_kernel",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 765,
+        "first_line": "sklearn.metrics.pairwise.chi2_kernel(X, Y=None, gamma=1.0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise.chi2_kernel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.SkewedChi2Sampler",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 186,
+        "first_line": "class sklearn.kernel_approximation.SkewedChi2Sampler(*, skewedness=1.0, n_components=100, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.kernel_approximation.SkewedChi2Sampler.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.ensemble.VotingClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 331,
+        "first_line": "class sklearn.ensemble.VotingClassifier(estimators, *, voting='hard', weights=None, n_jobs=None, flatten_transform=True, verbose=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.ensemble.VotingClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.mixture.GaussianMixture",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 395,
+        "first_line": "class sklearn.mixture.GaussianMixture(n_components=1, *, covariance_type='full', tol=0.001, reg_covar=1e-06, max_iter=100, n_init=1, init_params='kmeans', weights_init=None, means_init=None, precisions_init=None, random_state=None, warm_start=False, verbose=0, verbose_interval=10)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.mixture.GaussianMixture.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.bounds",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 546,
+        "first_line": "property bounds",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.Exponentiation.bounds.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 90.49,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.base.is_classifier",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "sklearn.base.is_classifier(estimator)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.base.is_classifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 269,
+        "first_line": "class sklearn.preprocessing.OrdinalEncoder(*, categories='auto', dtype=<class 'numpy.float64'>, handle_unknown='error', unknown_value=None, encoded_missing_value=nan, min_frequency=None, max_categories=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.OrdinalEncoder.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.2,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.PolynomialFeatures",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 195,
+        "first_line": "class sklearn.preprocessing.PolynomialFeatures(degree=2, *, interaction_only=False, include_bias=True, order='C')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.PolynomialFeatures.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.24,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.roc_curve",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 238,
+        "first_line": "sklearn.metrics.roc_curve(y_true, y_score, *, pos_label=None, sample_weight=None, drop_intermediate=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.roc_curve.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.LinearDiscriminantAnalysis",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 417,
+        "first_line": "class sklearn.discriminant_analysis.LinearDiscriminantAnalysis(solver='svd', shrinkage=None, priors=None, n_components=None, store_covariance=False, tol=0.0001, covariance_estimator=None) Linear Discriminant Analysis.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.discriminant_analysis.LinearDiscriminantAnalysis.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.classification_report",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "sklearn.preprocessing.label_binarize(y, *, classes, neg_label=0, pos_label=1, sparse_output=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.classification_report.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.21,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.svm.SVC",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 420,
+        "first_line": "class sklearn.svm.SVC(*, C=1.0, kernel='rbf', degree=3, gamma='scale', coef0=0.0, shrinking=True, probability=False, tol=0.001, cache_size=200, class_weight=None, verbose=False, max_iter=-1, decision_function_shape='ovr', break_ties=False, random_state=None) C-Support Vector Classification.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.svm.SVC.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.1,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.check_scoring",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 202,
+        "first_line": "sklearn.metrics.check_scoring(estimator=None, scoring=None, *, allow_none=False, raise_exc=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.check_scoring.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.21,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.coverage_error",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 127,
+        "first_line": "sklearn.metrics.coverage_error(y_true, y_score, *, sample_weight=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.coverage_error.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.23,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.average_precision_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "sklearn.calibration.calibration_curve(y_true, y_prob, *, pos_label=None, n_bins=5, strategy='uniform')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.average_precision_score.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.22,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.model_selection.LeavePGroupsOut",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 767,
+        "first_line": "class sklearn.model_selection.LeavePGroupsOut(n_groups)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.LeavePGroupsOut.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.38,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.label_ranking_average_precision_score",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.paired_cosine_distances",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": ">>> dist.pairwise(X,Y)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise.paired_cosine_distances.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegression",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 517,
+        "first_line": "class sklearn.linear_model.LogisticRegression(penalty='deprecated', *, C=1.0, l1_ratio=0.0, dual=False, tol=0.0001, fit_intercept=True, intercept_scaling=1, class_weight=None, random_state=None, solver='lbfgs', max_iter=100, verbose=0, warm_start=False, n_jobs=None) Logistic Regression (aka logit, MaxEnt) classifier.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LogisticRegression.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.NMF",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 352,
+        "first_line": "class sklearn.decomposition.NMF(n_components='auto', *, init=None, solver='cd', beta_loss='frobenius', tol=0.0001, max_iter=200, random_state=None, alpha_W=0.0, alpha_H='same', l1_ratio=0.0, verbose=0, shuffle=False) Non-Negative Matrix Factorization (NMF).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.NMF.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectFromModel",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 330,
+        "first_line": "class sklearn.feature_selection.SelectFromModel(estimator, *, threshold=None, prefit=False, norm_order=1, max_features=None, importance_getter='auto') Meta-transformer for selecting features based on importance weights.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_selection.SelectFromModel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.19,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.load_wine",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 23,
+        "first_line": "sklearn.datasets.load_wine(*, return_X_y=False, as_frame=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.load_wine.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.35,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.RepeatedKFold",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 700,
+        "first_line": "class sklearn.model_selection.RepeatedKFold(*, n_splits=5, n_repeats=10, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.RepeatedKFold.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.4,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.precision_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 525,
+        "first_line": "sklearn.metrics.precision_score(y_true, y_pred, *, labels=None, pos_label=1, average='binary', sample_weight=None, zero_division='warn')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.precision_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.get_params",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 711,
+        "first_line": "get_params(deep=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.Exponentiation.get_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_olivetti_faces",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 560,
+        "first_line": "fetch_olivetti_faces sklearn.datasets.fetch_olivetti_faces(*, data_home=None, shuffle=False, random_state=0,",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.fetch_olivetti_faces.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.39,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.utils.compute_sample_weight",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 9,
+        "first_line": "score(X, y, sample_weight=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.compute_sample_weight.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.22,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectFwe",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 223,
+        "first_line": "class sklearn.feature_selection.SelectFwe(score_func=<function f_classif>, *, alpha=0.05)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_selection.SelectFwe.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.23,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.orthogonal_mp_gram",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 192,
+        "first_line": "sklearn.linear_model.orthogonal_mp_gram(Gram, Xy, *, n_nonzero_coefs=None, tol=None, norms_squared=None, copy_Gram=True, copy_Xy=True, return_path=False, return_n_iter=False) Gram Orthogonal Matching Pursuit (OMP).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.orthogonal_mp_gram.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.75,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_row_scale",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "sklearn.preprocessing.scale(X, *, axis=0, with_mean=True, with_std=True, copy=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.sparsefuncs.inplace_row_scale.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.25,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.feature_selection.GenericUnivariateSelect",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 224,
+        "first_line": "class sklearn.feature_selection.GenericUnivariateSelect(score_func=<function f_classif>, *, mode='percentile', param=1e-05)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_selection.GenericUnivariateSelect.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.21,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_low_rank_matrix",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.datasets.make_checkerboard",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.base.ClusterMixin",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 43,
+        "first_line": "class sklearn.base.ClusterMixin",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.base.ClusterMixin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 147.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.ensemble.StackingClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 444,
+        "first_line": "class sklearn.ensemble.StackingClassifier(estimators, final_estimator=None, *, cv=None, stack_method='auto', n_jobs=None, passthrough=False, verbose=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.ensemble.StackingClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.11,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.as_float_array",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 55,
+        "first_line": "sklearn.utils.as_float_array(X, *, copy=True, ensure_all_finite=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.as_float_array.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.isotonic.isotonic_regression",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 12,
+        "first_line": "sklearn.isotonic.isotonic_regression(y, *, sample_weight=None, y_min=None, y_max=None, increasing=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.isotonic.isotonic_regression.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.covariance._empirical_covariance.fast_logdet",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": ">>> empirical_covariance(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.covariance._empirical_covariance.fast_logdet.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.metrics.PrecisionRecallDisplay.from_estimator",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.svm.OneClassSVM",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 305,
+        "first_line": "class sklearn.svm.OneClassSVM(*, kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, nu=0.5, shrinking=True, cache_size=200, verbose=False, max_iter=-1)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.svm.OneClassSVM.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.2,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.compose.make_column_transformer",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 104,
+        "first_line": "sklearn.compose.make_column_transformer(*transformers, remainder='drop', sparse_threshold=0.3, n_jobs=None, verbose=False, verbose_feature_names_out=True, force_int_remainder_cols='deprecated')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.compose.make_column_transformer.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 61.26,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.semi_supervised.SelfTrainingClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 254,
+        "first_line": "class sklearn.semi_supervised.SelfTrainingClassifier(estimator=None, threshold=0.75, criterion='threshold', k_best=10, max_iter=10, verbose=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.semi_supervised.SelfTrainingClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.normalized_mutual_info_score",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.incr_mean_variance_axis",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 728,
+        "first_line": "sklearn.utils.sparsefuncs.incr_mean_variance_axis(X, *, axis, last_mean, last_var, last_n, weights=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.sparsefuncs.incr_mean_variance_axis.txt"
+      },
+      "match_type": "exact",
+      "match_score": 108.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.rand_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 273,
+        "first_line": "sklearn.metrics.rand_score(labels_true, labels_pred)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.rand_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.4,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.TargetEncoder",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 313,
+        "first_line": "class sklearn.preprocessing.TargetEncoder(categories='auto', target_type='auto', smooth='auto', cv=5, shuffle=True, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.TargetEncoder.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_selection.SequentialFeatureSelector",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 304,
+        "first_line": "class sklearn.feature_selection.SequentialFeatureSelector(estimator, *, n_features_to_select='auto', tol=None, direction='forward', scoring=None, cv=5, n_jobs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_selection.SequentialFeatureSelector.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.21,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.cluster.mean_shift",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 72,
+        "first_line": "sklearn.cluster.mean_shift(X, *, bandwidth=None, seeds=None, bin_seeding=False, min_bin_freq=1, cluster_all=True, max_iter=300, n_jobs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cluster.mean_shift.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.26,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.naive_bayes.ComplementNB",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 373,
+        "first_line": "class sklearn.naive_bayes.ComplementNB(*, alpha=1.0, force_alpha=True, fit_prior=True, class_prior=None, norm=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.naive_bayes.ComplementNB.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.sort_graph_by_row_values",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "sklearn.neighbors.sort_graph_by_row_values(graph, copy=False, warn_when_not_sorted=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.sort_graph_by_row_values.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.OneHotEncoder",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 379,
+        "first_line": "class sklearn.preprocessing.OneHotEncoder(*, categories='auto', drop=None, sparse_output=True, dtype=<class 'numpy.float64'>, handle_unknown='error', min_frequency=None, max_categories=None, feature_name_combiner='concat') Encode categorical features as a one-hot numeric array.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.OneHotEncoder.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.base.ClassifierMixin",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "class sklearn.base.ClassifierMixin",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.base.ClassifierMixin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 147.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.det_curve",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 572,
+        "first_line": "sklearn.metrics.det_curve(y_true, y_score, pos_label=None, sample_weight=None, drop_intermediate=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.det_curve.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.ElasticNetCV",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 611,
+        "first_line": "class sklearn.linear_model.ElasticNetCV(*, l1_ratio=0.5, eps=0.001, n_alphas='deprecated', alphas='warn', fit_intercept=True, precompute='auto', max_iter=1000, tol=0.0001, cv=None, copy_X=True, verbose=0, n_jobs=None, positive=False, random_state=None, selection='cyclic')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.ElasticNetCV.txt"
+      },
+      "match_type": "exact",
+      "match_score": 129.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.pairwise_kernels",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "sklearn.feature_selection.f_classif(X, y)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.kernel_approximation.pairwise_kernels.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.21,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.linear_model.ridge_regression",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 92,
+        "first_line": "sklearn.linear_model.ridge_regression(X, y, alpha, *, sample_weight=None, solver='auto', max_iter=None, tol=0.0001, verbose=0, positive=False, random_state=None, return_n_iter=False, return_intercept=False, check_input=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.ridge_regression.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.73,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.requires_vector_input",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 482,
+        "first_line": "property requires_vector_input",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.Exponentiation.requires_vector_input.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 86.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_extraction.DictVectorizer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 6,
+        "first_line": "class sklearn.feature_extraction.DictVectorizer(*, dtype=<class 'numpy.float64'>, separator='=', sparse=True, sort=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_extraction.DictVectorizer.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.ValidationCurveDisplay.from_estimator",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.mixture.BayesianGaussianMixture",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 450,
+        "first_line": "class sklearn.mixture.BayesianGaussianMixture(*, n_components=1, covariance_type='full', tol=0.001, reg_covar=1e-06, max_iter=100, n_init=1, init_params='kmeans', weight_concentration_prior_type='dirichlet_process', weight_concentration_prior=None, mean_precision_prior=None, mean_prior=None, degrees_of_freedom_prior=None, covariance_prior=None, random_state=None, warm_start=False, verbose=0, verbose_interval=10) Variational Bayesian estimation of a Gaussian mixture.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.mixture.BayesianGaussianMixture.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 322,
+        "first_line": "class sklearn.feature_extraction.text.TfidfVectorizer(*, input='content', encoding='utf-8', decode_error='strict', strip_accents=None, lowercase=True, preprocessor=None, tokenizer=None, analyzer='word', stop_words=None, token_pattern='(?u)\\\\b\\\\w\\\\w+\\\\b', ngram_range=(1, 1), max_df=1.0, min_df=1, max_features=None, vocabulary=None, binary=False, dtype=<class 'numpy.float64'>, norm='l2', use_idf=True, smooth_idf=True, sublinear_tf=False) Convert a collection of raw documents to a matrix of TF-IDF features.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_extraction.text.TfidfVectorizer.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_classification",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 742,
+        "first_line": "sklearn.datasets.make_classification(n_samples=100, n_features=20, *, n_informative=2, n_redundant=2, n_repeated=0, n_classes=2, n_clusters_per_class=2, weights=None, flip_y=0.01, class_sep=1.0, hypercube=True, shift=0.0, scale=1.0, shuffle=True, random_state=None, return_X_y=True) Generate a random n-class classification problem.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.make_classification.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.79,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.multioutput.RegressorChain",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 226,
+        "first_line": "class sklearn.multioutput.RegressorChain(estimator=None, *, order=None, cv=None, random_state=None, verbose=False, base_estimator='deprecated')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.multioutput.RegressorChain.txt"
+      },
+      "match_type": "exact",
+      "match_score": 147.7,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.PredictionErrorDisplay",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 640,
+        "first_line": "class sklearn.metrics.PredictionErrorDisplay(*, y_true, y_pred)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.PredictionErrorDisplay.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.58,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.tree.export_text",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 73,
+        "first_line": "sklearn.tree.export_text(decision_tree, *, feature_names=None, class_names=None, max_depth=10, spacing=3, decimals=2, show_weights=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.tree.export_text.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.26,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.svm.SVR",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 334,
+        "first_line": "class sklearn.svm.SVR(*, kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, C=1.0, epsilon=0.1, shrinking=True, cache_size=200, verbose=False, max_iter=-1)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.svm.SVR.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.GroupKFold",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 628,
+        "first_line": "class sklearn.model_selection.GroupKFold(n_splits=5, *, shuffle=False, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.GroupKFold.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.4,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_extraction.image.reconstruct_from_patches_2d",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.utils.gen_even_slices",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "sklearn.utils.gen_even_slices(n, n_packs, *, n_samples=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.gen_even_slices.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.KFold",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 728,
+        "first_line": "class sklearn.model_selection.KFold(n_splits=5, *, shuffle=False, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.KFold.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.4,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectorMixin",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 143,
+        "first_line": "class sklearn.feature_selection.SelectorMixin",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_selection.SelectorMixin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 147.74,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.shuffle",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "sklearn.utils.shuffle(*arrays, random_state=None, n_samples=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.shuffle.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 61.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.resample",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "sklearn.utils.resample(*arrays, replace=True, n_samples=None, random_state=None, stratify=None, sample_weight=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.resample.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 61.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.safe_sparse_dot",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "sklearn.utils.safe_mask(X, mask)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.kernel_approximation.safe_sparse_dot.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.24,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.linear_model.Lars",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 599,
+        "first_line": "class sklearn.linear_model.Lars(*, fit_intercept=True, verbose=False, precompute='auto', n_nonzero_coefs=500, eps=2.220446049250313e-16, copy_X=True, fit_path=True, jitter=None, random_state=None) Least Angle Regression model a.k.a. LAR.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.Lars.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 79.99,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.LassoLars",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 584,
+        "first_line": "class sklearn.linear_model.LassoLars(alpha=1.0, *, fit_intercept=True, verbose=False, precompute='auto', max_iter=500, eps=2.220446049250313e-16, copy_X=True, fit_path=True, positive=False, jitter=None, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LassoLars.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.51,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.cluster.cluster_optics_xi",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 72,
+        "first_line": "sklearn.cluster.cluster_optics_xi(*, reachability, predecessor, ordering, min_samples, min_cluster_size=None, xi=0.05, predecessor_correction=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cluster.cluster_optics_xi.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.cluster.compute_optics_graph",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 92,
+        "first_line": "sklearn.cluster.compute_optics_graph(X, *, min_samples, max_eps, metric, p, metric_params, algorithm, leaf_size, n_jobs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cluster.compute_optics_graph.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.26,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.balanced_accuracy_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "sklearn.calibration.calibration_curve(y_true, y_prob, *, pos_label=None, n_bins=5, strategy='uniform')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.balanced_accuracy_score.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.metrics.nan_euclidean_distances",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.ensemble.GradientBoostingRegressor",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 472,
+        "first_line": "class sklearn.ensemble.GradientBoostingRegressor(*, loss='squared_error', learning_rate=0.1, n_estimators=100, subsample=1.0, criterion='friedman_mse', min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_depth=3, min_impurity_decrease=0.0, init=None, random_state=None, max_features=None, alpha=0.9, verbose=0, max_leaf_nodes=None, warm_start=False, validation_fraction=0.1, n_iter_no_change=None, tol=0.0001, ccp_alpha=0.0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.ensemble.GradientBoostingRegressor.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.04,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.base.MetaEstimatorMixin",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 19,
+        "first_line": "class sklearn.base.MetaEstimatorMixin",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.base.MetaEstimatorMixin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 147.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.d2_tweedie_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 747,
+        "first_line": "sklearn.metrics.d2_tweedie_score(y_true, y_pred, *, sample_weight=None, power=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.d2_tweedie_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 90.92,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.clear_data_home",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 645,
+        "first_line": "sklearn.datasets.clear_data_home(data_home=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.clear_data_home.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.cosine_distances",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 733,
+        "first_line": "sklearn.metrics.pairwise.cosine_distances(X, Y=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise.cosine_distances.txt"
+      },
+      "match_type": "exact",
+      "match_score": 90.75,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.base.get_tags",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.datasets.make_moons",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 532,
+        "first_line": "sklearn.datasets.make_moons(n_samples=100, *, shuffle=True, noise=None, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.make_moons.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.84,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_friedman2",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 799,
+        "first_line": "sklearn.datasets.make_friedman2(n_samples=100, *, noise=0.0, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.make_friedman2.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.84,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.calibration.FrozenEstimator",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 82,
+        "first_line": "class sklearn.frozen.FrozenEstimator(estimator)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.calibration.FrozenEstimator.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 2.27,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.metrics.v_measure_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 79,
+        "first_line": "sklearn.metrics.v_measure_score(labels_true, labels_pred, *, beta=1.0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.v_measure_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.92,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.manhattan_distances",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 71,
+        "first_line": "class sklearn.metrics.DistanceMetric",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise.manhattan_distances.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.26,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "check_xfailed_checks.check_estimator",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.exceptions.ConvergenceWarning",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.exceptions.ConvergenceWarning.txt"
+      },
+      "match_type": "fallback",
+      "match_score": 16.97,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "sklearn.covariance.ledoit_wolf_shrinkage",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "sklearn.covariance.ledoit_wolf_shrinkage(X, assume_centered=False, block_size=1000)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.covariance.ledoit_wolf_shrinkage.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.34,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.sigmoid_kernel",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 414,
+        "first_line": "sklearn.metrics.pairwise.sigmoid_kernel(X, Y=None, gamma=None, coef0=1)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise.sigmoid_kernel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 90.74,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.ndcg_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 521,
+        "first_line": "sklearn.metrics.ndcg_score(y_true, y_score, *, k=None, sample_weight=None, ignore_ties=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.ndcg_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.02,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_swap_row",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "sklearn.utils.shuffle(*arrays, random_state=None, n_samples=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.sparsefuncs.inplace_swap_row.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.22,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.fit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 150,
+        "first_line": "fit(X, y)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.fit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.GaussianProcessRegressor",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 386,
+        "first_line": "class sklearn.gaussian_process.GaussianProcessRegressor(kernel=None, *, alpha=1e-10, optimizer='fmin_l_bfgs_b', n_restarts_optimizer=0, normalize_y=False, copy_X_train=True, n_targets=None, random_state=None) Gaussian process regression (GPR).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.GaussianProcessRegressor.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.cross_decomposition.PLSSVD",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 162,
+        "first_line": "class sklearn.cross_decomposition.PLSSVD(n_components=2, *, scale=True, copy=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cross_decomposition.PLSSVD.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.impute.MissingIndicator",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 184,
+        "first_line": "class sklearn.impute.MissingIndicator(*, missing_values=nan, features='missing-only', sparse='auto', error_on_new=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.impute.MissingIndicator.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.kernel_ridge.KernelRidge",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 231,
+        "first_line": "class sklearn.kernel_ridge.KernelRidge(alpha=1, *, kernel='linear', gamma=None, degree=3, coef0=1, kernel_params=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.kernel_ridge.KernelRidge.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_lfw_pairs",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 552,
+        "first_line": "sklearn.datasets.fetch_lfw_pairs(*, subset='train', data_home=None, funneled=True, resize=0.5, color=False, slice_=(slice(70, 195, None), slice(78, 172, None)), download_if_missing=True, n_retries=3, delay=1.0) Load the Labeled Faces in the Wild (LFW) pairs dataset (classification).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.fetch_lfw_pairs.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 60.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.fit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 102,
+        "first_line": "fit(X, y=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.OrdinalEncoder.fit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_biclusters",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 798,
+        "first_line": "sklearn.datasets.make_biclusters(shape, n_clusters, *, noise=0.0, minval=10, maxval=100, shuffle=True, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.make_biclusters.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.83,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.transform",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "transform(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.OrdinalEncoder.transform.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 111.17,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "sklearn.cluster.AffinityPropagation",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 171,
+        "first_line": "class sklearn.cluster.AffinityPropagation(*, damping=0.5, max_iter=200, convergence_iter=15, copy=True, preference=None, affinity='euclidean', verbose=False, random_state=None) Perform Affinity Propagation Clustering of data.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cluster.AffinityPropagation.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.24,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectFpr",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 218,
+        "first_line": "class sklearn.feature_selection.SelectFpr(score_func=<function f_classif>, *, alpha=0.05)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_selection.SelectFpr.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.23,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.exceptions.NotFittedError",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.exceptions.NotFittedError.txt"
+      },
+      "match_type": "fallback",
+      "match_score": 16.98,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "sklearn.feature_extraction.FeatureHasher",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 167,
+        "first_line": "class sklearn.feature_extraction.FeatureHasher(n_features=1048576, *, input_type='dict', dtype=<class 'numpy.float64'>, alternate_sign=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_extraction.FeatureHasher.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_sparse_uncorrelated",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.decomposition.sparse_encode",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 122,
+        "first_line": "sklearn.decomposition.sparse_encode(X, dictionary, *, gram=None, cov=None, algorithm='lasso_lars', n_nonzero_coefs=None, alpha=None, copy_cov=True, init=None, max_iter=1000, n_jobs=None, check_input=True, verbose=0, positive=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.sparse_encode.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_swiss_roll",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 657,
+        "first_line": "sklearn.datasets.make_swiss_roll(n_samples=100, *, noise=0.0, random_state=None, hole=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.make_swiss_roll.txt"
+      },
+      "match_type": "exact",
+      "match_score": 107.75,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.manifold.locally_linear_embedding",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 92,
+        "first_line": "sklearn.manifold.locally_linear_embedding(X, *, n_neighbors, n_components, reg=0.001, eigen_solver='auto', tol=1e-06, max_iter=100, method='standard', hessian_tol=0.0001, modified_tol=1e-12, random_state=None, n_jobs=None) Perform a Locally Linear Embedding analysis on the data.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.manifold.locally_linear_embedding.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.26,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.multiclass.OutputCodeClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 218,
+        "first_line": "class sklearn.multiclass.OutputCodeClassifier(estimator, *, code_size=1.5, random_state=None, n_jobs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.multiclass.OutputCodeClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.24,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.FixedThresholdClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 626,
+        "first_line": "class sklearn.model_selection.FixedThresholdClassifier(estimator, *, threshold='auto', pos_label=None, response_method='auto')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.FixedThresholdClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.53,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.exceptions.DataDimensionalityWarning",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.exceptions.DataDimensionalityWarning.txt"
+      },
+      "match_type": "fallback",
+      "match_score": 16.47,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "sklearn.covariance.EllipticEnvelope",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 353,
+        "first_line": "class sklearn.covariance.EllipticEnvelope(*, store_precision=True, assume_centered=False, support_fraction=None, contamination=0.1, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.covariance.EllipticEnvelope.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.19,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.get_data_home",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 677,
+        "first_line": "sklearn.datasets.get_data_home(data_home=None) \\t o str(https://docs.python.org/3/library/stdtypes.html#str)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.get_data_home.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.DotProduct",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 731,
+        "first_line": "class sklearn.gaussian_process.kernels.DotProduct(sigma_0=1.0, sigma_0_bounds=(1e-05, 100000.0))",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.DotProduct.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.54,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.LinearRegression",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 551,
+        "first_line": "class sklearn.linear_model.LinearRegression(*, fit_intercept=True, copy_X=True, tol=1e-06, n_jobs=None, positive=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LinearRegression.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.6,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.linear_kernel",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 706,
+        "first_line": "sklearn.metrics.pairwise.linear_kernel(X, Y=None, dense_output=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise.linear_kernel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 90.76,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.orthogonal_mp",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 283,
+        "first_line": "sklearn.linear_model.orthogonal_mp(X, y, *, n_nonzero_coefs=None, tol=None, precompute=False, copy_X=True, return_path=False, return_n_iter=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.orthogonal_mp.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.mean_absolute_percentage_error",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_kddcup99",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 570,
+        "first_line": "fetch_kddcup99 sklearn.datasets.fetch_kddcup99(*, subset=None, data_home=None, shuffle=False, random_state=None,",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.fetch_kddcup99.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.36,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.feature_extraction.text.TfidfTransformer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 604,
+        "first_line": "class sklearn.feature_extraction.text.TfidfTransformer(*, norm='l2', use_idf=True, smooth_idf=True, sublinear_tf=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_extraction.text.TfidfTransformer.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.75,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.load_sample_image",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 289,
+        "first_line": "sklearn.datasets.load_sample_image(image_name)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.load_sample_image.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.85,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.PCA",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 400,
+        "first_line": "class sklearn.decomposition.PCA(n_components=None, *, copy=True, whiten=False, svd_solver='auto', tol=0.0, iterated_power='auto', n_oversamples=10, power_iteration_normalizer='auto', random_state=None) Principal component analysis (PCA).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.PCA.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.ensemble.BaggingClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 380,
+        "first_line": "class sklearn.ensemble.BaggingClassifier(estimator=None, n_estimators=10, *, max_samples=None, max_features=1.0, bootstrap=True, bootstrap_features=False, oob_score=False, warm_start=False, n_jobs=None, random_state=None, verbose=0) A Bagging classifier.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.ensemble.BaggingClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils._safe_indexing",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 56,
+        "first_line": "sklearn.utils._safe_indexing(X, indices, *, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils._safe_indexing.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.calibration.CalibrationDisplay.from_predictions",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 107,
+        "first_line": "classmethod from_predictions(y_true, y_prob, *, n_bins=5, strategy='uniform', pos_label=None, name=None, ax=None, ref_line=True, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.calibration.CalibrationDisplay.from_predictions.txt"
+      },
+      "match_type": "exact",
+      "match_score": 102.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.calibration.LabelEncoder",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 135,
+        "first_line": "6.35.6 LabelEncoder",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.calibration.LabelEncoder.txt"
+      },
+      "match_type": "fallback",
+      "match_score": 19.47,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "sklearn.metrics.homogeneity_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 482,
+        "first_line": "sklearn.metrics.homogeneity_score(labels_true, labels_pred)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.homogeneity_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.93,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.PowerTransformer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 261,
+        "first_line": "class sklearn.preprocessing.PowerTransformer(method='yeo-johnson', *, standardize=True, copy=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.PowerTransformer.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.2,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.ConfusionMatrixDisplay.from_estimator",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 702,
+        "first_line": "classmethod from_estimator(estimator, X, y, *, labels=None, sample_weight=None, normalize=None, display_labels=None, include_values=True, xticks_rotation='horizontal', values_format=None, cmap='viridis', ax=None, colorbar=True, im_kw=None, text_kw=None) Plot Confusion Matrix given an estimator and some data.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.ConfusionMatrixDisplay.from_estimator.txt"
+      },
+      "match_type": "exact",
+      "match_score": 101.58,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.base.r2_score",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.datasets.make_s_curve",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.decomposition.dict_learning",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 111,
+        "first_line": "sklearn.decomposition.dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000) Solve a dictionary learning matrix factorization problem.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.dict_learning.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.confusion_matrix",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 605,
+        "first_line": "sklearn.metrics.confusion_matrix(y_true, y_pred, *, labels=None, sample_weight=None, normalize=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.confusion_matrix.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.cluster.kmeans_plusplus",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 21,
+        "first_line": "sklearn.cluster.kmeans_plusplus(X, n_clusters, *, sample_weight=None, x_squared_norms=None, random_state=None, n_local_trials=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cluster.kmeans_plusplus.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.auc",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 605,
+        "first_line": "sklearn.metrics.auc(x, y)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.auc.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.mean_pinball_loss",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 537,
+        "first_line": "sklearn.metrics.mean_pinball_loss(y_true, y_pred, *, sample_weight=None, alpha=0.5, multioutput='uniform_average')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.mean_pinball_loss.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.95,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.DictionaryLearning",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 356,
+        "first_line": "class sklearn.decomposition.DictionaryLearning(n_components=None, *, alpha=1, max_iter=1000, tol=1e-08, fit_algorithm='lars', transform_algorithm='omp', transform_n_nonzero_coefs=None, transform_alpha=None, n_jobs=None, code_init=None, dict_init=None, callback=None, verbose=False, split_sign=False, random_state=None, positive_code=False, positive_dict=False, transform_max_iter=1000) Dictionary learning.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.DictionaryLearning.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.calibration.check_consistent_length",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.cluster.BisectingKMeans",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 393,
+        "first_line": "class sklearn.cluster.BisectingKMeans(n_clusters=8, *, init='random', n_init=1, random_state=None, max_iter=300, verbose=0, tol=0.0001, copy_x=True, algorithm='lloyd', bisecting_strategy='biggest_inertia') Bisecting K-Means clustering.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cluster.BisectingKMeans.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.cluster.cluster_optics_dbscan",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 8,
+        "first_line": "sklearn.cluster.cluster_optics_dbscan(*, reachability, core_distances, ordering, eps)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.cluster.cluster_optics_dbscan.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.fit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 604,
+        "first_line": "fit(X, y, sample_weight=None, **params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LogisticRegressionCV.fit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.63,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.GroupShuffleSplit",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 679,
+        "first_line": "class sklearn.model_selection.GroupShuffleSplit(n_splits=5, *, test_size=None, train_size=None, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.GroupShuffleSplit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.4,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.cross_val_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 522,
+        "first_line": "sklearn.model_selection.cross_val_score(estimator, X, y=None, *, groups=None, scoring=None, cv=None, n_jobs=None, verbose=0, params=None, pre_dispatch='2*n_jobs', error_score=nan) Evaluate a score by cross-validation.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.cross_val_score.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 60.87,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.feature_selection.r_regression",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "sklearn.feature_selection.r_regression(X, y, *, center=True, force_finite=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.feature_selection.r_regression.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.25,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_swap_column",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 39,
+        "first_line": "sklearn.utils.arrayfuncs.min_pos(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.sparsefuncs.inplace_swap_column.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.21,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.ensemble.IsolationForest",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 328,
+        "first_line": "class sklearn.ensemble.IsolationForest(*, n_estimators=100, max_samples='auto', contamination='auto', max_features=1.0, bootstrap=False, n_jobs=None, random_state=None, verbose=0, warm_start=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.ensemble.IsolationForest.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.tree.export_graphviz",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 191,
+        "first_line": "sklearn.tree.export_graphviz(decision_tree, out_file=None, *, max_depth=None, feature_names=None, class_names=None, label='all', filled=False, leaves_parallel=False, impurity=True, node_ids=False, proportion=False, rotate=False, rounded=False, special_characters=False, precision=3, fontname='helvetica') Export a decision tree in DOT format.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.tree.export_graphviz.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.RadiusNeighborsTransformer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 334,
+        "first_line": "class sklearn.neighbors.RadiusNeighborsTransformer(*, mode='distance', radius=1.0, algorithm='auto', leaf_size=30, metric='minkowski', p=2, metric_params=None, n_jobs=None) Transform X into a (weighted) graph of neighbors nearer than a radius.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.RadiusNeighborsTransformer.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.dict_learning_online",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 139,
+        "first_line": "sklearn.decomposition.dict_learning_online(X, n_components=2, *, alpha=1, max_iter=100, return_code=True, dict_init=None, callback=None, batch_size=256, verbose=False, shuffle=True, n_jobs=None, method='lars', random_state=None, positive_dict=False, positive_code=False, method_max_iter=1000, tol=0.001, Solve a dictionary learning matrix factorization problem online. Finds the best dictionary and the corresponding sparse code for approximating the data matrix X by solving:",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.dict_learning_online.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 61.23,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.NearestCentroid",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 276,
+        "first_line": "class sklearn.neighbors.NearestCentroid(metric='euclidean', *, shrink_threshold=None, priors='uniform')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.NearestCentroid.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.19,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pair_confusion_matrix",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "sklearn.preprocessing.label_binarize(y, *, classes, neg_label=0, pos_label=1, sparse_output=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pair_confusion_matrix.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.22,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.calibration.CalibrationDisplay.from_estimator",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 204,
+        "first_line": "classmethod from_estimator(estimator, X, y, *, n_bins=5, strategy='uniform', pos_label=None, name=None, ax=None, ref_line=True, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.calibration.CalibrationDisplay.from_estimator.txt"
+      },
+      "match_type": "exact",
+      "match_score": 102.65,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.exceptions.FitFailedWarning",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.exceptions.FitFailedWarning.txt"
+      },
+      "match_type": "fallback",
+      "match_score": 16.48,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "sklearn.inspection.permutation_importance",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 74,
+        "first_line": "sklearn.inspection.permutation_importance(estimator, X, y, *, scoring=None, n_repeats=5, n_jobs=None, random_state=None, sample_weight=None, max_samples=1.0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.inspection.permutation_importance.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise_distances_argmin",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.decomposition.KernelPCA",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 309,
+        "first_line": "class sklearn.decomposition.KernelPCA(n_components=None, *, kernel='linear', gamma=None, degree=3, coef0=1, kernel_params=None, alpha=1.0, fit_inverse_transform=False, eigen_solver='auto', tol=0, max_iter=None, iterated_power='auto', remove_zero_eig=False, random_state=None, copy_X=True, n_jobs=None) Kernel Principal component analysis (KPCA).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.KernelPCA.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.safe_mask",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "sklearn.utils.safe_mask(X, mask)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.safe_mask.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.pipeline.FeatureUnion",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 224,
+        "first_line": "class sklearn.pipeline.FeatureUnion(transformer_list, *, n_jobs=None, transformer_weights=None, verbose=False, verbose_feature_names_out=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.pipeline.FeatureUnion.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.22,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.naive_bayes.GaussianNB",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 355,
+        "first_line": "class sklearn.naive_bayes.GaussianNB(*, priors=None, var_smoothing=1e-09)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.naive_bayes.GaussianNB.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.estimator_checks.parametrize_with_checks",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 99,
+        "first_line": "sklearn.utils.estimator_checks.parametrize_with_checks(estimators, *, legacy: bool(https://docs.python.org/3/library/functions.html#bool) = True, expected_failed_checks: Callable(https://docs.python.org/3/library/typing.html#typing.Callable) | None(https://docs.python.org/3/library/constants.html#None) = None, xfail_strict: bool(https://docs.python.org/3/library/functions.html#bool) | None(https://docs.python.org/3/library/constants.html#None) = None) Pytest specific decorator for parametrizing estimator checks.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.estimator_checks.parametrize_with_checks.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 61.22,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.RationalQuadratic",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 458,
+        "first_line": "class sklearn.gaussian_process.kernels.RationalQuadratic(length_scale=1.0, alpha=1.0, length_scale_bounds=(1e-05, 100000.0), alpha_bounds=(1e-05, 100000.0)) Rational Quadratic kernel.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.RationalQuadratic.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.56,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics._classification.unique_labels",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 134,
+        "first_line": "class sklearn.preprocessing.LabelEncoder",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics._classification.unique_labels.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.2,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.datasets.make_blobs",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.utils.graph.single_source_shortest_path_length",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 20,
+        "first_line": "sklearn.neighbors.kneighbors_graph(X, n_neighbors, *, mode='connectivity', metric='minkowski', p=2, metric_params=None, include_self=False, n_jobs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.graph.single_source_shortest_path_length.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.2,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.model_selection.StratifiedShuffleSplit",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 497,
+        "first_line": "class sklearn.model_selection.StratifiedShuffleSplit(n_splits=10, *, test_size=None, train_size=None, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.StratifiedShuffleSplit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.4,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.manifold.LocallyLinearEmbedding",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 277,
+        "first_line": "class sklearn.manifold.LocallyLinearEmbedding(*, n_neighbors=5, n_components=2, reg=0.001, eigen_solver='auto', tol=1e-06, max_iter=100, method='standard', hessian_tol=0.0001, modified_tol=1e-12, neighbors_algorithm='auto', random_state=None, n_jobs=None) Locally Linear Embedding.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.manifold.LocallyLinearEmbedding.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.2,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.utils.check_scalar",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 381,
+        "first_line": "sklearn.utils.check_scalar(x, name, target_type, *, min_val=None, max_val=None, include_boundaries='both')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.check_scalar.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.02,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.dummy.DummyRegressor",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 237,
+        "first_line": "class sklearn.dummy.DummyRegressor(*, strategy='mean', constant=None, quantile=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.dummy.DummyRegressor.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.24,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.silhouette_samples",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 211,
+        "first_line": "sklearn.metrics.silhouette_samples(X, labels, *, metric='euclidean', **kwds)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.silhouette_samples.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.92,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.model_selection.cross_validate",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 520,
+        "first_line": "sklearn.model_selection.cross_validate(estimator, X, y=None, *, groups=None, scoring=None, cv=None, n_jobs=None, verbose=0, params=None, pre_dispatch='2*n_jobs', return_train_score=False, return_estimator=False, return_indices=False, error_score=nan)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.model_selection.cross_validate.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 60.87,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.dummy.check_random_state",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.RBFSampler",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 226,
+        "first_line": "class sklearn.kernel_approximation.RBFSampler(*, gamma=1.0, n_components=100, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.kernel_approximation.RBFSampler.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.24,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 371,
+        "first_line": "class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, *, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=None) Classifier implementing the k-nearest neighbors vote.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.KNeighborsClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.21,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.load_svmlight_files",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 109,
+        "first_line": "sklearn.datasets.load_svmlight_files(files, *, n_features=None, dtype=<class 'numpy.float64'>, multilabel=False, zero_based='auto', query_id=False, offset=0, length=-1)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.load_svmlight_files.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 60.37,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.Lasso",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 603,
+        "first_line": "class sklearn.linear_model.Lasso(alpha=1.0, *, fit_intercept=True, precompute=False, copy_X=True, max_iter=1000, tol=0.0001, warm_start=False, positive=False, random_state=None, selection='cyclic')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.Lasso.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_file",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 574,
+        "first_line": "sklearn.datasets.fetch_file(url, folder=None, local_filename=None, sha256=None, n_retries=3, delay=1)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.fetch_file.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.33,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.tree.plot_tree",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 58,
+        "first_line": "sklearn.tree.plot_tree(decision_tree, *, max_depth=None, feature_names=None, class_names=None, label='all', filled=False, impurity=True, node_ids=False, proportion=False, rounded=False, precision=3, ax=None, fontsize=None) Plot a decision tree.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.tree.plot_tree.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_hastie_10_2",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 663,
+        "first_line": "sklearn.datasets.make_hastie_10_2(n_samples=12000, *, random_state=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.make_hastie_10_2.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.class_likelihood_ratios",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 579,
+        "first_line": "sklearn.metrics.class_likelihood_ratios(y_true, y_pred, *, labels=None, sample_weight=None, raise_warning='deprecated', replace_undefined_by=nan)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.class_likelihood_ratios.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 60.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.dcg_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 566,
+        "first_line": "sklearn.metrics.dcg_score(y_true, y_score, *, k=None, log_base=2, sample_weight=None, ignore_ties=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.dcg_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.dummy.DummyClassifier.predict_log_proba",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 112,
+        "first_line": "predict_log_proba(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.dummy.DummyClassifier.predict_log_proba.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.svm.l1_min_c",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 53,
+        "first_line": "sklearn.svm.l1_min_c(X, y, *, loss='squared_hinge', fit_intercept=True, intercept_scaling=1.0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.svm.l1_min_c.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.adjusted_mutual_info_score",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.fit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 109,
+        "first_line": "fit_transform(X, y=None, **fit_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.MiniBatchDictionaryLearning.fit.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -17.85,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.is_stationary",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 711,
+        "first_line": "is_stationary()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.Exponentiation.is_stationary.txt"
+      },
+      "match_type": "exact",
+      "match_score": 116.51,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.ConfusionMatrixDisplay",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 715,
+        "first_line": "class sklearn.metrics.ConfusionMatrixDisplay(confusion_matrix, *, display_labels=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.ConfusionMatrixDisplay.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.6,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.d2_log_loss_score",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 567,
+        "first_line": "sklearn.metrics.d2_log_loss_score(y_true, y_pred, *, sample_weight=None, labels=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.d2_log_loss_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise_distances",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 362,
+        "first_line": "sklearn.metrics.pairwise_distances(X, Y=None, metric='euclidean', *, n_jobs=None, ensure_all_finite=True, **kwds)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise_distances.txt"
+      },
+      "match_type": "exact",
+      "match_score": 112.76,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.mean_tweedie_deviance",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 296,
+        "first_line": "sklearn.metrics.mean_tweedie_deviance(y_true, y_pred, *, sample_weight=None, power=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.mean_tweedie_deviance.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.92,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.base.ClassNamePrefixFeaturesOutMixin",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 25,
+        "first_line": "class sklearn.base.ClassNamePrefixFeaturesOutMixin",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.base.ClassNamePrefixFeaturesOutMixin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 147.81,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process._gpc.C",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.neighbors.RadiusNeighborsRegressor",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 377,
+        "first_line": "class sklearn.neighbors.RadiusNeighborsRegressor(radius=1.0, *, weights='uniform', algorithm='auto', metric_params=None, n_jobs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.RadiusNeighborsRegressor.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.manifold.ClassicalMDS",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 119,
+        "first_line": "class sklearn.manifold.ClassicalMDS(n_components=2, *, metric='euclidean', metric_params=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.manifold.ClassicalMDS.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.ensemble.HistGradientBoostingClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 490,
+        "first_line": "class sklearn.ensemble.HistGradientBoostingClassifier(loss='log_loss', *, learning_rate=0.1, max_iter=100, max_leaf_nodes=31, max_depth=None, min_samples_leaf=20, l2_regularization=0.0, max_features=1.0, max_bins=255, categorical_features='from_dtype', monotonic_cst=None, interaction_cst=None, warm_start=False, early_stopping='auto', scoring='loss', validation_fraction=0.1, n_iter_no_change=10, tol=1e-07, verbose=0, random_state=None, class_weight=None) Histogram-based Gradient Boosting Classification Tree.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.ensemble.HistGradientBoostingClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.06,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.load_digits",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 595,
+        "first_line": "sklearn.datasets.load_digits(*, n_class=10, return_X_y=False, as_frame=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.load_digits.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.35,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.Nystroem",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 219,
+        "first_line": "class sklearn.kernel_approximation.Nystroem(kernel='rbf', *, gamma=None, coef0=None, degree=None, kernel_params=None, n_components=100, random_state=None, n_jobs=None) Approximate a kernel map using a subset of the training data.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.kernel_approximation.Nystroem.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.23,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.KernelDensity",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 253,
+        "first_line": "class sklearn.neighbors.KernelDensity(*, bandwidth=1.0, algorithm='auto', kernel='gaussian', metric='euclidean', atol=0, rtol=0, breadth_first=True, leaf_size=40, metric_params=None) Kernel Density Estimation.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.KernelDensity.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.22,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.HuberRegressor",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 582,
+        "first_line": "class sklearn.linear_model.HuberRegressor(*, epsilon=1.35, max_iter=100, alpha=0.0001, L2-regularized linear regression model that is robust to outliers.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.HuberRegressor.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_openml",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 549,
+        "first_line": "sklearn.datasets.fetch_openml(name: str(https://docs.python.org/3/library/stdtypes.html#str) | None(https://docs.python.org/3/library/constants.html#None) = None, *, version: str(https://docs.python.org/3/library/stdtypes.html#str) | int(https://docs.python.org/3/library/functions.html#int) = 'active', data_id: int(https://docs.python.org/3/library/functions.html#int) | None(https://docs.python.org/3/library/constants.html#None) = None, data_home: str(https://docs.python.org/3/library/stdtypes.html#str) | PathLike(https://docs.python.org/3/library/os.html#os.PathLike) | None(https://docs.python.org/3/library/constants.html#None) = None, target_column: str(https://docs.python.org/3/library/stdtypes.html#str) | List(https://docs.python.org/3/library/typing.html#typing.List) | None(https://docs.python.org/3/library/constants.html#None) = 'default-target', cache: bool(https://docs.python.org/3/library/functions.html#bool) = True, return_X_y: bool(https://docs.python.org/3/library/functions.html#bool) = False, as_frame: str(https://docs.python.org/3/library/stdtypes.html#str) | bool(https://docs.python.org/3/library/functions.html#bool) = 'auto', n_retries: int(https://docs.python.org/3/library/functions.html#int) = 3, delay: float(https://docs.python.org/3/library/functions.html#float) = 1.0, parser: str(https://docs.python.org/3/library/stdtypes.html#str) = 'auto', read_csv_kwargs: Dict(https://docs.python.org/3/library/typing.html#typing.Dict) | None(https://docs.python.org/3/library/constants.html#None) = None) Fetch dataset from openml by name or dataset id.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.datasets.fetch_openml.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 60.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.additive_chi2_kernel",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 777,
+        "first_line": "sklearn.metrics.pairwise.additive_chi2_kernel(X, Y=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.metrics.pairwise.additive_chi2_kernel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.datasets.make_friedman1",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.metrics.d2_absolute_error_score",
+      "type": "function",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.hyperparameters",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 492,
+        "first_line": "property hyperparameters",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.Exponentiation.hyperparameters.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 90.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Sum",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 278,
+        "first_line": "class sklearn.gaussian_process.kernels.Sum(k1, k2)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.gaussian_process.kernels.Sum.txt"
+      },
+      "match_type": "exact",
+      "match_score": 118.69,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.calibration.IsotonicRegression",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 345,
+        "first_line": "class sklearn.isotonic.IsotonicRegression(*, y_min=None, y_max=None, increasing=True, out_of_bounds='nan')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.calibration.IsotonicRegression.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 2.18,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchNMF",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 397,
+        "first_line": "class sklearn.decomposition.MiniBatchNMF(n_components='auto', *, init=None, batch_size=1024, beta_loss='frobenius', tol=0.0001, max_no_improvement=10, forget_factor=0.7, fresh_restarts=False, random_state=None, verbose=0) Mini-Batch Non-Negative Matrix Factorization (NMF).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.MiniBatchNMF.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.11,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.dummy.validate_data",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "exception sklearn.exceptions.EstimatorCheckFailedWarning(*, estimator, check_name: str(https://docs.python.org/3/library/stdtypes.html#str), exception:",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.dummy.validate_data.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.utils.multiclass.is_multilabel",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 690,
+        "first_line": "sklearn.utils.multiclass.is_multilabel(y)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.utils.multiclass.is_multilabel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 108.8,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.set_score_request",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier.set_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 15,
+        "first_line": "set_params(**params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.KNeighborsClassifier.set_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.get_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "get_params(deep=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.OrdinalEncoder.get_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.predict_proba",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 568,
+        "first_line": "predict_proba(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LogisticRegressionCV.predict_proba.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.62,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsTransformer.set_output",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "set_output(*, transform=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.KNeighborsTransformer.set_output.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier.kneighbors",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 183,
+        "first_line": "kneighbors(X=None, n_neighbors=None, return_distance=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.KNeighborsClassifier.kneighbors.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.KernelPCA.set_output",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 5,
+        "first_line": "set_output(*, transform=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.KernelPCA.set_output.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.get_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 135,
+        "first_line": "get_params(deep=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.IncrementalPCA.get_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.set_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "set_params(**params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.IncrementalPCA.set_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsTransformer.kneighbors",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 165,
+        "first_line": "kneighbors(X=None, n_neighbors=None, return_distance=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.neighbors.KNeighborsTransformer.kneighbors.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.get_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 593,
+        "first_line": "get_params(deep=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LogisticRegressionCV.get_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.61,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.set_output",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 269,
+        "first_line": "class sklearn.preprocessing.OrdinalEncoder(*, categories='auto', dtype=<class 'numpy.float64'>, handle_unknown='error', unknown_value=None, encoded_missing_value=nan, min_frequency=None, max_categories=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.preprocessing.OrdinalEncoder.set_output.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.15,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.set_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 583,
+        "first_line": "set_params(**params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LogisticRegressionCV.set_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.65,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.KernelPCA.set_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 309,
+        "first_line": "class sklearn.decomposition.KernelPCA(n_components=None, *, kernel='linear', gamma=None, degree=3, coef0=1, kernel_params=None, alpha=1.0, fit_inverse_transform=False, eigen_solver='auto', tol=0, max_iter=None, iterated_power='auto', remove_zero_eig=False, random_state=None, copy_X=True, n_jobs=None) Kernel Principal component analysis (KPCA).",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.KernelPCA.set_params.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.13,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.predict",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 579,
+        "first_line": "predict(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LogisticRegressionCV.predict.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.61,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_log_proba",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 86,
+        "first_line": "predict_log_proba(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_log_proba.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.decision_function",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 615,
+        "first_line": "decision_function(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.linear_model.LogisticRegressionCV.decision_function.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.6,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.get_metadata_routing",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "get_metadata_routing()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.MiniBatchDictionaryLearning.get_metadata_routing.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_proba",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 72,
+        "first_line": "predict_proba(X)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_proba.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.set_output",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 7,
+        "first_line": "set_output(*, transform=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.MiniBatchDictionaryLearning.set_output.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.get_metadata_routing",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 146,
+        "first_line": "get_metadata_routing()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.IncrementalPCA.get_metadata_routing.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.get_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 53,
+        "first_line": "get_params(deep=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.decomposition.MiniBatchDictionaryLearning.get_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.set_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "set_params(**params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sklearn\\v_1.8.0\\per_member\\sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.set_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.16,
+      "match_category": "lexical"
+    }
+  ],
+  "missing_names": [
+    "sklearn.metrics.label_ranking_average_precision_score",
+    "sklearn.datasets.make_low_rank_matrix",
+    "sklearn.datasets.make_checkerboard",
+    "sklearn.metrics.PrecisionRecallDisplay.from_estimator",
+    "sklearn.metrics.normalized_mutual_info_score",
+    "sklearn.model_selection.ValidationCurveDisplay.from_estimator",
+    "sklearn.feature_extraction.image.reconstruct_from_patches_2d",
+    "sklearn.metrics.nan_euclidean_distances",
+    "sklearn.base.get_tags",
+    "check_xfailed_checks.check_estimator",
+    "sklearn.datasets.make_sparse_uncorrelated",
+    "sklearn.metrics.mean_absolute_percentage_error",
+    "sklearn.base.r2_score",
+    "sklearn.datasets.make_s_curve",
+    "sklearn.calibration.check_consistent_length",
+    "sklearn.metrics.pairwise_distances_argmin",
+    "sklearn.datasets.make_blobs",
+    "sklearn.dummy.check_random_state",
+    "sklearn.metrics.adjusted_mutual_info_score",
+    "sklearn.gaussian_process._gpc.C",
+    "sklearn.datasets.make_friedman1",
+    "sklearn.metrics.d2_absolute_error_score",
+    "sklearn.linear_model.LogisticRegressionCV.set_score_request"
+  ]
+}

@@ -1,0 +1,46 @@
+# pandas.Series.attrs
+
+property Series.attrs[source](https://github.com/pandas-dev/pandas/blob/main/pandas/core/generic.py#L366-L402)#(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.attrs.html#pandas.Series.attrs)
+    Dictionary of global attributes of this dataset.
+
+Warning
+
+attrs is experimental and may change without warning.
+
+See also
+
+DataFrame.flags
+    Global flags applying to this object.
+
+Notes
+
+Many operations that create new datasets will copy attrs. Copies
+are always deep so that changing attrs will only affect the
+present dataset. pandas.concat copies attrs only if all input
+datasets have the same attrs.
+
+Examples
+
+For Series:
+
+```
+>>> ser = pd.Series([1, 2, 3])
+>>> ser.attrs = {"A": [10, 20, 30]}
+>>> ser.attrs
+{'A': [10, 20, 30]}
+
+```
+
+For DataFrame:
+
+```
+>>> df = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})
+>>> df.attrs = {"A": [10, 20, 30]}
+>>> df.attrs
+{'A': [10, 20, 30]}
+
+```
+
+On this page
+
+[Show Source](https://pandas.pydata.org/pandas-docs/version/2.3.3/_sources/reference/api/pandas.Series.attrs.rst.txt)

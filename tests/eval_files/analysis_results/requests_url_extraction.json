@@ -1,0 +1,798 @@
+{
+  "names_file": "C:/Users/Administrator/Documents/USask/Thesis/MapCoDoc/study one exp/RQ2/stratified sampling/samples/api_names/requests.txt",
+  "url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\requests\\v_latest\\scraped_urls.txt",
+  "base_url": "https://requests.readthedocs.io/en/latest/",
+  "sub_path": "api",
+  "total_api_names": 87,
+  "matched": 87,
+  "unmatched": 0,
+  "total_urls_in": 152,
+  "total_urls_out": 87,
+  "output_url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\requests\\v_latest\\samples\\scraped_urls.txt",
+  "unmatched_names": [],
+  "matches": [
+    {
+      "api_name": "requests.get",
+      "matched_via": "fragment",
+      "matched_key": "requests.get",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.get"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_url",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_url",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_url"
+      ]
+    },
+    {
+      "api_name": "requests.TooManyRedirects",
+      "matched_via": "fragment",
+      "matched_key": "requests.TooManyRedirects",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.TooManyRedirects"
+      ]
+    },
+    {
+      "api_name": "requests.Session.rebuild_auth",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.rebuild_auth",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.rebuild_auth"
+      ]
+    },
+    {
+      "api_name": "requests.patch",
+      "matched_via": "fragment",
+      "matched_key": "requests.patch",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.patch"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.itervalues",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.itervalues",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.itervalues"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.init_poolmanager",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.init_poolmanager",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.init_poolmanager"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.items",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.items",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.items"
+      ]
+    },
+    {
+      "api_name": "requests.Response.text",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.text",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.text"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_auth",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_auth",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_auth"
+      ]
+    },
+    {
+      "api_name": "requests.Response.ok",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.ok",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.ok"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_cookies",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_cookies",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_cookies"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.iterkeys",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.iterkeys",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.iterkeys"
+      ]
+    },
+    {
+      "api_name": "requests.Session.delete",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.delete",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.delete"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.BaseAdapter.send",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.BaseAdapter.send",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.BaseAdapter.send"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_hooks",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_hooks",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_hooks"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_body",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_body",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_body"
+      ]
+    },
+    {
+      "api_name": "requests.Response.is_permanent_redirect",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.is_permanent_redirect",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.is_permanent_redirect"
+      ]
+    },
+    {
+      "api_name": "requests.Session.mount",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.mount",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.mount"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.proxy_headers",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.proxy_headers",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.proxy_headers"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.set_cookie",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.set_cookie",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.set_cookie"
+      ]
+    },
+    {
+      "api_name": "requests.Session.options",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.options",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.options"
+      ]
+    },
+    {
+      "api_name": "requests.Session.merge_environment_settings",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.merge_environment_settings",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.merge_environment_settings"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.list_domains",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.list_domains",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.list_domains"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.update",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.update",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.update"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.get_connection_with_tls_context",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.get_connection_with_tls_context",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.get_connection_with_tls_context"
+      ]
+    },
+    {
+      "api_name": "requests.utils.get_encodings_from_content",
+      "matched_via": "fragment",
+      "matched_key": "requests.utils.get_encodings_from_content",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.utils.get_encodings_from_content"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.cookiejar_from_dict",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.cookiejar_from_dict",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.cookiejar_from_dict"
+      ]
+    },
+    {
+      "api_name": "requests.Response.json",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.json",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.json"
+      ]
+    },
+    {
+      "api_name": "requests.Response.iter_content",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.iter_content",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.iter_content"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.copy",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.copy",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.copy"
+      ]
+    },
+    {
+      "api_name": "requests.Session.head",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.head",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.head"
+      ]
+    },
+    {
+      "api_name": "requests.auth.AuthBase",
+      "matched_via": "fragment",
+      "matched_key": "requests.auth.AuthBase",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.auth.AuthBase"
+      ]
+    },
+    {
+      "api_name": "requests.utils.get_encoding_from_headers",
+      "matched_via": "fragment",
+      "matched_key": "requests.utils.get_encoding_from_headers",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.utils.get_encoding_from_headers"
+      ]
+    },
+    {
+      "api_name": "requests.utils.dict_from_cookiejar",
+      "matched_via": "fragment",
+      "matched_key": "requests.utils.dict_from_cookiejar",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.utils.dict_from_cookiejar"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest"
+      ]
+    },
+    {
+      "api_name": "requests.Response.iter_lines",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.iter_lines",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.iter_lines"
+      ]
+    },
+    {
+      "api_name": "requests.Response.content",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.content",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.content"
+      ]
+    },
+    {
+      "api_name": "requests.utils.add_dict_to_cookiejar",
+      "matched_via": "fragment",
+      "matched_key": "requests.utils.add_dict_to_cookiejar",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.utils.add_dict_to_cookiejar"
+      ]
+    },
+    {
+      "api_name": "requests.Request.prepare",
+      "matched_via": "fragment",
+      "matched_key": "requests.Request.prepare",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Request.prepare"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.get_connection",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.get_connection",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.get_connection"
+      ]
+    },
+    {
+      "api_name": "requests.head",
+      "matched_via": "fragment",
+      "matched_key": "requests.head",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.head"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.set",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.set",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.set"
+      ]
+    },
+    {
+      "api_name": "requests.Request.deregister_hook",
+      "matched_via": "fragment",
+      "matched_key": "requests.Request.deregister_hook",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Request.deregister_hook"
+      ]
+    },
+    {
+      "api_name": "requests.Session.request",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.request",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.request"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.path_url",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.path_url",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.path_url"
+      ]
+    },
+    {
+      "api_name": "requests.put",
+      "matched_via": "fragment",
+      "matched_key": "requests.put",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.put"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.proxy_manager_for",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.proxy_manager_for",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.proxy_manager_for"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.build_connection_pool_key_attributes",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.build_connection_pool_key_attributes",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.build_connection_pool_key_attributes"
+      ]
+    },
+    {
+      "api_name": "requests.Session.post",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.post",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.post"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.get",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.get",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.get"
+      ]
+    },
+    {
+      "api_name": "requests.Request",
+      "matched_via": "fragment",
+      "matched_key": "requests.Request",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Request"
+      ]
+    },
+    {
+      "api_name": "requests.Response.close",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.close",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.close"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.BaseAdapter",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.BaseAdapter",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.BaseAdapter"
+      ]
+    },
+    {
+      "api_name": "requests.Session.prepare_request",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.prepare_request",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.prepare_request"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.keys",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.keys",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.keys"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.get_dict",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.get_dict",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.get_dict"
+      ]
+    },
+    {
+      "api_name": "requests.Session.get_redirect_target",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.get_redirect_target",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.get_redirect_target"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.multiple_domains",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.multiple_domains",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.multiple_domains"
+      ]
+    },
+    {
+      "api_name": "requests.Session.patch",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.patch",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.patch"
+      ]
+    },
+    {
+      "api_name": "requests.post",
+      "matched_via": "fragment",
+      "matched_key": "requests.post",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.post"
+      ]
+    },
+    {
+      "api_name": "requests.Request.register_hook",
+      "matched_via": "fragment",
+      "matched_key": "requests.Request.register_hook",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Request.register_hook"
+      ]
+    },
+    {
+      "api_name": "requests.Response.raise_for_status",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.raise_for_status",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.raise_for_status"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.request_url",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.request_url",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.request_url"
+      ]
+    },
+    {
+      "api_name": "requests.Session.should_strip_auth",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.should_strip_auth",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.should_strip_auth"
+      ]
+    },
+    {
+      "api_name": "requests.Session.rebuild_method",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.rebuild_method",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.rebuild_method"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_content_length",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_content_length",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_content_length"
+      ]
+    },
+    {
+      "api_name": "requests.Session",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_headers",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_headers",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_headers"
+      ]
+    },
+    {
+      "api_name": "requests.Response.apparent_encoding",
+      "matched_via": "fragment",
+      "matched_key": "requests.Response.apparent_encoding",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Response.apparent_encoding"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.BaseAdapter.close",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.BaseAdapter.close",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.BaseAdapter.close"
+      ]
+    },
+    {
+      "api_name": "requests.Session.close",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.close",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.close"
+      ]
+    },
+    {
+      "api_name": "requests.auth.HTTPBasicAuth",
+      "matched_via": "fragment",
+      "matched_key": "requests.auth.HTTPBasicAuth",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.auth.HTTPBasicAuth"
+      ]
+    },
+    {
+      "api_name": "requests.delete",
+      "matched_via": "fragment",
+      "matched_key": "requests.delete",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.delete"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.prepare_method",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.prepare_method",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.prepare_method"
+      ]
+    },
+    {
+      "api_name": "requests.Session.rebuild_proxies",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.rebuild_proxies",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.rebuild_proxies"
+      ]
+    },
+    {
+      "api_name": "requests.cookies.RequestsCookieJar.list_paths",
+      "matched_via": "fragment",
+      "matched_key": "requests.cookies.RequestsCookieJar.list_paths",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.cookies.RequestsCookieJar.list_paths"
+      ]
+    },
+    {
+      "api_name": "requests.Session.send",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.send",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.send"
+      ]
+    },
+    {
+      "api_name": "requests.utils.get_unicode_from_response",
+      "matched_via": "fragment",
+      "matched_key": "requests.utils.get_unicode_from_response",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.utils.get_unicode_from_response"
+      ]
+    },
+    {
+      "api_name": "requests.Session.get_adapter",
+      "matched_via": "fragment",
+      "matched_key": "requests.Session.get_adapter",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.get_adapter"
+      ]
+    },
+    {
+      "api_name": "requests.adapters.HTTPAdapter.build_response",
+      "matched_via": "fragment",
+      "matched_key": "requests.adapters.HTTPAdapter.build_response",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.adapters.HTTPAdapter.build_response"
+      ]
+    },
+    {
+      "api_name": "requests.PreparedRequest.deregister_hook",
+      "matched_via": "fragment",
+      "matched_key": "requests.PreparedRequest.deregister_hook",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.PreparedRequest.deregister_hook"
+      ]
+    },
+    {
+      "api_name": "requests.ReadTimeout",
+      "matched_via": "fragment",
+      "matched_key": "requests.ReadTimeout",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.ReadTimeout"
+      ]
+    },
+    {
+      "api_name": "requests.Timeout",
+      "matched_via": "fragment",
+      "matched_key": "requests.Timeout",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.Timeout"
+      ]
+    },
+    {
+      "api_name": "requests.ConnectionError",
+      "matched_via": "fragment",
+      "matched_key": "requests.ConnectionError",
+      "is_parent_url": false,
+      "urls": [
+        "https://requests.readthedocs.io/en/latest/api/#requests.ConnectionError"
+      ]
+    }
+  ]
+}

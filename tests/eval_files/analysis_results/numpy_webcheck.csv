@@ -1,0 +1,129 @@
+api_name,member_type,route,web_preproc_acc,web_struct_acc,web_correct,pdf_preproc_acc,pdf_struct_acc,pdf_correct,original_summary
+numpy.char.capitalize,function,trusted,yes,yes,yes,yes,empty,no,Return a copy of a with only the first character of each element
+numpy.char.chararray.argsort,method,fetched,yes,yes,yes,no,empty,no,Returns the indices that would sort this array.
+numpy.char.chararray.decode,method,fetched,yes,yes,yes,yes,empty,no,Calls bytes.decode element-wise.
+numpy.char.chararray.encode,method,fetched,yes,yes,yes,no,empty,no,Calls str.encode element-wise.
+numpy.char.chararray.isalpha,method,fetched,yes,yes,yes,no,no,no,Returns true for each element if all characters in the string
+numpy.char.chararray.isdigit,method,fetched,yes,yes,yes,no,empty,no,Returns true for each element if all characters in the string are
+numpy.char.chararray.islower,method,fetched,yes,yes,yes,no,no,no,Returns true for each element if all cased characters in the
+numpy.char.chararray.isspace,method,fetched,yes,yes,yes,no,no,no,Returns true for each element if there are only whitespace
+numpy.char.chararray.isupper,method,fetched,yes,yes,yes,no,no,no,Returns true for each element if all cased characters in the
+numpy.char.chararray.lstrip,method,fetched,yes,yes,yes,no,empty,no,"For each element in self, return a copy with the leading characters"
+numpy.char.chararray.split,method,fetched,yes,yes,yes,yes,empty,no,"For each element in self, return a list of the words in the"
+numpy.char.chararray.startswith,method,fetched,yes,yes,yes,no,empty,no,Returns a boolean array which is True where the string element
+numpy.char.chararray.translate,method,fetched,yes,yes,yes,no,empty,no,"For each element in self, return a copy of the string where"
+numpy.char.expandtabs,function,trusted,yes,yes,yes,yes,empty,no,Return a copy of each string element where all tab characters are
+numpy.char.find,function,trusted,yes,yes,yes,yes,empty,no,"For each element, return the lowest index in the string where"
+numpy.char.greater,function,trusted,yes,yes,yes,yes,empty,no,"Unlike numpy.greater(url_placeholder_2), this comparison is performed by first"
+numpy.char.ljust,function,trusted,yes,yes,yes,yes,empty,no,Return an array with the elements of a left-justified in a
+numpy.char.mod,function,trusted,yes,yes,yes,yes,empty,no,"(interpolation), element-wise for a pair of array_likes of str"
+numpy.char.replace,function,trusted,yes,yes,yes,yes,empty,no,"For each element in a, return a copy of the string with"
+numpy.char.rjust,function,trusted,yes,yes,yes,yes,empty,no,Return an array with the elements of a right-justified in a
+numpy.char.split,function,trusted,yes,yes,yes,yes,empty,no,"For each element in a, return a list of the words in the"
+numpy.emath.log10,function,trusted,yes,yes,yes,yes,empty,no,Compute the logarithm base 10 of x.
+numpy.emath.power,function,trusted,yes,yes,yes,yes,empty,no,"Return x to the power p, (x**p)."
+numpy.emath.sqrt,function,trusted,yes,yes,yes,yes,empty,no,Compute the square root of x.
+numpy.exceptions.DTypePromotionError,class,trusted,yes,yes,yes,yes,no,no,Multiple DTypes could not be converted to a common one.
+numpy.exceptions.TooHardError,class,trusted,yes,yes,yes,yes,empty,no,max_work was exceeded.
+numpy.lib.format.isfileobj,function,trusted,no_ref,no_ref,review,no_ref,no_ref,review,
+numpy.lib.format.open_memmap,function,trusted,yes,yes,yes,yes,empty,no,Open a .npy file as a memory-mapped array.
+numpy.lib.format.read_array_header_1_0,function,trusted,yes,yes,yes,yes,empty,no,Read an array header from a filelike object using the 1.0 file format
+numpy.lib.format.read_array_header_2_0,function,trusted,yes,yes,yes,yes,empty,no,Read an array header from a filelike object using the 2.0 file format
+numpy.lib.format.read_magic,function,trusted,yes,yes,yes,yes,empty,no,Read the magic string to get the version of the file format.
+numpy.lib.introspect.opt_func_info,function,trusted,yes,yes,yes,yes,empty,no,Returns a dictionary containing the currently supported CPU dispatched
+numpy.lib.stride_tricks.sliding_window_view,function,trusted,yes,yes,yes,yes,empty,no,Create a sliding window view into the array with the given window shape.
+numpy.ma.allequal,function,trusted,yes,yes,yes,yes,empty,no,"Return True if all entries of a and b are equal, using"
+numpy.ma.apply_over_axes,function,trusted,yes,yes,yes,yes,empty,no,Apply a function repeatedly over multiple axes.
+numpy.ma.array,function,trusted,yes,yes,yes,yes,empty,no,An array class with possibly masked values.
+numpy.ma.asarray,function,trusted,yes,yes,yes,yes,empty,no,Convert the input to a masked array of the given data-type.
+numpy.ma.compress_nd,function,trusted,yes,yes,yes,yes,empty,no,Suppress slices from multiple dimensions which contain masked values.
+numpy.ma.compress_rowcols,function,trusted,yes,yes,yes,yes,empty,no,Suppress the rows and/or columns of a 2-D array that contain
+numpy.ma.convolve,function,trusted,yes,yes,yes,yes,empty,no,"Returns the discrete, linear convolution of two one-dimensional sequences."
+numpy.ma.corrcoef,function,trusted,yes,yes,yes,yes,empty,no,Return Pearson product-moment correlation coefficients.
+numpy.ma.cov,function,trusted,yes,yes,yes,yes,empty,no,Estimate the covariance matrix.
+numpy.ma.ediff1d,function,trusted,yes,yes,yes,yes,empty,no,Compute the differences between consecutive elements of an array.
+numpy.ma.fromflex,function,trusted,yes,yes,yes,yes,empty,no,Build a masked array from a suitable flexible-type array.
+numpy.ma.getmask,function,trusted,yes,yes,yes,yes,empty,no,"Return the mask of a masked array, or nomask."
+numpy.ma.getmaskarray,function,trusted,yes,yes,yes,yes,empty,no,"Return the mask of a masked array, or full boolean array of False."
+numpy.ma.inner,function,trusted,yes,yes,yes,yes,empty,no,Inner product of two arrays.
+numpy.ma.left_shift,function,trusted,yes,yes,yes,yes,empty,no,Shift the bits of an integer to the left.
+numpy.ma.make_mask,function,trusted,yes,yes,yes,yes,empty,no,Create a boolean mask from an array.
+numpy.ma.mask_or,function,trusted,yes,yes,yes,yes,empty,no,Combine two masks with the logical_or operator.
+numpy.ma.masked_greater,function,trusted,yes,yes,yes,yes,empty,no,Mask an array where greater than a given value.
+numpy.ma.masked_inside,function,trusted,yes,yes,yes,yes,empty,no,Mask an array inside a given interval.
+numpy.ma.masked_invalid,function,trusted,yes,yes,yes,yes,empty,no,Mask an array where invalid values occur (NaNs or infs).
+numpy.ma.masked_less_equal,function,trusted,yes,yes,yes,yes,empty,no,Mask an array where less than or equal to a given value.
+numpy.ma.masked_object,function,trusted,yes,yes,yes,yes,empty,no,Mask the array x where the data are exactly equal to value.
+numpy.ma.masked_outside,function,trusted,yes,yes,yes,yes,empty,no,Mask an array outside a given interval.
+numpy.ma.masked_values,function,trusted,yes,yes,yes,yes,empty,no,Mask using floating point equality.
+numpy.ma.masked_where,function,trusted,yes,yes,yes,yes,empty,no,Mask an array where a condition is met.
+numpy.ma.max,function,trusted,yes,yes,yes,yes,empty,no,Return the maximum along a given axis.
+numpy.ma.notmasked_contiguous,function,trusted,yes,yes,yes,yes,empty,no,Find contiguous unmasked data in a masked array along the given axis.
+numpy.ma.notmasked_edges,function,trusted,yes,yes,yes,yes,empty,no,Find the indices of the first and last unmasked values along an axis.
+numpy.ma.putmask,function,trusted,yes,yes,yes,yes,empty,no,Changes elements of an array based on conditional and input values.
+numpy.ma.resize,function,trusted,yes,yes,yes,yes,empty,no,Return a new masked array with the specified size and shape.
+numpy.ma.round_,function,trusted,yes,yes,yes,yes,empty,no,"Return a copy of a, rounded to 'decimals' places."
+numpy.ma.setdiff1d,function,trusted,yes,yes,yes,yes,empty,no,Set difference of 1D arrays with unique elements.
+numpy.ma.union1d,function,trusted,yes,yes,yes,yes,empty,no,Union of two arrays.
+numpy.poly1d.coeffs,method,fetched,yes,yes,yes,no,empty,no,The polynomial coefficients
+numpy.polynomial.chebyshev.Chebyshev.domain,method,fetched,yes,yes,yes,yes,empty,no,"polynomial.chebyshev.Chebyshev.domain = array([-1.,  1.])#"
+numpy.polynomial.chebyshev.Chebyshev.roots,method,fetched,yes,yes,yes,no,no,no,Return the roots of the series polynomial.
+numpy.polynomial.chebyshev.chebdiv,function,trusted,yes,yes,yes,yes,empty,no,Divide one Chebyshev series by another.
+numpy.polynomial.chebyshev.chebfit,function,trusted,yes,yes,yes,yes,empty,no,Least squares fit of Chebyshev series to data.
+numpy.polynomial.chebyshev.chebgrid2d,function,trusted,yes,yes,yes,yes,empty,no,Evaluate a 2-D Chebyshev series on the Cartesian product of x and y.
+numpy.polynomial.chebyshev.chebgrid3d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 3-D Chebyshev series on the Cartesian product of x, y, and z."
+numpy.polynomial.chebyshev.chebinterpolate,function,trusted,yes,yes,yes,yes,empty,no,Interpolate a function at the Chebyshev points of the first kind.
+numpy.polynomial.chebyshev.chebline,function,trusted,yes,yes,yes,yes,empty,no,Chebyshev series whose graph is a straight line.
+numpy.polynomial.chebyshev.chebmulx,function,trusted,yes,yes,yes,yes,empty,no,Multiply a Chebyshev series by x.
+numpy.polynomial.chebyshev.chebpts1,function,trusted,yes,yes,yes,yes,empty,no,Chebyshev points of the first kind.
+numpy.polynomial.chebyshev.chebsub,function,trusted,yes,yes,yes,yes,empty,no,Subtract one Chebyshev series from another.
+numpy.polynomial.chebyshev.chebvander2d,function,trusted,yes,yes,yes,yes,empty,no,Pseudo-Vandermonde matrix of given degrees.
+numpy.polynomial.chebyshev.poly2cheb,function,trusted,yes,yes,yes,yes,empty,no,Convert a polynomial to a Chebyshev series.
+numpy.polynomial.hermite.Hermite.roots,method,fetched,yes,yes,yes,no,no,no,Return the roots of the series polynomial.
+numpy.polynomial.hermite.hermgrid2d,function,trusted,yes,yes,yes,yes,empty,no,Evaluate a 2-D Hermite series on the Cartesian product of x and y.
+numpy.polynomial.hermite.hermgrid3d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 3-D Hermite series on the Cartesian product of x, y, and z."
+numpy.polynomial.hermite.hermsub,function,trusted,yes,yes,yes,yes,empty,no,Subtract one Hermite series from another.
+numpy.polynomial.hermite.hermval,function,trusted,yes,yes,yes,yes,empty,no,Evaluate a Hermite series at points x.
+numpy.polynomial.hermite.hermval2d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 2-D Hermite series at points (x, y)."
+numpy.polynomial.hermite.hermvander,function,trusted,yes,yes,yes,yes,empty,no,Pseudo-Vandermonde matrix of given degree.
+numpy.polynomial.hermite.hermvander2d,function,trusted,yes,yes,yes,yes,empty,no,Pseudo-Vandermonde matrix of given degrees.
+numpy.polynomial.hermite_e.hermeadd,function,trusted,yes,yes,yes,yes,empty,no,Add one Hermite series to another.
+numpy.polynomial.hermite_e.hermemul,function,trusted,yes,yes,yes,yes,empty,no,Multiply one Hermite series by another.
+numpy.polynomial.hermite_e.hermeroots,function,trusted,yes,yes,yes,yes,empty,no,Compute the roots of a HermiteE series.
+numpy.polynomial.hermite_e.hermeval2d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 2-D HermiteE series at points (x, y)."
+numpy.polynomial.hermite_e.hermeval3d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 3-D Hermite_e series at points (x, y, z)."
+numpy.polynomial.hermite_e.hermevander2d,function,trusted,yes,yes,yes,yes,empty,no,Pseudo-Vandermonde matrix of given degrees.
+numpy.polynomial.hermite_e.hermevander3d,function,trusted,yes,yes,yes,yes,empty,no,Pseudo-Vandermonde matrix of given degrees.
+numpy.polynomial.hermite_e.hermeweight,function,trusted,yes,yes,yes,yes,empty,no,Weight function of the Hermite_e polynomials.
+numpy.polynomial.laguerre.Laguerre.__call__,method,fetched,yes,yes,yes,yes,yes,yes,Call self as a function.
+numpy.polynomial.laguerre.Laguerre.domain,method,fetched,yes,no,no,yes,empty,no,"polynomial.laguerre.Laguerre.domain = array([0., 1.])#"
+numpy.polynomial.laguerre.lagadd,function,trusted,yes,yes,yes,yes,empty,no,Add one Laguerre series to another.
+numpy.polynomial.laguerre.lagcompanion,function,trusted,yes,yes,yes,yes,empty,no,Return the companion matrix of c.
+numpy.polynomial.laguerre.lagfit,function,trusted,yes,yes,yes,yes,empty,no,Least squares fit of Laguerre series to data.
+numpy.polynomial.laguerre.lagfromroots,function,trusted,yes,yes,yes,yes,empty,no,Generate a Laguerre series with given roots.
+numpy.polynomial.laguerre.lagline,function,trusted,yes,yes,yes,yes,empty,no,Laguerre series whose graph is a straight line.
+numpy.polynomial.laguerre.lagpow,function,trusted,yes,yes,yes,yes,empty,no,Raise a Laguerre series to a power.
+numpy.polynomial.laguerre.lagval3d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 3-D Laguerre series at points (x, y, z)."
+numpy.polynomial.laguerre.lagvander,function,trusted,yes,yes,yes,yes,empty,no,Pseudo-Vandermonde matrix of given degree.
+numpy.polynomial.laguerre.poly2lag,function,trusted,yes,yes,yes,yes,empty,no,Convert a polynomial to a Laguerre series.
+numpy.polynomial.legendre.legcompanion,function,trusted,yes,yes,yes,yes,empty,no,Return the scaled companion matrix of c.
+numpy.polynomial.legendre.legder,function,trusted,yes,yes,yes,yes,empty,no,Differentiate a Legendre series.
+numpy.polynomial.legendre.leggrid2d,function,trusted,yes,yes,yes,yes,empty,no,Evaluate a 2-D Legendre series on the Cartesian product of x and y.
+numpy.polynomial.legendre.leggrid3d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 3-D Legendre series on the Cartesian product of x, y, and z."
+numpy.polynomial.legendre.legline,function,trusted,yes,yes,yes,yes,empty,no,Legendre series whose graph is a straight line.
+numpy.polynomial.legendre.legpow,function,trusted,yes,yes,yes,yes,empty,no,Raise a Legendre series to a power.
+numpy.polynomial.legendre.legsub,function,trusted,yes,yes,yes,yes,empty,no,Subtract one Legendre series from another.
+numpy.polynomial.legendre.legval3d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 3-D Legendre series at points (x, y, z)."
+numpy.polynomial.polynomial.Polynomial.domain,method,fetched,yes,yes,yes,yes,empty,no,"polynomial.polynomial.Polynomial.domain = array([-1.,  1.])#"
+numpy.polynomial.polynomial.Polynomial.roots,method,fetched,yes,yes,yes,no,no,no,Return the roots of the series polynomial.
+numpy.polynomial.polynomial.polyder,function,trusted,yes,yes,yes,yes,empty,no,Differentiate a polynomial.
+numpy.polynomial.polynomial.polyfromroots,function,trusted,yes,yes,yes,yes,empty,no,Generate a monic polynomial with given roots.
+numpy.polynomial.polynomial.polygrid2d,function,trusted,yes,yes,yes,yes,empty,no,Evaluate a 2-D polynomial on the Cartesian product of x and y.
+numpy.polynomial.polynomial.polyline,function,trusted,yes,yes,yes,yes,empty,no,Returns an array representing a linear polynomial.
+numpy.polynomial.polynomial.polymulx,function,trusted,yes,yes,yes,yes,empty,no,Multiply a polynomial by x.
+numpy.polynomial.polynomial.polypow,function,trusted,yes,yes,yes,yes,empty,no,Raise a polynomial to a power.
+numpy.polynomial.polynomial.polysub,function,trusted,yes,yes,yes,yes,empty,no,Subtract one polynomial from another.
+numpy.polynomial.polynomial.polyval2d,function,trusted,yes,yes,yes,yes,empty,no,"Evaluate a 2-D polynomial at points (x, y)."
+numpy.polynomial.polynomial.polyvander2d,function,trusted,yes,yes,yes,yes,empty,no,Pseudo-Vandermonde matrix of given degrees.
+numpy.rec.find_duplicate,function,trusted,yes,yes,yes,yes,empty,no,"Find duplication in a list, return a list of duplicated elements"
+numpy.rec.fromstring,function,trusted,yes,yes,yes,yes,empty,no,Create a record array from binary data

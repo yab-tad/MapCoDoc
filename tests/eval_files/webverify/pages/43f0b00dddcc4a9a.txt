@@ -1,0 +1,72 @@
+# pandas.DataFrame.set_axis
+
+DataFrame.set_axis(labels, *, axis=0, copy=None)[source](https://github.com/pandas-dev/pandas/blob/main/pandas/core/frame.py#L5341-L5379)#(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.set_axis.html#pandas.DataFrame.set_axis)
+    Assign desired index to given axis.
+
+Indexes for column or row labels can be changed by assigning
+a list-like or Index.
+
+Parameters:
+    labels : list-like, Index
+    The values for the new index.
+
+axis : {0 or 'index', 1 or 'columns'}, default 0
+    The axis to update. The value 0 identifies the rows. For Series
+this parameter is unused and defaults to 0.
+
+copy : bool, default True
+    Whether to make a copy of the underlying data.
+
+Note
+
+The copy keyword will change behavior in pandas 3.0.
+Copy-on-Write(https://pandas.pydata.org/docs/dev/user_guide/copy_on_write.html)
+will be enabled by default, which means that all methods with a
+copy keyword will use a lazy copy mechanism to defer the copy and
+ignore the copy keyword. The copy keyword will be removed in a
+future version of pandas.
+
+You can already get the future behavior and improvements through
+enabling copy on write pd.options.mode.copy_on_write = True
+
+Returns:
+    DataFrame
+    An object of type DataFrame.
+
+See also
+
+DataFrame.rename_axis(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.rename_axis.html#pandas.DataFrame.rename_axis)
+    Alter the name of the index or columns.
+
+Examples
+
+```
+>>> df = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6]})
+
+```
+
+Change the row labels.
+
+```
+>>> df.set_axis(['a', 'b', 'c'], axis='index')
+   A  B
+a  1  4
+b  2  5
+c  3  6
+
+```
+
+Change the column labels.
+
+```
+>>> df.set_axis(['I', 'II'], axis='columns')
+   I  II
+0  1   4
+1  2   5
+2  3   6
+
+```
+
+On this page
+
+[Show Source](https://pandas.pydata.org/pandas-docs/version/2.3.3/_sources/reference/api/pandas.DataFrame.set_axis.rst.txt)

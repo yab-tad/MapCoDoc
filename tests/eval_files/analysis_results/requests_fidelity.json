@@ -1,0 +1,3490 @@
+{
+  "library": "requests",
+  "version": "2.32.5",
+  "thresholds": {
+    "fidelity_exact_min": 0.995,
+    "fidelity_partial_min": 0.75,
+    "fidelity_min_unit_chars": 12,
+    "fidelity_omission_exact_min": 0.9,
+    "fidelity_omission_partial_min": 0.55
+  },
+  "sources": {
+    "pdf": {
+      "summary": {
+        "source": "pdf",
+        "structured_dir": "C:\\Users\\Administrator\\Documents\\USask\\Classes\\Fall Term 2024\\CMPT 846\\Project\\MapCoDoc_Pipeline\\doc_processor\\doc_artifacts\\structured_doc\\requests\\v_2.32.5_pdf",
+        "evaluated": 81,
+        "skipped": 0,
+        "mean_grounding": 0.9416,
+        "mean_coverage": 0.7981,
+        "omission_skipped_members": 60,
+        "omission_skipped_api_names": [
+          "requests.adapters.BaseAdapter.close",
+          "requests.adapters.BaseAdapter.send",
+          "requests.adapters.HTTPAdapter.build_connection_pool_key_attributes",
+          "requests.adapters.HTTPAdapter.build_response",
+          "requests.adapters.HTTPAdapter.get_connection",
+          "requests.adapters.HTTPAdapter.get_connection_with_tls_context",
+          "requests.adapters.HTTPAdapter.proxy_headers",
+          "requests.adapters.HTTPAdapter.proxy_manager_for",
+          "requests.adapters.HTTPAdapter.request_url",
+          "requests.cookies.RequestsCookieJar.copy",
+          "requests.cookies.RequestsCookieJar.get",
+          "requests.cookies.RequestsCookieJar.get_dict",
+          "requests.cookies.RequestsCookieJar.items",
+          "requests.cookies.RequestsCookieJar.iterkeys",
+          "requests.cookies.RequestsCookieJar.itervalues",
+          "requests.cookies.RequestsCookieJar.keys",
+          "requests.cookies.RequestsCookieJar.list_domains",
+          "requests.cookies.RequestsCookieJar.list_paths",
+          "requests.cookies.RequestsCookieJar.multiple_domains",
+          "requests.cookies.RequestsCookieJar.set",
+          "requests.cookies.RequestsCookieJar.set_cookie",
+          "requests.cookies.RequestsCookieJar.update",
+          "requests.PreparedRequest.deregister_hook",
+          "requests.PreparedRequest.path_url",
+          "requests.PreparedRequest.prepare_auth",
+          "requests.PreparedRequest.prepare_body",
+          "requests.PreparedRequest.prepare_content_length",
+          "requests.PreparedRequest.prepare_cookies",
+          "requests.PreparedRequest.prepare_headers",
+          "requests.PreparedRequest.prepare_hooks",
+          "requests.PreparedRequest.prepare_method",
+          "requests.PreparedRequest.prepare_url",
+          "requests.Request.deregister_hook",
+          "requests.Request.prepare",
+          "requests.Request.register_hook",
+          "requests.Response.apparent_encoding",
+          "requests.Response.close",
+          "requests.Response.content",
+          "requests.Response.is_permanent_redirect",
+          "requests.Response.iter_content",
+          "requests.Response.json",
+          "requests.Response.raise_for_status",
+          "requests.Response.text",
+          "requests.Session.close",
+          "requests.Session.delete",
+          "requests.Session.get_adapter",
+          "requests.Session.get_redirect_target",
+          "requests.Session.head",
+          "requests.Session.merge_environment_settings",
+          "requests.Session.mount",
+          "requests.Session.options",
+          "requests.Session.patch",
+          "requests.Session.post",
+          "requests.Session.prepare_request",
+          "requests.Session.rebuild_auth",
+          "requests.Session.rebuild_method",
+          "requests.Session.rebuild_proxies",
+          "requests.Session.request",
+          "requests.Session.send",
+          "requests.Session.should_strip_auth"
+        ],
+        "total_additive_issues": 18,
+        "total_omissions": 110,
+        "members_fully_faithful": 61,
+        "section_breakdown": {
+          "additive": {
+            "parameters": 8,
+            "returns": 7,
+            "examples": 3
+          },
+          "omission": {
+            "Return type": 11,
+            "Parameters": 49,
+            "(top)": 19,
+            "Raises": 31
+          }
+        }
+      },
+      "members": [
+        {
+          "api_name": "requests.adapters.BaseAdapter.close",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.BaseAdapter",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 4,
+          "source_units_checked": 11,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.adapters.BaseAdapter.send",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 9,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter.build_connection_pool_key_attributes",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 6,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter.build_response",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 5,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter.get_connection",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 5,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter.get_connection_with_tls_context",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 7,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 0.9560439560439561,
+          "units_checked": 19,
+          "source_units_checked": 91,
+          "additive_issue_count": 0,
+          "omission_count": 4,
+          "additive_issues": [],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.8,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.adapters.HTTPAdapter.txt:167 not represented in the structured doc (best match 0.80).",
+              "doc_value": "lib3.proxymanager(url_placeholder_15) proxymanager request_url request",
+              "code_value": "urllib3.ProxyManager(url_placeholder_15)      request_url(request, proxies)",
+              "source_location": {
+                "file": "requests.adapters.HTTPAdapter.txt",
+                "section": "Return type",
+                "line_start": 167,
+                "line_end": 168,
+                "char_start": 7618,
+                "char_end": 7693
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.851,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.adapters.HTTPAdapter.txt:151 not represented in the structured doc (best match 0.85).",
+              "doc_value": "der_13) proxy_manager_for proxy_manager_for(proxy, **proxy_kwargs) return urllib3 proxymanager for the given proxy",
+              "code_value": "dict(url_placeholder_13)      proxy_manager_for(proxy, **proxy_kwargs)    Return urllib3 ProxyManager for the given proxy.",
+              "source_location": {
+                "file": "requests.adapters.HTTPAdapter.txt",
+                "section": "Return type",
+                "line_start": 151,
+                "line_end": 154,
+                "char_start": 7161,
+                "char_end": 7283
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.885,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.adapters.HTTPAdapter.txt:85 not represented in the structured doc (best match 0.88).",
+              "doc_value": "t. url the requested url.",
+              "code_value": "- url - The requested URL.",
+              "source_location": {
+                "file": "requests.adapters.HTTPAdapter.txt",
+                "section": "Parameters",
+                "line_start": 85,
+                "line_end": 87,
+                "char_start": 4409,
+                "char_end": 4435
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.887,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.adapters.HTTPAdapter.txt:125 not represented in the structured doc (best match 0.89).",
+              "doc_value": "ool init_poolmanager init_poolmanager(connections, maxsize, block=false, **pool_kwargs) initializes a urllib3 poolmanager. t",
+              "code_value": "urllib3.ConnectionPool      init_poolmanager(connections, maxsize, block=False, **pool_kwargs)    Initializes a urllib3 PoolManager.",
+              "source_location": {
+                "file": "requests.adapters.HTTPAdapter.txt",
+                "section": "Return type",
+                "line_start": 125,
+                "line_end": 128,
+                "char_start": 6128,
+                "char_end": 6260
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter.proxy_headers",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 4,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter.proxy_manager_for",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 5,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.adapters.HTTPAdapter.request_url",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 5,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.auth.AuthBase",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 0.5,
+          "units_checked": 2,
+          "source_units_checked": 2,
+          "additive_issue_count": 0,
+          "omission_count": 1,
+          "additive_issues": [],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.566,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.auth.AuthBase.txt:1 not represented in the structured doc (best match 0.57).",
+              "doc_value": "class requests.auth.authbase base class that all auth implementations derive from",
+              "code_value": "class requests.auth.HTTPProxyAuth(username, password)    Attaches HTTP Proxy Authentication to a given Request object.",
+              "source_location": {
+                "file": "requests.auth.AuthBase.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 8,
+                "char_start": 37,
+                "char_end": 155
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.auth.HTTPBasicAuth",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 2,
+          "source_units_checked": 1,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.ConnectionError",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 2,
+          "source_units_checked": 1,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.cookies.cookiejar_from_dict",
+          "type": "function",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 0.8,
+          "units_checked": 5,
+          "source_units_checked": 5,
+          "additive_issue_count": 0,
+          "omission_count": 1,
+          "additive_issues": [],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.533,
+              "category": "omitted",
+              "detail": "Source content at requests.cookies.cookiejar_from_dict.txt:12 not represented in the structured doc (best match 0.53).",
+              "doc_value": "requests.cookies.cookiejar_from_dict(cookie_dict, c",
+              "code_value": "CookieJar class requests.cookies.RequestsCookieJar(policy=None)    Compatibility class;",
+              "source_location": {
+                "file": "requests.cookies.cookiejar_from_dict.txt",
+                "section": "Return type",
+                "line_start": 12,
+                "line_end": 17,
+                "char_start": 388,
+                "char_end": 475
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.copy",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.get",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 3,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.get_dict",
+          "type": "method",
+          "grounding_score": 0.4,
+          "source_coverage_ratio": null,
+          "units_checked": 5,
+          "source_units_checked": 0,
+          "additive_issue_count": 3,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_UNSUPPORTED_CONTENT",
+              "section": "parameters[path]",
+              "json_path": "$.parameters[?name=='path']",
+              "severity": "high",
+              "similarity": 0.667,
+              "category": "unsupported_content",
+              "detail": "'parameters[path]' content has similarity 0.67 to its closest source span.",
+              "doc_value": "path optional path",
+              "code_value": "ts optional domain",
+              "source_location": null
+            },
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "parameters[domain]",
+              "json_path": "$.parameters[?name=='domain']",
+              "severity": "medium",
+              "similarity": 0.818,
+              "category": "partial_support",
+              "detail": "'parameters[domain]' content has similarity 0.82 to its closest source span.",
+              "doc_value": "domain optional domain",
+              "code_value": "ent an optional domain",
+              "source_location": null
+            },
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "returns",
+              "json_path": "$.returns",
+              "severity": "medium",
+              "similarity": 0.846,
+              "category": "partial_support",
+              "detail": "'returns' content has similarity 0.85 to its closest source span.",
+              "doc_value": "dict(url_placeholder_0) plain old Python dict of name-value pairs\nof cookies that meet the requirements.",
+              "code_value": "nd path and returns a plain old python dict of name-value pairs of cookies that meet the requirements. r",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.items",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.iterkeys",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.itervalues",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.keys",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.list_domains",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.list_paths",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.multiple_domains",
+          "type": "method",
+          "grounding_score": 0.6667,
+          "source_coverage_ratio": null,
+          "units_checked": 3,
+          "source_units_checked": 0,
+          "additive_issue_count": 1,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "returns",
+              "json_path": "$.returns",
+              "severity": "medium",
+              "similarity": 0.952,
+              "category": "partial_support",
+              "detail": "'returns' content has similarity 0.95 to its closest source span.",
+              "doc_value": "bool Returns True if there are multiple domains in the jar. Returns False otherwise.",
+              "code_value": "() returns true if there are multiple domains in the jar. returns false otherwise. r",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.set",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.set_cookie",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.cookies.RequestsCookieJar.update",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.delete",
+          "type": "function",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 3,
+          "source_units_checked": 2,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.get",
+          "type": "function",
+          "grounding_score": 0.8333,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 6,
+          "source_units_checked": 6,
+          "additive_issue_count": 1,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_UNSUPPORTED_CONTENT",
+              "section": "returns",
+              "json_path": "$.returns",
+              "severity": "high",
+              "similarity": 0.746,
+              "category": "unsupported_content",
+              "detail": "'returns' content has similarity 0.75 to its closest source span.",
+              "doc_value": "requests.Response(url_placeholder_3) Response(url_placeholder_2) object",
+              "code_value": "class requests.response the response(url_placeholder_83) object, which",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.head",
+          "type": "function",
+          "grounding_score": 0.8,
+          "source_coverage_ratio": 0.8333333333333334,
+          "units_checked": 5,
+          "source_units_checked": 6,
+          "additive_issue_count": 1,
+          "omission_count": 1,
+          "additive_issues": [
+            {
+              "issue_type": "FID_UNSUPPORTED_CONTENT",
+              "section": "returns",
+              "json_path": "$.returns",
+              "severity": "high",
+              "similarity": 0.718,
+              "category": "unsupported_content",
+              "detail": "'returns' content has similarity 0.72 to its closest source span.",
+              "doc_value": "requests.Response(url_placeholder_3) Response(url_placeholder_2) object",
+              "code_value": "uest(url_placeholder_1) behavior). returns response(url_placeholder_2)",
+              "source_location": null
+            }
+          ],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.651,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.head.txt:16 not represented in the structured doc (best match 0.65).",
+              "doc_value": "requests.response(url_placeholder_3) response(url_placeholder_2) object",
+              "code_value": "requests.Response(url_placeholder_3) requests.get(url, params=None, **kwargs)    Sends a GET request.",
+              "source_location": {
+                "file": "requests.head.txt",
+                "section": "Return type",
+                "line_start": 16,
+                "line_end": 18,
+                "char_start": 378,
+                "char_end": 479
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.patch",
+          "type": "function",
+          "grounding_score": 0.8571,
+          "source_coverage_ratio": 0.8571428571428571,
+          "units_checked": 7,
+          "source_units_checked": 7,
+          "additive_issue_count": 1,
+          "omission_count": 1,
+          "additive_issues": [
+            {
+              "issue_type": "FID_UNSUPPORTED_CONTENT",
+              "section": "returns",
+              "json_path": "$.returns",
+              "severity": "high",
+              "similarity": 0.718,
+              "category": "unsupported_content",
+              "detail": "'returns' content has similarity 0.72 to its closest source span.",
+              "doc_value": "requests.Response(url_placeholder_4) Response(url_placeholder_3) object",
+              "code_value": "requests.response(url_placeholder_4) requests.delete(url, **kwargs) se",
+              "source_location": null
+            }
+          ],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.654,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.patch.txt:18 not represented in the structured doc (best match 0.65).",
+              "doc_value": "requests.response(url_placeholder_4) response(url_placeholder_3) object",
+              "code_value": "requests.Response(url_placeholder_4) requests.delete(url, **kwargs)       Sends a DELETE request.",
+              "source_location": {
+                "file": "requests.patch.txt",
+                "section": "Return type",
+                "line_start": 18,
+                "line_end": 20,
+                "char_start": 513,
+                "char_end": 610
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.post",
+          "type": "function",
+          "grounding_score": 0.8571,
+          "source_coverage_ratio": 0.8571428571428571,
+          "units_checked": 7,
+          "source_units_checked": 7,
+          "additive_issue_count": 1,
+          "omission_count": 1,
+          "additive_issues": [
+            {
+              "issue_type": "FID_UNSUPPORTED_CONTENT",
+              "section": "returns",
+              "json_path": "$.returns",
+              "severity": "high",
+              "similarity": 0.718,
+              "category": "unsupported_content",
+              "detail": "'returns' content has similarity 0.72 to its closest source span.",
+              "doc_value": "requests.Response(url_placeholder_4) Response(url_placeholder_3) object",
+              "code_value": "requests.response(url_placeholder_14) requests.delete(url, **kwargs) se",
+              "source_location": null
+            }
+          ],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.702,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.post.txt:18 not represented in the structured doc (best match 0.70).",
+              "doc_value": "requests.post(url, data=none, json=none, **kwargs) sends a post request.",
+              "code_value": "requests.Response(url_placeholder_4) requests.put(url, data=None, **kwargs)    Sends a PUT request.",
+              "source_location": {
+                "file": "requests.post.txt",
+                "section": "Return type",
+                "line_start": 18,
+                "line_end": 20,
+                "char_start": 522,
+                "char_end": 621
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.PreparedRequest.deregister_hook",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 3,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 21,
+          "source_units_checked": 11,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.PreparedRequest.path_url",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 0.038461538461538464,
+          "units_checked": 2,
+          "source_units_checked": 26,
+          "additive_issue_count": 0,
+          "omission_count": 25,
+          "additive_issues": [],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.384,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:42 not represented in the structured doc (best match 0.38).",
+              "doc_value": "e given parameters. method url headers files data params auth cookies hooks json",
+              "code_value": "before giving up, as a float, or a (connect timeout, read timeout)(url_placeholder_3) tuple.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "Parameters",
+                "line_start": 42,
+                "line_end": 43,
+                "char_start": 1776,
+                "char_end": 1868
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.385,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:38 not represented in the structured doc (best match 0.39).",
+              "doc_value": "e, data=none, params=none, auth=none, cookies=none, hooks=none, json=none) prepares the entire request with the given para",
+              "code_value": "- timeout (float(url_placeholder_1) or tuple(url_placeholder_2)) - (optional) How long to wait for the server to send data",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "Parameters",
+                "line_start": 38,
+                "line_end": 40,
+                "char_start": 1587,
+                "char_end": 1709
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.401,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:45 not represented in the structured doc (best match 0.40).",
+              "doc_value": "epares the entire request with the given parameters. method url headers files data params auth cookies hooks json",
+              "code_value": "server's TLS certificate, or a string, in which case it must be a path to a CA bundle to use   - cert - (optional) Any user-provided SSL certificate to be trusted.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "Parameters",
+                "line_start": 45,
+                "line_end": 50,
+                "char_start": 1962,
+                "char_end": 2125
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.414,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:42 not represented in the structured doc (best match 0.41).",
+              "doc_value": "json=none) prepares the entire request with the given parameters. method url headers f",
+              "code_value": "- verify - (optional) Either a boolean, in which case it controls whether we verify the",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "Parameters",
+                "line_start": 42,
+                "line_end": 43,
+                "char_start": 1871,
+                "char_end": 1958
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.417,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.42).",
+              "doc_value": "ethod=none, url=none, headers=none, files=none, data=none, params=none, auth=none, cookies=none, hooks=none, json=none) prepares the entire request with the given parameters. method url header",
+              "code_value": "Due to cookielib's design, the header will not be regenerated if it already exists, meaning this function can only be  called once for the life of the PreparedRequest(url_placeholder_0) object.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 599,
+                "char_end": 792
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.417,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:33 not represented in the structured doc (best match 0.42).",
+              "doc_value": "=none) prepares the enti",
+              "code_value": "Returns Response object.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 33,
+                "line_end": 35,
+                "char_start": 1500,
+                "char_end": 1524
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.424,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:33 not represented in the structured doc (best match 0.42).",
+              "doc_value": "meters. method url headers files",
+              "code_value": "Cleans up adapter specific items.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 33,
+                "line_end": 35,
+                "char_start": 1348,
+                "char_end": 1381
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.429,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:28 not represented in the structured doc (best match 0.43).",
+              "doc_value": "the given parameters. method url headers files data params auth cookie",
+              "code_value": "class requests.adapters.BaseAdapter    The Base Transport Adapter      close()",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 28,
+                "line_end": 31,
+                "char_start": 1266,
+                "char_end": 1344
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.44,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:25 not represented in the structured doc (best match 0.44).",
+              "doc_value": "none, cookies=none, hooks",
+              "code_value": "Properly register a hook.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 25,
+                "line_end": 26,
+                "char_start": 1195,
+                "char_end": 1220
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.443,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:45 not represented in the structured doc (best match 0.44).",
+              "doc_value": "none, cookies=none, hooks=none, json=none) prepares the entire request",
+              "code_value": "- proxies - (optional) The proxies dictionary to apply to the request.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "Parameters",
+                "line_start": 45,
+                "line_end": 50,
+                "char_start": 2057,
+                "char_end": 2127
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.444,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.44).",
+              "doc_value": "ne, hooks=none, json=none) prepares the entire request with the given parameters. method url headers files data param",
+              "code_value": "Any subsequent calls to prepare_cookies will  have no actual effect, unless the \"Cookie\" header is removed beforehand.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 793,
+                "char_end": 911
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.467,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:38 not represented in the structured doc (best match 0.47).",
+              "doc_value": "hooks=none, json=none) prepares the entire request with the",
+              "code_value": "- stream - (optional) Whether to stream the request content.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "Parameters",
+                "line_start": 38,
+                "line_end": 40,
+                "char_start": 1551,
+                "char_end": 1611
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.48,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.48).",
+              "doc_value": "th the given parameters. method url headers files data params auth cookies hooks json",
+              "code_value": "This function eventually generates a Cookie header from the given cookies using cookielib.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 508,
+                "char_end": 598
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.49,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.49).",
+              "doc_value": "prepare(method=none, url=none, headers=none, files=none, data=none, params=none, auth=none, cookies=none, hooks=none, json=none) prepares the entire",
+              "code_value": "prepare_content_length(body)    Prepare Content-Length header based on request method and body      prepare_cookies(cookies)    Prepares the given HTTP cookie data.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 341,
+                "char_end": 505
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.5,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:22 not represented in the structured doc (best match 0.50).",
+              "doc_value": "params auth cookies hooks",
+              "code_value": "register_hook(event, hook)",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 22,
+                "line_end": 23,
+                "char_start": 1165,
+                "char_end": 1191
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.525,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.52).",
+              "doc_value": "one) prepares the entire request with the given parameters. m",
+              "code_value": "prepare_auth(auth, url='')    Prepares the given HTTP auth data.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 191,
+                "char_end": 255
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.532,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:33 not represented in the structured doc (best match 0.53).",
+              "doc_value": "s=none, files=none, data=none, params=none, auth=none, cookies=none, hooks=none, json=none) prepares the enti",
+              "code_value": "send(request, stream=False, timeout=None, verify=True, cert=None, proxies=None)    Sends PreparedRequest object.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 33,
+                "line_end": 35,
+                "char_start": 1387,
+                "char_end": 1499
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.535,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.54).",
+              "doc_value": "ies=none, hooks=none, json=none) prepares the entire request with the g",
+              "code_value": "prepare_body(data, files, json=None)    Prepares the given HTTP body data.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 261,
+                "char_end": 335
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.545,
+              "category": "omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:20 not represented in the structured doc (best match 0.55).",
+              "doc_value": "prepare(m",
+              "code_value": "prepare_url(url, params)",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 20,
+                "line_end": 20,
+                "char_start": 1103,
+                "char_end": 1127
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.565,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.57).",
+              "doc_value": "prepares the entire request with the given pa",
+              "code_value": "prepare_hooks(hooks)    Prepares the given hooks.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 983,
+                "char_end": 1032
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.581,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:38 not represented in the structured doc (best match 0.58).",
+              "doc_value": "prepares the entire request with the given",
+              "code_value": "- request - The PreparedRequest being sent.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "Parameters",
+                "line_start": 38,
+                "line_end": 40,
+                "char_start": 1541,
+                "char_end": 1584
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.593,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.59).",
+              "doc_value": "prepares the entire request with the given parameters.",
+              "code_value": "prepare_method(method)    Prepares the given HTTP method.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 1038,
+                "char_end": 1095
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.594,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:28 not represented in the structured doc (best match 0.59).",
+              "doc_value": "epares the entire request with t",
+              "code_value": "HTTP URL to send the request to.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 28,
+                "line_end": 31,
+                "char_start": 1233,
+                "char_end": 1265
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.596,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:1 not represented in the structured doc (best match 0.60).",
+              "doc_value": ") prepares the entire request with the given parameters.",
+              "code_value": "prepare_headers(headers)    Prepares the given HTTP headers.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 1,
+                "line_end": 17,
+                "char_start": 917,
+                "char_end": 977
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:(top)",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.643,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.PreparedRequest.prepare.txt:22 not represented in the structured doc (best match 0.64).",
+              "doc_value": ") prepares the entire reques",
+              "code_value": "Prepares the given HTTP URL.",
+              "source_location": {
+                "file": "requests.PreparedRequest.prepare.txt",
+                "section": "(top)",
+                "line_start": 22,
+                "line_end": 23,
+                "char_start": 1131,
+                "char_end": 1159
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_auth",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_body",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_content_length",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_cookies",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 3,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_headers",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_hooks",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_method",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.PreparedRequest.prepare_url",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 3,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.put",
+          "type": "function",
+          "grounding_score": 0.8571,
+          "source_coverage_ratio": 0.8571428571428571,
+          "units_checked": 7,
+          "source_units_checked": 7,
+          "additive_issue_count": 1,
+          "omission_count": 1,
+          "additive_issues": [
+            {
+              "issue_type": "FID_UNSUPPORTED_CONTENT",
+              "section": "returns",
+              "json_path": "$.returns",
+              "severity": "high",
+              "similarity": 0.704,
+              "category": "unsupported_content",
+              "detail": "'returns' content has similarity 0.70 to its closest source span.",
+              "doc_value": "requests.Response(url_placeholder_4) Response(url_placeholder_3) object",
+              "code_value": "requests.response(url_placeholder_9) requests.delete(url, **kwargs) sen",
+              "source_location": null
+            }
+          ],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.73,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.put.txt:18 not represented in the structured doc (best match 0.73).",
+              "doc_value": "requests.put(url, data=none, **kwargs) sends a put request.",
+              "code_value": "requests.Response(url_placeholder_4) requests.patch(url, data=None, **kwargs)    Sends a PATCH request.",
+              "source_location": {
+                "file": "requests.put.txt",
+                "section": "Return type",
+                "line_start": 18,
+                "line_end": 20,
+                "char_start": 509,
+                "char_end": 612
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.Request.deregister_hook",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 3,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Request",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 0.22826086956521738,
+          "units_checked": 16,
+          "source_units_checked": 92,
+          "additive_issue_count": 0,
+          "omission_count": 71,
+          "additive_issues": [],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.357,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:87 not represented in the structured doc (best match 0.36).",
+              "doc_value": "ace. json json",
+              "code_value": "json(**kwargs)",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 87,
+                "line_end": 88,
+                "char_start": 4136,
+                "char_end": 4150
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.432,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.43).",
+              "doc_value": "eregister_hook(event, hook) deregister a previously registered hook. returns true",
+              "code_value": "iter_content(chunk_size=1, decode_unicode=False)    Iterates over the response data.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3127,
+                "char_end": 3211
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.439,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.44).",
+              "doc_value": "s true if the hook existed, false if not. prepare prepare() constructs a preparedr",
+              "code_value": "stream=True will read data as it arrives in whatever size the chunks are received.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3599,
+                "char_end": 3681
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.439,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:139 not represented in the structured doc (best match 0.44).",
+              "doc_value": "oding will take place. auth auth handler",
+              "code_value": "doing so may produce  undesirable effects.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 139,
+                "line_end": 143,
+                "char_start": 6351,
+                "char_end": 6393
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.44,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:132 not represented in the structured doc (best match 0.44).",
+              "doc_value": "upload. data the body to attach to the request. if a dictionary or list of tuples [(key, value)] is provided, form-encoding will take place. json json for the",
+              "code_value": "If you can take advantage of non-HTTP knowledge to make a better guess at the encoding, you  should set r.encoding appropriately before accessing this property.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 132,
+                "line_end": 135,
+                "char_start": 5846,
+                "char_end": 6006
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.444,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:110 not represented in the structured doc (best match 0.44).",
+              "doc_value": "lder_2) for transm",
+              "code_value": "raise_for_status()",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 110,
+                "line_end": 114,
+                "char_start": 5046,
+                "char_end": 5064
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.447,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:64 not represented in the structured doc (best match 0.45).",
+              "doc_value": "s provided, form-encoding will take place. auth auth handler or (user, pass) tuple. cookies dictionary",
+              "code_value": "For example, headers['content-encoding'] will   return the value of a 'Content-Encoding' response header.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 64,
+                "line_end": 66,
+                "char_start": 2531,
+                "char_end": 2636
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.449,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:46 not represented in the structured doc (best match 0.45).",
+              "doc_value": "hod to use. url url to send. headers dictionary o",
+              "code_value": "Should not normally need to be called explicitly.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 46,
+                "line_end": 49,
+                "char_start": 1868,
+                "char_end": 1917
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.45,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:123 not represented in the structured doc (best match 0.45).",
+              "doc_value": "dictionary or cooki",
+              "code_value": "\"Not Found\" or \"OK\".",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 123,
+                "line_end": 124,
+                "char_start": 5387,
+                "char_end": 5407
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.451,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:110 not represented in the structured doc (best match 0.45).",
+              "doc_value": "take place. json json for the body to attach to the request (if files or data is not specified). params url parameters to append to",
+              "code_value": "This attribute checks if the status code of the response is between 400 and 600 to see if there was a client   error or a server error.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 110,
+                "line_end": 114,
+                "char_start": 4776,
+                "char_end": 4911
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.453,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.45).",
+              "doc_value": "p method to use. url url to send. headers dictionary of headers to send. fi",
+              "code_value": "A value of None will function differently depending on the value of  stream.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3522,
+                "char_end": 3598
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.458,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.46).",
+              "doc_value": "s [(key, value)] is provided, form-encoding will take place. json json for the body to attach to the reques",
+              "code_value": "If decode_unicode is True, content will be decoded using the best available encoding based on the response.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3738,
+                "char_end": 3845
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.462,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:39 not represented in the structured doc (best match 0.46).",
+              "doc_value": "s provided, form-encoding will take place. json json for the body to attach to the request (if files or da",
+              "code_value": "property apparent_encoding    The apparent encoding, provided by the charset_normalizer or chardet libraries.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 39,
+                "line_end": 41,
+                "char_start": 1601,
+                "char_end": 1710
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.462,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:57 not represented in the structured doc (best match 0.46).",
+              "doc_value": "s sent to the server. method http method to use. url url to send. headers dictionary of headers to send.",
+              "code_value": "The amount of time elapsed between sending the request and the arrival of the response (as a timedelta).",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 57,
+                "line_end": 59,
+                "char_start": 2055,
+                "char_end": 2159
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.462,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.46).",
+              "doc_value": "he request (if files or data is not spe",
+              "code_value": "chunk_size must be of type int or None.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3482,
+                "char_end": 3521
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.462,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.46).",
+              "doc_value": "quest (if files or data is not specified). params ur",
+              "code_value": "If stream=False,  data is returned as a single chunk.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3682,
+                "char_end": 3735
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.462,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:95 not represented in the structured doc (best match 0.46).",
+              "doc_value": "aders dictionary of headers to send. files dictionar",
+              "code_value": "**kwargs - Optional arguments that json.loads takes.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 95,
+                "line_end": 95,
+                "char_start": 4312,
+                "char_end": 4364
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.462,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:110 not represented in the structured doc (best match 0.46).",
+              "doc_value": "ent, hook) deregister a previously registered hook. returns true",
+              "code_value": "If the status code is between 200 and 400, this will return True.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 110,
+                "line_end": 114,
+                "char_start": 4912,
+                "char_end": 4977
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.462,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:119 not represented in the structured doc (best match 0.46).",
+              "doc_value": "laceholder_0) object. used to prepare a preparedrequest(url_place",
+              "code_value": "File-like object representation of response (for advanced usage).",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 119,
+                "line_end": 121,
+                "char_start": 5134,
+                "char_end": 5199
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.465,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:46 not represented in the structured doc (best match 0.47).",
+              "doc_value": "ich is sent to the server. method http method to use. url url to send. headers diction",
+              "code_value": "Once this method has been called the underlying raw object must   not be accessed again.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 46,
+                "line_end": 49,
+                "char_start": 1771,
+                "char_end": 1859
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.465,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:132 not represented in the structured doc (best match 0.46).",
+              "doc_value": "the body to attach to the request (if files or data is not specified). params url parameters to append to the url.",
+              "code_value": "The encoding of the response content is determined based solely on HTTP headers, following RFC 2616  to the letter.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 132,
+                "line_end": 135,
+                "char_start": 5730,
+                "char_end": 5845
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.466,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:57 not represented in the structured doc (best match 0.47).",
+              "doc_value": "is provided, form-encoding will take place. json json for the body to attach to the request (if files or data is not specified). pa",
+              "code_value": "This property specifically measures the time taken between sending the first byte of the request and finishing  parsing the headers.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 57,
+                "line_end": 59,
+                "char_start": 2162,
+                "char_end": 2294
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.467,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:57 not represented in the structured doc (best match 0.47).",
+              "doc_value": "value)] is provided, form-encoding will take place. json json for the body to attach to the request (if",
+              "code_value": "It is therefore unaffected by consuming the response content or the value of the stream  keyword argument.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 57,
+                "line_end": 59,
+                "char_start": 2295,
+                "char_end": 2401
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.467,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:68 not represented in the structured doc (best match 0.47).",
+              "doc_value": "o prepare a preparedrequest(ur",
+              "code_value": "property is_permanent_redirect",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 68,
+                "line_end": 70,
+                "char_start": 2843,
+                "char_end": 2873
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.47,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.47).",
+              "doc_value": "ne, url=none, headers=none, files=none, data=none, params=none, auth=none, cookies=none, hooks=none, json=none) a use",
+              "code_value": "iter_lines(chunk_size=512, decode_unicode=False, delimiter=None)    Iterates over the response data, one line at a time.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3851,
+                "char_end": 3971
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.473,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.47).",
+              "doc_value": "which is sent to the server. method http method to use. url url to send. headers dictionary of headers to send.",
+              "code_value": "When stream=True is set on the request, this avoids reading the content at   once into memory for large responses.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3212,
+                "char_end": 3326
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.473,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.47).",
+              "doc_value": "which is sent to the server. method http method to use. url url to send. headers dictionary of headers to send.",
+              "code_value": "When stream=True is set on the request, this avoids   reading the content at once into memory for large responses.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3972,
+                "char_end": 4086
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.475,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:68 not represented in the structured doc (best match 0.47).",
+              "doc_value": ". prepare prepare() constructs a prepare",
+              "code_value": "Any redirect responses will end up here.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 68,
+                "line_end": 70,
+                "char_start": 2732,
+                "char_end": 2772
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.477,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.48).",
+              "doc_value": "h is sent to the server. method http method to use. url url to se",
+              "code_value": "The chunk size is the number of bytes it should read into memory.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3327,
+                "char_end": 3392
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.48,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.48).",
+              "doc_value": "ter a previously registered hook. returns true if the hook existed, false if not. prepare prepare() constructs a preparedrequest(url_placeholder_2)",
+              "code_value": "True if this Response is a well-formed HTTP redirect that could have been processed automatically (by   Session.resolve_redirects(url_placeholder_5)).",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 2971,
+                "char_end": 3121
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.48,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:99 not represented in the structured doc (best match 0.48).",
+              "doc_value": "re prepare() constructs a preparedrequest(url_placeholder_2) for transmission and returns it. regist",
+              "code_value": "requests.exceptions.JSONDecodeError(url_placeholder_6) - If the response body does not contain valid",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 99,
+                "line_end": 99,
+                "char_start": 4378,
+                "char_end": 4478
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.484,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:132 not represented in the structured doc (best match 0.48).",
+              "doc_value": "of tuples [(key, value)] is provided, form-encoding will take place. auth auth handler or",
+              "code_value": "If Response.encoding is None, encoding will be guessed using charset_normalizer or chardet.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 132,
+                "line_end": 135,
+                "char_start": 5636,
+                "char_end": 5727
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.486,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:90 not represented in the structured doc (best match 0.49).",
+              "doc_value": "ded, form-encoding will take place. j",
+              "code_value": "depending on what is in the response.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 90,
+                "line_end": 91,
+                "char_start": 4257,
+                "char_end": 4294
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.488,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:129 not represented in the structured doc (best match 0.49).",
+              "doc_value": "to the server. method http method to use. u",
+              "code_value": "Integer Code of responded HTTP Status, e.g.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 129,
+                "line_end": 130,
+                "char_start": 5519,
+                "char_end": 5562
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.489,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:123 not represented in the structured doc (best match 0.49).",
+              "doc_value": "ent to the server. method http method to use.",
+              "code_value": "Textual reason of responded HTTP Status, e.g.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 123,
+                "line_end": 124,
+                "char_start": 5341,
+                "char_end": 5386
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.492,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:90 not represented in the structured doc (best match 0.49).",
+              "doc_value": "e place. json json for the body to attach to the request (i",
+              "code_value": "Decodes the JSON response body (if any) as a Python object.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 90,
+                "line_end": 91,
+                "char_start": 4154,
+                "char_end": 4213
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.5,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:72 not represented in the structured doc (best match 0.50).",
+              "doc_value": "true if the hook existed, false if not. prepare prepare() constr",
+              "code_value": "True if this Response one of the permanent versions of redirect.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 72,
+                "line_end": 73,
+                "char_start": 2877,
+                "char_end": 2941
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.508,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:110 not represented in the structured doc (best match 0.51).",
+              "doc_value": "the body to attach to the request (if files or data is not",
+              "code_value": "This is not a check   to see if the response code is 200 OK  .",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 110,
+                "line_end": 114,
+                "char_start": 4978,
+                "char_end": 5040
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.516,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:137 not represented in the structured doc (best match 0.52).",
+              "doc_value": "files dictionary of {filename:",
+              "code_value": "Final URL location of Response.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 137,
+                "line_end": 137,
+                "char_start": 6019,
+                "char_end": 6050
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.522,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:61 not represented in the structured doc (best match 0.52).",
+              "doc_value": "rm-encoding will take place. json json for the",
+              "code_value": "Encoding to decode with when accessing r.text.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 61,
+                "line_end": 62,
+                "char_start": 2419,
+                "char_end": 2465
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.525,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:119 not represented in the structured doc (best match 0.53).",
+              "doc_value": "o multipart upload. data the body to attach to the request.",
+              "code_value": "Use of raw requires that stream=True   be set on the request.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 119,
+                "line_end": 121,
+                "char_start": 5200,
+                "char_end": 5261
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.526,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:110 not represented in the structured doc (best match 0.53).",
+              "doc_value": "ject. used to prepare a preparedrequest(url_placeholder_1), which is sent to t",
+              "code_value": "Returns True if status_code(url_placeholder_7) is less than 400, False if not.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 110,
+                "line_end": 114,
+                "char_start": 4695,
+                "char_end": 4773
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.527,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:139 not represented in the structured doc (best match 0.53).",
+              "doc_value": "e, auth=none, cookies=none, hooks=none, json=none) a user-created request(url_placeholder_0) object. used to prepare a preparedrequest(url_placeholder_1), which is sent to the server.",
+              "code_value": "4.1.5 Lower-Lower-Level Classes  class requests.PreparedRequest    The fully mutable PreparedRequest(url_placeholder_10) object, containing the exact bytes that will be sent to the server.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 139,
+                "line_end": 143,
+                "char_start": 6052,
+                "char_end": 6240
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.528,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:132 not represented in the structured doc (best match 0.53).",
+              "doc_value": "o attach to the request. if a dictio",
+              "code_value": "Content of the response, in unicode.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 132,
+                "line_end": 135,
+                "char_start": 5597,
+                "char_end": 5633
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.529,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:51 not represented in the structured doc (best match 0.53).",
+              "doc_value": "one, url=none, headers=none, files",
+              "code_value": "Content of the response, in bytes.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 51,
+                "line_end": 52,
+                "char_start": 1943,
+                "char_end": 1977
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.529,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:87 not represented in the structured doc (best match 0.53).",
+              "doc_value": "tp method to use. url url to send.",
+              "code_value": "This method is not reentrant safe.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 87,
+                "line_end": 88,
+                "char_start": 4096,
+                "char_end": 4130
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.536,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:75 not represented in the structured doc (best match 0.54).",
+              "doc_value": "tionary or list of tuples [(key, value)] is provided, form-encoding will take place.",
+              "code_value": "This is not necessarily the length of each item returned as decoding can take place.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 75,
+                "line_end": 85,
+                "char_start": 3395,
+                "char_end": 3479
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.537,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:46 not represented in the structured doc (best match 0.54).",
+              "doc_value": "r, pass) tuple. cookies dictionary or coo",
+              "code_value": "Releases the connection back to the pool.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 46,
+                "line_end": 49,
+                "char_start": 1729,
+                "char_end": 1770
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.54,
+              "category": "omitted",
+              "detail": "Source content at requests.Request.txt:119 not represented in the structured doc (best match 0.54).",
+              "doc_value": "his request. hooks dictionary of callback hooks, for internal u",
+              "code_value": "This requirement does not apply for use internally to Requests.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 119,
+                "line_end": 121,
+                "char_start": 5262,
+                "char_end": 5325
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.57,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:139 not represented in the structured doc (best match 0.57).",
+              "doc_value": "none, json=none) a user-created request(url_placeholder_0) object. used to prepare a preparedrequest(url_pl",
+              "code_value": "Instances are generated from a Request(url_placeholder_11) object, and should not be instantiated manually;",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 139,
+                "line_end": 143,
+                "char_start": 6243,
+                "char_end": 6350
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.571,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:104 not represented in the structured doc (best match 0.57).",
+              "doc_value": "url url to send. headers dictionary of headers to send.",
+              "code_value": "Returns the parsed header links of the response, if any.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 104,
+                "line_end": 105,
+                "char_start": 4511,
+                "char_end": 4567
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.583,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:64 not represented in the structured doc (best match 0.58).",
+              "doc_value": "send. headers dictionary of headers to send. fi",
+              "code_value": "Case-insensitive Dictionary of Response Headers.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 64,
+                "line_end": 66,
+                "char_start": 2482,
+                "char_end": 2530
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.585,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:39 not represented in the structured doc (best match 0.59).",
+              "doc_value": "preparedrequest(url_placeholder_1), which is sent to the server. method http method to use. u",
+              "code_value": "The Response(url_placeholder_3) object, which contains a server's response to an HTTP request.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 39,
+                "line_end": 41,
+                "char_start": 1501,
+                "char_end": 1595
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.585,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:116 not represented in the structured doc (best match 0.58).",
+              "doc_value": "re a preparedrequest(url_placeholder_1), which is sen",
+              "code_value": "Raises HTTPError(url_placeholder_8), if one occurred.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 116,
+                "line_end": 117,
+                "char_start": 5068,
+                "char_end": 5121
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.588,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:170 not represented in the structured doc (best match 0.59).",
+              "doc_value": "ppend to the url.",
+              "code_value": "property path_url",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 170,
+                "line_end": 171,
+                "char_start": 6952,
+                "char_end": 6969
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.597,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:68 not represented in the structured doc (best match 0.60).",
+              "doc_value": "ll take place. json json for the body to attach to the request",
+              "code_value": "The   list is sorted from the oldest to the most recent request.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 68,
+                "line_end": 70,
+                "char_start": 2773,
+                "char_end": 2837
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.6,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:72 not represented in the structured doc (best match 0.60).",
+              "doc_value": "k) properly register",
+              "code_value": "property is_redirect",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 72,
+                "line_end": 73,
+                "char_start": 2947,
+                "char_end": 2967
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.603,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:68 not represented in the structured doc (best match 0.60).",
+              "doc_value": "reated request(url_placeholder_0) object. used to prepare a preparedrequest(ur",
+              "code_value": "A list of Response(url_placeholder_4) objects from the history of the Request.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 68,
+                "line_end": 70,
+                "char_start": 2653,
+                "char_end": 2731
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.615,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:173 not represented in the structured doc (best match 0.62).",
+              "doc_value": "d to use. url url to send.",
+              "code_value": "Build the path URL to use.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 173,
+                "line_end": 190,
+                "char_start": 6973,
+                "char_end": 6999
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.625,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:46 not represented in the structured doc (best match 0.62).",
+              "doc_value": "properly registe",
+              "code_value": "property content",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 46,
+                "line_end": 49,
+                "char_start": 1923,
+                "char_end": 1939
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.625,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:90 not represented in the structured doc (best match 0.62).",
+              "doc_value": "the request. if a dictionary or list of",
+              "code_value": "This may return a dictionary, list, etc.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 90,
+                "line_end": 91,
+                "char_start": 4216,
+                "char_end": 4256
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.629,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:159 not represented in the structured doc (best match 0.63).",
+              "doc_value": "r_1), which is sent to the server.",
+              "code_value": "request body to send to the server.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 159,
+                "line_end": 162,
+                "char_start": 6629,
+                "char_end": 6664
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.636,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:54 not represented in the structured doc (best match 0.64).",
+              "doc_value": "nary or cookiejar of cookies to attach to th",
+              "code_value": "A CookieJar of Cookies the server sent back.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 54,
+                "line_end": 55,
+                "char_start": 1994,
+                "char_end": 2038
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.656,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:170 not represented in the structured doc (best match 0.66).",
+              "doc_value": "which is sent to the server. met",
+              "code_value": "HTTP verb to send to the server.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 170,
+                "line_end": 171,
+                "char_start": 6914,
+                "char_end": 6946
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.692,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:129 not represented in the structured doc (best match 0.69).",
+              "doc_value": ") properly re",
+              "code_value": "property text",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 129,
+                "line_end": 130,
+                "char_start": 5580,
+                "char_end": 5593
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.703,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:126 not represented in the structured doc (best match 0.70).",
+              "doc_value": "pare a preparedrequest(url_placeholder_1), which is sent to the server. me",
+              "code_value": "The PreparedRequest(url_placeholder_9) object to which this is a response.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 126,
+                "line_end": 127,
+                "char_start": 5424,
+                "char_end": 5498
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.714,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:101 not represented in the structured doc (best match 0.71).",
+              "doc_value": "properly regis",
+              "code_value": "property links",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 101,
+                "line_end": 102,
+                "char_start": 4493,
+                "char_end": 4507
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.778,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:147 not represented in the structured doc (best match 0.78).",
+              "doc_value": ">>> import requests >>> req = requests.request('get', 'https://httpbin.org/get') >>> req.prepare() <preparedrequest [get]> ```",
+              "code_value": ">>> import requests  >>> req = requests.Request('GET', 'https://httpbin.org/get')  >>> r = req.prepare()  >>> r  <PreparedRequest [GET]>  >>> s = requests.Session()  >>> s.send(r)  <Response [200]>",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 147,
+                "line_end": 154,
+                "char_start": 6413,
+                "char_end": 6610
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Raises",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.778,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:164 not represented in the structured doc (best match 0.78).",
+              "doc_value": "dictionary of headers to se",
+              "code_value": "dictionary of HTTP headers.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Raises",
+                "line_start": 164,
+                "line_end": 165,
+                "char_start": 6807,
+                "char_end": 6834
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.85,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:7 not represented in the structured doc (best match 0.85).",
+              "doc_value": "e. url url to send.",
+              "code_value": "- url - URL to send.",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 7,
+                "line_end": 11,
+                "char_start": 307,
+                "char_end": 327
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.85,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.Request.txt:36 not represented in the structured doc (best match 0.85).",
+              "doc_value": "class requests.re",
+              "code_value": "class requests.Response",
+              "source_location": {
+                "file": "requests.Request.txt",
+                "section": "Parameters",
+                "line_start": 36,
+                "line_end": 37,
+                "char_start": 1471,
+                "char_end": 1494
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.Request.prepare",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Request.register_hook",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.apparent_encoding",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.close",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.content",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.is_permanent_redirect",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.iter_content",
+          "type": "method",
+          "grounding_score": 0.5,
+          "source_coverage_ratio": null,
+          "units_checked": 4,
+          "source_units_checked": 0,
+          "additive_issue_count": 2,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "parameters[decode_unicode]",
+              "json_path": "$.parameters[?name=='decode_unicode']",
+              "severity": "medium",
+              "similarity": 0.882,
+              "category": "partial_support",
+              "detail": "'parameters[decode_unicode]' content has similarity 0.88 to its closest source span.",
+              "doc_value": "decode_unicode bool If decode_unicode is True, content will be decoded using the best available encoding based on the response.",
+              "code_value": "le chunk. if decode_unicode is true, content will be decoded using the best available encoding based on the response. iter_line",
+              "source_location": null
+            },
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "parameters[chunk_size]",
+              "json_path": "$.parameters[?name=='chunk_size']",
+              "severity": "medium",
+              "similarity": 0.965,
+              "category": "partial_support",
+              "detail": "'parameters[chunk_size]' content has similarity 0.96 to its closest source span.",
+              "doc_value": "chunk_size int or None The chunk size is the number of bytes it should read into memory. This is not necessarily the length of each item returned as decoding can take place. chunk_size must be of type int or None. A value of None will function differently depending on the value of  stream. stream=Tr",
+              "code_value": "for large responses. the chunk size is the number of bytes it should read into memory. this is not necessarily the length of each item returned as decoding can take place. chunk_size must be of type int or none. a value of none will function differently depending on the value of stream. stream=true ",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.json",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 4,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.raise_for_status",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Response.text",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.close",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.delete",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.get_adapter",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.get_redirect_target",
+          "type": "method",
+          "grounding_score": 0.5,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 1,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "examples[1].example",
+              "json_path": "$.examples[1].example",
+              "severity": "medium",
+              "similarity": 0.958,
+              "category": "partial_support",
+              "detail": "'examples[1].example' content has similarity 0.96 to its closest source span.",
+              "doc_value": "Or as a context manager:\n\n>>> with requests.Session() as s:\n...     s.get('https://httpbin.org/get')",
+              "code_value": "as a context manager: ``` >>> with requests.Session() as s: ... s.get('https://httpbin.org/get",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.head",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session",
+          "type": "class",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 4,
+          "source_units_checked": 7,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.Session.merge_environment_settings",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.mount",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.options",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.patch",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.post",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.prepare_request",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 1,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.rebuild_auth",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.rebuild_method",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 4,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.rebuild_proxies",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.request",
+          "type": "method",
+          "grounding_score": 0.5,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 1,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "examples[1].example",
+              "json_path": "$.examples[1].example",
+              "severity": "medium",
+              "similarity": 0.958,
+              "category": "partial_support",
+              "detail": "'examples[1].example' content has similarity 0.96 to its closest source span.",
+              "doc_value": "Or as a context manager:\n\n>>> with requests.Session() as s:\n...     s.get('https://httpbin.org/get')",
+              "code_value": "as a context manager: ``` >>> with requests.Session() as s: ... s.get('https://httpbin.org/get",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.send",
+          "type": "method",
+          "grounding_score": 0.5,
+          "source_coverage_ratio": null,
+          "units_checked": 2,
+          "source_units_checked": 0,
+          "additive_issue_count": 1,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "examples[1].example",
+              "json_path": "$.examples[1].example",
+              "severity": "medium",
+              "similarity": 0.958,
+              "category": "partial_support",
+              "detail": "'examples[1].example' content has similarity 0.96 to its closest source span.",
+              "doc_value": "Or as a context manager:\n\n>>> with requests.Session() as s:\n...     s.get('https://httpbin.org/get')",
+              "code_value": "as a context manager: ``` >>> with requests.Session() as s: ... s.get('https://httpbin.org/get",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.Session.should_strip_auth",
+          "type": "method",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": null,
+          "units_checked": 0,
+          "source_units_checked": 0,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "skipped"
+        },
+        {
+          "api_name": "requests.utils.add_dict_to_cookiejar",
+          "type": "function",
+          "grounding_score": 0.5,
+          "source_coverage_ratio": 0.5,
+          "units_checked": 4,
+          "source_units_checked": 4,
+          "additive_issue_count": 2,
+          "omission_count": 2,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "parameters[cj]",
+              "json_path": "$.parameters[?name=='cj']",
+              "severity": "medium",
+              "similarity": 0.804,
+              "category": "partial_support",
+              "detail": "'parameters[cj]' content has similarity 0.80 to its closest source span.",
+              "doc_value": "cj CookieJar CookieJar to insert cookies into.",
+              "code_value": "cj - cookiejar to insert cookies into. - cook",
+              "source_location": null
+            },
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "parameters[cookie_dict]",
+              "json_path": "$.parameters[?name=='cookie_dict']",
+              "severity": "medium",
+              "similarity": 0.934,
+              "category": "partial_support",
+              "detail": "'parameters[cookie_dict]' content has similarity 0.93 to its closest source span.",
+              "doc_value": "cookie_dict Dict Dict of key/values to insert into CookieJar.",
+              "code_value": "cookie_dict - dict of key/values to insert into cookiejar. re",
+              "source_location": null
+            }
+          ],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.702,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.utils.add_dict_to_cookiejar.txt:11 not represented in the structured doc (best match 0.70).",
+              "doc_value": "requests.utils.add_dict_to_cookiejar(cj, cookie_dict) returns a cookiejar from a key/value dictionary.",
+              "code_value": "CookieJar requests.cookies.cookiejar_from_dict(cookie_dict, cookiejar=None, overwrite=True)    Returns a CookieJar from a key/value dictionary.",
+              "source_location": {
+                "file": "requests.utils.add_dict_to_cookiejar.txt",
+                "section": "Return type",
+                "line_start": 11,
+                "line_end": 13,
+                "char_start": 245,
+                "char_end": 388
+              }
+            },
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Parameters",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.875,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.utils.add_dict_to_cookiejar.txt:6 not represented in the structured doc (best match 0.88).",
+              "doc_value": "jar cookiejar to insert cookies into. co",
+              "code_value": "- cj - CookieJar to insert cookies into.",
+              "source_location": {
+                "file": "requests.utils.add_dict_to_cookiejar.txt",
+                "section": "Parameters",
+                "line_start": 6,
+                "line_end": 7,
+                "char_start": 123,
+                "char_end": 163
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.utils.dict_from_cookiejar",
+          "type": "function",
+          "grounding_score": 0.75,
+          "source_coverage_ratio": 0.6666666666666666,
+          "units_checked": 4,
+          "source_units_checked": 3,
+          "additive_issue_count": 1,
+          "omission_count": 1,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "parameters[cj]",
+              "json_path": "$.parameters[?name=='cj']",
+              "severity": "medium",
+              "similarity": 0.833,
+              "category": "partial_support",
+              "detail": "'parameters[cj]' content has similarity 0.83 to its closest source span.",
+              "doc_value": "cj CookieJar CookieJar object to extract cookies from.",
+              "code_value": "cj - cookiejar object to extract cookies from. return",
+              "source_location": null
+            }
+          ],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "low",
+              "similarity": 0.677,
+              "category": "partially_omitted",
+              "detail": "Source content at requests.utils.dict_from_cookiejar.txt:11 not represented in the structured doc (best match 0.68).",
+              "doc_value": "requests.utils.dict_from_cookiejar(cj) returns a key/value dictionary",
+              "code_value": "dict(url_placeholder_0) requests.utils.add_dict_to_cookiejar(cj, cookie_dict)    Returns a CookieJar from a key/value dictionary.",
+              "source_location": {
+                "file": "requests.utils.dict_from_cookiejar.txt",
+                "section": "Return type",
+                "line_start": 11,
+                "line_end": 13,
+                "char_start": 174,
+                "char_end": 303
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.utils.get_encoding_from_headers",
+          "type": "function",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 0.6666666666666666,
+          "units_checked": 4,
+          "source_units_checked": 3,
+          "additive_issue_count": 0,
+          "omission_count": 1,
+          "additive_issues": [],
+          "omissions": [
+            {
+              "issue_type": "FID_SOURCE_OMITTED",
+              "section": "source:Return type",
+              "json_path": "",
+              "severity": "medium",
+              "similarity": 0.545,
+              "category": "omitted",
+              "detail": "Source content at requests.utils.get_encoding_from_headers.txt:11 not represented in the structured doc (best match 0.55).",
+              "doc_value": "requests.utils.get_encoding_from_headers(headers) returns encod",
+              "code_value": "str(url_placeholder_0) requests.utils.get_unicode_from_response(r)    Returns the requested content back in unicode.",
+              "source_location": {
+                "file": "requests.utils.get_encoding_from_headers.txt",
+                "section": "Return type",
+                "line_start": 11,
+                "line_end": 13,
+                "char_start": 183,
+                "char_end": 299
+              }
+            }
+          ],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.utils.get_encodings_from_content",
+          "type": "function",
+          "grounding_score": 1.0,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 3,
+          "source_units_checked": 2,
+          "additive_issue_count": 0,
+          "omission_count": 0,
+          "additive_issues": [],
+          "omissions": [],
+          "omission_scope": "block"
+        },
+        {
+          "api_name": "requests.utils.get_unicode_from_response",
+          "type": "function",
+          "grounding_score": 0.75,
+          "source_coverage_ratio": 1.0,
+          "units_checked": 4,
+          "source_units_checked": 5,
+          "additive_issue_count": 1,
+          "omission_count": 0,
+          "additive_issues": [
+            {
+              "issue_type": "FID_PARTIAL_SUPPORT",
+              "section": "parameters[r]",
+              "json_path": "$.parameters[?name=='r']",
+              "severity": "medium",
+              "similarity": 0.918,
+              "category": "partial_support",
+              "detail": "'parameters[r]' content has similarity 0.92 to its closest source span.",
+              "doc_value": "r Response object Response object to get unicode content from. Tried:\n1. charset from content-type\n2. fall back and replace all unicode characters",
+              "code_value": ". parameters r - response object to get unicode content from. tried: 1. charset from content-type 2. fall back and replace all unicode characters",
+              "source_location": null
+            }
+          ],
+          "omissions": [],
+          "omission_scope": "block"
+        }
+      ],
+      "skipped": []
+    }
+  }
+}

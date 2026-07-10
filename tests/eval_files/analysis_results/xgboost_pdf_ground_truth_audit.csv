@@ -1,0 +1,167 @@
+api_name,member_type,fidelity_group,gt_kind,preprocessed_accurate,structured_vs_preprocessed,structured_vs_original,correct_doc,scope,root_cause_layer,flag,gt_doc_head,struct_purpose_head
+xgboost.ExtMemQuantileDMatrix.get_data,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the predictors from DMatrix as a CSR matrix. This getter is mostly for testi,Get the predictors from DMatrix as a CSR matrix. This getter is mostly for testi
+xgboost.ExtMemQuantileDMatrix.get_group,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the group of the DMatrix.  Returns ------- group,Get the group of the DMatrix.
+xgboost.XGBRFRegressor.apply,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the predicted leaf every tree for each sample. If the model is trained wi,Return the predicted leaf every tree for each sample. If the model is trained wi
+xgboost.ExtMemQuantileDMatrix.num_col,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the number of columns (features) in the DMatrix.,Get the number of columns (features) in the DMatrix.
+xgboost.Booster.save_config,method,clean,direct,yes,yes,yes,yes,full,none,,Output internal parameter configuration of Booster as a JSON string.   ,Output internal parameter configuration of Booster as a JSON string. Added in ve
+xgboost.QuantileDMatrix.feature_names,method,unevaluated,inherited->original,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.DMatrix.get_uint_info,method,clean,direct,yes,yes,yes,yes,full,none,,Get unsigned integer property from the DMatrix.  Parameters ---------- field: st,Get unsigned integer property from the DMatrix.
+xgboost.XGBRegressor.save_model,method,clean,inherited->original,yes,yes,no_groundtruth,review,full,review,REVIEW,,Save the model to a file. The model is saved in an XGBoost internal format which
+xgboost.collective.get_world_size,function,clean,direct,yes,yes,yes,yes,full,none,,Get total number workers.  Returns ------- n :     Total number of process.,Get total number workers.
+xgboost.callback.EvaluationMonitor.after_training,method,clean,direct,yes,yes,no_groundtruth,review,full,review,REVIEW,,Run after training is finished.
+xgboost.spark.SparkXGBClassifier.set_coll_cfg,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set collective configuration,Set collective configuration
+xgboost.DMatrix.get_data,method,clean,direct,yes,yes,yes,yes,full,none,,Get the predictors from DMatrix as a CSR matrix. This getter is mostly for testi,Get the predictors from DMatrix as a CSR matrix. This getter is mostly for testi
+xgboost.QuantileDMatrix.num_col,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the number of columns (features) in the DMatrix.,Get the number of columns (features) in the DMatrix.
+xgboost.callback.TrainingCallback,class,clean,direct,yes,yes,yes,yes,full,none,,Interface for training callback.   ,Interface for training callback. Added in version 1.3.0.
+xgboost.ExtMemQuantileDMatrix.ref,method,unevaluated,inherited->original,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.Booster.num_boosted_rounds,method,clean,direct,yes,yes,yes,yes,full,none,,Get number of boosted rounds.  For gblinear this is reset to 0 after serializing,Get number of boosted rounds. For gblinear this is reset to 0 after serializing 
+xgboost.QuantileDMatrix.get_base_margin,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the base margin of the DMatrix.,Get the base margin of the DMatrix.
+xgboost.set_config,function,clean,direct,yes,yes,no_groundtruth,review,full,review,REVIEW,,Set global configuration. Global configuration consists of a collection of param
+xgboost.XGBRFClassifier.feature_importances_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Feature importances property, return depends on importance_type parameter. When ","Feature importances property, return depends on importance_type parameter. When "
+xgboost.DMatrix.set_float_info_npy2d,method,clean,direct,yes,yes,yes,yes,full,none,,Set float type property into the DMatrix    for numpy 2d array input  Parameters,Set float type property into the DMatrix  for numpy 2d array input
+xgboost.callback.EarlyStopping,class,clean,direct,yes,yes,yes,yes,full,none,,Callback function for early stopping     Parameters ---------- rounds :     Earl,Callback function for early stopping  Added in version 1.3.0.
+xgboost.collective.Config,class,clean,direct,yes,yes,yes,yes,full,none,,User configuration for the communicator context. This is used for easier integra,User configuration for the communicator context. This is used for easier integra
+xgboost.XGBRFClassifier.get_xgb_params,method,clean,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,Get xgboost specific parameters.
+xgboost.XGBRanker.intercept_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Intercept (bias) property  For tree-based model, the returned value is the base_","Intercept (bias) property For tree-based model, the returned value is the base_s"
+xgboost.spark.SparkXGBRankerModel,class,clean,direct,yes,yes,yes,yes,full,none,,The model returned by fit   ,The model returned by xgboost.spark.SparkXGBRanker.fit()(url_placeholder_0)
+xgboost.QuantileDMatrix.set_info,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set meta info for DMatrix.  See doc string for DMatrix.,Set meta info for DMatrix. See doc string for xgboost.DMatrix(url_placeholder_0)
+xgboost.callback.TrainingCallback.before_training,method,clean,direct,yes,yes,yes,yes,full,none,,Run before training starts.,Run before training starts.
+xgboost.spark.SparkXGBClassifierModel.read,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the reader for loading the model.,Return the reader for loading the model.
+xgboost.Booster.get_split_value_histogram,method,clean,direct,yes,yes,yes,yes,full,none,,Get split value histogram of a feature  Parameters ---------- feature :     The ,Get split value histogram of a feature
+xgboost.spark.SparkXGBClassifier,class,issues,direct,yes,yes,yes,yes,full,none,,SparkXGBClassifier is a PySpark ML estimator. It implements the XGBoost classifi,SparkXGBClassifier is a PySpark ML estimator. It implements the XGBoost classifi
+xgboost.spark.SparkXGBRegressor.read,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the reader for loading the estimator.,Return the reader for loading the estimator.
+xgboost.DataIter.next,method,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,Set the next batch of data.  Parameters ----------  input_data:     A function w,
+xgboost.DMatrix.feature_names,method,unevaluated,direct,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.DataIter.get_callbacks,method,clean,direct,yes,yes,yes,yes,full,none,,Get callback functions for iterating in C. This is an internal function.,Get callback functions for iterating in C. This is an internal function.
+xgboost.Booster.boost,method,clean,direct,yes,yes,yes,yes,full,none,,Boost the booster for one iteration with customized gradient statistics.        ,Boost the booster for one iteration with customized gradient statistics.
+xgboost.XGBRegressor.apply,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the predicted leaf every tree for each sample. If the model is trained wi,Return the predicted leaf every tree for each sample. If the model is trained wi
+xgboost.collective.init,function,clean,direct,yes,yes,yes,yes,full,none,,Initialize the collective library with arguments.  Parameters ---------- args : ,Initialize the collective library with arguments.
+xgboost.Booster.get_score,method,issues,direct,yes,yes,yes,yes,full,none,,Get feature importance of each feature. For tree model Importance type can be de,Get feature importance of each feature. For tree model Importance type can be de
+xgboost.QuantileDMatrix.set_float_info,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set float type property into the DMatrix.  Parameters ---------- field: str     ,Set float type property into the DMatrix.
+xgboost.XGBRegressor,class,issues,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,Implementation of the scikit-learn API for XGBoost regression. See Using the Sci
+xgboost.DMatrix.set_group,method,clean,direct,yes,yes,yes,yes,full,none,,Set group size of DMatrix (used for ranking).  Parameters ---------- group : arr,Set group size of DMatrix (used for ranking).
+xgboost.spark.SparkXGBRegressor.write,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the writer for saving the estimator.,Return the writer for saving the estimator.
+xgboost.QuantileDMatrix.feature_types,method,unevaluated,inherited->original,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.callback.TrainingCheckPoint,class,clean,direct,yes,yes,yes,yes,full,none,,Checkpointing operation. Users are encouraged to create their own callbacks for ,Checkpointing operation. Users are encouraged to create their own callbacks for 
+xgboost.tracker.RabitTracker,class,unevaluated,direct,no_doc,empty,no,no,n/a,retrieval,REVIEW,"Tracker for the collective used in XGBoost, acting as a coordinator between work",
+xgboost.Booster.eval,method,clean,direct,yes,yes,yes,yes,full,none,,Evaluate the model on mat.  Parameters ---------- data :     The dmatrix storing,Evaluate the model on mat.
+xgboost.spark.SparkXGBRankerModel.get_booster,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the xgboost.core.Booster instance.,Return the xgboost.core.Booster instance.
+xgboost.Booster.copy,method,clean,direct,yes,yes,yes,yes,full,none,,Copy the booster object.  Returns ------- booster :     A copied booster model,Copy the booster object.
+xgboost.spark.SparkXGBRegressorModel.write,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the writer for saving the model.,Return the writer for saving the model.
+xgboost.ExtMemQuantileDMatrix.get_categories,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the categories in the dataset.            This function is experimental.  Pa,Get the categories in the dataset. Added in version 3.1.0.
+xgboost.ExtMemQuantileDMatrix.get_weight,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the weight of the DMatrix.,Get the weight of the DMatrix.
+xgboost.ExtMemQuantileDMatrix.num_nonmissing,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the number of non-missing values in the DMatrix.   ,Get the number of non-missing values in the DMatrix. Added in version 1.7.0.
+xgboost.ExtMemQuantileDMatrix.num_row,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the number of rows in the DMatrix.,Get the number of rows in the DMatrix.
+xgboost.ExtMemQuantileDMatrix.get_uint_info,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get unsigned integer property from the DMatrix.  Parameters ---------- field: st,Get unsigned integer property from the DMatrix.
+xgboost.DMatrix.num_col,method,clean,direct,yes,yes,yes,yes,full,none,,Get the number of columns (features) in the DMatrix.,Get the number of columns (features) in the DMatrix.
+xgboost.DataIter.reset,method,clean,direct,yes,yes,yes,yes,full,none,,Reset the data iterator.  Prototype for user defined function.,Reset the data iterator. Prototype for user defined function.
+xgboost.XGBRegressor.coef_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Coefficients property         Coefficients are only defined when the linear mode,Coefficients property
+xgboost.XGBRFRegressor.evals_result,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Return the evaluation results.  If **eval_set** is passed to the fit function, y",Return the evaluation results.
+xgboost.XGBClassifier.feature_names_in_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Names of features seen during fit.  Defined only when X has feature names that a,Names of features seen during fit()(url_placeholder_1). Defined only when X has 
+xgboost.ExtMemQuantileDMatrix.set_info,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set meta info for DMatrix.  See doc string for DMatrix.,Set meta info for DMatrix. See doc string for xgboost.DMatrix(url_placeholder_0)
+xgboost.XGBRFClassifier.predict,method,clean,inherited->original,yes,yes,no_groundtruth,review,full,review,REVIEW,,"Predict with X. If the model is trained with early stopping, then best_iteration"
+xgboost.spark.SparkXGBRankerModel.set_coll_cfg,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set collective configuration,Set collective configuration
+xgboost.XGBRanker.get_params,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get parameters.,Get parameters.
+xgboost.collective.CommunicatorContext,class,clean,direct,yes,yes,yes,yes,full,none,,A context controlling collective communicator initialization and finalization.,A context controlling collective communicator initialization and finalization.
+xgboost.QuantileDMatrix.get_quantile_cut,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get quantile cuts for quantization.   ,Get quantile cuts for quantization. Added in version 2.0.0.
+xgboost.DMatrix.data_split_mode,method,clean,direct,yes,yes,yes,yes,full,none,,Get the data split mode of the DMatrix.   ,Get the data split mode of the DMatrix. Added in version 2.1.0.
+xgboost.DMatrix.get_base_margin,method,clean,direct,yes,yes,yes,yes,full,none,,Get the base margin of the DMatrix.,Get the base margin of the DMatrix.
+xgboost.ExtMemQuantileDMatrix.get_quantile_cut,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get quantile cuts for quantization.   ,Get quantile cuts for quantization. Added in version 2.0.0.
+xgboost.QuantileDMatrix,class,clean,direct,yes,yes,yes,yes,full,none,,A DMatrix variant that generates quantilized data directly from input for the hi,A DMatrix variant that generates quantilized data directly from input for the hi
+xgboost.XGBRFRegressor.fit,method,issues,direct,yes,yes,no_groundtruth,review,full,review,REVIEW,,Fit gradient boosting model.
+xgboost.ExtMemQuantileDMatrix.slice,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Slice the DMatrix and return a new DMatrix that only contains rindex.  Parameter,Slice the DMatrix and return a new DMatrix that only contains rindex.
+xgboost.ExtMemQuantileDMatrix.save_binary,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Save DMatrix to an XGBoost buffer.  Saved binary can be later loaded by providin,Save DMatrix to an XGBoost buffer. Saved binary can be later loaded by providing
+xgboost.XGBClassifier.apply,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the predicted leaf every tree for each sample. If the model is trained wi,Return the predicted leaf every tree for each sample. If the model is trained wi
+xgboost.QuantileDMatrix.slice,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Slice the DMatrix and return a new DMatrix that only contains rindex.  Parameter,Slice the DMatrix and return a new DMatrix that only contains rindex.
+xgboost.XGBRFRegressor.get_num_boosting_rounds,method,clean,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,Gets the number of xgboost boosting rounds.
+xgboost.XGBRegressor.get_num_boosting_rounds,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Gets the number of xgboost boosting rounds.,Gets the number of xgboost boosting rounds.
+xgboost.spark.SparkXGBRegressor.set_device,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Set device, optional value: cpu, cuda, gpu","Set device, optional value: cpu, cuda, gpu"
+xgboost.spark.SparkXGBRanker.setParams,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set params for the estimator.,Set params for the estimator.
+xgboost.XGBClassifier.get_params,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get parameters.,Get parameters.
+xgboost.DMatrix.get_quantile_cut,method,clean,direct,yes,yes,yes,yes,full,none,,Get quantile cuts for quantization.   ,Get quantile cuts for quantization. Added in version 2.0.0.
+xgboost.build_info,function,clean,direct,yes,yes,yes,yes,full,none,,"Build information of XGBoost.  The returned value format is not stable. Also, pl","Build information of XGBoost. The returned value format is not stable. Also, ple"
+xgboost.XGBRanker.load_model,method,clean,inherited->original,yes,yes,no_groundtruth,review,full,review,REVIEW,,Load the model from a file or a bytearray. The model is saved in an XGBoost inte
+xgboost.XGBRegressor.best_iteration,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"The best iteration obtained by early stopping.  This attribute is 0-based, for i","The best iteration obtained by early stopping. This attribute is 0-based, for in"
+xgboost.XGBRFClassifier.n_features_in_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Number of features seen during fit.,Number of features seen during fit()(url_placeholder_1).
+xgboost.callback.TrainingCallback.before_iteration,method,clean,direct,yes,yes,yes,yes,full,none,,Run before each iteration.  Returns True when training should stop. See after_it,Run before each iteration. Returns True when training should stop. See after_ite
+xgboost.XGBRFClassifier.load_model,method,clean,inherited->original,yes,yes,no_groundtruth,review,full,review,REVIEW,,Load the model from a file or a bytearray. The model is saved in an XGBoost inte
+xgboost.XGBRanker.apply,method,clean,direct,yes,yes,no_groundtruth,review,full,review,REVIEW,,Return the predicted leaf every tree for each sample. If the model is trained wi
+xgboost.DataIter,class,clean,direct,yes,yes,yes,yes,full,none,,The interface for user defined data iterator. The iterator facilitates distribut,The interface for user defined data iterator. The iterator facilitates distribut
+xgboost.ExtMemQuantileDMatrix.get_float_info,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get float property from the DMatrix.  Parameters ---------- field: str     The f,Get float property from the DMatrix.
+xgboost.XGBClassifier.get_xgb_params,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get xgboost specific parameters.,Get xgboost specific parameters.
+xgboost.QuantileDMatrix.set_label,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set label of dmatrix  Parameters ---------- label: array like     The label info,Set label of dmatrix
+xgboost.spark.SparkXGBRanker.set_coll_cfg,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set collective configuration,Set collective configuration
+xgboost.spark.SparkXGBRanker.read,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the reader for loading the estimator.,Return the reader for loading the estimator.
+xgboost.XGBRanker.n_features_in_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Number of features seen during fit.,Number of features seen during fit()(url_placeholder_1).
+xgboost.XGBClassifier.set_params,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set the parameters of this estimator.  Modification of the sklearn method to all,Set the parameters of this estimator. Modification of the sklearn method to allo
+xgboost.callback.EvaluationMonitor.after_iteration,method,clean,direct,yes,yes,no_groundtruth,review,full,review,REVIEW,,Run after each iteration. Returns True when training should stop.
+xgboost.XGBClassifier.feature_importances_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Feature importances property, return depends on importance_type parameter. When ","Feature importances property, return depends on importance_type parameter. When "
+xgboost.XGBClassifier.best_iteration,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"The best iteration obtained by early stopping.  This attribute is 0-based, for i","The best iteration obtained by early stopping. This attribute is 0-based, for in"
+xgboost.ExtMemQuantileDMatrix.data_split_mode,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the data split mode of the DMatrix.   ,Get the data split mode of the DMatrix. Added in version 2.1.0.
+xgboost.DMatrix.num_row,method,clean,direct,yes,yes,yes,yes,full,none,,Get the number of rows in the DMatrix.,Get the number of rows in the DMatrix.
+xgboost.DMatrix.set_float_info,method,clean,direct,yes,yes,yes,yes,full,none,,Set float type property into the DMatrix.  Parameters ---------- field: str     ,Set float type property into the DMatrix.
+xgboost.callback.TrainingCallback.after_training,method,clean,direct,yes,yes,yes,yes,full,none,,Run after training is finished.,Run after training is finished.
+xgboost.XGBClassifier,class,clean,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,Implementation of the scikit-learn API for XGBoost classification. See  Using th
+xgboost.XGBRFClassifier,class,issues,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,scikit-learn API for XGBoost random forest classification. See Using the Scikit-
+xgboost.callback.LearningRateScheduler,class,clean,direct,yes,yes,yes,yes,full,none,,Callback function for scheduling learning rate.     Parameters ----------  learn,Callback function for scheduling learning rate.
+xgboost.callback.TrainingCheckPoint.before_training,method,clean,direct,no,yes,no_groundtruth,review,full,retrieval,REVIEW,,N/A
+xgboost.XGBRanker.best_iteration,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"The best iteration obtained by early stopping.  This attribute is 0-based, for i","The best iteration obtained by early stopping. This attribute is 0-based, for in"
+xgboost.DMatrix.set_base_margin,method,clean,direct,yes,yes,yes,yes,full,none,,Set base margin of booster to start from.  This can be used to specify a predict,Set base margin of booster to start from. This can be used to specify a predicti
+xgboost.spark.SparkXGBRankerModel.get_feature_importances,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get feature importance of each feature. Importance type can be defined as:  * 'w,Get feature importance of each feature. Importance type can be defined as: - 'we
+xgboost.DMatrix.get_group,method,clean,direct,yes,yes,yes,yes,full,none,,Get the group of the DMatrix.  Returns ------- group,Get the group of the DMatrix.
+xgboost.QuantileDMatrix.num_row,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the number of rows in the DMatrix.,Get the number of rows in the DMatrix.
+xgboost.Booster.set_attr,method,clean,direct,yes,yes,yes,yes,full,none,,Set the attribute of the Booster.  Parameters ---------- **kwargs     The attrib,Set the attribute of the Booster.
+xgboost.spark.SparkXGBClassifierModel.set_device,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Set device, optional value: cpu, cuda, gpu","Set device, optional value: cpu, cuda, gpu"
+xgboost.spark.SparkXGBClassifier.write,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the writer for saving the estimator.,Return the writer for saving the estimator.
+xgboost.collective.finalize,function,clean,direct,yes,yes,yes,yes,full,none,,Finalize the communicator.,Finalize the communicator.
+xgboost.spark.SparkXGBRanker.set_device,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Set device, optional value: cpu, cuda, gpu","Set device, optional value: cpu, cuda, gpu"
+xgboost.XGBRFClassifier.get_booster,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the underlying xgboost Booster of this model.  This will raise an exception ,Get the underlying xgboost Booster of this model. This will raise an exception w
+xgboost.XGBRanker.get_xgb_params,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get xgboost specific parameters.,Get xgboost specific parameters.
+xgboost.spark.SparkXGBRegressorModel.read,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the reader for loading the model.,Return the reader for loading the model.
+xgboost.Booster.__getitem__,method,clean,direct,yes,yes,yes,yes,full,none,,Get a slice of the tree-based model. Attributes like best_iteration and best_sco,Get a slice of the tree-based model. Attributes like best_iteration and best_sco
+xgboost.XGBClassifier.intercept_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Intercept (bias) property  For tree-based model, the returned value is the base_","Intercept (bias) property For tree-based model, the returned value is the base_s"
+xgboost.XGBRanker.coef_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Coefficients property         Coefficients are only defined when the linear mode,Coefficients property
+xgboost.DMatrix.get_label,method,clean,direct,yes,yes,yes,yes,full,none,,Get the label of the DMatrix.,Get the label of the DMatrix.
+xgboost.XGBClassifier.best_score,method,clean,inherited->original,yes,yes,yes,yes,full,none,,The best score obtained by early stopping.,The best score obtained by early stopping.
+xgboost.XGBClassifier.get_booster,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the underlying xgboost Booster of this model.  This will raise an exception ,Get the underlying xgboost Booster of this model. This will raise an exception w
+xgboost.spark.SparkXGBRegressor.setParams,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set params for the estimator.,Set params for the estimator.
+xgboost.XGBRFRegressor.save_model,method,clean,inherited->original,yes,yes,no_groundtruth,review,full,review,REVIEW,,Save the model to a file. The model is saved in an XGBoost internal format which
+xgboost.DMatrix.get_weight,method,clean,direct,yes,yes,yes,yes,full,none,,Get the weight of the DMatrix.,Get the weight of the DMatrix.
+xgboost.spark.SparkXGBRanker,class,clean,direct,yes,yes,yes,yes,full,none,,SparkXGBRanker is a PySpark ML estimator. It implements the XGBoost ranking algo,SparkXGBRanker is a PySpark ML estimator. It implements the XGBoost ranking algo
+xgboost.XGBRFClassifier.apply,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the predicted leaf every tree for each sample. If the model is trained wi,Return the predicted leaf every tree for each sample. If the model is trained wi
+xgboost.spark.SparkXGBRankerModel.set_device,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Set device, optional value: cpu, cuda, gpu","Set device, optional value: cpu, cuda, gpu"
+xgboost.QuantileDMatrix.ref,method,unevaluated,inherited->original,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.XGBRanker.evals_result,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Return the evaluation results.  If **eval_set** is passed to the fit function, y",Return the evaluation results.
+xgboost.XGBClassifier.n_features_in_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Number of features seen during fit.,Number of features seen during fit()(url_placeholder_1).
+xgboost.QuantileDMatrix.get_label,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the label of the DMatrix.,Get the label of the DMatrix.
+xgboost.Booster.set_param,method,clean,direct,yes,yes,yes,yes,full,none,,"Set parameters into the Booster.  Parameters ---------- params :    list of key,",Set parameters into the Booster.
+xgboost.Booster.best_iteration,method,unevaluated,direct,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.callback.TrainingCallback.after_iteration,method,clean,direct,yes,yes,yes,yes,full,none,,Run after each iteration.  Returns True when training should stop.  Parameters -,Run after each iteration. Returns True when training should stop.
+xgboost.XGBRFRegressor.best_iteration,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"The best iteration obtained by early stopping.  This attribute is 0-based, for i","The best iteration obtained by early stopping. This attribute is 0-based, for in"
+xgboost.spark.SparkXGBRegressorModel.set_coll_cfg,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set collective configuration,Set collective configuration
+xgboost.XGBRanker.score,method,clean,direct,yes,yes,yes,yes,full,none,,Evaluate score for data using the last evaluation metric. If the model is traine,Evaluate score for data using the last evaluation metric. If the model is traine
+xgboost.spark.SparkXGBClassifierModel.set_coll_cfg,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set collective configuration,Set collective configuration
+xgboost.XGBRFRegressor.feature_importances_,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Feature importances property, return depends on importance_type parameter. When ","Feature importances property, return depends on importance_type parameter. When "
+xgboost.XGBRFRegressor.get_xgb_params,method,clean,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,Get xgboost specific parameters.
+xgboost.spark.SparkXGBClassifier.set_device,method,clean,inherited->original,yes,yes,yes,yes,full,none,,"Set device, optional value: cpu, cuda, gpu","Set device, optional value: cpu, cuda, gpu"
+xgboost.QuantileDMatrix.num_nonmissing,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the number of non-missing values in the DMatrix.   ,Get the number of non-missing values in the DMatrix. Added in version 1.7.0.
+xgboost.XGBRFRegressor,class,issues,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,scikit-learn API for XGBoost random forest regression. See Using the Scikit-Lear
+xgboost.spark.SparkXGBRankerModel.write,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the writer for saving the model.,Return the writer for saving the model.
+xgboost.DataIter.proxy,method,clean,direct,yes,yes,yes,yes,full,none,,Handle of DMatrix proxy.,Handle of DMatrix proxy.
+xgboost.QuantileDMatrix.set_weight,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set weight of each instance.  Parameters ---------- weight : array like     Weig,Set weight of each instance.
+xgboost.Booster.eval_set,method,clean,direct,yes,yes,yes,yes,full,none,,Evaluate a set of data.  Parameters ---------- evals :     List of items to be e,Evaluate a set of data.
+xgboost.Booster,class,issues,direct,yes,yes,yes,yes,full,none,,"A Booster of XGBoost.  Booster is the model of xgboost, that contains low level ","A Booster of XGBoost. Booster is the model of xgboost, that contains low level r"
+xgboost.DMatrix,class,issues,direct,yes,yes,yes,yes,full,none,,Data Matrix used in XGBoost.  DMatrix is an internal data structure that is used,  Data Matrix used in XGBoost.   DMatrix is an internal data structure that is u
+xgboost.Booster.best_score,method,unevaluated,direct,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.XGBRanker,class,issues,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,Implementation of the Scikit-Learn API for XGBoost Ranking.
+xgboost.XGBRFClassifier.get_num_boosting_rounds,method,clean,direct,yes,yes,no_groundtruth,review,n/a,review,REVIEW,,Gets the number of xgboost boosting rounds.
+xgboost.Booster.feature_types,method,unevaluated,direct,no_doc,empty,no_groundtruth,review,n/a,retrieval,REVIEW,,
+xgboost.XGBRFClassifier.fit,method,issues,direct,yes,yes,no_groundtruth,review,full,review,REVIEW,,Fit gradient boosting classifier.
+xgboost.ExtMemQuantileDMatrix.set_uint_info,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Set uint type property into the DMatrix.  Parameters ---------- field: str     T,Set uint type property into the DMatrix.
+xgboost.Booster.load_config,method,clean,direct,yes,yes,yes,yes,full,none,,Load configuration returned by save_config.   ,Load configuration returned by save_config. Added in version 1.0.0.
+xgboost.XGBRFRegressor.best_score,method,clean,inherited->original,yes,yes,yes,yes,full,none,,The best score obtained by early stopping.,The best score obtained by early stopping.
+xgboost.QuantileDMatrix.data_split_mode,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Get the data split mode of the DMatrix.   ,Get the data split mode of the DMatrix. Added in version 2.1.0.
+xgboost.spark.SparkXGBClassifierModel.get_booster,method,clean,inherited->original,yes,yes,yes,yes,full,none,,Return the xgboost.core.Booster instance.,Return the xgboost.core.Booster instance.
+xgboost.Booster.trees_to_dataframe,method,clean,direct,yes,yes,yes,yes,full,none,,Parse a boosted tree model text dump into a pandas DataFrame structure.  This fe,Parse a boosted tree model text dump into a pandas DataFrame structure. This fea
+xgboost.Booster.dump_model,method,clean,direct,yes,yes,yes,yes,full,none,,"Dump model into a text or JSON file.  Unlike save_model, the output format is pr","Dump model into a text or JSON file. Unlike save_model()(url_placeholder_0), the"
+xgboost.Booster.reset,method,clean,direct,yes,yes,yes,yes,full,none,,Reset the booster object to release data caches used for training.   ,Reset the booster object to release data caches used for training. Added in vers

@@ -1,0 +1,13 @@
+# numpy.char.chararray.lstrip
+
+method
+
+char.chararray.lstrip(chars=None)[source](https://github.com/numpy/numpy/blob/v2.5.0/numpy/_core/defchararray.py#L979-L989)#(https://numpy.org/doc/stable/reference/generated/numpy.char.chararray.lstrip.html#numpy.char.chararray.lstrip)
+    For each element in self, return a copy with the leading characters
+removed.
+
+See also
+
+char.lstrip(https://numpy.org/doc/stable/reference/generated/numpy.char.lstrip.html#numpy.char.lstrip)
+
+On this page

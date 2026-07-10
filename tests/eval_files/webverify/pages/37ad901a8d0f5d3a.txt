@@ -1,0 +1,65 @@
+# pandas.IntervalIndex.from_arrays
+
+classmethod IntervalIndex.from_arrays(left, right, closed='right', name=None, copy=False, dtype=None)[source](https://github.com/pandas-dev/pandas/blob/main/pandas/core/indexes/interval.py#L280-L314)#(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.IntervalIndex.from_arrays.html#pandas.IntervalIndex.from_arrays)
+    Construct from two arrays defining the left and right bounds.
+
+Parameters:
+    left : array-like (1-dimensional)
+    Left bounds for each interval.
+
+right : array-like (1-dimensional)
+    Right bounds for each interval.
+
+closed : {'left', 'right', 'both', 'neither'}, default 'right'
+    Whether the intervals are closed on the left-side, right-side, both
+or neither.
+
+name : str, optional
+    Name of the resulting IntervalIndex.
+
+copy : bool, default False
+    Copy the data.
+
+dtype : dtype, optional
+    If None, dtype will be inferred.
+
+Returns:
+    IntervalIndex
+
+Raises:
+    ValueError
+    When a value is missing in only one of left or right.
+When a value in left is greater than the corresponding value
+in right.
+
+See also
+
+interval_range(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.interval_range.html#pandas.interval_range)
+    Function to create a fixed frequency IntervalIndex.
+
+IntervalIndex.from_breaks(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.IntervalIndex.from_breaks.html#pandas.IntervalIndex.from_breaks)
+    Construct an IntervalIndex from an array of splits.
+
+IntervalIndex.from_tuples(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.IntervalIndex.from_tuples.html#pandas.IntervalIndex.from_tuples)
+    Construct an IntervalIndex from an array-like of tuples.
+
+Notes
+
+Each element of left must be less than or equal to the right
+element at the same position. If an element is missing, it must be
+missing in both left and right. A TypeError is raised when
+using an unsupported type for left or right. At the moment,
+'category', 'object', and 'string' subtypes are not supported.
+
+Examples
+
+```
+>>> pd.IntervalIndex.from_arrays([0, 1, 2], [1, 2, 3])
+IntervalIndex([(0, 1], (1, 2], (2, 3]],
+              dtype='interval[int64, right]')
+
+```
+
+On this page
+
+[Show Source](https://pandas.pydata.org/pandas-docs/version/2.3.3/_sources/reference/api/pandas.IntervalIndex.from_arrays.rst.txt)

@@ -1,0 +1,324 @@
+% =====================================================================
+% Results: Trace-Link Recovery Accuracy and Documentation Fidelity
+% IEEEtran. Requires: \usepackage{booktabs}
+% =====================================================================
+\section{Evaluation: Trace-Link Recovery and Documentation Fidelity}
+\label{sec:eval}
+
+We evaluate the pipeline along two complementary axes. The first,
+\emph{trace-link recovery accuracy}, asks whether the system localizes the
+\emph{correct} source documentation for each API member---i.e., whether the
+recovered preprocessed and structured artifacts for member $m$ correspond to the
+authoritative documentation of $m$. The second, \emph{documentation fidelity},
+asks a conditional question: \emph{given} a correctly recovered trace link, how
+faithfully does the structured representation reproduce, place, and retain the
+content of the source. Separating the two is essential: a content discrepancy
+caused by anchoring to the wrong member (a retrieval failure) is a different
+defect from a discrepancy introduced while structuring correctly retrieved text,
+and conflating them obscures where the pipeline actually breaks.
+
+\subsection{Corpus and Protocol}
+\label{sec:eval-corpus}
+
+We study seven widely used Python libraries---\texttt{numpy} (2.4.0),
+\texttt{pandas} (2.3.3), \texttt{requests} (2.32.5), \texttt{scikit-learn}
+(1.8.0), \texttt{SQLAlchemy} (2.0.45), \texttt{PyTorch} (2.9.1), and
+\texttt{XGBoost} (3.2.0)---each processed from two independent documentation
+modalities: the rendered \emph{web} (HTML) documentation and the corresponding
+\emph{PDF} manual. Every member is evaluated under both modalities, yielding
+$2{,}884$ member--source instances ($1{,}442$ per modality). All reported
+numbers are produced under a \emph{full manual census}: every instance was
+inspected by a human reviewer rather than sampled. A lightweight, deterministic
+triage was used only to \emph{order} and \emph{group} the census so that
+near-identical cases could be adjudicated consistently; it makes no contribution
+to the reported labels, which are the reviewer's.
+
+\subsection{Trace-Link Recovery Accuracy}
+\label{sec:eval-trace}
+
+\subsubsection{Method}
+A member's trace link is labelled \emph{correct} when the recovered
+documentation unambiguously describes that member, as confirmed against an
+authoritative ground truth. Ground truth was the library's installed docstring
+and signature where available (the database of record), and, where the static
+record was insufficient, the version-pinned official web page for that member.
+The reviewer examined every instance the triage marked as correct and confirmed
+it, and re-examined every instance the triage flagged as incorrect or uncertain;
+this surfaced $29$ triage misclassifications that were corrected before
+analysis ($16$ uncertain cases confirmed correct, $7$ presumed-incorrect cases
+confirmed correct, and $6$ confirmed incorrect). For correct links we
+additionally record a \emph{scope} tag---\emph{full}, \emph{partial}, or
+\emph{missing parameters}---capturing whether the entire member documentation was
+anchored or only a portion; these flag fidelity caveats and are analyzed in
+Section~\ref{sec:eval-fidelity}.
+
+\subsubsection{Results}
+Table~\ref{tab:trace-accuracy} reports recovery accuracy per library and
+modality. Overall accuracy is $88.5\%$ ($2{,}552/2{,}884$), but the two
+modalities diverge sharply: web recovery is near-ceiling at $98.2\%$
+($1{,}416/1{,}442$), whereas PDF recovery is $78.8\%$ ($1{,}136/1{,}442$). On
+the web modality four of seven libraries are recovered without error, and the
+lowest is \texttt{xgboost} at $91.6\%$. The PDF modality is far more variable,
+ranging from $48.0\%$ (\texttt{numpy}) to $95.6\%$ (\texttt{SQLAlchemy}).
+
+The failure analysis is unambiguous about \emph{where} the pipeline breaks.
+Of the $332$ incorrect links, $327$ ($98.5\%$) are attributable to the
+\emph{retrieval/anchoring} stage---the system scraped or anchored to the wrong
+span or member---and only $4$ to structuring (an empty or degenerate
+extraction), with $1$ residual. Failures are also overwhelmingly concentrated in
+the PDF modality ($306$ of $332$), reflecting the weaker structural cues of
+linearized PDF text: members that share a name across classes, or whose
+anchors fall mid-page, are mis-localized far more often than in HTML, where the
+DOM provides explicit member boundaries. This isolates retrieval from
+flowed PDF text---not content structuring---as the dominant accuracy bottleneck.
+
+\begin{table}[t]
+\centering
+\caption{Trace-link recovery accuracy under a full manual census, by library
+and documentation modality (correct\,/\,total, percentage). Web recovery is
+near-ceiling; PDF recovery is lower and more variable.}
+\label{tab:trace-accuracy}
+\begin{tabular}{lcc}
+\toprule
+Library & WEB & PDF \\
+\midrule
+\texttt{numpy}       & 244/244 (100.0\%) & 117/244 (48.0\%) \\
+\texttt{pandas}      & 262/262 (100.0\%) & 218/262 (83.2\%) \\
+\texttt{requests}    & 83/87 (95.4\%)    & 65/87 (74.7\%) \\
+\texttt{scikit-learn}& 246/246 (100.0\%) & 203/246 (82.5\%) \\
+\texttt{SQLAlchemy}  & 153/158 (96.8\%)  & 151/158 (95.6\%) \\
+\texttt{PyTorch}     & 276/279 (98.9\%)  & 227/279 (81.4\%) \\
+\texttt{XGBoost}     & 152/166 (91.6\%)  & 155/166 (93.4\%) \\
+\midrule
+\textbf{Overall}     & \textbf{1416/1442 (98.2\%)} & \textbf{1136/1442 (78.8\%)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Documentation Fidelity}
+\label{sec:eval-fidelity}
+
+Fidelity is evaluated only on the $2{,}552$ correctly recovered trace links, so
+that it measures the structuring stage in isolation. A naive verbatim-match
+score is uninformative here: a structured field may reproduce its source exactly
+in substance yet differ in a handful of characters due to Unicode normalization,
+PDF de-hyphenation, smart-quote/dash substitution, or link-placeholder
+formatting. We therefore decompose fidelity into three interpretable
+sub-constructs and report each as a graded distribution rather than a single
+pass/fail rate.
+
+\subsubsection{From manual observation to a deterministic tracer}
+\label{sec:eval-fidelity-origin}
+The fidelity measurement is grounded in the same manual evaluation that produced
+the trace-link census of Section~\ref{sec:eval-trace}. While adjudicating every
+recovered link, the reviewer also recorded the \emph{kind} of content
+discrepancy each member exhibited, and these qualitative observations---not an
+a~priori metric---defined what the measurement needed to capture. Recurring
+patterns included: structured signatures that drop a leading
+\texttt{class}/\texttt{property}/\texttt{abstract} qualifier or render as a bare
+name with empty parentheses; descriptions or parameter/return information
+\emph{inferred} from the signature when the source prose documented none; a
+member's own purpose populated from an adjacent classmethod's description;
+returns descriptions copied from the purpose; usage examples bundled into a
+single field, or deposited into a description/\,additional-information field
+rather than the examples segment; grouped parameters such as
+\texttt{*args,\,**kwargs} either kept under one field or split with a duplicated
+shared description; and---pervasively---purely cosmetic divergence from glyph,
+hyphenation, and quote normalization, especially in PDF text. These observed
+strengths and weaknesses map directly onto three sub-constructs and an
+artifact-versus-defect distinction, which we then operationalized as a
+\emph{deterministic} tracer (no model is used to score fidelity). Casting the
+human-identified phenomena as transparent, reproducible string-grounding rules
+lets us report them at corpus scale ($24{,}145$ trace units) while remaining
+faithful to what the manual evaluation actually surfaced; spot-checks against the
+reviewer's recorded cases were used to set the band thresholds.
+
+\subsubsection{Trace units and sub-constructs}
+We score fidelity over the \emph{trace units} that are genuinely shared between
+the source code and its API reference: the member \emph{signature}, each
+\emph{parameter} (name, type, description), the \emph{returns} (type,
+description), the \emph{purpose} (the leading descriptive summary), and
+\emph{usage examples}. The three sub-constructs are:
+\begin{itemize}
+  \item \textbf{Faithfulness (precision):} the fraction of structured trace
+  units whose content is grounded in the member's source documentation.
+  \item \textbf{Categorization (placement):} of the grounded units, the fraction
+  placed in the correct schema field---e.g., a parameter description that is
+  grounded in the source but actually copied from the \emph{purpose} prose, or a
+  code example deposited in a description field rather than the examples segment,
+  is a categorization defect even though its content is faithful.
+  \item \textbf{Completeness (recall):} the fraction of \emph{source-documented}
+  trace units that are represented in the structured doc.
+\end{itemize}
+
+\subsubsection{Measurement}
+Operationalizing the manually observed phenomena
+(Section~\ref{sec:eval-fidelity-origin}), all comparisons are performed in a
+normalized space (Unicode NFKC, de-hyphenation, smart-quote/dash folding,
+whitespace collapsing, and unification of URL link placeholders) and entirely
+deterministically---no model is used to score fidelity. Each unit is matched against its source by a tiered
+procedure: an exact normalized-substring test, then a local fuzzy alignment
+(\texttt{rapidfuzz} partial-ratio), then a longest-matching-block fallback. A
+unit counts as \emph{faithful} when its best similarity is
+$\geq 0.995$ (i.e., differing only by normalization). Categorization compares
+each unit against its \emph{expected} source section, identified by structural
+headings; placement defects are unit content that grounds in the document at
+large but not in its own section. To avoid spurious omissions, completeness is
+scoped to trace units rather than arbitrary prose: parameter recall is anchored
+on the names declared in the source \emph{signature} (the true code--doc trace
+link), and signature, purpose, and returns recall on the presence of those
+documented sections. Because the pipeline is prompted to split each example into
+its own field, example categorization is evaluated at the level of the examples
+\emph{segment} (did example code reach the examples segment at all). Example
+\emph{recall} is reported only as a diagnostic: PDF pages concatenate inherited
+and sibling members, so example code present on a page frequently belongs to a
+different member and cannot be attributed reliably.
+
+To separate genuine structuring defects from measurement artifacts we bin
+sub-unit similarity into a \emph{Cosmetic} band ($0.90 \le s < 0.995$),
+capturing normalization and glyph drift, and lower bands
+(\emph{Paraphrase} $[0.75,0.90)$, \emph{Weak} $[0.55,0.75)$, \emph{Unsupported}
+$<0.55$) that constitute real fidelity loss.
+
+\subsubsection{Results: overall}
+Table~\ref{tab:fidelity-headline} summarizes the three sub-constructs.
+On correctly recovered links the structured documentation is highly faithful
+(mean $0.983$ web, $0.955$ PDF), well categorized ($0.977$, $0.973$), and
+largely complete ($0.957$, $0.926$). PDF trails web on faithfulness and
+completeness but, notably, \emph{not} on categorization: once the correct text
+is in hand, the model places it into the right schema field at essentially the
+same rate regardless of modality.
+
+\begin{table}[t]
+\centering
+\caption{Documentation fidelity on correctly recovered trace links. Each cell is
+the mean sub-construct score with the percentage of members scoring perfectly
+($=1.0$) in parentheses.}
+\label{tab:fidelity-headline}
+\begin{tabular}{lccc}
+\toprule
+Source & Faithfulness & Categorization & Completeness \\
+\midrule
+WEB ($n{=}1413$) & 0.983 (93.0\%) & 0.977 (92.0\%) & 0.957 (87.5\%) \\
+PDF ($n{=}1134$) & 0.955 (82.8\%) & 0.973 (90.8\%) & 0.926 (77.6\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Results: faithfulness is artifact-dominated}
+Table~\ref{tab:fidelity-bands} examines faithfulness at the level of individual
+trace units ($13{,}302$ web, $10{,}843$ PDF). Here the headline result is
+sharp: $98.6\%$ of web units and $96.9\%$ of PDF units are faithful to
+$\geq 0.995$. The largest remaining slice is the \emph{Cosmetic} band
+($1.0\%$ web, $2.8\%$ PDF)---normalization and glyph drift, not content error,
+and the PDF excess is exactly the expected glyph noise of linearized text.
+\emph{Genuine} fidelity defects (Paraphrase and below) account for only
+$\approx 0.4\%$ of web units and $\approx 0.3\%$ of PDF units. In other words,
+when the structured doc deviates from the source at all, the deviation is almost
+always a presentational artifact rather than fabricated or distorted content.
+
+\begin{table}[t]
+\centering
+\caption{Distribution of structured trace units by similarity to their source
+span. The Cosmetic band is normalization/glyph drift (a measurement artifact);
+only Paraphrase and below are genuine fidelity defects.}
+\label{tab:fidelity-bands}
+\begin{tabular}{lrr}
+\toprule
+Similarity band & WEB (\%) & PDF (\%) \\
+\midrule
+Faithful ($\geq$0.995)      & 98.6 & 96.9 \\
+Cosmetic $[0.90,0.995)$     & 1.0  & 2.8  \\
+Paraphrase $[0.75,0.90)$    & 0.2  & 0.1  \\
+Weak $[0.55,0.75)$          & 0.2  & 0.1  \\
+Unsupported $(<0.55)$       & 0.0  & 0.1  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Results: categorization}
+At the member level $92.0\%$ (web) and $90.8\%$ (PDF) of members are perfectly
+categorized. The residual defects are of two kinds. \emph{Field placement}
+errors are rare and dominated by parameter name/type units
+($89/3{,}859$ web; $38/3{,}272$ PDF) and returns descriptions copied from the
+purpose prose ($43/573$ web; $41/418$ PDF). \emph{Example misplacement}---code
+examples that the source embeds inside descriptive prose and that the model
+keeps in a description field rather than promoting to the examples segment---is
+the most frequent single categorization issue, affecting $59$ web and $50$ PDF
+members; correctly, the model routes example code into the examples segment in
+$92.5\%$ (web, $725/784$) and $91.3\%$ (PDF, $527/577$) of members that carry
+example code.
+
+\subsubsection{Results: completeness}
+Table~\ref{tab:fidelity-completeness} breaks completeness down by trace unit.
+Signature and purpose are almost always retained ($\geq 98.6\%$ in both
+modalities), parameter recall is high and modality-independent
+($93.5\%$ web, $93.4\%$ PDF), and the only material gap is returns recall on PDF
+($79.0\%$ vs.\ $92.2\%$ web), where flowed text more often detaches a short
+``Returns'' clause from its member. Example recall is reported only as a
+diagnostic for the reason given above.
+
+\begin{table}[t]
+\centering
+\caption{Completeness: percentage of source-documented trace units represented
+in the structured doc. Examples are a diagnostic only (PDF pages concatenate
+inherited members, inflating apparent omission).}
+\label{tab:fidelity-completeness}
+\begin{tabular}{lrr}
+\toprule
+Trace unit & WEB (\%) & PDF (\%) \\
+\midrule
+Signature        & 99.4 & 99.4 \\
+Parameters       & 93.5 & 93.4 \\
+Purpose          & 99.4 & 98.6 \\
+Returns          & 92.2 & 79.0 \\
+\midrule
+Examples (diag.) & 73.5 & 57.5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Results: per-library}
+Table~\ref{tab:fidelity-perlib} reports per-library means. Fidelity is high and
+stable across libraries; \texttt{scikit-learn} and \texttt{numpy} are strongest,
+while \texttt{SQLAlchemy} is the weakest on all three constructs (e.g.,
+$0.93/0.89/0.94$ web), consistent with its heavier use of duplicated
+table-summary plus standalone member descriptions, which stresses both
+faithfulness and placement.
+
+\begin{table}[t]
+\centering
+\caption{Per-library mean sub-construct scores (F1 Faithfulness / F2
+Categorization / F3 Completeness) on correctly recovered trace links.}
+\label{tab:fidelity-perlib}
+\begin{tabular}{lccc|ccc}
+\toprule
+& \multicolumn{3}{c|}{WEB} & \multicolumn{3}{c}{PDF} \\
+Library & F1 & F2 & F3 & F1 & F2 & F3 \\
+\midrule
+\texttt{numpy}        & 0.99 & 1.00 & 0.98 & 0.97 & 0.99 & 0.95 \\
+\texttt{pandas}       & 0.97 & 1.00 & 0.97 & 0.92 & 0.99 & 0.93 \\
+\texttt{requests}     & 0.99 & 0.92 & 0.95 & 0.99 & 0.96 & 0.83 \\
+\texttt{scikit-learn} & 0.99 & 1.00 & 0.99 & 0.99 & 1.00 & 0.97 \\
+\texttt{SQLAlchemy}   & 0.93 & 0.89 & 0.94 & 0.86 & 0.89 & 0.89 \\
+\texttt{PyTorch}      & 1.00 & 0.98 & 0.90 & 0.98 & 0.97 & 0.90 \\
+\texttt{XGBoost}      & 0.99 & 0.97 & 0.95 & 1.00 & 0.98 & 0.96 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Summary}
+\label{sec:eval-summary}
+Two findings stand out. First, the pipeline's accuracy ceiling is set by
+\emph{retrieval}, not structuring: web trace links are recovered with
+$98.2\%$ accuracy, almost all of the $332$ failures are PDF anchoring errors
+($327/332$ at the retrieval stage), and the dominant lever for improvement is
+member localization in linearized PDF text. Second, \emph{conditioned on correct
+recovery, the structured output is highly faithful}: $98.6\%$/$96.9\%$ of
+web/PDF trace units reproduce their source to within normalization, genuine
+content defects are below $0.5\%$, categorization is correct for $\sim 92\%$ of
+members, and the only sizable completeness gap is PDF returns recall. The
+practical implication is that effort is best directed at robust PDF member
+anchoring and at promoting source-embedded example code into the examples
+field---not at the faithfulness of the structuring step, which is already at
+ceiling.

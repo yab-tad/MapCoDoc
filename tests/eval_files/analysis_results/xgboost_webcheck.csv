@@ -1,0 +1,43 @@
+api_name,member_type,route,web_preproc_acc,web_struct_acc,web_correct,pdf_preproc_acc,pdf_struct_acc,pdf_correct,original_summary
+xgboost.Booster.best_iteration,method,fetched,yes,yes,yes,no,empty,no,The best iteration during training.
+xgboost.Booster.best_score,method,fetched,yes,yes,yes,no,empty,no,The best evaluation score during training.
+xgboost.Booster.feature_types,method,fetched,yes,yes,yes,no,empty,no,Feature types for this booster.
+xgboost.DMatrix.feature_names,method,fetched,yes,yes,yes,no,empty,no,Labels for features (column labels).
+xgboost.DataIter.next,method,fetched,yes,yes,yes,no,empty,no,xgboost.DMatrix.
+xgboost.ExtMemQuantileDMatrix.ref,method,fetched,no,empty,no,no,empty,no,Internal method for retrieving a reference to the training DMatrix.
+xgboost.QuantileDMatrix.feature_names,method,fetched,yes,yes,yes,no,empty,no,Labels for features (column labels).
+xgboost.QuantileDMatrix.feature_types,method,fetched,yes,yes,yes,no,empty,no,Type of features (column types).
+xgboost.QuantileDMatrix.ref,method,fetched,yes,yes,yes,no,empty,no,Internal method for retrieving a reference to the training DMatrix.
+xgboost.XGBClassifier,class,fetched,yes,yes,yes,yes,yes,yes,Implementation of the scikit-learn API for XGBoost classification.
+xgboost.XGBRFClassifier,class,fetched,no_ref,no_ref,review,no_ref,no_ref,review,
+xgboost.XGBRFClassifier.fit,method,fetched,yes,yes,yes,yes,yes,yes,Fit gradient boosting classifier.
+xgboost.XGBRFClassifier.get_num_boosting_rounds,method,fetched,yes,yes,yes,yes,yes,yes,Gets the number of xgboost boosting rounds.
+xgboost.XGBRFClassifier.get_xgb_params,method,fetched,yes,yes,yes,yes,yes,yes,Get xgboost specific parameters.
+xgboost.XGBRFClassifier.load_model,method,fetched,yes,yes,yes,yes,yes,yes,Load the model from a file or a bytearray.
+xgboost.XGBRFClassifier.predict,method,fetched,yes,yes,yes,yes,yes,yes,Predict with X.
+xgboost.XGBRFRegressor,class,fetched,no_ref,no_ref,review,no_ref,no_ref,review,
+xgboost.XGBRFRegressor.fit,method,fetched,yes,yes,yes,yes,yes,yes,Fit gradient boosting model.
+xgboost.XGBRFRegressor.get_num_boosting_rounds,method,fetched,yes,yes,yes,yes,yes,yes,Gets the number of xgboost boosting rounds.
+xgboost.XGBRFRegressor.get_xgb_params,method,fetched,yes,yes,yes,yes,yes,yes,Get xgboost specific parameters.
+xgboost.XGBRFRegressor.save_model,method,fetched,yes,yes,yes,yes,yes,yes,Save the model to a file.
+xgboost.XGBRanker,class,fetched,yes,yes,yes,yes,yes,yes,Implementation of the Scikit-Learn API for XGBoost Ranking.
+xgboost.XGBRanker.apply,method,fetched,yes,yes,yes,yes,yes,yes,Return the predicted leaf every tree for each sample.
+xgboost.XGBRanker.load_model,method,fetched,yes,yes,yes,yes,yes,yes,Load the model from a file or a bytearray.
+xgboost.XGBRegressor,class,fetched,yes,yes,yes,yes,yes,yes,Implementation of the scikit-learn API for XGBoost regression.
+xgboost.XGBRegressor.save_model,method,fetched,yes,yes,yes,yes,yes,yes,Save the model to a file.
+xgboost.callback.EvaluationMonitor.after_iteration,method,fetched,no,empty,no,yes,yes,yes,Run after each iteration.
+xgboost.callback.EvaluationMonitor.after_training,method,fetched,no,empty,no,yes,yes,yes,Run after training is finished.
+xgboost.callback.TrainingCheckPoint.before_training,method,fetched,yes,yes,yes,no,no,no,Run before training starts.
+xgboost.set_config,function,fetched,yes,yes,yes,yes,yes,yes,set_config
+xgboost.spark.SparkXGBClassifierModel.get_booster,method,fetched,no,empty,no,yes,yes,yes,Return the xgboost.core.Booster instance.
+xgboost.spark.SparkXGBClassifierModel.read,method,fetched,no,empty,no,yes,yes,yes,Return the reader for loading the model.
+xgboost.spark.SparkXGBClassifierModel.set_coll_cfg,method,fetched,no,empty,no,yes,yes,yes,Set collective configuration
+xgboost.spark.SparkXGBClassifierModel.set_device,method,fetched,no,empty,no,yes,yes,yes,"Set device, optional value: cpu, cuda, gpu"
+xgboost.spark.SparkXGBRegressor.read,method,fetched,no,empty,no,yes,yes,yes,Return the reader for loading the estimator.
+xgboost.spark.SparkXGBRegressor.setParams,method,fetched,no,empty,no,yes,yes,yes,Set params for the estimator.
+xgboost.spark.SparkXGBRegressor.set_device,method,fetched,no,empty,no,yes,yes,yes,"Set device, optional value: cpu, cuda, gpu"
+xgboost.spark.SparkXGBRegressor.write,method,fetched,no,empty,no,yes,yes,yes,Return the writer for saving the estimator.
+xgboost.spark.SparkXGBRegressorModel.read,method,fetched,no,empty,no,yes,yes,yes,Return the reader for loading the model.
+xgboost.spark.SparkXGBRegressorModel.set_coll_cfg,method,fetched,no,empty,no,yes,yes,yes,Set collective configuration
+xgboost.spark.SparkXGBRegressorModel.write,method,fetched,no,empty,no,yes,yes,yes,Return the writer for saving the model.
+xgboost.tracker.RabitTracker,class,fetched,yes,yes,yes,no,empty,no,"Tracker for the collective used in XGBoost, acting as a coordinator between"

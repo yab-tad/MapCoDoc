@@ -1,0 +1,88 @@
+api_name,member_type,fidelity_group,preprocessed_accurate,structured_vs_preprocessed,structured_vs_original_db,structured_vs_original_web,correct_doc,source_of_truth,scope,root_cause_layer,comment,verify_tier,verify_reason,sample_pick,human_verified,human_note,correct_doc_auto
+requests.get,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.prepare,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.prepare_url,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.TooManyRedirects,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Too many redirects.""",mode_sample,pdf_no:empty,no,no,,no
+requests.Session.rebuild_auth,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""When being redirected we may want to strip authentication from the""",mode_sample,pdf_no:empty,no,no,,no
+requests.patch,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.RequestsCookieJar.itervalues,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.adapters.HTTPAdapter.init_poolmanager,method,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Initializes a urllib3 PoolManager.""",mode_sample,pdf_no:empty,no,no,,no
+requests.cookies.RequestsCookieJar.items,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.text,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.prepare_auth,method,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.ok,method,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Returns True if status_code is less than 400, False if not.""",mode_sample,pdf_no:empty,yes,no,,no
+requests.PreparedRequest.prepare_cookies,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.RequestsCookieJar.iterkeys,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.delete,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Sends a DELETE request.""",mode_sample,pdf_no:empty,yes,no,,no
+requests.adapters.BaseAdapter.send,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.prepare_hooks,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.prepare_body,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.is_permanent_redirect,method,clean,yes,yes,yes,no_ref,yes,db,full,none,"web-confirmed correct vs original: """"",confidence_sample,yes_db,no,yes,,yes
+requests.Session.mount,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Registers a connection adapter to a prefix.""",mode_sample,pdf_no:empty,no,no,,no
+requests.adapters.HTTPAdapter.proxy_headers,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.RequestsCookieJar.set_cookie,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Set a cookie, without checking whether or not it should be set.""",confidence_sample,yes_web,yes,yes,,yes
+requests.Session.options,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Sends a OPTIONS request.""",mode_sample,pdf_no:empty,no,no,,no
+requests.Session.merge_environment_settings,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Check the environment and merge it with some settings.""",mode_sample,pdf_no:empty,no,no,,no
+requests.cookies.RequestsCookieJar.list_domains,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.RequestsCookieJar.update,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.adapters.HTTPAdapter.get_connection_with_tls_context,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.utils.get_encodings_from_content,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.cookiejar_from_dict,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.json,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.iter_content,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.RequestsCookieJar.copy,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.head,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Sends a HEAD request.""",mode_sample,pdf_no:empty,no,no,,no
+requests.auth.AuthBase,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.utils.get_encoding_from_headers,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.utils.dict_from_cookiejar,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.iter_lines,method,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Iterates over the response data, one line at a time.""",mode_sample,pdf_no:empty,yes,no,,no
+requests.Response.content,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.utils.add_dict_to_cookiejar,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Request.prepare,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.adapters.HTTPAdapter.get_connection,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.head,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.RequestsCookieJar.set,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Request.deregister_hook,method,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.request,method,issues,no,yes,no,no,no,web,missing_params,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Constructs a Request, prepares it and sends it.""",mode_sample,pdf_no:contamination,yes,no,Human-verified: preprocessed inaccurate; consequently the structured doc is also incorrect.,no
+requests.adapters.HTTPAdapter,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.path_url,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.put,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.adapters.HTTPAdapter.proxy_manager_for,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.adapters.HTTPAdapter.build_connection_pool_key_attributes,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.post,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Sends a POST request.""",mode_sample,pdf_no:empty,no,no,,no
+requests.cookies.RequestsCookieJar.get,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Request,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.close,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Releases the connection back to the pool.""",confidence_sample,yes_web,yes,yes,,yes
+requests.adapters.BaseAdapter,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.prepare_request,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Constructs a PreparedRequest for""",mode_sample,pdf_no:empty,no,no,,no
+requests.cookies.RequestsCookieJar.keys,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.cookies.RequestsCookieJar.get_dict,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.get_redirect_target,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Receives a Response.""",mode_sample,pdf_no:empty,no,no,,no
+requests.cookies.RequestsCookieJar.multiple_domains,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.patch,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Sends a PATCH request.""",mode_sample,pdf_no:empty,no,no,,no
+requests.post,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Request.register_hook,method,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.raise_for_status,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.adapters.HTTPAdapter.request_url,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.should_strip_auth,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Decide whether Authorization header should be removed when redirecting""",mode_sample,pdf_no:empty,no,no,,no
+requests.Session.rebuild_method,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.prepare_content_length,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.PreparedRequest.prepare_headers,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Response.apparent_encoding,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.adapters.BaseAdapter.close,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Cleans up adapter specific items.""",confidence_sample,yes_web,yes,yes,,yes
+requests.Session.close,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Closes all adapters and as such the session""",mode_sample,pdf_no:empty,yes,no,,no
+requests.auth.HTTPBasicAuth,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.delete,function,clean,yes,yes,yes,,yes,db,partial(0.50),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+requests.PreparedRequest.prepare_method,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.rebuild_proxies,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""This method re-evaluates the proxy configuration by considering the""",mode_sample,pdf_no:empty,no,no,,no
+requests.cookies.RequestsCookieJar.list_paths,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.Session.send,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Send a given PreparedRequest.""",mode_sample,pdf_no:empty,no,no,,no
+requests.utils.get_unicode_from_response,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+requests.Session.get_adapter,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Returns the appropriate connection adapter for the given URL.""",mode_sample,pdf_no:empty,no,no,,no
+requests.adapters.HTTPAdapter.build_response,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+requests.PreparedRequest.deregister_hook,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+requests.ReadTimeout,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""The server did not send any data in the allotted amount of time.""",mode_sample,pdf_no:empty,yes,no,,no
+requests.Timeout,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""The request timed out.""",mode_sample,pdf_no:empty,no,no,,no
+requests.ConnectionError,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes

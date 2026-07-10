@@ -1,0 +1,7 @@
+# numpy.polynomial.polynomial.Polynomial.domain
+
+attribute
+
+polynomial.polynomial.Polynomial.domain = array([-1.,  1.])#(https://numpy.org/doc/stable/reference/generated/numpy.polynomial.polynomial.Polynomial.domain.html#numpy.polynomial.polynomial.Polynomial.domain)
+
+On this page

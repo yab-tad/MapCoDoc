@@ -1,0 +1,2061 @@
+{
+  "summary": {
+    "total_members": 158,
+    "extracted": 154,
+    "missing": 4,
+    "coverage_pct": 97.5,
+    "match_breakdown": {
+      "lexical": 151,
+      "semantic": 3,
+      "hybrid": 0,
+      "fallback": 0,
+      "unknown": 0
+    }
+  },
+  "members": [
+    {
+      "api_name": "sqlalchemy.orm.Mapper.all_orm_descriptors",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 376,
+        "first_line": "attribute sqlalchemy.orm.Mapper.(#page=252)all_orm_descriptors",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.all_orm_descriptors.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.collection",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 181,
+        "first_line": "class sqlalchemy.orm.collections.collection",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.collections.collection.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.add_mapped_attribute",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 386,
+        "first_line": "function sqlalchemy.orm.add_mapped_attribute(target: Type[_O], key: str, attr: MapperProperty(#page=737)[Any])",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.add_mapped_attribute.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.rollback",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 398,
+        "first_line": "rollback() calls only; .commit() calls will not be propagated to the given transaction.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.rollback.txt"
+      },
+      "match_type": "exact",
+      "match_score": 120.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.update_type_annotation_map",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 261,
+        "first_line": "update_type_annotation_map(#page=278)()update the registry.type_annotation_map(#page=272)         with",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.registry.update_type_annotation_map.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 0.01,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sqlalchemy.orm.dynamic_loader",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "function sqlalchemy.orm.dynamic_loader(argument: _RelationshipArgumentType[Any] | None = None,                                         **kw: Any) \\t o RelationshipProperty(#page=767)[Any]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.dynamic_loader.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.91,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.set_committed_value",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "function sqlalchemy.orm.attributes.set_committed_value(instance: object(#page=733), key: str, value: Any) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attributes.set_committed_value.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.reconstructor",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 388,
+        "first_line": "reconstructor(#page=271)(fn)                                   Decorate a method as the ‘reconstructor’ hook.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.reconstructor.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.del_attribute",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 151,
+        "first_line": "function sqlalchemy.orm.attributes.del_attribute(instance: object(#page=733), key: str) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attributes.del_attribute.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.is_sibling",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 404,
+        "first_line": "method sqlalchemy.orm.Mapper.(#page=252)is_sibling(other: Mapper(#page=252)[Any]) \\t o bool",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.is_sibling.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.get_history",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 143,
+        "first_line": "function sqlalchemy.orm.attributes.get_history(obj: object(#page=733), key: str, passive: PassiveFlag = symbol('PASSIVE_OFF')) \\t o History(#page=664)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attributes.get_history.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 50.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.common_parent",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 387,
+        "first_line": "method sqlalchemy.orm.Mapper.(#page=252)common_parent(other: Mapper(#page=252)[Any]) \\t o bool",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.common_parent.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.self_and_descendants",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 402,
+        "first_line": "attribute sqlalchemy.orm.Mapper.(#page=252)self_and_descendants",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.self_and_descendants.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.51,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.UOWTransaction",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 94,
+        "first_line": "class sqlalchemy.orm.UOWTransaction",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.UOWTransaction.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.35,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.KeyFuncDict",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 307,
+        "first_line": "class sqlalchemy.orm.KeyFuncDict",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.KeyFuncDict.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 84.81,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.loaded_as_persistent",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 502,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)loaded_as_persistent(session: Session(#page=633), instance: _O) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.loaded_as_persistent.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.merge_result",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 558,
+        "first_line": "function sqlalchemy.orm.merge_result(query: Query(#page=498)[Any], iterator: FrozenResult(#page=1782) | Iterable[Sequence(#page=1508)[Any]] | Iterable[object(#page=733)], load: bool = True) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.merge_result.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 74.81,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedClassProtocol",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 372,
+        "first_line": "class sqlalchemy.orm.MappedClassProtocol",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MappedClassProtocol.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.WriteOnlyCollection.remove",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 405,
+        "first_line": "method sqlalchemy.orm.WriteOnlyCollection.(#page=331)remove(item: _T) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.WriteOnlyCollection.remove.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.33,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.declared_attr.directive",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 422,
+        "first_line": "attribute sqlalchemy.orm.declared_attr.(#page=243)directive",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.declared_attr.directive.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.backref",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "function sqlalchemy.orm.backref(name: str, **kwargs: Any) \\t o ORMBackrefArgument",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.backref.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.9,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.column_keyed_dict",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 443,
+        "first_line": "function sqlalchemy.orm.column_keyed_dict(mapping_spec: Type[_KT] | Callable[[_KT], _VT], *, ignore_unpopulated_attribute: bool = False) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.column_keyed_dict.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.base.object_state",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 162,
+        "first_line": "function sqlalchemy.orm.util.object_state(instance: _T) \\t o InstanceState(#page=730)[_T]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.base.object_state.txt"
+      },
+      "match_type": "exact",
+      "match_score": 115.11,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.polymorphic_union",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 344,
+        "first_line": "function sqlalchemy.orm.polymorphic_union(table_map, typecolname, aliasname='p_union', cast_nulls=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.polymorphic_union.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.after_rollback",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 543,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)after_rollback(session: Session(#page=633)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.after_rollback.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.97,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.foreign",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 517,
+        "first_line": "function sqlalchemy.orm.foreign(expr: _CEA) \\t o _CEA",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.foreign.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.87,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.column_attrs",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 388,
+        "first_line": "attribute sqlalchemy.orm.Mapper.(#page=252)column_attrs",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.column_attrs.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.attrs",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 443,
+        "first_line": "attribute sqlalchemy.orm.InstanceState.(#page=730)attrs",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceState.attrs.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 78.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.CompositeProperty.Comparator",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 495,
+        "first_line": "class Comparator",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.CompositeProperty.Comparator.txt"
+      },
+      "match_type": "exact",
+      "match_score": 139.8,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.DeclarativeBase",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 528,
+        "first_line": "class sqlalchemy.orm.DeclarativeBase",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.DeclarativeBase.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 87.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.expire",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 369,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)expire(instance: object(#page=733), attribute_names: Iterable[str] | None = None) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.expire.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.identity",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 482,
+        "first_line": "property identity:  Tuple[Any, ...] | None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceState.identity.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.relationships",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 421,
+        "first_line": "attribute sqlalchemy.orm.Mapper.(#page=252)relationships",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.relationships.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 85.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.identity_key_from_row",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 394,
+        "first_line": "method sqlalchemy.orm.Mapper.(#page=252)identity_key_from_row(row: Row(#page=1795)[Any] | RowMapping(#page=1797), identity_token: Any | None = None, adapter: ORMAdapter | None = None) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.identity_key_from_row.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.DynamicMapped",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "class sqlalchemy.orm.DynamicMapped",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.DynamicMapped.txt"
+      },
+      "match_type": "exact",
+      "match_score": 134.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.before_commit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 518,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)before_commit(session: Session(#page=633)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.before_commit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.45,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.synonyms",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 395,
+        "first_line": "attribute sqlalchemy.orm.Mapper.(#page=252)synonyms",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.synonyms.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.after_transaction_create",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 561,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)after_transaction_create(session: Session(#page=633), transaction: SessionTransaction(#page=657)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.after_transaction_create.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.expire_all",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 376,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)expire_all() \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.expire_all.txt"
+      },
+      "match_type": "exact",
+      "match_score": 128.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.init_collection",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 117,
+        "first_line": "function sqlalchemy.orm.attributes.init_collection(obj: object(#page=733), key: str) \\t o CollectionAdapter(#page=360)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attributes.init_collection.txt"
+      },
+      "match_type": "exact",
+      "match_score": 100.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 375,
+        "first_line": "class sqlalchemy.orm.Mapper",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 90.06,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.instrumentation.is_instrumented",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 68,
+        "first_line": "function sqlalchemy.orm.instrumentation.is_instrumented(instance, key)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.instrumentation.is_instrumented.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.composites",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 387,
+        "first_line": "attribute sqlalchemy.orm.Mapper.(#page=252)composites",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.composites.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.99,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.after_flush",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 552,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)after_flush(session: Session(#page=633), flush_context: UOWTransaction(#page=778)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.after_flush.txt"
+      },
+      "match_type": "exact",
+      "match_score": 128.48,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.is_active",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 415,
+        "first_line": "property is_active:  bool",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.is_active.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 62.62,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperEvents.before_configured",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 464,
+        "first_line": "before_configured(#page=691)()Called before a series of mappers have been configured.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MapperEvents.before_configured.txt"
+      },
+      "match_type": "exact",
+      "match_score": 132.47,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.WriteOnlyMapped",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 398,
+        "first_line": "class sqlalchemy.orm.WriteOnlyMapped",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.WriteOnlyMapped.txt"
+      },
+      "match_type": "exact",
+      "match_score": 135.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.mapped_as_dataclass",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 9,
+        "first_line": "method sqlalchemy.orm.registry.(#page=271)mapped_as_dataclass(_registry__cls: Type[_O] | None = None, *, init: _NoArg | bool = _NoArg.NO_ARG, repr: _NoArg | bool = _NoArg.NO_ARG, eq: _NoArg | bool = _NoArg.NO_ARG, order: _NoArg | bool = _NoArg.NO_ARG, unsafe_hash: _NoArg | bool = _NoArg.NO_ARG, match_args: _NoArg | bool = _NoArg.NO_ARG, kw_only: _NoArg | bool = _NoArg.NO_ARG, dataclass_callable: _NoArg | Callable[..., Type[Any]] = _NoArg.NO_ARG) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.registry.mapped_as_dataclass.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.55,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.enable_relationship_loading",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 374,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)enable_relationship_loading(obj: object(#page=733)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.enable_relationship_loading.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceEvents.refresh_flush",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 506,
+        "first_line": "method sqlalchemy.orm.InstanceEvents.(#page=697)refresh_flush(target: _O, flush_context: UOWTransaction(#page=778), attrs: Iterable[str] | None) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceEvents.refresh_flush.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 74.99,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.merge_frozen_result",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 577,
+        "first_line": "function sqlalchemy.orm.merge_frozen_result(session, statement, frozen_result, load=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.merge_frozen_result.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.81,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.util.ScopedRegistry",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "class sqlalchemy.util.ScopedRegistry",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.util.ScopedRegistry.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 82.99,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedColumn",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "function sqlalchemy.orm.synonym_for(name: str, map_column: bool = False) \\t o Callable[[Callable[[...], Any]], Synonym(#page=774)[Any]]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MappedColumn.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InspectionAttr",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 492,
+        "first_line": "class sqlalchemy.orm.InspectionAttr",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InspectionAttr.txt"
+      },
+      "match_type": "exact",
+      "match_score": 139.8,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.keyfunc_mapping",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 431,
+        "first_line": "function sqlalchemy.orm.keyfunc_mapping(keyfunc: Callable[[Any], Any], *, ignore_unpopulated_attribute: bool = False) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.keyfunc_mapping.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.no_autoflush",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 441,
+        "first_line": "attribute sqlalchemy.orm.Session.(#page=633)no_autoflush",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.no_autoflush.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.__init__",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 257,
+        "first_line": "method sqlalchemy.orm.registry.(#page=271)__init__(*, metadata: MetaData(#page=1438) | None = None, class_registry: clsregistry._ClsRegistryType | None = None, type_annotation_map: _TypeAnnotationMapType | None = None, constructor: Callable[..., None]=<function _declarative_constructor>)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.registry.__init__.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.06,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.bulk_update_mappings",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 364,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)bulk_update_mappings(mapper: Mapper(#page=252)[Any], mappings: Iterable[Dict[str, Any]]) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.bulk_update_mappings.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.67,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.RelationshipProperty.Comparator",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sqlalchemy.orm.attribute_keyed_dict",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 419,
+        "first_line": "function sqlalchemy.orm.attribute_keyed_dict(attr_name: str, *, ignore_unpopulated_attribute: bool = False) \\t o Type[KeyFuncDict(#page=354)[Any, Any]]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attribute_keyed_dict.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.declarative_mixin",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 560,
+        "first_line": "function sqlalchemy.orm.declarative_mixin(cls: Type[_T]) \\t o Type[_T]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.declarative_mixin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstrumentedAttribute",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 486,
+        "first_line": "class sqlalchemy.orm.InstrumentedAttribute",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstrumentedAttribute.txt"
+      },
+      "match_type": "exact",
+      "match_score": 138.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.ORMExecuteState.invoke_statement",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 393,
+        "first_line": "method sqlalchemy.orm.ORMExecuteState.(#page=628)invoke_statement(statement: Executable(#page=1211) | None = None, params: _CoreAnyExecuteParams | None = None, execution_options:",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.ORMExecuteState.invoke_statement.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.CascadeOptions",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 484,
+        "first_line": "class sqlalchemy.orm.CascadeOptions",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.CascadeOptions.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 79.76,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.get_attribute",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 146,
+        "first_line": "function sqlalchemy.orm.attributes.get_attribute(instance: object(#page=733), key: str) \\t o Any",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attributes.get_attribute.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedSQLExpression",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 575,
+        "first_line": "class sqlalchemy.orm.MappedSQLExpression",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MappedSQLExpression.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.add_all",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 392,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)add_all(instances: Iterable[object(#page=733)]) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.add_all.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.61,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.pending_to_persistent",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 485,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)pending_to_persistent(session: Session(#page=633), instance: _O)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.pending_to_persistent.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.get_property_by_column",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 385,
+        "first_line": "method sqlalchemy.orm.Mapper.(#page=252)get_property_by_column(column: ColumnElement(#page=1101)[_T]) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.get_property_by_column.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.transient",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 479,
+        "first_line": "property transient:  bool",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceState.transient.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.76,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.close",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 442,
+        "first_line": "close(#page=643)()Close out the transactional resources and ORM objects used by this Session(#page=633) .",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.close.txt"
+      },
+      "match_type": "exact",
+      "match_score": 120.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.sessionmaker",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 460,
+        "first_line": "class sqlalchemy.orm.sessionmaker",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.sessionmaker.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.65,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents.set",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 323,
+        "first_line": "method sqlalchemy.orm.AttributeEvents.(#page=705)set(target: _O, value: _T, oldvalue: _T, initiator: Event)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.AttributeEvents.set.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.97,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Composite",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 506,
+        "first_line": "class sqlalchemy.orm.Composite",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Composite-class.txt"
+      },
+      "match_type": "exact",
+      "match_score": 139.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceEvents.load",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 521,
+        "first_line": "method sqlalchemy.orm.InstanceEvents.(#page=697)load(target: _O, context: QueryContext(#page=775)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceEvents.load.txt"
+      },
+      "match_type": "exact",
+      "match_score": 129.45,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.LoaderCallableStatus",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 485,
+        "first_line": "class sqlalchemy.orm.LoaderCallableStatus",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.LoaderCallableStatus.txt"
+      },
+      "match_type": "exact",
+      "match_score": 136.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.DeclarativeBaseNoMeta",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 495,
+        "first_line": "class sqlalchemy.orm.DeclarativeBaseNoMeta",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.DeclarativeBaseNoMeta.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperEvents.mapper_configured",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 521,
+        "first_line": "method sqlalchemy.orm.MapperEvents.(#page=684)mapper_configured(mapper: Mapper(#page=252)[_O], class_: Type[_O]) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MapperEvents.mapper_configured.txt"
+      },
+      "match_type": "exact",
+      "match_score": 128.95,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.NotExtension",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 564,
+        "first_line": "class sqlalchemy.orm.NotExtension",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.NotExtension.txt"
+      },
+      "match_type": "exact",
+      "match_score": 132.26,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.pending_to_transient",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 478,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)pending_to_transient(session: Session(#page=633), instance: _O) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.pending_to_transient.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.InstrumentedList",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 204,
+        "first_line": "class sqlalchemy.orm.collections.InstrumentedList",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.collections.InstrumentedList.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.63,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.QueryContext",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 186,
+        "first_line": "class sqlalchemy.orm.QueryContext",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.QueryContext.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 79.76,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.mapped_as_dataclass",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 364,
+        "first_line": "function sqlalchemy.orm.mapped_as_dataclass(registry: RegistryType, *, init: _NoArg | bool = _NoArg.NO_ARG, repr: _NoArg | bool = _NoArg.NO_ARG, eq: _NoArg | bool = _NoArg.NO_ARG, order: _NoArg | bool = _NoArg.NO_ARG, unsafe_hash: _NoArg | bool = _NoArg.NO_ARG, match_args: _NoArg | bool = _NoArg.NO_ARG, kw_only: _NoArg | bool = _NoArg.NO_ARG, dataclass_callable: _NoArg | Callable[..., Type[Any]] = _NoArg.NO_ARG) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.mapped_as_dataclass.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.05,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.class_mapper",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 385,
+        "first_line": "function sqlalchemy.orm.class_mapper(class_: Type[_O], configure: bool = True) \\t o Mapper(#page=252)[_O]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.class_mapper.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.05,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.util.ThreadLocalRegistry",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 4,
+        "first_line": "class sqlalchemy.util.ThreadLocalRegistry",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.util.ThreadLocalRegistry.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.do_orm_execute",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 477,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)do_orm_execute(orm_execute_state: ORMExecuteState(#page=628)) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.do_orm_execute.txt"
+      },
+      "match_type": "exact",
+      "match_score": 132.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.remote",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 512,
+        "first_line": "function sqlalchemy.orm.remote(expr: _CEA) \\t o _CEA",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.remote.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.86,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 508,
+        "first_line": "class sqlalchemy.orm.AttributeEvents",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.AttributeEvents.txt"
+      },
+      "match_type": "exact",
+      "match_score": 139.94,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.sessionmaker.configure",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 433,
+        "first_line": "method sqlalchemy.orm.sessionmaker.(#page=625)configure(**new_kw: Any) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.sessionmaker.configure.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.__init__",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 376,
+        "first_line": "method sqlalchemy.orm.Mapper.(#page=252)__init__(class_: Type[_O], local_table: FromClause(#page=1215) | None = None, properties: Mapping[str, MapperProperty(#page=737)[Any]] | None = None, primary_key: Iterable[_ORMColumnExprArgument[Any]] | None = None, non_primary: bool = False, inherits: Mapper(#page=252)[Any] | Type[Any] | None = None, inherit_condition: _ColumnExpressionArgument[bool] | None = None, inherit_foreign_keys: Sequence(#page=1508)[_ORMColumnExprArgument[Any]] | None = None, always_refresh: bool = False, version_id_col: _ORMColumnExprArgument[Any] | None = None, version_id_generator: Literal[False] | Callable[[Any], Any] | None = None, polymorphic_on: _ORMColumnExprArgument[Any] | str | MapperProperty(#page=737)[Any] | None = None, _polymorphic_map: Dict[Any, Mapper(#page=252)[Any]] | None = None, polymorphic_identity: Any | None = None, concrete: bool = False, with_polymorphic: _WithPolymorphicArg | None = None, polymorphic_abstract: bool = False, polymorphic_load: Literal['selectin', 'inline'] | None = None, allow_partial_pks: bool = True, batch: bool = True, column_prefix: str | None = None, include_properties: Sequence(#page=1508)[str] | None = None, exclude_properties: Sequence(#page=1508)[str] | None = None, passive_updates: bool = True, passive_deletes: bool = False, confirm_deleted_rows: bool = True, eager_defaults: Literal[True, False, 'auto'] = 'auto', legacy_is_orphan: bool = False, _compiled_cache_size: int = 100)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.__init__.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.04,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents.remove",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 359,
+        "first_line": "method sqlalchemy.orm.AttributeEvents.(#page=705)remove(target: _O, value: _T, initiator: Event, *, key: EventConstants = EventConstants.NO_KEY) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.AttributeEvents.remove.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 74.95,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.util.identity_key",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 398,
+        "first_line": "function sqlalchemy.orm.util.identity_key(class_: Type[_T] | None = None, ident: Any | Tuple(#page=1165)[Any, ...] = None, *, instance: _T | None = None, row: Row(#page=1795)[Any] | RowMapping(#page=1797) | None = None, identity_token: Any | None = None) \\t o _IdentityKeyType[_T]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.util.identity_key.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.instance_state",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 71,
+        "first_line": "function sqlalchemy.orm.attributes.instance_state()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attributes.instance_state.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperProperty",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 502,
+        "first_line": "class sqlalchemy.orm.MapperProperty",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MapperProperty.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 87.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.selectable",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 406,
+        "first_line": "property selectable:  FromClause(#page=1215)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.selectable.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 45.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.transient_to_pending",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 461,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)transient_to_pending(session: Session(#page=633), instance: _O) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.transient_to_pending.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.deleted_to_persistent",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 488,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)deleted_to_persistent(session: Session(#page=633), instance: _O)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.deleted_to_persistent.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.make_transient",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 261,
+        "first_line": "function sqlalchemy.orm.make_transient(instance: object(#page=733)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.make_transient.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.63,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperEvents.after_update",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 479,
+        "first_line": "method sqlalchemy.orm.MapperEvents.(#page=684)after_update(mapper: Mapper(#page=252)[_O], connection: Connection(#page=1739), target: _O) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MapperEvents.after_update.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.47,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.was_deleted",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 488,
+        "first_line": "was_deleted()(#page=660)     - standalone function",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceState.was_deleted.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.identity_key_from_primary_key",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 394,
+        "first_line": "method sqlalchemy.orm.Mapper.(#page=252)identity_key_from_primary_key(primary_key: Tuple(#page=1165)[Any, ...], identity_token: Any | None = None) \\t o _IdentityKeyType[_O]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.identity_key_from_primary_key.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.03,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.dirty",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 382,
+        "first_line": "property dirty:  IdentitySet",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.dirty.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 90.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.object_mapper",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 371,
+        "first_line": "function sqlalchemy.orm.object_mapper(instance: _T) \\t o Mapper(#page=252)[_T]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.object_mapper.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.02,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.isa",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 412,
+        "first_line": "method sqlalchemy.orm.Mapper.(#page=252)isa(other: Mapper(#page=252)[Any]) \\t o bool",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.isa.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.persistent_to_deleted",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 463,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)persistent_to_deleted(session: Session(#page=633), instance: _O)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.persistent_to_deleted.txt"
+      },
+      "match_type": "exact",
+      "match_score": 124.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.in_transaction",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 418,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)in_transaction() \\t o bool",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.in_transaction.txt"
+      },
+      "match_type": "exact",
+      "match_score": 128.62,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.PropComparator",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 584,
+        "first_line": "class sqlalchemy.orm.PropComparator       inherits   from   sqlalchemy.orm.base.SQLORMOperations           ,   typing.Generic    ,   sqlalchemy.sql.(#page=1129)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.PropComparator.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 10.82,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.scalars",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 384,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)scalars(statement: Executable(#page=1211), params: _CoreAnyExecuteParams | None = None, *, execution_options: OrmExecuteOptionsParameter = {}, bind_arguments: _BindArguments | None = None, **kw: Any) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.scalars.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 462,
+        "first_line": "class sqlalchemy.orm.InstanceState",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceState.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.ClassManager",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.scalar",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 386,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)scalar(statement: Executable(#page=1211), params: _CoreSingleExecuteParams | None = None, *, execution_options: OrmExecuteOptionsParameter = {}, bind_arguments: _BindArguments | None = None, **kw: Any) \\t o Any Execute a statement and return a scalar result.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.scalar.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionTransaction.parent",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 320,
+        "first_line": "property parent:  SessionTransaction(#page=657) | None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionTransaction.parent.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 61.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionTransaction",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 370,
+        "first_line": "class sqlalchemy.orm.SessionTransaction",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionTransaction.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.QueryEvents.before_compile_update",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 137,
+        "first_line": "method sqlalchemy.orm.QueryEvents.(#page=714)before_compile_update(query: Query(#page=498), update_context: BulkUpdate) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.QueryEvents.before_compile_update.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.48,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.as_declarative",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 385,
+        "first_line": "function sqlalchemy.orm.as_declarative(**kw: Any) \\t o Callable[[Type[_T]], Type[_T]]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.as_declarative.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.01,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.ColumnProperty",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 496,
+        "first_line": "class sqlalchemy.orm.ColumnProperty",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.ColumnProperty.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.prepare_instrumentation",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 198,
+        "first_line": "function sqlalchemy.orm.collections.prepare_instrumentation(factory: Type[Collection[Any]] | Callable[[], _AdaptedCollectionProtocol]) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.collections.prepare_instrumentation.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.mapped_table",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 414,
+        "first_line": "attribute sqlalchemy.orm.Mapper.(#page=252)mapped_table",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.mapped_table.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.commit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 439,
+        "first_line": "commit(#page=643)()Flush pending changes and commit the current transaction.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.commit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 120.11,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.is_modified",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 413,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)is_modified(instance: object(#page=733), include_collections: bool = True) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.is_modified.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.close_all_sessions",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 266,
+        "first_line": "function sqlalchemy.orm.close_all_sessions() \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.close_all_sessions.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.make_transient_to_detached",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 231,
+        "first_line": "function sqlalchemy.orm.make_transient_to_detached(instance: object(#page=733)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.make_transient_to_detached.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.session",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 474,
+        "first_line": "property session:  Session(#page=633) | None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceState.session.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.76,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.iterate_properties",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 413,
+        "first_line": "property iterate_properties",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Mapper.iterate_properties.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.02,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.get_transaction",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 409,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)get_transaction() \\t o SessionTransaction(#page=657) | None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.get_transaction.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.merge",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 421,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)merge(instance: _O, *, load: bool = True, options: Sequence(#page=1508)[ORMOption] | None = None) \\t o _O",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.merge.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.ColumnProperty.Comparator",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 495,
+        "first_line": "class Comparator",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.ColumnProperty.Comparator.txt"
+      },
+      "match_type": "exact",
+      "match_score": 139.8,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.execute",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 370,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)execute(statement: Executable(#page=1211), params: _CoreAnyExecuteParams | None = None, *, execution_options: OrmExecuteOptionsParameter = {}, bind_arguments: _BindArguments | None = None, _parent_execute_state: Any | None = None, _add_event: Any | None = None) \\t o",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.execute.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.History",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "class sqlalchemy.orm.attributes.History",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.attributes.History.txt"
+      },
+      "match_type": "exact",
+      "match_score": 140.11,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEventToken",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 500,
+        "first_line": "class sqlalchemy.orm.AttributeEventToken",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.AttributeEventToken.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 79.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.expunge_all",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 372,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)expunge_all() \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.expunge_all.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.62,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.prepare",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 405,
+        "first_line": "prepare(#page=654)()Prepare the current transaction in progress for two",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.prepare.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.63,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.CompositeProperty",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents.init_scalar",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 489,
+        "first_line": "method sqlalchemy.orm.AttributeEvents.(#page=705)init_scalar(target: _O, value: _T, dict_: Dict[Any, Any]) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.AttributeEvents.init_scalar.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.47,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedAsDataclass",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 375,
+        "first_line": "class sqlalchemy.orm.MappedAsDataclass",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.MappedAsDataclass.txt"
+      },
+      "match_type": "exact",
+      "match_score": 136.88,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.mapped_column",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 353,
+        "first_line": "function sqlalchemy.orm.mapped_column(__name_pos: str | _TypeEngineArgument[Any] | SchemaEventTarget(#page=1858) | None = None, __type_pos: _TypeEngineArgument[Any] | SchemaEventTarget(#page=1858) | None = None, *args: SchemaEventTarget(#page=1858), init: _NoArg | bool = _NoArg.NO_ARG, repr: _NoArg | bool = _NoArg.NO_ARG, default: Any | None = _NoArg.NO_ARG, default_factory: _NoArg | Callable[[], _T] = _NoArg.NO_ARG, compare: _NoArg | bool = _NoArg.NO_ARG, kw_only: _NoArg | bool = _NoArg.NO_ARG, hash: _NoArg | bool | None = _NoArg.NO_ARG, nullable: bool | Literal[SchemaConst.NULL_UNSPECIFIED] | None = SchemaConst.NULL_UNSPECIFIED, primary_key: bool | None = False, deferred: _NoArg | bool = _NoArg.NO_ARG, deferred_group: str | None = None, deferred_raiseload: bool | None = None, use_existing_column: bool = False, name: str | None = None, type_: _TypeEngineArgument[Any] | None = None, autoincrement: _AutoIncrementType = 'auto', doc: str | None = None, key: str | None = None, index: bool | None = None, unique: bool | None = None, info: _InfoType | None = None, onupdate: Any | None = None, insert_default: Any | None = _NoArg.NO_ARG, server_default: _ServerDefaultArgument | None = None, server_onupdate: _ServerOnUpdateArgument | None = None, active_history: bool = False, quote: bool | None = None, system: bool = False, comment: str | None = None, sort_order: _NoArg | int = _NoArg.NO_ARG, dataclass_metadata: _NoArg | Mapping[Any, Any] | None = _NoArg.NO_ARG, **kw: Any) \\t o MappedColumn(#page=736)[Any]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.mapped_column.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.07,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeState.history",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 492,
+        "first_line": "property history:  History(#page=664)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.AttributeState.history.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 64.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.detached",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 477,
+        "first_line": "property detached:  bool",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.InstanceState.detached.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 82.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SynonymProperty",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 246,
+        "first_line": "class sqlalchemy.orm.SynonymProperty",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SynonymProperty.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 82.33,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.ext.mutable.flag_modified",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 101,
+        "first_line": "function sqlalchemy.orm.attributes.flag_modified(instance: object(#page=733), key: str) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.ext.mutable.flag_modified.txt"
+      },
+      "match_type": "exact",
+      "match_score": 115.12,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.clear_mappers",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 396,
+        "first_line": "function sqlalchemy.orm.clear_mappers() \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.clear_mappers.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.51,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.configure_mappers",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 485,
+        "first_line": "function sqlalchemy.orm.configure_mappers() \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.configure_mappers.txt"
+      },
+      "match_type": "exact",
+      "match_score": 129.51,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.delete",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 377,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)delete(instance: object(#page=733)) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.delete.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.63,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.connection",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 365,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)connection(bind_arguments: _BindArguments | None = None, execution_options: CoreExecuteOptionsParameter | None = None) \\t o Connection(#page=1739)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.connection.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 50.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.InstrumentedDict",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 207,
+        "first_line": "class sqlalchemy.orm.collections.InstrumentedDict",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.collections.InstrumentedDict.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.declarative_base",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 538,
+        "first_line": "function sqlalchemy.orm.declarative_base(*, metadata: MetaData(#page=1438) | None = None, mapper: Optional[Callable[..., Mapper[Any]]]=None, cls: Type[Any] = <class 'object'>, name: str = 'Base', class_registry: clsregistry._ClsRegistryType | None = None, type_annotation_map: _TypeAnnotationMapType | None = None, constructor: Callable[..., None]=<function _declarative_constructor>, metaclass: Type[Any] = <class 'sqlalchemy.orm.decl_api.DeclarativeMeta'>) \\t o Any Construct a base class for declarative class definitions.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.declarative_base.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.07,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Relationship",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 491,
+        "first_line": "class sqlalchemy.orm.Relationship",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Relationship.txt"
+      },
+      "match_type": "exact",
+      "match_score": 139.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.sessionmaker.begin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 438,
+        "first_line": "begin(#page=627)()Produce a context manager that both provides a new",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.sessionmaker.begin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 135.13,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.CollectionAdapter",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.map_imperatively",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "method sqlalchemy.orm.registry.(#page=271)map_imperatively(class_: Type[_O], local_table: FromClause(#page=1215) | None = None, **kw: Any) \\t o Mapper(#page=252)[_O]",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.registry.map_imperatively.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 77.05,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.declared_attr.cascading",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 461,
+        "first_line": "attribute sqlalchemy.orm.declared_attr.(#page=243)cascading",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.declared_attr.cascading.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 78.52,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.composite",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 506,
+        "first_line": "class sqlalchemy.orm.Composite",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.composite-function.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 82.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.WriteOnlyCollection.insert",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 410,
+        "first_line": "method sqlalchemy.orm.WriteOnlyCollection.(#page=331)insert() \\t o Insert(#page=1334)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.WriteOnlyCollection.insert.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.83,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.get",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 383,
+        "first_line": "method sqlalchemy.orm.Session.(#page=633)get(entity: _EntityBindKey[_O], ident: _PKIdentityArgument, *, options: Sequence(#page=1508)[ORMOption] | None = None, populate_existing: bool = False, with_for_update: ForUpdateParameter = None, identity_token: Any | None = None, execution_options: OrmExecuteOptionsParameter = {}, bind_arguments: _BindArguments | None = None) \\t o _O | None Return an instance based on the given primary key identifier, or None if not found.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.get.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 85.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.deleted",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 384,
+        "first_line": "property deleted:  IdentitySet",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.deleted.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 90.11,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 310,
+        "first_line": "class sqlalchemy.orm.registry",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.registry.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 84.55,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.before_flush",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 505,
+        "first_line": "method sqlalchemy.orm.SessionEvents.(#page=665)before_flush(session: Session(#page=633), flush_context: UOWTransaction(#page=778), instances: Sequence(#page=1508)[_O] | None) \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.SessionEvents.before_flush.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.98,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.close_all",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 357,
+        "first_line": "classmethod sqlalchemy.orm.Session.(#page=633)close_all() \\t o None",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\sqlalchemy\\v_2.0.45\\per_member\\sqlalchemy.orm.Session.close_all.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.14,
+      "match_category": "lexical"
+    }
+  ],
+  "missing_names": [
+    "sqlalchemy.orm.RelationshipProperty.Comparator",
+    "sqlalchemy.orm.ClassManager",
+    "sqlalchemy.orm.CompositeProperty",
+    "sqlalchemy.orm.attributes.CollectionAdapter"
+  ]
+}

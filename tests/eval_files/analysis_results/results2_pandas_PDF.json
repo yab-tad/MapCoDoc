@@ -1,0 +1,3344 @@
+{
+  "summary": {
+    "total_members": 262,
+    "extracted": 235,
+    "missing": 27,
+    "coverage_pct": 89.7,
+    "match_breakdown": {
+      "lexical": 153,
+      "semantic": 20,
+      "hybrid": 0,
+      "fallback": 62,
+      "unknown": 0
+    }
+  },
+  "members": [
+    {
+      "api_name": "pandas.Series.notna",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 771,
+        "first_line": "Series.notna()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.notna.txt"
+      },
+      "match_type": "exact",
+      "match_score": 113.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.errors.UnsupportedFunctionCall",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Index.reindex",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 955,
+        "first_line": "Index.reindex(target, method=None, level=None, limit=None, tolerance=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.reindex.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_clipboard",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 79,
+        "first_line": "pandas.read_clipboard",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_clipboard.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.75,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.aggregate",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 766,
+        "first_line": "Series.aggregate(func=None, axis=0, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.aggregate.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.mean",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 850,
+        "first_line": "DataFrame.mean(axis=0, skipna=True, numeric_only=False, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.mean.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.52,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.PeriodDtype.freq",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 964,
+        "first_line": "property PeriodDtype.freq",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.PeriodDtype.freq.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 89.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.radd",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 912,
+        "first_line": "DataFrame.radd(other, axis='columns', level=None, fill_value=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.radd.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.truediv",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 915,
+        "first_line": "DataFrame.truediv(other, axis='columns', level=None, fill_value=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.truediv.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 113.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Index.rename",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1016,
+        "first_line": "pandas.Index.rename",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.rename.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.arrays.IntervalArray",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 968,
+        "first_line": "class pandas.arrays.IntervalArray(data, closed=None, dtype=None, copy=False, verify_integrity=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.arrays.IntervalArray.txt"
+      },
+      "match_type": "exact",
+      "match_score": 137.37,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.isna",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 802,
+        "first_line": "Series.isna()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.isna.txt"
+      },
+      "match_type": "exact",
+      "match_score": 113.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_fwf",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "pandas.read_fwf",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_fwf.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.19,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.isin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 754,
+        "first_line": "Series.isin(values)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.isin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.arrays.FloatingArray",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 801,
+        "first_line": "class pandas.arrays.FloatingArray(values, mask, copy=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.arrays.FloatingArray.txt"
+      },
+      "match_type": "exact",
+      "match_score": 115.84,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.RangeIndex.start",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.DatetimeIndex.snap",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 739,
+        "first_line": "DatetimeIndex.snap(freq='S')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DatetimeIndex.snap.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.55,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.get_indexer_for",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 354,
+        "first_line": "pandas.Index.get_indexer_for",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.get_indexer_for.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.nsmallest",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 845,
+        "first_line": "DataFrame.nsmallest(n, columns, keep='first')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.nsmallest.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.49,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.api.typing.Window.std",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 772,
+        "first_line": "12620(https://github.com/pandas-dev/pandas/issues/12620))",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Window.std.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -22.25,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.DataFrame.sort_index",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 762,
+        "first_line": "DataFrame.sort_index(*, axis=0, level=None, ascending=True, inplace=False, kind='quicksort', na_position='last', sort_remaining=True, ignore_index=False, key=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.sort_index.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.53,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.errors.NumExprClobberingError",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "class pandas.arrays.NumpyExtensionArray(values, copy=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.NumExprClobberingError.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.22,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.DataFrame.all",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 924,
+        "first_line": "DataFrame.all(axis=0, bool_only=False, skipna=True, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.all.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.52,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.arrays.ArrowStringArray",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 186,
+        "first_line": "class pandas.arrays.ArrowStringArray(values)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.arrays.ArrowStringArray.txt"
+      },
+      "match_type": "exact",
+      "match_score": 129.88,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.sort_values",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 869,
+        "first_line": "pandas.Index.sort_values",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.sort_values.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.67,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.isin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 666,
+        "first_line": "DataFrame.isin(values)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.isin.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 104.99,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.autocorr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1001,
+        "first_line": "Series.autocorr(lag=1)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.autocorr.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.sub",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 874,
+        "first_line": "Series.sub(other, level=None, fill_value=None, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.sub.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.81,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.corr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 863,
+        "first_line": "DataFrame.corr(method='pearson', min_periods=1, numeric_only=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.corr.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 108.03,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.api.typing.Rolling.var",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "• Bug in DataFrame.resample() and Series.resample() losing time zone when resampling empty data (GH(https://github.com/pandas-dev/pandas/issues/53664)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Rolling.var.txt"
+      },
+      "match_type": "regex",
+      "match_score": 40.75,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.droplevel",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 985,
+        "first_line": "pandas.Index.droplevel",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.droplevel.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.15,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.values",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1031,
+        "first_line": "property Index.values",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.values.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 90.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.IntervalIndex.from_breaks",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.to_excel",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.apply",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.highlight_max",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.errors.InvalidVersion",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 10,
+        "first_line": "pandas.show_versions(as_json=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.InvalidVersion.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.api.typing.Expanding.apply",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 331,
+        "first_line": "Rolling.apply(func, raw=False, engine=None, engine_kwargs=None, args=None, kwargs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Expanding.apply.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -18.12,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Index.has_duplicates",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 980,
+        "first_line": "property Index.has_duplicates",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.has_duplicates.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 85.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.bdate_range",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 241,
+        "first_line": "pandas.bdate_range(start=None, end=None, periods=None, freq='B', tz=None, normalize=True, name=None, weekmask=None, holidays=None, inclusive='both', **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.bdate_range.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.43,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.cummin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1005,
+        "first_line": "DataFrame.cummin(axis=None, skipna=True, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.cummin.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 107.03,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.set_properties",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Index.take",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1031,
+        "first_line": "Index.take(indices, axis=0, allow_fill=True, fill_value=None, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.take.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.name",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 827,
+        "first_line": "property Series.name",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.name.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_period",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 707,
+        "first_line": "DataFrame.to_period(freq=None, axis=0, copy=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_period.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.03,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.period_range",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 175,
+        "first_line": "pandas.period_range(start=None, end=None, periods=None, freq=None, name=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.period_range.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.43,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.equals",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 964,
+        "first_line": "Index.equals(other)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.equals.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.cummin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 983,
+        "first_line": "Series.cummin(axis=None, skipna=True, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.cummin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 106.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.MultiIndex.get_loc_level",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 337,
+        "first_line": "MultiIndex.get_loc_level(key, level=0, drop_level=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.get_loc_level.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.88,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas._typing.ExtensionArray",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas._typing.ExtensionArray.txt"
+      },
+      "match_type": "fallback",
+      "match_score": 18.48,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.errors.LossySetitemError",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 62,
+        "first_line": "pandas.api.indexers.check_array_indexer(array, indexer)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.LossySetitemError.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.22,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Series.corr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 998,
+        "first_line": "Series.corr(other, method='pearson', min_periods=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.corr.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_xml",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 424,
+        "first_line": "pandas.read_xml",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_xml.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.59,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.skew",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 861,
+        "first_line": "Series.skew(axis=0, skipna=True, numeric_only=False, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.skew.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Categorical.categories",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 763,
+        "first_line": "property Categorical.categories",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Categorical.categories.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 89.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.mul",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 901,
+        "first_line": "DataFrame.mul(other, axis='columns', level=None, fill_value=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.mul.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 113.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.set_axis",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 784,
+        "first_line": "DataFrame.set_axis(labels, *, axis=0, copy=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.set_axis.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.03,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.errors.IncompatibilityWarning",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "pandas.api.extensions.register_extension_dtype(cls)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.IncompatibilityWarning.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.22,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Series.keys",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 799,
+        "first_line": "Series.keys()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.keys.txt"
+      },
+      "match_type": "exact",
+      "match_score": 113.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas._typing.ExtensionDtype",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 564,
+        "first_line": "ExtensionDtype (GH 54063(https://github.com/pandas-dev/pandas/issues/54063))",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas._typing.ExtensionDtype.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 45.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.sem",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 871,
+        "first_line": "Series.sem(axis=None, skipna=True, ddof=1, numeric_only=False, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.sem.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.radd",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 901,
+        "first_line": "Series.radd(other, level=None, fill_value=None, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.radd.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.83,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.select_dtypes",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 870,
+        "first_line": "DataFrame.select_dtypes(include=None, exclude=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.select_dtypes.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.52,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.from_dummies",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 594,
+        "first_line": "pandas.from_dummies(data, sep=None, default_category=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.from_dummies.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.96,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.MultiIndex.dtypes",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 840,
+        "first_line": "MultiIndex.dtypes",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.dtypes.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 80.84,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DatetimeIndex.indexer_at_time",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 160,
+        "first_line": "DatetimeIndex.indexer_at_time(time, asof=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DatetimeIndex.indexer_at_time.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.56,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.dropna",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1005,
+        "first_line": "Index.dropna(how='any')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.dropna.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.itertuples",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 839,
+        "first_line": "DataFrame.itertuples(index=True, name='Pandas')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.itertuples.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 106.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.api.typing.Rolling.rank",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 69,
+        "first_line": "Rolling.rank(method='average', ascending=True, pct=False, numeric_only=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Rolling.rank.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 91.92,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.HDFStore.groups",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.api.typing.ExponentialMovingWindow.corr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Apply a mapping correspondence on a Series(#page=1249) .",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.ExponentialMovingWindow.corr.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 0.84,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Index.isin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 162,
+        "first_line": "Index.isin(values, level=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.isin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.value_counts",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 784,
+        "first_line": "DataFrame.value_counts(subset=None, normalize=False, sort=True, ascending=False, dropna=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.value_counts.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 106.01,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Index.is_monotonic_decreasing",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1005,
+        "first_line": "property Index.is_monotonic_decreasing",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.is_monotonic_decreasing.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 85.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_html",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 336,
+        "first_line": "pandas.read_html",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_html.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.62,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.MultiIndex.nlevels",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 866,
+        "first_line": "property MultiIndex.nlevels",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.nlevels.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.83,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.rename_axis",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 853,
+        "first_line": "pandas.Series.rename_axis",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.rename_axis.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 70.34,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.factorize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 490,
+        "first_line": "pandas.factorize(values, sort=False, use_na_sentinel=True, size_hint=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.factorize.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.47,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 280,
+        "first_line": "dtypes  (pandas.DataFrame property ), 1759(#page=1771)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 10.91,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.DatetimeTZDtype",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 862,
+        "first_line": "class pandas.DatetimeTZDtype(unit='ns', tz=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DatetimeTZDtype.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.87,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.errors.PossiblePrecisionLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "pandas.api.extensions.register_extension_dtype(cls)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.PossiblePrecisionLoss.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.DataFrame.cov",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 949,
+        "first_line": "DataFrame.cov(min_periods=None, ddof=1, numeric_only=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.cov.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.drop",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 938,
+        "first_line": "Series.drop(labels=None, *, axis=0, index=None, columns=None, level=None, inplace=False, errors='raise')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.drop.txt"
+      },
+      "match_type": "exact",
+      "match_score": 113.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.api.typing.Rolling.max",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 681,
+        "first_line": "Rolling.max(numeric_only=False, *args, engine=None, engine_kwargs=None, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Rolling.max.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 41.93,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.api.typing.Rolling.apply",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 331,
+        "first_line": "Rolling.apply(func, raw=False, engine=None, engine_kwargs=None, args=None, kwargs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Rolling.apply.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 91.91,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.unique",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 353,
+        "first_line": "pandas.unique(values)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.unique.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.92,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.api.indexers.check_array_indexer",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 62,
+        "first_line": "pandas.api.indexers.check_array_indexer(array, indexer)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.indexers.check_array_indexer.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.48,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.add",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 879,
+        "first_line": "Series.add(other, level=None, fill_value=None, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.add.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.notnull",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 699,
+        "first_line": "DataFrame.notnull()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.notnull.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 111.51,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.from_records",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 662,
+        "first_line": "DataFrame.from_records(#page=2195)       (data[, index, ...])          Convert structured or record ndarray to DataFrame.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.from_records.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 56.73,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.swaplevel",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 888,
+        "first_line": "DataFrame.swaplevel(i=-2, j=-1, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.swaplevel.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_parquet",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "pandas.DataFrame.to_parquet",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_parquet.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 57.71,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.median",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 839,
+        "first_line": "DataFrame.median(axis=0, skipna=True, numeric_only=False, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.median.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.transform",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 711,
+        "first_line": "DataFrame.transform(func, axis=0, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.transform.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 106.51,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Index.inferred_type",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 962,
+        "first_line": "Index.inferred_type",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.inferred_type.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 78.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_gbq",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 73,
+        "first_line": "pandas.read_gbq(query, project_id=None, index_col=None, col_order=None, reauth=False, auth_local_webserver=True, dialect=None, location=None, configuration=None, credentials=None, use_bqstorage_api=None, max_results=None, progress_bar_type=None) Load data from Google BigQuery.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_gbq.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.74,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.array",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 595,
+        "first_line": "pandas.array(data, dtype=None, copy=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.array.txt"
+      },
+      "match_type": "exact",
+      "match_score": 119.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_sql",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 297,
+        "first_line": "pandas.read_sql",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_sql.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 78.61,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.fillna",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1015,
+        "first_line": "pandas.Index.fillna",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.fillna.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.HDFStore.keys",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.DataFrame.prod",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 859,
+        "first_line": "DataFrame.prod(axis=0, skipna=True, numeric_only=False, min_count=0, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.prod.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 108.53,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.MultiIndex.append",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 103,
+        "first_line": "MultiIndex.append(other)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.append.txt"
+      },
+      "match_type": "exact",
+      "match_score": 91.84,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Categorical.ordered",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 658,
+        "first_line": "property Categorical.ordered",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Categorical.ordered.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 89.34,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.json_normalize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 421,
+        "first_line": "pandas.json_normalize(data, record_path=None, meta=None, meta_prefix=None, record_prefix=None, errors='raise', sep='.', max_level=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.json_normalize.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.54,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.pow",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 916,
+        "first_line": "DataFrame.pow(other, axis='columns', level=None, fill_value=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.pow.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 113.03,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Index",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 770,
+        "first_line": "class pandas.Index(data=None, dtype=None, copy=False, name=None, tupleize_cols=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.txt"
+      },
+      "match_type": "exact",
+      "match_score": 140.19,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.use",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Categorical.__array__",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 539,
+        "first_line": "Categorical.__array__(dtype=None, copy=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Categorical.__array__.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.37,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.util.hash_pandas_object",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "pandas.util.hash_pandas_object",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.util.hash_pandas_object.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.48,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.errors.AbstractMethodError",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "This class does not inherit from abc.ABCMeta for performance reasons. Methods and properties required by the       interface raise pandas.errors.AbstractMethodError and no register method is provided for registering        virtual subclasses.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.AbstractMethodError.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 2.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.isna",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 371,
+        "first_line": "pandas.isna(obj)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.isna.txt"
+      },
+      "match_type": "exact",
+      "match_score": 112.66,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.melt",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 546,
+        "first_line": "DataFrame.melt(id_vars=None, value_vars=None, var_name=None, value_name='value', col_level=None, ignore_index=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.melt.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 112.69,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.CategoricalIndex.equals",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.arrays.BooleanArray",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "class pandas.arrays.BooleanArray(values, mask, copy=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.arrays.BooleanArray.txt"
+      },
+      "match_type": "exact",
+      "match_score": 130.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.ExcelFile",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 450,
+        "first_line": "class pandas.ExcelFile(path_or_buffer, engine=None, storage_options=None, engine_kwargs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.ExcelFile.txt"
+      },
+      "match_type": "exact",
+      "match_score": 132.9,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.PeriodIndex.minute",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 342,
+        "first_line": "property PeriodIndex.minute",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.PeriodIndex.minute.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 86.09,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.api.extensions.register_series_accessor",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 72,
+        "first_line": "pandas.api.extensions.register_series_accessor(name)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.extensions.register_series_accessor.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.81,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.union",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 725,
+        "first_line": "pandas.Index.union",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.union.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.compare",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 824,
+        "first_line": "Series.compare(other, align_axis=1, keep_shape=False, keep_equal=False, result_names=('self', 'other'))",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.compare.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.eval",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 63,
+        "first_line": "pandas.eval(expr, parser='pandas', engine=None, local_dict=None, global_dict=None, resolvers=(), level=0, target=None, inplace=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.eval.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.73,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.NamedAgg",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 612,
+        "first_line": "NamedAgg(#page=2841)  (column, aggfunc)                               Helper for column specific aggregation with control over",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.NamedAgg.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 30.09,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.errors.PossibleDataLossError",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Series.pop",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 782,
+        "first_line": "Series.pop(item)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.pop.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_sql_query",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 378,
+        "first_line": "pandas.read_sql_query",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_sql_query.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.61,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.append",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 820,
+        "first_line": "Index.append(other)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.append.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.drop_duplicates",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 974,
+        "first_line": "Index.drop_duplicates(*, keep='first')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.drop_duplicates.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.66,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.case_when",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 939,
+        "first_line": "Series.case_when(caselist)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.case_when.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.any",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 947,
+        "first_line": "DataFrame.any(*, axis=0, bool_only=False, skipna=True, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.any.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 106.02,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.pivot_table",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 613,
+        "first_line": "pandas.pivot_table",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.pivot_table.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.97,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.set_caption",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.IntervalIndex.from_arrays",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.StringDtype",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 131,
+        "first_line": "class pandas.StringDtype(storage=None, na_value=<NA>)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.StringDtype.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 79.86,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.__dataframe__",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 562,
+        "first_line": "DataFrame.__dataframe__(nan_as_null=False, allow_copy=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.__dataframe__.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 109.85,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.errors.DtypeWarning",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "pandas.api.extensions.register_extension_dtype(cls)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.DtypeWarning.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.25,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Series.array",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 988,
+        "first_line": "property Series.array",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.array.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.stack",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 885,
+        "first_line": "pandas.DataFrame.stack",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.stack.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 70.52,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.MultiIndex.from_product",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 876,
+        "first_line": "pandas.MultiIndex.from_product",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.from_product.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 82.85,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.all",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1004,
+        "first_line": "Index.all(*args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.all.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.UInt32Dtype",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1159,
+        "first_line": "UInt32Dtype()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.UInt32Dtype.txt"
+      },
+      "match_type": "exact",
+      "match_score": 139.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.errors.UnsortedIndexError",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.DataFrame.to_gbq",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 394,
+        "first_line": "pandas.DataFrame.to_gbq",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_gbq.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 70.04,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_feather",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 5,
+        "first_line": "DataFrame.to_feather(path, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_feather.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 92.29,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.HDFStore.info",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Float64Dtype",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 805,
+        "first_line": "Float64Dtype()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Float64Dtype.txt"
+      },
+      "match_type": "exact",
+      "match_score": 134.85,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.nlargest",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 782,
+        "first_line": "DataFrame.nlargest(n, columns, keep='first')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.nlargest.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.51,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.repeat",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 917,
+        "first_line": "Series.repeat(repeats, axis=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.repeat.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.errors.InvalidIndexError",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 570,
+        "first_line": "InvalidIndexError (GH 35858(https://github.com/pandas-dev/pandas/issues/35858))",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.InvalidIndexError.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 39.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.rmod",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 967,
+        "first_line": "DataFrame.rmod(other, axis='columns', level=None, fill_value=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.rmod.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.01,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.MultiIndex.to_frame",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 837,
+        "first_line": "pandas.MultiIndex.to_frame",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.to_frame.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.86,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.PeriodIndex",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 723,
+        "first_line": "pandas.PeriodIndex class pandas.PeriodIndex(data=None, ordinal=None, freq=None, dtype=None, copy=False, name=None,                              **fields)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.PeriodIndex.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 12.13,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.api.typing.Expanding.aggregate",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 259,
+        "first_line": "Rolling.aggregate(func, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Expanding.aggregate.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -18.14,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.DataFrame.dot",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 919,
+        "first_line": "DataFrame.dot(other)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.dot.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.0,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.set_tooltips",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.DataFrame.dropna",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 751,
+        "first_line": "pandas.DataFrame.dropna",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.dropna.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 73.01,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.lt",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1047,
+        "first_line": "DataFrame.lt(other, axis='columns', level=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.lt.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 107.99,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.api.typing.Rolling.kurt",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 390,
+        "first_line": "Rolling.kurt(numeric_only=False)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Rolling.kurt.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 91.9,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.errors.InvalidComparison",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 49,
+        "first_line": "pandas.api.extensions.register_index_accessor(name)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.errors.InvalidComparison.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 1.23,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_stata",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 208,
+        "first_line": "DataFrame.to_stata(path, *, convert_dates=None, write_index=True, byteorder=None, time_stamp=None, data_label=None, variable_labels=None, version=114, convert_strl=None, compression='infer', storage_options=None, value_labels=None) Export DataFrame object to Stata dta format.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_stata.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 92.63,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.swaplevel",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 901,
+        "first_line": "Series.swaplevel(i=-2, j=-1, copy=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.swaplevel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.CategoricalIndex.map",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.api.typing.Expanding.count",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 825,
+        "first_line": "pandas.DataFrame.count(#page=1937)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Expanding.count.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -18.17,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.pivot",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 683,
+        "first_line": "pandas.pivot",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.pivot.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.93,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.difference",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 637,
+        "first_line": "pandas.Index.difference",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.difference.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.16,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.ArrowDtype",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 863,
+        "first_line": "ArrowDtype(#page=2215)(pyarrow_dtype)                         An ExtensionDtype for PyArrow data types.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.ArrowDtype.txt"
+      },
+      "match_type": "exact",
+      "match_score": 109.9,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.mod",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 918,
+        "first_line": "DataFrame.mod(other, axis='columns', level=None, fill_value=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.mod.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 114.01,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.mul",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 877,
+        "first_line": "Series.mul(other, level=None, fill_value=None, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.mul.txt"
+      },
+      "match_type": "exact",
+      "match_score": 105.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.duplicated",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 965,
+        "first_line": "Index.duplicated(keep='first')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.duplicated.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.67,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.isnull",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 804,
+        "first_line": "Series.isnull()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.isnull.txt"
+      },
+      "match_type": "exact",
+      "match_score": 110.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.update",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 780,
+        "first_line": "DataFrame.update(other, join='left', overwrite=True, filter_func=None, errors='ignore')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.update.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.0,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DatetimeIndex.tz_convert",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 731,
+        "first_line": "DatetimeIndex.tz_convert(tz)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DatetimeIndex.tz_convert.txt"
+      },
+      "match_type": "exact",
+      "match_score": 112.04,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DatetimeIndex",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 941,
+        "first_line": "pandas.DatetimeIndex class pandas.DatetimeIndex(data=None, freq=<no_default>, tz=<no_default>, normalize=<no_default>,",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DatetimeIndex.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": 11.59,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.set_sticky",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.api.typing.Expanding.max",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 681,
+        "first_line": "Rolling.max(numeric_only=False, *args, engine=None, engine_kwargs=None, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Expanding.max.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -19.12,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Series.truediv",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 895,
+        "first_line": "Series.truediv(other, level=None, fill_value=None, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.truediv.txt"
+      },
+      "match_type": "exact",
+      "match_score": 105.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_parquet",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 180,
+        "first_line": "pandas.read_parquet",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_parquet.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.67,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.reindex",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 720,
+        "first_line": "pandas.DataFrame.reindex",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.reindex.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 75.55,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.api.typing.Rolling.min",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 749,
+        "first_line": "Rolling.min(numeric_only=False, engine=None, engine_kwargs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Rolling.min.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 91.92,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.nsmallest",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 901,
+        "first_line": "Series.nsmallest(n=5, keep='first')",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.nsmallest.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.77,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.identical",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 1003,
+        "first_line": "pandas.Index.identical",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.identical.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 77.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.min",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 932,
+        "first_line": "Series.min(axis=0, skipna=True, numeric_only=False, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.min.txt"
+      },
+      "match_type": "exact",
+      "match_score": 107.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.IntervalIndex.length",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.highlight_quantile",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.errors.ValueLabelTypeMismatch",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.api.typing.Expanding.sum",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 810,
+        "first_line": "Rolling.sum(numeric_only=False, engine=None, engine_kwargs=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.typing.Expanding.sum.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -18.11,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Series.to_frame",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 703,
+        "first_line": "pandas.Series.to_frame",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.to_frame.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.79,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.cumsum",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 939,
+        "first_line": "Series.cumsum(axis=None, skipna=True, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.cumsum.txt"
+      },
+      "match_type": "exact",
+      "match_score": 106.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_numpy",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 995,
+        "first_line": "pandas.DataFrame.to_numpy",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_numpy.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 70.23,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.MultiIndex.levshape",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 854,
+        "first_line": "property MultiIndex.levshape",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.levshape.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.83,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.style",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 10,
+        "first_line": "property DataFrame.style",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.style.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 84.0,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.TimedeltaIndex",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Index.notna",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 976,
+        "first_line": "pandas.Index.notna",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.notna.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 81.64,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.gt",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 846,
+        "first_line": "Series.gt(other, level=None, fill_value=None, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.gt.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.79,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.CategoricalDtype.categories",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 806,
+        "first_line": "property CategoricalDtype.categories",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.CategoricalDtype.categories.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 89.34,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.combine_first",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 858,
+        "first_line": "Series.combine_first(other)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.combine_first.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.79,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.to_string",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 329,
+        "first_line": "Series.to_string(buf=None, na_rep='NaN', float_format=None, header=True, index=True, length=False, dtype=False, name=False, max_rows=None, min_rows=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.to_string.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.read_csv",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 334,
+        "first_line": "pandas.read_csv",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.read_csv.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.2,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.argmin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 987,
+        "first_line": "Index.argmin(axis=None, skipna=True, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.argmin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.api.indexers.FixedForwardWindowIndexer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 240,
+        "first_line": "FixedForwardWindowIndexer (class in pandas.api.in- freqstr (pandas.tseries.offsets.Day attribute), 2732(#page=2744) dexers), 2828(#page=2840) freqstr (pandas.tseries.offsets.Easter attribute), 2720(#page=2732)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.api.indexers.FixedForwardWindowIndexer.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 33.68,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.min",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 960,
+        "first_line": "Index.min(axis=None, skipna=True, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.min.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.67,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.axes",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 880,
+        "first_line": "property DataFrame.axes",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.axes.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 83.98,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.melt",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 708,
+        "first_line": "pandas.melt(frame, id_vars=None, value_vars=None, var_name=None, value_name='value', col_level=None, ignore_index=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.melt.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.44,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_markdown",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 74,
+        "first_line": "pandas.DataFrame.to_markdown",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_markdown.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 70.03,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.to_html",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Grouper",
+      "type": "class",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.ExcelFile.sheet_names",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 381,
+        "first_line": "property ExcelFile.sheet_names",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.ExcelFile.sheet_names.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.MultiIndex.remove_unused_levels",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 564,
+        "first_line": "MultiIndex.remove_unused_levels()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.remove_unused_levels.txt"
+      },
+      "match_type": "exact",
+      "match_score": 114.87,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.shift",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 880,
+        "first_line": "Index.shift(periods=1, freq=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.shift.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.18,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.eval",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 953,
+        "first_line": "DataFrame.eval(expr, *, inplace=False, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.eval.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 111.34,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.var",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 833,
+        "first_line": "Series.var(axis=None, skipna=True, ddof=1, numeric_only=False, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.var.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.core.frame.Styler.from_custom_template",
+      "type": "method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Series.map",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 740,
+        "first_line": "Series.map(arg, na_action=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.map.txt"
+      },
+      "match_type": "exact",
+      "match_score": 106.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.loc",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 255,
+        "first_line": "DataFrame.loc() instead (GH 35224(https://github.com/pandas-dev/pandas/issues/35224))",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.loc.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 96.76,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.head",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 818,
+        "first_line": "Series.head(n=5)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.head.txt"
+      },
+      "match_type": "exact",
+      "match_score": 105.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.droplevel",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 769,
+        "first_line": "DataFrame.droplevel(level, axis=0)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.droplevel.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.01,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.TimedeltaIndex.inferred_freq",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "pandas.Series.pipe",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 867,
+        "first_line": "Series.pipe(func, *args, **kwargs)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.pipe.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.infer_objects",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 866,
+        "first_line": "Series.infer_objects(copy=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.infer_objects.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.resample",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 768,
+        "first_line": "pandas.Series.resample",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.resample.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 73.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.ffill",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 710,
+        "first_line": "pandas.Series.ffill",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.ffill.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.78,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.asof",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 849,
+        "first_line": "Series.asof(where, subset=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.asof.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.sample",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 237,
+        "first_line": "first() (pandas.core.resample.Resampler method), tribute), 2576(#page=2588) 3046(#page=3058) freqstr (pandas.tseries.offsets.CustomBusinessMonth-",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.sample.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -0.1,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.Series.to_latex",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 198,
+        "first_line": "pandas.Series.to_latex",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.to_latex.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.33,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.is_monotonic_decreasing",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 797,
+        "first_line": "property Series.is_monotonic_decreasing",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.is_monotonic_decreasing.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.81,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.size",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 924,
+        "first_line": "property Index.size",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.size.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 84.89,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.copy",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 883,
+        "first_line": "Series.copy(deep=True)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.copy.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.to_csv",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 595,
+        "first_line": "pandas.Series.to_csv",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.to_csv.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_latex",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 512,
+        "first_line": "pandas.DataFrame.to_latex",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_latex.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 57.08,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.swapaxes",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 885,
+        "first_line": "DataFrame.swapaxes(axis1, axis2, copy=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.swapaxes.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.01,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Index.ndim",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 937,
+        "first_line": "property Index.ndim",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.ndim.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 84.14,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.shape",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 992,
+        "first_line": "property Series.shape",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.shape.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 82.02,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.first_valid_index",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 851,
+        "first_line": "Series.first_valid_index()",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.first_valid_index.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.8,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.fillna",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 692,
+        "first_line": "pandas.Series.fillna",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.fillna.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 70.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.MultiIndex.get_indexer",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 476,
+        "first_line": "MultiIndex.get_indexer(target, method=None, limit=None, tolerance=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.MultiIndex.get_indexer.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.87,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.tail",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 941,
+        "first_line": "Series.tail(n=5)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.tail.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.ewm",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 844,
+        "first_line": "pandas.Series.ewm",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.ewm.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.33,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.tail",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 742,
+        "first_line": "DataFrame.tail(n=5)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.tail.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 106.0,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.replace",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 703,
+        "first_line": "pandas.DataFrame.replace",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.replace.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 69.73,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.last",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 768,
+        "first_line": "Series.last(offset)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.last.txt"
+      },
+      "match_type": "exact",
+      "match_score": 106.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.pad",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 787,
+        "first_line": "pandas.Series.pad",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.pad.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.29,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.to_sql",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 690,
+        "first_line": "pandas.Series.to_sql",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.to_sql.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.33,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.PeriodIndex.freqstr",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 404,
+        "first_line": "property PeriodIndex.freqstr",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.PeriodIndex.freqstr.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 85.1,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_sql",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 179,
+        "first_line": "pandas.DataFrame.to_sql",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_sql.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 57.09,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.iat",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 904,
+        "first_line": "property Series.iat",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.iat.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.26,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.to_json",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 607,
+        "first_line": "pandas.Series.to_json",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.to_json.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.is_monotonic_increasing",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 805,
+        "first_line": "property Series.is_monotonic_increasing",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.is_monotonic_increasing.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 76.82,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.shift",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 810,
+        "first_line": "pandas.Series.shift",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.shift.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 71.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.get",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 682,
+        "first_line": "DataFrame.get(key, default=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.get.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.0,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.DataFrame.asfreq",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 237,
+        "first_line": "fillna()  (pandas.core.resample.Resampler  method),  freqstr (pandas.tseries.offsets.BQuarterEnd attribute),",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.asfreq.txt"
+      },
+      "match_type": "semantic_window",
+      "match_score": -0.08,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "pandas.DataFrame.iloc",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 287,
+        "first_line": "iloc() and the DataFrame is using a RangeIndex (GH 53387(https://github.com/pandas-dev/pandas/issues/53387))",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.iloc.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 96.75,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.asfreq",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 824,
+        "first_line": "Series.asfreq(freq, method=None, how=None, normalize=False, fill_value=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.asfreq.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.32,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Index.searchsorted",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 858,
+        "first_line": "Index.searchsorted(value, side='left', sorter=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Index.searchsorted.txt"
+      },
+      "match_type": "exact",
+      "match_score": 111.17,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas._typing.SeriesGroupBy.groups",
+      "type": "inherited_property",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 241,
+        "first_line": "groups",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas._typing.SeriesGroupBy.groups.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 77.36,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.tz_convert",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 894,
+        "first_line": "Series.tz_convert(tz, axis=0, level=None, copy=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.tz_convert.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.mask",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 676,
+        "first_line": "pandas.DataFrame.mask",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.mask.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 70.53,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.to_numpy",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 900,
+        "first_line": "pandas.Series.to_numpy",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.to_numpy.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 71.31,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.describe",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 938,
+        "first_line": "DataFrame.describe(percentiles=None, include=None, exclude=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.describe.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 105.51,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.ndim",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 964,
+        "first_line": "property Series.ndim",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.ndim.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 77.28,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.backfill",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 769,
+        "first_line": "pandas.Series.backfill",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.backfill.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 69.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.filter",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 710,
+        "first_line": "Series.filter(items=None, like=None, regex=None, axis=None)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.filter.txt"
+      },
+      "match_type": "exact",
+      "match_score": 104.3,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.Series.at",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 942,
+        "first_line": "property Series.at",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.at.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 83.27,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "pandas.DataFrame.to_json",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 586,
+        "first_line": "pandas.DataFrame.to_json",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.DataFrame.to_json.txt"
+      },
+      "match_type": "cross_section_fallback",
+      "match_score": 75.46,
+      "match_category": "fallback"
+    },
+    {
+      "api_name": "pandas.Series.attrs",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 676,
+        "first_line": "property Series.attrs",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\pandas\\v_2.3.3\\per_member\\pandas.Series.attrs.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 75.79,
+      "match_category": "lexical"
+    }
+  ],
+  "missing_names": [
+    "pandas.errors.UnsupportedFunctionCall",
+    "pandas.RangeIndex.start",
+    "pandas.IntervalIndex.from_breaks",
+    "pandas.core.frame.Styler.to_excel",
+    "pandas.core.frame.Styler.apply",
+    "pandas.core.frame.Styler.highlight_max",
+    "pandas.core.frame.Styler.set_properties",
+    "pandas.HDFStore.groups",
+    "pandas.HDFStore.keys",
+    "pandas.core.frame.Styler.use",
+    "pandas.CategoricalIndex.equals",
+    "pandas.errors.PossibleDataLossError",
+    "pandas.core.frame.Styler.set_caption",
+    "pandas.IntervalIndex.from_arrays",
+    "pandas.errors.UnsortedIndexError",
+    "pandas.HDFStore.info",
+    "pandas.core.frame.Styler.set_tooltips",
+    "pandas.CategoricalIndex.map",
+    "pandas.core.frame.Styler.set_sticky",
+    "pandas.IntervalIndex.length",
+    "pandas.core.frame.Styler.highlight_quantile",
+    "pandas.errors.ValueLabelTypeMismatch",
+    "pandas.TimedeltaIndex",
+    "pandas.core.frame.Styler.to_html",
+    "pandas.Grouper",
+    "pandas.core.frame.Styler.from_custom_template",
+    "pandas.TimedeltaIndex.inferred_freq"
+  ]
+}

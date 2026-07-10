@@ -1,0 +1,247 @@
+api_name,member_type,fidelity_group,preprocessed_accurate,structured_vs_preprocessed,structured_vs_original_db,structured_vs_original_web,correct_doc,source_of_truth,scope,root_cause_layer,comment,verify_tier,verify_reason,sample_pick,human_verified,human_note,correct_doc_auto
+sklearn.decomposition.TruncatedSVD,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.load_breast_cancer,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.NeighborhoodComponentsAnalysis,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.fetch_20newsgroups_vectorized,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.IncrementalPCA.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LogisticRegressionCV.set_score_request,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""No-op.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.metrics.jaccard_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.fetch_rcv1,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.KNeighborsClassifier.predict_proba,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.sparsefuncs.inplace_column_scale,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.pairwise.chi2_kernel,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.kernel_approximation.SkewedChi2Sampler,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.ensemble.VotingClassifier,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.mixture.GaussianMixture,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.gaussian_process.kernels.Exponentiation.bounds,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns the log-transformed bounds on the theta.""",confidence_sample,yes_web,yes,yes,,yes
+sklearn.base.is_classifier,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.OrdinalEncoder,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.PolynomialFeatures,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.roc_curve,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.discriminant_analysis.LinearDiscriminantAnalysis,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.classification_report,function,clean,no,yes,no,no,no,web,missing_params,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Build a text report showing the main classification metrics.""",mode_sample,pdf_no:contamination,yes,no,,no
+sklearn.svm.SVC,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.check_scoring,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.coverage_error,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.average_precision_score,function,clean,no,yes,no,no,no,web,partial(0.40),retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Compute average precision (AP) from prediction scores.""",mode_sample,pdf_no:contamination,yes,no,,no
+sklearn.model_selection.LeavePGroupsOut,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.label_ranking_average_precision_score,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Compute ranking-based average precision.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.metrics.pairwise.paired_cosine_distances,function,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Compute the paired cosine distances between X and Y.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.linear_model.LogisticRegression,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.NMF,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_selection.SelectFromModel,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.load_wine,function,clean,yes,yes,yes,,yes,db,partial(0.50),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sklearn.model_selection.RepeatedKFold,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.precision_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.gaussian_process.kernels.Exponentiation.get_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.fetch_olivetti_faces,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.class_weight.compute_sample_weight,function,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Estimate sample weights by class for unbalanced datasets.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.feature_selection.SelectFwe,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.orthogonal_mp_gram,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.sparsefuncs.inplace_row_scale,function,clean,no,yes,no,no,no,web,partial(0.50),retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Inplace row scaling of a CSR or CSC matrix.""",mode_sample,pdf_no:contamination,no,no,,no
+sklearn.feature_selection.GenericUnivariateSelect,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_low_rank_matrix,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Generate a mostly low rank matrix with bell-shaped singular values.""",mode_sample,pdf_no:empty,yes,no,,no
+sklearn.datasets.make_checkerboard,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Generate an array with block checkerboard structure for biclustering.""",mode_sample,pdf_no:empty,yes,no,,no
+sklearn.base.ClusterMixin,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.ensemble.StackingClassifier,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sklearn.utils.as_float_array,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.isotonic.isotonic_regression,function,clean,yes,yes,yes,,yes,db,partial(0.20),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sklearn.utils.extmath.fast_logdet,function,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Compute logarithm of determinant of a square matrix.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.metrics.PrecisionRecallDisplay.from_estimator,method,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""PrecisionRecallDisplay.from_estimator""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.svm.OneClassSVM,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.compose.make_column_transformer,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.semi_supervised.SelfTrainingClassifier,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.normalized_mutual_info_score,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Normalized Mutual Information between two clusterings.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.utils.sparsefuncs.incr_mean_variance_axis,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.rand_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.TargetEncoder,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_selection.SequentialFeatureSelector,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.cluster.mean_shift,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.naive_bayes.ComplementNB,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.sort_graph_by_row_values,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.OneHotEncoder,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.base.ClassifierMixin,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.det_curve,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.ElasticNetCV,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sklearn.metrics.pairwise.pairwise_kernels,function,clean,no,yes,no,no,no,web,partial(0.33),retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Compute the kernel between arrays X and optional array Y.""",mode_sample,pdf_no:contamination,no,no,,no
+sklearn.linear_model.ridge_regression,function,clean,yes,yes,yes,,yes,db,partial(0.92),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sklearn.gaussian_process.kernels.Exponentiation.requires_vector_input,method,clean,no,yes,no,no,no,web,n/a,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Returns whether the kernel is defined on discrete structures.""",mode_sample,pdf_no:contamination,yes,no,Human-verified: preprocessed inaccurate - retrieved a same-named property from a DIFFERENT class/description; structured doc consequently inaccurate.,no
+sklearn.feature_extraction.DictVectorizer,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.ValidationCurveDisplay.from_estimator,method,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Create a validation curve display from an estimator.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.mixture.BayesianGaussianMixture,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_extraction.text.TfidfVectorizer,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_classification,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.multioutput.RegressorChain,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.KNeighborsClassifier.set_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sklearn.metrics.PredictionErrorDisplay,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.OrdinalEncoder.get_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.tree.export_text,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.svm.SVR,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.GroupKFold,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_extraction.image.reconstruct_from_patches_2d,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Reconstruct the image from all of its patches.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.utils.gen_even_slices,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.KFold,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_selection.SelectorMixin,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.shuffle,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.resample,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sklearn.utils.extmath.safe_sparse_dot,function,clean,no,yes,no,no,no,web,missing_params,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Dot product that handle the sparse matrix case correctly.""",mode_sample,pdf_no:contamination,no,no,,no
+sklearn.linear_model.Lars,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LassoLars,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LogisticRegressionCV.predict_proba,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.cluster.cluster_optics_xi,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.cluster.compute_optics_graph,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.balanced_accuracy_score,function,clean,no,yes,no,no,no,web,partial(0.25),retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Compute the balanced accuracy.""",mode_sample,pdf_no:contamination,yes,no,,no
+sklearn.metrics.pairwise.nan_euclidean_distances,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Calculate the euclidean distances in the presence of missing values.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.ensemble.GradientBoostingRegressor,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.base.MetaEstimatorMixin,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.KNeighborsTransformer.set_output,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.d2_tweedie_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.clear_data_home,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.pairwise.cosine_distances,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.get_tags,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Get estimator tags.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.datasets.make_moons,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.KNeighborsClassifier.kneighbors,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_friedman2,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sklearn.frozen.FrozenEstimator,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.v_measure_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.pairwise.manhattan_distances,function,clean,no,yes,no,no,no,web,missing_params,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Compute the L1 distances between the vectors in X and Y.""",mode_sample,pdf_no:contamination,no,no,,no
+sklearn.utils.estimator_checks.check_estimator,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Check if estimator adheres to scikit-learn conventions.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.exceptions.ConvergenceWarning,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.covariance.ledoit_wolf_shrinkage,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.pairwise.sigmoid_kernel,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.ndcg_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.sparsefuncs.inplace_swap_row,function,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Swap two rows of a CSC/CSR matrix in-place.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.KernelPCA.set_output,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.IncrementalPCA.get_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.IncrementalPCA.set_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.gaussian_process.GaussianProcessRegressor,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.cross_decomposition.PLSSVD,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.impute.MissingIndicator,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.kernel_ridge.KernelRidge,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.fetch_lfw_pairs,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.KNeighborsTransformer.kneighbors,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.OrdinalEncoder.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_biclusters,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.OrdinalEncoder.transform,method,clean,no,yes,no,no,no,web,full,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Transform X to ordinal codes.""",mode_sample,pdf_no:contamination,no,no,,no
+sklearn.cluster.AffinityPropagation,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LogisticRegressionCV.get_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_selection.SelectFpr,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.exceptions.NotFittedError,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_extraction.FeatureHasher,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_sparse_uncorrelated,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Generate a random regression problem with sparse uncorrelated design.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.decomposition.sparse_encode,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_swiss_roll,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.manifold.locally_linear_embedding,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.multiclass.OutputCodeClassifier,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.FixedThresholdClassifier,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.exceptions.DataDimensionalityWarning,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.covariance.EllipticEnvelope,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.get_data_home,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.gaussian_process.kernels.DotProduct,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LinearRegression,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.OrdinalEncoder.set_output,method,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Set output container.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.metrics.pairwise.linear_kernel,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.orthogonal_mp,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.mean_absolute_percentage_error,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Mean absolute percentage error (MAPE) regression loss.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.datasets.fetch_kddcup99,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_extraction.text.TfidfTransformer,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LogisticRegressionCV.set_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.load_sample_image,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.PCA,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.ensemble.BaggingClassifier,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils._safe_indexing,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.calibration.CalibrationDisplay.from_predictions,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.LabelEncoder,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.homogeneity_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.preprocessing.PowerTransformer,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.ConfusionMatrixDisplay.from_estimator,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.r2_score,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""\(R^2\) (coefficient of determination) regression score function.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.datasets.make_s_curve,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Generate an S curve dataset.""",mode_sample,pdf_no:empty,yes,no,,no
+sklearn.decomposition.KernelPCA.set_params,method,empty,yes,empty,no,empty,no,web,n/a,structuring/empty,"web-confirmed wrong: empty/retrieval failure; original: ""Set the parameters of this estimator.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.decomposition.dict_learning,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.confusion_matrix,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.cluster.kmeans_plusplus,function,clean,yes,yes,yes,,yes,db,partial(0.50),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sklearn.metrics.auc,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LogisticRegressionCV.predict,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.mean_pinball_loss,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sklearn.decomposition.DictionaryLearning,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_log_proba,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.check_consistent_length,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Check that all arrays have consistent first dimensions.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.cluster.BisectingKMeans,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.cluster.cluster_optics_dbscan,function,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LogisticRegressionCV.decision_function,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.LogisticRegressionCV.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.GroupShuffleSplit,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.MiniBatchDictionaryLearning.get_metadata_routing,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.cross_val_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.feature_selection.r_regression,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.sparsefuncs.inplace_swap_column,function,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Swap two columns of a CSC/CSR matrix in-place.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.ensemble.IsolationForest,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.tree.export_graphviz,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.RadiusNeighborsTransformer,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_proba,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.dict_learning_online,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.NearestCentroid,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.cluster.pair_confusion_matrix,function,clean,no,yes,no,no,no,web,missing_params,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Pair confusion matrix arising from two clusterings.""",mode_sample,pdf_no:contamination,no,no,,no
+sklearn.calibration.CalibrationDisplay.from_estimator,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.exceptions.FitFailedWarning,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.inspection.permutation_importance,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.pairwise_distances_argmin,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Compute minimum distances between one point and a set of points.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.decomposition.KernelPCA,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.safe_mask,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.pipeline.FeatureUnion,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.naive_bayes.GaussianNB,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.estimator_checks.parametrize_with_checks,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.gaussian_process.kernels.RationalQuadratic,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.multiclass.unique_labels,function,issues,no,no,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_blobs,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Generate isotropic Gaussian blobs for clustering.""",mode_sample,pdf_no:empty,yes,no,,no
+sklearn.utils.graph.single_source_shortest_path_length,function,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Return the length of the shortest path from source to all reachable nodes.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.decomposition.MiniBatchDictionaryLearning.set_output,method,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.StratifiedShuffleSplit,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.manifold.LocallyLinearEmbedding,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.check_scalar,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.dummy.DummyRegressor,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.silhouette_samples,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.model_selection.cross_validate,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.check_random_state,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Turn seed into an np.random.RandomState instance.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.kernel_approximation.RBFSampler,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.KNeighborsClassifier,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.load_svmlight_files,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.Lasso,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.fetch_file,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.tree.plot_tree,function,clean,yes,yes,yes,,yes,db,partial(0.77),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sklearn.datasets.make_hastie_10_2,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.class_likelihood_ratios,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.dcg_score,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.dummy.DummyClassifier.predict_log_proba,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.svm.l1_min_c,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.adjusted_mutual_info_score,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Adjusted Mutual Information between two clusterings.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.decomposition.MiniBatchDictionaryLearning.fit,method,clean,no,yes,no,no,no,web,full,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Fit the model from data in X.""",mode_sample,pdf_no:contamination,yes,no,,no
+sklearn.gaussian_process.kernels.Exponentiation.is_stationary,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.ConfusionMatrixDisplay,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.d2_log_loss_score,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.pairwise_distances,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.mean_tweedie_deviance,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.IncrementalPCA.get_metadata_routing,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.base.ClassNamePrefixFeaturesOutMixin,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sklearn.decomposition.MiniBatchDictionaryLearning.get_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.gaussian_process.kernels.ConstantKernel,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Constant kernel.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.neighbors.RadiusNeighborsRegressor,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.manifold.ClassicalMDS,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.ensemble.HistGradientBoostingClassifier,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.load_digits,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.kernel_approximation.Nystroem,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.neighbors.KernelDensity,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.linear_model.HuberRegressor,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.fetch_openml,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.pairwise.additive_chi2_kernel,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.datasets.make_friedman1,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Generate the ""Friedman #1"" regression problem.""",mode_sample,pdf_no:empty,yes,no,,no
+sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.set_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.metrics.d2_absolute_error_score,function,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""\(D^2\) regression score function, fraction of absolute error explained.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.gaussian_process.kernels.Exponentiation.hyperparameters,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.gaussian_process.kernels.Sum,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.isotonic.IsotonicRegression,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.decomposition.MiniBatchNMF,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sklearn.utils.validation.validate_data,function,empty,no,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Validate input data and set or check feature names and counts of the input.""",mode_sample,pdf_no:empty,no,no,,no
+sklearn.utils.multiclass.is_multilabel,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes

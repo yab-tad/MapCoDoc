@@ -29,7 +29,7 @@ The documentation processor performs the following high-level tasks:
 2. **Extract raw documentation** from PDF or web sources
 3. **Isolate per-member documentation** from combined pages
 4. **Preprocess** URLs with placeholders for LLM processing (optional)
-5. **Structure documentation** using LLM (GPT-4o) (optional)
+5. **Structure documentation** using LLM (`gpt-4.1-2025-04-14`) (optional)
 6. **Postprocess** to restore URLs (optional)
 7. **Update database** with structured documentation
 
@@ -426,7 +426,7 @@ postprocess_crossRef(
 
 ### `structured_doc_extracter.py`
 
-LLM-based documentation structuring using GPT-4o.
+LLM-based documentation structuring using `gpt-4.1-2025-04-14` (OpenAI Structured Outputs, strict JSON Schema).
 
 #### DocumentationExtractor (Single document)
 

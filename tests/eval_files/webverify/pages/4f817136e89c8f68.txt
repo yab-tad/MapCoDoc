@@ -1,0 +1,8 @@
+# numpy.polynomial.laguerre.Laguerre.__call__
+
+method
+
+polynomial.laguerre.Laguerre.__call__(arg)[source](https://github.com/numpy/numpy/blob/v2.5.0/numpy/polynomial/_polybase.py#L510-L512)#(https://numpy.org/doc/stable/reference/generated/numpy.polynomial.laguerre.Laguerre.__call__.html#numpy.polynomial.laguerre.Laguerre.__call__)
+    Call self as a function.
+
+On this page

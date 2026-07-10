@@ -1,0 +1,33 @@
+# pandas.HDFStore.keys
+
+HDFStore.keys(include='pandas')[source](https://github.com/pandas-dev/pandas/blob/main/pandas/io/pytables.py#L663-L703)#(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.HDFStore.keys.html#pandas.HDFStore.keys)
+    Return a list of keys corresponding to objects stored in HDFStore.
+
+Parameters:
+    include : str, default 'pandas'
+    When kind equals 'pandas' return pandas objects.
+When kind equals 'native' return native HDF5 Table objects.
+
+Returns:
+    list
+    List of ABSOLUTE path-names (e.g. have the leading '/').
+
+Raises:
+    raises ValueError if kind has an illegal value
+
+Examples
+
+```
+>>> df = pd.DataFrame([[1, 2], [3, 4]], columns=['A', 'B'])
+>>> store = pd.HDFStore("store.h5", 'w')  
+>>> store.put('data', df)  
+>>> store.get('data')  
+>>> print(store.keys())  
+['/data1', '/data2']
+>>> store.close()  
+
+```
+
+On this page
+
+[Show Source](https://pandas.pydata.org/pandas-docs/version/2.3.3/_sources/reference/api/pandas.HDFStore.keys.rst.txt)

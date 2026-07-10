@@ -1,0 +1,2373 @@
+{
+  "names_file": "C:/Users/Administrator/Documents/USask/Thesis/MapCoDoc/study one exp/RQ2/stratified sampling/samples/api_names/pandas.txt",
+  "url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\pandas\\v_2.3.3\\scraped_urls.txt",
+  "base_url": "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/",
+  "sub_path": "api",
+  "total_api_names": 262,
+  "matched": 262,
+  "unmatched": 0,
+  "total_urls_in": 2102,
+  "total_urls_out": 262,
+  "output_url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\pandas\\v_2.3.3\\samples\\scraped_urls.txt",
+  "unmatched_names": [],
+  "matches": [
+    {
+      "api_name": "pandas.Series.notna",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.notna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.notna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.UnsupportedFunctionCall",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.UnsupportedFunctionCall",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.UnsupportedFunctionCall.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.reindex",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.reindex",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.reindex.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_clipboard",
+      "matched_via": "path",
+      "matched_key": "pandas.read_clipboard",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_clipboard.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.aggregate",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.aggregate",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.aggregate.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.mean",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.mean",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.mean.html"
+      ]
+    },
+    {
+      "api_name": "pandas.PeriodDtype.freq",
+      "matched_via": "path",
+      "matched_key": "pandas.PeriodDtype.freq",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.PeriodDtype.freq.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.radd",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.radd",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.radd.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.truediv",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.truediv",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.truediv.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.loc",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.loc",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.loc.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.rename",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.rename",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.rename.html"
+      ]
+    },
+    {
+      "api_name": "pandas.arrays.IntervalArray",
+      "matched_via": "path",
+      "matched_key": "pandas.arrays.IntervalArray",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.arrays.IntervalArray.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.isna",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.isna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.isna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.head",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.head",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.head.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_fwf",
+      "matched_via": "path",
+      "matched_key": "pandas.read_fwf",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_fwf.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.isin",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.isin",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.isin.html"
+      ]
+    },
+    {
+      "api_name": "pandas.arrays.FloatingArray",
+      "matched_via": "path",
+      "matched_key": "pandas.arrays.FloatingArray",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.arrays.FloatingArray.html"
+      ]
+    },
+    {
+      "api_name": "pandas.RangeIndex.start",
+      "matched_via": "path",
+      "matched_key": "pandas.RangeIndex.start",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.RangeIndex.start.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DatetimeIndex.snap",
+      "matched_via": "path",
+      "matched_key": "pandas.DatetimeIndex.snap",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DatetimeIndex.snap.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.get_indexer_for",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.get_indexer_for",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.get_indexer_for.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.droplevel",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.droplevel",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.droplevel.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.nsmallest",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.nsmallest",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.nsmallest.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.rolling.Window.std",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.rolling.Window.std",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Window.std.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.sort_index",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.sort_index",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.sort_index.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.NumExprClobberingError",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.NumExprClobberingError",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.NumExprClobberingError.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.all",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.all",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.all.html"
+      ]
+    },
+    {
+      "api_name": "pandas.arrays.ArrowStringArray",
+      "matched_via": "path",
+      "matched_key": "pandas.arrays.ArrowStringArray",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.arrays.ArrowStringArray.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.sort_values",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.sort_values",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.sort_values.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.isin",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.isin",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.isin.html"
+      ]
+    },
+    {
+      "api_name": "pandas.TimedeltaIndex.inferred_freq",
+      "matched_via": "path",
+      "matched_key": "pandas.TimedeltaIndex.inferred_freq",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.TimedeltaIndex.inferred_freq.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.autocorr",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.autocorr",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.autocorr.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.pipe",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.pipe",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.pipe.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.infer_objects",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.infer_objects",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.infer_objects.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.resample",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.resample",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.resample.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.sub",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.sub",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.sub.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.corr",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.corr",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.corr.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.ffill",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.ffill",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.ffill.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.rolling.Rolling.var",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.rolling.Rolling.var",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Rolling.var.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.droplevel",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.droplevel",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.droplevel.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.values",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.values",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.values.html"
+      ]
+    },
+    {
+      "api_name": "pandas.IntervalIndex.from_breaks",
+      "matched_via": "path",
+      "matched_key": "pandas.IntervalIndex.from_breaks",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.IntervalIndex.from_breaks.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.to_excel",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.to_excel",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.to_excel.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.apply",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.apply.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.asof",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.asof",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.asof.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.highlight_max",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.highlight_max",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.highlight_max.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.InvalidVersion",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.InvalidVersion",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.InvalidVersion.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.expanding.Expanding.apply",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.expanding.Expanding.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.expanding.Expanding.apply.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.has_duplicates",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.has_duplicates",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.has_duplicates.html"
+      ]
+    },
+    {
+      "api_name": "pandas.bdate_range",
+      "matched_via": "path",
+      "matched_key": "pandas.bdate_range",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.bdate_range.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.cummin",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.cummin",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.cummin.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.set_properties",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.set_properties",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.set_properties.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.take",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.take",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.take.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.name",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.name",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.name.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_period",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_period",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_period.html"
+      ]
+    },
+    {
+      "api_name": "pandas.period_range",
+      "matched_via": "path",
+      "matched_key": "pandas.period_range",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.period_range.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.equals",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.equals",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.equals.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.cummin",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.cummin",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.cummin.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.get_loc_level",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.get_loc_level",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.get_loc_level.html"
+      ]
+    },
+    {
+      "api_name": "pandas.api.extensions.ExtensionArray",
+      "matched_via": "path",
+      "matched_key": "pandas.api.extensions.ExtensionArray",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.api.extensions.ExtensionArray.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.sample",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.sample",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.sample.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.LossySetitemError",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.LossySetitemError",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.LossySetitemError.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.to_latex",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.to_latex",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.to_latex.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.corr",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.corr",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.corr.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.is_monotonic_decreasing",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.is_monotonic_decreasing",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.is_monotonic_decreasing.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_xml",
+      "matched_via": "path",
+      "matched_key": "pandas.read_xml",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_xml.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.skew",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.skew",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.skew.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.size",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.size",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.size.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.copy",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.copy",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.copy.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Categorical.categories",
+      "matched_via": "path",
+      "matched_key": "pandas.Categorical.categories",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Categorical.categories.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.mul",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.mul",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.mul.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.set_axis",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.set_axis",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.set_axis.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.IncompatibilityWarning",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.IncompatibilityWarning",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.IncompatibilityWarning.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.keys",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.keys",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.keys.html"
+      ]
+    },
+    {
+      "api_name": "pandas.api.extensions.ExtensionDtype",
+      "matched_via": "path",
+      "matched_key": "pandas.api.extensions.ExtensionDtype",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.api.extensions.ExtensionDtype.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.sem",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.sem",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.sem.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.radd",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.radd",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.radd.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.to_csv",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.to_csv",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.to_csv.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.select_dtypes",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.select_dtypes",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.select_dtypes.html"
+      ]
+    },
+    {
+      "api_name": "pandas.from_dummies",
+      "matched_via": "path",
+      "matched_key": "pandas.from_dummies",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.from_dummies.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.dtypes",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.dtypes",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.dtypes.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DatetimeIndex.indexer_at_time",
+      "matched_via": "path",
+      "matched_key": "pandas.DatetimeIndex.indexer_at_time",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DatetimeIndex.indexer_at_time.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_latex",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_latex",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_latex.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.swapaxes",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.swapaxes",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.swapaxes.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.dropna",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.dropna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.dropna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.itertuples",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.itertuples",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.itertuples.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.ndim",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.ndim",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.ndim.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.rolling.Rolling.rank",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.rolling.Rolling.rank",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Rolling.rank.html"
+      ]
+    },
+    {
+      "api_name": "pandas.HDFStore.groups",
+      "matched_via": "path",
+      "matched_key": "pandas.HDFStore.groups",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.HDFStore.groups.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.ewm.ExponentialMovingWindow.corr",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.ewm.ExponentialMovingWindow.corr",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.ewm.ExponentialMovingWindow.corr.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.isin",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.isin",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.isin.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.shape",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.shape",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.shape.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.value_counts",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.value_counts",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.value_counts.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.first_valid_index",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.first_valid_index",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.first_valid_index.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.is_monotonic_decreasing",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.is_monotonic_decreasing",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.is_monotonic_decreasing.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.fillna",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.fillna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.fillna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.get_indexer",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.get_indexer",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.get_indexer.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.tail",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.tail",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.tail.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_html",
+      "matched_via": "path",
+      "matched_key": "pandas.read_html",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_html.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.nlevels",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.nlevels",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.nlevels.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.rename_axis",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.rename_axis",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.rename_axis.html"
+      ]
+    },
+    {
+      "api_name": "pandas.factorize",
+      "matched_via": "path",
+      "matched_key": "pandas.factorize",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.factorize.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DatetimeTZDtype",
+      "matched_via": "path",
+      "matched_key": "pandas.DatetimeTZDtype",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DatetimeTZDtype.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.PossiblePrecisionLoss",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.PossiblePrecisionLoss",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.PossiblePrecisionLoss.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.cov",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.cov",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.cov.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.drop",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.drop",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.drop.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.ewm",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.ewm",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.ewm.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.rolling.Rolling.max",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.rolling.Rolling.max",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Rolling.max.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.rolling.Rolling.apply",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.rolling.Rolling.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Rolling.apply.html"
+      ]
+    },
+    {
+      "api_name": "pandas.unique",
+      "matched_via": "path",
+      "matched_key": "pandas.unique",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.unique.html"
+      ]
+    },
+    {
+      "api_name": "pandas.api.indexers.check_array_indexer",
+      "matched_via": "path",
+      "matched_key": "pandas.api.indexers.check_array_indexer",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.api.indexers.check_array_indexer.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.add",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.add",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.add.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.tail",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.tail",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.tail.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.notnull",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.notnull",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.notnull.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.from_records",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.from_records",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.from_records.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.swaplevel",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.swaplevel",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.swaplevel.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_parquet",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_parquet",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_parquet.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.median",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.median",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.median.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.transform",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.transform",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.transform.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.inferred_type",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.inferred_type",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.inferred_type.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_gbq",
+      "matched_via": "path",
+      "matched_key": "pandas.read_gbq",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_gbq.html"
+      ]
+    },
+    {
+      "api_name": "pandas.array",
+      "matched_via": "path",
+      "matched_key": "pandas.array",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.array.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_sql",
+      "matched_via": "path",
+      "matched_key": "pandas.read_sql",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_sql.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.fillna",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.fillna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.fillna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.HDFStore.keys",
+      "matched_via": "path",
+      "matched_key": "pandas.HDFStore.keys",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.HDFStore.keys.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.prod",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.prod",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.prod.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.append",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.append",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.append.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Categorical.ordered",
+      "matched_via": "path",
+      "matched_key": "pandas.Categorical.ordered",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Categorical.ordered.html"
+      ]
+    },
+    {
+      "api_name": "pandas.json_normalize",
+      "matched_via": "path",
+      "matched_key": "pandas.json_normalize",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.json_normalize.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.pow",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.pow",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.pow.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index",
+      "matched_via": "path",
+      "matched_key": "pandas.Index",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.use",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.use",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.use.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Categorical.__array__",
+      "matched_via": "path",
+      "matched_key": "pandas.Categorical.__array__",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Categorical.__array__.html"
+      ]
+    },
+    {
+      "api_name": "pandas.util.hash_pandas_object",
+      "matched_via": "path",
+      "matched_key": "pandas.util.hash_pandas_object",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.util.hash_pandas_object.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.AbstractMethodError",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.AbstractMethodError",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.AbstractMethodError.html"
+      ]
+    },
+    {
+      "api_name": "pandas.isna",
+      "matched_via": "path",
+      "matched_key": "pandas.isna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.isna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.melt",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.melt",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.melt.html"
+      ]
+    },
+    {
+      "api_name": "pandas.CategoricalIndex.equals",
+      "matched_via": "path",
+      "matched_key": "pandas.CategoricalIndex.equals",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.CategoricalIndex.equals.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.replace",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.replace",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.replace.html"
+      ]
+    },
+    {
+      "api_name": "pandas.arrays.BooleanArray",
+      "matched_via": "path",
+      "matched_key": "pandas.arrays.BooleanArray",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.arrays.BooleanArray.html"
+      ]
+    },
+    {
+      "api_name": "pandas.ExcelFile",
+      "matched_via": "path",
+      "matched_key": "pandas.ExcelFile",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.ExcelFile.html"
+      ]
+    },
+    {
+      "api_name": "pandas.PeriodIndex.minute",
+      "matched_via": "path",
+      "matched_key": "pandas.PeriodIndex.minute",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.PeriodIndex.minute.html"
+      ]
+    },
+    {
+      "api_name": "pandas.api.extensions.register_series_accessor",
+      "matched_via": "path",
+      "matched_key": "pandas.api.extensions.register_series_accessor",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.api.extensions.register_series_accessor.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.last",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.last",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.last.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.union",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.union",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.union.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.compare",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.compare",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.compare.html"
+      ]
+    },
+    {
+      "api_name": "pandas.eval",
+      "matched_via": "path",
+      "matched_key": "pandas.eval",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.eval.html"
+      ]
+    },
+    {
+      "api_name": "pandas.NamedAgg",
+      "matched_via": "path",
+      "matched_key": "pandas.NamedAgg",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.NamedAgg.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.PossibleDataLossError",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.PossibleDataLossError",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.PossibleDataLossError.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.pad",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.pad",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.pad.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.pop",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.pop",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.pop.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_sql_query",
+      "matched_via": "path",
+      "matched_key": "pandas.read_sql_query",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_sql_query.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.append",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.append",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.append.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.drop_duplicates",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.drop_duplicates",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.drop_duplicates.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.case_when",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.case_when",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.case_when.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.any",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.any",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.any.html"
+      ]
+    },
+    {
+      "api_name": "pandas.pivot_table",
+      "matched_via": "path",
+      "matched_key": "pandas.pivot_table",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.pivot_table.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.set_caption",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.set_caption",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.set_caption.html"
+      ]
+    },
+    {
+      "api_name": "pandas.IntervalIndex.from_arrays",
+      "matched_via": "path",
+      "matched_key": "pandas.IntervalIndex.from_arrays",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.IntervalIndex.from_arrays.html"
+      ]
+    },
+    {
+      "api_name": "pandas.StringDtype",
+      "matched_via": "path",
+      "matched_key": "pandas.StringDtype",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.StringDtype.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.__dataframe__",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.__dataframe__",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.__dataframe__.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.DtypeWarning",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.DtypeWarning",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.DtypeWarning.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.array",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.array",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.array.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.to_sql",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.to_sql",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.to_sql.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.stack",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.stack",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.stack.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.from_product",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.from_product",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.from_product.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.all",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.all",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.all.html"
+      ]
+    },
+    {
+      "api_name": "pandas.UInt32Dtype",
+      "matched_via": "path",
+      "matched_key": "pandas.UInt32Dtype",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.UInt32Dtype.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.UnsortedIndexError",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.UnsortedIndexError",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.UnsortedIndexError.html"
+      ]
+    },
+    {
+      "api_name": "pandas.PeriodIndex.freqstr",
+      "matched_via": "path",
+      "matched_key": "pandas.PeriodIndex.freqstr",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.PeriodIndex.freqstr.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_gbq",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_gbq",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_gbq.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_feather",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_feather",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_feather.html"
+      ]
+    },
+    {
+      "api_name": "pandas.HDFStore.info",
+      "matched_via": "path",
+      "matched_key": "pandas.HDFStore.info",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.HDFStore.info.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_sql",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_sql",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_sql.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Float64Dtype",
+      "matched_via": "path",
+      "matched_key": "pandas.Float64Dtype",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Float64Dtype.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.nlargest",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.nlargest",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.nlargest.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.iat",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.iat",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.iat.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.repeat",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.repeat",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.repeat.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.to_json",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.to_json",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.to_json.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.InvalidIndexError",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.InvalidIndexError",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.InvalidIndexError.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.rmod",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.rmod",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.rmod.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.to_frame",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.to_frame",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.to_frame.html"
+      ]
+    },
+    {
+      "api_name": "pandas.PeriodIndex",
+      "matched_via": "path",
+      "matched_key": "pandas.PeriodIndex",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.PeriodIndex.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.expanding.Expanding.aggregate",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.expanding.Expanding.aggregate",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.expanding.Expanding.aggregate.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.dot",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.dot",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.dot.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.set_tooltips",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.set_tooltips",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.set_tooltips.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.dropna",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.dropna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.dropna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.lt",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.lt",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.lt.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.rolling.Rolling.kurt",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.rolling.Rolling.kurt",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Rolling.kurt.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.InvalidComparison",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.InvalidComparison",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.InvalidComparison.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_stata",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_stata",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_stata.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.swaplevel",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.swaplevel",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.swaplevel.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.is_monotonic_increasing",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.is_monotonic_increasing",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.is_monotonic_increasing.html"
+      ]
+    },
+    {
+      "api_name": "pandas.CategoricalIndex.map",
+      "matched_via": "path",
+      "matched_key": "pandas.CategoricalIndex.map",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.CategoricalIndex.map.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.expanding.Expanding.count",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.expanding.Expanding.count",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.expanding.Expanding.count.html"
+      ]
+    },
+    {
+      "api_name": "pandas.pivot",
+      "matched_via": "path",
+      "matched_key": "pandas.pivot",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.pivot.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.difference",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.difference",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.difference.html"
+      ]
+    },
+    {
+      "api_name": "pandas.ArrowDtype",
+      "matched_via": "path",
+      "matched_key": "pandas.ArrowDtype",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.ArrowDtype.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.mod",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.mod",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.mod.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.shift",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.shift",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.shift.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.get",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.get",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.get.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.asfreq",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.asfreq",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.asfreq.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.mul",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.mul",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.mul.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.duplicated",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.duplicated",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.duplicated.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.isnull",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.isnull",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.isnull.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.update",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.update",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.update.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DatetimeIndex.tz_convert",
+      "matched_via": "path",
+      "matched_key": "pandas.DatetimeIndex.tz_convert",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DatetimeIndex.tz_convert.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.iloc",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.iloc",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.iloc.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.asfreq",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.asfreq",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.asfreq.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DatetimeIndex",
+      "matched_via": "path",
+      "matched_key": "pandas.DatetimeIndex",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DatetimeIndex.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.searchsorted",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.searchsorted",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.searchsorted.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.groupby.SeriesGroupBy.groups",
+      "matched_via": "path",
+      "matched_key": "pandas.core.groupby.SeriesGroupBy.groups",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.groupby.SeriesGroupBy.groups.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.set_sticky",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.set_sticky",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.set_sticky.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.tz_convert",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.tz_convert",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.tz_convert.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.expanding.Expanding.max",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.expanding.Expanding.max",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.expanding.Expanding.max.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.truediv",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.truediv",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.truediv.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_parquet",
+      "matched_via": "path",
+      "matched_key": "pandas.read_parquet",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_parquet.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.reindex",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.reindex",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.reindex.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.rolling.Rolling.min",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.rolling.Rolling.min",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.rolling.Rolling.min.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.nsmallest",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.nsmallest",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.nsmallest.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.identical",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.identical",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.identical.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.mask",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.mask",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.mask.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.to_numpy",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.to_numpy",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.to_numpy.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.describe",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.describe",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.describe.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.min",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.min",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.min.html"
+      ]
+    },
+    {
+      "api_name": "pandas.IntervalIndex.length",
+      "matched_via": "path",
+      "matched_key": "pandas.IntervalIndex.length",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.IntervalIndex.length.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.highlight_quantile",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.highlight_quantile",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.highlight_quantile.html"
+      ]
+    },
+    {
+      "api_name": "pandas.errors.ValueLabelTypeMismatch",
+      "matched_via": "path",
+      "matched_key": "pandas.errors.ValueLabelTypeMismatch",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.errors.ValueLabelTypeMismatch.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.ndim",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.ndim",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.ndim.html"
+      ]
+    },
+    {
+      "api_name": "pandas.core.window.expanding.Expanding.sum",
+      "matched_via": "path",
+      "matched_key": "pandas.core.window.expanding.Expanding.sum",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.core.window.expanding.Expanding.sum.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.to_frame",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.to_frame",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.to_frame.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.cumsum",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.cumsum",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.cumsum.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_numpy",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_numpy",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_numpy.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.backfill",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.backfill",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.backfill.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.levshape",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.levshape",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.levshape.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.filter",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.filter",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.filter.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.at",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.at",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.at.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.style",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.style",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.style.html"
+      ]
+    },
+    {
+      "api_name": "pandas.TimedeltaIndex",
+      "matched_via": "path",
+      "matched_key": "pandas.TimedeltaIndex",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.TimedeltaIndex.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.notna",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.notna",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.notna.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.gt",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.gt",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.gt.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_json",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_json",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_json.html"
+      ]
+    },
+    {
+      "api_name": "pandas.CategoricalDtype.categories",
+      "matched_via": "path",
+      "matched_key": "pandas.CategoricalDtype.categories",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.CategoricalDtype.categories.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.combine_first",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.combine_first",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.combine_first.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.to_string",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.to_string",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.to_string.html"
+      ]
+    },
+    {
+      "api_name": "pandas.read_csv",
+      "matched_via": "path",
+      "matched_key": "pandas.read_csv",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_csv.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.argmin",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.argmin",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.argmin.html"
+      ]
+    },
+    {
+      "api_name": "pandas.api.indexers.FixedForwardWindowIndexer",
+      "matched_via": "path",
+      "matched_key": "pandas.api.indexers.FixedForwardWindowIndexer",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.api.indexers.FixedForwardWindowIndexer.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.min",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.min",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.min.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.axes",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.axes",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.axes.html"
+      ]
+    },
+    {
+      "api_name": "pandas.melt",
+      "matched_via": "path",
+      "matched_key": "pandas.melt",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.melt.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.to_markdown",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.to_markdown",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.to_markdown.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.to_html",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.to_html",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.to_html.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Grouper",
+      "matched_via": "path",
+      "matched_key": "pandas.Grouper",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Grouper.html"
+      ]
+    },
+    {
+      "api_name": "pandas.ExcelFile.sheet_names",
+      "matched_via": "path",
+      "matched_key": "pandas.ExcelFile.sheet_names",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.ExcelFile.sheet_names.html"
+      ]
+    },
+    {
+      "api_name": "pandas.MultiIndex.remove_unused_levels",
+      "matched_via": "path",
+      "matched_key": "pandas.MultiIndex.remove_unused_levels",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.MultiIndex.remove_unused_levels.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Index.shift",
+      "matched_via": "path",
+      "matched_key": "pandas.Index.shift",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Index.shift.html"
+      ]
+    },
+    {
+      "api_name": "pandas.DataFrame.eval",
+      "matched_via": "path",
+      "matched_key": "pandas.DataFrame.eval",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.DataFrame.eval.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.var",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.var",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.var.html"
+      ]
+    },
+    {
+      "api_name": "pandas.io.formats.style.Styler.from_custom_template",
+      "matched_via": "path",
+      "matched_key": "pandas.io.formats.style.Styler.from_custom_template",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.io.formats.style.Styler.from_custom_template.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.attrs",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.attrs",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.attrs.html"
+      ]
+    },
+    {
+      "api_name": "pandas.Series.map",
+      "matched_via": "path",
+      "matched_key": "pandas.Series.map",
+      "is_parent_url": false,
+      "urls": [
+        "https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.Series.map.html"
+      ]
+    }
+  ]
+}

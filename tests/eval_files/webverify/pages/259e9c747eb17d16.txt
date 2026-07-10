@@ -1,0 +1,12 @@
+# numpy.char.chararray.decode
+
+method
+
+char.chararray.decode(encoding=None, errors=None)[source](https://github.com/numpy/numpy/blob/v2.5.0/numpy/_core/defchararray.py#L784-L793)#(https://numpy.org/doc/stable/reference/generated/numpy.char.chararray.decode.html#numpy.char.chararray.decode)
+    Calls bytes.decode element-wise.
+
+See also
+
+char.decode(https://numpy.org/doc/stable/reference/generated/numpy.char.decode.html#numpy.char.decode)
+
+On this page

@@ -1,0 +1,33 @@
+Rate this Page
+    ★
+★
+★
+★
+★
+
+Hidden breadcrumb schema for SEO only 
+
+# torch.Tensor.storage
+
+Tensor.storage() -> torch.TypedStorage(https://docs.pytorch.org/docs/2.9/storage.html#torch.TypedStorage)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/_tensor.py#L294)#(https://docs.pytorch.org/docs/2.9/generated/torch.Tensor.storage.html#torch.Tensor.storage)
+    Returns the underlying TypedStorage(https://docs.pytorch.org/docs/2.9/storage.html#torch.TypedStorage).
+
+Warning
+
+TypedStorage(https://docs.pytorch.org/docs/2.9/storage.html#torch.TypedStorage) is deprecated. It will be removed in the future, and
+UntypedStorage(https://docs.pytorch.org/docs/2.9/storage.html#torch.UntypedStorage) will be the only storage class. To access the
+UntypedStorage(https://docs.pytorch.org/docs/2.9/storage.html#torch.UntypedStorage) directly, use Tensor.untyped_storage()(https://docs.pytorch.org/docs/2.9/generated/torch.Tensor.untyped_storage.html#torch.Tensor.untyped_storage).
+
+On this page
+
+[Show Source](https://docs.pytorch.org/docs/2.9/_sources/generated/torch.Tensor.storage.rst.txt)
+
+PyTorch Libraries
+
+- torchao(https://docs.pytorch.org/ao)
+- torchrec(https://docs.pytorch.org/torchrec)
+- torchft(https://docs.pytorch.org/torchft)
+- TorchCodec(https://docs.pytorch.org/torchcodec)
+- torchvision(https://docs.pytorch.org/vision)
+- ExecuTorch(https://docs.pytorch.org/executorch)
+- [PyTorch on XLA Devices](https://docs.pytorch.org/xla)

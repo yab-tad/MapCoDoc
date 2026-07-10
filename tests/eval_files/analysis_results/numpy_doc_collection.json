@@ -1,0 +1,3375 @@
+{
+  "db_path": "mapcodoc_output\\doc_test\\numpy_2.4.0.db",
+  "total_samples": 244,
+  "with_web_doc": 244,
+  "with_pdf_doc": 217,
+  "with_no_docs": 0,
+  "unresolved_samples": [],
+  "alias_groups": {},
+  "web_docs_unresolved_to_member": [],
+  "pdf_docs_unresolved_to_member": [],
+  "members": [
+    {
+      "sample_api_name": "numpy.ma.notmasked_contiguous",
+      "member_key": "member:3542",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.notmasked_contiguous.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.notmasked_contiguous"
+    },
+    {
+      "sample_api_name": "numpy.ma.max",
+      "member_key": "member:3398",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.max.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.max"
+    },
+    {
+      "sample_api_name": "numpy.triu",
+      "member_key": "member:2755",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.triu.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.triu.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.triu"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermeval2d",
+      "member_key": "member:3732",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermeval2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermeval2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermeval2d"
+    },
+    {
+      "sample_api_name": "numpy.bincount",
+      "member_key": "member:4427",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.bincount.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.bincount.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.bincount"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polymulx",
+      "member_key": "member:3817",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polymulx.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polymulx.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polymulx"
+    },
+    {
+      "sample_api_name": "numpy.ix_",
+      "member_key": "member:2458",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ix_.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ix_.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ix_"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.trim",
+      "member_key": "inherited:3281",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.trim.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.trim.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.trim"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.convert",
+      "member_key": "inherited:3177",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.convert.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.convert.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.convert"
+    },
+    {
+      "sample_api_name": "numpy.flipud",
+      "member_key": "member:2745",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.flipud.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.flipud.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.flipud"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.rjust",
+      "member_key": "member:4242",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.rjust.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.rjust.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.rjust"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.domain",
+      "member_key": "inherited:3297",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.domain.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.domain.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.domain"
+    },
+    {
+      "sample_api_name": "numpy.trapezoid",
+      "member_key": "member:2421",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.trapezoid.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.trapezoid.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.trapezoid"
+    },
+    {
+      "sample_api_name": "numpy.iscomplexobj",
+      "member_key": "member:2776",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.iscomplexobj.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.iscomplexobj.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.iscomplexobj"
+    },
+    {
+      "sample_api_name": "numpy.ma.array",
+      "member_key": "member:3390",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.array.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.array"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.cast",
+      "member_key": "inherited:3452",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.cast.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.cast.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.cast"
+    },
+    {
+      "sample_api_name": "numpy.diagflat",
+      "member_key": "member:2750",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.diagflat.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.diagflat.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.diagflat"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.cutdeg",
+      "member_key": "inherited:3174",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.cutdeg.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.cutdeg.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.cutdeg"
+    },
+    {
+      "sample_api_name": "numpy.quantile",
+      "member_key": "member:2406",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.quantile.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.quantile.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.quantile"
+    },
+    {
+      "sample_api_name": "numpy.histogram",
+      "member_key": "member:2453",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.histogram.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.histogram.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.histogram"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebinterpolate",
+      "member_key": "member:3675",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebinterpolate.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebinterpolate.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebinterpolate"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.isspace",
+      "member_key": "member:4231",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.isspace.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.isspace.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.isspace"
+    },
+    {
+      "sample_api_name": "numpy.nanargmax",
+      "member_key": "member:2545",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.nanargmax.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.nanargmax.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.nanargmax"
+    },
+    {
+      "sample_api_name": "numpy.ma.make_mask",
+      "member_key": "member:3216",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.make_mask.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.make_mask"
+    },
+    {
+      "sample_api_name": "numpy.char.greater",
+      "member_key": "member:4195",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.greater.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.greater.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.greater"
+    },
+    {
+      "sample_api_name": "numpy.lib.format.read_array_header_2_0",
+      "member_key": "member:2315",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.format.read_array_header_2_0.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.format.read_array_header_2_0"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.Hermite.deriv",
+      "member_key": "inherited:3233",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.Hermite.deriv.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Hermite.deriv.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.Hermite.deriv"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.basis",
+      "member_key": "inherited:3186",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.basis.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.basis.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.basis"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebgrid3d",
+      "member_key": "member:3668",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebgrid3d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebgrid3d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebgrid3d"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.startswith",
+      "member_key": "member:4248",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.startswith.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.startswith"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre.degree",
+      "member_key": "inherited:3385",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.degree.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.degree.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre.degree"
+    },
+    {
+      "sample_api_name": "numpy.ma.compress_nd",
+      "member_key": "member:3514",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.compress_nd.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.compress_nd"
+    },
+    {
+      "sample_api_name": "numpy.ma.corrcoef",
+      "member_key": "member:3531",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.corrcoef.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.corrcoef.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.corrcoef"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.integ",
+      "member_key": "inherited:3338",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.integ.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.integ.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.integ"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.legval3d",
+      "member_key": "member:3797",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.legval3d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.legval3d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.legval3d"
+    },
+    {
+      "sample_api_name": "numpy.savez_compressed",
+      "member_key": "member:2599",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.savez_compressed.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.savez_compressed.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.savez_compressed"
+    },
+    {
+      "sample_api_name": "numpy.append",
+      "member_key": "member:2429",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.append.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.append.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.append"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.integ",
+      "member_key": "inherited:3444",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.integ.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.integ.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.integ"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.Hermite.roots",
+      "member_key": "inherited:3234",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.Hermite.roots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Hermite.roots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.Hermite.roots"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.__call__",
+      "member_key": "inherited:3309",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.__call__.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.__call__.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.__call__"
+    },
+    {
+      "sample_api_name": "numpy.ma.fromflex",
+      "member_key": "member:3469",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.fromflex.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.fromflex"
+    },
+    {
+      "sample_api_name": "numpy.poly1d.coeffs",
+      "member_key": "member:2647",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.poly1d.coeffs.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.poly1d.coeffs"
+    },
+    {
+      "sample_api_name": "numpy.ma.round_",
+      "member_key": "member:3453",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.round_.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.round_"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_where",
+      "member_key": "member:3224",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_where.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_where.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_where"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermemul",
+      "member_key": "member:3726",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermemul.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermemul.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermemul"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermeroots",
+      "member_key": "member:3741",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermeroots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermeroots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermeroots"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.hermval",
+      "member_key": "member:3699",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.hermval.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite.hermval.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.hermval"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.hermgrid3d",
+      "member_key": "member:3703",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.hermgrid3d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite.hermgrid3d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.hermgrid3d"
+    },
+    {
+      "sample_api_name": "numpy.vander",
+      "member_key": "member:2757",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.vander.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.vander.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.vander"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_inside",
+      "member_key": "member:3231",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_inside.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_inside.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_inside"
+    },
+    {
+      "sample_api_name": "numpy.emath.sqrt",
+      "member_key": "member:2683",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.emath.sqrt.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.emath.sqrt"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_invalid",
+      "member_key": "member:3235",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_invalid.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_invalid.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_invalid"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polygrid2d",
+      "member_key": "member:3828",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polygrid2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polygrid2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polygrid2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagfromroots",
+      "member_key": "member:3754",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagfromroots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagfromroots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagfromroots"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.upper",
+      "member_key": "member:4253",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.upper.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.upper.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.upper"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.degree",
+      "member_key": "inherited:3332",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.degree.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.degree.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.degree"
+    },
+    {
+      "sample_api_name": "numpy.nansum",
+      "member_key": "member:2547",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.nansum.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.nansum.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.nansum"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_outside",
+      "member_key": "member:3232",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_outside.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_outside.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_outside"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.poly2cheb",
+      "member_key": "member:3648",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.poly2cheb.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.poly2cheb.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.poly2cheb"
+    },
+    {
+      "sample_api_name": "numpy.ma.union1d",
+      "member_key": "member:3527",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.union1d.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.union1d"
+    },
+    {
+      "sample_api_name": "numpy.char.ljust",
+      "member_key": "member:4622",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.ljust.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.ljust.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.ljust"
+    },
+    {
+      "sample_api_name": "numpy.char.expandtabs",
+      "member_key": "member:4619",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.expandtabs.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.expandtabs.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.expandtabs"
+    },
+    {
+      "sample_api_name": "numpy.sort_complex",
+      "member_key": "member:2351",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.sort_complex.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.sort_complex.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.sort_complex"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.has_samecoef",
+      "member_key": "inherited:3300",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.has_samecoef.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.has_samecoef.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.has_samecoef"
+    },
+    {
+      "sample_api_name": "numpy.nanargmin",
+      "member_key": "member:2543",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.nanargmin.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.nanargmin.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.nanargmin"
+    },
+    {
+      "sample_api_name": "numpy.apply_over_axes",
+      "member_key": "member:2703",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.apply_over_axes.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.apply_over_axes.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.apply_over_axes"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.Hermite.truncate",
+      "member_key": "inherited:3229",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.Hermite.truncate.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Hermite.truncate.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.Hermite.truncate"
+    },
+    {
+      "sample_api_name": "numpy.savez",
+      "member_key": "member:2597",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.savez.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.savez.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.savez"
+    },
+    {
+      "sample_api_name": "numpy.exceptions.TooHardError",
+      "member_key": "member:168",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.exceptions.TooHardError.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.exceptions.TooHardError"
+    },
+    {
+      "sample_api_name": "numpy.char.find",
+      "member_key": "member:4608",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.find.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.find.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.find"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_values",
+      "member_key": "member:3234",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_values.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_values.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_values"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.lstrip",
+      "member_key": "member:4237",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.lstrip.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.lstrip"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.islower",
+      "member_key": "member:4230",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.islower.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.islower.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.islower"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.encode",
+      "member_key": "member:4222",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.encode.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.encode"
+    },
+    {
+      "sample_api_name": "numpy.ma.ediff1d",
+      "member_key": "member:3521",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.ediff1d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.ediff1d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.ediff1d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polypow",
+      "member_key": "member:3820",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polypow.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polypow.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polypow"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_object",
+      "member_key": "member:3233",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_object.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_object.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_object"
+    },
+    {
+      "sample_api_name": "numpy.i0",
+      "member_key": "member:2394",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.i0.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.i0.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.i0"
+    },
+    {
+      "sample_api_name": "numpy.char.zfill",
+      "member_key": "member:4625",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.zfill.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.zfill.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.zfill"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.Hermite",
+      "member_key": "member:3713",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.Hermite.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Hermite.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.Hermite"
+    },
+    {
+      "sample_api_name": "numpy.lib.introspect.opt_func_info",
+      "member_key": "member:2139",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.introspect.opt_func_info.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.lib.introspect.opt_func_info.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.introspect.opt_func_info"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.basis",
+      "member_key": "inherited:3292",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.basis.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.basis.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.basis"
+    },
+    {
+      "sample_api_name": "numpy.flip",
+      "member_key": "member:2328",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.flip.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.flip.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.flip"
+    },
+    {
+      "sample_api_name": "numpy.vsplit",
+      "member_key": "member:2717",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.vsplit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.vsplit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.vsplit"
+    },
+    {
+      "sample_api_name": "numpy.polyint",
+      "member_key": "member:2631",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polyint.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polyint.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polyint"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagvander",
+      "member_key": "member:3768",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagvander.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagvander.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagvander"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.argsort",
+      "member_key": "member:4217",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.argsort.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.argsort"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebsub",
+      "member_key": "member:3657",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebsub.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebsub.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebsub"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.has_sametype",
+      "member_key": "inherited:3250",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.has_sametype.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.has_sametype.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.has_sametype"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polysub",
+      "member_key": "member:3816",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polysub.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polysub.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polysub"
+    },
+    {
+      "sample_api_name": "numpy.sinc",
+      "member_key": "member:2397",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.sinc.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.sinc.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.sinc"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.hermval2d",
+      "member_key": "member:3700",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.hermval2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite.hermval2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.hermval2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.legline",
+      "member_key": "member:3784",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.legline.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.legline.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.legline"
+    },
+    {
+      "sample_api_name": "numpy.polysub",
+      "member_key": "member:2640",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polysub.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polysub.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polysub"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebmulx",
+      "member_key": "member:3658",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebmulx.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebmulx.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebmulx"
+    },
+    {
+      "sample_api_name": "numpy.apply_along_axis",
+      "member_key": "member:2701",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.apply_along_axis.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.apply_along_axis.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.apply_along_axis"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.hermvander",
+      "member_key": "member:3704",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.hermvander.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite.hermvander.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.hermvander"
+    },
+    {
+      "sample_api_name": "numpy.exceptions.DTypePromotionError",
+      "member_key": "member:172",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.exceptions.DTypePromotionError.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.exceptions.DTypePromotionError.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.exceptions.DTypePromotionError"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.trim",
+      "member_key": "inherited:3440",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.trim.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.trim.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.trim"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.truncate",
+      "member_key": "inherited:3441",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.truncate.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.truncate.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.truncate"
+    },
+    {
+      "sample_api_name": "numpy.real",
+      "member_key": "member:2770",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.real.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.real.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.real"
+    },
+    {
+      "sample_api_name": "numpy.char.split",
+      "member_key": "member:4640",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.split.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.split"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.cutdeg",
+      "member_key": "inherited:3333",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.cutdeg.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.cutdeg.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.cutdeg"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.roots",
+      "member_key": "inherited:3181",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.roots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.roots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.roots"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermeweight",
+      "member_key": "member:3744",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermeweight.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermeweight.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermeweight"
+    },
+    {
+      "sample_api_name": "numpy.genfromtxt",
+      "member_key": "member:2619",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.genfromtxt.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.genfromtxt.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.genfromtxt"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polyval2d",
+      "member_key": "member:3827",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polyval2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polyval2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polyval2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.domain",
+      "member_key": "inherited:3403",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.domain.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.domain.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.domain"
+    },
+    {
+      "sample_api_name": "numpy.hsplit",
+      "member_key": "member:2716",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.hsplit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.hsplit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.hsplit"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermevander2d",
+      "member_key": "member:3737",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermevander2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermevander2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermevander2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.mapparms",
+      "member_key": "inherited:3178",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.mapparms.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.mapparms.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.mapparms"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.legpow",
+      "member_key": "member:3791",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.legpow.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.legpow.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.legpow"
+    },
+    {
+      "sample_api_name": "numpy.lib.format.read_array_header_1_0",
+      "member_key": "member:2314",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.format.read_array_header_1_0.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.format.read_array_header_1_0"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre.cutdeg",
+      "member_key": "inherited:3386",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.cutdeg.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.cutdeg.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre.cutdeg"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.fromroots",
+      "member_key": "inherited:3290",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.fromroots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.fromroots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.fromroots"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.has_samecoef",
+      "member_key": "inherited:3406",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.has_samecoef.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.has_samecoef.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.has_samecoef"
+    },
+    {
+      "sample_api_name": "numpy.broadcast_arrays",
+      "member_key": "member:2737",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.broadcast_arrays.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.broadcast_arrays.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.broadcast_arrays"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagcompanion",
+      "member_key": "member:3772",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagcompanion.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagcompanion.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagcompanion"
+    },
+    {
+      "sample_api_name": "numpy.packbits",
+      "member_key": "member:4432",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.packbits.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.packbits.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.packbits"
+    },
+    {
+      "sample_api_name": "numpy.isneginf",
+      "member_key": "member:2792",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.isneginf.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.isneginf.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.isneginf"
+    },
+    {
+      "sample_api_name": "numpy.nancumprod",
+      "member_key": "member:2553",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.nancumprod.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.nancumprod.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.nancumprod"
+    },
+    {
+      "sample_api_name": "numpy.ma.getmask",
+      "member_key": "member:3211",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.getmask.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.getmask.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.getmask"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.identity",
+      "member_key": "inherited:3450",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.identity.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.identity.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.identity"
+    },
+    {
+      "sample_api_name": "numpy.char.mod",
+      "member_key": "member:4607",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.mod.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.mod.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.mod"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.Hermite.fit",
+      "member_key": "inherited:3236",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.Hermite.fit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Hermite.fit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.Hermite.fit"
+    },
+    {
+      "sample_api_name": "numpy.lib.format.open_memmap",
+      "member_key": "member:2320",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.format.open_memmap.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.format.open_memmap"
+    },
+    {
+      "sample_api_name": "numpy.load",
+      "member_key": "member:2593",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.load.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.load.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.load"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermeval3d",
+      "member_key": "member:3734",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermeval3d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermeval3d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermeval3d"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.isalpha",
+      "member_key": "member:4228",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.isalpha.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.isalpha.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.isalpha"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.translate",
+      "member_key": "member:4252",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.translate.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.translate"
+    },
+    {
+      "sample_api_name": "numpy.record",
+      "member_key": "member:4546",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.record.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.record.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.record"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebline",
+      "member_key": "member:3654",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebline.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebline.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebline"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.leggrid2d",
+      "member_key": "member:3796",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.leggrid2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.leggrid2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.leggrid2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.roots",
+      "member_key": "inherited:3446",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.roots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.roots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.roots"
+    },
+    {
+      "sample_api_name": "numpy.lib.format.read_magic",
+      "member_key": "member:2305",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.format.read_magic.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.lib._format_impl.read_magic.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.format.read_magic"
+    },
+    {
+      "sample_api_name": "numpy.ma.cov",
+      "member_key": "member:3530",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.cov.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.cov.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.cov"
+    },
+    {
+      "sample_api_name": "numpy.diag",
+      "member_key": "member:2749",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.diag.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.diag.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.diag"
+    },
+    {
+      "sample_api_name": "numpy.imag",
+      "member_key": "member:2772",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.imag.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.imag.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.imag"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.legcompanion",
+      "member_key": "member:3803",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.legcompanion.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.legcompanion.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.legcompanion"
+    },
+    {
+      "sample_api_name": "numpy.ma.inner",
+      "member_key": "member:3457",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.inner.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.inner.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.inner"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.Hermite.fromroots",
+      "member_key": "inherited:3237",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.Hermite.fromroots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Hermite.fromroots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.Hermite.fromroots"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebfit",
+      "member_key": "member:3672",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebfit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebfit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebfit"
+    },
+    {
+      "sample_api_name": "numpy.poly1d.order",
+      "member_key": "member:2649",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.poly1d.order.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.poly1d.order.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.poly1d.order"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polyfromroots",
+      "member_key": "member:3814",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polyfromroots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polyfromroots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polyfromroots"
+    },
+    {
+      "sample_api_name": "numpy.ma.mask_or",
+      "member_key": "member:3219",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.mask_or.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.mask_or"
+    },
+    {
+      "sample_api_name": "numpy.lib.format.isfileobj",
+      "member_key": "member:2322",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.format.isfileobj.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.lib._format_impl.isfileobj.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.format.isfileobj"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.cast",
+      "member_key": "inherited:3346",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.cast.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.cast.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.cast"
+    },
+    {
+      "sample_api_name": "numpy.ma.left_shift",
+      "member_key": "member:3438",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.left_shift.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.left_shift.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.left_shift"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagfit",
+      "member_key": "member:3771",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagfit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagfit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagfit"
+    },
+    {
+      "sample_api_name": "numpy.lib.stride_tricks.sliding_window_view",
+      "member_key": "member:2729",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.stride_tricks.sliding_window_view.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.lib._stride_tricks_impl.sliding_window_view.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.stride_tricks.sliding_window_view"
+    },
+    {
+      "sample_api_name": "numpy.savetxt",
+      "member_key": "member:2610",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.savetxt.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.savetxt.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.savetxt"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.split",
+      "member_key": "member:4246",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.split.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.split"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagadd",
+      "member_key": "member:3755",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagadd.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagadd.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagadd"
+    },
+    {
+      "sample_api_name": "numpy.ma.resize",
+      "member_key": "member:3444",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.resize.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.resize.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.resize"
+    },
+    {
+      "sample_api_name": "numpy.char.capitalize",
+      "member_key": "member:4633",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.capitalize.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.capitalize.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.capitalize"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.fit",
+      "member_key": "inherited:3448",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.fit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.fit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.fit"
+    },
+    {
+      "sample_api_name": "numpy.eye",
+      "member_key": "member:2746",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.eye.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.eye.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.eye"
+    },
+    {
+      "sample_api_name": "numpy.char.replace",
+      "member_key": "member:4636",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.replace.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.replace.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.replace"
+    },
+    {
+      "sample_api_name": "numpy.exceptions.VisibleDeprecationWarning",
+      "member_key": "member:166",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.exceptions.VisibleDeprecationWarning.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.exceptions.VisibleDeprecationWarning.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.exceptions.VisibleDeprecationWarning"
+    },
+    {
+      "sample_api_name": "numpy.place",
+      "member_key": "member:2358",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.place.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.place.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.place"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.leggrid3d",
+      "member_key": "member:3798",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.leggrid3d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.leggrid3d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.leggrid3d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.linspace",
+      "member_key": "inherited:3447",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.linspace.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.linspace.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.linspace"
+    },
+    {
+      "sample_api_name": "numpy.ndenumerate",
+      "member_key": "member:2478",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ndenumerate.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ndenumerate.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ndenumerate"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polyvander2d",
+      "member_key": "member:3832",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polyvander2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polyvander2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polyvander2d"
+    },
+    {
+      "sample_api_name": "numpy.ma.apply_over_axes",
+      "member_key": "member:3509",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.apply_over_axes.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.apply_over_axes"
+    },
+    {
+      "sample_api_name": "numpy.lib.Arrayterator",
+      "member_key": "member:2254",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.lib.Arrayterator.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.lib.Arrayterator.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.lib.Arrayterator"
+    },
+    {
+      "sample_api_name": "numpy.split",
+      "member_key": "member:2714",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.split.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.split.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.split"
+    },
+    {
+      "sample_api_name": "numpy.rec.format_parser",
+      "member_key": "member:4541",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.rec.format_parser.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.rec.format_parser.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.rec.format_parser"
+    },
+    {
+      "sample_api_name": "numpy.mask_indices",
+      "member_key": "member:2760",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.mask_indices.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.mask_indices.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.mask_indices"
+    },
+    {
+      "sample_api_name": "numpy.ma.notmasked_edges",
+      "member_key": "member:3540",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.notmasked_edges.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.notmasked_edges"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.legder",
+      "member_key": "member:3792",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.legder.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.legder.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.legder"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.isupper",
+      "member_key": "member:4233",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.isupper.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.isupper.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.isupper"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre.fit",
+      "member_key": "inherited:3395",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.fit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.fit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre.fit"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.isdigit",
+      "member_key": "member:4229",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.isdigit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.isdigit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.isdigit"
+    },
+    {
+      "sample_api_name": "numpy.poly1d",
+      "member_key": "member:2646",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.poly1d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.poly1d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.poly1d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre",
+      "member_key": "member:3807",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre"
+    },
+    {
+      "sample_api_name": "numpy.tril_indices",
+      "member_key": "member:2761",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.tril_indices.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.tril_indices.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.tril_indices"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polyder",
+      "member_key": "member:3821",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polyder.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polyder.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polyder"
+    },
+    {
+      "sample_api_name": "numpy.unique_inverse",
+      "member_key": "member:2240",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.unique_inverse.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.unique_inverse.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.unique_inverse"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebvander2d",
+      "member_key": "member:3670",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebvander2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebvander2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebvander2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre.truncate",
+      "member_key": "inherited:3388",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.truncate.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.truncate.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre.truncate"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagline",
+      "member_key": "member:3753",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagline.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagline.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagline"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.cast",
+      "member_key": "inherited:3293",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.cast.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.cast.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.cast"
+    },
+    {
+      "sample_api_name": "numpy.fix",
+      "member_key": "member:2790",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.fix.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.fix.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.fix"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebgrid2d",
+      "member_key": "member:3666",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebgrid2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebgrid2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebgrid2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.hermsub",
+      "member_key": "member:3692",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.hermsub.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite.hermsub.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.hermsub"
+    },
+    {
+      "sample_api_name": "numpy.ma.setdiff1d",
+      "member_key": "member:3528",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.setdiff1d.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.setdiff1d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebpts1",
+      "member_key": "member:3678",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebpts1.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebpts1.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebpts1"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.chebdiv",
+      "member_key": "member:3660",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.chebdiv.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.chebyshev.chebdiv.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.chebdiv"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagval3d",
+      "member_key": "member:3766",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagval3d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagval3d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagval3d"
+    },
+    {
+      "sample_api_name": "numpy.loadtxt",
+      "member_key": "member:2607",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.loadtxt.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.loadtxt.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.loadtxt"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_less_equal",
+      "member_key": "member:3228",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_less_equal.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_less_equal.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_less_equal"
+    },
+    {
+      "sample_api_name": "numpy.broadcast_shapes",
+      "member_key": "member:2735",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.broadcast_shapes.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.broadcast_shapes.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.broadcast_shapes"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.deriv",
+      "member_key": "inherited:3286",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.deriv.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.deriv.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.deriv"
+    },
+    {
+      "sample_api_name": "numpy.rec.find_duplicate",
+      "member_key": "member:4540",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.rec.find_duplicate.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.rec.find_duplicate.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.rec.find_duplicate"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre.has_samecoef",
+      "member_key": "inherited:3353",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.has_samecoef.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.has_samecoef.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre.has_samecoef"
+    },
+    {
+      "sample_api_name": "numpy.triu_indices_from",
+      "member_key": "member:2765",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.triu_indices_from.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.triu_indices_from.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.triu_indices_from"
+    },
+    {
+      "sample_api_name": "numpy.char.rjust",
+      "member_key": "member:4623",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.rjust.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.rjust.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.rjust"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.integ",
+      "member_key": "inherited:3179",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.integ.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.integ.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.integ"
+    },
+    {
+      "sample_api_name": "numpy.nanmean",
+      "member_key": "member:2555",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.nanmean.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.nanmean.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.nanmean"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.has_samewindow",
+      "member_key": "inherited:3143",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.has_samewindow.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.has_samewindow.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.has_samewindow"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.lagpow",
+      "member_key": "member:3760",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.lagpow.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.lagpow.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.lagpow"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermeadd",
+      "member_key": "member:3723",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermeadd.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermeadd.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermeadd"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.decode",
+      "member_key": "member:4221",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.decode.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.decode"
+    },
+    {
+      "sample_api_name": "numpy.ma.getmaskarray",
+      "member_key": "member:3213",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.getmaskarray.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.getmaskarray.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.getmaskarray"
+    },
+    {
+      "sample_api_name": "numpy.percentile",
+      "member_key": "member:2404",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.percentile.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.percentile.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.percentile"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.fromroots",
+      "member_key": "inherited:3343",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.fromroots.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.fromroots.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.fromroots"
+    },
+    {
+      "sample_api_name": "numpy.ma.masked_greater",
+      "member_key": "member:3225",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.masked_greater.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.masked_greater.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.masked_greater"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.hermevander3d",
+      "member_key": "member:3738",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.hermevander3d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite_e.hermevander3d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.hermevander3d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.hermvander2d",
+      "member_key": "member:3705",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.hermvander2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite.hermvander2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.hermvander2d"
+    },
+    {
+      "sample_api_name": "numpy.rec.fromstring",
+      "member_key": "member:4564",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.rec.fromstring.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.rec.fromstring.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.rec.fromstring"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.degree",
+      "member_key": "inherited:3438",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.degree.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.degree.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.degree"
+    },
+    {
+      "sample_api_name": "numpy.trim_zeros",
+      "member_key": "member:2354",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.trim_zeros.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.trim_zeros.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.trim_zeros"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.polyline",
+      "member_key": "member:3813",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.polyline.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.polynomial.polyline.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.polyline"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.legsub",
+      "member_key": "member:3787",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.legsub.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.legendre.legsub.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.legsub"
+    },
+    {
+      "sample_api_name": "numpy.char.chararray.rsplit",
+      "member_key": "member:4244",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.char.chararray.rsplit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.char.chararray.rsplit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.char.chararray.rsplit"
+    },
+    {
+      "sample_api_name": "numpy.ma.convolve",
+      "member_key": "member:3463",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.convolve.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.convolve.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.convolve"
+    },
+    {
+      "sample_api_name": "numpy.ma.compress_rowcols",
+      "member_key": "member:3515",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.compress_rowcols.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.compress_rowcols.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.compress_rowcols"
+    },
+    {
+      "sample_api_name": "numpy.ma.asarray",
+      "member_key": "member:3466",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.asarray.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.asarray.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.asarray"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre.copy",
+      "member_key": "inherited:3384",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.copy.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.copy.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre.copy"
+    },
+    {
+      "sample_api_name": "numpy.emath.log10",
+      "member_key": "member:2685",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.emath.log10.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.emath.log10.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.emath.log10"
+    },
+    {
+      "sample_api_name": "numpy.ma.putmask",
+      "member_key": "member:3441",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.putmask.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.ma.putmask.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.putmask"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.polynomial.Polynomial.mapparms",
+      "member_key": "inherited:3443",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.polynomial.Polynomial.mapparms.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Polynomial.mapparms.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.polynomial.Polynomial.mapparms"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE",
+      "member_key": "member:3745",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.poly2lag",
+      "member_key": "member:3747",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.poly2lag.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.laguerre.poly2lag.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.poly2lag"
+    },
+    {
+      "sample_api_name": "numpy.corrcoef",
+      "member_key": "member:2383",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.corrcoef.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.corrcoef.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.corrcoef"
+    },
+    {
+      "sample_api_name": "numpy.emath.power",
+      "member_key": "member:2690",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.emath.power.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.emath.power.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.emath.power"
+    },
+    {
+      "sample_api_name": "numpy.unwrap",
+      "member_key": "member:2349",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.unwrap.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.unwrap.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.unwrap"
+    },
+    {
+      "sample_api_name": "numpy.meshgrid",
+      "member_key": "member:2423",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.meshgrid.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.meshgrid.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.meshgrid"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.integ",
+      "member_key": "inherited:3285",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.integ.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.integ.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.integ"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.truncate",
+      "member_key": "inherited:3176",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.truncate.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.truncate.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.truncate"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.domain",
+      "member_key": "inherited:3138",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.domain.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.domain.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.domain"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.copy",
+      "member_key": "inherited:3331",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.copy.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.copy.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.copy"
+    },
+    {
+      "sample_api_name": "numpy.ma.allequal",
+      "member_key": "member:3464",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.ma.allequal.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.ma.allequal"
+    },
+    {
+      "sample_api_name": "numpy.polyval",
+      "member_key": "member:2637",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polyval.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polyval.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polyval"
+    },
+    {
+      "sample_api_name": "numpy.nanmax",
+      "member_key": "member:2541",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.nanmax.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.nanmax.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.nanmax"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.laguerre.Laguerre.fit",
+      "member_key": "inherited:3342",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.laguerre.Laguerre.fit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Laguerre.fit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.laguerre.Laguerre.fit"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite_e.HermiteE.copy",
+      "member_key": "inherited:3278",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite_e.HermiteE.copy.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.HermiteE.copy.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite_e.HermiteE.copy"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.chebyshev.Chebyshev.has_samedomain",
+      "member_key": "inherited:3142",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.chebyshev.Chebyshev.has_samedomain.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Chebyshev.has_samedomain.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.chebyshev.Chebyshev.has_samedomain"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.hermite.hermgrid2d",
+      "member_key": "member:3701",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.hermite.hermgrid2d.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.hermite.hermgrid2d.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.hermite.hermgrid2d"
+    },
+    {
+      "sample_api_name": "numpy.polynomial.legendre.Legendre.deriv",
+      "member_key": "inherited:3392",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.polynomial.legendre.Legendre.deriv.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.polynomial.Legendre.deriv.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.polynomial.legendre.Legendre.deriv"
+    },
+    {
+      "sample_api_name": "numpy.broadcast_to",
+      "member_key": "member:2732",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.broadcast_to.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.broadcast_to.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.broadcast_to"
+    },
+    {
+      "sample_api_name": "numpy.unique_counts",
+      "member_key": "member:2238",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.unique_counts.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.unique_counts.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.unique_counts"
+    },
+    {
+      "sample_api_name": "numpy.median",
+      "member_key": "member:2401",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\numpy_web\\per_member\\numpy.median.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\numpy_PDF\\per_member\\numpy.median.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\numpy\\numpy.median"
+    }
+  ]
+}

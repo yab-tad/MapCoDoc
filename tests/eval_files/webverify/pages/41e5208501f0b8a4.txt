@@ -1,0 +1,12 @@
+# numpy.char.chararray.encode
+
+method
+
+char.chararray.encode(encoding=None, errors=None)[source](https://github.com/numpy/numpy/blob/v2.5.0/numpy/_core/defchararray.py#L795-L804)#(https://numpy.org/doc/stable/reference/generated/numpy.char.chararray.encode.html#numpy.char.chararray.encode)
+    Calls str.encode(https://docs.python.org/3/library/stdtypes.html#str.encode) element-wise.
+
+See also
+
+char.encode(https://numpy.org/doc/stable/reference/generated/numpy.char.encode.html#numpy.char.encode)
+
+On this page

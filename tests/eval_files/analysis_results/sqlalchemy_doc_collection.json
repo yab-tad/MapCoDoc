@@ -1,0 +1,2217 @@
+{
+  "db_path": "mapcodoc_output\\doc_test\\sqlalchemy_2.0.45.db",
+  "total_samples": 158,
+  "with_web_doc": 158,
+  "with_pdf_doc": 154,
+  "with_no_docs": 0,
+  "unresolved_samples": [],
+  "alias_groups": {},
+  "web_docs_unresolved_to_member": [],
+  "pdf_docs_unresolved_to_member": [],
+  "members": [
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.all_orm_descriptors",
+      "member_key": "member:7041",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.all_orm_descriptors.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.all_orm_descriptors.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.all_orm_descriptors"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.collections.collection",
+      "member_key": "member:5729",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.collections.collection.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.collections.collection.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.collections.collection"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.add_mapped_attribute",
+      "member_key": "member:6085",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.add_mapped_attribute.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.add_mapped_attribute.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.add_mapped_attribute"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.rollback",
+      "member_key": "member:7799",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.rollback.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.rollback.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.rollback"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.registry.update_type_annotation_map",
+      "member_key": "member:6098",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.registry.update_type_annotation_map.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.registry.update_type_annotation_map.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.registry.update_type_annotation_map"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.dynamic_loader",
+      "member_key": "member:8510",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.dynamic_loader.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.dynamic_loader.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.dynamic_loader"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.set_committed_value",
+      "member_key": "member:5489",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.set_committed_value.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attributes.set_committed_value.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.set_committed_value"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.reconstructor",
+      "member_key": "member:7102",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.reconstructor.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.reconstructor.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.reconstructor"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.del_attribute",
+      "member_key": "member:5492",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.del_attribute.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attributes.del_attribute.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.del_attribute"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.is_sibling",
+      "member_key": "member:7056",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.is_sibling.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.is_sibling.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.is_sibling"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.get_history",
+      "member_key": "member:5480",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.get_history.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attributes.get_history.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.get_history"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.common_parent",
+      "member_key": "member:7055",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.common_parent.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.common_parent.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.common_parent"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.self_and_descendants",
+      "member_key": "member:7060",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.self_and_descendants.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.self_and_descendants.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.self_and_descendants"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.UOWTransaction",
+      "member_key": "member:8240",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.UOWTransaction.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.UOWTransaction.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.UOWTransaction"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.KeyFuncDict",
+      "member_key": "member:6903",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.KeyFuncDict.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.KeyFuncDict.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.KeyFuncDict"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.loaded_as_persistent",
+      "member_key": "member:6552",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.loaded_as_persistent.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.loaded_as_persistent.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.loaded_as_persistent"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.merge_result",
+      "member_key": "member:6857",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.merge_result.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.merge_result.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.merge_result"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MappedClassProtocol",
+      "member_key": "member:6129",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MappedClassProtocol.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MappedClassProtocol.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MappedClassProtocol"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.WriteOnlyCollection.remove",
+      "member_key": "member:8498",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.WriteOnlyCollection.remove.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.WriteOnlyCollection.remove.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.WriteOnlyCollection.remove"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.declared_attr.directive",
+      "member_key": "member:6046",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.declared_attr.directive.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.declared_attr.directive.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.declared_attr.directive"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.backref",
+      "member_key": "member:8511",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.backref.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.backref.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.backref"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.column_keyed_dict",
+      "member_key": "member:6896",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.column_keyed_dict.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.column_keyed_dict.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.column_keyed_dict"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.util.object_state",
+      "member_key": "member:5557",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.util.object_state.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.base.object_state.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.util.object_state"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.polymorphic_union",
+      "member_key": "member:8328",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.polymorphic_union.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.polymorphic_union.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.polymorphic_union"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.after_rollback",
+      "member_key": "member:6537",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.after_rollback.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.after_rollback.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.after_rollback"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.foreign",
+      "member_key": "member:7445",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.foreign.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.foreign.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.foreign"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.column_attrs",
+      "member_key": "member:7045",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.column_attrs.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.column_attrs.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.column_attrs"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceState.attrs",
+      "member_key": "member:7908",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceState.attrs.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceState.attrs.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceState.attrs"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.CompositeProperty.Comparator",
+      "member_key": "member:6362",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.CompositeProperty.Comparator.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.CompositeProperty.Comparator.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.CompositeProperty.Comparator"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.DeclarativeBase",
+      "member_key": "member:6057",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.DeclarativeBase.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.DeclarativeBase.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.DeclarativeBase"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.expire",
+      "member_key": "member:7823",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.expire.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.expire.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.expire"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceState.identity",
+      "member_key": "member:7920",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceState.identity.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceState.identity.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceState.identity"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.relationships",
+      "member_key": "member:7046",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.relationships.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.relationships.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.relationships"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.identity_key_from_row",
+      "member_key": "member:7065",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.identity_key_from_row.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.identity_key_from_row.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.identity_key_from_row"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.DynamicMapped",
+      "member_key": "member:5591",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.DynamicMapped.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.DynamicMapped.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.DynamicMapped"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.before_commit",
+      "member_key": "member:6535",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.before_commit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.before_commit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.before_commit"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.synonyms",
+      "member_key": "member:7043",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.synonyms.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.synonyms.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.synonyms"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.after_transaction_create",
+      "member_key": "member:6533",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.after_transaction_create.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.after_transaction_create.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.after_transaction_create"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.expire_all",
+      "member_key": "member:7822",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.expire_all.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.expire_all.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.expire_all"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.init_collection",
+      "member_key": "member:5487",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.init_collection.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attributes.init_collection.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.init_collection"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper",
+      "member_key": "member:6927",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.instrumentation.is_instrumented",
+      "member_key": "member:6726",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.instrumentation.is_instrumented.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.instrumentation.is_instrumented.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.instrumentation.is_instrumented"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.composites",
+      "member_key": "member:7047",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.composites.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.composites.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.composites"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.after_flush",
+      "member_key": "member:6540",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.after_flush.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.after_flush.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.after_flush"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.is_active",
+      "member_key": "member:7861",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.is_active.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.is_active.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.is_active"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MapperEvents.before_configured",
+      "member_key": "member:6515",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MapperEvents.before_configured.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MapperEvents.before_configured.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MapperEvents.before_configured"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.WriteOnlyMapped",
+      "member_key": "member:5594",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.WriteOnlyMapped.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.WriteOnlyMapped.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.WriteOnlyMapped"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.registry.mapped_as_dataclass",
+      "member_key": "member:6114",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.registry.mapped_as_dataclass.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.registry.mapped_as_dataclass.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.registry.mapped_as_dataclass"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.enable_relationship_loading",
+      "member_key": "member:7845",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.enable_relationship_loading.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.enable_relationship_loading.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.enable_relationship_loading"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceEvents.refresh_flush",
+      "member_key": "member:6489",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceEvents.refresh_flush.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceEvents.refresh_flush.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceEvents.refresh_flush"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.merge_frozen_result",
+      "member_key": "member:6856",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.merge_frozen_result.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.merge_frozen_result.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.merge_frozen_result"
+    },
+    {
+      "sample_api_name": "sqlalchemy.util.ScopedRegistry",
+      "member_key": "member:13124",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.util.ScopedRegistry.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.util.ScopedRegistry.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.util.ScopedRegistry"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MappedColumn",
+      "member_key": "member:7261",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MappedColumn.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MappedColumn.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MappedColumn"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InspectionAttr",
+      "member_key": "member:5568",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InspectionAttr.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InspectionAttr.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InspectionAttr"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.keyfunc_mapping",
+      "member_key": "member:6902",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.keyfunc_mapping.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.keyfunc_mapping.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.keyfunc_mapping"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.no_autoflush",
+      "member_key": "member:7819",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.no_autoflush.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.no_autoflush.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.no_autoflush"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.registry.__init__",
+      "member_key": "member:6097",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.registry.__init__.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.registry.__init__.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.registry.__init__"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.bulk_update_mappings",
+      "member_key": "member:7858",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.bulk_update_mappings.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.bulk_update_mappings.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.bulk_update_mappings"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.RelationshipProperty.Comparator",
+      "member_key": "member:7481",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.RelationshipProperty.Comparator.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.RelationshipProperty.Comparator"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attribute_keyed_dict",
+      "member_key": "member:6901",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attribute_keyed_dict.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attribute_keyed_dict.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attribute_keyed_dict"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.declarative_mixin",
+      "member_key": "member:6053",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.declarative_mixin.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.declarative_mixin.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.declarative_mixin"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstrumentedAttribute",
+      "member_key": "member:5349",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstrumentedAttribute.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstrumentedAttribute.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstrumentedAttribute"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.ORMExecuteState.invoke_statement",
+      "member_key": "member:7710",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.ORMExecuteState.invoke_statement.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.ORMExecuteState.invoke_statement.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.ORMExecuteState.invoke_statement"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.CascadeOptions",
+      "member_key": "member:8312",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.CascadeOptions.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.CascadeOptions.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.CascadeOptions"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.get_attribute",
+      "member_key": "member:5491",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.get_attribute.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attributes.get_attribute.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.get_attribute"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MappedSQLExpression",
+      "member_key": "member:7260",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MappedSQLExpression.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MappedSQLExpression.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MappedSQLExpression"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.add_all",
+      "member_key": "member:7832",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.add_all.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.add_all.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.add_all"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.pending_to_persistent",
+      "member_key": "member:6550",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.pending_to_persistent.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.pending_to_persistent.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.pending_to_persistent"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.get_property_by_column",
+      "member_key": "member:7010",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.get_property_by_column.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.get_property_by_column.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.get_property_by_column"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceState.transient",
+      "member_key": "member:7909",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceState.transient.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceState.transient.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceState.transient"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.close",
+      "member_key": "member:7808",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.close.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.close.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.close"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.sessionmaker",
+      "member_key": "member:7867",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.sessionmaker.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.sessionmaker.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.sessionmaker"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.AttributeEvents.set",
+      "member_key": "member:6566",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.AttributeEvents.set.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.AttributeEvents.set.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.AttributeEvents.set"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Composite",
+      "member_key": "member:6376",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Composite-class.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Composite-class.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Composite-class"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceEvents.load",
+      "member_key": "member:6487",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceEvents.load.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceEvents.load.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceEvents.load"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.LoaderCallableStatus",
+      "member_key": "member:5498",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.LoaderCallableStatus.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.LoaderCallableStatus.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.LoaderCallableStatus"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.DeclarativeBaseNoMeta",
+      "member_key": "member:6072",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.DeclarativeBaseNoMeta.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.DeclarativeBaseNoMeta.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.DeclarativeBaseNoMeta"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MapperEvents.mapper_configured",
+      "member_key": "member:6514",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MapperEvents.mapper_configured.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MapperEvents.mapper_configured.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MapperEvents.mapper_configured"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.NotExtension",
+      "member_key": "member:5536",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.NotExtension.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.NotExtension.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.NotExtension"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.pending_to_transient",
+      "member_key": "member:6548",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.pending_to_transient.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.pending_to_transient.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.pending_to_transient"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.collections.InstrumentedList",
+      "member_key": "member:5830",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.collections.InstrumentedList.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.collections.InstrumentedList.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.collections.InstrumentedList"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.QueryContext",
+      "member_key": "member:5840",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.QueryContext.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.QueryContext.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.QueryContext"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.mapped_as_dataclass",
+      "member_key": "member:6124",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.mapped_as_dataclass.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.mapped_as_dataclass.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.mapped_as_dataclass"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.class_mapper",
+      "member_key": "member:5567",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.class_mapper.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.class_mapper.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.class_mapper"
+    },
+    {
+      "sample_api_name": "sqlalchemy.util.ThreadLocalRegistry",
+      "member_key": "member:13133",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.util.ThreadLocalRegistry.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.util.ThreadLocalRegistry.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.util.ThreadLocalRegistry"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.do_orm_execute",
+      "member_key": "member:6532",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.do_orm_execute.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.do_orm_execute.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.do_orm_execute"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.remote",
+      "member_key": "member:7444",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.remote.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.remote.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.remote"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.AttributeEvents",
+      "member_key": "member:6557",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.AttributeEvents.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.AttributeEvents.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.AttributeEvents"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.sessionmaker.configure",
+      "member_key": "member:7872",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.sessionmaker.configure.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.sessionmaker.configure.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.sessionmaker.configure"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.__init__",
+      "member_key": "member:6930",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.__init__.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.__init__.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.__init__"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.AttributeEvents.remove",
+      "member_key": "member:6565",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.AttributeEvents.remove.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.AttributeEvents.remove.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.AttributeEvents.remove"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.util.identity_key",
+      "member_key": "member:8330",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.util.identity_key.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.util.identity_key.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.util.identity_key"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.instance_state",
+      "member_key": "member:5549",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.instance_state.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attributes.instance_state.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.instance_state"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MapperProperty",
+      "member_key": "member:6766",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MapperProperty.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MapperProperty.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MapperProperty"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.selectable",
+      "member_key": "member:7033",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.selectable.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.selectable.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.selectable"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.transient_to_pending",
+      "member_key": "member:6547",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.transient_to_pending.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.transient_to_pending.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.transient_to_pending"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.deleted_to_persistent",
+      "member_key": "member:6554",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.deleted_to_persistent.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.deleted_to_persistent.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.deleted_to_persistent"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.make_transient",
+      "member_key": "member:7875",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.make_transient.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.make_transient.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.make_transient"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MapperEvents.after_update",
+      "member_key": "member:6520",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MapperEvents.after_update.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MapperEvents.after_update.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MapperEvents.after_update"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceState.was_deleted",
+      "member_key": "member:7912",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceState.was_deleted.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceState.was_deleted.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceState.was_deleted"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.identity_key_from_primary_key",
+      "member_key": "member:7066",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.identity_key_from_primary_key.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.identity_key_from_primary_key.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.identity_key_from_primary_key"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.dirty",
+      "member_key": "member:7863",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.dirty.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.dirty.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.dirty"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.object_mapper",
+      "member_key": "member:5556",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.object_mapper.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.object_mapper.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.object_mapper"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.isa",
+      "member_key": "member:7058",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.isa.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.isa.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.isa"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.persistent_to_deleted",
+      "member_key": "member:6553",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.persistent_to_deleted.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.persistent_to_deleted.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.persistent_to_deleted"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.in_transaction",
+      "member_key": "member:7791",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.in_transaction.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.in_transaction.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.in_transaction"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.PropComparator",
+      "member_key": "member:6787",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.PropComparator.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.PropComparator.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.PropComparator"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.scalars",
+      "member_key": "member:7807",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.scalars.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.scalars.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.scalars"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceState",
+      "member_key": "member:7885",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceState.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceState.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceState"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.ClassManager",
+      "member_key": "member:6651",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.ClassManager.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.ClassManager"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.scalar",
+      "member_key": "member:7806",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.scalar.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.scalar.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.scalar"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionTransaction.parent",
+      "member_key": "member:7746",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionTransaction.parent.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionTransaction.parent.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionTransaction.parent"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionTransaction",
+      "member_key": "member:7732",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionTransaction.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionTransaction.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionTransaction"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.QueryEvents.before_compile_update",
+      "member_key": "member:6573",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.QueryEvents.before_compile_update.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.QueryEvents.before_compile_update.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.QueryEvents.before_compile_update"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.as_declarative",
+      "member_key": "member:6123",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.as_declarative.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.as_declarative.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.as_declarative"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.ColumnProperty",
+      "member_key": "member:7232",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.ColumnProperty.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.ColumnProperty.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.ColumnProperty"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.collections.prepare_instrumentation",
+      "member_key": "member:5780",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.collections.prepare_instrumentation.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.collections.prepare_instrumentation.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.collections.prepare_instrumentation"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.mapped_table",
+      "member_key": "member:6974",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.mapped_table.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.mapped_table.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.mapped_table"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.commit",
+      "member_key": "member:7800",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.commit.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.commit.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.commit"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.is_modified",
+      "member_key": "member:7860",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.is_modified.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.is_modified.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.is_modified"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.close_all_sessions",
+      "member_key": "member:7874",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.close_all_sessions.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.close_all_sessions.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.close_all_sessions"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.make_transient_to_detached",
+      "member_key": "member:7876",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.make_transient_to_detached.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.make_transient_to_detached.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.make_transient_to_detached"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceState.session",
+      "member_key": "member:7917",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceState.session.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceState.session.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceState.session"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Mapper.iterate_properties",
+      "member_key": "member:7011",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Mapper.iterate_properties.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Mapper.iterate_properties.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Mapper.iterate_properties"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.get_transaction",
+      "member_key": "member:7793",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.get_transaction.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.get_transaction.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.get_transaction"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.close_all",
+      "member_key": "inherited:21177",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.close_all.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.close_all.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.close_all"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.merge",
+      "member_key": "member:7839",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.merge.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.merge.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.merge"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.ColumnProperty.Comparator",
+      "member_key": "member:7250",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.ColumnProperty.Comparator.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.ColumnProperty.Comparator.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.ColumnProperty.Comparator"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.execute",
+      "member_key": "member:7805",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.execute.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.execute.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.execute"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.History",
+      "member_key": "member:5464",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.History.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.attributes.History.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.History"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.AttributeEventToken",
+      "member_key": "member:5380",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.AttributeEventToken.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.AttributeEventToken.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.AttributeEventToken"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.expunge_all",
+      "member_key": "member:7812",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.expunge_all.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.expunge_all.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.expunge_all"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.prepare",
+      "member_key": "member:7801",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.prepare.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.prepare.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.prepare"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.CompositeProperty",
+      "member_key": "member:6323",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.CompositeProperty.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.CompositeProperty"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.AttributeEvents.init_scalar",
+      "member_key": "member:6567",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.AttributeEvents.init_scalar.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.AttributeEvents.init_scalar.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.AttributeEvents.init_scalar"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.MappedAsDataclass",
+      "member_key": "member:6055",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.MappedAsDataclass.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.MappedAsDataclass.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.MappedAsDataclass"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.mapped_column",
+      "member_key": "member:8501",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.mapped_column.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.mapped_column.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.mapped_column"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.AttributeState.history",
+      "member_key": "member:7961",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.AttributeState.history.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.AttributeState.history.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.AttributeState.history"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.InstanceState.detached",
+      "member_key": "member:7914",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.InstanceState.detached.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.InstanceState.detached.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.InstanceState.detached"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SynonymProperty",
+      "member_key": "member:6385",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SynonymProperty.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SynonymProperty.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SynonymProperty"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.attributes.flag_modified",
+      "member_key": "member:5493",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.attributes.flag_modified.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.ext.mutable.flag_modified.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.attributes.flag_modified"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.clear_mappers",
+      "member_key": "member:8514",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.clear_mappers.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.clear_mappers.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.clear_mappers"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.configure_mappers",
+      "member_key": "member:7098",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.configure_mappers.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.configure_mappers.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.configure_mappers"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.delete",
+      "member_key": "member:7834",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.delete.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.delete.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.delete"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.connection",
+      "member_key": "member:7802",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.connection.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.connection.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.connection"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.collections.InstrumentedDict",
+      "member_key": "member:5832",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.collections.InstrumentedDict.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.collections.InstrumentedDict.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.collections.InstrumentedDict"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.declarative_base",
+      "member_key": "member:6086",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.declarative_base.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.declarative_base.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.declarative_base"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Relationship",
+      "member_key": "member:7613",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Relationship.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Relationship.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Relationship"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.sessionmaker.begin",
+      "member_key": "member:7870",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.sessionmaker.begin.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.sessionmaker.begin.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.sessionmaker.begin"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.collections.CollectionAdapter",
+      "member_key": "member:5744",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 0,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.collections.CollectionAdapter.txt"
+      ],
+      "pdf_doc_files": [],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.collections.CollectionAdapter"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.registry.map_imperatively",
+      "member_key": "member:6120",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.registry.map_imperatively.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.registry.map_imperatively.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.registry.map_imperatively"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.declared_attr.cascading",
+      "member_key": "member:6047",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.declared_attr.cascading.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.declared_attr.cascading.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.declared_attr.cascading"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.composite",
+      "member_key": "member:8504",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.composite-function.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.composite-function.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.composite-function"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.WriteOnlyCollection.insert",
+      "member_key": "member:8493",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.WriteOnlyCollection.insert.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.WriteOnlyCollection.insert.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.WriteOnlyCollection.insert"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.get",
+      "member_key": "member:7836",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.get.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.get.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.get"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.Session.deleted",
+      "member_key": "member:7864",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.Session.deleted.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.Session.deleted.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.Session.deleted"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.registry",
+      "member_key": "member:6087",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.registry.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.registry.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.registry"
+    },
+    {
+      "sample_api_name": "sqlalchemy.orm.SessionEvents.before_flush",
+      "member_key": "member:6539",
+      "match_mode": "db_identity",
+      "web_doc_count": 1,
+      "pdf_doc_count": 1,
+      "web_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\webDocs\\sqlalchemy_web\\per_member\\sqlalchemy.orm.SessionEvents.before_flush.txt"
+      ],
+      "pdf_doc_files": [
+        "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\retrieved_docs\\PDF_docs\\sqlalchemy_PDF\\per_member\\sqlalchemy.orm.SessionEvents.before_flush.txt"
+      ],
+      "output_dir": "C:\\Users\\Administrator\\Documents\\USask\\Thesis\\MapCoDoc\\study one exp\\RQ2\\stratified sampling\\samples\\docs\\sqlalchemy\\sqlalchemy.orm.SessionEvents.before_flush"
+    }
+  ]
+}

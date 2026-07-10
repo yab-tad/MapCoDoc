@@ -263,7 +263,7 @@ Extracts individual member documentation from PDF files using lexical + semantic
 ### 13. `DocumentationExtractor` & `ConcurrentDocExtractor`
 *(Located in `doc_processor/structured_doc_extracter.py`)*
 
-LLM-based documentation structuring using GPT-4o.
+LLM-based documentation structuring using `gpt-4.1-2025-04-14` (OpenAI Structured Outputs, strict JSON Schema).
 
 *   **Single Document:**
     ```python

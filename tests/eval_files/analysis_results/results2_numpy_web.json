@@ -1,0 +1,3035 @@
+{
+  "summary": {
+    "total_members": 244,
+    "extracted": 192,
+    "missing": 52,
+    "coverage_pct": 78.7,
+    "match_breakdown": {
+      "lexical": 0,
+      "semantic": 0,
+      "hybrid": 0,
+      "fallback": 0,
+      "unknown": 192
+    }
+  },
+  "members": [
+    {
+      "api_name": "numpy.ma.notmasked_contiguous",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 75,
+        "first_line": "# numpy.ma.notmasked_contiguous",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.notmasked_contiguous.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.max",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 79,
+        "first_line": "# numpy.ma.max",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.max.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.triu",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "# numpy.triu",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.triu.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermeval2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.polynomial.hermite_e.hermeval2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermeval2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.bincount",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 85,
+        "first_line": "# numpy.bincount",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.bincount.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polymulx",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "# numpy.polynomial.polynomial.polymulx",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polymulx.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ix_",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "# numpy.ix_",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ix_.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.flipud",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "# numpy.flipud",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.flipud.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.rjust",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "# numpy.char.chararray.rjust",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.rjust.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.trapezoid",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 132,
+        "first_line": "# numpy.trapezoid",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.trapezoid.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.iscomplexobj",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "# numpy.iscomplexobj",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.iscomplexobj.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.array",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 132,
+        "first_line": "# numpy.ma.array",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.array.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.diagflat",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 53,
+        "first_line": "# numpy.diagflat",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.diagflat.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.quantile",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 228,
+        "first_line": "# numpy.quantile",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.quantile.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.histogram",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 116,
+        "first_line": "# numpy.histogram",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.histogram.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebinterpolate",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 52,
+        "first_line": "# numpy.polynomial.chebyshev.chebinterpolate",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebinterpolate.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.isspace",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 14,
+        "first_line": "# numpy.char.chararray.isspace",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.isspace.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.nanargmax",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "# numpy.nanargmax",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.nanargmax.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.make_mask",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 85,
+        "first_line": "# numpy.ma.make_mask",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.make_mask.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.greater",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "# numpy.char.greater",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.greater.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib._format_impl.read_array_header_2_0",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "# numpy.lib.format.read_array_header_2_0",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.format.read_array_header_2_0.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebgrid3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "# numpy.polynomial.chebyshev.chebgrid3d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebgrid3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.startswith",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "# numpy.char.chararray.startswith",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.startswith.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.compress_nd",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "# numpy.ma.compress_nd",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.compress_nd.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.corrcoef",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "# numpy.ma.corrcoef",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.corrcoef.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.legval3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 43,
+        "first_line": "# numpy.polynomial.legendre.legval3d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.legval3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.savez_compressed",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 84,
+        "first_line": "# numpy.savez_compressed",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.savez_compressed.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.append",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "# numpy.append",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.append.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.fromflex",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 70,
+        "first_line": "# numpy.ma.fromflex",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.fromflex.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.poly1d.coeffs",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 8,
+        "first_line": "# numpy.poly1d.coeffs",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.poly1d.coeffs.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.round_",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "# numpy.ma.round_",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.round_.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_where",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 134,
+        "first_line": "# numpy.ma.masked_where",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_where.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermemul",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "# numpy.polynomial.hermite_e.hermemul",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermemul.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermeroots",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 62,
+        "first_line": "# numpy.polynomial.hermite_e.hermeroots",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermeroots.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite.hermval",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 73,
+        "first_line": "# numpy.polynomial.hermite.hermval",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.hermval.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite.hermgrid3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "# numpy.polynomial.hermite.hermgrid3d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.hermgrid3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.vander",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 86,
+        "first_line": "# numpy.vander",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.vander.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_inside",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.ma.masked_inside",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_inside.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.emath.sqrt",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 64,
+        "first_line": "# numpy.emath.sqrt",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.emath.sqrt.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_invalid",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "# numpy.ma.masked_invalid",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_invalid.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polygrid2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 58,
+        "first_line": "# numpy.polynomial.polynomial.polygrid2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polygrid2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagfromroots",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "# numpy.polynomial.laguerre.lagfromroots",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagfromroots.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.upper",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "# numpy.char.chararray.upper",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.upper.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.nansum",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 104,
+        "first_line": "# numpy.nansum",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.nansum.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_outside",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.ma.masked_outside",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_outside.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.poly2cheb",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.polynomial.chebyshev.poly2cheb",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.poly2cheb.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.union1d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "# numpy.ma.union1d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.union1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.ljust",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.char.ljust",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.ljust.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.expandtabs",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.char.expandtabs",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.expandtabs.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.sort_complex",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "# numpy.sort_complex",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.sort_complex.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.nanargmin",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "# numpy.nanargmin",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.nanargmin.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.apply_over_axes",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "# numpy.apply_over_axes",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.apply_over_axes.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.savez",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 111,
+        "first_line": "# numpy.savez",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.savez.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.exceptions.TooHardError",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 11,
+        "first_line": "# numpy.exceptions.TooHardError",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.exceptions.TooHardError.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.find",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "# numpy.char.find",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.find.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_values",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 79,
+        "first_line": "# numpy.ma.masked_values",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_values.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.lstrip",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "# numpy.char.chararray.lstrip",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.lstrip.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.islower",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 14,
+        "first_line": "# numpy.char.chararray.islower",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.islower.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.encode",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 12,
+        "first_line": "# numpy.char.chararray.encode",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.encode.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.ediff1d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "# numpy.ma.ediff1d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.ediff1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polypow",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.polynomial.polynomial.polypow",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polypow.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_object",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 74,
+        "first_line": "# numpy.ma.masked_object",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_object.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.i0",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 60,
+        "first_line": "# numpy.i0",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.i0.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.zfill",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "# numpy.char.zfill",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.zfill.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Hermite",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "# numpy.polynomial.hermite.Hermite",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.Hermite.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib.introspect.opt_func_info",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 62,
+        "first_line": "# numpy.lib.introspect.opt_func_info",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.introspect.opt_func_info.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.flip",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 86,
+        "first_line": "# numpy.flip",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.flip.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.vsplit",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 58,
+        "first_line": "# numpy.vsplit",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.vsplit.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polyint",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 95,
+        "first_line": "# numpy.polyint",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polyint.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagvander",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "# numpy.polynomial.laguerre.lagvander",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagvander.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.argsort",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 15,
+        "first_line": "# numpy.char.chararray.argsort",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.argsort.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebsub",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "# numpy.polynomial.chebyshev.chebsub",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebsub.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polysub",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "# numpy.polynomial.polynomial.polysub",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polysub.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.sinc",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 86,
+        "first_line": "# numpy.sinc",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.sinc.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite.hermval2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 55,
+        "first_line": "# numpy.polynomial.hermite.hermval2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.hermval2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.legline",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.polynomial.legendre.legline",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.legline.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polysub",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.polysub",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polysub.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebmulx",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "# numpy.polynomial.chebyshev.chebmulx",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebmulx.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.apply_along_axis",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 110,
+        "first_line": "# numpy.apply_along_axis",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.apply_along_axis.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite.hermvander",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "# numpy.polynomial.hermite.hermvander",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.hermvander.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.exceptions.DTypePromotionError",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "# numpy.exceptions.DTypePromotionError",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.exceptions.DTypePromotionError.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.real",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "# numpy.real",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.real.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.split",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.char.split",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.split.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermeweight",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 18,
+        "first_line": "# numpy.polynomial.hermite_e.hermeweight",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermeweight.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.genfromtxt",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 238,
+        "first_line": "# numpy.genfromtxt",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.genfromtxt.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polyval2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "# numpy.polynomial.polynomial.polyval2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polyval2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.hsplit",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 75,
+        "first_line": "# numpy.hsplit",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.hsplit.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermevander2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.polynomial.hermite_e.hermevander2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermevander2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.legpow",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "# numpy.polynomial.legendre.legpow",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.legpow.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib._format_impl.read_array_header_1_0",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "# numpy.lib.format.read_array_header_1_0",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.format.read_array_header_1_0.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.broadcast_arrays",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "# numpy.broadcast_arrays",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.broadcast_arrays.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagcompanion",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "# numpy.polynomial.laguerre.lagcompanion",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagcompanion.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.packbits",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "# numpy.packbits",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.packbits.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.isneginf",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "# numpy.isneginf",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.isneginf.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.nancumprod",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 67,
+        "first_line": "# numpy.nancumprod",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.nancumprod.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.getmask",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 71,
+        "first_line": "# numpy.ma.getmask",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.getmask.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.mod",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "# numpy.char.mod",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.mod.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib._format_impl.open_memmap",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 58,
+        "first_line": "# numpy.lib.format.open_memmap",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.format.open_memmap.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.load",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 150,
+        "first_line": "# numpy.load",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.load.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermeval3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 43,
+        "first_line": "# numpy.polynomial.hermite_e.hermeval3d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermeval3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.isalpha",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 14,
+        "first_line": "# numpy.char.chararray.isalpha",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.isalpha.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.translate",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 15,
+        "first_line": "# numpy.char.chararray.translate",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.translate.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.record",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 106,
+        "first_line": "# numpy.record",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.record.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebline",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.polynomial.chebyshev.chebline",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebline.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.leggrid2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "# numpy.polynomial.legendre.leggrid2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.leggrid2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib._format_impl.read_magic",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 15,
+        "first_line": "# numpy.lib.format.read_magic",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.format.read_magic.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.cov",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "# numpy.ma.cov",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.cov.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.diag",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 75,
+        "first_line": "# numpy.diag",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.diag.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.imag",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "# numpy.imag",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.imag.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.legcompanion",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 21,
+        "first_line": "# numpy.polynomial.legendre.legcompanion",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.legcompanion.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.inner",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 121,
+        "first_line": "# numpy.ma.inner",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.inner.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebfit",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 145,
+        "first_line": "# numpy.polynomial.chebyshev.chebfit",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebfit.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.poly1d.order",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 8,
+        "first_line": "# numpy.poly1d.order",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.poly1d.order.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polyfromroots",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 73,
+        "first_line": "# numpy.polynomial.polynomial.polyfromroots",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polyfromroots.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.mask_or",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "# numpy.ma.mask_or",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.mask_or.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib._format_impl.isfileobj",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 5,
+        "first_line": "# numpy.lib.format.isfileobj",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.format.isfileobj.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.left_shift",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 50,
+        "first_line": "# numpy.ma.left_shift",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.left_shift.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagfit",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 162,
+        "first_line": "# numpy.polynomial.laguerre.lagfit",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagfit.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib._stride_tricks_impl.sliding_window_view",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 245,
+        "first_line": "# numpy.lib.stride_tricks.sliding_window_view",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.stride_tricks.sliding_window_view.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.savetxt",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 128,
+        "first_line": "# numpy.savetxt",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.savetxt.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.split",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "# numpy.char.chararray.split",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.split.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagadd",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.polynomial.laguerre.lagadd",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagadd.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.resize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "# numpy.ma.resize",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.resize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.capitalize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 39,
+        "first_line": "# numpy.char.capitalize",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.capitalize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.eye",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 69,
+        "first_line": "# numpy.eye",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.eye.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.replace",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.char.replace",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.replace.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.exceptions.VisibleDeprecationWarning",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 10,
+        "first_line": "# numpy.exceptions.VisibleDeprecationWarning",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.exceptions.VisibleDeprecationWarning.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.place",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.place",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.place.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.leggrid3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "# numpy.polynomial.legendre.leggrid3d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.leggrid3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ndenumerate",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "# numpy.ndenumerate",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ndenumerate.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polyvander2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 91,
+        "first_line": "# numpy.polynomial.polynomial.polyvander2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polyvander2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.apply_over_axes",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 85,
+        "first_line": "# numpy.ma.apply_over_axes",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.apply_over_axes.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.lib.Arrayterator",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 94,
+        "first_line": "# numpy.lib.Arrayterator",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.lib.Arrayterator.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.split",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 90,
+        "first_line": "# numpy.split",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.split.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.rec.format_parser",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 70,
+        "first_line": "# numpy.rec.format_parser",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.rec.format_parser.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.mask_indices",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 81,
+        "first_line": "# numpy.mask_indices",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.mask_indices.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.notmasked_edges",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 56,
+        "first_line": "# numpy.ma.notmasked_edges",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.notmasked_edges.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.legder",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "# numpy.polynomial.legendre.legder",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.legder.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.isupper",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 14,
+        "first_line": "# numpy.char.chararray.isupper",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.isupper.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.isdigit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "# numpy.char.chararray.isdigit",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.isdigit.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.poly1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 194,
+        "first_line": "# numpy.poly1d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.poly1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "# numpy.polynomial.legendre.Legendre",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.Legendre.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.tril_indices",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 102,
+        "first_line": "# numpy.tril_indices",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.tril_indices.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polyder",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "# numpy.polynomial.polynomial.polyder",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polyder.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.unique_inverse",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 52,
+        "first_line": "# numpy.unique_inverse",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.unique_inverse.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebvander2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.polynomial.chebyshev.chebvander2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebvander2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagline",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.polynomial.laguerre.lagline",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagline.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.fix",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 50,
+        "first_line": "# numpy.fix",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.fix.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebgrid2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "# numpy.polynomial.chebyshev.chebgrid2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebgrid2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite.hermsub",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.polynomial.hermite.hermsub",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.hermsub.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.setdiff1d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "# numpy.ma.setdiff1d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.setdiff1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebpts1",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 21,
+        "first_line": "# numpy.polynomial.chebyshev.chebpts1",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebpts1.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.chebyshev.chebdiv",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 50,
+        "first_line": "# numpy.polynomial.chebyshev.chebdiv",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.chebyshev.chebdiv.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagval3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 55,
+        "first_line": "# numpy.polynomial.laguerre.lagval3d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagval3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.loadtxt",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 291,
+        "first_line": "# numpy.loadtxt",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.loadtxt.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_less_equal",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "# numpy.ma.masked_less_equal",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_less_equal.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.broadcast_shapes",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 50,
+        "first_line": "# numpy.broadcast_shapes",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.broadcast_shapes.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.rec.find_duplicate",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 6,
+        "first_line": "# numpy.rec.find_duplicate",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.rec.find_duplicate.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.triu_indices_from",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 77,
+        "first_line": "# numpy.triu_indices_from",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.triu_indices_from.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.rjust",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "# numpy.char.rjust",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.rjust.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.nanmean",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 90,
+        "first_line": "# numpy.nanmean",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.nanmean.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.lagpow",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.polynomial.laguerre.lagpow",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.lagpow.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermeadd",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.polynomial.hermite_e.hermeadd",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermeadd.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.decode",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 12,
+        "first_line": "# numpy.char.chararray.decode",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.decode.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.getmaskarray",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 59,
+        "first_line": "# numpy.ma.getmaskarray",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.getmaskarray.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.percentile",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 188,
+        "first_line": "# numpy.percentile",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.percentile.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.masked_greater",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "# numpy.ma.masked_greater",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.masked_greater.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite_e.hermevander3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 47,
+        "first_line": "# numpy.polynomial.hermite_e.hermevander3d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.hermevander3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite.hermvander2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 62,
+        "first_line": "# numpy.polynomial.hermite.hermvander2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.hermvander2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.rec.fromstring",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 68,
+        "first_line": "# numpy.rec.fromstring",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.rec.fromstring.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.trim_zeros",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 81,
+        "first_line": "# numpy.trim_zeros",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.trim_zeros.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.polynomial.polyline",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "# numpy.polynomial.polynomial.polyline",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.polynomial.polyline.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.legendre.legsub",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "# numpy.polynomial.legendre.legsub",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.legendre.legsub.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.char.chararray.rsplit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 13,
+        "first_line": "# numpy.char.chararray.rsplit",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.char.chararray.rsplit.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.convolve",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "# numpy.ma.convolve",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.convolve.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.compress_rowcols",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 59,
+        "first_line": "# numpy.ma.compress_rowcols",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.compress_rowcols.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.asarray",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 52,
+        "first_line": "# numpy.ma.asarray",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.asarray.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.emath.log10",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 59,
+        "first_line": "# numpy.emath.log10",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.emath.log10.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.putmask",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.ma.putmask",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.putmask.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "# numpy.polynomial.hermite_e.HermiteE",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite_e.HermiteE.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.laguerre.poly2lag",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "# numpy.polynomial.laguerre.poly2lag",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.laguerre.poly2lag.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.corrcoef",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 132,
+        "first_line": "# numpy.corrcoef",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.corrcoef.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.emath.power",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 68,
+        "first_line": "# numpy.emath.power",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.emath.power.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.unwrap",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 101,
+        "first_line": "# numpy.unwrap",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.unwrap.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.meshgrid",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 150,
+        "first_line": "# numpy.meshgrid",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.meshgrid.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.ma.allequal",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 53,
+        "first_line": "# numpy.ma.allequal",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.ma.allequal.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polyval",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 79,
+        "first_line": "# numpy.polyval",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polyval.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.nanmax",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 107,
+        "first_line": "# numpy.nanmax",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.nanmax.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.hermite.hermgrid2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 61,
+        "first_line": "# numpy.polynomial.hermite.hermgrid2d",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.polynomial.hermite.hermgrid2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.broadcast_to",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 53,
+        "first_line": "# numpy.broadcast_to",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.broadcast_to.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.unique_counts",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "# numpy.unique_counts",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.unique_counts.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.median",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 92,
+        "first_line": "# numpy.median",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\numpy\\v_2.4.0\\per_member\\numpy.median.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.trim",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.convert",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.domain",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.cast",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.cutdeg",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Hermite.deriv",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.basis",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre.degree",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.integ",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.integ",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Hermite.roots",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.__call__",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.degree",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.has_samecoef",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Hermite.truncate",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.basis",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.has_sametype",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.trim",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.truncate",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.cutdeg",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.roots",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.domain",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.mapparms",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre.cutdeg",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.fromroots",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.has_samecoef",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.identity",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Hermite.fit",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.roots",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Hermite.fromroots",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.cast",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.fit",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.linspace",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre.fit",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre.truncate",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.cast",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.deriv",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre.has_samecoef",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.integ",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.has_samewindow",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.fromroots",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.degree",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre.copy",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Polynomial.mapparms",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.integ",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.truncate",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.domain",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.copy",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Laguerre.fit",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.HermiteE.copy",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Chebyshev.has_samedomain",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "numpy.polynomial.Legendre.deriv",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    }
+  ],
+  "missing_names": [
+    "numpy.polynomial.HermiteE.trim",
+    "numpy.polynomial.Chebyshev.convert",
+    "numpy.polynomial.Laguerre.domain",
+    "numpy.polynomial.Polynomial.cast",
+    "numpy.polynomial.Chebyshev.cutdeg",
+    "numpy.polynomial.Hermite.deriv",
+    "numpy.polynomial.Chebyshev.basis",
+    "numpy.polynomial.Legendre.degree",
+    "numpy.polynomial.Laguerre.integ",
+    "numpy.polynomial.Polynomial.integ",
+    "numpy.polynomial.Hermite.roots",
+    "numpy.polynomial.Laguerre.__call__",
+    "numpy.polynomial.Laguerre.degree",
+    "numpy.polynomial.Laguerre.has_samecoef",
+    "numpy.polynomial.Hermite.truncate",
+    "numpy.polynomial.HermiteE.basis",
+    "numpy.polynomial.HermiteE.has_sametype",
+    "numpy.polynomial.Polynomial.trim",
+    "numpy.polynomial.Polynomial.truncate",
+    "numpy.polynomial.Laguerre.cutdeg",
+    "numpy.polynomial.Chebyshev.roots",
+    "numpy.polynomial.Polynomial.domain",
+    "numpy.polynomial.Chebyshev.mapparms",
+    "numpy.polynomial.Legendre.cutdeg",
+    "numpy.polynomial.HermiteE.fromroots",
+    "numpy.polynomial.Polynomial.has_samecoef",
+    "numpy.polynomial.Polynomial.identity",
+    "numpy.polynomial.Hermite.fit",
+    "numpy.polynomial.Polynomial.roots",
+    "numpy.polynomial.Hermite.fromroots",
+    "numpy.polynomial.Laguerre.cast",
+    "numpy.polynomial.Polynomial.fit",
+    "numpy.polynomial.Polynomial.linspace",
+    "numpy.polynomial.Legendre.fit",
+    "numpy.polynomial.Legendre.truncate",
+    "numpy.polynomial.HermiteE.cast",
+    "numpy.polynomial.HermiteE.deriv",
+    "numpy.polynomial.Legendre.has_samecoef",
+    "numpy.polynomial.Chebyshev.integ",
+    "numpy.polynomial.Chebyshev.has_samewindow",
+    "numpy.polynomial.Laguerre.fromroots",
+    "numpy.polynomial.Polynomial.degree",
+    "numpy.polynomial.Legendre.copy",
+    "numpy.polynomial.Polynomial.mapparms",
+    "numpy.polynomial.HermiteE.integ",
+    "numpy.polynomial.Chebyshev.truncate",
+    "numpy.polynomial.Chebyshev.domain",
+    "numpy.polynomial.Laguerre.copy",
+    "numpy.polynomial.Laguerre.fit",
+    "numpy.polynomial.HermiteE.copy",
+    "numpy.polynomial.Chebyshev.has_samedomain",
+    "numpy.polynomial.Legendre.deriv"
+  ]
+}

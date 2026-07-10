@@ -1,0 +1,71 @@
+api_name,member_type,route,web_preproc_acc,web_struct_acc,web_correct,pdf_preproc_acc,pdf_struct_acc,pdf_correct,original_summary
+torch.Tensor.is_shared,method,fetched,yes,yes,yes,no,yes,yes,Checks if tensor is in shared memory.
+torch.Tensor.norm,method,fetched,yes,yes,yes,no,empty,no,See torch.norm()
+torch.Tensor.share_memory_,method,fetched,yes,yes,yes,no,empty,no,Moves the underlying storage to shared memory.
+torch.Tensor.split,method,fetched,yes,no,no,yes,yes,yes,See torch.split()
+torch.Tensor.storage,method,fetched,yes,yes,yes,no,no,no,Returns the underlying TypedStorage.
+torch.accelerator.memory.memory_reserved,function,trusted,yes,yes,yes,yes,empty,no,Return the current accelerator(url_placeholder_2) device memory managed by the caching all
+torch.accelerator.memory.memory_stats,function,trusted,yes,yes,yes,yes,empty,no,Return a dictionary of accelerator device memory allocator statistics for a given device i
+torch.ao.nn.intrinsic.BNReLU2d,class,trusted,yes,yes,yes,yes,no,no,This is a sequential container which calls the BatchNorm 2d and ReLU modules.
+torch.ao.nn.intrinsic.BNReLU3d,class,trusted,yes,yes,yes,yes,no,no,This is a sequential container which calls the BatchNorm 3d and ReLU modules.
+torch.ao.nn.intrinsic.ConvBn1d,class,trusted,yes,yes,yes,yes,no,no,This is a sequential container which calls the Conv 1d and Batch Norm 1d modules.
+torch.ao.nn.intrinsic.ConvReLU1d,class,trusted,yes,yes,yes,yes,no,no,This is a sequential container which calls the Conv1d and ReLU modules.
+torch.ao.nn.intrinsic.ConvReLU2d,class,trusted,yes,yes,yes,yes,no,no,This is a sequential container which calls the Conv2d and ReLU modules.
+torch.ao.nn.intrinsic.LinearReLU,class,trusted,yes,yes,yes,yes,no,no,This is a sequential container which calls the Linear and ReLU modules.
+torch.ao.nn.intrinsic.qat.ConvBn3d,class,trusted,yes,yes,yes,yes,no,no,"A ConvBn3d module is a module fused from Conv3d and BatchNorm3d,"
+torch.ao.nn.intrinsic.qat.ConvBnReLU1d,class,trusted,yes,yes,yes,yes,no,no,"A ConvBnReLU1d module is a module fused from Conv1d, BatchNorm1d and ReLU,"
+torch.ao.nn.intrinsic.qat.LinearReLU,class,trusted,yes,yes,yes,yes,no,no,"A LinearReLU module fused from Linear and ReLU modules, attached with"
+torch.ao.nn.intrinsic.quantized.ConvReLU1d,class,trusted,yes,yes,yes,yes,empty,no,A ConvReLU1d module is a fused module of Conv1d and ReLU
+torch.ao.nn.qat.Conv3d,class,trusted,yes,yes,yes,yes,empty,no,"A Conv3d module attached with FakeQuantize modules for weight,"
+torch.ao.nn.quantized.BatchNorm2d,class,trusted,yes,yes,yes,yes,no,no,This is the quantized version of BatchNorm2d(url_placeholder_2).
+torch.ao.nn.quantized.BatchNorm3d,class,trusted,yes,yes,yes,yes,no,no,This is the quantized version of BatchNorm3d(url_placeholder_2).
+torch.ao.nn.quantized.Conv1d,class,trusted,yes,yes,yes,yes,empty,no,Applies a 1D convolution over a quantized input signal composed of
+torch.ao.nn.quantized.ConvTranspose2d,class,trusted,yes,yes,yes,yes,empty,no,Applies a 2D transposed convolution operator over an input image
+torch.ao.nn.quantized.ConvTranspose3d,class,trusted,yes,yes,yes,yes,no,no,Applies a 3D transposed convolution operator over an input image
+torch.ao.nn.quantized.dynamic.GRUCell,class,trusted,yes,yes,yes,yes,no,no,A gated recurrent unit (GRU) cell
+torch.ao.nn.quantized.dynamic.Linear,class,trusted,yes,yes,yes,yes,no,no,A dynamic quantized linear module with floating point tensor as inputs and outputs.
+torch.ao.nn.quantized.functional.avg_pool3d,function,trusted,yes,yes,yes,yes,empty,no,Applies 3D average-pooling operation in kD \ times kH \times kW regions by step size
+torch.ao.nn.quantized.functional.leaky_relu,function,trusted,yes,yes,yes,yes,empty,no,Quantized version of the.
+torch.ao.nn.quantized.functional.upsample_nearest,function,trusted,yes,yes,yes,yes,empty,no,"Upsamples the input, using nearest neighbours' pixel values."
+torch.ao.quantization.fake_quantize.FakeQuantize,class,trusted,yes,yes,yes,yes,empty,no,Simulate the quantize and dequantize operations in training time.
+torch.ao.quantization.fake_quantize.FusedMovingAvgObsFakeQuantize,class,trusted,yes,yes,yes,yes,empty,no,Define a fused module to observe the tensor.
+torch.ao.quantization.fake_quantize.disable_fake_quant,function,trusted,yes,yes,yes,yes,empty,no,Disable fake quantization for the module.
+torch.ao.quantization.fake_quantize.enable_fake_quant,function,trusted,yes,yes,yes,yes,empty,no,Enable fake quantization for the module.
+torch.ao.quantization.fake_quantize.enable_observer,function,trusted,yes,yes,yes,yes,empty,no,Enable observation for this module.
+torch.ao.quantization.observer.MappingType,class,trusted,yes,yes,yes,yes,no,no,How floating point number is mapped to integer number
+torch.ao.quantization.observer.PerBlock,class,trusted,yes,yes,yes,yes,no,no,Represents per-block granularity in quantization.
+torch.ao.quantization.observer.PerChannelMinMaxObserver,class,trusted,yes,yes,yes,yes,empty,no,Observer module for computing the quantization parameters based on the
+torch.ao.quantization.observer.get_block_size,function,trusted,yes,yes,yes,yes,empty,no,Get the block size based on the input shape and granularity type.
+torch.autograd.Function.forward,method,fetched,yes,yes,yes,no,no,no,Define the forward of the custom autograd Function.
+torch.autograd.Function.jvp,method,fetched,yes,yes,yes,no,empty,no,Define a formula for differentiating the operation with forward mode automatic differentia
+torch.autograd.function.FunctionCtx.mark_dirty,method,fetched,yes,yes,yes,no,empty,no,Mark given tensors as modified in an in-place operation.
+torch.autograd.graph.Node.name,method,fetched,yes,yes,yes,no,no,no,Return the name.
+torch.autograd.graph.Node.register_prehook,method,fetched,yes,yes,yes,no,empty,no,Register a backward pre-hook.
+torch.autograd.profiler.parse_nvprof_trace,function,trusted,no_ref,no_ref,review,no_ref,no_ref,review,
+torch.autograd.profiler.profile.total_average,method,fetched,yes,yes,yes,yes,yes,yes,Averages all events.
+torch.autograd.profiler.record_function,class,trusted,yes,yes,yes,yes,empty,no,Context manager/function decorator that adds a label to a code block/function when running
+torch.autograd.profiler_util.Interval,class,trusted,yes,yes,yes,yes,yes,yes,Returns the length of the interval
+torch.cuda.memory.caching_allocator_alloc,function,trusted,yes,yes,yes,yes,empty,no,Perform a memory allocation using the CUDA memory allocator.
+torch.cuda.memory.empty_cache,function,trusted,yes,yes,yes,yes,no,no,Release all unoccupied cached memory currently held by the caching
+torch.func.stack_module_state,function,trusted,yes,yes,yes,yes,yes,yes,Prepares a list of torch.nn.Modules for ensembling with vmap()(url_placeholder_2).
+torch.functional.align_tensors,function,trusted,no_ref,no_ref,review,no_ref,no_ref,review,
+torch.load,function,trusted,yes,yes,yes,yes,no,no,Loads an object saved with torch.save()(url_placeholder_2) from a file.
+torch.mps.profiler.stop,function,trusted,yes,yes,yes,yes,no,no,Stops generating OS Signpost tracing from MPS backend.
+torch.nn.ConvTranspose1d,class,trusted,yes,yes,yes,yes,yes,yes,Applies a 1D transposed convolution operator over an input image
+torch.nn.ConvTranspose3d,class,trusted,yes,yes,yes,yes,yes,yes,Applies a 3D transposed convolution operator over an input image composed of several input
+torch.nn.Module.state_dict,method,fetched,yes,yes,yes,no,no,no,Return a dictionary containing references to the whole state of the module.
+torch.nn.functional.tanh,function,trusted,yes,yes,yes,yes,yes,yes,"Applies element-wise,"
+torch.nn.utils.prune.CustomFromMask,class,trusted,yes,yes,yes,yes,yes,yes,Add pruning on the fly and reparametrization of a tensor.
+torch.optim.Adagrad,class,trusted,yes,yes,yes,yes,yes,yes,Implements Adagrad algorithm.
+torch.optim.Muon,class,trusted,yes,yes,yes,yes,yes,yes,Implements Muon algorithm.
+torch.optim.RMSprop,class,trusted,yes,yes,yes,yes,yes,yes,Implements RMSprop algorithm.
+torch.optim.adamw.AdamW.register_state_dict_post_hook,method,fetched,no,empty,no,yes,yes,yes,Register a state dict post-hook which will be called after state_dict() is called.
+torch.optim.adamw.AdamW.state_dict,method,fetched,no,empty,no,yes,yes,yes,Return the state of the optimizer as a dict.
+torch.optim.adamw.AdamW.step,method,fetched,no,no,no,yes,yes,yes,Perform a single optimization step.
+torch.optim.adamw.adamw,function,trusted,yes,yes,yes,yes,empty,no,Functional API that performs AdamW algorithm computation.
+torch.optim.rmsprop.rmsprop,function,trusted,yes,yes,yes,yes,empty,no,Functional API that performs rmsprop algorithm computation.
+torch.seed,function,trusted,yes,yes,yes,yes,no,no,Sets the seed for generating random numbers to a non-deterministic
+torch.signal.windows.blackman,function,trusted,yes,yes,yes,yes,yes,yes,Computes the Blackman window.
+torch.signal.windows.cosine,function,trusted,yes,yes,yes,yes,yes,yes,"Computes a window with a simple cosine waveform, following the same implementation as SciP"
+torch.xpu.memory.max_memory_allocated,function,trusted,yes,yes,yes,yes,empty,no,Return the maximum GPU memory occupied by tensors in bytes for a given device.
+torch.xpu.memory.max_memory_reserved,function,trusted,yes,yes,yes,yes,empty,no,Return the maximum GPU memory managed by the caching allocator in bytes for a given device

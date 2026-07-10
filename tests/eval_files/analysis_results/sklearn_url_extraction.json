@@ -1,0 +1,2229 @@
+{
+  "names_file": "C:/Users/Administrator/Documents/USask/Thesis/MapCoDoc/study one exp/RQ2/stratified sampling/samples/api_names/sklearn.txt",
+  "url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\sklearn\\v_stable\\scraped_urls.txt",
+  "base_url": "https://scikit-learn.org/stable/",
+  "sub_path": "modules/generated",
+  "total_api_names": 246,
+  "matched": 246,
+  "unmatched": 0,
+  "total_urls_in": 696,
+  "total_urls_out": 246,
+  "output_url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\sklearn\\v_stable\\samples\\scraped_urls.txt",
+  "unmatched_names": [],
+  "matches": [
+    {
+      "api_name": "sklearn.decomposition.TruncatedSVD",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.TruncatedSVD",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.load_breast_cancer",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.load_breast_cancer",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.NeighborhoodComponentsAnalysis",
+      "matched_via": "path",
+      "matched_key": "sklearn.neighbors.NeighborhoodComponentsAnalysis",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NeighborhoodComponentsAnalysis.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_20newsgroups_vectorized",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.fetch_20newsgroups_vectorized",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups_vectorized.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.fit",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.IncrementalPCA.fit",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html#sklearn.decomposition.IncrementalPCA.fit"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.set_score_request",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.linear_model.LogisticRegressionCV.set_score_request",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV.set_score_request"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.jaccard_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.jaccard_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_rcv1",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.fetch_rcv1",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_rcv1.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier.predict_proba",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.neighbors.KNeighborsClassifier.predict_proba",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.predict_proba"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_column_scale",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.sparsefuncs.inplace_column_scale",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.sparsefuncs.inplace_column_scale.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.chi2_kernel",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.chi2_kernel",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.chi2_kernel.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.SkewedChi2Sampler",
+      "matched_via": "path",
+      "matched_key": "sklearn.kernel_approximation.SkewedChi2Sampler",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.SkewedChi2Sampler.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.ensemble.VotingClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.ensemble.VotingClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.mixture.GaussianMixture",
+      "matched_via": "path",
+      "matched_key": "sklearn.mixture.GaussianMixture",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.bounds",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.gaussian_process.kernels.Exponentiation.bounds",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html#sklearn.gaussian_process.kernels.Exponentiation.bounds"
+      ]
+    },
+    {
+      "api_name": "sklearn.base.is_classifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.base.is_classifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.base.is_classifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder",
+      "matched_via": "path",
+      "matched_key": "sklearn.preprocessing.OrdinalEncoder",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.PolynomialFeatures",
+      "matched_via": "path",
+      "matched_key": "sklearn.preprocessing.PolynomialFeatures",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.roc_curve",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.roc_curve",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_curve.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.LinearDiscriminantAnalysis",
+      "matched_via": "path",
+      "matched_key": "sklearn.discriminant_analysis.LinearDiscriminantAnalysis",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.classification_report",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.classification_report",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.svm.SVC",
+      "matched_via": "path",
+      "matched_key": "sklearn.svm.SVC",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.check_scoring",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.check_scoring",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.check_scoring.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.coverage_error",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.coverage_error",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.coverage_error.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.average_precision_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.average_precision_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.LeavePGroupsOut",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.LeavePGroupsOut",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePGroupsOut.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.label_ranking_average_precision_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.label_ranking_average_precision_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.label_ranking_average_precision_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.paired_cosine_distances",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.paired_cosine_distances",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.paired_cosine_distances.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegression",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.LogisticRegression",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.NMF",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.NMF",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectFromModel",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_selection.SelectFromModel",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.load_wine",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.load_wine",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.RepeatedKFold",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.RepeatedKFold",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RepeatedKFold.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.precision_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.precision_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.get_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.gaussian_process.kernels.Exponentiation.get_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html#sklearn.gaussian_process.kernels.Exponentiation.get_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_olivetti_faces",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.fetch_olivetti_faces",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_olivetti_faces.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.class_weight.compute_sample_weight",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.class_weight.compute_sample_weight",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.class_weight.compute_sample_weight.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectFwe",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_selection.SelectFwe",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFwe.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.orthogonal_mp_gram",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.orthogonal_mp_gram",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.orthogonal_mp_gram.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_row_scale",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.sparsefuncs.inplace_row_scale",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.sparsefuncs.inplace_row_scale.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_selection.GenericUnivariateSelect",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_selection.GenericUnivariateSelect",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.GenericUnivariateSelect.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_low_rank_matrix",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_low_rank_matrix",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_low_rank_matrix.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_checkerboard",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_checkerboard",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_checkerboard.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.base.ClusterMixin",
+      "matched_via": "path",
+      "matched_key": "sklearn.base.ClusterMixin",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.base.ClusterMixin.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.ensemble.StackingClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.ensemble.StackingClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.as_float_array",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.as_float_array",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.as_float_array.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.isotonic.isotonic_regression",
+      "matched_via": "path",
+      "matched_key": "sklearn.isotonic.isotonic_regression",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.isotonic.isotonic_regression.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.extmath.fast_logdet",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.extmath.fast_logdet",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.extmath.fast_logdet.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.PrecisionRecallDisplay.from_estimator",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.metrics.PrecisionRecallDisplay.from_estimator",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html#sklearn.metrics.PrecisionRecallDisplay.from_estimator"
+      ]
+    },
+    {
+      "api_name": "sklearn.svm.OneClassSVM",
+      "matched_via": "path",
+      "matched_key": "sklearn.svm.OneClassSVM",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.compose.make_column_transformer",
+      "matched_via": "path",
+      "matched_key": "sklearn.compose.make_column_transformer",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.compose.make_column_transformer.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.semi_supervised.SelfTrainingClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.semi_supervised.SelfTrainingClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.SelfTrainingClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.normalized_mutual_info_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.normalized_mutual_info_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.normalized_mutual_info_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.incr_mean_variance_axis",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.sparsefuncs.incr_mean_variance_axis",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.sparsefuncs.incr_mean_variance_axis.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.rand_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.rand_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.rand_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.TargetEncoder",
+      "matched_via": "path",
+      "matched_key": "sklearn.preprocessing.TargetEncoder",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.TargetEncoder.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_selection.SequentialFeatureSelector",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_selection.SequentialFeatureSelector",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.cluster.mean_shift",
+      "matched_via": "path",
+      "matched_key": "sklearn.cluster.mean_shift",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.mean_shift.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.naive_bayes.ComplementNB",
+      "matched_via": "path",
+      "matched_key": "sklearn.naive_bayes.ComplementNB",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.ComplementNB.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.sort_graph_by_row_values",
+      "matched_via": "path",
+      "matched_key": "sklearn.neighbors.sort_graph_by_row_values",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.sort_graph_by_row_values.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.OneHotEncoder",
+      "matched_via": "path",
+      "matched_key": "sklearn.preprocessing.OneHotEncoder",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.base.ClassifierMixin",
+      "matched_via": "path",
+      "matched_key": "sklearn.base.ClassifierMixin",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.base.ClassifierMixin.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.det_curve",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.det_curve",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.det_curve.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.ElasticNetCV",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.ElasticNetCV",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNetCV.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.pairwise_kernels",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.pairwise_kernels",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.pairwise_kernels.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.ridge_regression",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.ridge_regression",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ridge_regression.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.requires_vector_input",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.gaussian_process.kernels.Exponentiation.requires_vector_input",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html#sklearn.gaussian_process.kernels.Exponentiation.requires_vector_input"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_extraction.DictVectorizer",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_extraction.DictVectorizer",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.ValidationCurveDisplay.from_estimator",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.model_selection.ValidationCurveDisplay.from_estimator",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ValidationCurveDisplay.html#sklearn.model_selection.ValidationCurveDisplay.from_estimator"
+      ]
+    },
+    {
+      "api_name": "sklearn.mixture.BayesianGaussianMixture",
+      "matched_via": "path",
+      "matched_key": "sklearn.mixture.BayesianGaussianMixture",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.mixture.BayesianGaussianMixture.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_classification",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_classification",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.multioutput.RegressorChain",
+      "matched_via": "path",
+      "matched_key": "sklearn.multioutput.RegressorChain",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier.set_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.neighbors.KNeighborsClassifier.set_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.set_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.PredictionErrorDisplay",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.PredictionErrorDisplay",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PredictionErrorDisplay.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.get_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.preprocessing.OrdinalEncoder.get_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder.get_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.tree.export_text",
+      "matched_via": "path",
+      "matched_key": "sklearn.tree.export_text",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_text.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.svm.SVR",
+      "matched_via": "path",
+      "matched_key": "sklearn.svm.SVR",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.GroupKFold",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.GroupKFold",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_extraction.image.reconstruct_from_patches_2d",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_extraction.image.reconstruct_from_patches_2d",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.image.reconstruct_from_patches_2d.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.gen_even_slices",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.gen_even_slices",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.gen_even_slices.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.KFold",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.KFold",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectorMixin",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_selection.SelectorMixin",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectorMixin.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.shuffle",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.shuffle",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.shuffle.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.resample",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.resample",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.resample.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.extmath.safe_sparse_dot",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.extmath.safe_sparse_dot",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.extmath.safe_sparse_dot.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.Lars",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.Lars",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lars.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LassoLars",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.LassoLars",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoLars.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.predict_proba",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.linear_model.LogisticRegressionCV.predict_proba",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV.predict_proba"
+      ]
+    },
+    {
+      "api_name": "sklearn.cluster.cluster_optics_xi",
+      "matched_via": "path",
+      "matched_key": "sklearn.cluster.cluster_optics_xi",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.cluster_optics_xi.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.cluster.compute_optics_graph",
+      "matched_via": "path",
+      "matched_key": "sklearn.cluster.compute_optics_graph",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.compute_optics_graph.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.balanced_accuracy_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.balanced_accuracy_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.balanced_accuracy_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.nan_euclidean_distances",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.nan_euclidean_distances",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.nan_euclidean_distances.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.ensemble.GradientBoostingRegressor",
+      "matched_via": "path",
+      "matched_key": "sklearn.ensemble.GradientBoostingRegressor",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.base.MetaEstimatorMixin",
+      "matched_via": "path",
+      "matched_key": "sklearn.base.MetaEstimatorMixin",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.base.MetaEstimatorMixin.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsTransformer.set_output",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.neighbors.KNeighborsTransformer.set_output",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsTransformer.html#sklearn.neighbors.KNeighborsTransformer.set_output"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.d2_tweedie_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.d2_tweedie_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.d2_tweedie_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.clear_data_home",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.clear_data_home",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.clear_data_home.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.cosine_distances",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.cosine_distances",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_distances.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.get_tags",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.get_tags",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.get_tags.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_moons",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_moons",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier.kneighbors",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.neighbors.KNeighborsClassifier.kneighbors",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.kneighbors"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_friedman2",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_friedman2",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_friedman2.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.frozen.FrozenEstimator",
+      "matched_via": "path",
+      "matched_key": "sklearn.frozen.FrozenEstimator",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.frozen.FrozenEstimator.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.v_measure_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.v_measure_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.v_measure_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.manhattan_distances",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.manhattan_distances",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.manhattan_distances.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.estimator_checks.check_estimator",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.estimator_checks.check_estimator",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.estimator_checks.check_estimator.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.exceptions.ConvergenceWarning",
+      "matched_via": "path",
+      "matched_key": "sklearn.exceptions.ConvergenceWarning",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.ConvergenceWarning.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.covariance.ledoit_wolf_shrinkage",
+      "matched_via": "path",
+      "matched_key": "sklearn.covariance.ledoit_wolf_shrinkage",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.covariance.ledoit_wolf_shrinkage.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.sigmoid_kernel",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.sigmoid_kernel",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.sigmoid_kernel.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.ndcg_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.ndcg_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ndcg_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_swap_row",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.sparsefuncs.inplace_swap_row",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.sparsefuncs.inplace_swap_row.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.fit",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.fit",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.html#sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.fit"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.KernelPCA.set_output",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.KernelPCA.set_output",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA.set_output"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.get_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.IncrementalPCA.get_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html#sklearn.decomposition.IncrementalPCA.get_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.set_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.IncrementalPCA.set_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html#sklearn.decomposition.IncrementalPCA.set_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.GaussianProcessRegressor",
+      "matched_via": "path",
+      "matched_key": "sklearn.gaussian_process.GaussianProcessRegressor",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.cross_decomposition.PLSSVD",
+      "matched_via": "path",
+      "matched_key": "sklearn.cross_decomposition.PLSSVD",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSSVD.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.impute.MissingIndicator",
+      "matched_via": "path",
+      "matched_key": "sklearn.impute.MissingIndicator",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.impute.MissingIndicator.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.kernel_ridge.KernelRidge",
+      "matched_via": "path",
+      "matched_key": "sklearn.kernel_ridge.KernelRidge",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_lfw_pairs",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.fetch_lfw_pairs",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_lfw_pairs.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsTransformer.kneighbors",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.neighbors.KNeighborsTransformer.kneighbors",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsTransformer.html#sklearn.neighbors.KNeighborsTransformer.kneighbors"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.fit",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.preprocessing.OrdinalEncoder.fit",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder.fit"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_biclusters",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_biclusters",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_biclusters.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.transform",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.preprocessing.OrdinalEncoder.transform",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder.transform"
+      ]
+    },
+    {
+      "api_name": "sklearn.cluster.AffinityPropagation",
+      "matched_via": "path",
+      "matched_key": "sklearn.cluster.AffinityPropagation",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.get_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.linear_model.LogisticRegressionCV.get_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV.get_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_selection.SelectFpr",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_selection.SelectFpr",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFpr.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.exceptions.NotFittedError",
+      "matched_via": "path",
+      "matched_key": "sklearn.exceptions.NotFittedError",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.NotFittedError.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_extraction.FeatureHasher",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_extraction.FeatureHasher",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_sparse_uncorrelated",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_sparse_uncorrelated",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_sparse_uncorrelated.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.sparse_encode",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.sparse_encode",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.sparse_encode.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_swiss_roll",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_swiss_roll",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_swiss_roll.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.manifold.locally_linear_embedding",
+      "matched_via": "path",
+      "matched_key": "sklearn.manifold.locally_linear_embedding",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.manifold.locally_linear_embedding.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.multiclass.OutputCodeClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.multiclass.OutputCodeClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OutputCodeClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.FixedThresholdClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.FixedThresholdClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.FixedThresholdClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.exceptions.DataDimensionalityWarning",
+      "matched_via": "path",
+      "matched_key": "sklearn.exceptions.DataDimensionalityWarning",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataDimensionalityWarning.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.covariance.EllipticEnvelope",
+      "matched_via": "path",
+      "matched_key": "sklearn.covariance.EllipticEnvelope",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.covariance.EllipticEnvelope.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.get_data_home",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.get_data_home",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.get_data_home.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.DotProduct",
+      "matched_via": "path",
+      "matched_key": "sklearn.gaussian_process.kernels.DotProduct",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.DotProduct.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LinearRegression",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.LinearRegression",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.OrdinalEncoder.set_output",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.preprocessing.OrdinalEncoder.set_output",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html#sklearn.preprocessing.OrdinalEncoder.set_output"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.linear_kernel",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.linear_kernel",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.linear_kernel.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.orthogonal_mp",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.orthogonal_mp",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.orthogonal_mp.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.mean_absolute_percentage_error",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.mean_absolute_percentage_error",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_percentage_error.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_kddcup99",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.fetch_kddcup99",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_kddcup99.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_extraction.text.TfidfTransformer",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_extraction.text.TfidfTransformer",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.set_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.linear_model.LogisticRegressionCV.set_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV.set_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.load_sample_image",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.load_sample_image",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_sample_image.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.PCA",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.PCA",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.ensemble.BaggingClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.ensemble.BaggingClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils._safe_indexing",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils._safe_indexing",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils._safe_indexing.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.calibration.CalibrationDisplay.from_predictions",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.calibration.CalibrationDisplay.from_predictions",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html#sklearn.calibration.CalibrationDisplay.from_predictions"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.LabelEncoder",
+      "matched_via": "path",
+      "matched_key": "sklearn.preprocessing.LabelEncoder",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.homogeneity_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.homogeneity_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.homogeneity_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.preprocessing.PowerTransformer",
+      "matched_via": "path",
+      "matched_key": "sklearn.preprocessing.PowerTransformer",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PowerTransformer.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.ConfusionMatrixDisplay.from_estimator",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.metrics.ConfusionMatrixDisplay.from_estimator",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html#sklearn.metrics.ConfusionMatrixDisplay.from_estimator"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.r2_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.r2_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_s_curve",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_s_curve",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_s_curve.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.KernelPCA.set_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.KernelPCA.set_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA.set_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.dict_learning",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.dict_learning",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.dict_learning.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.confusion_matrix",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.confusion_matrix",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.cluster.kmeans_plusplus",
+      "matched_via": "path",
+      "matched_key": "sklearn.cluster.kmeans_plusplus",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.kmeans_plusplus.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.auc",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.auc",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.auc.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.predict",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.linear_model.LogisticRegressionCV.predict",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV.predict"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.mean_pinball_loss",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.mean_pinball_loss",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_pinball_loss.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.DictionaryLearning",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.DictionaryLearning",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.DictionaryLearning.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_log_proba",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_log_proba",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.html#sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_log_proba"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.check_consistent_length",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.check_consistent_length",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.check_consistent_length.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.cluster.BisectingKMeans",
+      "matched_via": "path",
+      "matched_key": "sklearn.cluster.BisectingKMeans",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.BisectingKMeans.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.cluster.cluster_optics_dbscan",
+      "matched_via": "path",
+      "matched_key": "sklearn.cluster.cluster_optics_dbscan",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.cluster_optics_dbscan.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.decision_function",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.linear_model.LogisticRegressionCV.decision_function",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV.decision_function"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.LogisticRegressionCV.fit",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.linear_model.LogisticRegressionCV.fit",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV.fit"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.GroupShuffleSplit",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.GroupShuffleSplit",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.get_metadata_routing",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.MiniBatchDictionaryLearning.get_metadata_routing",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchDictionaryLearning.html#sklearn.decomposition.MiniBatchDictionaryLearning.get_metadata_routing"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.cross_val_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.cross_val_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.feature_selection.r_regression",
+      "matched_via": "path",
+      "matched_key": "sklearn.feature_selection.r_regression",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.r_regression.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.sparsefuncs.inplace_swap_column",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.sparsefuncs.inplace_swap_column",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.sparsefuncs.inplace_swap_column.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.ensemble.IsolationForest",
+      "matched_via": "path",
+      "matched_key": "sklearn.ensemble.IsolationForest",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.tree.export_graphviz",
+      "matched_via": "path",
+      "matched_key": "sklearn.tree.export_graphviz",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.RadiusNeighborsTransformer",
+      "matched_via": "path",
+      "matched_key": "sklearn.neighbors.RadiusNeighborsTransformer",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsTransformer.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_proba",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_proba",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.html#sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.predict_proba"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.dict_learning_online",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.dict_learning_online",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.dict_learning_online.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.NearestCentroid",
+      "matched_via": "path",
+      "matched_key": "sklearn.neighbors.NearestCentroid",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.cluster.pair_confusion_matrix",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.cluster.pair_confusion_matrix",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.cluster.pair_confusion_matrix.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.calibration.CalibrationDisplay.from_estimator",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.calibration.CalibrationDisplay.from_estimator",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html#sklearn.calibration.CalibrationDisplay.from_estimator"
+      ]
+    },
+    {
+      "api_name": "sklearn.exceptions.FitFailedWarning",
+      "matched_via": "path",
+      "matched_key": "sklearn.exceptions.FitFailedWarning",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.FitFailedWarning.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.inspection.permutation_importance",
+      "matched_via": "path",
+      "matched_key": "sklearn.inspection.permutation_importance",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.inspection.permutation_importance.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise_distances_argmin",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise_distances_argmin",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances_argmin.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.KernelPCA",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.KernelPCA",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.safe_mask",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.safe_mask",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.safe_mask.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.pipeline.FeatureUnion",
+      "matched_via": "path",
+      "matched_key": "sklearn.pipeline.FeatureUnion",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.naive_bayes.GaussianNB",
+      "matched_via": "path",
+      "matched_key": "sklearn.naive_bayes.GaussianNB",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.estimator_checks.parametrize_with_checks",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.estimator_checks.parametrize_with_checks",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.estimator_checks.parametrize_with_checks.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.RationalQuadratic",
+      "matched_via": "path",
+      "matched_key": "sklearn.gaussian_process.kernels.RationalQuadratic",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.RationalQuadratic.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.multiclass.unique_labels",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.multiclass.unique_labels",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.multiclass.unique_labels.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_blobs",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_blobs",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.graph.single_source_shortest_path_length",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.graph.single_source_shortest_path_length",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.graph.single_source_shortest_path_length.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.set_output",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.MiniBatchDictionaryLearning.set_output",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchDictionaryLearning.html#sklearn.decomposition.MiniBatchDictionaryLearning.set_output"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.StratifiedShuffleSplit",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.StratifiedShuffleSplit",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.manifold.LocallyLinearEmbedding",
+      "matched_via": "path",
+      "matched_key": "sklearn.manifold.LocallyLinearEmbedding",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.check_scalar",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.check_scalar",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.check_scalar.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.dummy.DummyRegressor",
+      "matched_via": "path",
+      "matched_key": "sklearn.dummy.DummyRegressor",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyRegressor.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.silhouette_samples",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.silhouette_samples",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_samples.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.model_selection.cross_validate",
+      "matched_via": "path",
+      "matched_key": "sklearn.model_selection.cross_validate",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_validate.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.check_random_state",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.check_random_state",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.check_random_state.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.RBFSampler",
+      "matched_via": "path",
+      "matched_key": "sklearn.kernel_approximation.RBFSampler",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.RBFSampler.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.KNeighborsClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.neighbors.KNeighborsClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.load_svmlight_files",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.load_svmlight_files",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_svmlight_files.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.Lasso",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.Lasso",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_file",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.fetch_file",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_file.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.tree.plot_tree",
+      "matched_via": "path",
+      "matched_key": "sklearn.tree.plot_tree",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_hastie_10_2",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_hastie_10_2",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_hastie_10_2.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.class_likelihood_ratios",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.class_likelihood_ratios",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.class_likelihood_ratios.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.dcg_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.dcg_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.dcg_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.dummy.DummyClassifier.predict_log_proba",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.dummy.DummyClassifier.predict_log_proba",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html#sklearn.dummy.DummyClassifier.predict_log_proba"
+      ]
+    },
+    {
+      "api_name": "sklearn.svm.l1_min_c",
+      "matched_via": "path",
+      "matched_key": "sklearn.svm.l1_min_c",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.svm.l1_min_c.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.adjusted_mutual_info_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.adjusted_mutual_info_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.adjusted_mutual_info_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.fit",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.MiniBatchDictionaryLearning.fit",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchDictionaryLearning.html#sklearn.decomposition.MiniBatchDictionaryLearning.fit"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.is_stationary",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.gaussian_process.kernels.Exponentiation.is_stationary",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html#sklearn.gaussian_process.kernels.Exponentiation.is_stationary"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.ConfusionMatrixDisplay",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.ConfusionMatrixDisplay",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.d2_log_loss_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.d2_log_loss_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.d2_log_loss_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise_distances",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise_distances",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.mean_tweedie_deviance",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.mean_tweedie_deviance",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_tweedie_deviance.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.IncrementalPCA.get_metadata_routing",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.IncrementalPCA.get_metadata_routing",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html#sklearn.decomposition.IncrementalPCA.get_metadata_routing"
+      ]
+    },
+    {
+      "api_name": "sklearn.base.ClassNamePrefixFeaturesOutMixin",
+      "matched_via": "path",
+      "matched_key": "sklearn.base.ClassNamePrefixFeaturesOutMixin",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.base.ClassNamePrefixFeaturesOutMixin.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchDictionaryLearning.get_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.decomposition.MiniBatchDictionaryLearning.get_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchDictionaryLearning.html#sklearn.decomposition.MiniBatchDictionaryLearning.get_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.ConstantKernel",
+      "matched_via": "path",
+      "matched_key": "sklearn.gaussian_process.kernels.ConstantKernel",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.ConstantKernel.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.RadiusNeighborsRegressor",
+      "matched_via": "path",
+      "matched_key": "sklearn.neighbors.RadiusNeighborsRegressor",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsRegressor.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.manifold.ClassicalMDS",
+      "matched_via": "path",
+      "matched_key": "sklearn.manifold.ClassicalMDS",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.manifold.ClassicalMDS.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.ensemble.HistGradientBoostingClassifier",
+      "matched_via": "path",
+      "matched_key": "sklearn.ensemble.HistGradientBoostingClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.load_digits",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.load_digits",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.kernel_approximation.Nystroem",
+      "matched_via": "path",
+      "matched_key": "sklearn.kernel_approximation.Nystroem",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.neighbors.KernelDensity",
+      "matched_via": "path",
+      "matched_key": "sklearn.neighbors.KernelDensity",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.linear_model.HuberRegressor",
+      "matched_via": "path",
+      "matched_key": "sklearn.linear_model.HuberRegressor",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.HuberRegressor.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.fetch_openml",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.fetch_openml",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_openml.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.pairwise.additive_chi2_kernel",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.pairwise.additive_chi2_kernel",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.additive_chi2_kernel.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.datasets.make_friedman1",
+      "matched_via": "path",
+      "matched_key": "sklearn.datasets.make_friedman1",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_friedman1.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.set_params",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.set_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.html#sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.set_params"
+      ]
+    },
+    {
+      "api_name": "sklearn.metrics.d2_absolute_error_score",
+      "matched_via": "path",
+      "matched_key": "sklearn.metrics.d2_absolute_error_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.d2_absolute_error_score.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Exponentiation.hyperparameters",
+      "matched_via": "fragment",
+      "matched_key": "sklearn.gaussian_process.kernels.Exponentiation.hyperparameters",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html#sklearn.gaussian_process.kernels.Exponentiation.hyperparameters"
+      ]
+    },
+    {
+      "api_name": "sklearn.gaussian_process.kernels.Sum",
+      "matched_via": "path",
+      "matched_key": "sklearn.gaussian_process.kernels.Sum",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Sum.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.isotonic.IsotonicRegression",
+      "matched_via": "path",
+      "matched_key": "sklearn.isotonic.IsotonicRegression",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.decomposition.MiniBatchNMF",
+      "matched_via": "path",
+      "matched_key": "sklearn.decomposition.MiniBatchNMF",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchNMF.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.validation.validate_data",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.validation.validate_data",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.validation.validate_data.html"
+      ]
+    },
+    {
+      "api_name": "sklearn.utils.multiclass.is_multilabel",
+      "matched_via": "path",
+      "matched_key": "sklearn.utils.multiclass.is_multilabel",
+      "is_parent_url": false,
+      "urls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.utils.multiclass.is_multilabel.html"
+      ]
+    }
+  ]
+}

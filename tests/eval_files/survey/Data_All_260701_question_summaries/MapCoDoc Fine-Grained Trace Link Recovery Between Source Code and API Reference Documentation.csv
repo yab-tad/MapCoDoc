@@ -1,0 +1,416 @@
+MapCoDoc: Fine-Grained Trace Link Recovery Between Source Code and API Reference Documentation
+
+Q1. Please indicate whether or not you consent to participate.
+Answer Choices,Response Percent,Responses
+I consent to participate in the study.,100.0%,42
+I do not consent and hence prefer not to participate.,0.0%,0
+,Answered,42
+,Skipped,0
+
+
+"Q2. Do you consent to the potential use of your responses in future research? (The response will only be used in an aggregated format in future research papers, and we will not contact you in the future.)"
+Answer Choices,Response Percent,Responses
+Yes,100.0%,42
+No,0.0%,0
+,Answered,42
+,Skipped,0
+
+
+Q3. What is your gender?
+Answer Choices,Response Percent,Responses
+Man,71.43%,30
+Woman,28.57%,12
+Non-binary,0.0%,0
+Prefer not to say,0.0%,0
+,Answered,42
+,Skipped,0
+
+
+Q4. What is your current role?
+Answer Choices,Response Percent,Responses
+Software developer,42.86%,18
+Documentation engineer,4.76%,2
+Researcher,45.24%,19
+Student,26.19%,11
+Other (please specify),0.0%,0
+,Answered,42
+,Skipped,0
+
+
+Q5. How many years of professional experience do you have in software engineering?
+Answer Choices,Response Percent,Responses
+0-1,7.14%,3
+2-4,42.86%,18
+5-9,45.24%,19
+10+,4.76%,2
+,Answered,42
+,Skipped,0
+
+
+Q6. How experienced are you in structuring or maintaining multi-module Python projects?
+Answer Choices,Response Percent,Responses
+Beginner,4.88%,2
+Intermediate,17.07%,7
+Advanced,48.78%,20
+Expert,29.27%,12
+,Answered,41
+,Skipped,1
+
+
+Q7. How experienced are you with producing API documentation?
+Answer Choices,Response Percent,Responses
+None,14.29%,6
+Some,38.1%,16
+Regular,33.33%,14
+Expert,14.29%,6
+,Answered,42
+,Skipped,0
+
+
+Q8. How familiar are you with Sphinx documentation generator tool?
+Answer Choices,Response Percent,Responses
+Not familiar,26.19%,11
+Slightly familiar,23.81%,10
+Moderately familiar,26.19%,11
+Very familiar,19.05%,8
+Expert,4.76%,2
+,Answered,42
+,Skipped,0
+
+
+"Q9. Would you like to see an outline of Sphinx's essential components: what autodoc, autoapi, and viewcode do, and relevant config knobs (imported-members, noindex, autoapi_ignore, autoapi-skip-member)?"
+Answer Choices,Response Percent,Responses
+Yes,69.05%,29
+No,30.95%,13
+,Answered,42
+,Skipped,0
+
+
+Q10. Do you have a reasonable understanding of the package structure?
+Answer Choices,Response Percent,Responses
+I have a very good understanding,78.57%,33
+I have a fair understanding,21.43%,9
+I am confused,0.0%,0
+,Answered,42
+,Skipped,0
+
+
+Q11. How well do you understand the Sphinx configuration process and the RST files that facilitate API name tracing and linking the code body to its docstring?
+Answer Choices,Response Percent,Responses
+I have a very good understanding,69.05%,29
+I have a fair understanding,28.57%,12
+I am confused,2.38%,1
+,Answered,42
+,Skipped,0
+
+
+Q12. Sphinx is easy to learn to use in your Python projects.
+Answer Choices,Response Percent,Responses
+Strongly disagree,11.9%,5
+Disagree,54.76%,23
+Neutral,21.43%,9
+Agree,7.14%,3
+Strongly agree,4.76%,2
+,Answered,42
+,Skipped,0
+
+
+Q13. Sphinx's learning curve negatively impacts software engineers' motivation to create and maintain documentation.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,7.14%,3
+Agree,85.71%,36
+Strongly agree,7.14%,3
+,Answered,42
+,Skipped,0
+
+
+"Q14. The framework-specific Sphinx configuration (managing extensions, creating .rst files, and adding wrappers to skip objects) is an error-prone process."
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,2.38%,1
+Neutral,2.38%,1
+Agree,92.86%,39
+Strongly agree,2.38%,1
+,Answered,42
+,Skipped,0
+
+
+Q15. The framework-specific Sphinx configurations are easy to maintain in a rapidly evolving software development lifecycle.
+Answer Choices,Response Percent,Responses
+Strongly disagree,4.76%,2
+Disagree,71.43%,30
+Neutral,14.29%,6
+Agree,7.14%,3
+Strongly Agree,2.38%,1
+,Answered,42
+,Skipped,0
+
+
+Q16. To what extent would you be inclined to change your implementation design to adapt to Sphinx's behavior?
+Answer Choices,Response Percent,Responses
+I will produce the necessary configurations to produce the expected result,30.95%,13
+I will slightly modify my implementation design to fit the needs of Sphinx,50.0%,21
+I would make significant changes to my package structure so I can apply the bare minimum Sphinx configurations,19.05%,8
+,Answered,42
+,Skipped,0
+
+
+Q17. Do you agree that documentation practices would improve if Sphinx supported trace-link retrieval from source code to external documentation (web and/or file documentation) during initial build?
+Answer Choices,Response Percent,Responses
+Yes,95.24%,40
+No,0.0%,0
+Not sure,4.76%,2
+,Answered,42
+,Skipped,0
+
+
+Q18. Select all that apply regarding the side effects docstring-dependent trace-link retrieval has on documentation practices.
+Answer Choices,Response Percent,Responses
+Cluttered code files due to the practice of writing API reference documentation as docstrings.,85.71%,36
+Potentially introduces code and documentation smells as developers and documentation maintainers make changes to the same artifact.,83.33%,35
+Reduced discoverability and navigability across code and documentation,83.33%,35
+None of the above,2.38%,1
+Other (please specify),0.0%,0
+,Answered,42
+,Skipped,0
+
+
+"Q19. Would you like to see a brief description of MapCoDoc's input requirement from its user, and the code and documentation analysis workflow it employs to link artifacts?"
+Answer Choices,Response Percent,Responses
+Yes,95.24%,40
+No,4.76%,2
+,Answered,42
+,Skipped,0
+
+
+Q20. How well do you understand MapCoDoc's traceability workflow and its analysis result?
+Answer Choices,Response Percent,Responses
+I have a very good understanding,73.81%,31
+I have a fair understanding,26.19%,11
+I am confused,0.0%,0
+,Answered,42
+,Skipped,0
+
+
+Q21. MapCoDoc is easy to learn to use for your Python project.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,0.0%,0
+Agree,64.29%,27
+Strongly agree,35.71%,15
+,Answered,42
+,Skipped,0
+
+
+Q22. Managing MapCoDoc input configuration to produce reliable trace-links is an error-prone process.
+Answer Choices,Response Percent,Responses
+Strongly disagree,21.43%,9
+Disagree,66.67%,28
+Neutral,2.38%,1
+Agree,4.76%,2
+Strongly Agree,4.76%,2
+,Answered,42
+,Skipped,0
+
+
+Q23. The hybrid keyword-semantic link retrieval makes MapCoDoc adaptable to potential misalignment of signatures and API names in the documentation.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,2.38%,1
+Neutral,4.76%,2
+Agree,47.62%,20
+Strongly agree,45.24%,19
+,Answered,42
+,Skipped,0
+
+
+Q24. To what extent would you be inclined to change your implementation design to make MapCoDoc produce the desired canonical API names?
+Answer Choices,Response Percent,Responses
+I expect little or no source rework.,85.71%,36
+I will make minor code adjustments (small aliases or wrappers) to improve the clarity of export chains.,9.52%,4
+I would make significant structural changes to my package to force a particular canonical API shape.,4.76%,2
+Other (please specify),0.0%,0
+,Answered,42
+,Skipped,0
+
+
+Q25. MapCoDoc supports linking external documentation sources (published HTML pages or PDF documents) to code artifacts; would this capability improve documentation practices in your team?
+Answer Choices,Response Percent,Responses
+Yes,92.86%,39
+No,0.0%,0
+Not sure,7.14%,3
+,Answered,42
+,Skipped,0
+
+
+Q26. Select all that apply: Which of the following are advantages of having a traceability pipeline that supports heterogeneous documentation formats?
+Answer Choices,Response Percent,Responses
+Reduction of bulky content directly in source code (less docstring bloat).,97.62%,41
+Reducing documentation/code conflicts where developers and documentation maintainers work on different artifacts.,100.0%,42
+Improved discoverability and navigation across code and documentations (single place to find both definitions and API pages).,95.24%,40
+None of the above.,0.0%,0
+Other (please specify),0.0%,0
+,Answered,42
+,Skipped,0
+
+
+Q27. MapCoDoc would significantly speed up API evolution analysis and deprecation planning.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,2.38%,1
+Neutral,4.76%,2
+Agree,28.57%,12
+Strongly agree,64.29%,27
+,Answered,42
+,Skipped,0
+
+
+Q28. MapCoDoc’s export-chain records would meaningfully reduce the time it takes to identify which public APIs and aliases are affected by a code refactor.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,2.38%,1
+Agree,40.48%,17
+Strongly agree,57.14%,24
+,Answered,42
+,Skipped,0
+
+
+Q29. MapCoDoc would speed up mapping a bug reported against a public API to the exact implementation and other aliases that must be fixed.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,7.14%,3
+Agree,52.38%,22
+Strongly agree,40.48%,17
+,Answered,42
+,Skipped,0
+
+
+Q30. MapCoDoc's import and export tracing of internal and external code components in the code repository is useful for identifying unused components and facilitating the adoption of explicit export (via __all__).
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,2.38%,1
+Agree,38.1%,16
+Strongly agree,59.52%,25
+,Answered,42
+,Skipped,0
+
+
+Q31. Recovering trace links from heterogeneous document formats makes MapCoDoc valuable for consolidating documentation and ensuring consistency.
+Answer Choices,Response Percent,Responses
+Strongly disagree,2.38%,1
+Disagree,0.0%,0
+Neutral,0.0%,0
+Agree,23.81%,10
+Strongly agree,73.81%,31
+,Answered,42
+,Skipped,0
+
+
+Q32. MapCoDoc-generated programmatically parseable documentation enables its automated fine-grained quality assessment.
+Answer Choices,Response Percent,Responses
+Strongly disagree,2.38%,1
+Disagree,0.0%,0
+Neutral,2.38%,1
+Agree,19.05%,8
+Strongly agree,76.19%,32
+,Answered,42
+,Skipped,0
+
+
+Q33. MapCoDoc's fine-grained representation of documentation facilitates automated tooling for targeted documentation maintenance/generation.
+Answer Choices,Response Percent,Responses
+Strongly disagree,2.38%,1
+Disagree,0.0%,0
+Neutral,0.0%,0
+Agree,23.81%,10
+Strongly agree,73.81%,31
+,Answered,42
+,Skipped,0
+
+
+Q34. Powering IDE hover/popups with MapCoDoc's fine-grained representation of artifacts and provenance information reduces the required effort to learn about a codebase.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,30.95%,13
+Agree,50.0%,21
+Strongly agree,19.05%,8
+,Answered,42
+,Skipped,0
+
+
+Q35. An AI assistant (agent) that answers developers' questions by querying MapCoDoc's analysis results would generate more accurate responses and consume fewer resources than one searching a raw code repository and documentation.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,0.0%,0
+Agree,40.48%,17
+Strongly agree,59.52%,25
+,Answered,42
+,Skipped,0
+
+
+"Q36. Relational representation of code, documentation, and import dependencies is critical for component architecture-informed cross-language translation (around public-facing APIs)."
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,4.76%,2
+Agree,69.05%,29
+Strongly agree,26.19%,11
+,Answered,42
+,Skipped,0
+
+
+"Q37. Compared to the manual discovery-translation workflow, using MapCoDoc's output to produce translation specifications and scaffolding would reduce the total time required to port a module/package."
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,2.38%,1
+Agree,78.57%,33
+Strongly agree,19.05%,8
+,Answered,42
+,Skipped,0
+
+
+Q38. MapCoDoc's output would be a high-quality input to an automated translator or LLM to generate a translation specification.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,7.14%,3
+Agree,61.9%,26
+Strongly agree,30.95%,13
+,Answered,42
+,Skipped,0
+
+
+Q39. MapCoDoc's relational representation of trace artifacts serves as a foundation for building a benchmark dataset for code-to-documentation.
+Answer Choices,Response Percent,Responses
+Strongly disagree,0.0%,0
+Disagree,0.0%,0
+Neutral,0.0%,0
+Agree,23.81%,10
+Strongly agree,76.19%,32
+,Answered,42
+,Skipped,0
+
+
+Q40. Select all that apply: Which use-cases do you consider relevant about MapCoDoc's output as a dataset?
+Answer Choices,Response Percent,Responses
+To train or fine-tune models to generate high quality API reference documentations.,92.86%,39
+To detect stale or mismatched documentations.,90.48%,38
+To train models to generate accurate API usage examples.,97.62%,41
+To train models to accurately retrieve trace-links between code and documentation.,88.1%,37
+To perform provenance / governance research (identify third-party re-exports and licensing exposure),83.33%,35
+To estimate maintenance effort by analyzing imports dependencies and export records.,90.48%,38
+None of the above.,0.0%,0
+Other (please specify),0.0%,0
+,Answered,42
+,Skipped,0
+
+

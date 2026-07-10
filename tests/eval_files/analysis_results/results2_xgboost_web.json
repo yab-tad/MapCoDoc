@@ -1,0 +1,2176 @@
+{
+  "summary": {
+    "total_members": 166,
+    "extracted": 166,
+    "missing": 0,
+    "coverage_pct": 100.0,
+    "match_breakdown": {
+      "lexical": 143,
+      "semantic": 23,
+      "hybrid": 0,
+      "fallback": 0,
+      "unknown": 0
+    }
+  },
+  "members": [
+    {
+      "api_name": "xgboost.Booster.save_config",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 422,
+        "first_line": "save_config()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.save_config)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.save_config.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_uint_info",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 495,
+        "first_line": "get_uint_info(field)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_uint_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.get_uint_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.collective.get_world_size",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 63,
+        "first_line": "xgboost.collective.get_world_size()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.get_world_size)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.collective.get_world_size.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.EvaluationMonitor.after_training",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 495,
+        "first_line": "the reference with the get_categories()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_categories) from the previous training",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.EvaluationMonitor.after_training.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 92.71,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_data",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 502,
+        "first_line": "get_data()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_data)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.get_data.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 390,
+        "first_line": "class xgboost.callback.TrainingCallback(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.TrainingCallback.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.num_boosted_rounds",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 446,
+        "first_line": "num_boosted_rounds()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.num_boosted_rounds)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.num_boosted_rounds.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.set_config",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 536,
+        "first_line": "xgboost.set_config(**new_config)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.set_config)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.set_config.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_float_info_npy2d",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 498,
+        "first_line": "set_float_info_npy2d(field, data)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_float_info_npy2d)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.set_float_info_npy2d.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.EarlyStopping",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 431,
+        "first_line": "class xgboost.callback.EarlyStopping(*, rounds, metric_name=None, data_name=None, maximize=None, save_best=False, min_delta=0.0)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.EarlyStopping)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.EarlyStopping.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.collective.Config",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 155,
+        "first_line": "class xgboost.collective.Config(retry=None, timeout=None, tracker_host_ip=None, tracker_port=None, tracker_timeout=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.Config)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.collective.Config.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.get_xgb_params",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 381,
+        "first_line": "get_xgb_params()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.get_xgb_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.get_xgb_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 422,
+        "first_line": "class xgboost.spark.SparkXGBRankerModel(xgb_sklearn_model=None, training_summary=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRankerModel.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.before_training",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 415,
+        "first_line": "before_training(model)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.before_training)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.TrainingCallback.before_training.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.get_split_value_histogram",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 479,
+        "first_line": "get_split_value_histogram(feature, fmap='', bins=None, as_pandas=True)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.get_split_value_histogram)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.get_split_value_histogram.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 486,
+        "first_line": "class xgboost.spark.SparkXGBClassifier(*, features_col='features', label_col='label', prediction_col='prediction', probability_col='probability', raw_prediction_col='rawPrediction', pred_contrib_col=None, validation_indicator_col=None, weight_col=None, base_margin_col=None, num_workers=1, device=None, force_repartition=False, repartition_random_shuffle=False, enable_sparse_data_optim=False, launch_tracker_on_driver=True, coll_cfg=None, **kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DataIter.next",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 302,
+        "first_line": "abstract next(input_data)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.next)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DataIter.next.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 127.52,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.DMatrix.feature_names",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 497,
+        "first_line": "property feature_names: Sequence(https://docs.python.org/3.10/library/typing.html#typing.Sequence)[str(https://docs.python.org/3.10/library/stdtypes.html#str)] | None(https://docs.python.org/3.10/library/constants.html#None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.feature_names)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.feature_names.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 124.62,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.DataIter.get_callbacks",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 304,
+        "first_line": "get_callbacks(enable_categorical)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.get_callbacks)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DataIter.get_callbacks.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.boost",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 444,
+        "first_line": "boost(dtrain, iteration, *, grad=None, hess=None, fobj=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.boost)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.boost.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.collective.init",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 115,
+        "first_line": "xgboost.collective.init(**args)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.init)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.collective.init.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.get_score",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 501,
+        "first_line": "get_score(fmap='', importance_type='weight')(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.get_score)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.get_score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRegressor",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 340,
+        "first_line": "class xgboost.XGBRegressor(*, objective='reg:squarederror', **kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRegressor.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_group",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 488,
+        "first_line": "set_group(group)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_group)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.set_group.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCheckPoint",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 470,
+        "first_line": "class xgboost.callback.TrainingCheckPoint(directory, name='model', as_pickle=False, interval=100)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCheckPoint)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.TrainingCheckPoint.txt"
+      },
+      "match_type": "exact",
+      "match_score": 146.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.RabitTracker",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "class xgboost.tracker.RabitTracker(n_workers, host_ip, port=0, *, sortby='host', timeout=0)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.tracker.RabitTracker)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.tracker.RabitTracker.txt"
+      },
+      "match_type": "exact",
+      "match_score": 147.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.eval",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 464,
+        "first_line": "eval(data, name='eval', iteration=0)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.eval)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.eval.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.copy",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 443,
+        "first_line": "copy()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.copy)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.copy.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.num_col",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "num_col()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.num_col)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.num_col.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DataIter.reset",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 293,
+        "first_line": "abstract reset()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.reset)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DataIter.reset.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 128.7,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.collective.CommunicatorContext",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "class xgboost.collective.CommunicatorContext(**args)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.CommunicatorContext)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.collective.CommunicatorContext.txt"
+      },
+      "match_type": "exact",
+      "match_score": 145.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.data_split_mode",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "data_split_mode()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.data_split_mode)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.data_split_mode.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_base_margin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 500,
+        "first_line": "get_base_margin()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_base_margin)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.get_base_margin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 477,
+        "first_line": "class xgboost.QuantileDMatrix(data, label=None, *, weight=None, base_margin=None, missing=None, silent=False, feature_names=None, feature_types=None, nthread=None, max_bin=None, ref=None, group=None, qid=None, label_lower_bound=None, label_upper_bound=None, feature_weights=None, enable_categorical=False, max_quantile_batches=None, data_split_mode=DataSplitMode.ROW)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.fit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 367,
+        "first_line": "fit(X, y, *, sample_weight=None, base_margin=None, eval_set=None, verbose=True, xgb_model=None, sample_weight_eval_set=None, base_margin_eval_set=None, feature_weights=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.fit)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.fit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.get_num_boosting_rounds",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 335,
+        "first_line": "get_num_boosting_rounds()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.get_num_boosting_rounds)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.get_num_boosting_rounds.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_quantile_cut",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 498,
+        "first_line": "get_quantile_cut()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_quantile_cut)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.get_quantile_cut.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.build_info",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 475,
+        "first_line": "xgboost.build_info()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.build_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.build_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.before_iteration",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 396,
+        "first_line": "before_iteration(model, epoch, evals_log)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.before_iteration)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.TrainingCallback.before_iteration.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.apply",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 389,
+        "first_line": "apply(X, iteration_range=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.apply)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.apply.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DataIter",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 365,
+        "first_line": "class xgboost.DataIter(cache_prefix=None, release_data=True, *, on_host=True, min_cache_page_bytes=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DataIter.txt"
+      },
+      "match_type": "exact",
+      "match_score": 150.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.EvaluationMonitor.after_iteration",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "See notes in the DataIter(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter) for consistency requirement when the",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.EvaluationMonitor.after_iteration.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 91.4,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.DMatrix.num_row",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 505,
+        "first_line": "num_row()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.num_row)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.num_row.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_float_info",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 498,
+        "first_line": "set_float_info(field, data)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_float_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.set_float_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.after_training",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 404,
+        "first_line": "after_training(model)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.after_training)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.TrainingCallback.after_training.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 340,
+        "first_line": "class xgboost.XGBClassifier(*, objective='binary:logistic', **kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 340,
+        "first_line": "class xgboost.XGBRFClassifier(*, learning_rate=1.0, subsample=0.8, colsample_bynode=0.8, reg_lambda=1e-05, **kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.LearningRateScheduler",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 443,
+        "first_line": "class xgboost.callback.LearningRateScheduler(learning_rates)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.LearningRateScheduler)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.LearningRateScheduler.txt"
+      },
+      "match_type": "exact",
+      "match_score": 146.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCheckPoint.before_training",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 493,
+        "first_line": "before_training(model)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCheckPoint.before_training)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.TrainingCheckPoint.before_training.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_base_margin",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 507,
+        "first_line": "set_base_margin(margin)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_base_margin)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.set_base_margin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_group",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 503,
+        "first_line": "get_group()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_group)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.get_group.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.set_attr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 390,
+        "first_line": "set_attr(**kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.set_attr)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.set_attr.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.collective.finalize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "xgboost.collective.finalize()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.finalize)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.collective.finalize.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.__getitem__",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 446,
+        "first_line": "__getitem__(val)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.__getitem__)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.__getitem__.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_label",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 498,
+        "first_line": "get_label()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_label)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.get_label.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_weight",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 496,
+        "first_line": "get_weight()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_weight)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.get_weight.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 489,
+        "first_line": "class xgboost.spark.SparkXGBRanker(*, features_col='features', label_col='label', prediction_col='prediction', pred_contrib_col=None, validation_indicator_col=None, weight_col=None, base_margin_col=None, qid_col=None, num_workers=1, device=None, force_repartition=False, repartition_random_shuffle=False, enable_sparse_data_optim=False, launch_tracker_on_driver=True, coll_cfg=None, **kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRanker.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.set_param",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 383,
+        "first_line": "set_param(params, value=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.set_param)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.set_param.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.best_iteration",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 436,
+        "first_line": "property best_iteration: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.best_iteration)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.best_iteration.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 128.58,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.after_iteration",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 389,
+        "first_line": "after_iteration(model, epoch, evals_log)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.after_iteration)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.callback.TrainingCallback.after_iteration.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.score",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 288,
+        "first_line": "score(X, y)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.score)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.score.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.get_xgb_params",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 324,
+        "first_line": "get_xgb_params()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.get_xgb_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.get_xgb_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 340,
+        "first_line": "class xgboost.XGBRFRegressor(*, learning_rate=1.0, subsample=0.8, colsample_bynode=0.8, reg_lambda=1e-05, **kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DataIter.proxy",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 301,
+        "first_line": "property proxy: _ProxyDMatrix(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.proxy)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DataIter.proxy.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.eval_set",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 461,
+        "first_line": "eval_set(evals, iteration=0, feval=None, output_margin=True)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.eval_set)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.eval_set.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 434,
+        "first_line": "class xgboost.Booster(params=None, cache=None, model_file=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.DMatrix",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 473,
+        "first_line": "class xgboost.DMatrix(data, label=None, *, weight=None, base_margin=None, missing=None, silent=False, feature_names=None, feature_types=None, nthread=None, group=None, qid=None, label_lower_bound=None, label_upper_bound=None, feature_weights=None, enable_categorical=False, data_split_mode=DataSplitMode.ROW)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.DMatrix.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.best_score",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 438,
+        "first_line": "property best_score: float(https://docs.python.org/3.10/library/functions.html#float)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.best_score)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.best_score.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 126.59,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBRanker",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 342,
+        "first_line": "class xgboost.XGBRanker(*, objective='rank:ndcg', **kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.get_num_boosting_rounds",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 384,
+        "first_line": "get_num_boosting_rounds()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.get_num_boosting_rounds)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.get_num_boosting_rounds.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.feature_types",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 482,
+        "first_line": "property feature_types: Sequence(https://docs.python.org/3.10/library/typing.html#typing.Sequence)[str(https://docs.python.org/3.10/library/stdtypes.html#str)] | None(https://docs.python.org/3.10/library/constants.html#None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.feature_types)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.feature_types.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 124.29,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.fit",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 376,
+        "first_line": "fit(X, y, *, sample_weight=None, base_margin=None, eval_set=None, verbose=True, xgb_model=None, sample_weight_eval_set=None, base_margin_eval_set=None, feature_weights=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.fit)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.fit.txt"
+      },
+      "match_type": "exact",
+      "match_score": 131.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.load_config",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 467,
+        "first_line": "load_config(config)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.load_config)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.load_config.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.trees_to_dataframe",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 381,
+        "first_line": "trees_to_dataframe(fmap='')(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.trees_to_dataframe)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.trees_to_dataframe.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.dump_model",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 440,
+        "first_line": "dump_model(fout, fmap='', with_stats=False, dump_format='text')(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.dump_model)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.dump_model.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.Booster.reset",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 427,
+        "first_line": "reset()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.reset)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.Booster.reset.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_data",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 502,
+        "first_line": "get_data()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_data)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.get_data.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_group",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 503,
+        "first_line": "get_group()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_group)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.get_group.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.apply",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 389,
+        "first_line": "apply(X, iteration_range=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.apply)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.apply.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.num_col",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "num_col()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.num_col)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.num_col.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.feature_names",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 503,
+        "first_line": "property feature_names: Sequence(https://docs.python.org/3.10/library/typing.html#typing.Sequence)[str(https://docs.python.org/3.10/library/stdtypes.html#str)] | None(https://docs.python.org/3.10/library/constants.html#None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.feature_names)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.feature_names.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 125.63,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.save_model",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 315,
+        "first_line": "save_model(fname)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.save_model)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRegressor.save_model.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier.set_coll_cfg",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 484,
+        "first_line": "set_coll_cfg(value)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier.set_coll_cfg)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifier.set_coll_cfg.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.num_col",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 491,
+        "first_line": "num_col()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.num_col)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.num_col.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.ref",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 495,
+        "first_line": "the reference with the get_categories()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_categories) from the previous training",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.ref.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 100.79,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.get_base_margin",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 512,
+        "first_line": "get_base_margin()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.get_base_margin)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.get_base_margin.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.feature_importances_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 373,
+        "first_line": "property feature_importances_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.feature_importances_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.feature_importances_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.intercept_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 308,
+        "first_line": "property intercept_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.intercept_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.intercept_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_info",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 462,
+        "first_line": "set_info(*, label=None, weight=None, base_margin=None, group=None, qid=None, label_lower_bound=None, label_upper_bound=None, feature_names=None, feature_types=None, feature_weights=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.set_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.read",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "DMatrix(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix) for details.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifierModel.read.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 101.87,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.read",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "DMatrix(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix) for details.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRegressor.read.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 101.89,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.apply",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 394,
+        "first_line": "apply(X, iteration_range=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.apply)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRegressor.apply.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_float_info",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 477,
+        "first_line": "set_float_info(field, data)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_float_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.set_float_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.write",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "DMatrix(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix) for details.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRegressor.write.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 90.55,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.feature_types",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 503,
+        "first_line": "property feature_types: Sequence(https://docs.python.org/3.10/library/typing.html#typing.Sequence)[str(https://docs.python.org/3.10/library/stdtypes.html#str)] | None(https://docs.python.org/3.10/library/constants.html#None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.feature_types)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.feature_types.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 125.27,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.get_booster",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 300,
+        "first_line": "get_booster()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.get_booster)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRankerModel.get_booster.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressorModel.write",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "DMatrix(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix) for details.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRegressorModel.write.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 90.85,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_categories",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "get_categories(export_to_arrow=False)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_categories)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.get_categories.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_weight",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 496,
+        "first_line": "get_weight()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_weight)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.get_weight.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.num_nonmissing",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 500,
+        "first_line": "num_nonmissing()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.num_nonmissing)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.num_nonmissing.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.num_row",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 505,
+        "first_line": "num_row()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.num_row)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.num_row.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_uint_info",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 495,
+        "first_line": "get_uint_info(field)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_uint_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.get_uint_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.coef_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 401,
+        "first_line": "property coef_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.coef_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRegressor.coef_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.evals_result",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 386,
+        "first_line": "evals_result()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.evals_result)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.evals_result.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.feature_names_in_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 374,
+        "first_line": "property feature_names_in_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.feature_names_in_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.feature_names_in_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 95.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.set_info",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 485,
+        "first_line": "set_info(*, label=None, weight=None, base_margin=None, group=None, qid=None, label_lower_bound=None, label_upper_bound=None, feature_names=None, feature_types=None, feature_weights=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.set_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.predict",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 387,
+        "first_line": "predict(X, *, output_margin=False, validate_features=True, base_margin=None, iteration_range=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.predict)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.predict.txt"
+      },
+      "match_type": "exact",
+      "match_score": 128.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.set_coll_cfg",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 201,
+        "first_line": "set_coll_cfg(value)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.set_coll_cfg)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRankerModel.set_coll_cfg.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.get_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 308,
+        "first_line": "get_params(deep=True)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.get_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.get_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.get_quantile_cut",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 496,
+        "first_line": "get_quantile_cut()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.get_quantile_cut)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.get_quantile_cut.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_quantile_cut",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 498,
+        "first_line": "get_quantile_cut()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_quantile_cut)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.get_quantile_cut.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.slice",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 475,
+        "first_line": "slice(rindex, allow_groups=False)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.slice)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.slice.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.save_binary",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 505,
+        "first_line": "save_binary(fname, silent=True)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.save_binary)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.save_binary.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.apply",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 384,
+        "first_line": "apply(X, iteration_range=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.apply)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.apply.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.slice",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 435,
+        "first_line": "slice(rindex, allow_groups=False)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.slice)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.slice.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.get_num_boosting_rounds",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 335,
+        "first_line": "get_num_boosting_rounds()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.get_num_boosting_rounds)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRegressor.get_num_boosting_rounds.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.set_device",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 491,
+        "first_line": "set_label(label)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_label)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRegressor.set_device.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 93.24,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.setParams",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 458,
+        "first_line": "setParams(**kwargs)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.setParams)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRanker.setParams.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.get_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 352,
+        "first_line": "get_params(deep=True)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.get_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.get_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.load_model",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 307,
+        "first_line": "load_model(fname)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.load_model)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.load_model.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.best_iteration",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 403,
+        "first_line": "property best_iteration: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.best_iteration)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRegressor.best_iteration.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 102.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.n_features_in_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 385,
+        "first_line": "property n_features_in_: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.n_features_in_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.n_features_in_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 95.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.load_model",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 383,
+        "first_line": "load_model(fname)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.load_model)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.load_model.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_float_info",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 503,
+        "first_line": "get_float_info(field)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_float_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.get_float_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.get_xgb_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 349,
+        "first_line": "get_xgb_params()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.get_xgb_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.get_xgb_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_label",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 459,
+        "first_line": "set_label(label)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_label)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.set_label.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.set_coll_cfg",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 449,
+        "first_line": "set_coll_cfg(value)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.set_coll_cfg)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRanker.set_coll_cfg.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.read",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 483,
+        "first_line": "read()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.read)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRanker.read.txt"
+      },
+      "match_type": "exact",
+      "match_score": 145.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.n_features_in_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 293,
+        "first_line": "property n_features_in_: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.n_features_in_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.n_features_in_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 95.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.set_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 312,
+        "first_line": "set_params(**params)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.set_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.set_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.feature_importances_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 373,
+        "first_line": "property feature_importances_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.feature_importances_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.feature_importances_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.best_iteration",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 390,
+        "first_line": "property best_iteration: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.best_iteration)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.best_iteration.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 104.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.data_split_mode",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "data_split_mode()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.data_split_mode)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.data_split_mode.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.best_iteration",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 392,
+        "first_line": "property best_iteration: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.best_iteration)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.best_iteration.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 104.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.get_feature_importances",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 294,
+        "first_line": "get_feature_importances(importance_type='weight')(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.get_feature_importances)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRankerModel.get_feature_importances.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.num_row",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 478,
+        "first_line": "num_row()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.num_row)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.num_row.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.set_device",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 491,
+        "first_line": "set_label(label)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_label)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifierModel.set_device.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 93.51,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier.write",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 482,
+        "first_line": "write()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier.write)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifier.write.txt"
+      },
+      "match_type": "exact",
+      "match_score": 134.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.set_device",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 440,
+        "first_line": "set_device(value)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.set_device)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRanker.set_device.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.get_booster",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 390,
+        "first_line": "get_booster()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.get_booster)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.get_booster.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.get_xgb_params",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 311,
+        "first_line": "get_xgb_params()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.get_xgb_params)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.get_xgb_params.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressorModel.read",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 499,
+        "first_line": "DMatrix(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix) for details.",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRegressorModel.read.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 101.9,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.intercept_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 346,
+        "first_line": "property intercept_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.intercept_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.intercept_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.coef_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 392,
+        "first_line": "property coef_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.coef_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.coef_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.best_score",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 396,
+        "first_line": "property best_score: float(https://docs.python.org/3.10/library/functions.html#float)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.best_score)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.best_score.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 97.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.get_booster",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 374,
+        "first_line": "get_booster()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.get_booster)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.get_booster.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.setParams",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 488,
+        "first_line": "set_group(group)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_group)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRegressor.setParams.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 92.06,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.save_model",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 314,
+        "first_line": "save_model(fname)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.save_model)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.save_model.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.apply",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 384,
+        "first_line": "apply(X, iteration_range=None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.apply)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFClassifier.apply.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.set_device",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 192,
+        "first_line": "set_device(value)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.set_device)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRankerModel.set_device.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.ref",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 478,
+        "first_line": "property ref: ReferenceType | None(https://docs.python.org/3.10/library/constants.html#None)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.ref)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.ref.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 126.38,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBRanker.evals_result",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 378,
+        "first_line": "evals_result()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.evals_result)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRanker.evals_result.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.n_features_in_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 311,
+        "first_line": "property n_features_in_: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.n_features_in_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBClassifier.n_features_in_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 95.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.get_label",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 494,
+        "first_line": "get_label()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.get_label)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.get_label.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.best_iteration",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 400,
+        "first_line": "property best_iteration: int(https://docs.python.org/3.10/library/functions.html#int)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.best_iteration)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.best_iteration.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 102.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressorModel.set_coll_cfg",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 488,
+        "first_line": "set_group(group)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_group)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRegressorModel.set_coll_cfg.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 91.43,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.set_coll_cfg",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 491,
+        "first_line": "set_label(label)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_label)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifierModel.set_coll_cfg.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 91.3,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.feature_importances_",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 374,
+        "first_line": "property feature_importances_: ndarray(https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.feature_importances_)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.feature_importances_.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 96.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier.set_device",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 483,
+        "first_line": "set_device(value)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier.set_device)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifier.set_device.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.num_nonmissing",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 486,
+        "first_line": "num_nonmissing()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.num_nonmissing)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.num_nonmissing.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.write",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 165,
+        "first_line": "write()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.write)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBRankerModel.write.txt"
+      },
+      "match_type": "exact",
+      "match_score": 127.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_weight",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 450,
+        "first_line": "set_weight(weight)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_weight)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.set_weight.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.set_uint_info",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 482,
+        "first_line": "set_uint_info(field, data)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_uint_info)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.ExtMemQuantileDMatrix.set_uint_info.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.best_score",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 402,
+        "first_line": "property best_score: float(https://docs.python.org/3.10/library/functions.html#float)(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.best_score)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.XGBRFRegressor.best_score.txt"
+      },
+      "match_type": "anchor",
+      "match_score": 97.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.data_split_mode",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 505,
+        "first_line": "data_split_mode()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.data_split_mode)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.QuantileDMatrix.data_split_mode.txt"
+      },
+      "match_type": "exact",
+      "match_score": 128.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.get_booster",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 498,
+        "first_line": "get_label()(https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_label)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\xgboost\\v_3.2.0\\per_member\\xgboost.spark.SparkXGBClassifierModel.get_booster.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 92.61,
+      "match_category": "semantic"
+    }
+  ],
+  "missing_names": []
+}

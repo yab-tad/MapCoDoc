@@ -1,0 +1,3637 @@
+{
+  "summary": {
+    "total_members": 279,
+    "extracted": 276,
+    "missing": 3,
+    "coverage_pct": 98.9,
+    "match_breakdown": {
+      "lexical": 17,
+      "semantic": 1,
+      "hybrid": 0,
+      "fallback": 0,
+      "unknown": 258
+    }
+  },
+  "members": [
+    {
+      "api_name": "torch.mtia.stream",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mtia.stream.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.profiler_util.Interval",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.profiler_util.Interval.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ConvTranspose1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 113,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ConvTranspose1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.parametrizations.orthogonal",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 108,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.parametrizations.orthogonal.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Module.state_dict",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 462,
+        "first_line": "state_dict(*, destination: T_destination, prefix: str(https://docs.python.org/3/library/stdtypes.html#str) = '', keep_vars: bool(https://docs.python.org/3/library/functions.html#bool) = False) -> T_destination[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/module.py#L2191)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.Module.html#torch.nn.Module.state_dict)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Module.state_dict.txt"
+      },
+      "match_type": "semantic",
+      "match_score": 127.67,
+      "match_category": "semantic"
+    },
+    {
+      "api_name": "torch.nn.quantized.functional.avg_pool3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.functional.avg_pool3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cpu.is_available",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cpu.is_available.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.FakeQuantizeBase",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.fake_quantize.FakeQuantizeBase.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.kl_div",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 62,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.kl_div.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.LogSoftmax",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 67,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.LogSoftmax.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Optimizer.register_load_state_dict_post_hook",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 55,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Optimizer.register_load_state_dict_post_hook.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.relu6",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.relu6.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.compiler.set_enable_guard_collectives",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.compiler.set_enable_guard_collectives.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.CELU",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 60,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.CELU.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Hardswish",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 59,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Hardswish.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.utils.rename_privateuse1_backend",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.utils.rename_privateuse1_backend.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.tensordot",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 76,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.tensordot.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.utils.set_module",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 27,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.utils.set_module.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Optimizer.register_step_pre_hook",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Optimizer.register_step_pre_hook.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.CyclicLR",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 162,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.CyclicLR.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.triplet_margin_loss",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.triplet_margin_loss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ZeroPad1d.extra_repr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 19,
+        "first_line": "extra_repr()[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/padding.py#L724)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.ZeroPad1d.html#torch.nn.ZeroPad1d.extra_repr)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ZeroPad1d.extra_repr.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.jit.interface",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 75,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.jit.interface.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.Tensor.split",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 27,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.Tensor.split.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.get_device_properties",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 39,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.get_device_properties.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.AvgPool3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 102,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.AvgPool3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.seed_all",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.seed_all.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ReplicationPad1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 60,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ReplicationPad1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.MSELoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 87,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.MSELoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.device_count",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.device_count.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.quantization.prepare",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.prepare.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Bilinear",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 79,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Bilinear.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.prune.random_unstructured",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 62,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.random_unstructured.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.feature_alpha_dropout",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 47,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.feature_alpha_dropout.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Identity",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 52,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Identity.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.prune.Identity",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 86,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.Identity.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.InstanceNorm3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 95,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.InstanceNorm3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.dropout1d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.dropout1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.memory_usage",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 39,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.memory_usage.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.get_rng_state_all",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.get_rng_state_all.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.SmoothL1Loss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 98,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.SmoothL1Loss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mtia.get_rng_state",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mtia.get_rng_state.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.ConvBn1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.ConvBn1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.MultiLabelMarginLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 83,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.MultiLabelMarginLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.hardswish",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.hardswish.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.modules.module.register_module_full_backward_pre_hook",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.modules.module.register_module_full_backward_pre_hook.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.attention.bias.CausalVariant",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 76,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.attention.bias.CausalVariant.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.UpsamplingBilinear2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 67,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.UpsamplingBilinear2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ParameterList.append",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "append(value)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/container.py#L725)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.ParameterList.html#torch.nn.ParameterList.append)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ParameterList.append.txt"
+      },
+      "match_type": "exact",
+      "match_score": 126.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.save",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.save.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.signal.windows.blackman",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 67,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.signal.windows.blackman.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.make_graphed_callables",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 178,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.make_graphed_callables.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.pt2e.lowering.lower_pt2e_quantized_to_x86",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.pt2e.lowering.lower_pt2e_quantized_to_x86.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.forward_ad.unpack_dual",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 47,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.forward_ad.unpack_dual.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.profiler.record_function",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 63,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.profiler.record_function.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.max_memory_reserved",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.memory.max_memory_reserved.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.Tensor.dim_order",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 73,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.Tensor.dim_order.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.atleast_3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.atleast_3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.enable_fake_quant",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.fake_quantize.enable_fake_quant.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.LazyLinear",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 59,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.LazyLinear.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.TransformerEncoderLayer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 127,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.TransformerEncoderLayer.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.Event",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 92,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.Event.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.accelerator.device_count",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.accelerator.device_count.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mps.profiler.is_capturing_metal",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mps.profiler.is_capturing_metal.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.qat.Conv3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.qat.Conv3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.quantized.ConvReLU1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.quantized.ConvReLU1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.prune.L1Unstructured",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 101,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.L1Unstructured.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.HingeEmbeddingLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 77,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.HingeEmbeddingLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.default_eval_fn",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.default_eval_fn.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.current_device",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.current_device.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.PoissonNLLLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 89,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.PoissonNLLLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.accelerator.memory_reserved",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.accelerator.memory.memory_reserved.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.device",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.device.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.L1Loss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 91,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.L1Loss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.profiler.KinetoStepTracker",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 91,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.profiler.KinetoStepTracker.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.backend_config.DTypeWithConstraints",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.backend_config.DTypeWithConstraints.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.hardsigmoid",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.hardsigmoid.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ConvTranspose3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 136,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ConvTranspose3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.dynamic.Linear",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 64,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.dynamic.Linear.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.compiler.skip_guard_on_globals_unsafe",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.compiler.skip_guard_on_globals_unsafe.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.accelerator.empty_cache",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.accelerator.memory.empty_cache.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.fuse_linear_bn_eval",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.fuse_linear_bn_eval.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Dropout3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 70,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Dropout3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.atleast_2d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 58,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.atleast_2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Dropout1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 70,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Dropout1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.profiler.parse_nvprof_trace",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 26,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.profiler.parse_nvprof_trace.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Unfold.forward",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 19,
+        "first_line": "forward(input)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/fold.py#L320)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.Unfold.html#torch.nn.Unfold.forward)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Unfold.forward.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.optim._functional.adamw",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 18,
+        "first_line": "torch.optim.adamw.adamw(params, grads, exp_avgs, exp_avg_sqs, max_exp_avg_sqs, state_steps, foreach=None, capturable=False, differentiable=False, fused=None, grad_scale=None, found_inf=None, has_complex=False, *, amsgrad, beta1, beta2, lr, weight_decay, eps, maximize)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/adamw.py#L130)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.adamw.adamw.html#torch.optim.adamw.adamw)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.adamw.adamw.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.FakeQuantize",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 55,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.fake_quantize.FakeQuantize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.mish",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.mish.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.qat.LinearReLU",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.qat.LinearReLU.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.get_device_capability",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.get_device_capability.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.load",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 145,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.load.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.parametrizations.spectral_norm",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 99,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.parametrizations.spectral_norm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ModuleDict",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 109,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ModuleDict.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.upsample_nearest",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 45,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.upsample_nearest.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.comm.broadcast_coalesced",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 39,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.comm.broadcast_coalesced.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.MaxPool3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 89,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.MaxPool3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.synchronize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.synchronize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.seed",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.seed.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.leaky_relu",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.leaky_relu.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.device_count",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.device_count.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.parametrizations.weight_norm",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 68,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.parametrizations.weight_norm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.LPPool2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 76,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.LPPool2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.AdaptiveMaxPool3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.AdaptiveMaxPool3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch._jit_internal.unused",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 67,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.jit.unused.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Sigmoid",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 48,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Sigmoid.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.comm.reduce_add_coalesced",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.comm.reduce_add_coalesced.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.device",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.device.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.Tensor.norm",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 27,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.Tensor.norm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.utils.swap_tensors",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.utils.swap_tensors.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.AffineQuantizedObserverBase",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 73,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.observer.AffineQuantizedObserverBase.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.function.FunctionCtx.mark_dirty",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 59,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.function.FunctionCtx.mark_dirty.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.ConvTranspose3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 71,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.ConvTranspose3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.rms_norm",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.rms_norm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.ctc_loss",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 75,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.ctc_loss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ReLU",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 63,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ReLU.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.LayerNorm",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 103,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.LayerNorm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.enable_observer",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.fake_quantize.enable_observer.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.tanhshrink",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 29,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.tanhshrink.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.set_printoptions",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 64,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.set_printoptions.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.qat.ConvBnReLU1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.qat.ConvBnReLU1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.prune.RandomStructured",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 123,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.RandomStructured.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.CrossEntropyLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 211,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.CrossEntropyLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.func.stack_module_state",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 84,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.func.stack_module_state.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.jit.wait",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 37,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.jit.wait.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Dropout1d.forward",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 19,
+        "first_line": "forward(input)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/dropout.py#L117)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.Dropout1d.html#torch.nn.Dropout1d.forward)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Dropout1d.forward.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.nn.CTCLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 181,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.CTCLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.func.grad_and_value",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.func.grad_and_value.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.get_arch_list",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.get_arch_list.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.AvgPool2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 94,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.AvgPool2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.compiler.disable",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.compiler.disable.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.ExponentialLR",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 76,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.ExponentialLR.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.elu",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.elu.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.PerBlock",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.observer.PerBlock.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.BatchNorm2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 97,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.BatchNorm2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.BNReLU2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.BNReLU2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.MappingType",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.observer.MappingType.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.get_rng_state_all",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.get_rng_state_all.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.accelerator.synchronize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.accelerator.synchronize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.can_device_access_peer",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.can_device_access_peer.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cpu.set_device",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 29,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cpu.set_device.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.jit.trace_module",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 105,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.jit.trace_module.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.compiler.compile",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 27,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.compiler.compile.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.vmap",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 209,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.vmap.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.empty_cache",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 36,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.memory.empty_cache.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.mse_loss",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.mse_loss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.MultiheadAttention.forward",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 96,
+        "first_line": "forward(query, key, value, key_padding_mask=None, need_weights=True, attn_mask=None, average_attn_weights=True, is_causal=False)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/activation.py#L1252)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.MultiheadAttention.html#torch.nn.MultiheadAttention.forward)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.MultiheadAttention.forward.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.optim.Optimizer.add_param_group",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Optimizer.add_param_group.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Hardsigmoid",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Hardsigmoid.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.func.functional_call",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 147,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.func.functional_call.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mtia.memory_allocated",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mtia.memory.memory_allocated.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch._logging.set_logs",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 150,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch._logging.set_logs.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.BatchNorm3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 27,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.BatchNorm3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cpu.current_stream",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cpu.current_stream.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.tanh",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.tanh.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.graph.Node.name",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.graph.Node.name.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.get_float32_matmul_precision",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 31,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.get_float32_matmul_precision.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.prune.ln_structured",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 72,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.ln_structured.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mtia.default_stream",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 36,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mtia.default_stream.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.functional.upsample_nearest",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 47,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.functional.upsample_nearest.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Dropout2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Dropout2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.MaxPool1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 81,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.MaxPool1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.get_sync_debug_mode",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.get_sync_debug_mode.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ReflectionPad3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 73,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ReflectionPad3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cpu.StreamContext",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 29,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cpu.StreamContext.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.functional.leaky_relu",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.functional.leaky_relu.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.LPPool1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.LPPool1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.graph.Node.register_prehook",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 67,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.graph.Node.register_prehook.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.accelerator.memory_stats",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 85,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.accelerator.memory.memory_stats.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.ConvReLU2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.ConvReLU2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim._functional.rmsprop",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 29,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.rmsprop.rmsprop.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.batch_norm",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.batch_norm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.dynamic.GRUCell",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.dynamic.GRUCell.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mps.set_rng_state",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mps.set_rng_state.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.MultiStepLR",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 83,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.MultiStepLR.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.TransformerDecoderLayer",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 105,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.TransformerDecoderLayer.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.Conv1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.Conv1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.is_available",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.is_available.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.LRScheduler.load_state_dict",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "load_state_dict(state_dict)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/lr_scheduler.py#L159)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.load_state_dict)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.LRScheduler.load_state_dict.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.nn.functional.instance_norm",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.instance_norm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.ConvReLU1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.ConvReLU1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.parametrize.cached",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 57,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.parametrize.cached.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.compiled_with_cxx11_abi",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.compiled_with_cxx11_abi.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.profiler.profile.total_average",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.profiler.profile.total_average.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Adagrad",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 395,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Adagrad.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.parameter.is_lazy",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.parameter.is_lazy.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.jit.script",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 224,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.jit.script.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.interpolate",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 99,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.interpolate.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.Tensor.share_memory_",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.Tensor.share_memory_.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Sequential",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 284,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.Sequential.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.group_norm",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.group_norm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mps.profiler.stop",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 27,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mps.profiler.stop.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.LazyConv3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 56,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.LazyConv3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.disable_fake_quant",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.fake_quantize.disable_fake_quant.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.Softmax2d.forward",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 19,
+        "first_line": "forward(input)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/activation.py#L1842)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.modules.activation.Softmax2d.html#torch.nn.modules.activation.Softmax2d.forward)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.modules.activation.Softmax2d.forward.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.cuda.synchronize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.synchronize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Optimizer.register_step_post_hook",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Optimizer.register_step_post_hook.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.RMSNorm",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 81,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.RMSNorm.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.AdaptiveLogSoftmaxWithLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 156,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.AdaptiveLogSoftmaxWithLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.StreamContext",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.StreamContext.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.graph.increment_version",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.graph.increment_version.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.max_memory_allocated",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 41,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.memory.max_memory_allocated.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ELU.forward",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 19,
+        "first_line": "forward(input)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/activation.py#L613)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.modules.activation.ELU.html#torch.nn.modules.activation.ELU.forward)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.modules.activation.ELU.forward.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.ao.quantization.PerChannelMinMaxObserver",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 56,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.observer.PerChannelMinMaxObserver.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ConstantPad1d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 69,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ConstantPad1d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.BNReLU3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.BNReLU3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.qat.ConvBn3d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 39,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.qat.ConvBn3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.ExponentialLR.get_lr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "get_lr()[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/lr_scheduler.py#L795)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.lr_scheduler.ExponentialLR.html#torch.optim.lr_scheduler.ExponentialLR.get_lr)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.ExponentialLR.get_lr.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.nn.functional.rrelu",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.rrelu.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.get_gencode_flags",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.get_gencode_flags.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.get_rng_state",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.get_rng_state.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.einsum",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 166,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.einsum.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.parametrize.register_parametrization",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 158,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.parametrize.register_parametrization.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.set_float32_matmul_precision",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 87,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.set_float32_matmul_precision.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Optimizer.register_state_dict_pre_hook",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 53,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Optimizer.register_state_dict_pre_hook.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.parametrize.is_parametrized",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.parametrize.is_parametrized.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.Tensor.storage",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.Tensor.storage.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mtia.StreamContext",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mtia.StreamContext.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.compiler.is_dynamo_compiling",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.compiler.is_dynamo_compiling.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.NLLLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 136,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.NLLLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.smooth_l1_loss",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.smooth_l1_loss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.UninitializedParameter",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 42,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.parameter.UninitializedParameter.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.attention.sdpa_kernel",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 54,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.attention.sdpa_kernel.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ReLU6",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 51,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.ReLU6.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.is_tf32_supported",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.is_tf32_supported.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.graph.Node.metadata",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.graph.Node.metadata.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.ELU",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 55,
+        "first_line": "class torch.nn.modules.activation.ELU(alpha=1.0, inplace=False)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/activation.py#L573)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.modules.activation.ELU.html#torch.nn.modules.activation.ELU)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.modules.activation.ELU.txt"
+      },
+      "match_type": "exact",
+      "match_score": 155.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.nn.functional.hinge_embedding_loss",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 46,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.hinge_embedding_loss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.prune.CustomFromMask",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 84,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.CustomFromMask.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.MarginRankingLoss",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 78,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.MarginRankingLoss.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.AlphaDropout",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 68,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.AlphaDropout.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.gumbel_softmax",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 66,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.gumbel_softmax.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.lobpcg",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 173,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.lobpcg.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mtia.is_available",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mtia.is_available.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.func.linearize",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 68,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.func.linearize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.TransformerEncoder",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 80,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.TransformerEncoder.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.intrinsic.LinearReLU",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 28,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.intrinsic.LinearReLU.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.mtia.memory_stats",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.mtia.memory_stats.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.stream",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.stream-function.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.lp_pool3d",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 35,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.lp_pool3d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.ConvTranspose2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 67,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.ConvTranspose2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.LazyConvTranspose2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 53,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.LazyConvTranspose2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.align_tensors",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 26,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.functional.align_tensors.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.modules.module.register_module_backward_hook",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.modules.module.register_module_backward_hook.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.RMSprop",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 412,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.RMSprop.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.memory_stats",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 116,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.memory.memory_stats.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.Tensor.is_shared",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 29,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.Tensor.is_shared.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.set_stream",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 33,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.set_stream.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.utils.prune.RandomUnstructured",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 98,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.RandomUnstructured.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.functional.embedding",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 101,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.functional.embedding.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.quantized.BatchNorm2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 27,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.nn.quantized.BatchNorm2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.block_diag",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 60,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.block_diag.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.profiler.load_nvprof",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.profiler.load_nvprof.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Muon",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 403,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Muon.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.get_block_size",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 34,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.observer.get_block_size.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.caching_allocator_alloc",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.memory.caching_allocator_alloc.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.sym_max",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 30,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.sym_max.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Optimizer.step",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 38,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Optimizer.step.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.MultiplicativeLR",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 81,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.MultiplicativeLR.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.InstanceNorm2d",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 96,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.InstanceNorm2d.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.SiLU",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 65,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.SiLU.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.ao.quantization.FusedMovingAvgObsFakeQuantize",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.ao.quantization.fake_quantize.FusedMovingAvgObsFakeQuantize.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.profiler.profile.self_cpu_time_total",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 29,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.profiler.profile.self_cpu_time_total.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.nn.PixelShuffle.extra_repr",
+      "type": "method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 25,
+        "first_line": "extra_repr()[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/modules/pixelshuffle.py#L64)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.modules.pixelshuffle.PixelShuffle.html#torch.nn.modules.pixelshuffle.PixelShuffle.extra_repr)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.modules.pixelshuffle.PixelShuffle.extra_repr.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.signal.windows.cosine",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 71,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.signal.windows.cosine.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.cuda.gds.gds_deregister_buffer",
+      "type": "function",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 40,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.cuda.gds.gds_deregister_buffer.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.xpu.Stream",
+      "type": "class",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 79,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.xpu.Stream-class.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.Function.jvp",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 44,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.Function.jvp.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.AdamW.register_state_dict_post_hook",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.OneCycleLR.state_dict",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 25,
+        "first_line": "state_dict()[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/lr_scheduler.py#L149)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.lr_scheduler.OneCycleLR.html#torch.optim.lr_scheduler.OneCycleLR.state_dict)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.OneCycleLR.state_dict.txt"
+      },
+      "match_type": "exact",
+      "match_score": 129.5,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.ExponentialLR.load_state_dict",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "load_state_dict(state_dict)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/lr_scheduler.py#L159)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.lr_scheduler.ExponentialLR.html#torch.optim.lr_scheduler.ExponentialLR.load_state_dict)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.ExponentialLR.load_state_dict.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.optim.lr_scheduler.OneCycleLR.load_state_dict",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 32,
+        "first_line": "load_state_dict(state_dict)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/lr_scheduler.py#L159)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.lr_scheduler.OneCycleLR.html#torch.optim.lr_scheduler.OneCycleLR.load_state_dict)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.lr_scheduler.OneCycleLR.load_state_dict.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.optim.AdamW.step",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.optim.Adamax.register_step_pre_hook",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 119,
+        "first_line": "register_step_pre_hook(hook)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/optimizer.py#L557)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.Adamax.html#torch.optim.Adamax.register_step_pre_hook)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Adamax.register_step_pre_hook.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.nn.utils.prune.RandomStructured.apply_mask",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 83,
+        "first_line": "apply_mask(module)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/nn/utils/prune.py#L53)#(https://docs.pytorch.org/docs/2.9/generated/torch.nn.utils.prune.RandomStructured.html#torch.nn.utils.prune.RandomStructured.apply_mask)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.nn.utils.prune.RandomStructured.apply_mask.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.optim.Adamax.register_load_state_dict_post_hook",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 264,
+        "first_line": "register_load_state_dict_post_hook(hook, prepend=False)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/optim/optimizer.py#L830)#(https://docs.pytorch.org/docs/2.9/generated/torch.optim.Adamax.html#torch.optim.Adamax.register_load_state_dict_post_hook)",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.optim.Adamax.register_load_state_dict_post_hook.txt"
+      },
+      "match_type": "exact",
+      "match_score": 125.0,
+      "match_category": "lexical"
+    },
+    {
+      "api_name": "torch.optim.AdamW.state_dict",
+      "type": "inherited_method",
+      "status": "missing",
+      "file_info": null,
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    },
+    {
+      "api_name": "torch.autograd.Function.forward",
+      "type": "inherited_method",
+      "status": "extracted",
+      "file_info": {
+        "line_count": 74,
+        "first_line": "Rate this Page",
+        "file": "doc_processor\\doc_artifacts\\scraped_doc\\torch\\v_2.9.1\\per_member\\torch.autograd.Function.forward.txt"
+      },
+      "match_type": null,
+      "match_score": null,
+      "match_category": null
+    }
+  ],
+  "missing_names": [
+    "torch.optim.AdamW.register_state_dict_post_hook",
+    "torch.optim.AdamW.step",
+    "torch.optim.AdamW.state_dict"
+  ]
+}

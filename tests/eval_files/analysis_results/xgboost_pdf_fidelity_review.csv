@@ -1,0 +1,167 @@
+api_name,member_type,fidelity_group,preprocessed_accurate,structured_vs_preprocessed,structured_vs_original_db,structured_vs_original_web,correct_doc,source_of_truth,scope,root_cause_layer,comment,verify_tier,verify_reason,sample_pick,human_verified,human_note,correct_doc_auto
+xgboost.ExtMemQuantileDMatrix.get_data,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.get_group,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFRegressor.apply,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.num_col,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.save_config,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.feature_names,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Labels for features (column labels).""",mode_sample,pdf_no:empty,no,no,,no
+xgboost.DMatrix.get_uint_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRegressor.save_model,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Save the model to a file.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.collective.get_world_size,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.EvaluationMonitor.after_training,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Run after training is finished.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.spark.SparkXGBClassifier.set_coll_cfg,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.get_data,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.num_col,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.TrainingCallback,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.ref,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Internal method for retrieving a reference to the training DMatrix.""",mode_sample,pdf_no:empty,no,no,,no
+xgboost.Booster.num_boosted_rounds,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.get_base_margin,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.set_config,function,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""set_config""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRFClassifier.feature_importances_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.set_float_info_npy2d,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.EarlyStopping,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.collective.Config,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFClassifier.get_xgb_params,method,clean,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Get xgboost specific parameters.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRanker.intercept_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRankerModel,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.set_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.TrainingCallback.before_training,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBClassifierModel.read,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the reader for loading the model.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.Booster.get_split_value_histogram,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBClassifier,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRegressor.read,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the reader for loading the estimator.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.DataIter.next,method,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""xgboost.DMatrix.""",mode_sample,pdf_no:empty,yes,no,,no
+xgboost.DMatrix.feature_names,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Labels for features (column labels).""",mode_sample,pdf_no:empty,yes,no,,no
+xgboost.DataIter.get_callbacks,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.boost,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRegressor.apply,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.collective.init,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.get_score,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.set_float_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRegressor,class,issues,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Implementation of the scikit-learn API for XGBoost regression.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.DMatrix.set_group,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRegressor.write,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the writer for saving the estimator.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.QuantileDMatrix.feature_types,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Type of features (column types).""",mode_sample,pdf_no:empty,no,no,,no
+xgboost.callback.TrainingCheckPoint,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.tracker.RabitTracker,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Tracker for the collective used in XGBoost, acting as a coordinator between""",mode_sample,pdf_no:empty,no,no,,no
+xgboost.Booster.eval,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRankerModel.get_booster,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.copy,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRegressorModel.write,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the writer for saving the model.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.get_categories,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.get_weight,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.num_nonmissing,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.num_row,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.get_uint_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.num_col,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DataIter.reset,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRegressor.coef_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+xgboost.XGBRFRegressor.evals_result,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.feature_names_in_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.set_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFClassifier.predict,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Predict with X.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.spark.SparkXGBRankerModel.set_coll_cfg,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRanker.get_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.collective.CommunicatorContext,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.get_quantile_cut,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.data_split_mode,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.get_base_margin,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.get_quantile_cut,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFRegressor.fit,method,issues,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Fit gradient boosting model.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.slice,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.save_binary,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.apply,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.slice,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+xgboost.XGBRFRegressor.get_num_boosting_rounds,method,clean,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Gets the number of xgboost boosting rounds.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRegressor.get_num_boosting_rounds,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRegressor.set_device,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Set device, optional value: cpu, cuda, gpu""",confidence_sample,yes_web,no,yes,,yes
+xgboost.spark.SparkXGBRanker.setParams,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.get_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.get_quantile_cut,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.build_info,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRanker.load_model,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Load the model from a file or a bytearray.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRegressor.best_iteration,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFClassifier.n_features_in_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.TrainingCallback.before_iteration,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFClassifier.load_model,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Load the model from a file or a bytearray.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRanker.apply,method,clean,yes,yes,no_groundtruth,yes,yes,manual,full,none,manual-confirmed: structured = correct 'Return the predicted leaf...'; web extractor grabbed a fragment,must_verify,ai_adjudicated,all,yes,Human-verified accurate. Same as web counterpart: accurate except the returns NAME (X_leaves) is absent because the returns schema has a type field but no name field (noted structured-doc SCHEMA limitation).,yes
+xgboost.DataIter,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+xgboost.ExtMemQuantileDMatrix.get_float_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.get_xgb_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.set_label,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRanker.set_coll_cfg,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRanker.read,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRanker.n_features_in_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.set_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.EvaluationMonitor.after_iteration,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Run after each iteration.""",confidence_sample,yes_web,yes,yes,,yes
+xgboost.XGBClassifier.feature_importances_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.best_iteration,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.data_split_mode,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.num_row,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.set_float_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.TrainingCallback.after_training,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier,class,clean,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Implementation of the scikit-learn API for XGBoost classification.""",confidence_sample,yes_web,yes,yes,,yes
+xgboost.XGBRFClassifier,class,issues,yes,yes,no_groundtruth,no_ref,yes,manual,n/a,none,manual-confirmed: structured = correct 'scikit-learn API for XGBoost random forest classification',must_verify,ai_adjudicated,all,yes,Human-verified accurate. Same as web counterpart: preprocessed text truncation (extractor MAX-LENGTH limit) may omit some of the class's method docs - NOT a retrieval-accuracy or structuring problem; class doc correct.,yes
+xgboost.callback.LearningRateScheduler,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.callback.TrainingCheckPoint.before_training,method,clean,no,yes,no_groundtruth,no,no,web,full,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Run before training starts.""",mode_sample,pdf_no:contamination,yes,no,,no
+xgboost.XGBRanker.best_iteration,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.set_base_margin,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRankerModel.get_feature_importances,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.get_group,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.num_row,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.set_attr,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBClassifierModel.set_device,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Set device, optional value: cpu, cuda, gpu""",confidence_sample,yes_web,no,yes,,yes
+xgboost.spark.SparkXGBClassifier.write,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.collective.finalize,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRanker.set_device,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFClassifier.get_booster,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRanker.get_xgb_params,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRegressorModel.read,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the reader for loading the model.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.Booster.__getitem__,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.intercept_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRanker.coef_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DMatrix.get_label,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.best_score,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.get_booster,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRegressor.setParams,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Set params for the estimator.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRFRegressor.save_model,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Save the model to a file.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.DMatrix.get_weight,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRanker,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFClassifier.apply,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRankerModel.set_device,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.ref,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Internal method for retrieving a reference to the training DMatrix.""",mode_sample,pdf_no:empty,no,no,,no
+xgboost.XGBRanker.evals_result,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBClassifier.n_features_in_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.get_label,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.set_param,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.best_iteration,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""The best iteration during training.""",mode_sample,pdf_no:empty,yes,no,,no
+xgboost.callback.TrainingCallback.after_iteration,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFRegressor.best_iteration,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBRegressorModel.set_coll_cfg,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Set collective configuration""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRanker.score,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBClassifierModel.set_coll_cfg,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Set collective configuration""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRFRegressor.feature_importances_,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFRegressor.get_xgb_params,method,clean,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Get xgboost specific parameters.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.spark.SparkXGBClassifier.set_device,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.num_nonmissing,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFRegressor,class,issues,yes,yes,no_groundtruth,no_ref,yes,manual,n/a,none,manual-confirmed: structured = correct 'scikit-learn API for XGBoost random forest regression',must_verify,ai_adjudicated,all,yes,Human-verified accurate. Same as XGBRFClassifier (pdf): class doc correct; some class-method docs omitted due to preprocessed text truncation (extractor MAX-LENGTH limit) - not a retrieval or structuring accuracy problem.,yes
+xgboost.spark.SparkXGBRankerModel.write,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.DataIter.proxy,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.set_weight,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.eval_set,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+xgboost.DMatrix,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.best_score,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""The best evaluation score during training.""",mode_sample,pdf_no:empty,yes,no,,no
+xgboost.XGBRanker,class,issues,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Implementation of the Scikit-Learn API for XGBoost Ranking.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.XGBRFClassifier.get_num_boosting_rounds,method,clean,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Gets the number of xgboost boosting rounds.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.Booster.feature_types,method,unevaluated,no_doc,empty,no_groundtruth,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Feature types for this booster.""",mode_sample,pdf_no:empty,yes,no,,no
+xgboost.XGBRFClassifier.fit,method,issues,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Fit gradient boosting classifier.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.ExtMemQuantileDMatrix.set_uint_info,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.load_config,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.XGBRFRegressor.best_score,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.QuantileDMatrix.data_split_mode,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.spark.SparkXGBClassifierModel.get_booster,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the xgboost.core.Booster instance.""",confidence_sample,yes_web,no,yes,,yes
+xgboost.Booster.trees_to_dataframe,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.dump_model,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+xgboost.Booster.reset,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes

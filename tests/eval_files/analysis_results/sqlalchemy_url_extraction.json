@@ -1,0 +1,1437 @@
+{
+  "names_file": "C:/Users/Administrator/Documents/USask/Thesis/MapCoDoc/study one exp/RQ2/stratified sampling/samples/api_names/sqlalchemy.txt",
+  "url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\sqlalchemy\\v_latest\\scraped_urls.txt",
+  "base_url": "https://docs.sqlalchemy.org/en/20/",
+  "sub_path": "orm",
+  "total_api_names": 158,
+  "matched": 158,
+  "unmatched": 0,
+  "total_urls_in": 429,
+  "total_urls_out": 158,
+  "output_url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\sqlalchemy\\v_latest\\samples\\scraped_urls.txt",
+  "unmatched_names": [],
+  "matches": [
+    {
+      "api_name": "sqlalchemy.orm.Mapper.all_orm_descriptors",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.all_orm_descriptors",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.all_orm_descriptors"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.collection",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.collections.collection",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.collections.collection"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.add_mapped_attribute",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.add_mapped_attribute",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.add_mapped_attribute"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.rollback",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.rollback",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.rollback"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.update_type_annotation_map",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.registry.update_type_annotation_map",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.registry.update_type_annotation_map"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.dynamic_loader",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.dynamic_loader",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/relationship_api.html#sqlalchemy.orm.dynamic_loader"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.set_committed_value",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.set_committed_value",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.set_committed_value"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.reconstructor",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.reconstructor",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.reconstructor"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.del_attribute",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.del_attribute",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.del_attribute"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.is_sibling",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.is_sibling",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.is_sibling"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.get_history",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.get_history",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.get_history"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.common_parent",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.common_parent",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.common_parent"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.self_and_descendants",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.self_and_descendants",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.self_and_descendants"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.UOWTransaction",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.UOWTransaction",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.UOWTransaction"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.KeyFuncDict",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.KeyFuncDict",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.KeyFuncDict"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.loaded_as_persistent",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.loaded_as_persistent",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.loaded_as_persistent"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.merge_result",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.merge_result",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.merge_result"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedClassProtocol",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MappedClassProtocol",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.MappedClassProtocol"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.WriteOnlyCollection.remove",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.WriteOnlyCollection.remove",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/large_collections.html#sqlalchemy.orm.WriteOnlyCollection.remove"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.declared_attr.directive",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.declared_attr.directive",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.declared_attr.directive"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.backref",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.backref",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/relationship_api.html#sqlalchemy.orm.backref"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.column_keyed_dict",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.column_keyed_dict",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.column_keyed_dict"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.util.object_state",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.util.object_state",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.util.object_state"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.polymorphic_union",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.polymorphic_union",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.polymorphic_union"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.after_rollback",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.after_rollback",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.after_rollback"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.foreign",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.foreign",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/relationship_api.html#sqlalchemy.orm.foreign"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.column_attrs",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.column_attrs",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.column_attrs"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.attrs",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceState.attrs",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstanceState.attrs"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.CompositeProperty.Comparator",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.CompositeProperty.Comparator",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.CompositeProperty.Comparator"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.DeclarativeBase",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.DeclarativeBase",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.DeclarativeBase"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.expire",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.expire",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.expire"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.identity",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceState.identity",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstanceState.identity"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.relationships",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.relationships",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.relationships"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.identity_key_from_row",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.identity_key_from_row",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.identity_key_from_row"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.DynamicMapped",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.DynamicMapped",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/large_collections.html#sqlalchemy.orm.DynamicMapped"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.before_commit",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.before_commit",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.before_commit"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.synonyms",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.synonyms",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.synonyms"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.after_transaction_create",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.after_transaction_create",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.after_transaction_create"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.expire_all",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.expire_all",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.expire_all"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.init_collection",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.init_collection",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.init_collection"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.instrumentation.is_instrumented",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.instrumentation.is_instrumented",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.instrumentation.is_instrumented"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.composites",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.composites",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.composites"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.after_flush",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.after_flush",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.after_flush"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.is_active",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.is_active",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.is_active"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperEvents.before_configured",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MapperEvents.before_configured",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.MapperEvents.before_configured"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.WriteOnlyMapped",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.WriteOnlyMapped",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/large_collections.html#sqlalchemy.orm.WriteOnlyMapped"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.mapped_as_dataclass",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.registry.mapped_as_dataclass",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.registry.mapped_as_dataclass"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.enable_relationship_loading",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.enable_relationship_loading",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.enable_relationship_loading"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceEvents.refresh_flush",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceEvents.refresh_flush",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.InstanceEvents.refresh_flush"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.merge_frozen_result",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.merge_frozen_result",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.merge_frozen_result"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.util.ScopedRegistry",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.util.ScopedRegistry",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/contextual.html#sqlalchemy.util.ScopedRegistry"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedColumn",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MappedColumn",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.MappedColumn"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InspectionAttr",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InspectionAttr",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InspectionAttr"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.keyfunc_mapping",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.keyfunc_mapping",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.keyfunc_mapping"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.no_autoflush",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.no_autoflush",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.no_autoflush"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.__init__",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.registry.__init__",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.registry.__init__"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.bulk_update_mappings",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.bulk_update_mappings",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.bulk_update_mappings"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.RelationshipProperty.Comparator",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.RelationshipProperty.Comparator",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.RelationshipProperty.Comparator"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attribute_keyed_dict",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attribute_keyed_dict",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.attribute_keyed_dict"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.declarative_mixin",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.declarative_mixin",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.declarative_mixin"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstrumentedAttribute",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstrumentedAttribute",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstrumentedAttribute"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.ORMExecuteState.invoke_statement",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.ORMExecuteState.invoke_statement",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.ORMExecuteState.invoke_statement"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.CascadeOptions",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.CascadeOptions",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.CascadeOptions"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.get_attribute",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.get_attribute",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.get_attribute"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedSQLExpression",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MappedSQLExpression",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.MappedSQLExpression"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.add_all",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.add_all",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.add_all"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.pending_to_persistent",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.pending_to_persistent",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.pending_to_persistent"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.get_property_by_column",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.get_property_by_column",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.get_property_by_column"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.transient",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceState.transient",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstanceState.transient"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.close",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.close",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.close"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.sessionmaker",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.sessionmaker",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.sessionmaker"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents.set",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.AttributeEvents.set",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.AttributeEvents.set"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Composite",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Composite",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.Composite"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceEvents.load",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceEvents.load",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.InstanceEvents.load"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.LoaderCallableStatus",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.LoaderCallableStatus",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.LoaderCallableStatus"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.DeclarativeBaseNoMeta",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.DeclarativeBaseNoMeta",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.DeclarativeBaseNoMeta"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperEvents.mapper_configured",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MapperEvents.mapper_configured",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.MapperEvents.mapper_configured"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.NotExtension",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.NotExtension",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.NotExtension"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.pending_to_transient",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.pending_to_transient",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.pending_to_transient"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.InstrumentedList",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.collections.InstrumentedList",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.collections.InstrumentedList"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.QueryContext",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.QueryContext",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.QueryContext"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.mapped_as_dataclass",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.mapped_as_dataclass",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.mapped_as_dataclass"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.class_mapper",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.class_mapper",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.class_mapper"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.util.ThreadLocalRegistry",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.util.ThreadLocalRegistry",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/contextual.html#sqlalchemy.util.ThreadLocalRegistry"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.do_orm_execute",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.do_orm_execute",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.do_orm_execute"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.remote",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.remote",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/relationship_api.html#sqlalchemy.orm.remote"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.AttributeEvents",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.AttributeEvents"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.sessionmaker.configure",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.sessionmaker.configure",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.sessionmaker.configure"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.__init__",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.__init__",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.__init__"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents.remove",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.AttributeEvents.remove",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.AttributeEvents.remove"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.util.identity_key",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.util.identity_key",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.util.identity_key"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.instance_state",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.instance_state",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.instance_state"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperProperty",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MapperProperty",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.MapperProperty"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.selectable",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.selectable",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.selectable"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.transient_to_pending",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.transient_to_pending",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.transient_to_pending"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.deleted_to_persistent",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.deleted_to_persistent",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.deleted_to_persistent"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.make_transient",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.make_transient",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.make_transient"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MapperEvents.after_update",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MapperEvents.after_update",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.MapperEvents.after_update"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.was_deleted",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceState.was_deleted",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstanceState.was_deleted"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.identity_key_from_primary_key",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.identity_key_from_primary_key",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.identity_key_from_primary_key"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.dirty",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.dirty",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.dirty"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.object_mapper",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.object_mapper",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.object_mapper"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.isa",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.isa",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.isa"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.persistent_to_deleted",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.persistent_to_deleted",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.persistent_to_deleted"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.in_transaction",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.in_transaction",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.in_transaction"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.PropComparator",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.PropComparator",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.PropComparator"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.scalars",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.scalars",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.scalars"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceState",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstanceState"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.ClassManager",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.ClassManager",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.ClassManager"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.scalar",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.scalar",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.scalar"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionTransaction.parent",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionTransaction.parent",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.SessionTransaction.parent"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionTransaction",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionTransaction",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.SessionTransaction"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.QueryEvents.before_compile_update",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.QueryEvents.before_compile_update",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.QueryEvents.before_compile_update"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.as_declarative",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.as_declarative",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.as_declarative"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.ColumnProperty",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.ColumnProperty",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.ColumnProperty"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.prepare_instrumentation",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.collections.prepare_instrumentation",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.collections.prepare_instrumentation"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.mapped_table",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.mapped_table",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.mapped_table"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.commit",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.commit",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.commit"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.is_modified",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.is_modified",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.is_modified"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.close_all_sessions",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.close_all_sessions",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.close_all_sessions"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.make_transient_to_detached",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.make_transient_to_detached",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.make_transient_to_detached"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.session",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceState.session",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstanceState.session"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Mapper.iterate_properties",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Mapper.iterate_properties",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.Mapper.iterate_properties"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.get_transaction",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.get_transaction",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.get_transaction"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.close_all",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.close_all",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.close_all"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.merge",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.merge",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.merge"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.ColumnProperty.Comparator",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.ColumnProperty.Comparator",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.ColumnProperty.Comparator"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.execute",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.execute",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.execute"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.History",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.History",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.History"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEventToken",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.AttributeEventToken",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.AttributeEventToken"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.expunge_all",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.expunge_all",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.expunge_all"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.prepare",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.prepare",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.prepare"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.CompositeProperty",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.CompositeProperty",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.CompositeProperty"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeEvents.init_scalar",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.AttributeEvents.init_scalar",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.AttributeEvents.init_scalar"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.MappedAsDataclass",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.MappedAsDataclass",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.MappedAsDataclass"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.mapped_column",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.mapped_column",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.mapped_column"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.AttributeState.history",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.AttributeState.history",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.AttributeState.history"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.InstanceState.detached",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.InstanceState.detached",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.InstanceState.detached"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SynonymProperty",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SynonymProperty",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.SynonymProperty"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.attributes.flag_modified",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.attributes.flag_modified",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.attributes.flag_modified"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.clear_mappers",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.clear_mappers",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.clear_mappers"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.configure_mappers",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.configure_mappers",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.configure_mappers"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.delete",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.delete",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.delete"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.connection",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.connection",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.connection"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.InstrumentedDict",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.collections.InstrumentedDict",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.collections.InstrumentedDict"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.declarative_base",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.declarative_base",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.declarative_base"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Relationship",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Relationship",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/internals.html#sqlalchemy.orm.Relationship"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.sessionmaker.begin",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.sessionmaker.begin",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.sessionmaker.begin"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.collections.CollectionAdapter",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.collections.CollectionAdapter",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/collection_api.html#sqlalchemy.orm.collections.CollectionAdapter"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry.map_imperatively",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.registry.map_imperatively",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.registry.map_imperatively"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.declared_attr.cascading",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.declared_attr.cascading",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.declared_attr.cascading"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.composite",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.composite",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/composites.html#sqlalchemy.orm.composite"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.WriteOnlyCollection.insert",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.WriteOnlyCollection.insert",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/large_collections.html#sqlalchemy.orm.WriteOnlyCollection.insert"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.get",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.get",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.get"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.Session.deleted",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.Session.deleted",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/session_api.html#sqlalchemy.orm.Session.deleted"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.registry",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.registry",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/mapping_api.html#sqlalchemy.orm.registry"
+      ]
+    },
+    {
+      "api_name": "sqlalchemy.orm.SessionEvents.before_flush",
+      "matched_via": "fragment",
+      "matched_key": "sqlalchemy.orm.SessionEvents.before_flush",
+      "is_parent_url": false,
+      "urls": [
+        "https://docs.sqlalchemy.org/en/20/orm/events.html#sqlalchemy.orm.SessionEvents.before_flush"
+      ]
+    }
+  ]
+}

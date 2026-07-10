@@ -16,7 +16,7 @@ MapCoDoc **(Mapping Code onto Documentation)** is a comprehensive analysis pipel
 -   **SQLite Database Storage:** Persists analysis results in a queryable SQLite database with modules, members, imports, exports, inherited members, and documentation.
 -   **Web Documentation Processing:** Crawls web-based documentation, scrapes content, and extracts individual API docs using lexical + semantic search with class anchor propagation for accurate method extraction.
 -   **PDF Documentation Support:** Extracts API documentation from PDF files using hybrid search techniques with two-phase extraction (classes first, then scoped methods).
--   **LLM-Powered Structuring:** Uses GPT-4o to convert raw documentation into structured JSON schemas (optional, requires `OPENAI_API_KEY`).
+-   **LLM-Powered Structuring:** Uses `gpt-4.1-2025-04-14` (OpenAI Structured Outputs, strict JSON Schema) to convert raw documentation into structured JSON schemas (optional, requires `OPENAI_API_KEY`).
 -   **Configurable Analysis:** Fine-tune the analysis for speed or exhaustiveness with a simple feature flag system.
 -   **(Optional) Deep Graph Analysis:** Build a complete in-memory graph of all code relationships for advanced queries (requires `--enable-graph-analysis`).
 
@@ -25,8 +25,8 @@ MapCoDoc **(Mapping Code onto Documentation)** is a comprehensive analysis pipel
 First, ensure you have Python 3.9+ installed.
 
 ```bash
-# Clone the repository
-git clone https://github.com/yab-tad/MapCoDoc.git
+# Clone the repository (anonymized source browser for double-blind review)
+git clone https://anonymous.4open.science/r/MapCoDoc.git
 cd MapCoDoc
 
 # Create and activate a virtual environment (recommended)

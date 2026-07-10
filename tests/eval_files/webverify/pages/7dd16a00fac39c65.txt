@@ -1,0 +1,13 @@
+# numpy.char.chararray.isdigit
+
+method
+
+char.chararray.isdigit()[source](https://github.com/numpy/numpy/blob/v2.5.0/numpy/_core/defchararray.py#L880-L890)#(https://numpy.org/doc/stable/reference/generated/numpy.char.chararray.isdigit.html#numpy.char.chararray.isdigit)
+    Returns true for each element if all characters in the string are
+digits and there is at least one character, false otherwise.
+
+See also
+
+char.isdigit(https://numpy.org/doc/stable/reference/generated/numpy.char.isdigit.html#numpy.char.isdigit)
+
+On this page

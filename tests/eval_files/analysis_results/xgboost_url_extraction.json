@@ -1,0 +1,1509 @@
+{
+  "names_file": "C:/Users/Administrator/Documents/USask/Thesis/MapCoDoc/study one exp/RQ2/stratified sampling/samples/api_names/xgboost.txt",
+  "url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\xgboost\\v_3.2.0\\scraped_urls.txt",
+  "base_url": "https://xgboost.readthedocs.io/en/release_3.2.0/python/",
+  "sub_path": "python_api.html",
+  "total_api_names": 166,
+  "matched": 166,
+  "unmatched": 0,
+  "total_urls_in": 466,
+  "total_urls_out": 166,
+  "output_url_file": "doc_processor\\doc_artifacts\\crawled_URLs\\xgboost\\v_3.2.0\\samples\\scraped_urls.txt",
+  "unmatched_names": [],
+  "matches": [
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_data",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.get_data",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.get_data"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_group",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.get_group",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.get_group"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.apply",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.apply"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.num_col",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.num_col",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.num_col"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.save_config",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.save_config",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.save_config"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.feature_names",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.feature_names",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.feature_names"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_uint_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.get_uint_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_uint_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.save_model",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRegressor.save_model",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.save_model"
+      ]
+    },
+    {
+      "api_name": "xgboost.collective.get_world_size",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.collective.get_world_size",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.get_world_size"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.EvaluationMonitor.after_training",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.EvaluationMonitor.after_training",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.EvaluationMonitor.after_training"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier.set_coll_cfg",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifier.set_coll_cfg",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier.set_coll_cfg"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_data",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.get_data",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_data"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.num_col",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.num_col",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.num_col"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.TrainingCallback",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.ref",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.ref",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.ref"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.num_boosted_rounds",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.num_boosted_rounds",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.num_boosted_rounds"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.get_base_margin",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.get_base_margin",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.get_base_margin"
+      ]
+    },
+    {
+      "api_name": "xgboost.set_config",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.set_config",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.set_config"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.feature_importances_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.feature_importances_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.feature_importances_"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_float_info_npy2d",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.set_float_info_npy2d",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_float_info_npy2d"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.EarlyStopping",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.EarlyStopping",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.EarlyStopping"
+      ]
+    },
+    {
+      "api_name": "xgboost.collective.Config",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.collective.Config",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.Config"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.get_xgb_params",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.get_xgb_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.get_xgb_params"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.intercept_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.intercept_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.intercept_"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRankerModel",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.set_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.before_training",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.TrainingCallback.before_training",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.before_training"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.read",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifierModel.read",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifierModel.read"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.get_split_value_histogram",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.get_split_value_histogram",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.get_split_value_histogram"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.read",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRegressor.read",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRegressor.read"
+      ]
+    },
+    {
+      "api_name": "xgboost.DataIter.next",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DataIter.next",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.next"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.feature_names",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.feature_names",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.feature_names"
+      ]
+    },
+    {
+      "api_name": "xgboost.DataIter.get_callbacks",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DataIter.get_callbacks",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.get_callbacks"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.boost",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.boost",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.boost"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.apply",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRegressor.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.apply"
+      ]
+    },
+    {
+      "api_name": "xgboost.collective.init",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.collective.init",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.init"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.get_score",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.get_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.get_score"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_float_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.set_float_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_float_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRegressor",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRegressor",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_group",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.set_group",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_group"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.write",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRegressor.write",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRegressor.write"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.feature_types",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.feature_types",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.feature_types"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCheckPoint",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.TrainingCheckPoint",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCheckPoint"
+      ]
+    },
+    {
+      "api_name": "xgboost.tracker.RabitTracker",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.tracker.RabitTracker",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.tracker.RabitTracker"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.eval",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.eval",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.eval"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.get_booster",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRankerModel.get_booster",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.get_booster"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.copy",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.copy",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.copy"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressorModel.write",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRegressorModel.write",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRegressorModel.write"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_categories",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.get_categories",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.get_categories"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_weight",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.get_weight",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.get_weight"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.num_nonmissing",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.num_nonmissing",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.num_nonmissing"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.num_row",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.num_row",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.num_row"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_uint_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.get_uint_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.get_uint_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.num_col",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.num_col",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.num_col"
+      ]
+    },
+    {
+      "api_name": "xgboost.DataIter.reset",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DataIter.reset",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.reset"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.coef_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRegressor.coef_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.coef_"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.evals_result",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.evals_result",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.evals_result"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.feature_names_in_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.feature_names_in_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.feature_names_in_"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.set_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.set_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.set_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.predict",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.predict",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.predict"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.set_coll_cfg",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRankerModel.set_coll_cfg",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.set_coll_cfg"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.get_params",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.get_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.get_params"
+      ]
+    },
+    {
+      "api_name": "xgboost.collective.CommunicatorContext",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.collective.CommunicatorContext",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.CommunicatorContext"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.get_quantile_cut",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.get_quantile_cut",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.get_quantile_cut"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.data_split_mode",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.data_split_mode",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.data_split_mode"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_base_margin",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.get_base_margin",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_base_margin"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_quantile_cut",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.get_quantile_cut",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.get_quantile_cut"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.fit",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.fit",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.fit"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.slice",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.slice",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.slice"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.save_binary",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.save_binary",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.save_binary"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.apply",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.apply"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.slice",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.slice",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.slice"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.get_num_boosting_rounds",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.get_num_boosting_rounds",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.get_num_boosting_rounds"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.get_num_boosting_rounds",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRegressor.get_num_boosting_rounds",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.get_num_boosting_rounds"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.set_device",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRegressor.set_device",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRegressor.set_device"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.setParams",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRanker.setParams",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.setParams"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.get_params",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.get_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.get_params"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_quantile_cut",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.get_quantile_cut",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_quantile_cut"
+      ]
+    },
+    {
+      "api_name": "xgboost.build_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.build_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.build_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.load_model",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.load_model",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.load_model"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRegressor.best_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRegressor.best_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRegressor.best_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.n_features_in_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.n_features_in_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.n_features_in_"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.before_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.TrainingCallback.before_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.before_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.load_model",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.load_model",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.load_model"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.apply",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.apply"
+      ]
+    },
+    {
+      "api_name": "xgboost.DataIter",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DataIter",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.get_float_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.get_float_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.get_float_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.get_xgb_params",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.get_xgb_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.get_xgb_params"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_label",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.set_label",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_label"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.set_coll_cfg",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRanker.set_coll_cfg",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.set_coll_cfg"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.read",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRanker.read",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.read"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.n_features_in_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.n_features_in_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.n_features_in_"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.set_params",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.set_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.set_params"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.EvaluationMonitor.after_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.EvaluationMonitor.after_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.EvaluationMonitor.after_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.feature_importances_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.feature_importances_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.feature_importances_"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.best_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.best_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.best_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.data_split_mode",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.data_split_mode",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.data_split_mode"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.num_row",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.num_row",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.num_row"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_float_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.set_float_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_float_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.after_training",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.TrainingCallback.after_training",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.after_training"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.LearningRateScheduler",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.LearningRateScheduler",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.LearningRateScheduler"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCheckPoint.before_training",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.TrainingCheckPoint.before_training",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCheckPoint.before_training"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.best_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.best_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.best_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.set_base_margin",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.set_base_margin",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.set_base_margin"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.get_feature_importances",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRankerModel.get_feature_importances",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.get_feature_importances"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_group",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.get_group",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_group"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.num_row",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.num_row",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.num_row"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.set_attr",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.set_attr",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.set_attr"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.set_device",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifierModel.set_device",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifierModel.set_device"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier.write",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifier.write",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier.write"
+      ]
+    },
+    {
+      "api_name": "xgboost.collective.finalize",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.collective.finalize",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.collective.finalize"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker.set_device",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRanker.set_device",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker.set_device"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.get_booster",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.get_booster",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.get_booster"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.get_xgb_params",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.get_xgb_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.get_xgb_params"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressorModel.read",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRegressorModel.read",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRegressorModel.read"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.__getitem__",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.__getitem__",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.__getitem__"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.intercept_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.intercept_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.intercept_"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.coef_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.coef_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.coef_"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_label",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.get_label",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_label"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.best_score",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.best_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.best_score"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.get_booster",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.get_booster",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.get_booster"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressor.setParams",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRegressor.setParams",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRegressor.setParams"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.save_model",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.save_model",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.save_model"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix.get_weight",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix.get_weight",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix.get_weight"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRanker",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRanker",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRanker"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.apply",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.apply",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.apply"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.set_device",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRankerModel.set_device",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.set_device"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.ref",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.ref",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.ref"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.evals_result",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.evals_result",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.evals_result"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBClassifier.n_features_in_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBClassifier.n_features_in_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBClassifier.n_features_in_"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.get_label",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.get_label",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.get_label"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.set_param",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.set_param",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.set_param"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.best_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.best_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.best_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.callback.TrainingCallback.after_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.callback.TrainingCallback.after_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.callback.TrainingCallback.after_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.best_iteration",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.best_iteration",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.best_iteration"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRegressorModel.set_coll_cfg",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRegressorModel.set_coll_cfg",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRegressorModel.set_coll_cfg"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker.score",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker.score",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker.score"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.set_coll_cfg",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifierModel.set_coll_cfg",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifierModel.set_coll_cfg"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.feature_importances_",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.feature_importances_",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.feature_importances_"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.get_xgb_params",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.get_xgb_params",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.get_xgb_params"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifier.set_device",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifier.set_device",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifier.set_device"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.num_nonmissing",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.num_nonmissing",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.num_nonmissing"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBRankerModel.write",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBRankerModel.write",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBRankerModel.write"
+      ]
+    },
+    {
+      "api_name": "xgboost.DataIter.proxy",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DataIter.proxy",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DataIter.proxy"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.set_weight",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.set_weight",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.set_weight"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.eval_set",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.eval_set",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.eval_set"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster"
+      ]
+    },
+    {
+      "api_name": "xgboost.DMatrix",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.DMatrix",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.DMatrix"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.best_score",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.best_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.best_score"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRanker",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRanker",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRanker"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.get_num_boosting_rounds",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.get_num_boosting_rounds",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.get_num_boosting_rounds"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.feature_types",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.feature_types",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.feature_types"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFClassifier.fit",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFClassifier.fit",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFClassifier.fit"
+      ]
+    },
+    {
+      "api_name": "xgboost.ExtMemQuantileDMatrix.set_uint_info",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.ExtMemQuantileDMatrix.set_uint_info",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.ExtMemQuantileDMatrix.set_uint_info"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.load_config",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.load_config",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.load_config"
+      ]
+    },
+    {
+      "api_name": "xgboost.XGBRFRegressor.best_score",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.XGBRFRegressor.best_score",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.XGBRFRegressor.best_score"
+      ]
+    },
+    {
+      "api_name": "xgboost.QuantileDMatrix.data_split_mode",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.QuantileDMatrix.data_split_mode",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.QuantileDMatrix.data_split_mode"
+      ]
+    },
+    {
+      "api_name": "xgboost.spark.SparkXGBClassifierModel.get_booster",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.spark.SparkXGBClassifierModel.get_booster",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.spark.SparkXGBClassifierModel.get_booster"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.trees_to_dataframe",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.trees_to_dataframe",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.trees_to_dataframe"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.dump_model",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.dump_model",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.dump_model"
+      ]
+    },
+    {
+      "api_name": "xgboost.Booster.reset",
+      "matched_via": "fragment",
+      "matched_key": "xgboost.Booster.reset",
+      "is_parent_url": false,
+      "urls": [
+        "https://xgboost.readthedocs.io/en/release_3.2.0/python/python_api.html#xgboost.Booster.reset"
+      ]
+    }
+  ]
+}

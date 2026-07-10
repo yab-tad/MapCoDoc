@@ -63,7 +63,7 @@ This document provides a high-level view of how MapCoDoc ingests source code and
     *   **Step 4: URL Preprocessing** (Optional, if LLM enabled)
         *   Replaces URLs with placeholders to prevent LLM hallucination.
     *   **Step 5: Structured Extraction** (Optional, if LLM enabled)
-        *   `ConcurrentDocExtractor` uses GPT-4o to structure raw documentation into JSON schema.
+        *   `ConcurrentDocExtractor` uses `gpt-4.1-2025-04-14` to structure raw documentation into JSON schema.
     *   **Step 6: URL Postprocessing** (Optional, if LLM enabled)
         *   Restores URLs from placeholders in structured output.
     *   **Step 7: Database Update**

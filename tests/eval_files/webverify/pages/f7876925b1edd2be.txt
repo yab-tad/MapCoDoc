@@ -1,0 +1,27 @@
+Rate this Page
+    ★
+★
+★
+★
+★
+
+Hidden breadcrumb schema for SEO only 
+
+# torch.Tensor.split
+
+Tensor.split(split_size, dim=0)[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/_tensor.py#L1015)#(https://docs.pytorch.org/docs/2.9/generated/torch.Tensor.split.html#torch.Tensor.split)
+    See torch.split()(https://docs.pytorch.org/docs/2.9/generated/torch.split.html#torch.split)
+
+On this page
+
+[Show Source](https://docs.pytorch.org/docs/2.9/_sources/generated/torch.Tensor.split.rst.txt)
+
+PyTorch Libraries
+
+- torchao(https://docs.pytorch.org/ao)
+- torchrec(https://docs.pytorch.org/torchrec)
+- torchft(https://docs.pytorch.org/torchft)
+- TorchCodec(https://docs.pytorch.org/torchcodec)
+- torchvision(https://docs.pytorch.org/vision)
+- ExecuTorch(https://docs.pytorch.org/executorch)
+- [PyTorch on XLA Devices](https://docs.pytorch.org/xla)

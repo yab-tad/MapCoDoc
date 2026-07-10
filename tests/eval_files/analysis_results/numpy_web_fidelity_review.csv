@@ -1,0 +1,245 @@
+api_name,member_type,fidelity_group,preprocessed_accurate,structured_vs_preprocessed,structured_vs_original_db,structured_vs_original_web,correct_doc,source_of_truth,scope,root_cause_layer,comment,verify_tier,verify_reason,sample_pick,human_verified,human_note,correct_doc_auto
+numpy.ma.notmasked_contiguous,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Find contiguous unmasked data in a masked array along the given axis.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.max,function,clean,yes,yes,no_groundtruth,yes,yes,web,partial(0.80),none,"web-confirmed correct vs original: ""Return the maximum along a given axis.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.triu,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.hermeval2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Evaluate a 2-D HermiteE series at points (x, y).""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.bincount,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.polymulx,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Multiply a polynomial by x.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ix_,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.trim,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.convert,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.flipud,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.chararray.rjust,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.domain,method,clean,yes,yes,no_groundtruth,no,yes,manual,n/a,none,manual-confirmed: class attribute (default domain value); no prose doc in source,must_verify,ai_adjudicated,all,partial,"Human-verified: doc correctly traced (preprocessed accurate) BUT structured doc is INCOMPLETE - it only records that it's an attribute and misses some information. Signature-less class attributes sit awkwardly in the structured schema; retrieval is fine, structured extraction is incomplete.",review
+numpy.trapezoid,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.iscomplexobj,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.array,function,clean,no,yes,no,yes,yes,web,full,none,"web-confirmed correct vs original: ""An array class with possibly masked values.""",must_verify,conflict,all,yes,Human-verified accurate. Both preprocessed and structured docs accurate.,yes
+numpy.polynomial.polynomial.Polynomial.cast,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.diagflat,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.cutdeg,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.quantile,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.histogram,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.chebinterpolate,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Interpolate a function at the Chebyshev points of the first kind.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.isspace,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns true for each element if there are only whitespace""",confidence_sample,yes_web,no,yes,,yes
+numpy.nanargmax,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.make_mask,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Create a boolean mask from an array.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.greater,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Unlike numpy.greater(url_placeholder_2), this comparison is performed by first""",confidence_sample,yes_web,no,yes,,yes
+numpy.lib.format.read_array_header_2_0,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Read an array header from a filelike object using the 2.0 file format""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite.Hermite.deriv,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.basis,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.chebgrid3d,function,clean,yes,yes,yes,yes,yes,web,partial(0.25),none,"web-confirmed correct vs original: ""Evaluate a 3-D Chebyshev series on the Cartesian product of x, y, and z.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.char.chararray.startswith,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns a boolean array which is True where the string element""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.Legendre.degree,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.compress_nd,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Suppress slices from multiple dimensions which contain masked values.""",confidence_sample,yes_web,yes,yes,,yes
+numpy.ma.corrcoef,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return Pearson product-moment correlation coefficients.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.integ,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.legendre.legval3d,function,clean,yes,yes,yes,yes,yes,web,partial(0.25),none,"web-confirmed correct vs original: ""Evaluate a 3-D Legendre series at points (x, y, z).""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.savez_compressed,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.append,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+numpy.polynomial.polynomial.Polynomial.integ,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite.Hermite.roots,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the roots of the series polynomial.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.__call__,method,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Call self as a function.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.fromflex,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Build a masked array from a suitable flexible-type array.""",confidence_sample,yes_web,no,yes,,yes
+numpy.poly1d.coeffs,method,clean,no,yes,no_groundtruth,yes,yes,web,missing_params,none,"web-confirmed correct vs original: ""The polynomial coefficients""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.round_,function,clean,yes,yes,yes,yes,yes,web,partial(0.67),none,"web-confirmed correct vs original: ""Return a copy of a, rounded to 'decimals' places.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.ma.masked_where,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Mask an array where a condition is met.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.hermemul,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Multiply one Hermite series by another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.hermeroots,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Compute the roots of a HermiteE series.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite.hermval,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Evaluate a Hermite series at points x.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite.hermgrid3d,function,clean,yes,yes,yes,yes,yes,web,partial(0.25),none,"web-confirmed correct vs original: ""Evaluate a 3-D Hermite series on the Cartesian product of x, y, and z.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.vander,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.masked_inside,function,clean,yes,yes,yes,yes,yes,web,missing_params,none,"web-confirmed correct vs original: ""Mask an array inside a given interval.""",confidence_sample,yes_web,no,yes,,yes
+numpy.emath.sqrt,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Compute the square root of x.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.masked_invalid,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Mask an array where invalid values occur (NaNs or infs).""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.polynomial.polygrid2d,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Evaluate a 2-D polynomial on the Cartesian product of x and y.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.laguerre.lagfromroots,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Generate a Laguerre series with given roots.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.upper,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.degree,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.nansum,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.masked_outside,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Mask an array outside a given interval.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.chebyshev.poly2cheb,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Convert a polynomial to a Chebyshev series.""",confidence_sample,yes_web,yes,yes,,yes
+numpy.ma.union1d,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Union of two arrays.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.ljust,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return an array with the elements of a left-justified in a""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.expandtabs,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return a copy of each string element where all tab characters are""",confidence_sample,yes_web,no,yes,,yes
+numpy.sort_complex,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.has_samecoef,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.nanargmin,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.apply_over_axes,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite.Hermite.truncate,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.savez,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.exceptions.TooHardError,class,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""max_work was exceeded.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.find,function,clean,yes,yes,yes,yes,yes,web,partial(0.50),none,"web-confirmed correct vs original: ""For each element, return the lowest index in the string where""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.ma.masked_values,function,clean,yes,yes,yes,yes,yes,web,partial(0.67),none,"web-confirmed correct vs original: ""Mask using floating point equality.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.char.chararray.lstrip,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""For each element in self, return a copy with the leading characters""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.islower,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns true for each element if all cased characters in the""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.encode,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Calls str.encode element-wise.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.ediff1d,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Compute the differences between consecutive elements of an array.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.polynomial.polypow,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Raise a polynomial to a power.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.masked_object,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Mask the array x where the data are exactly equal to value.""",confidence_sample,yes_web,no,yes,,yes
+numpy.i0,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.zfill,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite.Hermite,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.lib.introspect.opt_func_info,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns a dictionary containing the currently supported CPU dispatched""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.basis,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.flip,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.vsplit,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+numpy.polyint,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.lagvander,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Pseudo-Vandermonde matrix of given degree.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.argsort,method,clean,no,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns the indices that would sort this array.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.chebyshev.chebsub,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Subtract one Chebyshev series from another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.has_sametype,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.polysub,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Subtract one polynomial from another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.sinc,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite.hermval2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Evaluate a 2-D Hermite series at points (x, y).""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.legendre.legline,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Legendre series whose graph is a straight line.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polysub,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.chebmulx,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Multiply a Chebyshev series by x.""",confidence_sample,yes_web,no,yes,,yes
+numpy.apply_along_axis,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite.hermvander,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Pseudo-Vandermonde matrix of given degree.""",confidence_sample,yes_web,no,yes,,yes
+numpy.exceptions.DTypePromotionError,class,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Multiple DTypes could not be converted to a common one.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.polynomial.Polynomial.trim,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.Polynomial.truncate,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.real,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.split,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""For each element in a, return a list of the words in the""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.cutdeg,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.roots,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the roots of the series polynomial.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.hermeweight,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Weight function of the Hermite_e polynomials.""",confidence_sample,yes_web,no,yes,,yes
+numpy.genfromtxt,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.polyval2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Evaluate a 2-D polynomial at points (x, y).""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.polynomial.Polynomial.domain,method,clean,yes,yes,no_groundtruth,yes,yes,manual,n/a,none,manual-confirmed: class attribute (default domain value); no prose doc in source,must_verify,ai_adjudicated,all,yes,"Human-verified accurate. Same as Chebyshev.domain: correct extraction; class ATTRIBUTE with no signature in the structured doc (schema limitation), not an extraction error.",review
+numpy.hsplit,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.hermevander2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Pseudo-Vandermonde matrix of given degrees.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.mapparms,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.legendre.legpow,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Raise a Legendre series to a power.""",confidence_sample,yes_web,no,yes,,yes
+numpy.lib.format.read_array_header_1_0,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Read an array header from a filelike object using the 1.0 file format""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.Legendre.cutdeg,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.fromroots,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.Polynomial.has_samecoef,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.broadcast_arrays,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.lagcompanion,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the companion matrix of c.""",confidence_sample,yes_web,no,yes,,yes
+numpy.packbits,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.isneginf,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.nancumprod,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.getmask,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the mask of a masked array, or nomask.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.polynomial.Polynomial.identity,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.mod,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""(interpolation), element-wise for a pair of array_likes of str""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite.Hermite.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.lib.format.open_memmap,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Open a .npy file as a memory-mapped array.""",confidence_sample,yes_web,no,yes,,yes
+numpy.load,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.hermeval3d,function,clean,yes,yes,yes,yes,yes,web,partial(0.25),none,"web-confirmed correct vs original: ""Evaluate a 3-D Hermite_e series at points (x, y, z).""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.char.chararray.isalpha,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns true for each element if all characters in the string""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.translate,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""For each element in self, return a copy of the string where""",confidence_sample,yes_web,no,yes,,yes
+numpy.record,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.chebline,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Chebyshev series whose graph is a straight line.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.leggrid2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Evaluate a 2-D Legendre series on the Cartesian product of x and y.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.polynomial.Polynomial.roots,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the roots of the series polynomial.""",confidence_sample,yes_web,no,yes,,yes
+numpy.lib.format.read_magic,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Read the magic string to get the version of the file format.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.cov,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Estimate the covariance matrix.""",confidence_sample,yes_web,no,yes,,yes
+numpy.diag,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.imag,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.legendre.legcompanion,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the scaled companion matrix of c.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.inner,function,issues,no,yes,no,yes,yes,web,full,none,"web-confirmed correct vs original: ""Inner product of two arrays.""",must_verify,conflict,all,yes,Human-verified accurate. Both preprocessed and structured docs accurate.,yes
+numpy.polynomial.hermite.Hermite.fromroots,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.chebfit,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Least squares fit of Chebyshev series to data.""",confidence_sample,yes_web,no,yes,,yes
+numpy.poly1d.order,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.polyfromroots,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Generate a monic polynomial with given roots.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.mask_or,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Combine two masks with the logical_or operator.""",confidence_sample,yes_web,no,yes,,yes
+numpy.lib.format.isfileobj,function,clean,yes,yes,no_groundtruth,no_ref,yes,manual,full,none,manual-confirmed: no docstring in source (tiny internal util); nothing to verify,must_verify,ai_adjudicated,all,yes,Human-verified accurate. Both preprocessed and structured docs accurate.,review
+numpy.polynomial.laguerre.Laguerre.cast,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.left_shift,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Shift the bits of an integer to the left.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.laguerre.lagfit,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Least squares fit of Laguerre series to data.""",confidence_sample,yes_web,no,yes,,yes
+numpy.lib.stride_tricks.sliding_window_view,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Create a sliding window view into the array with the given window shape.""",confidence_sample,yes_web,no,yes,,yes
+numpy.savetxt,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.chararray.split,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""For each element in self, return a list of the words in the""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.laguerre.lagadd,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Add one Laguerre series to another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.resize,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return a new masked array with the specified size and shape.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.capitalize,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return a copy of a with only the first character of each element""",confidence_sample,yes_web,yes,yes,,yes
+numpy.polynomial.polynomial.Polynomial.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.eye,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.replace,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""For each element in a, return a copy of the string with""",confidence_sample,yes_web,no,yes,,yes
+numpy.exceptions.VisibleDeprecationWarning,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.place,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.legendre.leggrid3d,function,clean,yes,yes,yes,yes,yes,web,partial(0.25),none,"web-confirmed correct vs original: ""Evaluate a 3-D Legendre series on the Cartesian product of x, y, and z.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.polynomial.Polynomial.linspace,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ndenumerate,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+numpy.polynomial.polynomial.polyvander2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Pseudo-Vandermonde matrix of given degrees.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.ma.apply_over_axes,function,clean,yes,yes,no_groundtruth,yes,yes,web,full,none,"web-confirmed correct vs original: ""Apply a function repeatedly over multiple axes.""",confidence_sample,yes_web,no,yes,,yes
+numpy.lib.Arrayterator,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.split,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.rec.format_parser,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.mask_indices,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.notmasked_edges,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Find the indices of the first and last unmasked values along an axis.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.legder,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Differentiate a Legendre series.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.isupper,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns true for each element if all cased characters in the""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.Legendre.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.chararray.isdigit,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns true for each element if all characters in the string are""",confidence_sample,yes_web,no,yes,,yes
+numpy.poly1d,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.legendre.Legendre,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.tril_indices,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.polyder,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Differentiate a polynomial.""",confidence_sample,yes_web,no,yes,,yes
+numpy.unique_inverse,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.chebvander2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Pseudo-Vandermonde matrix of given degrees.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.legendre.Legendre.truncate,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.lagline,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Laguerre series whose graph is a straight line.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.cast,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.fix,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.chebgrid2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Evaluate a 2-D Chebyshev series on the Cartesian product of x and y.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.hermite.hermsub,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Subtract one Hermite series from another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.setdiff1d,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Set difference of 1D arrays with unique elements.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.chebyshev.chebpts1,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Chebyshev points of the first kind.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.chebyshev.chebdiv,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Divide one Chebyshev series by another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.laguerre.lagval3d,function,clean,yes,yes,yes,yes,yes,web,partial(0.25),none,"web-confirmed correct vs original: ""Evaluate a 3-D Laguerre series at points (x, y, z).""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.loadtxt,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.masked_less_equal,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Mask an array where less than or equal to a given value.""",confidence_sample,yes_web,no,yes,,yes
+numpy.broadcast_shapes,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.deriv,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.rec.find_duplicate,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Find duplication in a list, return a list of duplicated elements""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.Legendre.has_samecoef,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.triu_indices_from,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.char.rjust,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return an array with the elements of a right-justified in a""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.integ,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.nanmean,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.has_samewindow,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.lagpow,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Raise a Laguerre series to a power.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.hermeadd,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Add one Hermite series to another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.decode,method,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Calls bytes.decode element-wise.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.getmaskarray,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return the mask of a masked array, or full boolean array of False.""",confidence_sample,yes_web,no,yes,,yes
+numpy.percentile,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.fromroots,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.masked_greater,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Mask an array where greater than a given value.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.hermite_e.hermevander3d,function,clean,yes,yes,yes,yes,yes,web,partial(0.25),none,"web-confirmed correct vs original: ""Pseudo-Vandermonde matrix of given degrees.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.hermite.hermvander2d,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Pseudo-Vandermonde matrix of given degrees.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.rec.fromstring,function,clean,yes,yes,yes,yes,yes,web,partial(0.44),none,"web-confirmed correct vs original: ""Create a record array from binary data""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.polynomial.Polynomial.degree,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.trim_zeros,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.polynomial.polyline,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Returns an array representing a linear polynomial.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.legsub,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Subtract one Legendre series from another.""",confidence_sample,yes_web,no,yes,,yes
+numpy.char.chararray.rsplit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.convolve,function,clean,yes,yes,yes,yes,yes,web,partial(0.50),none,"web-confirmed correct vs original: ""Returns the discrete, linear convolution of two one-dimensional sequences.""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.ma.compress_rowcols,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Suppress the rows and/or columns of a 2-D array that contain""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.asarray,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Convert the input to a masked array of the given data-type.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.Legendre.copy,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+numpy.emath.log10,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Compute the logarithm base 10 of x.""",confidence_sample,yes_web,no,yes,,yes
+numpy.ma.putmask,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Changes elements of an array based on conditional and input values.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.polynomial.Polynomial.mapparms,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.poly2lag,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Convert a polynomial to a Laguerre series.""",confidence_sample,yes_web,no,yes,,yes
+numpy.corrcoef,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.emath.power,function,clean,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Return x to the power p, (x**p).""",confidence_sample,yes_web,no,yes,,yes
+numpy.unwrap,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.meshgrid,function,clean,yes,yes,yes,,yes,db,partial(0.75),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.integ,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.truncate,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.domain,method,clean,yes,yes,no_groundtruth,yes,yes,manual,n/a,none,manual-confirmed: class attribute (default domain value); no prose doc in source,must_verify,ai_adjudicated,all,yes,"Human-verified accurate. Both preprocessed and structured correct. Member is a class ATTRIBUTE; the structured doc finds no signature for it so the extraction looks out of place - a structured-doc SCHEMA limitation for signature-less class attributes, not an extraction/retrieval error.",review
+numpy.polynomial.laguerre.Laguerre.copy,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.ma.allequal,function,clean,yes,yes,yes,yes,yes,web,partial(0.33),none,"web-confirmed correct vs original: ""Return True if all entries of a and b are equal, using""",confidence_sample,partial_scope,yes,yes,,yes
+numpy.polyval,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.nanmax,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.laguerre.Laguerre.fit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite_e.HermiteE.copy,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.chebyshev.Chebyshev.has_samedomain,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.polynomial.hermite.hermgrid2d,function,issues,yes,yes,yes,yes,yes,web,full,none,"web-confirmed correct vs original: ""Evaluate a 2-D Hermite series on the Cartesian product of x and y.""",confidence_sample,yes_web,no,yes,,yes
+numpy.polynomial.legendre.Legendre.deriv,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.broadcast_to,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.unique_counts,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+numpy.median,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes

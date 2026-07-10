@@ -1,0 +1,28 @@
+# pandas.HDFStore.groups
+
+HDFStore.groups()[source](https://github.com/pandas-dev/pandas/blob/main/pandas/io/pytables.py#L1486-L1523)#(https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.HDFStore.groups.html#pandas.HDFStore.groups)
+    Return a list of all the top-level nodes.
+
+Each node returned is not a pandas storage object.
+
+Returns:
+    list
+    List of objects.
+
+Examples
+
+```
+>>> df = pd.DataFrame([[1, 2], [3, 4]], columns=['A', 'B'])
+>>> store = pd.HDFStore("store.h5", 'w')  
+>>> store.put('data', df)  
+>>> print(store.groups())  
+>>> store.close()  
+[/data (Group) ''
+  children := ['axis0' (Array), 'axis1' (Array), 'block0_values' (Array),
+  'block0_items' (Array)]]
+
+```
+
+On this page
+
+[Show Source](https://pandas.pydata.org/pandas-docs/version/2.3.3/_sources/reference/api/pandas.HDFStore.groups.rst.txt)

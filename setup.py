@@ -42,7 +42,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yab-tad/MapCoDoc",
-    license="", #"MIT",
+    license="MIT",
     
     packages=find_packages(
         where='.', 

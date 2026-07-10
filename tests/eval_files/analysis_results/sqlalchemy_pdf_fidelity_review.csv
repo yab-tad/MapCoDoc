@@ -1,0 +1,159 @@
+api_name,member_type,fidelity_group,preprocessed_accurate,structured_vs_preprocessed,structured_vs_original_db,structured_vs_original_web,correct_doc,source_of_truth,scope,root_cause_layer,comment,verify_tier,verify_reason,sample_pick,human_verified,human_note,correct_doc_auto
+sqlalchemy.orm.Mapper.all_orm_descriptors,method,clean,yes,yes,yes,yes,yes,manual,full,none,manual-confirmed: thin: only signature captured; missing 'A namespace of all InspectionAttr attributes...',must_verify,ai_adjudicated,all,yes,Human-verified accurate (both). Structured tends to place all member_description text under purpose (tolerable); the signature holds only the attribute short-name instead of 'attribute <api_name>'. Correct doc-link/retrieval; fidelity hit on the signature field.,no
+sqlalchemy.orm.collections.collection,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.add_mapped_attribute,function,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.rollback,method,clean,no,yes,no,no,no,web,n/a,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says ""Rollback the current transaction in progress.""",mode_sample,pdf_no:contamination,yes,no,Human-verified: preprocessed inaccurate; consequently the structured doc is also incorrect.,no
+sqlalchemy.orm.registry.update_type_annotation_map,method,clean,no,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.dynamic_loader,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.attributes.set_committed_value,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.reconstructor,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.attributes.del_attribute,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.is_sibling,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.attributes.get_history,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.common_parent,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.self_and_descendants,method,issues,yes,partial,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.UOWTransaction,class,clean,no,yes,no_groundtruth,yes,yes,manual,n/a,none,"manual-confirmed: internal class, no docstring in source; nothing substantive to verify",must_verify,ai_adjudicated,all,yes,Human-verified accurate (both). Structured ignored table-summary attributes and documented the standalone attribute docs (no duplicates).,review
+sqlalchemy.orm.KeyFuncDict,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.loaded_as_persistent,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.merge_result,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.MappedClassProtocol,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.WriteOnlyCollection.remove,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.declared_attr.directive,method,clean,yes,yes,no_groundtruth,yes,yes,manual,n/a,none,manual-confirmed: structured matches source 'Mark a declared_attr as decorating a Declarative directive',must_verify,ai_adjudicated,all,yes,,yes
+sqlalchemy.orm.backref,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.column_keyed_dict,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.util.object_state,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.polymorphic_union,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.after_rollback,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.foreign,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.column_attrs,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceState.attrs,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.CompositeProperty.Comparator,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.DeclarativeBase,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.expire,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceState.identity,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.relationships,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.identity_key_from_row,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sqlalchemy.orm.DynamicMapped,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.before_commit,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.synonyms,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.after_transaction_create,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.expire_all,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.attributes.init_collection,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.instrumentation.is_instrumented,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.composites,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.after_flush,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.is_active,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.MapperEvents.before_configured,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.WriteOnlyMapped,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.registry.mapped_as_dataclass,method,clean,yes,yes,yes,,yes,db,partial(0.89),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sqlalchemy.orm.Session.enable_relationship_loading,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceEvents.refresh_flush,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.merge_frozen_result,function,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.util.ScopedRegistry,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.MappedColumn,class,issues,no,partial,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InspectionAttr,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.keyfunc_mapping,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.no_autoflush,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sqlalchemy.orm.registry.__init__,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.bulk_update_mappings,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.RelationshipProperty.Comparator,class,unevaluated,no,empty,no,no_ref,no,db,n/a,retrieval,"web-confirmed wrong vs original (retrieval/wrong-member): original says """"",mode_sample,pdf_no:empty,yes,no,Human-verified: preprocessed inaccurate; structured not extracted.,no
+sqlalchemy.orm.attribute_keyed_dict,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.declarative_mixin,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstrumentedAttribute,class,clean,no,yes,no,no_ref,yes,db,n/a,none,"web-confirmed wrong vs original (retrieval/wrong-member): original says """"",mode_sample,pdf_no:contamination,yes,yes,Human-verified accurate (both preprocessed and structured).,no
+sqlalchemy.orm.ORMExecuteState.invoke_statement,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.CascadeOptions,class,clean,no,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.attributes.get_attribute,function,issues,yes,partial,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.MappedSQLExpression,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.add_all,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.pending_to_persistent,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.get_property_by_column,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceState.transient,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.close,method,clean,yes,yes,yes,yes,no,manual,full,retrieval,"manual-confirmed: right member but purpose captured a usage note, not the authoritative summary 'Close out the transactional resources...'",must_verify,ai_adjudicated,all,no,,no
+sqlalchemy.orm.sessionmaker,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.AttributeEvents.set,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Composite,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceEvents.load,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.LoaderCallableStatus,class,issues,yes,yes,no_groundtruth,yes,yes,manual,n/a,none,"manual-confirmed: Enum, no docstring in source; nothing to verify",must_verify,ai_adjudicated,all,yes,Human-verified accurate (both). Signature 'Name()' instead of 'class <api_name>' (api in purpose). Structured ignored the table-summary attributes and documented the standalone attribute docs (no duplicates).,review
+sqlalchemy.orm.DeclarativeBaseNoMeta,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.MapperEvents.mapper_configured,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.NotExtension,class,issues,yes,yes,no_groundtruth,no_ref,yes,manual,n/a,none,manual-confirmed: no docstring in source (only base-class line); structured faithfully minimal - nothing to verify,must_verify,ai_adjudicated,all,yes,"Human-verified accurate (both). Signature rendered as 'Name()' instead of 'class <api_name>', with the intended signature text placed in member_description.purpose. Two attribute descriptions (table + standalone) both documented under attributes.",review
+sqlalchemy.orm.SessionEvents.pending_to_transient,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.collections.InstrumentedList,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.QueryContext,class,clean,no,yes,no_groundtruth,no_ref,yes,manual,n/a,none,manual-confirmed: wrong-member: structured holds InstrumentedAttribute's descriptor doc; QueryContext has no own description in source,must_verify,ai_adjudicated,all,partial,"Human-verified: preprocessed accurate; structured only extracted the signature (other fields empty). Doc-link/signature recovered correctly, but the structured doc is incomplete so fidelity takes a hit.",no
+sqlalchemy.orm.mapped_as_dataclass,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.class_mapper,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sqlalchemy.util.ThreadLocalRegistry,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sqlalchemy.orm.SessionEvents.do_orm_execute,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.remote,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.AttributeEvents,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.sessionmaker.configure,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.__init__,method,clean,yes,yes,yes,,yes,db,partial(0.93),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sqlalchemy.orm.AttributeEvents.remove,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.util.identity_key,function,issues,yes,yes,yes,,yes,db,partial(0.80),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sqlalchemy.orm.attributes.instance_state,function,clean,no,yes,no_groundtruth,yes,yes,web,missing_params,none,"web-confirmed correct vs original: ""Return the InstanceState for a given""",confidence_sample,yes_web,yes,yes,,yes
+sqlalchemy.orm.MapperProperty,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.selectable,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.transient_to_pending,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.deleted_to_persistent,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.make_transient,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.MapperEvents.after_update,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceState.was_deleted,method,clean,no,yes,no,no,no,manual,n/a,retrieval,manual-confirmed: signature-only; missing description,must_verify,ai_adjudicated,all,no,,no
+sqlalchemy.orm.Mapper.identity_key_from_primary_key,method,issues,yes,yes,yes,,yes,db,partial(0.50),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sqlalchemy.orm.Session.dirty,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.object_mapper,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.isa,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.persistent_to_deleted,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.in_transaction,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.PropComparator,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.scalars,method,issues,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceState,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.ClassManager,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Tracks state information at the class level.""",mode_sample,pdf_no:empty,yes,no,,no
+sqlalchemy.orm.Session.scalar,method,clean,yes,yes,yes,,yes,db,missing_params,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionTransaction.parent,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionTransaction,class,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.QueryEvents.before_compile_update,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.as_declarative,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.ColumnProperty,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.collections.prepare_instrumentation,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.mapped_table,method,clean,yes,yes,no_groundtruth,yes,yes,web,n/a,none,"web-confirmed correct vs original: ""Deprecated since version 1.3: Use .persist_selectable""",confidence_sample,yes_web,yes,yes,,yes
+sqlalchemy.orm.Session.commit,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.is_modified,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.close_all_sessions,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.make_transient_to_detached,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceState.session,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Mapper.iterate_properties,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.get_transaction,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.close_all,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.merge,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.ColumnProperty.Comparator,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.execute,method,clean,yes,yes,yes,,yes,db,partial(0.67),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sqlalchemy.orm.attributes.History,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.AttributeEventToken,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,yes,yes,,yes
+sqlalchemy.orm.Session.expunge_all,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.prepare,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.CompositeProperty,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Defines a ""composite"" mapped attribute, representing a collection""",mode_sample,pdf_no:empty,yes,no,,no
+sqlalchemy.orm.AttributeEvents.init_scalar,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.MappedAsDataclass,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.mapped_column,function,clean,yes,yes,yes,,yes,db,partial(0.54),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sqlalchemy.orm.AttributeState.history,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.InstanceState.detached,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SynonymProperty,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.attributes.flag_modified,function,issues,yes,partial,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.clear_mappers,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.configure_mappers,function,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.delete,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.connection,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.collections.InstrumentedDict,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.declarative_base,function,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Relationship,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.sessionmaker.begin,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.collections.CollectionAdapter,class,unevaluated,no_doc,empty,no,empty,no,web,n/a,retrieval,"web-confirmed wrong: empty/retrieval failure; original: ""Bridges between the ORM and arbitrary Python collections.""",mode_sample,pdf_no:empty,yes,no,,no
+sqlalchemy.orm.registry.map_imperatively,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.declared_attr.cascading,method,clean,yes,yes,no_groundtruth,yes,yes,manual,n/a,none,manual-confirmed: structured matches source 'Mark a declared_attr as cascading',must_verify,ai_adjudicated,all,yes,,yes
+sqlalchemy.orm.composite,function,clean,no,yes,no,no,yes,manual,missing_params,none,manual-confirmed: web-extractor artifact; structured matches DB summary 'Return a composite column-based property for use with a Mapper',must_verify,ai_adjudicated,all,yes,,yes
+sqlalchemy.orm.WriteOnlyCollection.insert,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.Session.get,method,issues,yes,yes,yes,,yes,db,partial(0.88),none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,partial_scope,yes,yes,,yes
+sqlalchemy.orm.Session.deleted,method,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.registry,class,clean,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes
+sqlalchemy.orm.SessionEvents.before_flush,method,issues,yes,yes,yes,,yes,db,full,none,faithful: DB-confirmed match to authoritative docstring/signature,confidence_sample,yes_db,no,yes,,yes

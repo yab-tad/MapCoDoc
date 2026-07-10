@@ -1,0 +1,29 @@
+Rate this Page
+    ★
+★
+★
+★
+★
+
+Hidden breadcrumb schema for SEO only 
+
+# torch.Tensor.is_shared
+
+Tensor.is_shared()[source](https://github.com/pytorch/pytorch/blob/v2.9.1/torch/_tensor.py#L798)#(https://docs.pytorch.org/docs/2.9/generated/torch.Tensor.is_shared.html#torch.Tensor.is_shared)
+    Checks if tensor is in shared memory.
+
+This is always True for CUDA tensors.
+
+On this page
+
+[Show Source](https://docs.pytorch.org/docs/2.9/_sources/generated/torch.Tensor.is_shared.rst.txt)
+
+PyTorch Libraries
+
+- torchao(https://docs.pytorch.org/ao)
+- torchrec(https://docs.pytorch.org/torchrec)
+- torchft(https://docs.pytorch.org/torchft)
+- TorchCodec(https://docs.pytorch.org/torchcodec)
+- torchvision(https://docs.pytorch.org/vision)
+- ExecuTorch(https://docs.pytorch.org/executorch)
+- [PyTorch on XLA Devices](https://docs.pytorch.org/xla)

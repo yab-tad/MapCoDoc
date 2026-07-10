@@ -8,6 +8,14 @@ test_repo_1/
 tests/*.txt
 tests/*.json
 
+# Tests and replication package components
+eval_files/*
+tools/*
+DATA_LICENSES.md
+REPRODUCE.md
+mapcodoc-replication/*
+
+
 # Output directory (keep folder, ignore contents)
 mapcodoc_output/*
 !mapcodoc_output/.gitkeep
@@ -42,3 +50,6 @@ build/
 dist/
 *.egg-info/
 .coverage
+
+# Replication package staging output (regenerate via tools/make_replication.py)
+mapcodoc-replication/
